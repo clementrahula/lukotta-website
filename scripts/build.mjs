@@ -60,8 +60,8 @@ function translator(code, strings) {
     if (value === undefined) throw new Error(`No string for "${key}", not even in English.`);
     return value
       .replace(/\{version\}/g, cfg.appVersion)
-      .replace(/\{year\}/g, String(new Date().getUTCFullYear()))
-      .replace(/\{author\}/g, cfg.authorName);
+      .replace(/\{year\}/g, String(new Date().getUTCFullYear()));
+    /* {author} is deliberately left in place: the page turns it into a link. */
   };
   t.missing = missing;
   return t;

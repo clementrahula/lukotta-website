@@ -42,12 +42,13 @@
     root.setAttribute("data-theme-choice", choice);
     syncShots(resolved, choice);
 
-    /* The button is named for what it will do, not for what the page is. */
+    /* The switch reports whether dark is on; its name says what a click does. */
     var buttons = document.querySelectorAll("[data-toggle-theme]");
     for (var i = 0; i < buttons.length; i++) {
       var label = buttons[i].getAttribute(
         resolved === "dark" ? "data-label-light" : "data-label-dark"
       );
+      buttons[i].setAttribute("aria-checked", resolved === "dark" ? "true" : "false");
       buttons[i].setAttribute("aria-label", label);
       buttons[i].setAttribute("title", label);
     }

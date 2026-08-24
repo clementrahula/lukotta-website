@@ -97,30 +97,55 @@ is slate (`#474B55`).
 
 ## Type
 
-Two faces, and which one a reader gets depends on the machine they are on.
+Three families, each doing one job.
 
-`-apple-system` comes first, so a Mac, iPhone or iPad renders in **SF Pro**: the
-real thing, already installed, nothing downloaded and nothing licensed.
+**IBM Plex Sans** sets the headings. It is an engineering typeface, which is
+what this page is trying to be, and it covers Latin, Greek, Cyrillic and
+Vietnamese — thirty of the thirty-seven languages. The other seven fall to their
+own system face at the same size and weight.
 
-Everyone else — Windows, Android, Linux, ChromeOS — gets **Inter**, served from
-this origin under the SIL Open Font License. Inter is the closest widely
-licensed face to SF Pro in proportion and x-height, so the tracking the
-stylesheet sets holds on both. Without it a Linux reader falls to DejaVu Sans,
-which is wider and taller-waisted, and every heading comes out of shape.
+**IBM Plex Mono** sets format names, section numbers and the specification line.
+Every one of those is ASCII, so it needs the Latin subset alone.
 
-The cost of that is close to nothing. A browser fetches a web font only when it
-needs one to draw something, so a Mac downloads no font at all, and
-`unicode-range` splits Inter into seven subsets so a page takes only the script
-it is written in. The seven total 224 kB; an English page uses 48 kB of them.
-Both paths are verified — on macOS the page declares seven faces and loads zero.
+**SF Pro** sets running text, through `-apple-system`, so a Mac uses the face it
+already has. **Inter** stands behind it for readers on Windows, Android, Linux
+and ChromeOS, where the alternative is DejaVu Sans and headings come out of
+shape.
 
-Inter carries Latin, Greek, Cyrillic and Vietnamese, which is thirty of the
-thirty-seven languages. Arabic, Hebrew, Devanagari, Thai, Chinese, Japanese and
-Korean it does not, and no web font carries all of those at a size worth
-sending — Noto CJK alone runs to several megabytes per language. Those seven
-fall through to named system faces (Segoe UI, Nirmala UI, Leelawadee UI,
-Microsoft YaHei, Yu Gothic, Malgun Gothic, Noto Sans), every one of which ships
-with the operating system it belongs to.
+A browser fetches a web font only when it needs one to draw with, and
+`unicode-range` splits every face by script, so a page takes only what it is
+written in. Plex and Inter are both under the SIL Open Font License; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `src/assets/fonts/`.
+
+## Colour
+
+Taken from the application and the brand, not from a palette.
+
+| | | |
+| --- | --- | --- |
+| paper | `#FBF8F2` | the warm ground the light logo lockup sits on |
+| ink | `#1F2127` | the near-black of the dark lockup |
+| amber | `#FF8D28` | the exact orange the app draws drive icons and Locked badges in |
+
+Amber is too bright to carry text on paper, so it fills and marks, and a
+darkened `#9A4E05` does the talking wherever a link has to be read. On a button
+it is the other way round: amber fills and the dark ink reads on top of it.
+
+## The page
+
+One page, five parts, in this order:
+
+1. **Hero** — the claim, the download, the screenshot.
+2. **01 What it does** — in prose, then seven short extras.
+3. **02 What it supports** — one table: encryption, filesystems and disk images,
+   each with a Read and a Write column. This is the centrepiece, and it links to
+   `SPECS.md` for the full detail.
+4. **03 How it works** — the Linux virtual machine, three steps, and the
+   permissions it asks for.
+5. **Download** — the call to action and the requirements.
+
+There are no cards, no shadows and no gradients; a hairline is what separates
+one thing from another. Everything is set from the left.
 
 ## Deploying
 

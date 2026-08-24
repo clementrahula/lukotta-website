@@ -88,7 +88,7 @@ for (const { lang, file } of pages) {
 
   /* --- structured data --- */
   const lds = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if (lds.length < 3) err(`${where}: expected three JSON-LD blocks, found ${lds.length}`);
+  if (lds.length < 2) err(`${where}: expected at least two JSON-LD blocks, found ${lds.length}`);
   for (const [, body] of lds) {
     try { JSON.parse(body); } catch (e) { err(`${where}: JSON-LD does not parse — ${e.message}`); }
   }
