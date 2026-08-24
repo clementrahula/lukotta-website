@@ -1,15 +1,19 @@
 # Builds public/ and publishes it to GitHub Pages.
 #
-# Pages serves a private repository only on a paid plan, so while this one is
-# private the workflow will build and check but the deploy step will fail. Make
-# the repository public and turn Pages on (Settings → Pages → Source: GitHub
-# Actions) when the site is ready to go live.
+# Deliberately manual for now. GitHub Pages serves a private repository only on
+# a paid plan, so while this one is private every run would fail at
+# configure-pages and leave the repository permanently red for no reason.
+#
+# To go live: make the repository public, then uncomment the push trigger
+# below. configure-pages has enablement: true, so the first run turns Pages on
+# by itself — there is no need to set it in Settings first. DEPLOYMENT.md has
+# the rest, including the Cloudflare records and the SSL mode that matters.
 
 name: Deploy
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -38,6 +42,8 @@ jobs:
         run: node scripts/check.mjs
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:

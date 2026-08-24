@@ -1,8 +1,11 @@
-# Builds and checks every pull request, without deploying anything.
+# Builds the site and checks the result. Runs on every push and pull request.
+# This is the signal that a change is sound; deploy.yml is what publishes it.
 
 name: Check
 
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -14,5 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node scripts/build.mjs
-      - run: node scripts/check.mjs
+      - name: Build
+        run: node scripts/build.mjs
+      - name: Check
+        run: node scripts/check.mjs

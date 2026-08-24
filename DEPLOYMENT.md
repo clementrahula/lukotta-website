@@ -8,18 +8,25 @@ behind Cloudflare.
 - The repository is **private**, so Pages will not serve it. GitHub Pages
   publishes a private repository only on a paid plan.
 - The DNS for `lukotta.com` is already set up in Cloudflare.
-- `.github/workflows/deploy.yml` is written and will run on the first push to
-  `main`. Until the repository is public, its build and check steps pass and the
-  deploy step fails. That is expected and harmless.
+- `.github/workflows/check.yml` builds and checks every push and pull request.
+  That is the signal a change is sound, and it passes today.
+- `.github/workflows/deploy.yml` is written but its push trigger is commented
+  out, because on a private repository every run would fail at `configure-pages`
+  and leave the repository permanently red. It can still be run by hand from the
+  Actions tab.
 
 ## Going live
 
 1. **Make the repository public.**
    Settings → General → Danger Zone → Change visibility → Public.
 
-2. **Turn Pages on.**
-   Settings → Pages → Build and deployment → Source: **GitHub Actions**.
-   Not "Deploy from a branch" — the site is built, not committed.
+2. **Uncomment the push trigger** in `.github/workflows/deploy.yml`.
+
+   `configure-pages` runs with `enablement: true`, so the first deploy turns
+   Pages on and sets the source to GitHub Actions by itself. If you would rather
+   do it by hand first: Settings → Pages → Build and deployment → Source:
+   **GitHub Actions**. Not "Deploy from a branch" — the site is built, not
+   committed.
 
 3. **Set the custom domain.**
    Settings → Pages → Custom domain → `lukotta.com` → Save.
