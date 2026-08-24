@@ -109,6 +109,26 @@ for (const { lang, file } of pages) {
   }
 }
 
+/* --- the stylesheet's own references, which no page names directly --- */
+const cssPath = join(OUT, "styles.css");
+if (!existsSync(cssPath)) err("public/styles.css is missing");
+else {
+  const css = readFileSync(cssPath, "utf8");
+  const urls = [...css.matchAll(/url\("([^"]+)"\)/g)].map((m) => m[1]);
+  for (const u of urls) {
+    if (/^(data:|https?:)/.test(u)) continue;
+    if (!existsSync(resolvePath(OUT, u))) err(`styles.css references "${u}", which is not in public/`);
+  }
+  const faces = [...css.matchAll(/@font-face/g)].length;
+  const withRange = [...css.matchAll(/unicode-range:/g)].length;
+  if (faces && faces !== withRange) {
+    warn(`${faces} @font-face rules but ${withRange} unicode-range declarations; a face without one is downloaded by every page whatever its language.`);
+  }
+  if (faces && !/font-display:\s*swap/.test(css)) {
+    warn("a web font is declared without font-display: swap, so text stays invisible while it loads.");
+  }
+}
+
 /* --- sitemap --- */
 const sitemapPath = join(OUT, "sitemap.xml");
 if (!existsSync(sitemapPath)) err("no sitemap.xml");

@@ -17,6 +17,7 @@ src/
   script.js             Appearance, the screenshot swap, and the language menu
   assets/
     brand/              The logo and mark, from the application's repository
+    fonts/              Inter, subset, for readers not on an Apple platform
     icons/              Favicons, touch icon and the shared-card image
     screenshots/        One light and one dark image per language
 scripts/
@@ -90,11 +91,32 @@ Colours come from the brand assets: the light lockup sits on a warm off-white
 (`#FBF9F5`), the dark one on a cool near-black (`#16181E`), and the mark itself
 is slate (`#474B55`).
 
-Type is the system stack, deliberately. Lukotta's readers are on macOS, so it
-resolves to SF Pro on their own machine — nothing downloaded, nothing licensed.
-It is also the only choice that covers all thirty-seven languages: no web font
-carries Latin, Cyrillic, Greek, Arabic, Hebrew, Devanagari, Thai, Chinese,
-Japanese and Korean at once, but every Mac does.
+## Type
+
+Two faces, and which one a reader gets depends on the machine they are on.
+
+`-apple-system` comes first, so a Mac, iPhone or iPad renders in **SF Pro**: the
+real thing, already installed, nothing downloaded and nothing licensed.
+
+Everyone else — Windows, Android, Linux, ChromeOS — gets **Inter**, served from
+this origin under the SIL Open Font License. Inter is the closest widely
+licensed face to SF Pro in proportion and x-height, so the tracking the
+stylesheet sets holds on both. Without it a Linux reader falls to DejaVu Sans,
+which is wider and taller-waisted, and every heading comes out of shape.
+
+The cost of that is close to nothing. A browser fetches a web font only when it
+needs one to draw something, so a Mac downloads no font at all, and
+`unicode-range` splits Inter into seven subsets so a page takes only the script
+it is written in. The seven total 224 kB; an English page uses 48 kB of them.
+Both paths are verified — on macOS the page declares seven faces and loads zero.
+
+Inter carries Latin, Greek, Cyrillic and Vietnamese, which is thirty of the
+thirty-seven languages. Arabic, Hebrew, Devanagari, Thai, Chinese, Japanese and
+Korean it does not, and no web font carries all of those at a size worth
+sending — Noto CJK alone runs to several megabytes per language. Those seven
+fall through to named system faces (Segoe UI, Nirmala UI, Leelawadee UI,
+Microsoft YaHei, Yu Gothic, Malgun Gothic, Noto Sans), every one of which ships
+with the operating system it belongs to.
 
 ## Deploying
 

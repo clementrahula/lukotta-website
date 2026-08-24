@@ -79,6 +79,7 @@ cpSync(join(SRC, "assets", "brand"), join(OUT, "assets", "brand"), { recursive: 
 if (existsSync(join(SRC, "assets", "icons"))) {
   cpSync(join(SRC, "assets", "icons"), join(OUT, "assets"), { recursive: true });
 }
+cpSync(join(SRC, "assets", "fonts"), join(OUT, "assets", "fonts"), { recursive: true });
 
 /* Screenshots: one light and one dark per language. A language without its own
    pair falls back to the placeholder, and the build says which did. */
