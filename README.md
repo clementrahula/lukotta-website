@@ -114,6 +114,20 @@ pixels. The frame stops growing at 940 px, which is the widest the layout wants.
 Capture at twice the size you want it shown for a sharp result on a retina
 display.
 
+### The window frame stays
+
+The screenshot is always presented inside a macOS window: a title bar with the
+three buttons, and rounded corners clipping the picture. It is drawn in CSS at
+the measurements macOS uses — a 28pt title bar, 12pt buttons 8pt apart, 20pt in
+from the leading edge, a 10pt corner, and `#FF5F57` / `#FEBC2E` / `#28C840`.
+
+Nothing is added to it: no invented title, no toolbar, no shadow beyond the
+hairline edge. The application draws its own header inside the picture, and the
+frame is only the window around it.
+
+Do not remove this when the layout changes. It is `.shot` and `.shot-bar` in
+`styles.css`, and the markup is in `page.mjs`.
+
 A language with no folder of its own falls back to
 `src/assets/screenshots/_placeholder/`, and the build lists every language that
 did. The placeholder in the repository now is a test render of the *unbranded*

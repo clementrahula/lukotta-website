@@ -168,6 +168,9 @@
   --amber-ink:   #9A4E05;
   --on-amber:    #1F1608;
 
+  --titlebar:    #ECECEC;
+  --titlebar-edge: #D6D3CD;
+
   --font-display: "Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
                   Roboto, "Noto Sans", "Nirmala UI", "Leelawadee UI",
                   "Microsoft YaHei", "Yu Gothic UI", "Malgun Gothic", sans-serif;
@@ -206,6 +209,9 @@
   --amber:       #FF9230;
   --amber-ink:   #FFB061;
   --on-amber:    #16120A;
+
+  --titlebar:    #2C2E33;
+  --titlebar-edge: #3A3D44;
 }
 
 /* ------------------------------------------------------------------ base -- */
@@ -410,8 +416,34 @@ img { max-width: 100%; height: auto; display: block; }
 .hero { padding-block: clamp(52px, 8vw, 96px) clamp(40px, 6vw, 72px); }
 .hero-text { max-width: 62ch; }
 .hero h1 { margin-bottom: 24px; }
-.shot { margin: clamp(44px, 6vw, 76px) 0 0; border: 1px solid var(--rule); }
-.shot img { width: 100%; }
+/* A macOS window, at the measurements macOS actually uses: a 28pt title bar,
+   12pt buttons 8pt apart, 20pt in from the leading edge, and a 10pt corner.
+   Nothing is added to it — no invented title, no toolbar. The application
+   draws its own header inside the picture below.
+
+   macOS corners are continuous rather than circular, which border-radius
+   cannot describe; at ten points the difference is under a pixel. */
+.shot {
+  margin: clamp(44px, 6vw, 76px) 0 0;
+  border: 1px solid var(--titlebar-edge);
+  border-radius: 10px;
+  overflow: hidden;                 /* clips the picture to the corners */
+  background: var(--titlebar);
+}
+.shot-bar {
+  display: flex; align-items: center; gap: 8px;
+  height: 28px; padding-inline: 20px;
+  background: var(--titlebar);
+  border-bottom: 1px solid var(--titlebar-edge);
+}
+.shot-bar i {
+  width: 12px; height: 12px; border-radius: 50%; display: block;
+  box-shadow: inset 0 0 0 .5px rgba(0, 0, 0, .14);
+}
+.shot-bar .close    { background: #FF5F57; }
+.shot-bar .minimise { background: #FEBC2E; }
+.shot-bar .zoom     { background: #28C840; }
+.shot img { width: 100%; display: block; }
 
 /* ------------------------------------------------------------- sections -- */
 

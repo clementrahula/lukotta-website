@@ -303,6 +303,9 @@ ${langLinks}
         </div>
 
         <figure class="shot" style="max-width:${Math.min(880, shotSize.width)}px">
+          <div class="shot-bar" aria-hidden="true">
+            <i class="close"></i><i class="minimise"></i><i class="zoom"></i>
+          </div>
           <picture>
             <source data-theme-source srcset="${shot("dark")}" media="(prefers-color-scheme: dark)">
             <img src="${shot("light")}" alt="${esc(t("hero.screenshotAlt"))}" width="${shotSize.width}" height="${shotSize.height}" fetchpriority="high" decoding="async">
