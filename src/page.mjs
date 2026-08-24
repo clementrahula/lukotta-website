@@ -46,7 +46,7 @@ const FORMATS = [
   },
 ];
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, isIndexable, indexable }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -199,11 +199,6 @@ ${g.rows
   <title>${esc(t("meta.title"))}</title>
   <meta name="description" content="${esc(t("meta.description"))}">
   <link rel="canonical" href="${canonical}">
-${isIndexable ? "" : `  <meta name="robots" content="noindex, follow">
-  <!-- This translation is unfinished, so the page is word for word the English
-       one. Thirty-seven copies of the same page would compete with each other,
-       so it is kept out of the index until it is translated. -->
-`}
   <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">

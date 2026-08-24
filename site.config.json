@@ -269,7 +269,8 @@
       "dir": "ltr",
       "ogLocale": "pt_PT",
       "alsoServes": [
-        "pt"
+        "pt",
+        "pt-BR"
       ]
     },
     {

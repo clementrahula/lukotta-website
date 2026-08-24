@@ -61,17 +61,24 @@ node scripts/new-language.mjs --all
 It keeps every translation already done, appends keys added to the English, and
 drops keys removed from it. It reports what moved, per language.
 
-### Built is not the same as indexed
+### Everything is wired, translated or not
 
-A page is **built** when it has a content file. It is in the language menu and
-can be visited whatever state its translation is in.
+Every language gets a complete page: named in the `hreflang` cluster, listed in
+`sitemap.xml`, reachable from the menu, matched by the language chooser. A
+language whose strings are still English is a translation task, not a broken
+page, and nothing is held back waiting for it. The site is developed and tested
+whole.
 
-A page is **indexed** only when every string in it is translated. An unfinished
-one is word for word the English page, and thirty-seven copies of the same page
-would compete with each other and all rank worse than one page alone. So an
-unfinished page is built and reachable, but carries `noindex`, stays out of
-`sitemap.xml`, and is left out of the `hreflang` cluster. It joins all three by
-itself the moment its last string is filled in. Nothing has to be remembered.
+The one thing translation does gate is publication. Thirty-seven copies of the
+English page at thirty-seven addresses is duplicate content, so:
+
+```bash
+node scripts/check.mjs --strict
+```
+
+fails while any language is untranslated, and the deploy workflow runs it. That
+is the gate, and it is the only one — nothing in the built site is degraded to
+work around an unfinished translation.
 
 ### Regions
 
@@ -80,19 +87,19 @@ the extra `hreflang` codes a page answers to, so a reader in Mexico or Argentina
 gets the Spanish page rather than falling through to English. These are aliases:
 no extra page, no extra translation.
 
-Two are left deliberately unclaimed. **pt-BR** is not pointed at the European
-Portuguese page — Brazilian Portuguese differs enough that it deserves its own
-translation, and until it has one a Brazilian reader is better served by
-English. **zh-TW** and **zh-HK** are Traditional Chinese and are not pointed at
-the Simplified page.
+**pt-BR** is pointed at the European Portuguese page. The two differ, but a
+Brazilian reader is better served by Portuguese than by English.
+
+**zh-TW** and **zh-HK** are deliberately not pointed at the Simplified page.
+Traditional and Simplified Chinese are different scripts rather than regional
+spelling, and serving one to a reader of the other is not a near miss.
 
 ### Choosing a language for the reader
 
-A first-time visitor to the root is sent to their own language, if it is
-finished. Three rules keep that from doing harm: it happens only at the root, so
-a reader who asked for `/de/` gets `/de/`; only once, because choosing from the
-menu is remembered; and only to a finished translation, so nobody is sent to an
-unfinished page. All three are tested.
+A first-time visitor to the root is sent to their own language. Two rules keep
+that from doing harm: it happens only at the root, so a reader who asked for
+`/de/` gets `/de/`, and only once, because choosing from the menu is remembered.
+Region codes resolve through `alsoServes`, so `es-MX` reaches `/es/`.
 
 ## Screenshots
 

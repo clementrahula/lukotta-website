@@ -110,8 +110,14 @@
 
      It matches regions properly: es-MX and es-419 are Spanish readers in Latin
      America and there is one Spanish page, so they get it. A bare tag matches
-     a regional page too — pt matches pt-PT — but only after every exact and
-     region match has been tried. */
+     a regional page too — pt and pt-BR match pt-PT — but only after every exact
+     and declared match has been tried.
+
+     A script subtag is not a region and is never matched loosely. zh-Hans is
+     Simplified Chinese; zh-TW and zh-HK are Traditional, and a reader of one
+     cannot read the other comfortably, so they are left on English rather than
+     handed the wrong script. pt-PT carries a region, PT, so pt-BR may fall back
+     to it; zh-Hans carries a script, Hans, so zh-TW may not. */
 
   var LANG_KEY = "lukotta-lang";
 
@@ -129,10 +135,15 @@
         if (String(l.s[j]).toLowerCase() === want) return l.p;
       }
     }
-    /* Failing that, the same language whatever the region. */
+    /* Failing that, the same language whatever the region — but only where the
+       page is identified by a region. A four-letter subtag is a script, and a
+       script is not something to guess at. */
     for (i = 0; i < langs.length; i++) {
       l = langs[i];
-      if (l.c.toLowerCase().split("-")[0] === base) return l.p;
+      var parts = l.c.split("-");
+      var hasScript = parts.length > 1 && parts[1].length === 4;
+      if (hasScript) continue;
+      if (parts[0].toLowerCase() === base) return l.p;
     }
     return null;
   }

@@ -38,8 +38,11 @@ jobs:
       - name: Build
         run: node scripts/build.mjs
 
+      # --strict refuses to publish while any language still carries the
+      # English text. Thirty-seven copies of one page is duplicate content,
+      # and the site does not go out in that state.
       - name: Check
-        run: node scripts/check.mjs
+        run: node scripts/check.mjs --strict
 
       - uses: actions/configure-pages@v5
         with:

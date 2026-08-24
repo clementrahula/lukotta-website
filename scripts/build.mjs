@@ -112,17 +112,15 @@ function resolveShots(code) {
   return light;
 }
 
-/* Two different questions, and they must not be confused.
+/* Every language that has a content file gets a full page: named in the
+   hreflang cluster, listed in the sitemap, reachable from the menu, and
+   matched by the language chooser. Whether its strings are translated yet is
+   a separate question from whether the site works.
 
-   A page is BUILT when it has a content file. It appears in the language menu
-   and can be visited, whatever state its translation is in.
-
-   A page is INDEXABLE only when every string in it is translated. An
-   untranslated page is word for word the English one, and thirty-seven copies
-   of the same English page is duplicate content — it would compete with itself
-   and rank worse than one page alone. So a page that is not fully translated
-   is built and reachable, but carries noindex, stays out of the sitemap, and is
-   left out of the hreflang cluster until it is finished. */
+   Completeness is still measured, because publishing thirty-seven copies of
+   the English page would be duplicate content. That is a release condition,
+   not a build one: `node scripts/check.mjs --strict` refuses to pass until
+   every language is finished, and the deploy workflow runs it. */
 const buildable = cfg.languages.filter(
   (l) => l.code === cfg.defaultLang || existsSync(join(CONTENT, `${l.code}.json`))
 );
@@ -136,15 +134,14 @@ for (const lang of buildable) {
   completeness.set(lang.code, totalKeys ? done / totalKeys : 0);
 }
 
-const indexable = buildable.filter((l) => completeness.get(l.code) === 1);
 const noPage = cfg.languages.filter((l) => !buildable.includes(l)).map((l) => l.code);
 const partial = buildable.filter((l) => completeness.get(l.code) !== 1).map((l) => l.code);
 
-/* One alternate per indexable page, plus the region codes it also serves.
-   es-419 and es-MX are Spanish readers in Latin America; they get the Spanish
-   page rather than falling through to English. No extra page is created. */
+/* One alternate per page, plus the region codes it also serves. es-419 and
+   es-MX are Spanish readers in Latin America; they get the Spanish page rather
+   than falling through to English. No extra page is created. */
 const alternates = [
-  ...indexable.flatMap((l) => {
+  ...buildable.flatMap((l) => {
     const href = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
     return [l.code, ...(l.alsoServes || [])].map((code) => ({ code, href }));
   }),
@@ -156,13 +153,12 @@ const built = [];
 for (const lang of buildable) {
   const strings = loadStrings(lang.code);
   const t = translator(lang.code, strings || english);
-  const isIndexable = completeness.get(lang.code) === 1;
   const canonical = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
   const assetPrefix = lang.path ? "../" : "./";
 
   const shotSize = resolveShots(lang.code);
 
-  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, isIndexable, indexable });
+  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable });
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
@@ -176,7 +172,7 @@ for (const lang of buildable) {
 
 /* ---------------------------------------------------------- sitemap etc -- */
 
-const builtLangs = indexable.filter((l) => built.includes(l.code));
+const builtLangs = buildable.filter((l) => built.includes(l.code));
 
 const urlEntries = builtLangs
   .map((l) => {
@@ -281,9 +277,9 @@ for (const key of Object.keys(english)) {
 
 const pages = built.length;
 console.log(`\n  Lukotta website — built ${pages} page${pages === 1 ? "" : "s"} into public/\n`);
-console.log(`  indexed             ${indexable.map((l) => l.code).join(" ")}`);
+console.log(`  pages               ${built.length}`);
 if (partial.length) {
-  console.log(`  built, not indexed  ${partial.length} awaiting translation: ${partial.join(" ")}`);
+  console.log(`  awaiting translation  ${partial.length}: ${partial.join(" ")}`);
 }
 if (noPage.length) {
   console.log(`  no content file     ${noPage.length}: ${noPage.join(" ")}`);

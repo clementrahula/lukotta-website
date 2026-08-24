@@ -10,6 +10,26 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "public");
 const cfg = JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"));
+const CONTENT = join(ROOT, "content");
+const strict = process.argv.includes("--strict");
+
+/* How much of each language is actually translated. Everything is wired and
+   tested whatever the answer; this decides one thing only — whether the site
+   is fit to be published, which --strict enforces and the deploy runs. */
+function completenessOf(code) {
+  if (code === cfg.defaultLang) return 1;
+  const file = join(CONTENT, `${code}.json`);
+  if (!existsSync(file)) return 0;
+  const en = JSON.parse(readFileSync(join(CONTENT, `${cfg.defaultLang}.json`), "utf8")).strings;
+  const mine = JSON.parse(readFileSync(file, "utf8")).strings || {};
+  const keys = Object.keys(en);
+  if (!keys.length) return 1;
+  const done = keys.filter((k) => {
+    const v = mine[k];
+    return v && typeof v === "object" ? Boolean(v[code]) : Boolean(v);
+  }).length;
+  return done / keys.length;
+}
 
 const errors = [];
 const warns = [];
@@ -28,13 +48,13 @@ if (!existsSync(OUT)) {
 const pages = cfg.languages
   .map((l) => ({ lang: l, file: l.path ? join(OUT, l.path, "index.html") : join(OUT, "index.html") }))
   .filter((p) => existsSync(p.file))
-  .map((p) => {
-    const html = readFileSync(p.file, "utf8");
-    return { ...p, html, indexable: !/<meta name="robots" content="noindex/.test(html) };
-  });
+  .map((p) => ({
+    ...p,
+    html: readFileSync(p.file, "utf8"),
+    translated: completenessOf(p.lang.code) === 1,
+  }));
 
-const indexed = pages.filter((p) => p.indexable);
-if (!indexed.length) err("No page is indexable — every one carries noindex.");
+const indexed = pages;
 
 if (!pages.length) err("No pages were built.");
 
@@ -43,7 +63,7 @@ const descriptions = new Map();
 
 const attr = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
 
-for (const { lang, file, html, indexable } of pages) {
+for (const { lang, file, html, translated } of pages) {
   const where = lang.code;
 
   /* --- the document itself --- */
@@ -61,13 +81,13 @@ for (const { lang, file, html, indexable } of pages) {
   if (desc && (desc.length < 70 || desc.length > 165)) {
     warn(`${where}: description is ${desc.length} characters; 70–165 shows in full.`);
   }
-  if (indexable && title) {
-    if (titles.has(title)) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two indexable pages cannot share one.`);
-    else titles.set(title, where);
+  if (title) {
+    if (titles.has(title) && translated) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two published pages cannot share one.`);
+    else if (!titles.has(title)) titles.set(title, where);
   }
-  if (indexable && desc) {
-    if (descriptions.has(desc)) err(`${where}: duplicate description, same as ${descriptions.get(desc)}.`);
-    else descriptions.set(desc, where);
+  if (desc) {
+    if (descriptions.has(desc) && translated) err(`${where}: duplicate description, same as ${descriptions.get(desc)}.`);
+    else if (!descriptions.has(desc)) descriptions.set(desc, where);
   }
 
   /* --- canonical --- */
@@ -86,10 +106,7 @@ for (const { lang, file, html, indexable } of pages) {
     }
   }
   if (!codes.has("x-default")) err(`${where}: no hreflang="x-default"`);
-  if (indexable && !codes.has(lang.code)) err(`${where}: no self-referencing hreflang`);
-  if (!indexable && codes.has(lang.code)) {
-    err(`${where}: carries noindex but is still named in its own hreflang cluster.`);
-  }
+  if (!codes.has(lang.code)) err(`${where}: no self-referencing hreflang`);
 
   /* Duplicate region codes would make Google discard the whole cluster. */
   const seenCodes = new Set();
@@ -160,11 +177,6 @@ else {
     const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
     if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
   }
-  for (const { lang, indexable } of pages) {
-    if (indexable) continue;
-    const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
-    if (xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml lists ${loc}, which carries noindex`);
-  }
   const locs = [...xml.matchAll(/<loc>/g)].length;
   if (locs !== indexed.length) err(`sitemap.xml has ${locs} URLs but ${indexed.length} pages may be indexed`);
 }
@@ -179,15 +191,21 @@ if (cname !== new URL(cfg.domain).hostname) err(`CNAME says "${cname}", expected
 /* --- untranslated languages are a warning, not a failure --- */
 const missing = cfg.languages.filter((l) => !pages.some((p) => p.lang.code === l.code));
 if (missing.length) warn(`${missing.length} language(s) have no page yet: ${missing.map((l) => l.code).join(" ")}`);
-const held = pages.filter((p) => !p.indexable).map((p) => p.lang.code);
-if (held.length) warn(`${held.length} page(s) built but held back from search until translated: ${held.join(" ")}`);
+const untranslated = pages.filter((p) => !p.translated).map((p) => p.lang.code);
+if (untranslated.length) {
+  warn(`${untranslated.length} language(s) still carry the English text: ${untranslated.join(" ")}`);
+  warn("Publishing them as they are would put the same page at thirty-seven addresses. --strict refuses to pass until they are translated.");
+}
 
 /* --------------------------------------------------------------- report -- */
 
-console.log(`\n  Checked ${pages.length} page(s) in public/, ${indexed.length} of them indexable\n`);
+console.log(`\n  Checked ${pages.length} page(s) in public/\n`);
 for (const w of warns) console.log(`  warning  ${w}`);
 for (const e of errors) console.log(`  ERROR    ${e}`);
-console.log(
-  `\n  ${errors.length} error(s), ${warns.length} warning(s)\n`
-);
+console.log(`\n  ${errors.length} error(s), ${warns.length} warning(s)\n`);
+
+if (strict && untranslated.length) {
+  console.error(`  --strict: ${untranslated.length} language(s) are not translated. The site is not fit to publish.\n`);
+  process.exit(1);
+}
 process.exit(errors.length ? 1 : 0);

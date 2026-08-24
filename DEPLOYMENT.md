@@ -67,7 +67,9 @@ behind Cloudflare.
 
 ## What the build guarantees
 
-`node scripts/check.mjs` runs in CI before anything is published, and fails on:
+`node scripts/check.mjs --strict` runs in CI before anything is published. It
+fails while **any language still carries the English text**, which is the
+condition for going public at all, and it fails on:
 
 - a missing or wrong canonical
 - an incomplete `hreflang` cluster, a missing self-reference, or no `x-default`
