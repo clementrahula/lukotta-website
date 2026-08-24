@@ -22,7 +22,6 @@
     "meta.ogTitle": "The card title when the address is shared. May be shorter and less formal than meta.title.",
     "meta.imageAlt": "Describes the Lukotta application icon, which is the shared card image.",
     "ui.skipToContent": "The first thing a keyboard reader reaches. Must say plainly that it skips to the page content.",
-    "ui.themeAuto": "The appearance follows whatever the reader's Mac is set to. macOS itself calls this Auto.",
     "hero.title": "The one sentence the page is built around. Keep the full stop.",
     "hero.downloadNote": "Contains {version}, which becomes the released version number. Keep the middle dots as separators.",
     "download.note": "Same as hero.downloadNote, and should read identically.",
@@ -45,6 +44,8 @@
     "faq.6.a": "Distinguishes writing to a real drive, which is safe, from writing to an image, which is untested. The distinction is the whole point of the answer and must survive.",
     "faq.7.a": "A list of what cannot be opened, separated by commas and dashes. Keep it a single sentence if the language allows.",
     "footer.copyright": "Contains {year} and {author}, both replaced when the page is built.",
-    "footer.translationsBody": "The invitation to report a bad translation. It appears above the list of every language."
+    "footer.translationsBody": "The invitation to report a bad translation. It appears above the list of every language.",
+    "ui.switchToLight": "The appearance button's spoken name while the page is dark. It names what clicking will do, not what the page currently is.",
+    "ui.switchToDark": "The same button while the page is light."
   }
 }

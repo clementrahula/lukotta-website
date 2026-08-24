@@ -63,7 +63,14 @@ says which ones did.
 
 Two per language: `src/assets/screenshots/<code>/light.png` and `dark.png`.
 The pair must be the same size as each other, or the page shifts when the reader
-changes appearance. **1280 × 800** is what the layout is built for.
+changes appearance; the build says so if they are not.
+
+Images are used exactly as given. The build reads each one's real dimensions,
+writes them onto the `<img>` so the page does not shift while it loads, and caps
+the frame at the image's own width — so a screenshot is never stretched past its
+pixels. The frame stops growing at 940 px, which is the widest the layout wants.
+Capture at twice the size you want it shown for a sharp result on a retina
+display.
 
 A language with no folder of its own falls back to
 `src/assets/screenshots/_placeholder/`, and the build lists every language that
@@ -72,15 +79,12 @@ build, which says **Drive Unlocker** rather than **Lukotta** — it is there to
 prove the mechanism, and every language needs a real pair before the site is
 published.
 
-The build reads each image's real dimensions and writes them onto the `<img>`,
-so whatever is dropped in gets correct intrinsic sizing and the page does not
-shift while it loads.
-
 ## Appearance
 
-Light and dark, following macOS. The reader's choice — match system, light, or
-dark — is kept in `localStorage` and resolved in the `<head>` before the first
-paint, so the page never flashes the wrong one.
+Two appearances, light and dark. Until the reader picks one the page follows
+whatever their machine is set to, and keeps following it if they change it;
+picking one stores the choice and stops the page following along. It is resolved
+in the `<head>` before the first paint, so the page never flashes the wrong one.
 
 The screenshot follows. Its `<picture>` carries a dark `<source>` with a
 `prefers-color-scheme` query, so the correct image loads with no JavaScript at

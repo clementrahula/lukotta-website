@@ -6,17 +6,22 @@
 (function () {
   "use strict";
 
-  var KEY = "lukotta-theme";           /* "auto" | "light" | "dark" */
+  /* Two appearances, light and dark. Until the reader picks one, the page
+     follows whatever their machine is set to; picking one stores it and stops
+     the page following along. */
+  var KEY = "lukotta-theme";           /* "light" | "dark", or absent */
   var root = document.documentElement;
   var mql = window.matchMedia("(prefers-color-scheme: dark)");
 
   function stored() {
-    try { return localStorage.getItem(KEY) || "auto"; } catch (e) { return "auto"; }
+    try {
+      var v = localStorage.getItem(KEY);
+      return v === "light" || v === "dark" ? v : null;
+    } catch (e) { return null; }
   }
 
   function resolve(choice) {
-    if (choice === "light" || choice === "dark") return choice;
-    return mql.matches ? "dark" : "light";
+    return choice || (mql.matches ? "dark" : "light");
   }
 
   /* The screenshot is a <picture> whose dark <source> carries a media query.
@@ -25,7 +30,7 @@
   function syncShots(resolved, choice) {
     var sources = document.querySelectorAll("source[data-theme-source]");
     for (var i = 0; i < sources.length; i++) {
-      sources[i].media = choice === "auto"
+      sources[i].media = choice === null
         ? "(prefers-color-scheme: dark)"
         : (resolved === "dark" ? "all" : "not all");
     }
@@ -37,27 +42,29 @@
     root.setAttribute("data-theme-choice", choice);
     syncShots(resolved, choice);
 
-    var buttons = document.querySelectorAll("[data-set-theme]");
+    /* The button is named for what it will do, not for what the page is. */
+    var buttons = document.querySelectorAll("[data-toggle-theme]");
     for (var i = 0; i < buttons.length; i++) {
-      buttons[i].setAttribute(
-        "aria-checked",
-        buttons[i].getAttribute("data-set-theme") === choice ? "true" : "false"
+      var label = buttons[i].getAttribute(
+        resolved === "dark" ? "data-label-light" : "data-label-dark"
       );
+      buttons[i].setAttribute("aria-label", label);
+      buttons[i].setAttribute("title", label);
     }
   }
 
   apply(stored());
 
   document.addEventListener("click", function (event) {
-    var button = event.target.closest ? event.target.closest("[data-set-theme]") : null;
+    var button = event.target.closest ? event.target.closest("[data-toggle-theme]") : null;
     if (!button) return;
-    var choice = button.getAttribute("data-set-theme");
-    try { localStorage.setItem(KEY, choice); } catch (e) { /* private browsing */ }
-    apply(choice);
+    var next = resolve(stored()) === "dark" ? "light" : "dark";
+    try { localStorage.setItem(KEY, next); } catch (e) { /* private browsing */ }
+    apply(next);
   });
 
-  /* Follow the system while the reader has not chosen for themselves. */
-  var onSystemChange = function () { if (stored() === "auto") apply("auto"); };
+  /* Follow the machine until the reader chooses for themselves. */
+  var onSystemChange = function () { if (stored() === null) apply(null); };
   if (mql.addEventListener) mql.addEventListener("change", onSystemChange);
   else if (mql.addListener) mql.addListener(onSystemChange);
 

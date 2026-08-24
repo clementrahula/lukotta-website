@@ -301,28 +301,22 @@ section { padding-block: clamp(56px, 8vw, 104px); }
 
 .header-tools { display: flex; align-items: center; gap: 8px; }
 
-/* macOS-style segmented control for appearance */
-.segmented {
-  display: inline-flex; padding: 2px; gap: 2px;
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-radius: 9px;
-}
-.segmented button {
+/* Appearance: one button, two states. It shows the appearance it will switch
+   to, so the icon is the sun while the page is dark. */
+.theme-toggle {
   display: grid; place-items: center;
-  width: 30px; height: 24px; padding: 0;
-  border: 0; border-radius: 7px;
-  background: transparent; color: var(--text-2);
+  width: 34px; height: 30px; padding: 0;
+  border: 1px solid var(--border); border-radius: 9px;
+  background: var(--bg-sunken); color: var(--text-2);
   cursor: pointer; font: inherit;
-  transition: background .15s ease, color .15s ease;
+  transition: color .15s ease, border-color .15s ease;
 }
-.segmented button:hover { color: var(--text); }
-.segmented button[aria-checked="true"] {
-  background: var(--bg-elevated);
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-}
-.segmented svg { width: 15px; height: 15px; }
+.theme-toggle:hover { color: var(--text); border-color: var(--border-strong); }
+.theme-toggle svg { width: 16px; height: 16px; display: block; }
+.theme-toggle .icon-light { display: none; }
+.theme-toggle .icon-dark  { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-light { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-dark  { display: none; }
 
 /* language picker */
 .lang { position: relative; }
@@ -609,5 +603,5 @@ section { padding-block: clamp(56px, 8vw, 104px); }
 }
 
 @media print {
-  .site-header, .lang, .segmented, .hero-actions { display: none; }
+  .site-header, .lang, .theme-toggle, .hero-actions { display: none; }
 }

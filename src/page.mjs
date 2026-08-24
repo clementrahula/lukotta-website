@@ -150,7 +150,6 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 
   const sunIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1v1.6M8 13.4V15M15 8h-1.6M2.6 8H1m11-5-1.1 1.1M5.1 10.9 4 12m8 0-1.1-1.1M5.1 5.1 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
   const moonIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.6A5.9 5.9 0 0 1 6.4 2.5a5.9 5.9 0 1 0 7.1 7.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
-  const autoIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.9A6.1 6.1 0 0 1 8 14.1Z" fill="currentColor"/></svg>`;
   const globeIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.8c1.7 1.8 2.6 3.9 2.6 6.2S9.7 12.4 8 14.2C6.3 12.4 5.4 10.3 5.4 8s.9-4.4 2.6-6.2Z" stroke="currentColor" stroke-width="1.4"/></svg>`;
 
   /* -------------------------------------------------------------- html -- */
@@ -239,11 +238,12 @@ ${ogAlternates}
       </nav>
 
       <div class="header-tools">
-        <div class="segmented" role="radiogroup" aria-label="${esc(t("ui.appearance"))}">
-          <button type="button" role="radio" aria-checked="false" data-set-theme="auto"  title="${esc(t("ui.themeAuto"))}"  aria-label="${esc(t("ui.themeAuto"))}">${autoIcon}</button>
-          <button type="button" role="radio" aria-checked="false" data-set-theme="light" title="${esc(t("ui.themeLight"))}" aria-label="${esc(t("ui.themeLight"))}">${sunIcon}</button>
-          <button type="button" role="radio" aria-checked="false" data-set-theme="dark"  title="${esc(t("ui.themeDark"))}"  aria-label="${esc(t("ui.themeDark"))}">${moonIcon}</button>
-        </div>
+        <button type="button" class="theme-toggle" data-toggle-theme
+                data-label-light="${esc(t("ui.switchToLight"))}"
+                data-label-dark="${esc(t("ui.switchToDark"))}">
+          <span class="icon-light" aria-hidden="true">${sunIcon}</span>
+          <span class="icon-dark" aria-hidden="true">${moonIcon}</span>
+        </button>
 
         <details class="lang">
           <summary aria-label="${esc(t("ui.chooseLanguage"))}">${globeIcon}<span>${esc(native)}</span></summary>
@@ -278,7 +278,7 @@ ${trust}
         </div>
 
         <div class="shot">
-          <figure class="window">
+          <figure class="window" style="max-width:${Math.min(940, shotSize.width)}px">
             <div class="window-bar" aria-hidden="true">
               <i></i><i></i><i></i><span>Lukotta</span>
             </div>
