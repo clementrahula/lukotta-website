@@ -1,5 +1,109 @@
-# Lukotta Website
+# Lukotta website
 
-Public website for Lukotta — https://lukotta.com
+The public website for [Lukotta](https://github.com/clementrahula/lukotta), at
+[lukotta.com](https://lukotta.com). One page, in thirty-seven languages.
 
-Work in progress.
+## What is here
+
+```text
+site.config.json        The domain, the version, and every language the site is built in
+content/                Everything the page says, one file per language
+  en.json               The canonical English. Every other file is a translation of it
+  KEYS.json             What each key is for
+  GLOSSARY.md           Words that are not free to translate
+src/
+  page.mjs              The markup, including the whole of the <head>
+  styles.css            The visual system, light and dark
+  script.js             Appearance, the screenshot swap, and the language menu
+  assets/
+    brand/              The logo and mark, from the application's repository
+    icons/              Favicons, touch icon and the shared-card image
+    screenshots/        One light and one dark image per language
+scripts/
+  build.mjs             Builds public/ from the above
+  check.mjs             Checks what was built
+  new-language.mjs      Scaffolds a language file
+  serve.mjs             Local preview
+public/                 Generated. Not committed, not edited by hand
+```
+
+## Working on it
+
+```bash
+npm start
+```
+
+That builds the site and serves it at <http://localhost:4321>. There are no
+dependencies to install — everything runs on Node alone.
+
+```bash
+npm run build     # write public/
+npm run check     # build, then check the result
+```
+
+`check` is what decides whether a change is publishable. It fails on a missing
+canonical, an incomplete `hreflang` set, a duplicate title, a broken local link,
+an image with no alt text, JSON-LD that does not parse, or a page whose `lang`
+and `dir` do not match what the configuration says.
+
+## Adding a language
+
+Add it to `languages` in `site.config.json`, then:
+
+```bash
+node scripts/new-language.mjs <code>
+```
+
+That writes `content/<code>.json` with every key, the English beside each one and
+an empty slot to fill. A key left empty falls back to the English, and the build
+says which ones did.
+
+## Screenshots
+
+Two per language: `src/assets/screenshots/<code>/light.png` and `dark.png`.
+The pair must be the same size as each other, or the page shifts when the reader
+changes appearance. **1280 × 800** is what the layout is built for.
+
+A language with no folder of its own falls back to
+`src/assets/screenshots/_placeholder/`, and the build lists every language that
+did. The placeholder in the repository now is a test render of the *unbranded*
+build, which says **Drive Unlocker** rather than **Lukotta** — it is there to
+prove the mechanism, and every language needs a real pair before the site is
+published.
+
+The build reads each image's real dimensions and writes them onto the `<img>`,
+so whatever is dropped in gets correct intrinsic sizing and the page does not
+shift while it loads.
+
+## Appearance
+
+Light and dark, following macOS. The reader's choice — match system, light, or
+dark — is kept in `localStorage` and resolved in the `<head>` before the first
+paint, so the page never flashes the wrong one.
+
+The screenshot follows. Its `<picture>` carries a dark `<source>` with a
+`prefers-color-scheme` query, so the correct image loads with no JavaScript at
+all; choosing light or dark by hand rewrites that query rather than the `src`,
+which swaps the image without downloading the other one.
+
+Colours come from the brand assets: the light lockup sits on a warm off-white
+(`#FBF9F5`), the dark one on a cool near-black (`#16181E`), and the mark itself
+is slate (`#474B55`).
+
+Type is the system stack, deliberately. Lukotta's readers are on macOS, so it
+resolves to SF Pro on their own machine — nothing downloaded, nothing licensed.
+It is also the only choice that covers all thirty-seven languages: no web font
+carries Latin, Cyrillic, Greek, Arabic, Hebrew, Devanagari, Thai, Chinese,
+Japanese and Korean at once, but every Mac does.
+
+## Deploying
+
+[DEPLOYMENT.md](DEPLOYMENT.md).
+
+## Keeping it true
+
+The page repeats claims the application's own documentation makes. When the
+application changes what it supports, what it requires, or what it collects,
+`content/en.json` changes in the same breath as `README.md`, `SPECS.md` and
+`PRIVACY.md` in the application's repository — and then every translation is due
+again.
