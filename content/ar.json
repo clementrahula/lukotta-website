@@ -322,6 +322,30 @@
       "en": "Your administrator password, once, when the background helper is set up. Lukotta never sees it.",
       "ar": ""
     },
+    "story.title": {
+      "en": "Why it exists",
+      "ar": ""
+    },
+    "story.1": {
+      "en": "Everything ends up on a drive eventually: the photographs, the tax returns, the scans of documents nobody else should have. Drives are small and they travel, which is what makes them useful and what makes them a risk. A bag goes missing. A drawer is emptied. A machine is sold with a disk still inside it. Encrypting a drive costs nothing and asks for a password once, and it is the difference between losing a drive and losing what was on it.",
+      "ar": ""
+    },
+    "story.2": {
+      "en": "What stops people is rarely the encryption. It is that encryption belongs to one system and does not travel with the drive. Windows locks a drive with BitLocker, and a Mac calls that drive unreadable and offers to erase it. Linux locks it with LUKS, and neither Windows nor macOS knows what it is looking at. Faced with a drive that has to open on more than one machine, most people do the reasonable-looking thing and leave it unlocked — which is how the one drive holding everything becomes the one drive with nothing protecting it.",
+      "ar": ""
+    },
+    "story.3": {
+      "en": "There are ways around this, and they are terminal utilities: half a dozen commands, a passphrase typed into a shell, a mount point to remember and tidy up afterwards, and an error message written for somebody who already knows what a loop device is. That is a fair answer for people who do know. It is no answer at all for everyone else, and everyone else owns the same drives and runs the same risk.",
+      "ar": ""
+    },
+    "story.4": {
+      "en": "I wrote this because I was backing up a Windows machine and a Mac onto one drive, and the only supported way to do it was to buy a second drive and keep two copies of the same files. That seemed a ridiculous thing to have to do.",
+      "ar": ""
+    },
+    "story.signature": {
+      "en": "{author}",
+      "ar": ""
+    },
     "download.title": {
       "en": "Open the drive your Mac says it cannot read.",
       "ar": ""

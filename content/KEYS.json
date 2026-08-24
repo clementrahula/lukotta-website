@@ -12,7 +12,8 @@
     "download": "The closing section: the call to action and what a Mac needs before the application will run.",
     "footer": "Three links, and the copyright and licence line beneath them.",
     "faq": "Nine questions, written the way a reader would type them into a search engine. These are published as structured data as well as shown on the page, so a search engine may show a question and its answer directly in its results. Every answer must stand on its own, without the question.",
-    "name": "Section 04, where the name is explained. Set as a dictionary entry: the word itself large, the language and the meaning beside it, then two short sentences. Taken from the application's own README."
+    "name": "Section 04, where the name is explained. Set as a dictionary entry: the word itself large, the language and the meaning beside it, then two short sentences. Taken from the application's own README.",
+    "story": "Section 06, after the questions: why the application was written, in the author's own voice and in the first person. Four paragraphs of ordinary prose, no lists and no headings inside it. The tone is level and unsentimental — it argues that encrypting a drive is ordinary and that being unable to open it elsewhere is what stops people. It should not read as marketing, and it should not frighten anybody."
   },
   "notes": {
     "meta.title": "At or under 60 characters. Search results cut it off. Keyword first, brand last.",
@@ -58,6 +59,11 @@
     "name.gloss": "What Lúkotta means, translated into this language. It is shown in quotation marks; use the quotation marks this language uses.",
     "name.body": "Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",
     "name.stress": "About where the stress falls when the word is said aloud. The page shows this by setting the first syllable apart, so the sentence and the picture must agree.",
-    "name.language": "The name of the Finnish language in this language."
+    "name.language": "The name of the Finnish language in this language.",
+    "story.1": "About why a drive is worth locking at all. Concrete and calm: a bag, a drawer, a sold machine. Do not sharpen this into a warning.",
+    "story.2": "The argument the whole section rests on: people leave drives unlocked because a locked one will not open on their other machine. Keep the reasoning intact even if the sentences are rebuilt.",
+    "story.3": "About terminal utilities. It respects the people who use them and says they are not an answer for everybody. Keep both halves; dropping the first turns a fair point into a sneer.",
+    "story.4": "First person, and the only place on the page where the author speaks as himself. Keep it in the first person in every language.",
+    "story.signature": "Just {author}, which becomes the author's name. Nothing to translate; the placeholder must survive exactly as it is."
   }
 }
