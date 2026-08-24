@@ -47,17 +47,52 @@ canonical, an incomplete `hreflang` set, a duplicate title, a broken local link,
 an image with no alt text, JSON-LD that does not parse, or a page whose `lang`
 and `dir` do not match what the configuration says.
 
-## Adding a language
+## Languages
 
-Add it to `languages` in `site.config.json`, then:
+All thirty-seven have a page. Only English is translated; the other thirty-six
+are placeholders waiting to be filled.
+
+**After every change to `content/en.json`, run this:**
 
 ```bash
-node scripts/new-language.mjs <code>
+node scripts/new-language.mjs --all
 ```
 
-That writes `content/<code>.json` with every key, the English beside each one and
-an empty slot to fill. A key left empty falls back to the English, and the build
-says which ones did.
+It keeps every translation already done, appends keys added to the English, and
+drops keys removed from it. It reports what moved, per language.
+
+### Built is not the same as indexed
+
+A page is **built** when it has a content file. It is in the language menu and
+can be visited whatever state its translation is in.
+
+A page is **indexed** only when every string in it is translated. An unfinished
+one is word for word the English page, and thirty-seven copies of the same page
+would compete with each other and all rank worse than one page alone. So an
+unfinished page is built and reachable, but carries `noindex`, stays out of
+`sitemap.xml`, and is left out of the `hreflang` cluster. It joins all three by
+itself the moment its last string is filled in. Nothing has to be remembered.
+
+### Regions
+
+One translation can serve many regions. `alsoServes` in `site.config.json` lists
+the extra `hreflang` codes a page answers to, so a reader in Mexico or Argentina
+gets the Spanish page rather than falling through to English. These are aliases:
+no extra page, no extra translation.
+
+Two are left deliberately unclaimed. **pt-BR** is not pointed at the European
+Portuguese page — Brazilian Portuguese differs enough that it deserves its own
+translation, and until it has one a Brazilian reader is better served by
+English. **zh-TW** and **zh-HK** are Traditional Chinese and are not pointed at
+the Simplified page.
+
+### Choosing a language for the reader
+
+A first-time visitor to the root is sent to their own language, if it is
+finished. Three rules keep that from doing harm: it happens only at the root, so
+a reader who asked for `/de/` gets `/de/`; only once, because choosing from the
+menu is remembered; and only to a finished translation, so nobody is sent to an
+unfinished page. All three are tested.
 
 ## Screenshots
 

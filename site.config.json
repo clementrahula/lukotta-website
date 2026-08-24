@@ -9,42 +9,360 @@
   "authorUrl": "https://rahula.dev",
   "defaultLang": "en",
   "languages": [
-    { "code": "en",      "path": "",        "name": "English",                "native": "English",              "dir": "ltr", "ogLocale": "en_US" },
-    { "code": "ar",      "path": "ar",      "name": "Arabic",                 "native": "العربية",               "dir": "rtl", "ogLocale": "ar_AR" },
-    { "code": "bg",      "path": "bg",      "name": "Bulgarian",              "native": "Български",            "dir": "ltr", "ogLocale": "bg_BG" },
-    { "code": "cs",      "path": "cs",      "name": "Czech",                  "native": "Čeština",              "dir": "ltr", "ogLocale": "cs_CZ" },
-    { "code": "da",      "path": "da",      "name": "Danish",                 "native": "Dansk",                "dir": "ltr", "ogLocale": "da_DK" },
-    { "code": "de",      "path": "de",      "name": "German",                 "native": "Deutsch",              "dir": "ltr", "ogLocale": "de_DE" },
-    { "code": "el",      "path": "el",      "name": "Greek",                  "native": "Ελληνικά",             "dir": "ltr", "ogLocale": "el_GR" },
-    { "code": "es",      "path": "es",      "name": "Spanish",                "native": "Español",              "dir": "ltr", "ogLocale": "es_ES" },
-    { "code": "et",      "path": "et",      "name": "Estonian",               "native": "Eesti",                "dir": "ltr", "ogLocale": "et_EE" },
-    { "code": "fi",      "path": "fi",      "name": "Finnish",                "native": "Suomi",                "dir": "ltr", "ogLocale": "fi_FI" },
-    { "code": "fil",     "path": "fil",     "name": "Filipino",               "native": "Filipino",             "dir": "ltr", "ogLocale": "fil_PH" },
-    { "code": "fr",      "path": "fr",      "name": "French",                 "native": "Français",             "dir": "ltr", "ogLocale": "fr_FR" },
-    { "code": "he",      "path": "he",      "name": "Hebrew",                 "native": "עברית",                 "dir": "rtl", "ogLocale": "he_IL" },
-    { "code": "hi",      "path": "hi",      "name": "Hindi",                  "native": "हिन्दी",                  "dir": "ltr", "ogLocale": "hi_IN" },
-    { "code": "hr",      "path": "hr",      "name": "Croatian",               "native": "Hrvatski",             "dir": "ltr", "ogLocale": "hr_HR" },
-    { "code": "hu",      "path": "hu",      "name": "Hungarian",              "native": "Magyar",               "dir": "ltr", "ogLocale": "hu_HU" },
-    { "code": "id",      "path": "id",      "name": "Indonesian",             "native": "Bahasa Indonesia",     "dir": "ltr", "ogLocale": "id_ID" },
-    { "code": "it",      "path": "it",      "name": "Italian",                "native": "Italiano",             "dir": "ltr", "ogLocale": "it_IT" },
-    { "code": "ja",      "path": "ja",      "name": "Japanese",               "native": "日本語",                "dir": "ltr", "ogLocale": "ja_JP" },
-    { "code": "ko",      "path": "ko",      "name": "Korean",                 "native": "한국어",                "dir": "ltr", "ogLocale": "ko_KR" },
-    { "code": "lt",      "path": "lt",      "name": "Lithuanian",             "native": "Lietuvių",             "dir": "ltr", "ogLocale": "lt_LT" },
-    { "code": "lv",      "path": "lv",      "name": "Latvian",                "native": "Latviešu",             "dir": "ltr", "ogLocale": "lv_LV" },
-    { "code": "ms",      "path": "ms",      "name": "Malay",                  "native": "Bahasa Melayu",        "dir": "ltr", "ogLocale": "ms_MY" },
-    { "code": "nb",      "path": "nb",      "name": "Norwegian (Bokmål)",     "native": "Norsk bokmål",         "dir": "ltr", "ogLocale": "nb_NO" },
-    { "code": "nl",      "path": "nl",      "name": "Dutch",                  "native": "Nederlands",           "dir": "ltr", "ogLocale": "nl_NL" },
-    { "code": "pl",      "path": "pl",      "name": "Polish",                 "native": "Polski",               "dir": "ltr", "ogLocale": "pl_PL" },
-    { "code": "pt-PT",   "path": "pt-pt",   "name": "Portuguese (Portugal)",  "native": "Português (Portugal)", "dir": "ltr", "ogLocale": "pt_PT" },
-    { "code": "ro",      "path": "ro",      "name": "Romanian",               "native": "Română",               "dir": "ltr", "ogLocale": "ro_RO" },
-    { "code": "ru",      "path": "ru",      "name": "Russian",                "native": "Русский",              "dir": "ltr", "ogLocale": "ru_RU" },
-    { "code": "sl",      "path": "sl",      "name": "Slovenian",              "native": "Slovenščina",          "dir": "ltr", "ogLocale": "sl_SI" },
-    { "code": "sq",      "path": "sq",      "name": "Albanian",               "native": "Shqip",                "dir": "ltr", "ogLocale": "sq_AL" },
-    { "code": "sv",      "path": "sv",      "name": "Swedish",                "native": "Svenska",              "dir": "ltr", "ogLocale": "sv_SE" },
-    { "code": "th",      "path": "th",      "name": "Thai",                   "native": "ไทย",                   "dir": "ltr", "ogLocale": "th_TH" },
-    { "code": "tr",      "path": "tr",      "name": "Turkish",                "native": "Türkçe",               "dir": "ltr", "ogLocale": "tr_TR" },
-    { "code": "uk",      "path": "uk",      "name": "Ukrainian",              "native": "Українська",           "dir": "ltr", "ogLocale": "uk_UA" },
-    { "code": "vi",      "path": "vi",      "name": "Vietnamese",             "native": "Tiếng Việt",           "dir": "ltr", "ogLocale": "vi_VN" },
-    { "code": "zh-Hans", "path": "zh-hans", "name": "Chinese (Simplified)",   "native": "简体中文",              "dir": "ltr", "ogLocale": "zh_CN" }
+    {
+      "code": "en",
+      "path": "",
+      "name": "English",
+      "native": "English",
+      "dir": "ltr",
+      "ogLocale": "en_US",
+      "alsoServes": [
+        "en-GB",
+        "en-US",
+        "en-AU",
+        "en-CA",
+        "en-IE",
+        "en-NZ",
+        "en-ZA",
+        "en-IN"
+      ]
+    },
+    {
+      "code": "ar",
+      "path": "ar",
+      "name": "Arabic",
+      "native": "العربية",
+      "dir": "rtl",
+      "ogLocale": "ar_AR",
+      "alsoServes": [
+        "ar-EG",
+        "ar-SA",
+        "ar-AE",
+        "ar-MA",
+        "ar-DZ"
+      ]
+    },
+    {
+      "code": "bg",
+      "path": "bg",
+      "name": "Bulgarian",
+      "native": "Български",
+      "dir": "ltr",
+      "ogLocale": "bg_BG"
+    },
+    {
+      "code": "cs",
+      "path": "cs",
+      "name": "Czech",
+      "native": "Čeština",
+      "dir": "ltr",
+      "ogLocale": "cs_CZ"
+    },
+    {
+      "code": "da",
+      "path": "da",
+      "name": "Danish",
+      "native": "Dansk",
+      "dir": "ltr",
+      "ogLocale": "da_DK"
+    },
+    {
+      "code": "de",
+      "path": "de",
+      "name": "German",
+      "native": "Deutsch",
+      "dir": "ltr",
+      "ogLocale": "de_DE",
+      "alsoServes": [
+        "de-AT",
+        "de-CH"
+      ]
+    },
+    {
+      "code": "el",
+      "path": "el",
+      "name": "Greek",
+      "native": "Ελληνικά",
+      "dir": "ltr",
+      "ogLocale": "el_GR"
+    },
+    {
+      "code": "es",
+      "path": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "dir": "ltr",
+      "ogLocale": "es_ES",
+      "alsoServes": [
+        "es-419",
+        "es-MX",
+        "es-AR",
+        "es-CO",
+        "es-CL",
+        "es-PE",
+        "es-US"
+      ]
+    },
+    {
+      "code": "et",
+      "path": "et",
+      "name": "Estonian",
+      "native": "Eesti",
+      "dir": "ltr",
+      "ogLocale": "et_EE"
+    },
+    {
+      "code": "fi",
+      "path": "fi",
+      "name": "Finnish",
+      "native": "Suomi",
+      "dir": "ltr",
+      "ogLocale": "fi_FI"
+    },
+    {
+      "code": "fil",
+      "path": "fil",
+      "name": "Filipino",
+      "native": "Filipino",
+      "dir": "ltr",
+      "ogLocale": "fil_PH"
+    },
+    {
+      "code": "fr",
+      "path": "fr",
+      "name": "French",
+      "native": "Français",
+      "dir": "ltr",
+      "ogLocale": "fr_FR",
+      "alsoServes": [
+        "fr-BE",
+        "fr-CA",
+        "fr-CH"
+      ]
+    },
+    {
+      "code": "he",
+      "path": "he",
+      "name": "Hebrew",
+      "native": "עברית",
+      "dir": "rtl",
+      "ogLocale": "he_IL"
+    },
+    {
+      "code": "hi",
+      "path": "hi",
+      "name": "Hindi",
+      "native": "हिन्दी",
+      "dir": "ltr",
+      "ogLocale": "hi_IN"
+    },
+    {
+      "code": "hr",
+      "path": "hr",
+      "name": "Croatian",
+      "native": "Hrvatski",
+      "dir": "ltr",
+      "ogLocale": "hr_HR"
+    },
+    {
+      "code": "hu",
+      "path": "hu",
+      "name": "Hungarian",
+      "native": "Magyar",
+      "dir": "ltr",
+      "ogLocale": "hu_HU"
+    },
+    {
+      "code": "id",
+      "path": "id",
+      "name": "Indonesian",
+      "native": "Bahasa Indonesia",
+      "dir": "ltr",
+      "ogLocale": "id_ID"
+    },
+    {
+      "code": "it",
+      "path": "it",
+      "name": "Italian",
+      "native": "Italiano",
+      "dir": "ltr",
+      "ogLocale": "it_IT",
+      "alsoServes": [
+        "it-CH"
+      ]
+    },
+    {
+      "code": "ja",
+      "path": "ja",
+      "name": "Japanese",
+      "native": "日本語",
+      "dir": "ltr",
+      "ogLocale": "ja_JP"
+    },
+    {
+      "code": "ko",
+      "path": "ko",
+      "name": "Korean",
+      "native": "한국어",
+      "dir": "ltr",
+      "ogLocale": "ko_KR"
+    },
+    {
+      "code": "lt",
+      "path": "lt",
+      "name": "Lithuanian",
+      "native": "Lietuvių",
+      "dir": "ltr",
+      "ogLocale": "lt_LT"
+    },
+    {
+      "code": "lv",
+      "path": "lv",
+      "name": "Latvian",
+      "native": "Latviešu",
+      "dir": "ltr",
+      "ogLocale": "lv_LV"
+    },
+    {
+      "code": "ms",
+      "path": "ms",
+      "name": "Malay",
+      "native": "Bahasa Melayu",
+      "dir": "ltr",
+      "ogLocale": "ms_MY",
+      "alsoServes": [
+        "ms-BN"
+      ]
+    },
+    {
+      "code": "nb",
+      "path": "nb",
+      "name": "Norwegian (Bokmål)",
+      "native": "Norsk bokmål",
+      "dir": "ltr",
+      "ogLocale": "nb_NO"
+    },
+    {
+      "code": "nl",
+      "path": "nl",
+      "name": "Dutch",
+      "native": "Nederlands",
+      "dir": "ltr",
+      "ogLocale": "nl_NL",
+      "alsoServes": [
+        "nl-BE"
+      ]
+    },
+    {
+      "code": "pl",
+      "path": "pl",
+      "name": "Polish",
+      "native": "Polski",
+      "dir": "ltr",
+      "ogLocale": "pl_PL"
+    },
+    {
+      "code": "pt-PT",
+      "path": "pt-pt",
+      "name": "Portuguese (Portugal)",
+      "native": "Português (Portugal)",
+      "dir": "ltr",
+      "ogLocale": "pt_PT",
+      "alsoServes": [
+        "pt"
+      ]
+    },
+    {
+      "code": "ro",
+      "path": "ro",
+      "name": "Romanian",
+      "native": "Română",
+      "dir": "ltr",
+      "ogLocale": "ro_RO"
+    },
+    {
+      "code": "ru",
+      "path": "ru",
+      "name": "Russian",
+      "native": "Русский",
+      "dir": "ltr",
+      "ogLocale": "ru_RU",
+      "alsoServes": [
+        "ru-BY",
+        "ru-KZ"
+      ]
+    },
+    {
+      "code": "sl",
+      "path": "sl",
+      "name": "Slovenian",
+      "native": "Slovenščina",
+      "dir": "ltr",
+      "ogLocale": "sl_SI"
+    },
+    {
+      "code": "sq",
+      "path": "sq",
+      "name": "Albanian",
+      "native": "Shqip",
+      "dir": "ltr",
+      "ogLocale": "sq_AL"
+    },
+    {
+      "code": "sv",
+      "path": "sv",
+      "name": "Swedish",
+      "native": "Svenska",
+      "dir": "ltr",
+      "ogLocale": "sv_SE",
+      "alsoServes": [
+        "sv-FI"
+      ]
+    },
+    {
+      "code": "th",
+      "path": "th",
+      "name": "Thai",
+      "native": "ไทย",
+      "dir": "ltr",
+      "ogLocale": "th_TH"
+    },
+    {
+      "code": "tr",
+      "path": "tr",
+      "name": "Turkish",
+      "native": "Türkçe",
+      "dir": "ltr",
+      "ogLocale": "tr_TR"
+    },
+    {
+      "code": "uk",
+      "path": "uk",
+      "name": "Ukrainian",
+      "native": "Українська",
+      "dir": "ltr",
+      "ogLocale": "uk_UA"
+    },
+    {
+      "code": "vi",
+      "path": "vi",
+      "name": "Vietnamese",
+      "native": "Tiếng Việt",
+      "dir": "ltr",
+      "ogLocale": "vi_VN"
+    },
+    {
+      "code": "zh-Hans",
+      "path": "zh-hans",
+      "name": "Chinese (Simplified)",
+      "native": "简体中文",
+      "dir": "ltr",
+      "ogLocale": "zh_CN",
+      "alsoServes": [
+        "zh",
+        "zh-CN",
+        "zh-SG"
+      ]
+    }
   ]
 }

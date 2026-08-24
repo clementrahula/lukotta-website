@@ -3,8 +3,13 @@
    with the English it is to be translated from and an empty slot beside it.
    The file is complete on its own, which is what a reviewer needs.
 
+   Re-running it over a language that already has a file is safe and is the
+   point: existing translations are kept, keys added to the English since last
+   time are appended empty, and keys removed from the English are dropped. Run
+   it after every change to content/en.json.
+
    Usage:  node scripts/new-language.mjs de
-           node scripts/new-language.mjs --all     (every language still missing)
+           node scripts/new-language.mjs --all     (every language)
 */
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -23,7 +28,7 @@ if (!args.length) {
 }
 
 const wanted = args.includes("--all")
-  ? cfg.languages.filter((l) => l.code !== "en" && !existsSync(join(CONTENT, `${l.code}.json`)))
+  ? cfg.languages.filter((l) => l.code !== cfg.defaultLang)
   : args.map((code) => {
       const lang = cfg.languages.find((l) => l.code === code);
       if (!lang) {
@@ -34,7 +39,7 @@ const wanted = args.includes("--all")
     });
 
 if (!wanted.length) {
-  console.log("\n  Every language already has a file.\n");
+  console.log("\n  Nothing to do.\n");
   process.exit(0);
 }
 
@@ -65,6 +70,19 @@ for (const lang of wanted) {
   );
 
   const done = Object.values(strings).filter((v) => v[lang.code]).length;
-  console.log(`  ${lang.code.padEnd(8)} ${done}/${Object.keys(strings).length} translated  →  content/${lang.code}.json`);
+  const total = Object.keys(strings).length;
+
+  /* Say what moved, so a change to the English is visible here rather than
+     surfacing later as a page that quietly fell back. */
+  const priorKeys = Object.keys(existing);
+  const added = Object.keys(strings).filter((k) => !priorKeys.includes(k)).length;
+  const dropped = priorKeys.filter((k) => !(k in strings)).length;
+  const moved = [added ? `+${added}` : "", dropped ? `-${dropped}` : ""].filter(Boolean).join(" ");
+
+  console.log(
+    `  ${lang.code.padEnd(8)} ${String(done).padStart(3)}/${total} translated` +
+    (moved ? `   ${moved} key(s)` : "") +
+    (done === total ? "   complete" : "")
+  );
 }
 console.log("");

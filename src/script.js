@@ -94,4 +94,84 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  /* ------------------------------------------------------- language ----- */
+
+  /* Send a first-time visitor to the page in their own language.
+     Three rules keep this from doing harm:
+
+     1. Only from the root. Someone who asked for /de/ gets /de/, and a reader
+        who has chosen a language from the menu is never moved again.
+     2. Only once. The choice is remembered, so a reader who came here in one
+        language and went back to English stays in English.
+     3. Only to a finished translation. window.LUKOTTA_LANGS holds the
+        languages that were actually published, so this can never send anyone
+        to a page that does not exist.
+
+     It matches regions properly: es-MX and es-419 are Spanish readers in Latin
+     America and there is one Spanish page, so they get it. A bare tag matches
+     a regional page too — pt matches pt-PT — but only after every exact and
+     region match has been tried. */
+
+  var LANG_KEY = "lukotta-lang";
+
+  function pathFor(code) {
+    var langs = window.LUKOTTA_LANGS || [];
+    var want = String(code).toLowerCase();
+    var base = want.split("-")[0];
+    var i, l;
+
+    /* An exact tag, or a region the language declares it serves. */
+    for (i = 0; i < langs.length; i++) {
+      l = langs[i];
+      if (l.c.toLowerCase() === want) return l.p;
+      for (var j = 0; j < l.s.length; j++) {
+        if (String(l.s[j]).toLowerCase() === want) return l.p;
+      }
+    }
+    /* Failing that, the same language whatever the region. */
+    for (i = 0; i < langs.length; i++) {
+      l = langs[i];
+      if (l.c.toLowerCase().split("-")[0] === base) return l.p;
+    }
+    return null;
+  }
+
+  function chooseLanguage() {
+    var here = window.LUKOTTA_LANG;
+    var langs = window.LUKOTTA_LANGS || [];
+    if (!langs.length) return;
+
+    /* Rule 1: the root only. */
+    var path = location.pathname.replace(/\/+$/, "");
+    if (path !== "" && path !== "/index.html") return;
+
+    /* Rule 2: never override a reader who has already chosen. */
+    var chosen = null;
+    try { chosen = localStorage.getItem(LANG_KEY); } catch (e) {}
+    if (chosen) return;
+
+    var wanted = navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language];
+
+    for (var i = 0; i < wanted.length; i++) {
+      if (!wanted[i]) continue;
+      var target = pathFor(wanted[i]);
+      if (target === null) continue;
+      if (target === "" || target === undefined) return;   /* already English */
+      if (String(wanted[i]).toLowerCase().split("-")[0] === String(here).toLowerCase().split("-")[0]) return;
+      location.replace("/" + target + "/");
+      return;
+    }
+  }
+
+  /* Following a language from the menu is a choice, and is remembered. */
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest ? event.target.closest(".lang-list a") : null;
+    if (!link) return;
+    try { localStorage.setItem(LANG_KEY, link.getAttribute("hreflang")); } catch (e) {}
+  });
+
+  chooseLanguage();
 })();

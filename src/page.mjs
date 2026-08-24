@@ -46,7 +46,7 @@ const FORMATS = [
   },
 ];
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, isIndexable, indexable }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -84,6 +84,19 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
 
+  const FAQ_NS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: code,
+    mainEntity: FAQ_NS.map((n) => ({
+      "@type": "Question",
+      name: t(`faq.${n}.q`),
+      acceptedAnswer: { "@type": "Answer", text: t(`faq.${n}.a`) },
+    })),
+  };
+
   const siteLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -116,6 +129,13 @@ ${g.rows
           </tr>`
   )
   .join("\n")}`
+  ).join("\n");
+
+  const faqItems = FAQ_NS.map(
+    (n) => `        <details${n === 1 ? " open" : ""}>
+          <summary>${esc(t(`faq.${n}.q`))}</summary>
+          <div class="answer">${esc(t(`faq.${n}.a`))}</div>
+        </details>`
   ).join("\n");
 
   const extras = [1, 2, 3, 4, 5, 6, 7]
@@ -152,6 +172,12 @@ ${g.rows
     })
     .join("\n");
 
+  /* lukko and -tta are Finnish and stay Finnish in all thirty-seven languages,
+     so the sentence carries placeholders and the page fills them in. */
+  const etymology = esc(t("name.body"))
+    .replace("{lukko}", '<i lang="fi">lukko</i>')
+    .replace("{tta}", '<i lang="fi">-tta</i>');
+
   /* The author's name is a link, so the string keeps its {author} placeholder
      until here rather than being flattened into text by the build. */
   const copyright = esc(t("footer.copyright")).split("{author}");
@@ -173,7 +199,11 @@ ${g.rows
   <title>${esc(t("meta.title"))}</title>
   <meta name="description" content="${esc(t("meta.description"))}">
   <link rel="canonical" href="${canonical}">
-
+${isIndexable ? "" : `  <meta name="robots" content="noindex, follow">
+  <!-- This translation is unfinished, so the page is word for word the English
+       one. Thirty-seven copies of the same page would compete with each other,
+       so it is kept out of the index until it is translated. -->
+`}
   <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
@@ -218,6 +248,7 @@ ${ogAlternates}
   </script>
 
   <script type="application/ld+json">${jsonld(softwareLd)}</script>
+  <script type="application/ld+json">${jsonld(faqLd)}</script>
   <script type="application/ld+json">${jsonld(siteLd)}</script>
 </head>
 <body>
@@ -362,6 +393,38 @@ ${permissions}
       </div>
     </section>
 
+    <section id="name" class="rule">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="marker">04</p>
+          <h2>${esc(t("name.title"))}</h2>
+        </div>
+        <div class="etym">
+          <p class="etym-word" lang="fi"><span class="stress">Lú</span>kotta</p>
+          <p class="etym-meta">
+            <span class="etym-lang">${esc(t("name.language"))}</span>
+            <span class="etym-gloss">“${esc(t("name.gloss"))}”</span>
+          </p>
+          <div class="prose">
+            <p>${etymology}</p>
+            <p>${esc(t("name.stress"))}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="rule">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="marker">05</p>
+          <h2>${esc(t("faq.title"))}</h2>
+        </div>
+        <div class="faq">
+${faqItems}
+        </div>
+      </div>
+    </section>
+
     <section id="download" class="rule closing">
       <div class="wrap">
         <h2>${esc(t("download.title"))}</h2>
@@ -395,6 +458,16 @@ ${requirements}
     </div>
   </footer>
 
+  <script>
+    /* Which languages have a finished page, and every region code each one
+       serves: es-419 and es-MX are Spanish readers in Latin America, and they
+       should land on the Spanish page rather than the English one. Written by
+       the build so the matcher can never disagree with what was published. */
+    window.LUKOTTA_LANGS = ${JSON.stringify(
+      indexable.map((l) => ({ c: l.code, p: l.path, s: l.alsoServes || [] }))
+    )};
+    window.LUKOTTA_LANG = ${JSON.stringify(code)};
+  </script>
   <script src="${assetPrefix}script.js" defer></script>
 </body>
 </html>

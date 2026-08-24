@@ -49,9 +49,12 @@ function loadStrings(code) {
 const english = loadStrings("en");
 if (!english) throw new Error("content/en.json is missing — it is the source every page is built from.");
 
+const requested = new Set();
+
 function translator(code, strings) {
   const missing = new Set();
   const t = (key) => {
+    requested.add(key);
     let value = strings[key];
     if (value === undefined || value === "") {
       missing.add(key);
@@ -109,22 +112,42 @@ function resolveShots(code) {
   return light;
 }
 
-/* A language is only advertised once it has a page. Naming a language in
-   hreflang before its page exists points search engines at a 404, and Search
-   Console reports the whole cluster as broken. */
+/* Two different questions, and they must not be confused.
+
+   A page is BUILT when it has a content file. It appears in the language menu
+   and can be visited, whatever state its translation is in.
+
+   A page is INDEXABLE only when every string in it is translated. An
+   untranslated page is word for word the English one, and thirty-seven copies
+   of the same English page is duplicate content — it would compete with itself
+   and rank worse than one page alone. So a page that is not fully translated
+   is built and reachable, but carries noindex, stays out of the sitemap, and is
+   left out of the hreflang cluster until it is finished. */
 const buildable = cfg.languages.filter(
   (l) => l.code === cfg.defaultLang || existsSync(join(CONTENT, `${l.code}.json`))
 );
-const untranslated = cfg.languages
-  .filter((l) => !buildable.includes(l))
-  .map((l) => l.code);
 
-/* Every page links to every other, so the alternate set is computed once. */
+const totalKeys = Object.keys(english).length;
+const completeness = new Map();
+for (const lang of buildable) {
+  if (lang.code === cfg.defaultLang) { completeness.set(lang.code, 1); continue; }
+  const strings = loadStrings(lang.code) || {};
+  const done = Object.keys(english).filter((k) => strings[k]).length;
+  completeness.set(lang.code, totalKeys ? done / totalKeys : 0);
+}
+
+const indexable = buildable.filter((l) => completeness.get(l.code) === 1);
+const noPage = cfg.languages.filter((l) => !buildable.includes(l)).map((l) => l.code);
+const partial = buildable.filter((l) => completeness.get(l.code) !== 1).map((l) => l.code);
+
+/* One alternate per indexable page, plus the region codes it also serves.
+   es-419 and es-MX are Spanish readers in Latin America; they get the Spanish
+   page rather than falling through to English. No extra page is created. */
 const alternates = [
-  ...buildable.map((l) => ({
-    code: l.code,
-    href: l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`,
-  })),
+  ...indexable.flatMap((l) => {
+    const href = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
+    return [l.code, ...(l.alsoServes || [])].map((code) => ({ code, href }));
+  }),
   { code: "x-default", href: `${cfg.domain}/` },
 ];
 
@@ -133,26 +156,27 @@ const built = [];
 for (const lang of buildable) {
   const strings = loadStrings(lang.code);
   const t = translator(lang.code, strings || english);
+  const isIndexable = completeness.get(lang.code) === 1;
   const canonical = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
   const assetPrefix = lang.path ? "../" : "./";
 
   const shotSize = resolveShots(lang.code);
 
-  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable });
+  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, isIndexable, indexable });
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, "index.html"), html, "utf8");
 
-  if (t.missing.size) {
-    warn(`${lang.code}: ${t.missing.size} string(s) fell back to English — ${[...t.missing].slice(0, 5).join(", ")}${t.missing.size > 5 ? ", …" : ""}`);
+  if (t.missing.size && completeness.get(lang.code) !== 0) {
+    warn(`${lang.code}: ${t.missing.size} of ${totalKeys} strings fell back to English — ${[...t.missing].slice(0, 4).join(", ")}${t.missing.size > 4 ? ", …" : ""}`);
   }
   built.push(lang.code);
 }
 
 /* ---------------------------------------------------------- sitemap etc -- */
 
-const builtLangs = cfg.languages.filter((l) => built.includes(l.code));
+const builtLangs = indexable.filter((l) => built.includes(l.code));
 
 const urlEntries = builtLangs
   .map((l) => {
@@ -247,13 +271,22 @@ writeFileSync(
   "utf8"
 );
 
+/* A key in the content that no page ever asks for is dead weight: it ships to
+   every translator and can never appear. Better to hear about it here. */
+for (const key of Object.keys(english)) {
+  if (!requested.has(key)) warn(`content/en.json has "${key}", which the page never renders. Remove it, or use it.`);
+}
+
 /* --------------------------------------------------------------- report -- */
 
 const pages = built.length;
 console.log(`\n  Lukotta website — built ${pages} page${pages === 1 ? "" : "s"} into public/\n`);
-console.log(`  languages built     ${built.join(" ")}`);
-if (untranslated.length) {
-  console.log(`  awaiting translation  ${untranslated.length}: ${untranslated.join(" ")}`);
+console.log(`  indexed             ${indexable.map((l) => l.code).join(" ")}`);
+if (partial.length) {
+  console.log(`  built, not indexed  ${partial.length} awaiting translation: ${partial.join(" ")}`);
+}
+if (noPage.length) {
+  console.log(`  no content file     ${noPage.length}: ${noPage.join(" ")}`);
 }
 if (usingPlaceholder.length) {
   console.log(`  placeholder shots   ${usingPlaceholder.length}: ${usingPlaceholder.join(" ")}`);
@@ -261,7 +294,7 @@ if (usingPlaceholder.length) {
 for (const w of warnings) console.log(`  warning             ${w}`);
 console.log("");
 
-if (strict && (warnings.length || untranslated.length)) {
+if (strict && (warnings.length || partial.length || noPage.length)) {
   console.error("  --strict: refusing to pass with warnings or untranslated languages.\n");
   process.exit(1);
 }

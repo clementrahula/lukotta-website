@@ -559,3 +559,56 @@ tbody tr:not(.group) th code { color: var(--ink); }
 @media print {
   .site-header { display: none; }
 }
+
+/* ------------------------------------------------------------------ faq -- */
+
+.faq { max-width: 74ch; }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding-block: 17px; cursor: pointer; list-style: none;
+  font-family: var(--font-display);
+  font-weight: 550; font-size: 1.0313rem; letter-spacing: -0.012em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; flex: none; margin-inline-start: auto; margin-top: 7px;
+  width: 8px; height: 8px;
+  border-inline-end: 1.5px solid var(--amber);
+  border-block-end: 1.5px solid var(--amber);
+  transform: rotate(45deg); transition: transform .18s ease;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); margin-top: 10px; }
+.faq summary:hover { color: var(--amber-ink); }
+.faq .answer { padding-bottom: 20px; color: var(--ink-2); font-size: .9375rem; max-width: 66ch; }
+
+[dir="rtl"] .faq summary::after { transform: rotate(135deg); }
+[dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }
+
+/* ----------------------------------------------------------------- name -- */
+
+.etym { max-width: var(--measure); }
+.etym-word {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 1.6rem + 4vw, 4.2rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--ink);
+}
+/* The first syllable is set apart because that is where the stress falls —
+   the sentence below says so, and this shows it. */
+.etym-word .stress { color: var(--amber); }
+
+.etym-meta {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;
+  margin-top: 16px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.etym-lang {
+  font-family: var(--font-mono); font-size: .6875rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
+}
+.etym-gloss { color: var(--ink-2); font-size: 1.0625rem; }
+.etym .prose { margin-top: 22px; }
+.etym i { font-style: italic; color: var(--ink); }

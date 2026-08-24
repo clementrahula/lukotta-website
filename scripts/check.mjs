@@ -21,10 +21,20 @@ if (!existsSync(OUT)) {
   process.exit(1);
 }
 
-/* Which languages actually got built. */
+/* Which languages got built, and which of those may be indexed. A page that
+   carries noindex is an unfinished translation: it is word for word the English
+   page, so it must not compete with it, and the rules below treat it that
+   way — it is exempt from the duplicate-title check and absent from hreflang. */
 const pages = cfg.languages
   .map((l) => ({ lang: l, file: l.path ? join(OUT, l.path, "index.html") : join(OUT, "index.html") }))
-  .filter((p) => existsSync(p.file));
+  .filter((p) => existsSync(p.file))
+  .map((p) => {
+    const html = readFileSync(p.file, "utf8");
+    return { ...p, html, indexable: !/<meta name="robots" content="noindex/.test(html) };
+  });
+
+const indexed = pages.filter((p) => p.indexable);
+if (!indexed.length) err("No page is indexable — every one carries noindex.");
 
 if (!pages.length) err("No pages were built.");
 
@@ -33,8 +43,7 @@ const descriptions = new Map();
 
 const attr = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
 
-for (const { lang, file } of pages) {
-  const html = readFileSync(file, "utf8");
+for (const { lang, file, html, indexable } of pages) {
   const where = lang.code;
 
   /* --- the document itself --- */
@@ -52,11 +61,11 @@ for (const { lang, file } of pages) {
   if (desc && (desc.length < 70 || desc.length > 165)) {
     warn(`${where}: description is ${desc.length} characters; 70–165 shows in full.`);
   }
-  if (title) {
-    if (titles.has(title)) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Every language needs its own.`);
+  if (indexable && title) {
+    if (titles.has(title)) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two indexable pages cannot share one.`);
     else titles.set(title, where);
   }
-  if (desc) {
+  if (indexable && desc) {
     if (descriptions.has(desc)) err(`${where}: duplicate description, same as ${descriptions.get(desc)}.`);
     else descriptions.set(desc, where);
   }
@@ -70,11 +79,24 @@ for (const { lang, file } of pages) {
   const found = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)]
     .map((m) => ({ code: m[1], href: m[2] }));
   const codes = new Set(found.map((f) => f.code));
-  for (const l of pages.map((p) => p.lang)) {
+  for (const l of indexed.map((p) => p.lang)) {
     if (!codes.has(l.code)) err(`${where}: no hreflang entry for "${l.code}" — the cluster must be complete on every page.`);
+    for (const alias of l.alsoServes || []) {
+      if (!codes.has(alias)) err(`${where}: no hreflang entry for region "${alias}", which "${l.code}" is meant to serve.`);
+    }
   }
   if (!codes.has("x-default")) err(`${where}: no hreflang="x-default"`);
-  if (!codes.has(lang.code)) err(`${where}: no self-referencing hreflang`);
+  if (indexable && !codes.has(lang.code)) err(`${where}: no self-referencing hreflang`);
+  if (!indexable && codes.has(lang.code)) {
+    err(`${where}: carries noindex but is still named in its own hreflang cluster.`);
+  }
+
+  /* Duplicate region codes would make Google discard the whole cluster. */
+  const seenCodes = new Set();
+  for (const f of found) {
+    if (seenCodes.has(f.code)) err(`${where}: hreflang "${f.code}" appears more than once.`);
+    seenCodes.add(f.code);
+  }
   for (const f of found) {
     if (!f.href.startsWith("https://")) err(`${where}: hreflang "${f.code}" is not an absolute https URL`);
     if (!f.href.endsWith("/")) warn(`${where}: hreflang "${f.code}" does not end in a slash`);
@@ -134,12 +156,17 @@ const sitemapPath = join(OUT, "sitemap.xml");
 if (!existsSync(sitemapPath)) err("no sitemap.xml");
 else {
   const xml = readFileSync(sitemapPath, "utf8");
-  for (const { lang } of pages) {
+  for (const { lang } of indexed) {
     const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
     if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
   }
+  for (const { lang, indexable } of pages) {
+    if (indexable) continue;
+    const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
+    if (xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml lists ${loc}, which carries noindex`);
+  }
   const locs = [...xml.matchAll(/<loc>/g)].length;
-  if (locs !== pages.length) err(`sitemap.xml has ${locs} URLs but ${pages.length} pages were built`);
+  if (locs !== indexed.length) err(`sitemap.xml has ${locs} URLs but ${indexed.length} pages may be indexed`);
 }
 
 /* --- the files GitHub Pages needs --- */
@@ -152,10 +179,12 @@ if (cname !== new URL(cfg.domain).hostname) err(`CNAME says "${cname}", expected
 /* --- untranslated languages are a warning, not a failure --- */
 const missing = cfg.languages.filter((l) => !pages.some((p) => p.lang.code === l.code));
 if (missing.length) warn(`${missing.length} language(s) have no page yet: ${missing.map((l) => l.code).join(" ")}`);
+const held = pages.filter((p) => !p.indexable).map((p) => p.lang.code);
+if (held.length) warn(`${held.length} page(s) built but held back from search until translated: ${held.join(" ")}`);
 
 /* --------------------------------------------------------------- report -- */
 
-console.log(`\n  Checked ${pages.length} page(s) in public/\n`);
+console.log(`\n  Checked ${pages.length} page(s) in public/, ${indexed.length} of them indexable\n`);
 for (const w of warns) console.log(`  warning  ${w}`);
 for (const e of errors) console.log(`  ERROR    ${e}`);
 console.log(

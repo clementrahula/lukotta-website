@@ -10,7 +10,9 @@
     "formats": "Section 02. A single table of everything the application opens, grouped into encryption, filesystems and disk images, with a Read and a Write column. The table is the reason many readers come to the page.",
     "how": "Section 03. Why a Linux virtual machine is involved, three steps, and what the application asks the reader's Mac for.",
     "download": "The closing section: the call to action and what a Mac needs before the application will run.",
-    "footer": "Three links, and the copyright and licence line beneath them."
+    "footer": "Three links, and the copyright and licence line beneath them.",
+    "faq": "Nine questions, written the way a reader would type them into a search engine. These are published as structured data as well as shown on the page, so a search engine may show a question and its answer directly in its results. Every answer must stand on its own, without the question.",
+    "name": "Section 04, where the name is explained. Set as a dictionary entry: the word itself large, the language and the meaning beside it, then two short sentences. Taken from the application's own README."
   },
   "notes": {
     "meta.title": "At or under 60 characters. Search results cut it off. Keyword first, brand last.",
@@ -46,6 +48,16 @@
     "download.body": "Carries the privacy claim — collects nothing, no account, one update check. Do not strengthen it beyond the English.",
     "download.req.1": "Says plainly that Intel Macs are not supported. Do not soften it; a reader on an Intel Mac needs to know before downloading.",
     "footer.copyright": "Contains {year}, replaced when the page is built, and {author}, which becomes a link to the author's own site. Both must survive, spelled exactly as they are.",
-    "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is."
+    "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is.",
+    "faq.1.a": "Names the GNU General Public License, which is not translated.",
+    "faq.2.q": "Phrased as a search. Keep BitLocker and Mac in it — those are the words a reader would use.",
+    "faq.3.a": "The distinction between what macOS does (read-only) and what Lukotta does (read and write) is the whole answer. Keep both halves.",
+    "faq.5.q": "Long, and deliberately so: it is the question people actually ask.",
+    "faq.6.a": "Says plainly that Intel Macs are not supported. Do not soften it.",
+    "faq.7.a": "A safety claim. Do not strengthen it beyond the English, and do not weaken it either.",
+    "name.gloss": "What Lúkotta means, translated into this language. It is shown in quotation marks; use the quotation marks this language uses.",
+    "name.body": "Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",
+    "name.stress": "About where the stress falls when the word is said aloud. The page shows this by setting the first syllable apart, so the sentence and the picture must agree.",
+    "name.language": "The name of the Finnish language in this language."
   }
 }

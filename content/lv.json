@@ -1,0 +1,474 @@
+{
+  "language": {
+    "code": "lv",
+    "name": "Latvian",
+    "native": "Latviešu",
+    "dir": "ltr"
+  },
+  "strings": {
+    "meta.title": {
+      "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
+      "lv": ""
+    },
+    "meta.description": {
+      "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
+      "lv": ""
+    },
+    "meta.ogTitle": {
+      "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
+      "lv": ""
+    },
+    "meta.ogDescription": {
+      "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
+      "lv": ""
+    },
+    "meta.imageAlt": {
+      "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
+      "lv": ""
+    },
+    "ui.skipToContent": {
+      "en": "Skip to content",
+      "lv": ""
+    },
+    "ui.chooseLanguage": {
+      "en": "Choose a language",
+      "lv": ""
+    },
+    "ui.menu": {
+      "en": "Menu",
+      "lv": ""
+    },
+    "ui.toTop": {
+      "en": "Back to the top",
+      "lv": ""
+    },
+    "ui.switchToLight": {
+      "en": "Switch to light appearance",
+      "lv": ""
+    },
+    "ui.switchToDark": {
+      "en": "Switch to dark appearance",
+      "lv": ""
+    },
+    "nav.download": {
+      "en": "Download",
+      "lv": ""
+    },
+    "nav.features": {
+      "en": "Features",
+      "lv": ""
+    },
+    "nav.how": {
+      "en": "How it works",
+      "lv": ""
+    },
+    "hero.title": {
+      "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
+      "lv": ""
+    },
+    "hero.subtitle": {
+      "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder — readable and writable, like any other disk.",
+      "lv": ""
+    },
+    "hero.download": {
+      "en": "Download",
+      "lv": ""
+    },
+    "hero.source": {
+      "en": "Source on GitHub",
+      "lv": ""
+    },
+    "hero.meta": {
+      "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later · GPL-3.0-or-later",
+      "lv": ""
+    },
+    "hero.screenshotAlt": {
+      "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
+      "lv": ""
+    },
+    "features.title": {
+      "en": "What it does",
+      "lv": ""
+    },
+    "features.lead": {
+      "en": "Plug an encrypted Windows or Linux drive into a Mac and macOS calls it unreadable, then offers to erase it. Lukotta opens it instead.",
+      "lv": ""
+    },
+    "features.body": {
+      "en": "The drive appears in Finder under Locations. You copy files off it, copy files onto it, and eject it the way you would any other disk. Nothing is converted first and nothing is copied anywhere else — the drive is opened where it lies, and the files you see are the files that are on it.",
+      "lv": ""
+    },
+    "features.body2": {
+      "en": "It works the same way for a disk image. A virtual machine's disk opens without starting the virtual machine, so you can take a file out of it, or put one in.",
+      "lv": ""
+    },
+    "extras.title": {
+      "en": "And",
+      "lv": ""
+    },
+    "extras.1.term": {
+      "en": "Open read-only",
+      "lv": ""
+    },
+    "extras.1.def": {
+      "en": "Mount a drive or an image without writing to it. Set before it opens, and enforced both inside the virtual machine and on this Mac.",
+      "lv": ""
+    },
+    "extras.2.term": {
+      "en": "Open again after restarting",
+      "lv": ""
+    },
+    "extras.2.def": {
+      "en": "Lukotta can reopen the drives and images that were open when you log in, as they were. It is off until you turn it on.",
+      "lv": ""
+    },
+    "extras.3.term": {
+      "en": "Remembers a passphrase",
+      "lv": ""
+    },
+    "extras.3.def": {
+      "en": "Saved in your Keychain, and only when you ask. It is never written to disk in the clear and never appears in a command line.",
+      "lv": ""
+    },
+    "extras.4.term": {
+      "en": "Several at once",
+      "lv": ""
+    },
+    "extras.5.term": {
+      "en": "Hibernated Windows drives",
+      "lv": ""
+    },
+    "extras.4.def": {
+      "en": "About ten drives stay open together, at 30 to 80 MB of memory each.",
+      "lv": ""
+    },
+    "extras.5.def": {
+      "en": "An NTFS volume that Windows left dirty or hibernated still opens, rather than being refused.",
+      "lv": ""
+    },
+    "extras.6.term": {
+      "en": "Thirty-seven languages",
+      "lv": ""
+    },
+    "extras.6.def": {
+      "en": "Including Arabic and Hebrew, where the interface turns round and reads right to left.",
+      "lv": ""
+    },
+    "extras.7.term": {
+      "en": "Uninstalls completely",
+      "lv": ""
+    },
+    "extras.7.def": {
+      "en": "One menu item ejects what is open, removes the background helper, deletes the Linux environment and moves the application to the Bin.",
+      "lv": ""
+    },
+    "formats.title": {
+      "en": "What it supports",
+      "lv": ""
+    },
+    "formats.lead": {
+      "en": "Everything Lukotta opens, and what it will and will not write.",
+      "lv": ""
+    },
+    "formats.col.format": {
+      "en": "Format",
+      "lv": ""
+    },
+    "formats.col.read": {
+      "en": "Read",
+      "lv": ""
+    },
+    "formats.col.write": {
+      "en": "Write",
+      "lv": ""
+    },
+    "formats.col.notes": {
+      "en": "Notes",
+      "lv": ""
+    },
+    "formats.yes": {
+      "en": "Yes",
+      "lv": ""
+    },
+    "formats.no": {
+      "en": "No",
+      "lv": ""
+    },
+    "formats.group.encryption": {
+      "en": "Encryption",
+      "lv": ""
+    },
+    "formats.group.filesystems": {
+      "en": "Filesystems",
+      "lv": ""
+    },
+    "formats.group.images": {
+      "en": "Disk images",
+      "lv": ""
+    },
+    "formats.bitlocker.note": {
+      "en": "Unlocked with the volume password or a 48-digit recovery key",
+      "lv": ""
+    },
+    "formats.luks.note": {
+      "en": "Both LUKS1 and LUKS2, unlocked with the passphrase",
+      "lv": ""
+    },
+    "formats.lvm.note": {
+      "en": "As Ubuntu, Debian, Mint and Fedora set it up. Several volumes on one drive unlock together",
+      "lv": ""
+    },
+    "formats.ntfs.note": {
+      "en": "Including a volume Windows left dirty or hibernated",
+      "lv": ""
+    },
+    "formats.linuxfs.note": {
+      "en": "The Linux filesystems, mounted by the guest's own drivers",
+      "lv": ""
+    },
+    "formats.exfat.note": {
+      "en": "Handed to macOS, which reads and writes these itself",
+      "lv": ""
+    },
+    "formats.raw.note": {
+      "en": "Attached by macOS, then mounted",
+      "lv": ""
+    },
+    "formats.qcow2.note": {
+      "en": "QEMU and UTM",
+      "lv": ""
+    },
+    "formats.vmdk.note": {
+      "en": "VMware, flat and sparse",
+      "lv": ""
+    },
+    "formats.vmdkStream.note": {
+      "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
+      "lv": ""
+    },
+    "formats.vdi.note": {
+      "en": "VirtualBox",
+      "lv": ""
+    },
+    "formats.vhd.note": {
+      "en": "Hyper-V, fixed and dynamic",
+      "lv": ""
+    },
+    "formats.vhdx.note": {
+      "en": "Hyper-V. Opens read-only, and says so before it opens",
+      "lv": ""
+    },
+    "formats.specs": {
+      "en": "Every format in full detail, including how each one is read and written",
+      "lv": ""
+    },
+    "formats.not.title": {
+      "en": "Not supported",
+      "lv": ""
+    },
+    "formats.not.body": {
+      "en": "FileVault and encrypted disk images, which macOS opens itself. Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption. LUKS volumes whose header is stored away from the drive. VeraCrypt and TrueCrypt. An image that names another file — a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file.",
+      "lv": ""
+    },
+    "how.title": {
+      "en": "How it works",
+      "lv": ""
+    },
+    "how.lead": {
+      "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
+      "lv": ""
+    },
+    "how.1.title": {
+      "en": "Plug in the drive",
+      "lv": ""
+    },
+    "how.1.body": {
+      "en": "Pick it from the list. For a disk image, choose File → Open Disk Image, or File → Open Drive to see every disk attached to this Mac and what Lukotta can do with each.",
+      "lv": ""
+    },
+    "how.2.title": {
+      "en": "Type the password",
+      "lv": ""
+    },
+    "how.2.body": {
+      "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
+      "lv": ""
+    },
+    "how.3.title": {
+      "en": "Open it in Finder",
+      "lv": ""
+    },
+    "how.3.body": {
+      "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
+      "lv": ""
+    },
+    "how.note": {
+      "en": "The drive is handed to Finder over a local network connection on your own Mac, so it appears under Locations with a network icon. Nothing leaves the machine; macOS simply offers no way to present it as a local disk.",
+      "lv": ""
+    },
+    "how.permissions.title": {
+      "en": "What it asks your Mac for",
+      "lv": ""
+    },
+    "how.permissions.1": {
+      "en": "Full Disk Access, which macOS will not let any application request, so it has to be switched on by hand.",
+      "lv": ""
+    },
+    "how.permissions.2": {
+      "en": "Permission to read removable volumes, which macOS asks for the first time a drive is read.",
+      "lv": ""
+    },
+    "how.permissions.3": {
+      "en": "Your administrator password, once, when the background helper is set up. Lukotta never sees it.",
+      "lv": ""
+    },
+    "download.title": {
+      "en": "Open the drive your Mac says it cannot read.",
+      "lv": ""
+    },
+    "download.body": {
+      "en": "Download it, drag it to Applications, and open it. It is signed and notarised. It collects nothing, has no account and makes one request of its own: a daily check for updates, which can be turned off.",
+      "lv": ""
+    },
+    "download.cta": {
+      "en": "Download for macOS",
+      "lv": ""
+    },
+    "download.source": {
+      "en": "Source on GitHub",
+      "lv": ""
+    },
+    "download.req.title": {
+      "en": "Requirements",
+      "lv": ""
+    },
+    "download.req.1": {
+      "en": "An Apple Silicon Mac. Intel Macs are not supported",
+      "lv": ""
+    },
+    "download.req.2": {
+      "en": "macOS 15 Sequoia or later",
+      "lv": ""
+    },
+    "download.req.3": {
+      "en": "260 MB of disk, including the Linux environment it unpacks on first use",
+      "lv": ""
+    },
+    "name.title": {
+      "en": "About the name",
+      "lv": ""
+    },
+    "name.language": {
+      "en": "Finnish",
+      "lv": ""
+    },
+    "name.gloss": {
+      "en": "without a lock",
+      "lv": ""
+    },
+    "name.body": {
+      "en": "From {lukko}, a lock, with the ending {tta} marking the absence of something.",
+      "lv": ""
+    },
+    "name.stress": {
+      "en": "The stress falls on the first syllable, as it always does in Finnish.",
+      "lv": ""
+    },
+    "faq.title": {
+      "en": "Questions",
+      "lv": ""
+    },
+    "faq.1.q": {
+      "en": "Is Lukotta free?",
+      "lv": ""
+    },
+    "faq.1.a": {
+      "en": "Yes. It is free software under the GNU General Public License, version 3 or later, and the source is public. There is no paid tier, no subscription, no trial and no account.",
+      "lv": ""
+    },
+    "faq.2.q": {
+      "en": "Can I open a BitLocker drive on a Mac?",
+      "lv": ""
+    },
+    "faq.2.a": {
+      "en": "Yes, and write to it. Lukotta unlocks a BitLocker volume with the volume password or a 48-digit recovery key and hands it to Finder, where it reads and writes like any other drive. macOS cannot open BitLocker on its own.",
+      "lv": ""
+    },
+    "faq.3.q": {
+      "en": "Can I write to an NTFS drive on macOS?",
+      "lv": ""
+    },
+    "faq.3.a": {
+      "en": "Yes. macOS mounts NTFS read-only and offers no way to change that. Lukotta mounts it through Linux, which reads and writes NTFS, so you can copy files onto the drive as well as off it. A volume Windows left hibernated or did not shut down properly still opens.",
+      "lv": ""
+    },
+    "faq.4.q": {
+      "en": "Can I open a Linux drive on a Mac?",
+      "lv": ""
+    },
+    "faq.4.a": {
+      "en": "Yes. ext2, ext3, ext4, btrfs and XFS are opened, on their own or inside LUKS1 or LUKS2 encryption, and so is the LVM layout that Ubuntu, Debian, Mint and Fedora set up, where several volumes on one drive unlock together.",
+      "lv": ""
+    },
+    "faq.5.q": {
+      "en": "Can I open a virtual machine's disk without starting the virtual machine?",
+      "lv": ""
+    },
+    "faq.5.a": {
+      "en": "Yes. qcow2, VMDK, VDI, VHD and VHDX images open as drives in Finder, so a file can be copied out of a virtual machine's disk, or into it, without booting the machine. Images written by VMware, VirtualBox, Hyper-V, QEMU and UTM are all read.",
+      "lv": ""
+    },
+    "faq.6.q": {
+      "en": "Does it work on an Intel Mac?",
+      "lv": ""
+    },
+    "faq.6.a": {
+      "en": "No. Lukotta needs the virtualisation an Apple Silicon Mac provides, and runs on macOS 15 Sequoia or later.",
+      "lv": ""
+    },
+    "faq.7.q": {
+      "en": "Can it damage or erase my drive?",
+      "lv": ""
+    },
+    "faq.7.a": {
+      "en": "It never formats a drive and never erases one. Any drive or image can be opened read-only, which is set before it opens and enforced both inside the virtual machine and on this Mac, so nothing can reach the drive through it.",
+      "lv": ""
+    },
+    "faq.8.q": {
+      "en": "Where does my password go?",
+      "lv": ""
+    },
+    "faq.8.a": {
+      "en": "Nowhere. It never leaves your Mac, is never written to disk in the clear, and never appears in a command line. It is saved in your Keychain only if you ask for it to be.",
+      "lv": ""
+    },
+    "faq.9.q": {
+      "en": "Why does the opened drive show a network icon?",
+      "lv": ""
+    },
+    "faq.9.a": {
+      "en": "The drive is handed to Finder over a local network connection on your own Mac, which is the only route macOS provides for this. Nothing leaves the machine, and the drive reads, writes and ejects like any other.",
+      "lv": ""
+    },
+    "footer.privacy": {
+      "en": "Privacy",
+      "lv": ""
+    },
+    "footer.licence": {
+      "en": "Licence",
+      "lv": ""
+    },
+    "footer.contact": {
+      "en": "Contact",
+      "lv": ""
+    },
+    "footer.copyright": {
+      "en": "© {year} {author}.",
+      "lv": ""
+    },
+    "footer.gpl": {
+      "en": "Free software under the GNU General Public License, version 3 or later.",
+      "lv": ""
+    }
+  }
+}
