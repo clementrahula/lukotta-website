@@ -16,7 +16,7 @@ const jsonld = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
 
 /* The support table. The read and write columns come from the application's
    SPECS.md. */
-const FORMATS = [
+export const FORMATS = [
   {
     group: "formats.group.encryption",
     rows: [
@@ -39,7 +39,9 @@ const FORMATS = [
       { name: "IMG, DMG", read: 1, write: 1, native: 1, note: "formats.raw.note" },
       { name: "qcow2", read: 1, write: 1, note: "formats.qcow2.note" },
       { name: "VMDK", read: 1, write: 1, experimental: 1, note: "formats.vmdk.note" },
-      { name: "VMDK, stream-optimized", read: 1, write: 0, experimental: 1, note: "formats.vmdkStream.note" },
+      /* A variant of VMDK rather than a format of its own, so it adds no
+         entry of its own to featureList. */
+      { name: "VMDK, stream-optimized", read: 1, write: 0, experimental: 1, note: "formats.vmdkStream.note", feature: [] },
       { name: "VDI", read: 1, write: 1, experimental: 1, note: "formats.vdi.note" },
       { name: "VHD", read: 1, write: 1, experimental: 1, note: "formats.vhd.note" },
       { name: "VHDX", read: 1, write: 0, experimental: 1, note: "formats.vhdx.note" },
@@ -64,6 +66,13 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     .map((l) => `  <meta property="og:locale:alternate" content="${l.ogLocale}">`)
     .join("\n");
 
+  /* One entry per format, split out of the table rows so that a reader asking
+     whether a single format is supported finds that exact token. Names are
+     never translated, so this is the same list on every page. */
+  const featureList = [...new Set(
+    FORMATS.flatMap((g) => g.rows.flatMap((r) => r.feature ?? r.name.split(",").map((n) => n.trim())))
+  )];
+
   const softwareLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -73,6 +82,8 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     applicationSubCategory: "Disk Utility",
     operatingSystem: "macOS 15 Sequoia or later",
     processorRequirements: "Apple Silicon (arm64)",
+    softwareRequirements: "macOS 15 Sequoia or later on an Apple Silicon Mac",
+    featureList,
     softwareVersion: cfg.appVersion,
     inLanguage: code,
     description: t("meta.description"),

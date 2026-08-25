@@ -7,7 +7,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { renderPage } from "../src/page.mjs";
+import { renderPage, FORMATS } from "../src/page.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "src");
@@ -300,11 +300,79 @@ ${urlEntries}
   "utf8"
 );
 
+/* llms.txt, a proposed convention for handing an assistant a plain summary of
+   a site rather than making it infer one from markup. Adoption is not settled;
+   it is written because it costs nothing and states the facts in one place. */
+/* "writing is experimental" only says anything about a format that can be
+   written to at all. */
+const readWrite = (r) =>
+  r.write ? (r.experimental ? "read and write, writing experimental" : "read and write") : "read only";
+const formatLines = FORMATS.map((g) => {
+  const rows = g.rows.map((r) => `${r.name} (${readWrite(r)})`);
+  return `- ${english[g.group]}: ${rows.join("; ")}`;
+}).join("\n");
+
+writeFileSync(
+  join(OUT, "llms.txt"),
+  `# Lukotta
+
+> ${english["meta.description"]}
+
+Lukotta is a macOS application. It needs ${"macOS 15 Sequoia or later on an Apple Silicon Mac"}.
+The current version is ${cfg.appVersion}. It is free of charge and free software,
+licensed under the GNU General Public License, version 3 or later. It asks for no
+account, sends no telemetry, and makes no network connection of its own.
+
+## What it does
+
+macOS cannot mount BitLocker volumes, Linux filesystems such as ext4, btrfs and
+XFS, LUKS encryption, or most virtual machine disk images. Lukotta opens them:
+attach the drive or open the image, enter the password if there is one, and the
+volume appears in Finder like any other disk.
+
+## Supported formats
+
+${formatLines}
+
+## Pages
+
+${cfg.languages
+  .filter((l) => built.includes(l.code))
+  .map((l) => {
+    const label = l.name === l.native ? l.name : `${l.name} (${l.native})`;
+    const url = `${cfg.domain}/${l.path ? l.path + "/" : ""}`;
+    return `- [${label}](${url})${l.code === cfg.defaultLang ? ": the same page, and the canonical one" : ""}`;
+  })
+  .join("\n")}
+
+## Source and policies
+
+- [Application source and releases](${cfg.githubRepo}): issues, releases and the code
+- [Privacy policy](${cfg.githubRepo}/blob/main/PRIVACY.md): what the application does and does not collect
+- [Security policy](${cfg.githubRepo}/blob/main/SECURITY.md): how to report a vulnerability privately
+- [Licence](${cfg.githubRepo}/blob/main/LICENSE.txt): GNU General Public License, version 3 or later
+`,
+  "utf8"
+);
+
 writeFileSync(
   join(OUT, "robots.txt"),
+  /* The wildcard already allows everything. These are named anyway: a crawler
+     that finds its own name stops at that group and never reads the wildcard,
+     so each group has to be complete on its own, and naming them states the
+     intent rather than leaving it to be inferred. Note that a block applied at
+     the CDN happens before any of this is read. */
   `User-agent: *
 Allow: /
 
+${[
+  "GPTBot", "OAI-SearchBot", "ChatGPT-User",
+  "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai",
+  "PerplexityBot", "Perplexity-User",
+  "Google-Extended", "Applebot-Extended",
+  "Bingbot", "CCBot", "Amazonbot", "Meta-ExternalAgent",
+  "DuckAssistBot", "YouBot", "cohere-ai",
+].map((bot) => `User-agent: ${bot}\nAllow: /\n`).join("\n")}
 Sitemap: ${cfg.domain}/sitemap.xml
 `,
   "utf8"

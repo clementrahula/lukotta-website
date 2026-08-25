@@ -261,6 +261,38 @@ if (existsSync(cssPath)) {
   }
 }
 
+/* --- llms.txt states the same facts the pages do --- */
+const llmsPath = join(OUT, "llms.txt");
+if (existsSync(llmsPath)) {
+  const llms = readFileSync(llmsPath, "utf8");
+  /* Every format named in the table must be named here too, or a reader and an
+     assistant are being told different things about the same application. */
+  const englishPage = pages.find((p) => p.lang.code === cfg.defaultLang);
+  if (englishPage) {
+    const named = [...englishPage.html.matchAll(/<th scope="row"><code>([^<]+)<\/code>/g)].map((m) => m[1].trim());
+    if (!named.length) err("could not read the formats table; the llms.txt cross-check did not run.");
+    for (const name of named) {
+      if (!llms.includes(name)) err(`llms.txt does not name "${name}", which the formats table does.`);
+    }
+  }
+  if (!llms.includes(cfg.appVersion)) err(`llms.txt does not state version ${cfg.appVersion}.`);
+  for (const p of pages) {
+    const url = `${cfg.domain}/${p.lang.path ? p.lang.path + "/" : ""}`;
+    if (!llms.includes(url)) err(`llms.txt does not link ${url}`);
+  }
+}
+
+/* --- robots.txt must not shut out what the site is trying to reach --- */
+const robotsPath = join(OUT, "robots.txt");
+if (existsSync(robotsPath)) {
+  const robots = readFileSync(robotsPath, "utf8");
+  if (/^\s*Disallow:\s*\/\s*$/m.test(robots)) err("robots.txt disallows the whole site.");
+  if (!robots.includes(`Sitemap: ${cfg.domain}/sitemap.xml`)) err("robots.txt does not point at the sitemap.");
+  for (const bot of ["GPTBot", "ClaudeBot", "PerplexityBot", "OAI-SearchBot"]) {
+    if (!robots.includes(`User-agent: ${bot}`)) warn(`robots.txt does not name ${bot}.`);
+  }
+}
+
 /* --- sitemap --- */
 const sitemapPath = join(OUT, "sitemap.xml");
 if (!existsSync(sitemapPath)) err("no sitemap.xml");
@@ -293,7 +325,7 @@ else {
 }
 
 /* --- the files GitHub Pages needs --- */
-for (const f of ["robots.txt", "CNAME", ".nojekyll", "404.html", "site.webmanifest"]) {
+for (const f of ["robots.txt", "llms.txt", "CNAME", ".nojekyll", "404.html", "site.webmanifest"]) {
   if (!existsSync(join(OUT, f))) err(`public/${f} is missing`);
 }
 const cname = existsSync(join(OUT, "CNAME")) ? readFileSync(join(OUT, "CNAME"), "utf8").trim() : "";
