@@ -38,7 +38,9 @@ const summary = [];
 for (const lang of langs) {
   const file = join(CONTENT, `${lang.code}.json`);
   if (!existsSync(file)) continue;
-  const mine = JSON.parse(readFileSync(file, "utf8")).strings || {};
+  const parsed = JSON.parse(readFileSync(file, "utf8"));
+  const mine = parsed.strings || {};
+  const localOnly = parsed.localOnly;
 
   const strings = Object.entries(english).map(([key, en]) => {
     const pair = mine[key];
@@ -69,6 +71,14 @@ for (const lang of langs) {
           alsoServes: lang.alsoServes,
         },
         translated: `${done} of ${strings.length}`,
+        localOnly: localOnly
+          ? {
+              $note:
+                "Strings that exist in this language and no other. They have no English original — judge them as " +
+                "writing rather than as translation. They appear on no other language's page.",
+              ...localOnly,
+            }
+          : undefined,
         howToRead:
           "One entry per string. 'en' is the canonical English and is always right where the two disagree. " +
           `'${lang.code}' is the translation to judge. 'section' says where on the page the string appears and what it is for, ` +

@@ -34,6 +34,18 @@ const warn = (m) => { warnings.push(m); };
 /* A translation file stores each string as {en, <code>} so the file is complete
    on its own — a reviewer needs nothing else to judge it. English stores plain
    strings, because there is nothing to compare it with. */
+/* Strings belonging to one language alone, with no English original. */
+function loadLocalOnly(code) {
+  const file = join(CONTENT, `${code}.json`);
+  if (!existsSync(file)) return {};
+  const local = JSON.parse(readFileSync(file, "utf8")).localOnly || {};
+  const out = {};
+  for (const [key, value] of Object.entries(local)) {
+    if (!key.startsWith("$") && typeof value === "string" && value) out[key] = value;
+  }
+  return out;
+}
+
 function loadStrings(code) {
   const file = join(CONTENT, `${code}.json`);
   if (!existsSync(file)) return null;
@@ -153,12 +165,13 @@ const built = [];
 for (const lang of buildable) {
   const strings = loadStrings(lang.code);
   const t = translator(lang.code, strings || english);
+  const localOnly = loadLocalOnly(lang.code);
   const canonical = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
   const assetPrefix = lang.path ? "../" : "./";
 
   const shotSize = resolveShots(lang.code);
 
-  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable });
+  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, localOnly });
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });

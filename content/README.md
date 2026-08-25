@@ -45,6 +45,17 @@ The key is the same in every file. A key that is missing, or whose value is an
 empty string, falls back to the English when the site is built — and the build
 says so rather than passing quietly.
 
+## A string in one language only
+
+Beside `strings`, a language file may carry a `localOnly` block. These are
+strings that exist in that language and nowhere else — an aside that only lands
+for somebody reading in that language. They have no English original, so there
+is nothing to judge them against for meaning; judge them as writing. They never
+appear on another language's page, they do not count towards the number of
+strings translated, and running `new-language.mjs` again leaves them untouched.
+
+Finnish carries one, in the section about the name.
+
 ## The rules a translation is judged by
 
 1. **English is canonical.** Where a translation and the English disagree about

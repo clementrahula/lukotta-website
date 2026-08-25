@@ -5,6 +5,10 @@
     "native": "Suomi",
     "dir": "ltr"
   },
+  "localOnly": {
+    "$comment": "Strings that exist in this language and no other. They have no English original and are never shown on another language's page. See name.aside below.",
+    "name.aside": "Nimi on abessiivi sanasta lukko – sen kyllä huomasit. Olen virolainen, mutta suomeksi se kuulosti kauniimmalta, joten valitsin sen."
+  },
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",

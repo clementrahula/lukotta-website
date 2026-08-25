@@ -45,9 +45,12 @@ if (!wanted.length) {
 
 for (const lang of wanted) {
   const file = join(CONTENT, `${lang.code}.json`);
-  const existing = existsSync(file)
-    ? JSON.parse(readFileSync(file, "utf8")).strings || {}
-    : {};
+  const prior = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : {};
+  const existing = prior.strings || {};
+  /* A language may carry strings that exist in it and nowhere else — an aside
+     that only makes sense in that language. They have no English original, so
+     they live outside `strings` and must survive a resync. */
+  const localOnly = prior.localOnly;
 
   const strings = {};
   for (const [key, en] of Object.entries(english.strings)) {
@@ -59,10 +62,11 @@ for (const lang of wanted) {
   writeFileSync(
     file,
     JSON.stringify(
-      {
-        language: { code: lang.code, name: lang.name, native: lang.native, dir: lang.dir },
-        strings,
-      },
+      Object.assign(
+        { language: { code: lang.code, name: lang.name, native: lang.native, dir: lang.dir } },
+        localOnly ? { localOnly } : {},
+        { strings }
+      ),
       null,
       2
     ) + "\n",

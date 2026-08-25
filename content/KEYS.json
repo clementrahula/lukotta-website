@@ -64,5 +64,6 @@
     "dialog.copied": "Replaces the Copy Link label for a moment after it is pressed. Past tense, and short.",
     "dialog.downloadAnyway": "A button. The word 'anyway' matters: it acknowledges what was just said and proceeds regardless.",
     "dialog.cancel": "A button that closes the dialog and downloads nothing."
-  }
+  },
+  "$localOnly": "Beside `strings`, a language file may carry a `localOnly` block: strings that exist in that language and nowhere else, with no English original. They are never shown on another language's page, they are not part of the count of translated strings, and a resync leaves them alone. Finnish carries one — an aside in the name section, which only lands for a reader who already knows what the abessive case is."
 }

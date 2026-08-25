@@ -721,3 +721,12 @@ tbody tr:not(.group) th code { color: var(--ink); }
   .notice-actions .btn, .btn-quiet { width: 100%; text-align: center; justify-content: center; }
   .plain-btn { margin-inline-start: 0; }
 }
+
+/* An aside belonging to one language alone — set apart from the prose above it
+   without becoming a pull quote. */
+.aside-note {
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-3);
+  font-size: .9375rem;
+}
