@@ -50,6 +50,7 @@
     "formats.exfat.note": "These are handled by macOS itself rather than by the Linux virtual machine, which is why the table marks them differently. Same sentence as the raw image row.",
     "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too.",
     "footer.source": "Links to the source code on GitHub. One word if the language allows.",
-    "meta.ogDescription": "The card text when the address is shared. Written for a person who has been sent a link, not for a search engine."
+    "meta.ogDescription": "The card text when the address is shared. Written for a person who has been sent a link, not for a search engine.",
+    "formats.experimental": "The footnote under the table, marked by an asterisk against the disk image formats whose drivers were written for Lukotta rather than borrowed. It is a plain statement of fact about how well tested the writing side is, not a warning and not an apology. Do not sharpen it into either."
   }
 }

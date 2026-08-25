@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "hr": "Svaki format u detalje, i kako se koji čita i piše"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "hr": "Podrška za ove formate je eksperimentalna. Pisanje u njih nije opsežno testirano."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "hr": "Nije podržano"

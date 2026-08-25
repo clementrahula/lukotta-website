@@ -509,6 +509,15 @@ tbody tr:not(.group) th code { color: var(--ink); }
   background: var(--tick);
 }
 
+.asterisk { color: var(--amber-ink); margin-inline-start: 2px; }
+
+/* Sits directly under the table it annotates, before the link out to SPECS. */
+.footnote {
+  margin-top: 16px; max-width: var(--measure);
+  color: var(--ink-3); font-size: .8438rem; line-height: 1.55;
+}
+.footnote span { color: var(--amber-ink); }
+
 .after-table { margin-top: 22px; }
 
 .aside {

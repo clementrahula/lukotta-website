@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "fi": "Jokainen muoto yksityiskohtaisesti, ja miten kukin luetaan ja kirjoitetaan"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "fi": "Näiden muotojen tuki on kokeellinen. Niihin kirjoittamista ei ole testattu laajasti."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "fi": "Ei tueta"

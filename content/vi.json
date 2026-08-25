@@ -8,339 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "vi": ""
+      "vi": "Mở ổ đĩa BitLocker và Linux trên macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "vi": ""
+      "vi": "Mở ổ đĩa BitLocker, NTFS, LUKS và Linux trên máy Mac. Nhập mật khẩu và ổ đĩa hiện ra trong Finder, đọc và ghi được. Phần mềm tự do, miễn phí."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "vi": ""
+      "vi": "Lukotta — ổ đĩa BitLocker, Linux và máy ảo trên macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "vi": ""
+      "vi": "Cắm ổ đĩa hoặc mở tệp ảnh đĩa, nhập mật khẩu, và nó hiện ra trong Finder, đọc và ghi được, như mọi ổ đĩa khác."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "vi": ""
+      "vi": "Biểu tượng ứng dụng Lukotta: hình vuông màu xám đá bo góc, khoét bên trong chữ L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "vi": ""
+      "vi": "Chuyển tới nội dung"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "vi": ""
+      "vi": "Chọn ngôn ngữ"
     },
     "ui.menu": {
       "en": "Menu",
-      "vi": ""
+      "vi": "Trình đơn"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "vi": ""
+      "vi": "Về đầu trang"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "vi": ""
+      "vi": "Chuyển sang giao diện sáng"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "vi": ""
+      "vi": "Chuyển sang giao diện tối"
     },
     "nav.download": {
       "en": "Download",
-      "vi": ""
+      "vi": "Tải về"
     },
     "nav.features": {
       "en": "Features",
-      "vi": ""
+      "vi": "Tính năng"
     },
     "nav.how": {
       "en": "How It Works",
-      "vi": ""
+      "vi": "Cách hoạt động"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "vi": ""
+      "vi": "Mở ổ đĩa BitLocker, Linux và máy ảo trên macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "vi": ""
+      "vi": "Cắm ổ đĩa hoặc mở tệp ảnh đĩa rồi nhập mật khẩu — nó hiện ra trong Finder. Đọc và ghi được, như mọi ổ đĩa khác."
     },
     "hero.download": {
       "en": "Download",
-      "vi": ""
+      "vi": "Tải về"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "vi": ""
+      "vi": "Mã nguồn trên GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "vi": ""
+      "vi": "Phiên bản {version} · Apple Silicon · macOS 15 Sequoia trở lên"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "vi": ""
+      "vi": "Cửa sổ Lukotta trên macOS, liệt kê các ổ đĩa đang gắn vào máy Mac và nội dung của từng ổ."
     },
     "how.title": {
       "en": "How It Works",
-      "vi": ""
+      "vi": "Cách hoạt động"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "vi": ""
+      "vi": "macOS không đọc được BitLocker lẫn các hệ thống tệp của Linux. Linux thì đọc được. Lukotta chạy một máy ảo Linux nhỏ, mở khoá ổ đĩa bên trong đó, rồi giao ổ đĩa lại cho Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "vi": ""
+      "vi": "Cắm ổ đĩa"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "vi": ""
+      "vi": "Hoặc mở một tệp ảnh đĩa."
     },
     "how.2.title": {
       "en": "Type the password",
-      "vi": ""
+      "vi": "Nhập mật khẩu"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "vi": ""
+      "vi": "Mật khẩu của phân vùng, một cụm mật khẩu LUKS, hoặc một khoá khôi phục BitLocker gồm 48 chữ số."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "vi": ""
+      "vi": "Mở nó trong Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "vi": ""
+      "vi": "Phân vùng hiện ra ở mục Vị trí, và đọc, ghi, tháo ra như mọi ổ đĩa khác."
     },
     "features.title": {
       "en": "Features",
-      "vi": ""
+      "vi": "Tính năng"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "vi": ""
+      "vi": "Lukotta mở những ổ đĩa và tệp ảnh đĩa mà macOS từ chối đọc, rồi giao chúng cho Finder như những phân vùng bình thường."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "vi": ""
+      "vi": "Nó nhận ổ đĩa vật lý và tệp ảnh đĩa như nhau. Phân vùng BitLocker mở bằng mật khẩu của nó hoặc bằng khoá khôi phục 48 chữ số, còn phân vùng BitLocker và NTFS thì vừa đọc vừa ghi, nên có thể chép tệp vào ổ đĩa chứ không chỉ chép ra."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "vi": ""
+      "vi": "Ổ đĩa hay tệp ảnh nào cũng có thể mở ở chế độ chỉ đọc, và Lukotta có thể mở lại những gì đang mở ở lần đăng nhập trước."
     },
     "formats.title": {
       "en": "Supported formats",
-      "vi": ""
+      "vi": "Định dạng được hỗ trợ"
     },
     "formats.col.format": {
       "en": "Format",
-      "vi": ""
+      "vi": "Định dạng"
     },
     "formats.col.read": {
       "en": "Read",
-      "vi": ""
+      "vi": "Đọc"
     },
     "formats.col.write": {
       "en": "Write",
-      "vi": ""
+      "vi": "Ghi"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "vi": ""
+      "vi": "Ghi chú"
     },
     "formats.yes": {
       "en": "Yes",
-      "vi": ""
+      "vi": "Có"
     },
     "formats.no": {
       "en": "No",
-      "vi": ""
+      "vi": "Không"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "vi": ""
+      "vi": "Mã hoá"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "vi": ""
+      "vi": "Hệ thống tệp"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "vi": ""
+      "vi": "Ảnh đĩa"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "vi": ""
+      "vi": "Mở khoá bằng mật khẩu phân vùng hoặc khoá khôi phục 48 chữ số"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "vi": ""
+      "vi": "Mở khoá bằng cụm mật khẩu"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "vi": ""
+      "vi": "Nhiều phân vùng trên cùng một ổ đĩa mở khoá cùng lúc"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "vi": ""
+      "vi": "Kể cả phân vùng bị Windows để ở chế độ ngủ đông hoặc đóng không đúng cách"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "vi": ""
+      "vi": "Các hệ thống tệp của Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "vi": ""
+      "vi": "macOS hỗ trợ sẵn"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "vi": ""
+      "vi": "macOS hỗ trợ sẵn"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "vi": ""
+      "vi": "QEMU và UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "vi": ""
+      "vi": "VMware, phẳng và thưa"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "vi": ""
+      "vi": "Thứ mà một tệp OVA chứa. Được ghi một lượt nên không sửa tại chỗ được"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "vi": ""
+      "vi": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "vi": ""
+      "vi": "Hyper-V, cố định và động"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "vi": ""
+      "vi": "Hyper-V. Mở ở chế độ chỉ đọc"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "vi": ""
+      "vi": "Từng định dạng thật chi tiết, và cách mỗi loại được đọc và ghi"
+    },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "vi": "Hỗ trợ cho các định dạng này còn ở mức thử nghiệm. Việc ghi vào chúng chưa được kiểm thử rộng rãi."
     },
     "formats.not.title": {
       "en": "Not supported",
-      "vi": ""
+      "vi": "Không hỗ trợ"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "vi": ""
+      "vi": "FileVault và các tệp ảnh đĩa đã mã hoá, vốn do macOS tự mở"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "vi": ""
+      "vi": "Ổ đĩa gắn với chip TPM thay vì mật khẩu, kể cả kiểu mã hoá bằng phần cứng trong các bản Ubuntu mới"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "vi": ""
+      "vi": "Phân vùng LUKS có phần đầu được cất riêng khỏi ổ đĩa"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "vi": ""
+      "vi": "VeraCrypt và TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "vi": ""
+      "vi": "Tệp ảnh trỏ tới tệp khác: chuỗi ảnh chụp VMware, VHD vi sai, hoặc qcow2 có tệp nền"
     },
     "name.title": {
       "en": "The Name",
-      "vi": ""
+      "vi": "Cái tên"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "vi": ""
+      "vi": "Lúkotta trong tiếng Phần Lan nghĩa là „không có khoá”, từ {lukko} là cái khoá, với đuôi {tta} chỉ sự vắng mặt của một thứ gì đó. Trọng âm rơi vào âm tiết đầu, như luôn luôn trong tiếng Phần Lan."
     },
     "faq.title": {
       "en": "FAQ",
-      "vi": ""
+      "vi": "Câu hỏi thường gặp"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "vi": ""
+      "vi": "Lukotta giá bao nhiêu?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "vi": ""
+      "vi": "Không gì cả. Tải về miễn phí và dùng cũng miễn phí. Không có bản trả tiền, không thuê bao, không thời gian dùng thử hết hạn, và không tài khoản nào phải lập."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "vi": ""
+      "vi": "Đây còn là phần mềm tự do, theo GNU General Public License, phiên bản 3 trở lên. Mã nguồn công khai: bạn có thể đọc, tự biên dịch, sửa đổi và truyền lại những gì đã sửa."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "vi": ""
+      "vi": "Lukotta có mở được ổ đĩa BitLocker không?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "vi": ""
+      "vi": "Có, và ghi được lên đó. Nhập mật khẩu phân vùng hoặc dán khoá khôi phục 48 chữ số, rồi ổ đĩa mở ra trong Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "vi": ""
+      "vi": "Lukotta có ghi được lên ổ đĩa NTFS không?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "vi": ""
+      "vi": "Có. Tệp chép vào ổ NTFS cũng dễ như chép ra."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "vi": ""
+      "vi": "Lukotta có mở được ổ đĩa Linux không?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "vi": ""
+      "vi": "Có. ext2, ext3, ext4, btrfs và XFS đều mở được, để trần hay nằm trong mã hoá LUKS. Ổ đĩa dựng bằng LVM sẽ mở tất cả phân vùng cùng lúc."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "vi": ""
+      "vi": "Lukotta có mở được đĩa của máy ảo không?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "vi": ""
+      "vi": "Có, mà không cần khởi động máy ảo. Mở tệp ảnh qcow2, VMDK, VDI, VHD hoặc VHDX rồi chép tệp ra khỏi nó, hoặc chép vào."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "vi": ""
+      "vi": "Lukotta có chạy trên máy Mac dùng Intel không?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "vi": ""
+      "vi": "Không. Nó cần khả năng ảo hoá mà Apple Silicon cung cấp."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "vi": ""
+      "vi": "Quyền riêng tư"
     },
     "footer.licence": {
       "en": "Licence",
-      "vi": ""
+      "vi": "Giấy phép"
     },
     "footer.source": {
       "en": "Source",
-      "vi": ""
+      "vi": "Mã nguồn"
     },
     "footer.contact": {
       "en": "Contact",
-      "vi": ""
+      "vi": "Liên hệ"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "vi": ""
+      "vi": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "vi": ""
+      "vi": "Phần mềm tự do theo GNU General Public License, phiên bản 3 trở lên."
     }
   }
 }

@@ -37,11 +37,11 @@ const FORMATS = [
     rows: [
       { name: "IMG, DMG", read: 1, write: 1, native: 1, note: "formats.raw.note" },
       { name: "qcow2", read: 1, write: 1, note: "formats.qcow2.note" },
-      { name: "VMDK", read: 1, write: 1, note: "formats.vmdk.note" },
-      { name: "VMDK, stream-optimized", read: 1, write: 0, note: "formats.vmdkStream.note" },
-      { name: "VDI", read: 1, write: 1, note: "formats.vdi.note" },
-      { name: "VHD", read: 1, write: 1, note: "formats.vhd.note" },
-      { name: "VHDX", read: 1, write: 0, note: "formats.vhdx.note" },
+      { name: "VMDK", read: 1, write: 1, experimental: 1, note: "formats.vmdk.note" },
+      { name: "VMDK, stream-optimized", read: 1, write: 0, experimental: 1, note: "formats.vmdkStream.note" },
+      { name: "VDI", read: 1, write: 1, experimental: 1, note: "formats.vdi.note" },
+      { name: "VHD", read: 1, write: 1, experimental: 1, note: "formats.vhd.note" },
+      { name: "VHDX", read: 1, write: 0, experimental: 1, note: "formats.vhdx.note" },
     ],
   },
 ];
@@ -127,7 +127,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 ${g.rows
   .map(
     (r) => `          <tr>
-            <th scope="row"><code>${esc(r.name)}</code></th>
+            <th scope="row"><code>${esc(r.name)}</code>${r.experimental ? '<span class="asterisk" aria-hidden="true">*</span>' : ""}</th>
             <td class="col-mark">${tick(r.read, label, r.native)}</td>
             <td class="col-mark">${tick(r.write, label, r.native)}</td>
             <td class="col-note">${esc(t(r.note))}</td>
@@ -359,6 +359,8 @@ ${tableRows}
             </tbody>
           </table>
         </div>
+
+        <p class="footnote"><span aria-hidden="true">*</span> ${esc(t("formats.experimental"))}</p>
 
         <p class="after-table">
           <a class="plain" href="${cfg.githubRepo}/blob/main/SPECS.md">${esc(t("formats.specs"))}${arrow}</a>

@@ -8,339 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "id": ""
+      "id": "Buka Drive BitLocker dan Linux di macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "id": ""
+      "id": "Buka drive BitLocker, NTFS, LUKS, dan Linux di Mac Anda. Ketik kata sandi dan drive muncul di Finder, bisa dibaca dan ditulis. Perangkat lunak bebas."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "id": ""
+      "id": "Lukotta — drive BitLocker, Linux, dan mesin virtual di macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "id": ""
+      "id": "Colokkan drive atau buka image disk, ketik kata sandi, dan drive muncul di Finder, bisa dibaca dan ditulis, seperti disk lain."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "id": ""
+      "id": "Ikon aplikasi Lukotta: persegi abu-abu batu tulis bersudut bulat dengan huruf L yang dipotong di dalamnya."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "id": ""
+      "id": "Lompat ke konten"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "id": ""
+      "id": "Pilih bahasa"
     },
     "ui.menu": {
       "en": "Menu",
-      "id": ""
+      "id": "Menu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "id": ""
+      "id": "Kembali ke atas"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "id": ""
+      "id": "Beralih ke tampilan terang"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "id": ""
+      "id": "Beralih ke tampilan gelap"
     },
     "nav.download": {
       "en": "Download",
-      "id": ""
+      "id": "Unduh"
     },
     "nav.features": {
       "en": "Features",
-      "id": ""
+      "id": "Fitur"
     },
     "nav.how": {
       "en": "How It Works",
-      "id": ""
+      "id": "Cara kerjanya"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "id": ""
+      "id": "Buka drive BitLocker, Linux, dan mesin virtual di macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "id": ""
+      "id": "Colokkan drive atau buka image disk lalu ketik kata sandi — drive muncul di Finder. Bisa dibaca dan ditulis, seperti disk lain."
     },
     "hero.download": {
       "en": "Download",
-      "id": ""
+      "id": "Unduh"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "id": ""
+      "id": "Kode sumber di GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "id": ""
+      "id": "Versi {version} · Apple Silicon · macOS 15 Sequoia atau lebih baru"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "id": ""
+      "id": "Jendela Lukotta di macOS, berisi daftar drive yang tersambung ke Mac dan isi masing-masing."
     },
     "how.title": {
       "en": "How It Works",
-      "id": ""
+      "id": "Cara kerjanya"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "id": ""
+      "id": "macOS tidak bisa membaca BitLocker maupun sistem berkas Linux. Linux bisa. Lukotta menjalankan mesin virtual Linux kecil, membuka kunci drive di dalamnya, lalu menyerahkan drive itu kembali ke Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "id": ""
+      "id": "Colokkan drive"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "id": ""
+      "id": "Atau buka image disk."
     },
     "how.2.title": {
       "en": "Type the password",
-      "id": ""
+      "id": "Ketik kata sandi"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "id": ""
+      "id": "Kata sandi volume, frasa sandi LUKS, atau kunci pemulihan BitLocker 48 digit."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "id": ""
+      "id": "Buka di Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "id": ""
+      "id": "Volume muncul di bawah Lokasi, dan bisa dibaca, ditulis, serta dikeluarkan seperti disk lain."
     },
     "features.title": {
       "en": "Features",
-      "id": ""
+      "id": "Fitur"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "id": ""
+      "id": "Lukotta membuka drive dan image disk yang menolak dibaca oleh macOS, lalu menyerahkannya ke Finder sebagai volume biasa."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "id": ""
+      "id": "Ia menerima drive fisik dan berkas image sama saja. Volume BitLocker terbuka dengan kata sandinya atau dengan kunci pemulihan 48 digit, dan volume BitLocker serta NTFS dibaca sekaligus ditulis, jadi berkas bisa disalin ke drive sebagaimana disalin darinya."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "id": ""
+      "id": "Drive atau image mana pun juga bisa dibuka hanya-baca, dan Lukotta bisa membuka kembali apa yang terbuka saat Anda masuk terakhir kali."
     },
     "formats.title": {
       "en": "Supported formats",
-      "id": ""
+      "id": "Format yang didukung"
     },
     "formats.col.format": {
       "en": "Format",
-      "id": ""
+      "id": "Format"
     },
     "formats.col.read": {
       "en": "Read",
-      "id": ""
+      "id": "Baca"
     },
     "formats.col.write": {
       "en": "Write",
-      "id": ""
+      "id": "Tulis"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "id": ""
+      "id": "Catatan"
     },
     "formats.yes": {
       "en": "Yes",
-      "id": ""
+      "id": "Ya"
     },
     "formats.no": {
       "en": "No",
-      "id": ""
+      "id": "Tidak"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "id": ""
+      "id": "Enkripsi"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "id": ""
+      "id": "Sistem berkas"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "id": ""
+      "id": "Image disk"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "id": ""
+      "id": "Dibuka dengan kata sandi volume atau kunci pemulihan 48 digit"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "id": ""
+      "id": "Dibuka dengan frasa sandi"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "id": ""
+      "id": "Beberapa volume pada satu drive terbuka bersamaan"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "id": ""
+      "id": "Termasuk volume yang ditinggalkan Windows dalam hibernasi atau tidak ditutup dengan benar"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "id": ""
+      "id": "Sistem berkas Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "id": ""
+      "id": "Didukung macOS secara asli"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "id": ""
+      "id": "Didukung macOS secara asli"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "id": ""
+      "id": "QEMU dan UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "id": ""
+      "id": "VMware, datar dan jarang"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "id": ""
+      "id": "Isi sebuah OVA. Ditulis sekali jalan, jadi tidak bisa diubah di tempat"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "id": ""
+      "id": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "id": ""
+      "id": "Hyper-V, tetap dan dinamis"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "id": ""
+      "id": "Hyper-V. Terbuka hanya-baca"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "id": ""
+      "id": "Setiap format selengkapnya, dan bagaimana masing-masing dibaca dan ditulis"
+    },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "id": "Dukungan untuk format ini bersifat eksperimental. Menulis ke sana belum diuji secara luas."
     },
     "formats.not.title": {
       "en": "Not supported",
-      "id": ""
+      "id": "Tidak didukung"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "id": ""
+      "id": "FileVault dan image disk terenkripsi, yang dibuka macOS sendiri"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "id": ""
+      "id": "Drive yang terikat ke cip TPM alih-alih kata sandi, termasuk enkripsi berbasis perangkat keras pada Ubuntu versi baru"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "id": ""
+      "id": "Volume LUKS yang header-nya disimpan terpisah dari drive"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "id": ""
+      "id": "VeraCrypt dan TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "id": ""
+      "id": "Image yang menyebut berkas lain: rantai snapshot VMware, VHD diferensial, atau qcow2 dengan berkas dasar"
     },
     "name.title": {
       "en": "The Name",
-      "id": ""
+      "id": "Namanya"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "id": ""
+      "id": "Lúkotta berarti „tanpa kunci” dalam bahasa Finlandia, dari {lukko}, yaitu kunci, dengan akhiran {tta} yang menandakan ketiadaan sesuatu. Tekanan jatuh pada suku kata pertama, seperti selalu dalam bahasa Finlandia."
     },
     "faq.title": {
       "en": "FAQ",
-      "id": ""
+      "id": "Pertanyaan umum"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "id": ""
+      "id": "Berapa harga Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "id": ""
+      "id": "Tidak ada. Mengunduhnya gratis dan memakainya juga. Tidak ada versi berbayar, tidak ada langganan, tidak ada masa coba yang habis, dan tidak ada akun yang harus dibuat."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "id": ""
+      "id": "Ia juga perangkat lunak bebas, di bawah GNU General Public License, versi 3 atau lebih baru. Kode sumbernya terbuka: Anda bisa membacanya, membangunnya sendiri, mengubahnya, dan meneruskan apa yang Anda ubah."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "id": ""
+      "id": "Bisakah Lukotta membuka drive BitLocker?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "id": ""
+      "id": "Ya, dan menulis ke sana. Ketik kata sandi volume atau tempel kunci pemulihan 48 digit, dan drive terbuka di Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "id": ""
+      "id": "Bisakah Lukotta menulis ke drive NTFS?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "id": ""
+      "id": "Ya. Berkas disalin ke drive NTFS sebagaimana disalin darinya."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "id": ""
+      "id": "Bisakah Lukotta membuka drive Linux?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "id": ""
+      "id": "Ya. ext2, ext3, ext4, btrfs, dan XFS terbuka, polos maupun di dalam enkripsi LUKS. Drive yang ditata dengan LVM membuka semua volumenya sekaligus."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "id": ""
+      "id": "Bisakah Lukotta membuka disk mesin virtual?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "id": ""
+      "id": "Ya, tanpa menjalankan mesinnya. Buka image qcow2, VMDK, VDI, VHD, atau VHDX lalu salin berkas darinya, atau ke dalamnya."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "id": ""
+      "id": "Apakah Lukotta jalan di Mac dengan Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "id": ""
+      "id": "Tidak. Ia butuh virtualisasi yang disediakan Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "id": ""
+      "id": "Privasi"
     },
     "footer.licence": {
       "en": "Licence",
-      "id": ""
+      "id": "Lisensi"
     },
     "footer.source": {
       "en": "Source",
-      "id": ""
+      "id": "Kode sumber"
     },
     "footer.contact": {
       "en": "Contact",
-      "id": ""
+      "id": "Kontak"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "id": ""
+      "id": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "id": ""
+      "id": "Perangkat lunak bebas di bawah GNU General Public License, versi 3 atau lebih baru."
     }
   }
 }

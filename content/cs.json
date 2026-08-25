@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "cs": "Každý formát podrobně a jak se který čte a zapisuje"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "cs": "Podpora těchto formátů je experimentální. Zápis do nich nebyl rozsáhle otestován."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "cs": "Nepodporováno"

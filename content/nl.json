@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "nl": "Elk formaat in detail, en hoe elk wordt gelezen en geschreven"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "nl": "De ondersteuning van deze formaten is experimenteel. Het schrijven ernaartoe is niet uitgebreid getest."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "nl": "Niet ondersteund"

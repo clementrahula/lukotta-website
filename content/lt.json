@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "lt": "Kiekvienas formatas išsamiai, ir kaip kuris skaitomas bei rašomas"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "lt": "Šių formatų palaikymas yra eksperimentinis. Rašymas į juos nebuvo plačiai išbandytas."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "lt": "Nepalaikoma"

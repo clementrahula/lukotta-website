@@ -8,339 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "fil": ""
+      "fil": "Buksan ang BitLocker at Linux Drive sa macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fil": ""
+      "fil": "Buksan ang BitLocker, NTFS, LUKS at Linux na drive sa iyong Mac. I-type ang password at lilitaw ang drive sa Finder, nababasa at nasusulatan. Libreng software."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "fil": ""
+      "fil": "Lukotta — BitLocker, Linux at virtual machine na drive sa macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "fil": ""
+      "fil": "Isaksak ang drive o magbukas ng disk image, i-type ang password, at lilitaw ito sa Finder, nababasa at nasusulatan, gaya ng kahit anong disk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "fil": ""
+      "fil": "Ang icon ng app na Lukotta: bilog ang sulok na parisukat na kulay abo-pisara na may nakaukit na letrang L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "fil": ""
+      "fil": "Lumaktaw sa nilalaman"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "fil": ""
+      "fil": "Pumili ng wika"
     },
     "ui.menu": {
       "en": "Menu",
-      "fil": ""
+      "fil": "Menu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "fil": ""
+      "fil": "Balik sa itaas"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "fil": ""
+      "fil": "Lumipat sa maliwanag na anyo"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "fil": ""
+      "fil": "Lumipat sa madilim na anyo"
     },
     "nav.download": {
       "en": "Download",
-      "fil": ""
+      "fil": "I-download"
     },
     "nav.features": {
       "en": "Features",
-      "fil": ""
+      "fil": "Mga tampok"
     },
     "nav.how": {
       "en": "How It Works",
-      "fil": ""
+      "fil": "Paano ito gumagana"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "fil": ""
+      "fil": "Buksan ang BitLocker, Linux at virtual machine na drive sa macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "fil": ""
+      "fil": "Isaksak ang drive o magbukas ng disk image at i-type ang password — lilitaw ito sa Finder. Nababasa at nasusulatan, gaya ng kahit anong disk."
     },
     "hero.download": {
       "en": "Download",
-      "fil": ""
+      "fil": "I-download"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "fil": ""
+      "fil": "Ang source code sa GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "fil": ""
+      "fil": "Bersyon {version} · Apple Silicon · macOS 15 Sequoia o mas bago"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "fil": ""
+      "fil": "Ang window ng Lukotta sa macOS, may talaan ng mga drive na nakakabit sa Mac at kung ano ang laman ng bawat isa."
     },
     "how.title": {
       "en": "How It Works",
-      "fil": ""
+      "fil": "Paano ito gumagana"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "fil": ""
+      "fil": "Hindi mabasa ng macOS ang BitLocker at ang mga file system ng Linux. Kaya ito ng Linux. Nagpapatakbo ang Lukotta ng maliit na Linux virtual machine, binubuksan doon ang drive, at ibinibigay ang drive pabalik sa Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "fil": ""
+      "fil": "Isaksak ang drive"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "fil": ""
+      "fil": "O magbukas ng disk image."
     },
     "how.2.title": {
       "en": "Type the password",
-      "fil": ""
+      "fil": "I-type ang password"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "fil": ""
+      "fil": "Ang password ng volume, isang LUKS passphrase, o isang 48-digit na BitLocker recovery key."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "fil": ""
+      "fil": "Buksan ito sa Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "fil": ""
+      "fil": "Lilitaw ang volume sa ilalim ng Mga Lokasyon, at nababasa, nasusulatan at naitatapon gaya ng kahit anong drive."
     },
     "features.title": {
       "en": "Features",
-      "fil": ""
+      "fil": "Mga tampok"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "fil": ""
+      "fil": "Binubuksan ng Lukotta ang mga drive at disk image na ayaw basahin ng macOS, at ibinibigay ang mga ito sa Finder bilang karaniwang volume."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "fil": ""
+      "fil": "Pareho nitong tinatanggap ang pisikal na drive at ang image file. Bumubukas ang BitLocker volume gamit ang password nito o ang 48-digit na recovery key, at ang BitLocker at NTFS na volume ay binabasa at sinusulatan, kaya makakakopya ka ng file papunta sa drive gaya ng pagkopya mula rito."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "fil": ""
+      "fil": "Maaari ding buksan nang basahin-lamang ang kahit anong drive o image, at kayang buksang muli ng Lukotta ang nakabukas noong huling pag-log in."
     },
     "formats.title": {
       "en": "Supported formats",
-      "fil": ""
+      "fil": "Mga suportadong format"
     },
     "formats.col.format": {
       "en": "Format",
-      "fil": ""
+      "fil": "Format"
     },
     "formats.col.read": {
       "en": "Read",
-      "fil": ""
+      "fil": "Basa"
     },
     "formats.col.write": {
       "en": "Write",
-      "fil": ""
+      "fil": "Sulat"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "fil": ""
+      "fil": "Mga tala"
     },
     "formats.yes": {
       "en": "Yes",
-      "fil": ""
+      "fil": "Oo"
     },
     "formats.no": {
       "en": "No",
-      "fil": ""
+      "fil": "Hindi"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "fil": ""
+      "fil": "Pag-encrypt"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "fil": ""
+      "fil": "Mga file system"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "fil": ""
+      "fil": "Mga disk image"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "fil": ""
+      "fil": "Binubuksan gamit ang password ng volume o 48-digit na recovery key"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "fil": ""
+      "fil": "Binubuksan gamit ang passphrase"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "fil": ""
+      "fil": "Sabay na bumubukas ang ilang volume sa iisang drive"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "fil": ""
+      "fil": "Pati ang volume na iniwan ng Windows na naka-hibernate o hindi maayos na naisara"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "fil": ""
+      "fil": "Ang mga file system ng Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "fil": ""
+      "fil": "Likas na suportado ng macOS"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "fil": ""
+      "fil": "Likas na suportado ng macOS"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "fil": ""
+      "fil": "QEMU at UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "fil": ""
+      "fil": "VMware, flat at sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "fil": ""
+      "fil": "Ang laman ng isang OVA. Isinusulat nang minsanan, kaya hindi ito mababago sa kinalalagyan"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "fil": ""
+      "fil": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "fil": ""
+      "fil": "Hyper-V, fixed at dynamic"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "fil": ""
+      "fil": "Hyper-V. Bumubukas nang basahin-lamang"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "fil": ""
+      "fil": "Bawat format nang buo, at kung paano binabasa at sinusulatan ang bawat isa"
+    },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "fil": "Eksperimental pa ang suporta sa mga format na ito. Hindi pa lubusang nasusubok ang pagsulat sa mga ito."
     },
     "formats.not.title": {
       "en": "Not supported",
-      "fil": ""
+      "fil": "Hindi suportado"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "fil": ""
+      "fil": "Ang FileVault at ang naka-encrypt na disk image, na binubuksan mismo ng macOS"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "fil": ""
+      "fil": "Ang mga drive na nakatali sa TPM chip sa halip na sa password, kasama ang mas bagong hardware na pag-encrypt sa Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "fil": ""
+      "fil": "Ang mga LUKS volume na hiwalay sa drive itinatago ang header"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "fil": ""
+      "fil": "VeraCrypt at TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "fil": ""
+      "fil": "Isang image na tumutukoy sa ibang file: isang VMware snapshot chain, isang differencing VHD, o isang qcow2 na may backing file"
     },
     "name.title": {
       "en": "The Name",
-      "fil": ""
+      "fil": "Ang pangalan"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "fil": ""
+      "fil": "Ang Lúkotta ay Finnish para sa „walang kandado”, mula sa {lukko}, ang kandado, na may hulaping {tta} na tanda ng kawalan ng isang bagay. Nasa unang pantig ang diin, gaya ng lagi sa Finnish."
     },
     "faq.title": {
       "en": "FAQ",
-      "fil": ""
+      "fil": "Mga madalas itanong"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "fil": ""
+      "fil": "Magkano ang Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "fil": ""
+      "fil": "Wala. Libre itong i-download at libre ring gamitin. Walang bayad na bersyon, walang subscription, walang trial na nauubos, at walang account na gagawin."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "fil": ""
+      "fil": "Malayang software din ito, sa ilalim ng GNU General Public License, bersyon 3 o mas bago. Bukas ang source code: mababasa mo ito, mabubuo mo mismo, mababago, at maipapasa ang binago mo."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "fil": ""
+      "fil": "Kaya bang buksan ng Lukotta ang BitLocker na drive?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "fil": ""
+      "fil": "Oo, at masusulatan din. I-type ang password ng volume o i-paste ang 48-digit na recovery key, at bubukas ang drive sa Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "fil": ""
+      "fil": "Kaya bang sulatan ng Lukotta ang NTFS na drive?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "fil": ""
+      "fil": "Oo. Nakokopya ang file papunta sa NTFS na drive gaya ng pagkopya mula rito."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "fil": ""
+      "fil": "Kaya bang buksan ng Lukotta ang Linux na drive?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fil": ""
+      "fil": "Oo. Bumubukas ang ext2, ext3, ext4, btrfs at XFS, hubad man o nasa loob ng LUKS na pag-encrypt. Ang drive na nakaayos sa LVM ay binubuksan lahat ang volume nito nang sabay."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "fil": ""
+      "fil": "Kaya bang buksan ng Lukotta ang disk ng isang virtual machine?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "fil": ""
+      "fil": "Oo, nang hindi pinapatakbo ang makina. Buksan ang qcow2, VMDK, VDI, VHD o VHDX na image at kumopya ng file mula rito, o papunta rito."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "fil": ""
+      "fil": "Gumagana ba ang Lukotta sa Mac na may Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "fil": ""
+      "fil": "Hindi. Kailangan nito ang virtualization na ibinibigay ng Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "fil": ""
+      "fil": "Patakaran sa privacy"
     },
     "footer.licence": {
       "en": "Licence",
-      "fil": ""
+      "fil": "Lisensya"
     },
     "footer.source": {
       "en": "Source",
-      "fil": ""
+      "fil": "Source code"
     },
     "footer.contact": {
       "en": "Contact",
-      "fil": ""
+      "fil": "Makipag-ugnayan"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "fil": ""
+      "fil": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "fil": ""
+      "fil": "Malayang software sa ilalim ng GNU General Public License, bersyon 3 o mas bago."
     }
   }
 }

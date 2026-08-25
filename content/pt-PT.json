@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "pt-PT": "Cada formato ao pormenor, e como cada um é lido e escrito"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "pt-PT": "O suporte destes formatos é experimental. A escrita neles não foi testada a fundo."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "pt-PT": "Não suportado"

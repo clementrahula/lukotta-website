@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "hu": "Minden formátum részletesen, és hogy melyiket hogyan olvassa és írja"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "hu": "Ezeknek a formátumoknak a támogatása kísérleti. Az írásuk nincs alaposan tesztelve."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "hu": "Nem támogatott"

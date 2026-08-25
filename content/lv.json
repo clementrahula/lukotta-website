@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "lv": "Katrs formāts sīkāk, un kā katrs tiek lasīts un rakstīts"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "lv": "Šo formātu atbalsts ir eksperimentāls. Rakstīšana tajos nav plaši pārbaudīta."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "lv": "Netiek atbalstīts"

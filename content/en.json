@@ -62,6 +62,7 @@
     "formats.vhd.note": "Hyper-V, fixed and dynamic",
     "formats.vhdx.note": "Hyper-V. Opens read-only",
     "formats.specs": "Every format in full detail, including how each one is read and written",
+    "formats.experimental": "Support for these formats is experimental. Writing to them has not been extensively tested.",
     "formats.not.title": "Not supported",
     "formats.not.1": "FileVault and encrypted disk images, which macOS opens itself",
     "formats.not.2": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",

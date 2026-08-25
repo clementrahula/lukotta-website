@@ -8,339 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "tr": ""
+      "tr": "macOS’ta BitLocker ve Linux Diskleri Açın — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "tr": ""
+      "tr": "Mac’inizde BitLocker, NTFS, LUKS ve Linux disklerini açın. Parolayı yazın, disk Finder’da görünsün — okunur ve yazılır. Özgür yazılım, ücretsiz."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "tr": ""
+      "tr": "Lukotta — macOS’ta BitLocker, Linux ve sanal makine diskleri"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "tr": ""
+      "tr": "Bir disk takın ya da disk kalıbı açın, parolayı yazın; Finder’da görünür, okunur ve yazılır, başka herhangi bir disk gibi."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "tr": ""
+      "tr": "Lukotta uygulamasının simgesi: köşeleri yuvarlatılmış arduvaz grisi bir kare, içinden L harfi oyulmuş."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "tr": ""
+      "tr": "İçeriğe geç"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "tr": ""
+      "tr": "Dil seçin"
     },
     "ui.menu": {
       "en": "Menu",
-      "tr": ""
+      "tr": "Menü"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "tr": ""
+      "tr": "Başa dön"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "tr": ""
+      "tr": "Açık görünüme geç"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "tr": ""
+      "tr": "Koyu görünüme geç"
     },
     "nav.download": {
       "en": "Download",
-      "tr": ""
+      "tr": "İndir"
     },
     "nav.features": {
       "en": "Features",
-      "tr": ""
+      "tr": "Özellikler"
     },
     "nav.how": {
       "en": "How It Works",
-      "tr": ""
+      "tr": "Nasıl çalışır"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "tr": ""
+      "tr": "macOS’ta BitLocker, Linux ve sanal makine disklerini açın."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "tr": ""
+      "tr": "Bir disk takın ya da disk kalıbı açın ve parolayı yazın — Finder’da görünür. Okunur ve yazılır, başka herhangi bir disk gibi."
     },
     "hero.download": {
       "en": "Download",
-      "tr": ""
+      "tr": "İndir"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "tr": ""
+      "tr": "Kaynak kodu GitHub’da"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "tr": ""
+      "tr": "Sürüm {version} · Apple Silicon · macOS 15 Sequoia veya üstü"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "tr": ""
+      "tr": "macOS’ta Lukotta penceresi: Mac’e takılı diskler ve her birinin içinde ne olduğu."
     },
     "how.title": {
       "en": "How It Works",
-      "tr": ""
+      "tr": "Nasıl çalışır"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "tr": ""
+      "tr": "macOS ne BitLocker’ı ne de Linux dosya sistemlerini okuyabilir. Linux okuyabilir. Lukotta küçük bir Linux sanal makinesi başlatır, diski onun içinde açar ve diski Finder’a geri verir."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "tr": ""
+      "tr": "Diski takın"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "tr": ""
+      "tr": "Ya da bir disk kalıbı açın."
     },
     "how.2.title": {
       "en": "Type the password",
-      "tr": ""
+      "tr": "Parolayı yazın"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "tr": ""
+      "tr": "Birimin parolası, bir LUKS parola cümlesi ya da 48 haneli bir BitLocker kurtarma anahtarı."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "tr": ""
+      "tr": "Finder’da açın"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "tr": ""
+      "tr": "Birim Konumlar altında görünür; okunur, yazılır ve çıkarılır, başka herhangi bir disk gibi."
     },
     "features.title": {
       "en": "Features",
-      "tr": ""
+      "tr": "Özellikler"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "tr": ""
+      "tr": "Lukotta, macOS’un okumayı reddettiği diskleri ve disk kalıplarını açar ve bunları Finder’a sıradan birimler olarak verir."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "tr": ""
+      "tr": "Fiziksel diskleri de kalıp dosyalarını da aynı şekilde alır. Bir BitLocker birimi kendi parolasıyla ya da 48 haneli bir kurtarma anahtarıyla açılır; BitLocker ve NTFS birimleri hem okunur hem yazılır, yani dosyalar diskten kopyalandığı gibi diske de kopyalanabilir."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "tr": ""
+      "tr": "Herhangi bir disk ya da kalıp salt okunur olarak da açılabilir ve Lukotta, son oturumda açık olanları yeniden açabilir."
     },
     "formats.title": {
       "en": "Supported formats",
-      "tr": ""
+      "tr": "Desteklenen biçimler"
     },
     "formats.col.format": {
       "en": "Format",
-      "tr": ""
+      "tr": "Biçim"
     },
     "formats.col.read": {
       "en": "Read",
-      "tr": ""
+      "tr": "Okuma"
     },
     "formats.col.write": {
       "en": "Write",
-      "tr": ""
+      "tr": "Yazma"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "tr": ""
+      "tr": "Notlar"
     },
     "formats.yes": {
       "en": "Yes",
-      "tr": ""
+      "tr": "Evet"
     },
     "formats.no": {
       "en": "No",
-      "tr": ""
+      "tr": "Hayır"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "tr": ""
+      "tr": "Şifreleme"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "tr": ""
+      "tr": "Dosya sistemleri"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "tr": ""
+      "tr": "Disk kalıpları"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "tr": ""
+      "tr": "Birimin parolasıyla ya da 48 haneli kurtarma anahtarıyla açılır"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "tr": ""
+      "tr": "Parola cümlesiyle açılır"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "tr": ""
+      "tr": "Aynı diskteki birden çok birim birlikte açılır"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "tr": ""
+      "tr": "Windows’un uyku kipinde ya da düzgün kapatmadan bıraktığı birim de dahil"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "tr": ""
+      "tr": "Linux dosya sistemleri"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "tr": ""
+      "tr": "macOS bunları kendisi destekler"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "tr": ""
+      "tr": "macOS bunları kendisi destekler"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "tr": ""
+      "tr": "QEMU ve UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "tr": ""
+      "tr": "VMware, düz ve seyrek"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "tr": ""
+      "tr": "Bir OVA’nın içindekiler. Tek geçişte yazılır, bu yüzden yerinde değiştirilemez"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "tr": ""
+      "tr": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "tr": ""
+      "tr": "Hyper-V, sabit ve dinamik"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "tr": ""
+      "tr": "Hyper-V. Salt okunur açılır"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "tr": ""
+      "tr": "Her biçim ayrıntısıyla, ve her birinin nasıl okunup yazıldığı"
+    },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "tr": "Bu biçimlerin desteği deneyseldir. Bunlara yazma işlemi kapsamlı olarak sınanmamıştır."
     },
     "formats.not.title": {
       "en": "Not supported",
-      "tr": ""
+      "tr": "Desteklenmiyor"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "tr": ""
+      "tr": "FileVault ve şifreli disk kalıpları; bunları macOS kendisi açar"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "tr": ""
+      "tr": "Parola yerine bir TPM yongasına bağlanmış diskler, Ubuntu’nun yeni donanım tabanlı şifrelemesi dahil"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "tr": ""
+      "tr": "Başlığı diskten ayrı tutulan LUKS birimleri"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "tr": ""
+      "tr": "VeraCrypt ve TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "tr": ""
+      "tr": "Başka bir dosyayı gösteren kalıp: VMware anlık görüntü zinciri, farklı yazan bir VHD ya da dayanak dosyası olan bir qcow2"
     },
     "name.title": {
       "en": "The Name",
-      "tr": ""
+      "tr": "Ad"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "tr": ""
+      "tr": "Lúkotta Fincede „kilitsiz” demektir; {lukko} yani kilit sözcüğünden, bir şeyin yokluğunu belirten {tta} ekiyle. Vurgu ilk hecededir, Fincede hep olduğu gibi."
     },
     "faq.title": {
       "en": "FAQ",
-      "tr": ""
+      "tr": "Sık sorulan sorular"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "tr": ""
+      "tr": "Lukotta ne kadar?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "tr": ""
+      "tr": "Hiç. İndirmesi ücretsiz, kullanması da. Ücretli bir sürüm, abonelik, süresi dolan deneme ya da açılacak bir hesap yok."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "tr": ""
+      "tr": "Ayrıca özgür yazılımdır; GNU General Public License, sürüm 3 ya da üstü altında. Kaynak kodu açıktır: okuyabilir, kendiniz derleyebilir, değiştirebilir ve değiştirdiğinizi başkasına verebilirsiniz."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "tr": ""
+      "tr": "Lukotta BitLocker disklerini açabilir mi?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "tr": ""
+      "tr": "Evet, üstelik yazabilir de. Birimin parolasını yazın ya da 48 haneli kurtarma anahtarını yapıştırın; disk Finder’da açılır."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "tr": ""
+      "tr": "Lukotta NTFS disklerine yazabilir mi?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "tr": ""
+      "tr": "Evet. Dosyalar bir NTFS diskine, ondan kopyalandığı gibi kopyalanır."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "tr": ""
+      "tr": "Lukotta Linux disklerini açabilir mi?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "tr": ""
+      "tr": "Evet. ext2, ext3, ext4, btrfs ve XFS açılır; çıplak halde ya da LUKS şifrelemesi içinde. LVM ile kurulmuş bir disk bütün birimlerini birlikte açar."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "tr": ""
+      "tr": "Lukotta bir sanal makinenin diskini açabilir mi?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "tr": ""
+      "tr": "Evet, makineyi başlatmadan. Bir qcow2, VMDK, VDI, VHD ya da VHDX kalıbı açın ve içinden dosya kopyalayın ya da içine kopyalayın."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "tr": ""
+      "tr": "Lukotta Intel işlemcili bir Mac’te çalışır mı?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "tr": ""
+      "tr": "Hayır. Apple Silicon’ın sağladığı sanallaştırmaya ihtiyaç duyar."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "tr": ""
+      "tr": "Gizlilik"
     },
     "footer.licence": {
       "en": "Licence",
-      "tr": ""
+      "tr": "Lisans"
     },
     "footer.source": {
       "en": "Source",
-      "tr": ""
+      "tr": "Kaynak kodu"
     },
     "footer.contact": {
       "en": "Contact",
-      "tr": ""
+      "tr": "İletişim"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "tr": ""
+      "tr": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "tr": ""
+      "tr": "GNU General Public License, sürüm 3 ya da üstü altında özgür yazılım."
     }
   }
 }

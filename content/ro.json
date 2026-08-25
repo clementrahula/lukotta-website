@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "ro": "Fiecare format în detaliu, și cum e citit și scris fiecare"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "ro": "Suportul pentru aceste formate este experimental. Scrierea în ele nu a fost testată pe larg."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "ro": "Neacceptat"

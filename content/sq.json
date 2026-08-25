@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "sq": "Çdo format me hollësi, dhe si lexohet e shkruhet secili"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "sq": "Mbështetja për këto formate është eksperimentale. Shkrimi në to nuk është provuar gjerësisht."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "sq": "Nuk mbështetet"

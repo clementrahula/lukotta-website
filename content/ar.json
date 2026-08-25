@@ -230,6 +230,10 @@
       "en": "Every format in full detail, including how each one is read and written",
       "ar": "كل صيغة بتفصيلها الكامل، وكيف تُقرأ وتُكتب كل واحدة منها"
     },
+    "formats.experimental": {
+      "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
+      "ar": "دعم هذه الصيغ تجريبي. والكتابة إليها لم تُختبر اختباراً واسعاً."
+    },
     "formats.not.title": {
       "en": "Not supported",
       "ar": "غير مدعوم"
