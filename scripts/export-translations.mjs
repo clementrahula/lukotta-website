@@ -85,8 +85,53 @@ for (const lang of langs) {
   summary.push({ code: lang.code, name: lang.name, native: lang.native, dir: lang.dir, done, total: strings.length });
 }
 
-for (const doc of ["GLOSSARY.md", "README.md"]) {
+for (const doc of ["GLOSSARY.md", "README.md", "REVIEW-PROMPT.md"]) {
   if (existsSync(join(CONTENT, doc))) cpSync(join(CONTENT, doc), join(OUT, doc));
+}
+
+/* How the application itself translates its own terms. The website and the
+   application are read by the same person, so a reviewer needs to see both. */
+const APP = join(ROOT, "..", "lukotta", "translations");
+const APP_TERMS = [
+  "Open", "Unlock", "Eject", "Passphrase", "Password or recovery key",
+  "Disk Image", "Open Disk Image…", "Open Drive…", "Open Read-Only",
+  "Opening read-only", "Locked", "Location", "Full Disk Access",
+  "Administrator password", "Licence", "Language", "Dark", "Light",
+  "Appearance", "How it works", "Open encrypted drives on macOS",
+  "Handing the drive to Finder", "GNU General Public License",
+];
+
+if (existsSync(APP)) {
+  const byLanguage = {};
+  for (const lang of langs) {
+    const file = join(APP, `${lang.code}.json`);
+    if (!existsSync(file)) continue;
+    const shipped = JSON.parse(readFileSync(file, "utf8")).strings || {};
+    const terms = {};
+    for (const term of APP_TERMS) if (shipped[term]) terms[term] = shipped[term];
+    if (Object.keys(terms).length) {
+      byLanguage[lang.code] = { language: lang.name, native: lang.native, terms };
+    }
+  }
+  writeFileSync(
+    join(OUT, "TERMINOLOGY-FROM-THE-APP.json"),
+    JSON.stringify(
+      {
+        $comment:
+          "How the Lukotta application itself translates these terms, taken from its own shipped " +
+          "translations. The website should agree with the application: the same person reads both, " +
+          "often on the same afternoon. This is a reference, not a list of required substitutions — " +
+          "the website is prose and the application is interface, so the grammar around a term differs.",
+        languages: byLanguage,
+      },
+      null,
+      2
+    ) + "\n",
+    "utf8"
+  );
+  console.log(`  Terminology from the application: ${Object.keys(byLanguage).length} languages`);
+} else {
+  console.log("  (the application's own translations were not found, so no terminology reference)");
 }
 
 const rows = summary
