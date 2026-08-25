@@ -84,16 +84,19 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
 
-  const FAQ_NS = [1, 2, 3, 4, 5, 6];
+  /* [question number, how many paragraphs the answer runs to] */
+  const FAQ_NS = [[1, 2], [2, 1], [3, 1], [4, 1], [5, 1], [6, 1]];
+  const answerParts = (n, paras) =>
+    paras === 1 ? [t(`faq.${n}.a`)] : [t(`faq.${n}.a`), t(`faq.${n}.a2`)];
 
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     inLanguage: code,
-    mainEntity: FAQ_NS.map((n) => ({
+    mainEntity: FAQ_NS.map(([n, paras]) => ({
       "@type": "Question",
       name: t(`faq.${n}.q`),
-      acceptedAnswer: { "@type": "Answer", text: t(`faq.${n}.a`) },
+      acceptedAnswer: { "@type": "Answer", text: answerParts(n, paras).join(" ") },
     })),
   };
 
@@ -132,9 +135,11 @@ ${g.rows
   ).join("\n");
 
   const faqItems = FAQ_NS.map(
-    (n) => `        <details${n === 1 ? " open" : ""}>
+    ([n, paras]) => `        <details${n === 1 ? " open" : ""}>
           <summary>${esc(t(`faq.${n}.q`))}</summary>
-          <div class="answer">${esc(t(`faq.${n}.a`))}</div>
+          <div class="answer">
+${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\n")}
+          </div>
         </details>`
   ).join("\n");
 

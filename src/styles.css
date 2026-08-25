@@ -597,7 +597,10 @@ tbody tr:not(.group) th code { color: var(--ink); }
 }
 .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 10px; }
 .faq summary:hover { color: var(--amber-ink); }
-.faq .answer { padding-bottom: 20px; color: var(--ink-2); font-size: .9375rem; max-width: 66ch; }
+.faq .answer {
+  padding-bottom: 20px; color: var(--ink-2); font-size: .9375rem; max-width: 66ch;
+  display: grid; gap: 16px;      /* beats the 1.55 leading, so paragraphs read as paragraphs */
+}
 
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
 [dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }
