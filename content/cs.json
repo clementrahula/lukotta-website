@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "cs": ""
+      "cs": "Otevírání disků BitLocker a Linux v macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "cs": ""
+      "cs": "Otevřete disky BitLocker, NTFS, LUKS a Linux na Macu. Zadejte heslo a disk se objeví ve Finderu, ke čtení i zápisu. Svobodný software zdarma."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "cs": ""
+      "cs": "Lukotta — disky BitLocker, Linux a virtuálních strojů v macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "cs": ""
+      "cs": "Připojte disk nebo otevřete obraz disku, zadejte heslo, a objeví se ve Finderu, ke čtení i zápisu, jako každý jiný disk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "cs": ""
+      "cs": "Ikona aplikace Lukotta: zaoblený břidlicově šedý čtverec s vyříznutým písmenem L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "cs": ""
+      "cs": "Přejít na obsah"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "cs": ""
+      "cs": "Vyberte jazyk"
     },
     "ui.menu": {
       "en": "Menu",
-      "cs": ""
+      "cs": "Nabídka"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "cs": ""
+      "cs": "Zpět nahoru"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "cs": ""
+      "cs": "Přepnout na světlý vzhled"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "cs": ""
+      "cs": "Přepnout na tmavý vzhled"
     },
     "nav.download": {
       "en": "Download",
-      "cs": ""
+      "cs": "Stáhnout"
     },
     "nav.features": {
       "en": "Features",
-      "cs": ""
+      "cs": "Funkce"
     },
     "nav.how": {
       "en": "How It Works",
-      "cs": ""
+      "cs": "Jak to funguje"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "cs": ""
+      "cs": "Otevírejte disky BitLocker, Linux a virtuálních strojů v macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "cs": ""
+      "cs": "Připojte disk nebo otevřete obraz disku a zadejte heslo — objeví se ve Finderu. Ke čtení i zápisu, jako každý jiný disk."
     },
     "hero.download": {
       "en": "Download",
-      "cs": ""
+      "cs": "Stáhnout"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "cs": ""
+      "cs": "Zdrojový kód na GitHubu"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "cs": ""
+      "cs": "Verze {version} · Apple Silicon · macOS 15 Sequoia nebo novější"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "cs": ""
+      "cs": "Okno aplikace Lukotta v macOS se seznamem disků připojených k Macu a tím, co každý obsahuje."
     },
     "how.title": {
       "en": "How It Works",
-      "cs": ""
+      "cs": "Jak to funguje"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "cs": ""
+      "cs": "macOS neumí číst BitLocker ani souborové systémy Linux. Linux to umí. Lukotta spustí malý virtuální stroj s Linuxem, odemkne v něm disk a předá jej Finderu."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "cs": ""
+      "cs": "Připojte disk"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "cs": ""
+      "cs": "Nebo otevřete obraz disku."
     },
     "how.2.title": {
       "en": "Type the password",
-      "cs": ""
+      "cs": "Zadejte heslo"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "cs": ""
+      "cs": "Heslo svazku, heslo LUKS nebo 48místný obnovovací klíč BitLocker."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "cs": ""
+      "cs": "Otevřete jej ve Finderu"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "cs": ""
+      "cs": "Svazek se objeví v Umístěních a dá se číst, zapisovat i vysunout jako každý jiný disk."
     },
     "features.title": {
       "en": "Features",
-      "cs": ""
+      "cs": "Funkce"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "cs": ""
+      "cs": "Lukotta otevírá disky a obrazy disků, které macOS odmítá číst, a předává je Finderu jako běžné svazky."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "cs": ""
+      "cs": "Bere stejně fyzické disky i obrazové soubory. Svazek BitLocker se otevře svým heslem nebo 48místným obnovovacím klíčem a svazky BitLocker a NTFS se čtou i zapisují, takže soubory lze na disk kopírovat stejně jako z něj."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "cs": ""
+      "cs": "Každý disk i obraz lze otevřít také jen pro čtení a Lukotta umí znovu otevřít to, co bylo otevřené při posledním přihlášení."
     },
     "formats.title": {
       "en": "Supported formats",
-      "cs": ""
+      "cs": "Podporované formáty"
     },
     "formats.col.format": {
       "en": "Format",
-      "cs": ""
+      "cs": "Formát"
     },
     "formats.col.read": {
       "en": "Read",
-      "cs": ""
+      "cs": "Čtení"
     },
     "formats.col.write": {
       "en": "Write",
-      "cs": ""
+      "cs": "Zápis"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "cs": ""
+      "cs": "Poznámky"
     },
     "formats.yes": {
       "en": "Yes",
-      "cs": ""
+      "cs": "Ano"
     },
     "formats.no": {
       "en": "No",
-      "cs": ""
+      "cs": "Ne"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "cs": ""
+      "cs": "Šifrování"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "cs": ""
+      "cs": "Souborové systémy"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "cs": ""
+      "cs": "Obrazy disků"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "cs": ""
+      "cs": "Odemyká se heslem svazku nebo 48místným obnovovacím klíčem"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "cs": ""
+      "cs": "Odemyká se heslem"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "cs": ""
+      "cs": "Několik svazků na jednom disku se odemkne najednou"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "cs": ""
+      "cs": "Včetně svazku, který Windows nechal uspaný nebo špatně uzavřený"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "cs": ""
+      "cs": "Souborové systémy Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "cs": ""
+      "cs": "Nativně podporováno v macOS"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "cs": ""
+      "cs": "Nativně podporováno v macOS"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "cs": ""
+      "cs": "QEMU a UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "cs": ""
+      "cs": "VMware, plochý i řídký"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "cs": ""
+      "cs": "To, co obsahuje OVA. Zapisuje se jedním průchodem, takže jej nelze měnit na místě"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "cs": ""
+      "cs": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "cs": ""
+      "cs": "Hyper-V, pevný i dynamický"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "cs": ""
+      "cs": "Hyper-V. Otevírá se jen pro čtení"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "cs": ""
+      "cs": "Každý formát podrobně a jak se který čte a zapisuje"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "cs": ""
+      "cs": "Nepodporováno"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "cs": ""
+      "cs": "FileVault a šifrované obrazy disků, které macOS otevírá sám"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "cs": ""
+      "cs": "Disky vázané na čip TPM místo na heslo, včetně novějšího hardwarového šifrování v Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "cs": ""
+      "cs": "Svazky LUKS, jejichž hlavička je uložena mimo disk"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "cs": ""
+      "cs": "VeraCrypt a TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "cs": ""
+      "cs": "Obraz, který odkazuje na jiný soubor: řetěz snímků VMware, rozdílový VHD nebo qcow2 se základovým souborem"
     },
     "name.title": {
       "en": "The Name",
-      "cs": ""
+      "cs": "Název"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "cs": ""
+      "cs": "Lúkotta znamená finsky „bez zámku“, od {lukko}, což je zámek, s koncovkou {tta}, která značí nepřítomnost něčeho. Přízvuk padá na první slabiku, jako vždy ve finštině."
     },
     "faq.title": {
       "en": "FAQ",
-      "cs": ""
+      "cs": "Časté dotazy"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "cs": ""
+      "cs": "Kolik Lukotta stojí?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "cs": ""
+      "cs": "Nic. Stažení je zdarma a používání také. Není placená verze, předplatné, zkušební doba, která vyprší, ani účet, který by se zakládal."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "cs": ""
+      "cs": "Je to také svobodný software pod licencí GNU General Public License ve verzi 3 nebo novější. Zdrojový kód je veřejný: můžete si jej přečíst, sami sestavit, změnit a předat dál to, co jste změnili."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "cs": ""
+      "cs": "Otevře Lukotta disky BitLocker?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "cs": ""
+      "cs": "Ano, a zapíše na ně. Zadejte heslo svazku nebo vložte 48místný obnovovací klíč a disk se otevře ve Finderu."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "cs": ""
+      "cs": "Umí Lukotta zapisovat na disky NTFS?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "cs": ""
+      "cs": "Ano. Soubory se na disk NTFS kopírují stejně jako z něj."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "cs": ""
+      "cs": "Otevře Lukotta disky Linux?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "cs": ""
+      "cs": "Ano. ext2, ext3, ext4, btrfs a XFS se otevřou, samotné i uvnitř šifrování LUKS. Disk uspořádaný pomocí LVM otevře všechny své svazky najednou."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "cs": ""
+      "cs": "Otevře Lukotta disk virtuálního stroje?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "cs": ""
+      "cs": "Ano, bez spuštění stroje. Otevřete obraz qcow2, VMDK, VDI, VHD nebo VHDX a kopírujte z něj soubory, nebo do něj."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "cs": ""
+      "cs": "Funguje Lukotta na Macu s procesorem Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "cs": ""
+      "cs": "Ne. Potřebuje virtualizaci, kterou poskytuje Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "cs": ""
+      "cs": "Soukromí"
     },
     "footer.licence": {
       "en": "Licence",
-      "cs": ""
+      "cs": "Licence"
     },
     "footer.source": {
       "en": "Source",
-      "cs": ""
+      "cs": "Zdrojový kód"
     },
     "footer.contact": {
       "en": "Contact",
-      "cs": ""
+      "cs": "Kontakt"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "cs": ""
+      "cs": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "cs": ""
+      "cs": "Svobodný software pod licencí GNU General Public License ve verzi 3 nebo novější."
     }
   }
 }

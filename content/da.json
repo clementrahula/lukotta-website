@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "da": ""
+      "da": "Åbn BitLocker- og Linux-drev på macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "da": ""
+      "da": "Åbn BitLocker-, NTFS-, LUKS- og Linux-drev på din Mac. Skriv adgangskoden, og drevet dukker op i Finder, klar til læsning og skrivning. Fri software."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "da": ""
+      "da": "Lukotta — BitLocker-, Linux- og VM-drev på macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "da": ""
+      "da": "Sæt et drev til eller åbn et diskbillede, skriv adgangskoden, og det dukker op i Finder, klar til læsning og skrivning, som ethvert andet drev."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "da": ""
+      "da": "Symbolet for appen Lukotta: en afrundet skifergrå firkant med bogstavet L skåret ud."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "da": ""
+      "da": "Gå til indholdet"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "da": ""
+      "da": "Vælg sprog"
     },
     "ui.menu": {
       "en": "Menu",
-      "da": ""
+      "da": "Menu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "da": ""
+      "da": "Tilbage til toppen"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "da": ""
+      "da": "Skift til lyst udseende"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "da": ""
+      "da": "Skift til mørkt udseende"
     },
     "nav.download": {
       "en": "Download",
-      "da": ""
+      "da": "Hent"
     },
     "nav.features": {
       "en": "Features",
-      "da": ""
+      "da": "Funktioner"
     },
     "nav.how": {
       "en": "How It Works",
-      "da": ""
+      "da": "Sådan virker det"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "da": ""
+      "da": "Åbn BitLocker-, Linux- og virtuelle maskiners drev på macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "da": ""
+      "da": "Sæt et drev til eller åbn et diskbillede, og skriv adgangskoden — det dukker op i Finder. Klar til læsning og skrivning, som ethvert andet drev."
     },
     "hero.download": {
       "en": "Download",
-      "da": ""
+      "da": "Hent"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "da": ""
+      "da": "Kildekoden på GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "da": ""
+      "da": "Version {version} · Apple Silicon · macOS 15 Sequoia eller nyere"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "da": ""
+      "da": "Lukotta-vinduet på macOS med de drev, der er sluttet til computeren, og hvad hvert enkelt indeholder."
     },
     "how.title": {
       "en": "How It Works",
-      "da": ""
+      "da": "Sådan virker det"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "da": ""
+      "da": "macOS kan ikke læse BitLocker eller Linux-filsystemer. Det kan Linux. Lukotta starter en lille virtuel Linux-maskine, låser drevet op derinde og giver det tilbage til Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "da": ""
+      "da": "Sæt drevet til"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "da": ""
+      "da": "Eller åbn et diskbillede."
     },
     "how.2.title": {
       "en": "Type the password",
-      "da": ""
+      "da": "Skriv adgangskoden"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "da": ""
+      "da": "Adgangskoden til enheden, en LUKS-adgangssætning eller en 48-cifret BitLocker-genoprettelsesnøgle."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "da": ""
+      "da": "Åbn det i Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "da": ""
+      "da": "Enheden dukker op under Placeringer og kan læses, skrives og skubbes ud som ethvert andet drev."
     },
     "features.title": {
       "en": "Features",
-      "da": ""
+      "da": "Funktioner"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "da": ""
+      "da": "Lukotta åbner de drev og diskbilleder, som macOS nægter at læse, og giver dem til Finder som ganske almindelige enheder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "da": ""
+      "da": "Den tager fysiske drev og billedfiler lige godt. En BitLocker-enhed åbnes med sin adgangskode eller med en 48-cifret genoprettelsesnøgle, og BitLocker- og NTFS-enheder både læses og skrives, så filer kan kopieres til drevet såvel som fra det."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "da": ""
+      "da": "Ethvert drev og ethvert diskbillede kan også åbnes skrivebeskyttet, og Lukotta kan åbne igen, hvad der var åbent ved sidste log ind."
     },
     "formats.title": {
       "en": "Supported formats",
-      "da": ""
+      "da": "Understøttede formater"
     },
     "formats.col.format": {
       "en": "Format",
-      "da": ""
+      "da": "Format"
     },
     "formats.col.read": {
       "en": "Read",
-      "da": ""
+      "da": "Læsning"
     },
     "formats.col.write": {
       "en": "Write",
-      "da": ""
+      "da": "Skrivning"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "da": ""
+      "da": "Bemærkninger"
     },
     "formats.yes": {
       "en": "Yes",
-      "da": ""
+      "da": "Ja"
     },
     "formats.no": {
       "en": "No",
-      "da": ""
+      "da": "Nej"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "da": ""
+      "da": "Kryptering"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "da": ""
+      "da": "Filsystemer"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "da": ""
+      "da": "Diskbilleder"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "da": ""
+      "da": "Låses op med enhedens adgangskode eller en 48-cifret genoprettelsesnøgle"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "da": ""
+      "da": "Låses op med adgangssætningen"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "da": ""
+      "da": "Flere enheder på ét drev låses op samtidig"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "da": ""
+      "da": "Også en enhed, som Windows har efterladt i dvale eller ikke lukket ordentligt"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "da": ""
+      "da": "Filsystemerne fra Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "da": ""
+      "da": "Understøttes indbygget af macOS"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "da": ""
+      "da": "Understøttes indbygget af macOS"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "da": ""
+      "da": "QEMU og UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "da": ""
+      "da": "VMware, flad og tynd"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "da": ""
+      "da": "Det, en OVA indeholder. Skrives i én omgang og kan derfor ikke ændres på stedet"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "da": ""
+      "da": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "da": ""
+      "da": "Hyper-V, fast og dynamisk"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "da": ""
+      "da": "Hyper-V. Åbnes skrivebeskyttet"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "da": ""
+      "da": "Hvert format i detaljer, og hvordan hvert enkelt læses og skrives"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "da": ""
+      "da": "Ikke understøttet"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "da": ""
+      "da": "FileVault og krypterede diskbilleder, som macOS selv åbner"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "da": ""
+      "da": "Drev, der er bundet til en TPM-chip i stedet for en adgangskode, herunder den nyere hardwarebaserede kryptering i Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "da": ""
+      "da": "LUKS-enheder, hvis header gemmes adskilt fra drevet"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "da": ""
+      "da": "VeraCrypt og TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "da": ""
+      "da": "Et diskbillede, der peger på en anden fil: en VMware-snapshotkæde, en differentierende VHD eller en qcow2 med bagvedliggende fil"
     },
     "name.title": {
       "en": "The Name",
-      "da": ""
+      "da": "Navnet"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "da": ""
+      "da": "Lúkotta er finsk for „uden lås“, af {lukko}, en lås, med endelsen {tta}, der markerer fraværet af noget. Trykket falder på første stavelse, som det altid gør på finsk."
     },
     "faq.title": {
       "en": "FAQ",
-      "da": ""
+      "da": "Ofte stillede spørgsmål"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "da": ""
+      "da": "Hvad koster Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "da": ""
+      "da": "Ingenting. Det er gratis at hente og gratis at bruge. Der er ingen betalt version, intet abonnement, ingen prøveperiode, der løber ud, og ingen konto at oprette."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "da": ""
+      "da": "Det er desuden fri software under GNU General Public License, version 3 eller nyere. Kildekoden er offentlig: du kan læse den, bygge den selv, ændre den og give dine ændringer videre."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "da": ""
+      "da": "Kan Lukotta åbne BitLocker-drev?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "da": ""
+      "da": "Ja, og skrive til dem. Skriv adgangskoden til enheden, eller indsæt en 48-cifret genoprettelsesnøgle, og drevet åbnes i Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "da": ""
+      "da": "Kan Lukotta skrive til NTFS-drev?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "da": ""
+      "da": "Ja. Filer kopieres til et NTFS-drev lige så vel som fra det."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "da": ""
+      "da": "Kan Lukotta åbne Linux-drev?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "da": ""
+      "da": "Ja. ext2, ext3, ext4, btrfs og XFS åbnes, bare eller inde i en LUKS-kryptering. Et drev, der er sat op med LVM, åbner alle sine enheder samtidig."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "da": ""
+      "da": "Kan Lukotta åbne en virtuel maskines disk?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "da": ""
+      "da": "Ja, uden at starte maskinen. Åbn et qcow2-, VMDK-, VDI-, VHD- eller VHDX-diskbillede og kopier filer ud af det, eller ind i det."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "da": ""
+      "da": "Virker Lukotta på en Intel-Mac?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "da": ""
+      "da": "Nej. Den har brug for den virtualisering, Apple Silicon giver."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "da": ""
+      "da": "Privatliv"
     },
     "footer.licence": {
       "en": "Licence",
-      "da": ""
+      "da": "Licens"
     },
     "footer.source": {
       "en": "Source",
-      "da": ""
+      "da": "Kildekode"
     },
     "footer.contact": {
       "en": "Contact",
-      "da": ""
+      "da": "Kontakt"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "da": ""
+      "da": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "da": ""
+      "da": "Fri software under GNU General Public License, version 3 eller nyere."
     }
   }
 }

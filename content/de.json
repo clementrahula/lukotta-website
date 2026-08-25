@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "de": ""
+      "de": "BitLocker- und Linux-Laufwerke unter macOS öffnen — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "de": ""
+      "de": "BitLocker-, NTFS-, LUKS- und Linux-Laufwerke am Mac öffnen. Passwort eingeben, und das Laufwerk erscheint im Finder, lesbar und beschreibbar. Freie Software."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "de": ""
+      "de": "Lukotta — BitLocker-, Linux- und VM-Laufwerke unter macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "de": ""
+      "de": "Laufwerk anschließen oder Image öffnen, Passwort eingeben, und es erscheint im Finder – lesbar und beschreibbar, wie jedes andere Laufwerk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "de": ""
+      "de": "Das Symbol der App Lukotta: ein abgerundetes schiefergraues Quadrat mit ausgespartem Buchstaben L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "de": ""
+      "de": "Zum Inhalt springen"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "de": ""
+      "de": "Sprache wählen"
     },
     "ui.menu": {
       "en": "Menu",
-      "de": ""
+      "de": "Menü"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "de": ""
+      "de": "Zurück nach oben"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "de": ""
+      "de": "Zur hellen Darstellung wechseln"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "de": ""
+      "de": "Zur dunklen Darstellung wechseln"
     },
     "nav.download": {
       "en": "Download",
-      "de": ""
+      "de": "Download"
     },
     "nav.features": {
       "en": "Features",
-      "de": ""
+      "de": "Funktionen"
     },
     "nav.how": {
       "en": "How It Works",
-      "de": ""
+      "de": "So funktioniert es"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "de": ""
+      "de": "BitLocker-, Linux- und Virtuelle-Maschinen-Laufwerke unter macOS öffnen."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "de": ""
+      "de": "Laufwerk anschließen oder Image öffnen und das Passwort eingeben – es erscheint im Finder. Lesbar und beschreibbar, wie jedes andere Laufwerk."
     },
     "hero.download": {
       "en": "Download",
-      "de": ""
+      "de": "Download"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "de": ""
+      "de": "Quellcode auf GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "de": ""
+      "de": "Version {version} · Apple Silicon · macOS 15 Sequoia oder neuer"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "de": ""
+      "de": "Das Lukotta-Fenster unter macOS mit den angeschlossenen Laufwerken und ihrem Inhalt."
     },
     "how.title": {
       "en": "How It Works",
-      "de": ""
+      "de": "So funktioniert es"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "de": ""
+      "de": "macOS kann BitLocker und Linux-Dateisysteme nicht lesen. Linux schon. Lukotta startet eine kleine virtuelle Linux-Maschine, entsperrt das Laufwerk darin und übergibt es an den Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "de": ""
+      "de": "Laufwerk anschließen"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "de": ""
+      "de": "Oder ein Image öffnen."
     },
     "how.2.title": {
       "en": "Type the password",
-      "de": ""
+      "de": "Passwort eingeben"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "de": ""
+      "de": "Ein Volume-Passwort, eine LUKS-Passphrase oder ein 48-stelliger BitLocker-Wiederherstellungsschlüssel."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "de": ""
+      "de": "Im Finder öffnen"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "de": ""
+      "de": "Das Volume erscheint unter Orte und lässt sich lesen, beschreiben und auswerfen wie jedes andere Laufwerk."
     },
     "features.title": {
       "en": "Features",
-      "de": ""
+      "de": "Funktionen"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "de": ""
+      "de": "Lukotta öffnet Laufwerke und Images, die macOS nicht lesen will, und übergibt sie dem Finder als gewöhnliche Volumes."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "de": ""
+      "de": "Es nimmt physische Laufwerke und Image-Dateien gleichermaßen. Ein BitLocker-Volume öffnet sich mit seinem Passwort oder mit einem 48-stelligen Wiederherstellungsschlüssel, und BitLocker- und NTFS-Volumes werden gelesen und beschrieben – Dateien lassen sich also ebenso auf das Laufwerk kopieren wie davon herunter."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "de": ""
+      "de": "Jedes Laufwerk und jedes Image lässt sich auch schreibgeschützt öffnen, und Lukotta kann wiederherstellen, was bei der letzten Anmeldung geöffnet war."
     },
     "formats.title": {
       "en": "Supported formats",
-      "de": ""
+      "de": "Unterstützte Formate"
     },
     "formats.col.format": {
       "en": "Format",
-      "de": ""
+      "de": "Format"
     },
     "formats.col.read": {
       "en": "Read",
-      "de": ""
+      "de": "Lesen"
     },
     "formats.col.write": {
       "en": "Write",
-      "de": ""
+      "de": "Schreiben"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "de": ""
+      "de": "Anmerkungen"
     },
     "formats.yes": {
       "en": "Yes",
-      "de": ""
+      "de": "Ja"
     },
     "formats.no": {
       "en": "No",
-      "de": ""
+      "de": "Nein"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "de": ""
+      "de": "Verschlüsselung"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "de": ""
+      "de": "Dateisysteme"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "de": ""
+      "de": "Images"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "de": ""
+      "de": "Wird mit dem Volume-Passwort oder einem 48-stelligen Wiederherstellungsschlüssel entsperrt"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "de": ""
+      "de": "Wird mit der Passphrase entsperrt"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "de": ""
+      "de": "Mehrere Volumes auf einem Laufwerk werden zusammen entsperrt"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "de": ""
+      "de": "Auch ein Volume, das Windows im Ruhezustand oder unsauber hinterlassen hat"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "de": ""
+      "de": "Die Linux-Dateisysteme"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "de": ""
+      "de": "Von macOS nativ unterstützt"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "de": ""
+      "de": "Von macOS nativ unterstützt"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "de": ""
+      "de": "QEMU und UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "de": ""
+      "de": "VMware, flach und sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "de": ""
+      "de": "Der Inhalt eines OVA. Wird in einem Durchgang geschrieben und lässt sich daher nicht an Ort und Stelle ändern"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "de": ""
+      "de": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "de": ""
+      "de": "Hyper-V, fest und dynamisch"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "de": ""
+      "de": "Hyper-V. Öffnet schreibgeschützt"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "de": ""
+      "de": "Jedes Format im Einzelnen, und wie es jeweils gelesen und geschrieben wird"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "de": ""
+      "de": "Nicht unterstützt"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "de": ""
+      "de": "FileVault und verschlüsselte Images, die macOS selbst öffnet"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "de": ""
+      "de": "Laufwerke, die an ein TPM statt an ein Passwort gebunden sind, einschließlich der neueren hardwaregestützten Verschlüsselung von Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "de": ""
+      "de": "LUKS-Volumes, deren Header getrennt vom Laufwerk liegt"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "de": ""
+      "de": "VeraCrypt und TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "de": ""
+      "de": "Ein Image, das eine andere Datei benennt: eine VMware-Snapshot-Kette, eine differenzierende VHD oder ein qcow2 mit Backing-Datei"
     },
     "name.title": {
       "en": "The Name",
-      "de": ""
+      "de": "Der Name"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "de": ""
+      "de": "Lúkotta ist Finnisch für „ohne Schloss“, von {lukko}, dem Schloss, mit der Endung {tta}, die das Fehlen von etwas anzeigt. Die Betonung liegt auf der ersten Silbe, wie im Finnischen immer."
     },
     "faq.title": {
       "en": "FAQ",
-      "de": ""
+      "de": "Häufige Fragen"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "de": ""
+      "de": "Was kostet Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "de": ""
+      "de": "Nichts. Der Download ist kostenlos und die Nutzung ebenso. Es gibt keine kostenpflichtige Version, kein Abonnement, keine ablaufende Testphase und kein Konto."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "de": ""
+      "de": "Es ist außerdem freie Software unter der GNU General Public License, Version 3 oder neuer. Der Quellcode ist offen: Sie können ihn lesen, selbst bauen, ändern und Ihre Änderungen weitergeben."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "de": ""
+      "de": "Kann Lukotta BitLocker-Laufwerke öffnen?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "de": ""
+      "de": "Ja, und auch beschreiben. Geben Sie das Volume-Passwort ein oder fügen Sie einen 48-stelligen Wiederherstellungsschlüssel ein, und das Laufwerk öffnet sich im Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "de": ""
+      "de": "Kann Lukotta NTFS-Laufwerke beschreiben?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "de": ""
+      "de": "Ja. Dateien lassen sich ebenso auf ein NTFS-Laufwerk kopieren wie davon herunter."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "de": ""
+      "de": "Kann Lukotta Linux-Laufwerke öffnen?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "de": ""
+      "de": "Ja. ext2, ext3, ext4, btrfs und XFS werden geöffnet, offen oder innerhalb einer LUKS-Verschlüsselung. Ein mit LVM eingerichtetes Laufwerk öffnet alle seine Volumes zusammen."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "de": ""
+      "de": "Kann Lukotta das Laufwerk einer virtuellen Maschine öffnen?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "de": ""
+      "de": "Ja, ohne die Maschine zu starten. Öffnen Sie ein qcow2-, VMDK-, VDI-, VHD- oder VHDX-Image und kopieren Sie Dateien heraus oder hinein."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "de": ""
+      "de": "Läuft Lukotta auf einem Intel-Mac?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "de": ""
+      "de": "Nein. Es braucht die Virtualisierung, die Apple Silicon bietet."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "de": ""
+      "de": "Datenschutz"
     },
     "footer.licence": {
       "en": "Licence",
-      "de": ""
+      "de": "Lizenz"
     },
     "footer.source": {
       "en": "Source",
-      "de": ""
+      "de": "Quellcode"
     },
     "footer.contact": {
       "en": "Contact",
-      "de": ""
+      "de": "Kontakt"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "de": ""
+      "de": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "de": ""
+      "de": "Freie Software unter der GNU General Public License, Version 3 oder neuer."
     }
   }
 }

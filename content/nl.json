@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "nl": ""
+      "nl": "BitLocker- en Linux-schijven openen op macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "nl": ""
+      "nl": "Open BitLocker-, NTFS-, LUKS- en Linux-schijven op je Mac. Typ het wachtwoord en de schijf verschijnt in de Finder, lees- en schrijfbaar. Vrije software."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "nl": ""
+      "nl": "Lukotta — BitLocker-, Linux- en VM-schijven op macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "nl": ""
+      "nl": "Sluit een schijf aan of open een schijfkopie, typ het wachtwoord, en hij verschijnt in de Finder, lees- en schrijfbaar, net als elke andere schijf."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "nl": ""
+      "nl": "Het symbool van de app Lukotta: een afgerond leigrijs vierkant met daaruit de letter L gesneden."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "nl": ""
+      "nl": "Ga naar de inhoud"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "nl": ""
+      "nl": "Kies een taal"
     },
     "ui.menu": {
       "en": "Menu",
-      "nl": ""
+      "nl": "Menu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "nl": ""
+      "nl": "Terug naar boven"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "nl": ""
+      "nl": "Overschakelen naar lichte weergave"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "nl": ""
+      "nl": "Overschakelen naar donkere weergave"
     },
     "nav.download": {
       "en": "Download",
-      "nl": ""
+      "nl": "Download"
     },
     "nav.features": {
       "en": "Features",
-      "nl": ""
+      "nl": "Functies"
     },
     "nav.how": {
       "en": "How It Works",
-      "nl": ""
+      "nl": "Hoe het werkt"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "nl": ""
+      "nl": "Open BitLocker-, Linux- en virtuelemachineschijven op macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "nl": ""
+      "nl": "Sluit een schijf aan of open een schijfkopie en typ het wachtwoord: hij verschijnt in de Finder. Lees- en schrijfbaar, net als elke andere schijf."
     },
     "hero.download": {
       "en": "Download",
-      "nl": ""
+      "nl": "Download"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "nl": ""
+      "nl": "De broncode op GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "nl": ""
+      "nl": "Versie {version} · Apple Silicon · macOS 15 Sequoia of nieuwer"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "nl": ""
+      "nl": "Het venster van Lukotta op macOS, met de schijven die op de Mac zijn aangesloten en wat er op elke schijf staat."
     },
     "how.title": {
       "en": "How It Works",
-      "nl": ""
+      "nl": "Hoe het werkt"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "nl": ""
+      "nl": "macOS kan BitLocker en Linux-bestandssystemen niet lezen. Linux wel. Lukotta start een kleine virtuele Linux-machine, ontgrendelt de schijf daarbinnen en geeft hem terug aan de Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "nl": ""
+      "nl": "Sluit de schijf aan"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "nl": ""
+      "nl": "Of open een schijfkopie."
     },
     "how.2.title": {
       "en": "Type the password",
-      "nl": ""
+      "nl": "Typ het wachtwoord"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "nl": ""
+      "nl": "Het wachtwoord van het volume, een LUKS-wachtwoordzin of een BitLocker-herstelsleutel van 48 cijfers."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "nl": ""
+      "nl": "Open hem in de Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "nl": ""
+      "nl": "Het volume verschijnt onder Locaties en laat zich lezen, beschrijven en verwijderen als elke andere schijf."
     },
     "features.title": {
       "en": "Features",
-      "nl": ""
+      "nl": "Functies"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "nl": ""
+      "nl": "Lukotta opent schijven en schijfkopieën die macOS weigert te lezen, en geeft ze aan de Finder als gewone volumes."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "nl": ""
+      "nl": "Het neemt fysieke schijven en kopiebestanden even goed aan. Een BitLocker-volume gaat open met zijn wachtwoord of met een herstelsleutel van 48 cijfers, en BitLocker- en NTFS-volumes worden zowel gelezen als beschreven, zodat je bestanden naar de schijf kunt kopiëren en niet alleen ervan."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "nl": ""
+      "nl": "Elke schijf en elke kopie kan ook alleen-lezen worden geopend, en Lukotta kan heropenen wat bij de laatste aanmelding open stond."
     },
     "formats.title": {
       "en": "Supported formats",
-      "nl": ""
+      "nl": "Ondersteunde formaten"
     },
     "formats.col.format": {
       "en": "Format",
-      "nl": ""
+      "nl": "Formaat"
     },
     "formats.col.read": {
       "en": "Read",
-      "nl": ""
+      "nl": "Lezen"
     },
     "formats.col.write": {
       "en": "Write",
-      "nl": ""
+      "nl": "Schrijven"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "nl": ""
+      "nl": "Opmerkingen"
     },
     "formats.yes": {
       "en": "Yes",
-      "nl": ""
+      "nl": "Ja"
     },
     "formats.no": {
       "en": "No",
-      "nl": ""
+      "nl": "Nee"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "nl": ""
+      "nl": "Versleuteling"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "nl": ""
+      "nl": "Bestandssystemen"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "nl": ""
+      "nl": "Schijfkopieën"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "nl": ""
+      "nl": "Wordt ontgrendeld met het wachtwoord van het volume of een herstelsleutel van 48 cijfers"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "nl": ""
+      "nl": "Wordt ontgrendeld met de wachtwoordzin"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "nl": ""
+      "nl": "Meerdere volumes op één schijf gaan samen open"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "nl": ""
+      "nl": "Ook een volume dat Windows in slaapstand of onafgesloten heeft achtergelaten"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "nl": ""
+      "nl": "De bestandssystemen van Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "nl": ""
+      "nl": "Wordt door macOS zelf ondersteund"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "nl": ""
+      "nl": "Wordt door macOS zelf ondersteund"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "nl": ""
+      "nl": "QEMU en UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "nl": ""
+      "nl": "VMware, plat en dun"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "nl": ""
+      "nl": "Wat een OVA bevat. Wordt in één keer geschreven en kan daarom niet ter plaatse worden gewijzigd"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "nl": ""
+      "nl": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "nl": ""
+      "nl": "Hyper-V, vast en dynamisch"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "nl": ""
+      "nl": "Hyper-V. Gaat alleen-lezen open"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "nl": ""
+      "nl": "Elk formaat in detail, en hoe elk wordt gelezen en geschreven"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "nl": ""
+      "nl": "Niet ondersteund"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "nl": ""
+      "nl": "FileVault en versleutelde schijfkopieën, die macOS zelf opent"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "nl": ""
+      "nl": "Schijven die aan een TPM zijn verzegeld in plaats van aan een wachtwoord, waaronder de nieuwere hardwarematige versleuteling van Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "nl": ""
+      "nl": "LUKS-volumes waarvan de header los van de schijf wordt bewaard"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "nl": ""
+      "nl": "VeraCrypt en TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "nl": ""
+      "nl": "Een kopie die een ander bestand noemt: een VMware-momentopnamereeks, een differentiërende VHD of een qcow2 met achterliggend bestand"
     },
     "name.title": {
       "en": "The Name",
-      "nl": ""
+      "nl": "De naam"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "nl": ""
+      "nl": "Lúkotta is Fins voor „zonder slot”, van {lukko}, het slot, met de uitgang {tta} die de afwezigheid van iets aanduidt. De klemtoon ligt op de eerste lettergreep, zoals altijd in het Fins."
     },
     "faq.title": {
       "en": "FAQ",
-      "nl": ""
+      "nl": "Veelgestelde vragen"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "nl": ""
+      "nl": "Wat kost Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "nl": ""
+      "nl": "Niets. Downloaden is gratis en gebruiken ook. Er is geen betaalde versie, geen abonnement, geen proefperiode die afloopt en geen account om aan te maken."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "nl": ""
+      "nl": "Het is bovendien vrije software, onder de GNU General Public License, versie 3 of nieuwer. De broncode is openbaar: je kunt hem lezen, zelf bouwen, wijzigen en je wijzigingen doorgeven."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "nl": ""
+      "nl": "Kan Lukotta BitLocker-schijven openen?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "nl": ""
+      "nl": "Ja, en erop schrijven. Typ het wachtwoord van het volume of plak een herstelsleutel van 48 cijfers, en de schijf gaat open in de Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "nl": ""
+      "nl": "Kan Lukotta naar NTFS-schijven schrijven?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "nl": ""
+      "nl": "Ja. Bestanden kopiëren naar een NTFS-schijf net zo goed als ervan."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "nl": ""
+      "nl": "Kan Lukotta Linux-schijven openen?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "nl": ""
+      "nl": "Ja. ext2, ext3, ext4, btrfs en XFS gaan open, kaal of binnen een LUKS-versleuteling. Een schijf die met LVM is ingedeeld, opent al zijn volumes samen."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "nl": ""
+      "nl": "Kan Lukotta de schijf van een virtuele machine openen?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "nl": ""
+      "nl": "Ja, zonder de machine te starten. Open een qcow2-, VMDK-, VDI-, VHD- of VHDX-kopie en kopieer er bestanden uit, of erin."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "nl": ""
+      "nl": "Werkt Lukotta op een Intel-Mac?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "nl": ""
+      "nl": "Nee. Het heeft de virtualisatie nodig die Apple Silicon biedt."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "nl": ""
+      "nl": "Privacy"
     },
     "footer.licence": {
       "en": "Licence",
-      "nl": ""
+      "nl": "Licentie"
     },
     "footer.source": {
       "en": "Source",
-      "nl": ""
+      "nl": "Broncode"
     },
     "footer.contact": {
       "en": "Contact",
-      "nl": ""
+      "nl": "Contact"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "nl": ""
+      "nl": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "nl": ""
+      "nl": "Vrije software onder de GNU General Public License, versie 3 of nieuwer."
     }
   }
 }

@@ -19,8 +19,10 @@ const PLACEHOLDER = /\{[a-z]+\}/g;
 /* Names that stay in Latin script whatever the surrounding language. If the
    English names one and the translation does not, something was translated
    that should not have been. */
+/* Finder is deliberately absent: Apple translates it in some languages —
+   Chinese macOS calls it 访达 — so it is a glossary matter, not a lint one. */
 const VERBATIM = [
-  "Lukotta", "macOS", "Finder", "BitLocker", "NTFS", "LUKS", "LVM",
+  "Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "LVM",
   "ext2", "ext3", "ext4", "btrfs", "XFS", "exFAT", "FAT",
   "qcow2", "VMDK", "VDI", "VHDX", "VHD", "IMG", "DMG", "OVA",
   "VMware", "VirtualBox", "Hyper-V", "QEMU", "UTM", "Windows", "Linux",
