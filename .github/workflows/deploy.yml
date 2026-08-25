@@ -6,8 +6,8 @@
 #
 # To go live: make the repository public, then uncomment the push trigger
 # below. configure-pages has enablement: true, so the first run turns Pages on
-# by itself — there is no need to set it in Settings first. DEPLOYMENT.md has
-# the rest, including the Cloudflare records and the SSL mode that matters.
+# by itself. AGENTS.md has the rest, including the Cloudflare records and the
+# SSL mode that matters — Flexible gives a redirect loop.
 
 name: Deploy
 

@@ -92,7 +92,13 @@ mkdirSync(OUT, { recursive: true });
 /* Static files that every page shares. */
 cpSync(join(SRC, "styles.css"), join(OUT, "styles.css"));
 cpSync(join(SRC, "script.js"), join(OUT, "script.js"));
-cpSync(join(SRC, "assets", "brand"), join(OUT, "assets", "brand"), { recursive: true });
+/* Only what a page actually loads. The other files in assets/brand are the
+   originals the favicons and the shared-card image were generated from; they
+   are kept for regenerating those, not for shipping. */
+mkdirSync(join(OUT, "assets", "brand"), { recursive: true });
+for (const mark of ["lukotta-mark-light.png", "lukotta-mark-dark.png"]) {
+  cpSync(join(SRC, "assets", "brand", mark), join(OUT, "assets", "brand", mark));
+}
 if (existsSync(join(SRC, "assets", "icons"))) {
   cpSync(join(SRC, "assets", "icons"), join(OUT, "assets"), { recursive: true });
 }
