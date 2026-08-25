@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ru": "Открывайте диски BitLocker, NTFS, LUKS и Linux на Mac. Введите пароль, и диск появится в Finder — для чтения и записи. Свободная программа, бесплатно."
+      "ru": "Открывайте диски BitLocker, NTFS, LUKS и Linux на Mac. Введите пароль, и диск появится в Finder, для чтения и записи. Свободная программа, бесплатно."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ru": "Отправьте эту страницу на свой Mac — AirDrop есть в открывшемся списке — и загрузите её там. Файл можно загрузить и здесь, но на этом устройстве его ничто не откроет."
+      "ru": "Отправьте эту страницу на свой Mac и загрузите её там; AirDrop есть в открывшемся списке. Файл можно загрузить и здесь, но на этом устройстве его ничто не откроет."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "ru": "Подключите диск или откройте образ и введите пароль — он появится в Finder. Для чтения и записи, как любой другой диск."
+      "ru": "Подключите диск или откройте образ и введите пароль, и он появится в Finder. Для чтения и записи, как любой другой диск."
     },
     "hero.download": {
       "en": "Download",
@@ -308,7 +308,7 @@
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "ru": "Lúkotta по-фински значит «без замка», от {lukko} — замок, с окончанием {tta}, которое обозначает отсутствие чего-либо. Ударение падает на первый слог, как всегда в финском."
+      "ru": "Lúkotta по-фински значит «без замка», от {lukko}, то есть замок, с окончанием {tta}, которое обозначает отсутствие чего-либо. Ударение падает на первый слог, как всегда в финском."
     },
     "faq.title": {
       "en": "FAQ",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ru": "Да. ext2, ext3, ext4, btrfs и XFS открываются — сами по себе или внутри шифрования LUKS. Диск, размеченный через LVM, открывает все свои тома сразу."
+      "ru": "Да. ext2, ext3, ext4, btrfs и XFS открываются, сами по себе или внутри шифрования LUKS. Диск, размеченный через LVM, открывает все свои тома сразу."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",

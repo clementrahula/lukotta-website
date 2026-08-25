@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "sl": "Pošljite to stran na svoj Mac — AirDrop je na seznamu, ki se odpre — in jo prenesite tam. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
+      "sl": "Pošljite to stran na svoj Mac in jo prenesite tam; AirDrop je na seznamu, ki se odpre. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "sl": "Priključite disk ali odprite sliko diska in vpišite geslo — pojavi se v Finderju. Za branje in pisanje, kot vsak drug disk."
+      "sl": "Priključite disk ali odprite sliko diska in vpišite geslo, in pojavi se v Finderju. Za branje in pisanje, kot vsak drug disk."
     },
     "hero.download": {
       "en": "Download",

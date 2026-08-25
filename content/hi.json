@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "hi": "यह पन्ना अपने Mac पर भेजिए — खुलने वाली सूची में AirDrop है — और वहीं डाउनलोड कीजिए। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
+      "hi": "यह पन्ना अपने Mac पर भेजिए और वहीं डाउनलोड कीजिए; खुलने वाली सूची में AirDrop है। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "hi": "ड्राइव लगाइए या डिस्क इमेज खोलिए और पासवर्ड टाइप कीजिए — वह Finder में आ जाती है। पढ़ने और लिखने योग्य, किसी भी दूसरी डिस्क की तरह।"
+      "hi": "ड्राइव लगाइए या डिस्क इमेज खोलिए और पासवर्ड टाइप कीजिए, और वह Finder में आ जाती है। पढ़ने और लिखने योग्य, किसी भी दूसरी डिस्क की तरह।"
     },
     "hero.download": {
       "en": "Download",

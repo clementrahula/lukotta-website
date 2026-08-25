@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "fil": "Ipadala ang pahinang ito sa iyong Mac — nasa listahang bubukas ang AirDrop — at doon i-download. Puwede mo pa ring i-download ang file dito, pero walang makakabukas nito sa device na ito."
+      "fil": "Ipadala ang pahinang ito sa iyong Mac at doon i-download; nasa listahang bubukas ang AirDrop. Puwede mo pa ring i-download ang file dito, pero walang makakabukas nito sa device na ito."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "fil": "Isaksak ang drive o magbukas ng disk image at i-type ang password — lilitaw ito sa Finder. Nababasa at nasusulatan, gaya ng kahit anong disk."
+      "fil": "Isaksak ang drive o magbukas ng disk image at i-type ang password, at lilitaw ito sa Finder. Nababasa at nasusulatan, gaya ng kahit anong disk."
     },
     "hero.download": {
       "en": "Download",

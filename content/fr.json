@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "fr": "Envoyez cette page à votre Mac — AirDrop figure dans la liste qui s’ouvre — et téléchargez-la là-bas. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
+      "fr": "Envoyez cette page à votre Mac et téléchargez-la là-bas ; AirDrop figure dans la liste qui s’ouvre. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",

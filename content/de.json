@@ -20,7 +20,7 @@
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "de": "Laufwerk anschließen oder Image öffnen, Passwort eingeben, und es erscheint im Finder – lesbar und beschreibbar, wie jedes andere Laufwerk."
+      "de": "Laufwerk anschließen oder Image öffnen, Passwort eingeben, und es erscheint im Finder, lesbar und beschreibbar, wie jedes andere Laufwerk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "de": "Schicken Sie diese Seite an Ihren Mac – AirDrop steht in der Liste, die sich öffnet – und laden Sie sie dort. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
+      "de": "Schicken Sie diese Seite an Ihren Mac und laden Sie sie dort; AirDrop steht in der Liste, die sich öffnet. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "de": "Laufwerk anschließen oder Image öffnen und das Passwort eingeben – es erscheint im Finder. Lesbar und beschreibbar, wie jedes andere Laufwerk."
+      "de": "Laufwerk anschließen oder Image öffnen und das Passwort eingeben, und es erscheint im Finder. Lesbar und beschreibbar, wie jedes andere Laufwerk."
     },
     "hero.download": {
       "en": "Download",
@@ -172,7 +172,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "de": "Es nimmt physische Laufwerke und Image-Dateien gleichermaßen. Ein BitLocker-Volume öffnet sich mit seinem Passwort oder mit einem 48-stelligen Wiederherstellungsschlüssel, und BitLocker- und NTFS-Volumes werden gelesen und beschrieben – Dateien lassen sich also ebenso auf das Laufwerk kopieren wie davon herunter."
+      "de": "Es nimmt physische Laufwerke und Image-Dateien gleichermaßen. Ein BitLocker-Volume öffnet sich mit seinem Passwort oder mit einem 48-stelligen Wiederherstellungsschlüssel, und BitLocker- und NTFS-Volumes werden gelesen und beschrieben, sodass sich Dateien ebenso auf das Laufwerk kopieren lassen wie davon herunter."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",

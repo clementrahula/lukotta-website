@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "vi": "Gửi trang này sang máy Mac của bạn — AirDrop nằm trong danh sách hiện ra — rồi tải ở đó. Bạn vẫn có thể tải tệp ở đây, nhưng không có gì trên thiết bị này mở được nó."
+      "vi": "Gửi trang này sang máy Mac của bạn rồi tải ở đó; AirDrop nằm trong danh sách hiện ra. Bạn vẫn có thể tải tệp ở đây, nhưng không có gì trên thiết bị này mở được nó."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "vi": "Cắm ổ đĩa hoặc mở tệp ảnh đĩa rồi nhập mật khẩu — nó hiện ra trong Finder. Đọc và ghi được, như mọi ổ đĩa khác."
+      "vi": "Cắm ổ đĩa hoặc mở tệp ảnh đĩa rồi nhập mật khẩu, và nó hiện ra trong Finder. Đọc và ghi được, như mọi ổ đĩa khác."
     },
     "hero.download": {
       "en": "Download",

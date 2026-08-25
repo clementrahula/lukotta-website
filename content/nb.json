@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "nb": "Send denne siden til Mac-en din — AirDrop står i listen som åpnes — og last den ned der. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
+      "nb": "Send denne siden til Mac-en din og last den ned der; AirDrop står i listen som åpnes. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "nb": "Koble til en stasjon eller åpne et diskbilde og skriv passordet — den dukker opp i Finder. Klar til lesing og skriving, som enhver annen stasjon."
+      "nb": "Koble til en stasjon eller åpne et diskbilde og skriv passordet, så dukker den opp i Finder. Klar til lesing og skriving, som enhver annen stasjon."
     },
     "hero.download": {
       "en": "Download",

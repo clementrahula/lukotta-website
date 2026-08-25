@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ms": "Hantar halaman ini ke Mac anda — AirDrop ada dalam senarai yang terbuka — dan muat turunnya di sana. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
+      "ms": "Hantar halaman ini ke Mac anda dan muat turunnya di sana; AirDrop ada dalam senarai yang terbuka. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "ms": "Pasang pemacu atau buka imej cakera dan taip kata laluan — ia muncul dalam Finder. Boleh dibaca dan ditulis, seperti mana-mana cakera lain."
+      "ms": "Pasang pemacu atau buka imej cakera dan taip kata laluan, dan ia muncul dalam Finder. Boleh dibaca dan ditulis, seperti mana-mana cakera lain."
     },
     "hero.download": {
       "en": "Download",

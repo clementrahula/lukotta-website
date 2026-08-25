@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ro": "Trimite această pagină pe Mac-ul tău — AirDrop este în lista care se deschide — și descarcă acolo. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
+      "ro": "Trimite această pagină pe Mac-ul tău și descarcă acolo; AirDrop este în lista care se deschide. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "ro": "Conectează un disc sau deschide o imagine de disc și scrie parola — apare în Finder. Gata de citire și scriere, ca orice alt disc."
+      "ro": "Conectează un disc sau deschide o imagine de disc și scrie parola, iar discul apare în Finder. Gata de citire și scriere, ca orice alt disc."
     },
     "hero.download": {
       "en": "Download",

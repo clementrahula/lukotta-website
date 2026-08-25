@@ -60,7 +60,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "fi": "Lähetä tämä sivu Macillesi — AirDrop on avautuvassa luettelossa — ja lataa se siellä. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
+      "fi": "Lähetä tämä sivu Macillesi ja lataa se siellä; AirDrop on avautuvassa luettelossa. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -116,7 +116,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "fi": "Kytke levy tai avaa levykuva ja kirjoita salasana — se ilmestyy Finderiin. Luettavissa ja kirjoitettavissa, kuten mikä tahansa muu levy."
+      "fi": "Kytke levy tai avaa levykuva ja kirjoita salasana, niin se ilmestyy Finderiin. Luettavissa ja kirjoitettavissa, kuten mikä tahansa muu levy."
     },
     "hero.download": {
       "en": "Download",

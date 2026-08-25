@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "cs": "Pošlete tuto stránku na svůj Mac — AirDrop je v seznamu, který se otevře — a stáhněte ji tam. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
+      "cs": "Pošlete tuto stránku na svůj Mac a stáhněte ji tam; AirDrop je v seznamu, který se otevře. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "cs": "Připojte disk nebo otevřete obraz disku a zadejte heslo — objeví se ve Finderu. Ke čtení i zápisu, jako každý jiný disk."
+      "cs": "Připojte disk nebo otevřete obraz disku a zadejte heslo, a objeví se ve Finderu. Ke čtení i zápisu, jako každý jiný disk."
     },
     "hero.download": {
       "en": "Download",

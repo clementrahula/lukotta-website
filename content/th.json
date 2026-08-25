@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "th": "ส่งหน้านี้ไปยัง Mac ของคุณ — AirDrop อยู่ในรายการที่เปิดขึ้น — แล้วดาวน์โหลดที่นั่น คุณยังดาวน์โหลดไฟล์ที่นี่ได้ แต่ไม่มีอะไรบนอุปกรณ์นี้ที่จะเปิดมันได้"
+      "th": "ส่งหน้านี้ไปยัง Mac ของคุณแล้วดาวน์โหลดที่นั่น โดย AirDrop อยู่ในรายการที่เปิดขึ้น คุณยังดาวน์โหลดไฟล์ที่นี่ได้ แต่ไม่มีอะไรบนอุปกรณ์นี้ที่จะเปิดมันได้"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "th": "เสียบไดรฟ์หรือเปิดอิมเมจดิสก์แล้วพิมพ์รหัสผ่าน — มันจะปรากฏใน Finder อ่านและเขียนได้ เหมือนดิสก์อื่น ๆ"
+      "th": "เสียบไดรฟ์หรือเปิดอิมเมจดิสก์แล้วพิมพ์รหัสผ่าน แล้วมันจะปรากฏใน Finder อ่านและเขียนได้ เหมือนดิสก์อื่น ๆ"
     },
     "hero.download": {
       "en": "Download",

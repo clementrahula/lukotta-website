@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "zh-Hans": "把这个页面发送到你的 Mac — 打开的列表里就有隔空投送 — 然后在那边下载。你仍然可以在这里下载文件，但这台设备上没有东西能打开它。"
+      "zh-Hans": "把这个页面发送到你的 Mac，然后在那边下载；打开的列表里就有隔空投送。 你仍然可以在这里下载文件，但这台设备上没有东西能打开它。"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",

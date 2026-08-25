@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "el": "Στείλτε αυτή τη σελίδα στο Mac σας — το AirDrop βρίσκεται στη λίστα που ανοίγει — και κατεβάστε το εκεί. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
+      "el": "Στείλτε αυτή τη σελίδα στο Mac σας και κατεβάστε το εκεί· το AirDrop βρίσκεται στη λίστα που ανοίγει. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "el": "Συνδέστε έναν δίσκο ή ανοίξτε ένα είδωλο δίσκου και πληκτρολογήστε τον κωδικό — εμφανίζεται στο Finder. Για ανάγνωση και εγγραφή, όπως κάθε άλλος δίσκος."
+      "el": "Συνδέστε έναν δίσκο ή ανοίξτε ένα είδωλο δίσκου και πληκτρολογήστε τον κωδικό, και εμφανίζεται στο Finder. Για ανάγνωση και εγγραφή, όπως κάθε άλλος δίσκος."
     },
     "hero.download": {
       "en": "Download",

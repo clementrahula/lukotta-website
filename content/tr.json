@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "tr": "Mac’inizde BitLocker, NTFS, LUKS ve Linux disklerini açın. Parolayı yazın, disk Finder’da görünsün — okunur ve yazılır. Özgür yazılım, ücretsiz."
+      "tr": "Mac’inizde BitLocker, NTFS, LUKS ve Linux disklerini açın. Parolayı yazın, disk Finder’da görünsün; okunur ve yazılır. Özgür yazılım, ücretsiz."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "tr": "Bu sayfayı Mac’inize gönderin — açılan listede AirDrop var — ve oradan indirin. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
+      "tr": "Bu sayfayı Mac’inize gönderin ve oradan indirin; açılan listede AirDrop var. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "tr": "Bir disk takın ya da disk kalıbı açın ve parolayı yazın — Finder’da görünür. Okunur ve yazılır, başka herhangi bir disk gibi."
+      "tr": "Bir disk takın ya da disk kalıbı açın ve parolayı yazın; Finder’da görünür. Okunur ve yazılır, başka herhangi bir disk gibi."
     },
     "hero.download": {
       "en": "Download",
