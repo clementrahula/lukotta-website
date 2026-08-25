@@ -55,7 +55,7 @@
       "ru": "этой системе"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "ru": "Отправьте эту страницу на свой Mac — AirDrop есть в открывшемся списке — и загрузите её там. Файл можно загрузить и здесь, но на этом устройстве его ничто не откроет."
     },
     "dialog.copyHint": {

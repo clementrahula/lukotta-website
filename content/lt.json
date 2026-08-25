@@ -55,7 +55,7 @@
       "lt": "šioje"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "lt": "Nusiųskite šį puslapį į savo Mac — AirDrop yra atsivėrusiame sąraše — ir atsisiųskite ten. Failą vis tiek galite atsisiųsti čia, bet šiame įrenginyje jo niekas neatvers."
     },
     "dialog.copyHint": {

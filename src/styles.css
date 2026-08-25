@@ -582,7 +582,6 @@ tbody tr:not(.group) th code { color: var(--ink); }
 .steps h3 { margin-bottom: 5px; }
 .steps p { color: var(--ink-2); font-size: .9375rem; max-width: 58ch; }
 
-
 /* --------------------------------------------------------------- footer -- */
 
 .site-footer { padding-block: 40px 48px; border-top: 1px solid var(--ink); }
@@ -722,11 +721,3 @@ tbody tr:not(.group) th code { color: var(--ink); }
   .plain-btn { margin-inline-start: 0; }
 }
 
-/* An aside belonging to one language alone — set apart from the prose above it
-   without becoming a pull quote. */
-.aside-note {
-  padding-top: 18px;
-  border-top: 1px solid var(--rule);
-  color: var(--ink-3);
-  font-size: .9375rem;
-}

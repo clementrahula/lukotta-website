@@ -55,7 +55,7 @@
       "he": "מערכת זו"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "he": "שלחו את הדף הזה ל‑Mac שלכם — ‏AirDrop נמצא ברשימה שנפתחת — והורידו אותו שם. עדיין אפשר להוריד את הקובץ כאן, אבל שום דבר במכשיר הזה לא יפתח אותו."
     },
     "dialog.copyHint": {

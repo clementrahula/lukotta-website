@@ -55,7 +55,7 @@
       "et": "selles"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "et": "Saada see leht oma Maci — AirDrop on avanevas loendis — ja laadi see seal alla. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
     },
     "dialog.copyHint": {

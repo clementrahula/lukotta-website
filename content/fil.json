@@ -55,7 +55,7 @@
       "fil": "ganitong sistema"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "fil": "Ipadala ang pahinang ito sa iyong Mac — nasa listahang bubukas ang AirDrop — at doon i-download. Puwede mo pa ring i-download ang file dito, pero walang makakabukas nito sa device na ito."
     },
     "dialog.copyHint": {

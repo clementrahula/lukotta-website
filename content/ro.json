@@ -55,7 +55,7 @@
       "ro": "acest sistem"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "ro": "Trimite această pagină pe Mac-ul tău — AirDrop este în lista care se deschide — și descarcă acolo. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
     },
     "dialog.copyHint": {

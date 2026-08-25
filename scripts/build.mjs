@@ -34,7 +34,8 @@ const warn = (m) => { warnings.push(m); };
 /* A translation file stores each string as {en, <code>} so the file is complete
    on its own — a reviewer needs nothing else to judge it. English stores plain
    strings, because there is nothing to compare it with. */
-/* Strings belonging to one language alone, with no English original. */
+/* Strings that replace the standard one on a single language's page. They have
+   no English original and are used instead of the translation, not beside it. */
 function loadLocalOnly(code) {
   const file = join(CONTENT, `${code}.json`);
   if (!existsSync(file)) return {};
@@ -63,11 +64,12 @@ if (!english) throw new Error("content/en.json is missing — it is the source e
 
 const requested = new Set();
 
-function translator(code, strings) {
+function translator(code, strings, localOnly) {
   const missing = new Set();
   const t = (key) => {
     requested.add(key);
-    let value = strings[key];
+    /* A language may replace one string outright — see loadLocalOnly. */
+    let value = (localOnly && localOnly[key]) || strings[key];
     if (value === undefined || value === "") {
       missing.add(key);
       value = english[key];
@@ -164,14 +166,14 @@ const built = [];
 
 for (const lang of buildable) {
   const strings = loadStrings(lang.code);
-  const t = translator(lang.code, strings || english);
   const localOnly = loadLocalOnly(lang.code);
+  const t = translator(lang.code, strings || english, localOnly);
   const canonical = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
   const assetPrefix = lang.path ? "../" : "./";
 
   const shotSize = resolveShots(lang.code);
 
-  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, localOnly });
+  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable });
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });

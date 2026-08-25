@@ -55,7 +55,7 @@
       "pl": "tym"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "pl": "Wyślij tę stronę na swojego Maca — AirDrop jest na liście, która się otworzy — i pobierz ją tam. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
     },
     "dialog.copyHint": {

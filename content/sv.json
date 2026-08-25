@@ -55,7 +55,7 @@
       "sv": "detta system"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "sv": "Skicka den här sidan till din Mac — AirDrop finns i listan som öppnas — och hämta den där. Du kan ändå hämta filen här, men inget på den här enheten kan öppna den."
     },
     "dialog.copyHint": {

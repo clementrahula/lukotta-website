@@ -55,7 +55,7 @@
       "ja": "このシステム"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "ja": "このページを Mac に送って — 開いた一覧に AirDrop があります — そちらでダウンロードしてください。ここでダウンロードすることもできますが、この端末には開けるものがありません。"
     },
     "dialog.copyHint": {

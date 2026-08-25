@@ -55,7 +55,7 @@
       "lv": "šajā"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "lv": "Nosūtiet šo lapu uz savu Mac — AirDrop ir sarakstā, kas atveras — un lejupielādējiet to tur. Failu joprojām varat lejupielādēt šeit, taču šajā ierīcē to nekas neatvērs."
     },
     "dialog.copyHint": {

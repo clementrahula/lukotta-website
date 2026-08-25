@@ -6,8 +6,8 @@
     "dir": "ltr"
   },
   "localOnly": {
-    "$comment": "Strings that exist in this language and no other. They have no English original and are never shown on another language's page. See name.aside below.",
-    "name.aside": "Nimi on abessiivi sanasta lukko – sen kyllä huomasit. Olen virolainen, mutta suomeksi se kuulosti kauniimmalta, joten valitsin sen."
+    "$comment": "Strings that replace the standard one on this language's page and nowhere else. The key is the same key; the text here is used instead of the translation in `strings`. See name.body: a Finnish reader does not need the abessive explained to them.",
+    "name.body": "Nimi on abessiivi sanasta lukko - sen kyllä huomasit. Olen virolainen, mutta suomeksi se kuulosti kauniimmalta, joten valitsin sen."
   },
   "strings": {
     "meta.title": {
@@ -59,7 +59,7 @@
       "fi": "tässä"
     },
     "dialog.sendHint": {
-      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
       "fi": "Lähetä tämä sivu Macillesi — AirDrop on avautuvassa luettelossa — ja lataa se siellä. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
     },
     "dialog.copyHint": {

@@ -46,7 +46,7 @@ const FORMATS = [
   },
 ];
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, localOnly = {} }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -393,7 +393,6 @@ ${faqItems}
         </div>
         <div class="prose">
           <p>${nameProse}</p>
-${localOnly["name.aside"] ? `          <p class="aside-note">${esc(localOnly["name.aside"])}</p>` : ""}
         </div>
       </div>
     </section>
