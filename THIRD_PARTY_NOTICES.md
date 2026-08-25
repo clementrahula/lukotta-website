@@ -1,6 +1,7 @@
-# Third-party notices
+# Third-Party Notices
 
-The website carries two third-party works, both typefaces.
+The website carries two third-party works, both typefaces. The name and the
+logo are the project's own and are covered at the end.
 
 ## Inter
 
@@ -32,6 +33,10 @@ subset to Latin, Latin Extended, Vietnamese, Greek, Cyrillic and Cyrillic
 Extended; Plex Mono is two static weights of Latin alone, which is all the
 format names need. No file has been modified.
 
-Nothing else on the site is third-party. The logo, the mark and the icon come
-from the Lukotta application's own repository and are trademarks, not covered by
-the GPL that covers the software.
+## Lukotta Name & Logo
+
+The logo, the mark and the icon come from the Lukotta application's own
+repository. They are trademarks and are covered by neither of the site's
+licences — not by the GPL over the code, and not by CC BY-SA over the words.
+[TRADEMARKS.txt](https://github.com/clementrahula/lukotta/blob/main/TRADEMARKS.txt)
+in the application's repository says what is permitted.
