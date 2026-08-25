@@ -148,8 +148,12 @@ for (const { lang, file, html, translated } of pages) {
 }
 
 /* --- url() targets in the stylesheet, which no page references directly --- */
-const cssPath = join(OUT, "styles.css");
-if (!existsSync(cssPath)) err("public/styles.css is missing");
+/* The stylesheet carries a digest in its name, so it is found rather than
+   named. Exactly one must exist: two would mean a stale build left behind. */
+const sheets = existsSync(OUT) ? readdirSync(OUT).filter((f) => /^styles\.[0-9a-f]+\.css$/.test(f)) : [];
+if (sheets.length !== 1) err(`expected one fingerprinted stylesheet in public/, found ${sheets.length}`);
+const cssPath = join(OUT, sheets[0] ?? "styles.css");
+if (!existsSync(cssPath)) err("the built stylesheet is missing");
 else {
   const css = readFileSync(cssPath, "utf8");
   const urls = [...css.matchAll(/url\("([^"]+)"\)/g)].map((m) => m[1]);
@@ -214,6 +218,20 @@ if (existsSync(cssPath)) {
         err(`contrast: ${theme} ${label} is ${got.toFixed(2)}:1 (${a} on ${b}), below the ${need}:1 WCAG 2.2 AA minimum.`);
       }
     }
+  }
+}
+
+/* --- every page must load the assets this build actually wrote --- */
+const scripts = existsSync(OUT) ? readdirSync(OUT).filter((f) => /^script\.[0-9a-f]+\.js$/.test(f)) : [];
+if (scripts.length !== 1) err(`expected one fingerprinted script in public/, found ${scripts.length}`);
+if (sheets.length === 1 && scripts.length === 1) {
+  for (const { lang, html } of pages) {
+    if (!html.includes(sheets[0])) err(`${lang.code}: does not load ${sheets[0]}`);
+    if (!html.includes(scripts[0])) err(`${lang.code}: does not load ${scripts[0]}`);
+  }
+  const notFound = join(OUT, "404.html");
+  if (existsSync(notFound) && !readFileSync(notFound, "utf8").includes(sheets[0])) {
+    err(`404.html does not load ${sheets[0]}`);
   }
 }
 

@@ -107,9 +107,19 @@ function translator(code, strings, localOnly) {
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
-/* Static files that every page shares. */
-cpSync(join(SRC, "styles.css"), join(OUT, "styles.css"));
-cpSync(join(SRC, "script.js"), join(OUT, "script.js"));
+/* Static files that every page shares. Their names carry a digest of their
+   own contents, so a page always loads the stylesheet and the script it was
+   built against. A cache can then hold them as long as it likes: a changed
+   file is a different name, never a stale hit under the old one. */
+function fingerprint(sourceName, extension) {
+  const body = readFileSync(join(SRC, sourceName));
+  const digest = createHash("sha256").update(body).digest("hex").slice(0, 10);
+  const name = `${sourceName.replace(extension, "")}.${digest}${extension}`;
+  writeFileSync(join(OUT, name), body);
+  return name;
+}
+const CSS = fingerprint("styles.css", ".css");
+const JS = fingerprint("script.js", ".js");
 /* Only the two marks are loaded by a page. The other files in
    src/assets/brand are sources for the generated icons and are not published. */
 mkdirSync(join(OUT, "assets", "brand"), { recursive: true });
@@ -219,7 +229,7 @@ for (const lang of buildable) {
   /* styles.css shows the frame at 720px. A narrower capture would be stretched. */
   if (shotSize.width < 720) warn(`${lang.code}: screenshot is ${shotSize.width}px wide; the frame displays it at 720px.`);
 
-  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable }));
+  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS } }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
@@ -337,7 +347,7 @@ writeFileSync(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — Lukotta</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/${CSS}">
 <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <script>(function(){try{var c=localStorage.getItem("lukotta-theme")||"auto";var d=c==="dark"||(c==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light")}catch(e){}})();</script>
 </head>

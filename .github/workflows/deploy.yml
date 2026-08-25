@@ -30,11 +30,11 @@ jobs:
     steps:
       # Full history: the sitemap dates each language from the commit that
       # last touched its content file.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
 
@@ -53,11 +53,11 @@ jobs:
       - name: Check
         run: node scripts/check.mjs --strict
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
         with:
           enablement: true
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: public
 
@@ -69,4 +69,31 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+
+      # Cloudflare holds the pages at its edge, so a deploy that does not tell
+      # it otherwise is invisible until the cache expires. The stylesheet and
+      # the script carry a digest and can be left alone; it is the HTML that
+      # goes stale. Set CF_ZONE_ID and CF_API_TOKEN as repository secrets, with
+      # a token holding Zone → Cache Purge on this zone alone. Without them the
+      # step says so and the deploy still counts as done.
+      - name: Purge the Cloudflare cache
+        env:
+          CF_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          if [ -z "$CF_ZONE" ] || [ -z "$CF_TOKEN" ]; then
+            echo "No Cloudflare credentials set. Skipping the purge; the edge will"
+            echo "serve the previous pages until its own cache expires."
+            exit 0
+          fi
+          response=$(curl -sS -X POST \
+            "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" \
+            -H "Authorization: Bearer $CF_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          echo "$response"
+          echo "$response" | grep -q '"success":true' || {
+            echo "The purge was refused. The site is deployed but the edge is stale."
+            exit 1
+          }

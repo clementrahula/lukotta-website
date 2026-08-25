@@ -47,7 +47,7 @@ const FORMATS = [
   },
 ];
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -236,7 +236,7 @@ ${ogAlternates}
   <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
   <link rel="manifest" href="${assetPrefix}site.webmanifest">
 
-  <link rel="stylesheet" href="${assetPrefix}styles.css">
+  <link rel="stylesheet" href="${assetPrefix}${assets.css}">
 
   <script>
     /* Resolves the appearance before first paint, so the page does not flash
@@ -467,7 +467,7 @@ ${faqItems}
     </div>
   </dialog>
 
-  <script src="${assetPrefix}script.js" defer></script>
+  <script src="${assetPrefix}${assets.js}" defer></script>
 </body>
 </html>
 `;
