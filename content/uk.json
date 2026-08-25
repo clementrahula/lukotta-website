@@ -320,7 +320,7 @@
     },
     "faq.1.q": {
       "en": "Is Lukotta free?",
-      "uk": "Чи Lukotta безкоштовна?"
+      "uk": "Чи безкоштовна Lukotta?"
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "uk": "macOS не читає жодної файлової системи Linux. Lukotta відкриває ext2, ext3, ext4, btrfs і XFS, голими або всередині шифрування LUKS. Диск, розмічений з LVM, відкриває всі свої томи разом."
+      "uk": "macOS не читає жодної файлової системи Linux. Lukotta відкриває ext2, ext3, ext4, btrfs і XFS, незашифрованими або всередині шифрування LUKS. Диск, розмічений з LVM, відкриває всі свої томи разом."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

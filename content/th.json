@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "th": "macOS ไม่อ่านระบบไฟล์ของ Linux เลยสักระบบ Lukotta เปิด ext2, ext3, ext4, btrfs และ XFS ทั้งแบบเปล่าและที่อยู่ในการเข้ารหัส LUKS ไดรฟ์ที่จัดวางด้วย LVM จะเปิดโวลุ่มทั้งหมดพร้อมกัน"
+      "th": "macOS ไม่อ่านระบบไฟล์ของ Linux เลยสักระบบ Lukotta เปิด ext2, ext3, ext4, btrfs และ XFS ทั้งแบบไม่เข้ารหัสและที่อยู่ในการเข้ารหัส LUKS ไดรฟ์ที่จัดวางด้วย LVM จะเปิดโวลุ่มทั้งหมดพร้อมกัน"
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",
@@ -368,7 +368,7 @@
     },
     "faq.6.a": {
       "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
-      "th": "ไม่ Lukotta ต้องใช้การจำลองเสมือนที่ Apple Silicon มีให้ จึงทำงานได้เฉพาะบน Mac ที่ใช้ Apple Silicon และ macOS 15 Sequoia ขึ้นไป"
+      "th": "ไม่ได้ Lukotta ต้องใช้การจำลองเสมือนที่ Apple Silicon มีให้ จึงทำงานได้เฉพาะบน Mac ที่ใช้ Apple Silicon และ macOS 15 Sequoia ขึ้นไป"
     },
     "footer.privacy": {
       "en": "Privacy Policy",

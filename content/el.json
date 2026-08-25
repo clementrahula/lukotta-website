@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "el": "Το macOS δεν διαβάζει κανένα σύστημα αρχείων του Linux. Το Lukotta ανοίγει ext2, ext3, ext4, btrfs και XFS, γυμνά ή μέσα σε κρυπτογράφηση LUKS. Ένας δίσκος στημένος με LVM ανοίγει όλους τους τόμους του μαζί."
+      "el": "Το macOS δεν διαβάζει κανένα σύστημα αρχείων του Linux. Το Lukotta ανοίγει ext2, ext3, ext4, btrfs και XFS, χωρίς κρυπτογράφηση ή μέσα σε κρυπτογράφηση LUKS. Ένας δίσκος στημένος με LVM ανοίγει όλους τους τόμους του μαζί."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",
@@ -360,7 +360,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "el": "Ναι. Το Lukotta ανοίγει απευθείας μια εικόνα qcow2, VMDK, VDI, VHD ή VHDX και αντιγράφει αρχεία από αυτήν, ή μέσα σε αυτήν. Η εγγραφή είναι πειραματική για VMDK, VDI και VHD· τα VHDX και VMDK stream-optimized ανοίγουν μόνο για ανάγνωση."
+      "el": "Ναι. Το Lukotta ανοίγει απευθείας ένα είδωλο δίσκου σε μορφή qcow2, VMDK, VDI, VHD ή VHDX και αντιγράφει αρχεία από αυτό ή μέσα σε αυτό. Η εγγραφή είναι πειραματική για VMDK, VDI και VHD· τα VHDX και VMDK stream-optimized ανοίγουν μόνο για ανάγνωση."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

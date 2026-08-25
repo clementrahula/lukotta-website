@@ -7,7 +7,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { renderPage, FORMATS } from "../src/page.mjs";
+import { renderPage, FORMATS, REQUIREMENTS } from "../src/page.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "src");
@@ -332,6 +332,11 @@ ${urlEntries}
    it is written because it costs nothing and states the facts in one place. */
 /* "writing is experimental" only says anything about a format that can be
    written to at all. */
+/* llms.txt, a proposed convention for handing an assistant a plain summary of
+   a site rather than making it infer one from markup. Adoption is not settled;
+   it is written because it costs nothing and states the facts in one place.
+   Every claim below is taken from the content the pages are built from, so
+   there is nothing here that can drift away from what a reader is shown. */
 const readWrite = (r) =>
   r.write ? (r.experimental ? "read and write, writing experimental" : "read and write") : "read only";
 const formatLines = FORMATS.map((g) => {
@@ -339,27 +344,43 @@ const formatLines = FORMATS.map((g) => {
   return `- ${english[g.group]}: ${rows.join("; ")}`;
 }).join("\n");
 
+const notOpened = [1, 2, 3, 4, 5]
+  .map((n) => english[`formats.not.${n}`])
+  .filter(Boolean)
+  .map((line) => `- ${line}`)
+  .join("\n");
+
+const questions = [1, 2, 3, 4, 5, 6]
+  .map((n) => [english[`faq.${n}.q`], english[`faq.${n}.a`]])
+  .filter(([q, a]) => q && a)
+  .map(([q, a]) => `### ${q}\n\n${a}`)
+  .join("\n\n");
+
 writeFileSync(
   join(OUT, "llms.txt"),
   `# Lukotta
 
 > ${english["meta.description"]}
 
-Lukotta is a macOS application. It needs ${"macOS 15 Sequoia or later on an Apple Silicon Mac"}.
-The current version is ${cfg.appVersion}. It is free of charge and free software,
-licensed under the GNU General Public License, version 3 or later. It asks for no
-account, sends no telemetry, and makes no network connection of its own.
+${english["hero.subtitle"]}
 
-## What it does
+Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMENTS}. ${english["footer.gpl"]}
 
-macOS cannot mount BitLocker volumes, Linux filesystems such as ext4, btrfs and
-XFS, LUKS encryption, or most virtual machine disk images. Lukotta opens them:
-attach the drive or open the image, enter the password if there is one, and the
-volume appears in Finder like any other disk.
+## How it works
 
-## Supported formats
+${english["how.lead"]}
+
+## ${english["features.title"]}
 
 ${formatLines}
+
+## ${english["formats.not.title"]}
+
+${notOpened}
+
+## ${english["faq.title"]}
+
+${questions}
 
 ## Pages
 

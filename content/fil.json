@@ -324,7 +324,7 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "fil": "Oo, libre ang Lukotta na i-download at libreng gamitin. Walang bayad na bersyon, walang subscription, walang trial na nauubusan at walang account na gagawin."
+      "fil": "Oo, libre ang Lukotta na i-download at libreng gamitin. Walang bayad na bersyon, walang subscription, walang trial na nag-e-expire at walang account na gagawin."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
@@ -340,7 +340,7 @@
     },
     "faq.3.q": {
       "en": "Can a Mac write to an NTFS drive?",
-      "fil": "Kayang magsulat ng Mac sa NTFS drive?"
+      "fil": "Nakakasulat ba ang Mac sa NTFS drive?"
     },
     "faq.3.a": {
       "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fil": "Wala ni isang file system ng Linux ang nababasa ng macOS. Binubuksan ng Lukotta ang ext2, ext3, ext4, btrfs at XFS, hubad o nasa loob ng pag-encrypt na LUKS. Ang drive na nakaayos sa LVM ay binubuksan ang lahat ng volume nito nang sabay."
+      "fil": "Wala ni isang file system ng Linux ang nababasa ng macOS. Binubuksan ng Lukotta ang ext2, ext3, ext4, btrfs at XFS, nang walang encryption o nasa loob ng pag-encrypt na LUKS. Ang drive na nakaayos sa LVM ay binubuksan ang lahat ng volume nito nang sabay."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

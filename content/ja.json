@@ -324,7 +324,7 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "ja": "はい、Lukottaはダウンロードも利用も無料です。有料版もサブスクリプションも、期限切れになる試用期間も、作成すべきアカウントもありません。"
+      "ja": "はい、Lukottaはダウンロードも利用も無料です。有料版もサブスクリプションも、期限切れになる試用期間も、アカウントを作成する必要もありません。"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ja": "macOSはLinuxのファイルシステムをひとつも読めません。Lukottaはext2、ext3、ext4、btrfs、XFSを開きます。そのままでも、LUKS暗号化の中にあっても同じです。LVMで構成したドライブは、すべてのボリュームをまとめて開きます。"
+      "ja": "macOSはLinuxのファイルシステムをひとつも読めません。Lukottaはext2、ext3、ext4、btrfs、XFSを開きます。暗号化されていない状態でも、LUKS暗号化の中にあっても同じです。LVMで構成したドライブは、すべてのボリュームをまとめて開きます。"
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",
@@ -360,7 +360,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "ja": "はい。Lukottaはqcow2、VMDK、VDI、VHD、VHDXのイメージを直接開き、ファイルを取り出したり入れたりします。書き込みはVMDK、VDI、VHDでは実験的で、VHDXとVMDK stream-optimizedは読み取り専用で開きます。"
+      "ja": "はい。Lukottaはqcow2、VMDK、VDI、VHD、VHDXのディスクイメージを直接開き、ファイルを取り出したり入れたりします。書き込みはVMDK、VDI、VHDでは実験的で、VHDXとVMDK stream-optimizedは読み取り専用で開きます。"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

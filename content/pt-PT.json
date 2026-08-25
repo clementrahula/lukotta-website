@@ -344,7 +344,7 @@
     },
     "faq.3.a": {
       "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
-      "pt-PT": "Por si só não. O macOS monta o NTFS apenas para leitura. A Lukotta monta-o para leitura e escrita, pelo que os ficheiros se copiam para um disco NTFS tal como a partir dele."
+      "pt-PT": "Por si só não. O macOS monta o NTFS apenas para leitura. A Lukotta monta-o para leitura e escrita, pelo que os ficheiros podem ser copiados tanto para um disco NTFS como a partir dele."
     },
     "faq.4.q": {
       "en": "How do you read an ext4 or btrfs drive on a Mac?",
@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "pt-PT": "O macOS não lê nenhum dos sistemas de ficheiros de Linux. A Lukotta abre ext2, ext3, ext4, btrfs e XFS, nus ou dentro de encriptação LUKS. Um disco organizado com LVM abre todos os seus volumes em conjunto."
+      "pt-PT": "O macOS não lê nenhum dos sistemas de ficheiros de Linux. A Lukotta abre ext2, ext3, ext4, btrfs e XFS, sem encriptação ou dentro de encriptação LUKS. Um disco organizado com LVM abre todos os seus volumes em conjunto."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

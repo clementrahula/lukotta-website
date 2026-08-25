@@ -324,7 +324,7 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "hu": "Igen, a Lukotta ingyen letölthető és ingyen használható. Nincs fizetős változat, nincs előfizetés, nincs lejáró próbaidő és nincs létrehozandó fiók."
+      "hu": "Igen, a Lukotta ingyen letölthető és ingyen használható. Nincs fizetős változat, nincs előfizetés, nincs lejáró próbaidő, és fiókot sem kell létrehozni."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
@@ -348,11 +348,11 @@
     },
     "faq.4.q": {
       "en": "How do you read an ext4 or btrfs drive on a Mac?",
-      "hu": "Hogyan olvasol el egy ext4- vagy btrfs-meghajtót Macen?"
+      "hu": "Hogyan olvasható egy ext4- vagy btrfs-meghajtó Macen?"
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hu": "A macOS egyetlen Linux fájlrendszert sem olvas. A Lukotta megnyitja az ext2, ext3, ext4, btrfs és XFS rendszereket, önmagukban vagy LUKS-titkosításon belül. Az LVM-mel kiosztott meghajtó az összes kötetét együtt nyitja meg."
+      "hu": "A macOS egyetlen Linux fájlrendszert sem olvas. A Lukotta megnyitja az ext2, ext3, ext4, btrfs és XFS rendszereket, titkosítatlanul vagy LUKS-titkosításon belül. Az LVM-mel kiosztott meghajtó az összes kötetét együtt nyitja meg."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

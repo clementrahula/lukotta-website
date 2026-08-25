@@ -328,7 +328,7 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "fi": "Kyllä, Lukotta on ilmainen ladata ja ilmainen käyttää. Maksullista versiota ei ole, tilausta ei ole, umpeutuvaa kokeilujaksoa ei ole eikä tiliä tarvitse luoda."
+      "fi": "Kyllä. Lukotta on ladattavissa ja käytettävissä ilmaiseksi. Maksullista versiota ei ole, tilausta ei ole, umpeutuvaa kokeilujaksoa ei ole eikä tiliä tarvitse luoda."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
@@ -340,7 +340,7 @@
     },
     "faq.2.a": {
       "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
-      "fi": "macOS ei osaa liittää BitLocker-taltiota itse. Lukotta avaa sen luettavaksi ja kirjoitettavaksi: kirjoita taltion salasana tai liitä 48-merkkinen palautusavain, niin levy ilmestyy Finder-sovellukseen."
+      "fi": "macOS ei osaa liittää BitLocker-taltiota itse. Lukotta avaa sen luettavaksi ja kirjoitettavaksi: kirjoita taltion salasana tai liitä 48-numeroinen palautusavain, niin levy ilmestyy Finder-sovellukseen."
     },
     "faq.3.q": {
       "en": "Can a Mac write to an NTFS drive?",
@@ -356,7 +356,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fi": "macOS ei lue yhtäkään Linux-tiedostojärjestelmää. Lukotta avaa ext2:n, ext3:n, ext4:n, btrfs:n ja XFS:n, paljaana tai LUKS-salauksen sisällä. LVM:llä jaoteltu levy avaa kaikki taltionsa yhdessä."
+      "fi": "macOS ei lue yhtäkään Linux-tiedostojärjestelmää. Lukotta avaa ext2-, ext3-, ext4-, btrfs- ja XFS-tiedostojärjestelmät salaamattomina tai LUKS-salauksen sisällä. LVM-asettelua käyttävä levy avaa kaikki taltionsa yhdessä."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

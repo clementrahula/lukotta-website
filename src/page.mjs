@@ -16,6 +16,10 @@ const jsonld = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
 
 /* The support table. The read and write columns come from the application's
    SPECS.md. */
+/* What the application needs, in English, said once. The structured record and
+   llms.txt both state it, and they must not come to state it differently. */
+export const REQUIREMENTS = "macOS 15 Sequoia or later on an Apple Silicon Mac";
+
 export const FORMATS = [
   {
     group: "formats.group.encryption",
@@ -82,7 +86,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     applicationSubCategory: "Disk Utility",
     operatingSystem: "macOS 15 Sequoia or later",
     processorRequirements: "Apple Silicon (arm64)",
-    softwareRequirements: "macOS 15 Sequoia or later on an Apple Silicon Mac",
+    softwareRequirements: REQUIREMENTS,
     featureList,
     softwareVersion: cfg.appVersion,
     inLanguage: code,

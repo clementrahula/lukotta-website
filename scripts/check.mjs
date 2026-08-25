@@ -276,6 +276,20 @@ if (existsSync(llmsPath)) {
     }
   }
   if (!llms.includes(cfg.appVersion)) err(`llms.txt does not state version ${cfg.appVersion}.`);
+  /* The questions are the most quotable thing on the page, so the summary must
+     carry them, and carry the same wording. */
+  const english = JSON.parse(readFileSync(join(CONTENT, `${cfg.defaultLang}.json`), "utf8")).strings;
+  const englishOf = (v) => (typeof v === "string" ? v : v?.[cfg.defaultLang] ?? v?.en);
+  for (let n = 1; n <= 6; n++) {
+    for (const part of ["q", "a"]) {
+      const text = englishOf(english[`faq.${n}.${part}`]);
+      if (text && !llms.includes(text)) err(`llms.txt does not carry faq.${n}.${part} as the page states it.`);
+    }
+  }
+  for (const key of ["features.title", "formats.not.title", "hero.subtitle", "how.lead", "footer.gpl"]) {
+    const text = englishOf(english[key]);
+    if (text && !llms.includes(text)) err(`llms.txt does not carry ${key} as the page states it.`);
+  }
   for (const p of pages) {
     const url = `${cfg.domain}/${p.lang.path ? p.lang.path + "/" : ""}`;
     if (!llms.includes(url)) err(`llms.txt does not link ${url}`);

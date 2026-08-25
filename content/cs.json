@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "cs": "macOS nepřečte žádný ze souborových systémů Linuxu. Lukotta otevře ext2, ext3, ext4, btrfs a XFS, samotné i uvnitř šifrování LUKS. Disk rozvržený pomocí LVM otevře všechny své svazky najednou."
+      "cs": "macOS nepřečte žádný ze souborových systémů Linuxu. Lukotta otevře ext2, ext3, ext4, btrfs a XFS, nešifrované i uvnitř šifrování LUKS. Disk rozvržený pomocí LVM otevře všechny své svazky najednou."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",
