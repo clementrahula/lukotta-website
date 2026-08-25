@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-/* Checks the built site. Anything that would quietly damage search placement or
-   break a page is an error; anything worth a second look is a warning.
-   Run: node scripts/check.mjs */
+/* Checks the built site. Anything that breaks a page or damages search
+   placement is an error; anything else worth seeing is a warning. */
 
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, dirname, resolve as resolvePath } from "node:path";
@@ -13,9 +12,8 @@ const cfg = JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"));
 const CONTENT = join(ROOT, "content");
 const strict = process.argv.includes("--strict");
 
-/* How much of each language is actually translated. Everything is wired and
-   tested whatever the answer; this decides one thing only — whether the site
-   is fit to be published, which --strict enforces and the deploy runs. */
+/* How much of each language is translated. This gates release only:
+   --strict fails while any language is unfinished. */
 function completenessOf(code) {
   if (code === cfg.defaultLang) return 1;
   const file = join(CONTENT, `${code}.json`);
@@ -37,14 +35,12 @@ const err = (m) => errors.push(m);
 const warn = (m) => warns.push(m);
 
 if (!existsSync(OUT)) {
-  console.error("public/ does not exist — run node scripts/build.mjs first.");
+  console.error("public/ does not exist. Run node scripts/build.mjs first.");
   process.exit(1);
 }
 
-/* Which languages got built, and which of those may be indexed. A page that
-   carries noindex is an unfinished translation: it is word for word the English
-   page, so it must not compete with it, and the rules below treat it that
-   way — it is exempt from the duplicate-title check and absent from hreflang. */
+/* Every built page. An untranslated page carries the English text, so it is
+   exempt from the duplicate-title check below. */
 const pages = cfg.languages
   .map((l) => ({ lang: l, file: l.path ? join(OUT, l.path, "index.html") : join(OUT, "index.html") }))
   .filter((p) => existsSync(p.file))
@@ -81,10 +77,9 @@ for (const { lang, file, html, translated } of pages) {
   if (desc && (desc.length < 70 || desc.length > 165)) {
     warn(`${where}: description is ${desc.length} characters; 70–165 shows in full.`);
   }
-  /* Only translated pages are compared with each other. An untranslated one
-     carries the English text by definition, so counting it here would report a
-     duplicate that says nothing — and which of the two got blamed depended on
-     the order the languages happened to be listed in. */
+  /* Compare translated pages only. An untranslated page carries the English
+     text, so including it would report a duplicate against whichever language
+     happened to be listed first. */
   if (translated && title) {
     if (titles.has(title)) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two translated pages cannot share one.`);
     else titles.set(title, where);
@@ -99,12 +94,12 @@ for (const { lang, file, html, translated } of pages) {
   const expected = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
   if (canonical !== expected) err(`${where}: canonical is "${canonical}", expected "${expected}"`);
 
-  /* --- hreflang: every page must name every page, and itself --- */
+  /* --- hreflang: every page declares every page, including itself --- */
   const found = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)]
     .map((m) => ({ code: m[1], href: m[2] }));
   const codes = new Set(found.map((f) => f.code));
   for (const l of indexed.map((p) => p.lang)) {
-    if (!codes.has(l.code)) err(`${where}: no hreflang entry for "${l.code}" — the cluster must be complete on every page.`);
+    if (!codes.has(l.code)) err(`${where}: no hreflang entry for "${l.code}". The cluster must be complete on every page.`);
     for (const alias of l.alsoServes || []) {
       if (!codes.has(alias)) err(`${where}: no hreflang entry for region "${alias}", which "${l.code}" is meant to serve.`);
     }
@@ -112,7 +107,7 @@ for (const { lang, file, html, translated } of pages) {
   if (!codes.has("x-default")) err(`${where}: no hreflang="x-default"`);
   if (!codes.has(lang.code)) err(`${where}: no self-referencing hreflang`);
 
-  /* Duplicate region codes would make Google discard the whole cluster. */
+  /* A duplicate region code makes Google discard the whole cluster. */
   const seenCodes = new Set();
   for (const f of found) {
     if (seenCodes.has(f.code)) err(`${where}: hreflang "${f.code}" appears more than once.`);
@@ -133,17 +128,17 @@ for (const { lang, file, html, translated } of pages) {
   const lds = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   if (lds.length < 2) err(`${where}: expected at least two JSON-LD blocks, found ${lds.length}`);
   for (const [, body] of lds) {
-    try { JSON.parse(body); } catch (e) { err(`${where}: JSON-LD does not parse — ${e.message}`); }
+    try { JSON.parse(body); } catch (e) { err(`${where}: JSON-LD does not parse. ${e.message}`); }
   }
 
-  /* --- one h1, and every image described --- */
+  /* --- exactly one h1, and alt text on every image --- */
   const h1s = [...html.matchAll(/<h1[\s>]/g)].length;
   if (h1s !== 1) err(`${where}: ${h1s} <h1> elements, expected exactly one`);
   for (const [tag] of html.matchAll(/<img\b[^>]*>/g)) {
     if (!/\salt="/.test(tag)) err(`${where}: an <img> has no alt attribute`);
   }
 
-  /* --- every local reference must exist on disk --- */
+  /* --- every local href and src must exist in public/ --- */
   const refs = [...html.matchAll(/(?:href|src|srcset)="(\.\.?\/[^"]+|\/[^"]+)"/g)].map((m) => m[1]);
   for (const ref of refs) {
     const base = ref.startsWith("/") ? OUT : dirname(file);
@@ -152,7 +147,7 @@ for (const { lang, file, html, translated } of pages) {
   }
 }
 
-/* --- the stylesheet's own references, which no page names directly --- */
+/* --- url() targets in the stylesheet, which no page references directly --- */
 const cssPath = join(OUT, "styles.css");
 if (!existsSync(cssPath)) err("public/styles.css is missing");
 else {
@@ -181,8 +176,8 @@ else {
     const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
     if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
   }
-  /* The sitemap and the pages must name the same alternates. Where the two
-     disagree, Google discards the cluster rather than choosing between them. */
+  /* The sitemap and the pages must declare the same alternates. Google
+     discards a cluster whose signals disagree. */
   for (const { lang, html } of pages) {
     const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
     const block = xml.split("<url>").find((b) => b.includes(`<loc>${loc}</loc>`));
@@ -210,7 +205,7 @@ for (const f of ["robots.txt", "CNAME", ".nojekyll", "404.html", "site.webmanife
 const cname = existsSync(join(OUT, "CNAME")) ? readFileSync(join(OUT, "CNAME"), "utf8").trim() : "";
 if (cname !== new URL(cfg.domain).hostname) err(`CNAME says "${cname}", expected "${new URL(cfg.domain).hostname}"`);
 
-/* --- untranslated languages are a warning, not a failure --- */
+/* --- untranslated languages warn; --strict turns that into a failure --- */
 const missing = cfg.languages.filter((l) => !pages.some((p) => p.lang.code === l.code));
 if (missing.length) warn(`${missing.length} language(s) have no page yet: ${missing.map((l) => l.code).join(" ")}`);
 const untranslated = pages.filter((p) => !p.translated).map((p) => p.lang.code);

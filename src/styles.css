@@ -1,31 +1,29 @@
-/* Lukotta — lukotta.com
+/* Stylesheet for lukotta.com.
 
-   A reference manual, not a product page. Rules instead of cards, ink instead
-   of shadow, everything set from the left. There are no gradients here and no
-   floating boxes; what separates one thing from another is a hairline.
+   Layout: hairline rules rather than cards, no shadows, no gradients, set from
+   the left.
 
-   Colour comes from the application and the brand, not from a palette:
+   Colour is taken from the application and the brand rather than chosen:
 
-     paper   #FBF8F2   the warm ground the light logo lockup sits on
+     paper   #FBF8F2   the ground the light logo lockup sits on
      ink     #1F2127   the near-black of the dark lockup
-     amber   #FF8D28   the exact orange the app draws drive icons and
-                       Locked badges in — sampled from its own screen
+     amber   #FF8D28   sampled from the drive icons and Locked badges in the
+                       application's own interface
 
-   Amber is bright and cannot carry text on paper, so it fills and marks, and a
-   darkened #9A4E05 does the talking where a link has to be read.
+   Amber is too light to carry text on paper, so it is used for fills and
+   marks; --amber-ink (#9A4E05) is used where a link must be read.
 
-   Type is three families, each doing one job:
+   Three typefaces:
 
-     Plex Sans   headings. Latin, Greek, Cyrillic and Vietnamese — thirty of
-                 the thirty-seven languages. The other seven fall to their own
-                 system face at the same size and weight.
-     Plex Mono   format names, section numbers, the specification line. Every
-                 one of these is ASCII, so it needs the Latin subset alone.
+     Plex Sans   headings. Covers Latin, Greek, Cyrillic and Vietnamese, which
+                 is 30 of the 37 languages. The other 7 use their system face
+                 at the same size and weight.
+     Plex Mono   format names, section numbers, the specification line. All
+                 ASCII, so only the Latin subset is needed.
      SF Pro      running text, via -apple-system, with Inter behind it for
-                 readers who are not on an Apple platform.
+                 platforms that are not Apple's.
 
-   Plex and Inter are both under the SIL Open Font License — see
-   assets/fonts/. */
+   Plex and Inter are under the SIL Open Font License; see assets/fonts/. */
 
 @font-face {
   font-family: "Plex Sans";
@@ -274,10 +272,9 @@ code {
 
 img { max-width: 100%; height: auto; display: block; }
 
-/* The ring itself has to clear 3:1 against the page (WCAG 2.4.11). Plain
-   --amber manages only 2.36:1 on paper, so the darker --amber-ink carries it
-   in the light theme; in the dark theme that token is the lighter of the two
-   and clears 10:1. */
+/* WCAG 2.4.11 requires 3:1 against the page. --amber reaches only 2.18:1 on
+   paper, so --amber-ink is used: 5.72:1 in the light theme, and in the dark
+   theme it is the lighter token at 10:1. */
 :focus-visible { outline: 2px solid var(--amber-ink); outline-offset: 3px; }
 
 .visually-hidden {
@@ -336,7 +333,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .header-tools { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
 
-/* appearance: a two-state switch */
+/* Appearance: a two-state switch. */
 .theme-switch {
   position: relative; width: 46px; height: 25px; padding: 0;
   border: 1px solid var(--control-edge); border-radius: 999px;
@@ -348,8 +345,8 @@ img { max-width: 100%; height: auto; display: block; }
   padding-inline: 5px;
 }
 .theme-switch .ico { display: grid; place-items: center; color: var(--ink-3); }
-/* The knob sits over one end, so only the far icon is shown — it names the
-   appearance a click would move to. */
+/* The knob covers one end, so only the far icon is shown. It indicates the
+   appearance a click will move to. */
 .theme-switch .ico-sun { opacity: 0; }
 :root[data-theme="dark"] .theme-switch .ico-sun { opacity: 1; }
 :root[data-theme="dark"] .theme-switch .ico-moon { opacity: 0; }
@@ -364,7 +361,7 @@ img { max-width: 100%; height: auto; display: block; }
   inset-inline-start: 23px; background: var(--amber);
 }
 
-/* language */
+/* Language menu. */
 .lang { position: relative; }
 .lang > summary {
   display: inline-flex; align-items: center; gap: 6px;
@@ -403,8 +400,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn:hover { text-decoration: none; background: color-mix(in srgb, var(--amber) 86%, black); }
 
-/* Underlined because it is a link: without it, a line of grey prose beside an
-   arrow reads as a caption. The rule is faint until hovered. */
+/* Underlined to read as a link. Without it, grey text beside an arrow reads
+   as a caption. The rule is faint until hover. */
 .plain {
   color: var(--ink-2); font-size: .9375rem;
   display: inline-flex; align-items: center; gap: 6px;
@@ -435,18 +432,17 @@ img { max-width: 100%; height: auto; display: block; }
 .hero { padding-block: clamp(52px, 8vw, 96px) clamp(40px, 6vw, 72px); }
 .hero-text { max-width: 62ch; }
 .hero h1 { margin-bottom: 24px; }
-/* A macOS window, at the measurements macOS actually uses: a 28pt title bar,
-   12pt buttons 8pt apart, 20pt in from the leading edge, and a 10pt corner.
-   Nothing is added to it — no invented title, no toolbar. The application
-   draws its own header inside the picture below.
+/* A macOS window at the measurements macOS uses: 28pt title bar, 12pt buttons
+   8pt apart, 20pt from the leading edge, 10pt corner. Nothing is added: no
+   title, no toolbar. The application draws its own header inside the image.
 
    macOS corners are continuous rather than circular, which border-radius
-   cannot describe; at ten points the difference is under a pixel. */
+   cannot express. At 10pt the difference is under a pixel. */
 .shot {
   margin: clamp(44px, 6vw, 76px) 0 0;
   border: 1px solid var(--titlebar-edge);
   border-radius: 10px;
-  overflow: hidden;                 /* clips the picture to the corners */
+  overflow: hidden;                 /* clips the image to the corner radius */
   background: var(--titlebar);
 }
 .shot-bar {
@@ -514,8 +510,8 @@ tbody tr:not(.group) th code { color: var(--ink); }
 .mark { font-size: 1rem; line-height: 1; }
 .mark.yes { color: var(--tick); font-weight: 700; }
 .mark.no { color: var(--ink-3); }
-/* A filled disc rather than a tick: the row is handled by macOS itself, and
-   the note beside it says so. */
+/* A filled disc marks a row handled by macOS itself. The note in the same row
+   states this in words. */
 .mark.native {
   display: inline-block; vertical-align: middle;
   width: 10px; height: 10px; border-radius: 50%;
@@ -524,9 +520,8 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 .asterisk { color: var(--amber-ink); margin-inline-start: 2px; }
 
-/* Sits directly under the table it annotates, before the link out to SPECS.
-   No measure limit: it is one line at desktop widths and only wraps when the
-   window is genuinely too narrow for it. */
+/* Sits under the table it annotates, above the link to SPECS. No measure
+   limit, so it stays on one line at desktop widths. */
 .footnote {
   margin-top: 16px;
   color: var(--ink-3); font-size: .8438rem; line-height: 1.55;
@@ -563,7 +558,7 @@ tbody tr:not(.group) th code { color: var(--ink); }
 /* ---------------------------------------------------------------- steps -- */
 
 .steps { counter-reset: step; margin-top: 34px; display: grid; gap: 0; }
-/* First thing in the section now, so it needs no lead-in space above it. */
+/* First element in the section, so no space above it. */
 .steps-first { margin-top: 0; }
 .steps-first li:first-child { padding-top: 0; }
 .after-steps { margin-top: 30px; }
@@ -598,22 +593,21 @@ tbody tr:not(.group) th code { color: var(--ink); }
   color: var(--ink-3); font-size: .8438rem;
 }
 .colophon a { color: var(--ink-2); padding-block: 4px; }
-/* Reversed, which is what a copyleft sign is. Done here rather than with
-   U+1F12F, which most fonts have no glyph for. */
+/* A reversed copyright sign is a copyleft sign. Done with a transform rather
+   than U+1F12F, which most fonts have no glyph for. */
 .copyleft { display: inline-block; transform: scaleX(-1); }
 
 /* ----------------------------------------------------------- responsive -- */
 
-/* The language button's native-name label is what crowds the header; dropping
-   it first buys enough room to keep the navigation visible on a tablet. */
+/* The language button's native-name label is what crowds the header. Dropping
+   it first leaves room for the navigation on a tablet. */
 @media (max-width: 900px) {
   .lang > summary span { display: none; }
 }
 
-/* Below this the three links no longer fit beside the brand and the controls,
-   so the header becomes two rows: brand and controls above, links below. They
-   stay visible and reachable, and it needs no JavaScript and no menu to open —
-   a menu that is hidden behind a button is a menu that can break. */
+/* Below this width the three links no longer fit beside the brand and the
+   controls, so the header becomes two rows: brand and controls above, links
+   below. The links stay visible, and no JavaScript or disclosure is involved. */
 @media (max-width: 620px) {
   .header-inner {
     height: auto; padding-block: 10px;
@@ -667,7 +661,7 @@ tbody tr:not(.group) th code { color: var(--ink); }
 .faq summary:hover { color: var(--amber-ink); }
 .faq .answer {
   padding-bottom: 20px; color: var(--ink-2); font-size: .9375rem; max-width: 66ch;
-  display: grid; gap: 16px;      /* beats the 1.55 leading, so paragraphs read as paragraphs */
+  display: grid; gap: 16px;      /* exceeds the 1.55 leading, so breaks register */
 }
 
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
@@ -675,8 +669,8 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 /* --------------------------------------------------------------- notice -- */
 
-/* Shown when somebody who is not on a Mac presses Download. It never blocks
-   the download; it says what the software needs and lets them decide. */
+/* Opened when a visitor who is not on a Mac presses Download. It states what
+   the application requires; it does not block the download. */
 .notice {
   width: min(440px, calc(100vw - 32px));
   padding: 26px 26px 22px;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Local preview of public/. Not used in deployment. */
+/* Local preview server for public/. Not used in deployment. */
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { join, extname, dirname } from "node:path";

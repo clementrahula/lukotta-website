@@ -1,13 +1,11 @@
 #!/usr/bin/env node
-/* Bundles every translation for review, each file complete on its own.
-
-   A reviewer gets one file per language. Every string in it carries the key,
-   the English it came from, the translation, what the section is for, and any
-   note constraining that particular string — so nothing has to be looked up
-   anywhere else, and no other file has to be open at the same time.
+/* Bundles every translation for review, one file per language. Each string
+   carries its key, the English source, the translation, the purpose of its
+   section, any note constraining it, and its required placeholders, so a file
+   can be reviewed without opening another.
 
    Usage:  node scripts/export-translations.mjs [code ...]
-           node scripts/export-translations.mjs            (all of them)
+           node scripts/export-translations.mjs            (all)
 */
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, cpSync } from "node:fs";
@@ -74,7 +72,7 @@ for (const lang of langs) {
         localOnly: localOnly
           ? {
               $note:
-                "Strings that exist in this language and no other. They have no English original — judge them as " +
+                "Strings that exist in this language and no other. They have no English original; judge them as " +
                 "writing rather than as translation. They appear on no other language's page.",
               ...localOnly,
             }
@@ -99,8 +97,8 @@ for (const doc of ["GLOSSARY.md", "README.md", "REVIEW-PROMPT.md"]) {
   if (existsSync(join(CONTENT, doc))) cpSync(join(CONTENT, doc), join(OUT, doc));
 }
 
-/* How the application itself translates its own terms. The website and the
-   application are read by the same person, so a reviewer needs to see both. */
+/* How the application translates the same terms. The site and the
+   application are read by the same person, so both should agree. */
 const APP = join(ROOT, "..", "lukotta", "translations");
 const APP_TERMS = [
   "Open", "Unlock", "Eject", "Passphrase", "Password or recovery key",
@@ -130,7 +128,7 @@ if (existsSync(APP)) {
         $comment:
           "How the Lukotta application itself translates these terms, taken from its own shipped " +
           "translations. The website should agree with the application: the same person reads both, " +
-          "often on the same afternoon. This is a reference, not a list of required substitutions — " +
+          "often on the same afternoon. This is a reference, not a list of required substitutions: " +
           "the website is prose and the application is interface, so the grammar around a term differs.",
         languages: byLanguage,
       },
@@ -141,7 +139,7 @@ if (existsSync(APP)) {
   );
   console.log(`  Terminology from the application: ${Object.keys(byLanguage).length} languages`);
 } else {
-  console.log("  (the application's own translations were not found, so no terminology reference)");
+  console.log("  (the application's translations were not found; no terminology reference)");
 }
 
 const rows = summary
@@ -150,13 +148,13 @@ const rows = summary
 
 writeFileSync(
   join(OUT, "INDEX.md"),
-  `# Lukotta website — translations for review
+  `# Lukotta website: translations for review
 
 Everything the website says, in every language it says it in. Each file is
 complete on its own: the English, the translation, and the context for every
 string. Nothing here refers to the repository or to the site.
 
-Read \`GLOSSARY.md\` first — it lists the words that are not free to translate
+Read \`GLOSSARY.md\` first. It lists the words that are not free to translate
 and why. \`README.md\` describes how a language file is shaped and the rules a
 translation is judged by.
 

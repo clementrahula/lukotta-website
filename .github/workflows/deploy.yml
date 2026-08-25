@@ -1,13 +1,12 @@
 # Builds public/ and publishes it to GitHub Pages.
 #
-# Deliberately manual for now. GitHub Pages serves a private repository only on
-# a paid plan, so while this one is private every run would fail at
-# configure-pages and leave the repository permanently red for no reason.
+# Manual for now. GitHub Pages serves a private repository only on a paid plan,
+# so while this one is private every run would fail at configure-pages.
 #
 # To go live: make the repository public, then uncomment the push trigger
-# below. configure-pages has enablement: true, so the first run turns Pages on
-# by itself. AGENTS.md has the rest, including the Cloudflare records and the
-# SSL mode that matters — Flexible gives a redirect loop.
+# below. configure-pages runs with enablement: true, so the first run turns
+# Pages on. AGENTS.md has the Cloudflare records and the SSL mode required;
+# Flexible produces a redirect loop.
 
 name: Deploy
 
@@ -38,9 +37,8 @@ jobs:
       - name: Build
         run: node scripts/build.mjs
 
-      # --strict refuses to publish while any language still carries the
-      # English text. Thirty-seven copies of one page is duplicate content,
-      # and the site does not go out in that state.
+      # --strict fails while any language still carries the English text.
+      # 37 copies of one page is duplicate content.
       - name: Check
         run: node scripts/check.mjs --strict
 

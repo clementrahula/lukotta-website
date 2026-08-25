@@ -1,14 +1,13 @@
-/* Lukotta — lukotta.com
-   Three jobs: remember the appearance choice, keep the screenshot in step with
-   it, and close the language menu when the reader clicks away. Everything else
-   on the page is plain HTML and works with this file absent. */
+/* Behaviour for lukotta.com: the appearance choice and the screenshot that
+   follows it, the language menu, the language chooser, and the platform
+   notice. Everything else on the page is plain HTML and works without this
+   file. */
 
 (function () {
   "use strict";
 
-  /* Two appearances, light and dark. Until the reader picks one, the page
-     follows whatever their machine is set to; picking one stores it and stops
-     the page following along. */
+  /* Light and dark. With no stored choice the page follows the system
+     setting; choosing stores it and stops following. */
   var KEY = "lukotta-theme";           /* "light" | "dark", or absent */
   var root = document.documentElement;
   var mql = window.matchMedia("(prefers-color-scheme: dark)");
@@ -25,8 +24,8 @@
   }
 
   /* The screenshot is a <picture> whose dark <source> carries a media query.
-     Rewriting that media attribute swaps the image without a second download,
-     and leaves the no-JavaScript path — plain prefers-color-scheme — intact. */
+     Rewriting that attribute swaps the image without a second download and
+     leaves the no-JavaScript path, plain prefers-color-scheme, intact. */
   function syncShots(resolved, choice) {
     var sources = document.querySelectorAll("source[data-theme-source]");
     for (var i = 0; i < sources.length; i++) {
@@ -42,7 +41,8 @@
     root.setAttribute("data-theme-choice", choice);
     syncShots(resolved, choice);
 
-    /* The switch reports whether dark is on; its name says what a click does. */
+    /* aria-checked reports whether dark is on; the label states what a click
+       will do. */
     var buttons = document.querySelectorAll("[data-toggle-theme]");
     for (var i = 0; i < buttons.length; i++) {
       var label = buttons[i].getAttribute(
@@ -60,17 +60,17 @@
     var button = event.target.closest ? event.target.closest("[data-toggle-theme]") : null;
     if (!button) return;
     var next = resolve(stored()) === "dark" ? "light" : "dark";
-    try { localStorage.setItem(KEY, next); } catch (e) { /* private browsing */ }
+    try { localStorage.setItem(KEY, next); } catch (e) { /* storage unavailable */ }
     apply(next);
   });
 
-  /* Follow the machine until the reader chooses for themselves. */
+  /* Follow the system setting until a choice is stored. */
   var onSystemChange = function () { if (stored() === null) apply(null); };
   if (mql.addEventListener) mql.addEventListener("change", onSystemChange);
   else if (mql.addListener) mql.addListener(onSystemChange);
 
-  /* Language menu: <details> already opens and closes on its own. This only
-     dismisses it on an outside click or Escape, which <details> does not do. */
+  /* <details> opens and closes itself. This adds dismissal on an outside
+     click and on Escape, which it does not do. */
   var menu = document.querySelector(".lang");
   if (menu) {
     document.addEventListener("click", function (event) {
@@ -85,7 +85,7 @@
     });
   }
 
-  /* Hairline under the header, once the page has moved. */
+  /* Hairline under the header once the page has scrolled. */
   var header = document.querySelector(".site-header");
   if (header) {
     var onScroll = function () {
@@ -97,27 +97,21 @@
 
   /* ------------------------------------------------------- language ----- */
 
-  /* Send a first-time visitor to the page in their own language.
-     Three rules keep this from doing harm:
+  /* Sends a first-time visitor to the page in their own language, under three
+     constraints:
 
-     1. Only from the root. Someone who asked for /de/ gets /de/, and a reader
-        who has chosen a language from the menu is never moved again.
-     2. Only once. The choice is remembered, so a reader who came here in one
-        language and went back to English stays in English.
-     3. Only to a finished translation. window.LUKOTTA_LANGS holds the
-        languages that were actually published, so this can never send anyone
-        to a page that does not exist.
+     1. Root only. A request for /de/ is left alone.
+     2. Once. An explicit choice from the menu is stored and then honoured.
+     3. Published languages only. window.LUKOTTA_LANGS is emitted by the build.
 
-     It matches regions properly: es-MX and es-419 are Spanish readers in Latin
-     America and there is one Spanish page, so they get it. A bare tag matches
-     a regional page too — pt and pt-BR match pt-PT — but only after every exact
-     and declared match has been tried.
+     Region codes resolve through alsoServes, so es-MX and es-419 reach the
+     Spanish page. A bare tag may also match a regional page, pt to pt-PT, but
+     only after exact and declared matches have been tried.
 
-     A script subtag is not a region and is never matched loosely. zh-Hans is
-     Simplified Chinese; zh-TW and zh-HK are Traditional, and a reader of one
-     cannot read the other comfortably, so they are left on English rather than
-     handed the wrong script. pt-PT carries a region, PT, so pt-BR may fall back
-     to it; zh-Hans carries a script, Hans, so zh-TW may not. */
+     A script subtag is never matched loosely. zh-Hans is Simplified; zh-TW and
+     zh-HK are Traditional and are left on English rather than served the wrong
+     script. pt-PT carries a region, so pt-BR may fall back to it; zh-Hans
+     carries a script, so zh-TW may not. */
 
   var LANG_KEY = "lukotta-lang";
 
@@ -127,7 +121,7 @@
     var base = want.split("-")[0];
     var i, l;
 
-    /* An exact tag, or a region the language declares it serves. */
+    /* An exact tag, or a region the language declares in alsoServes. */
     for (i = 0; i < langs.length; i++) {
       l = langs[i];
       if (l.c.toLowerCase() === want) return l.p;
@@ -135,9 +129,8 @@
         if (String(l.s[j]).toLowerCase() === want) return l.p;
       }
     }
-    /* Failing that, the same language whatever the region — but only where the
-       page is identified by a region. A four-letter subtag is a script, and a
-       script is not something to guess at. */
+    /* Otherwise the same language in any region, but only where the page is
+       identified by a region. A four-letter subtag is a script, not a region. */
     for (i = 0; i < langs.length; i++) {
       l = langs[i];
       var parts = l.c.split("-");
@@ -177,7 +170,7 @@
     }
   }
 
-  /* Following a language from the menu is a choice, and is remembered. */
+  /* A language followed from the menu is an explicit choice; store it. */
   document.addEventListener("click", function (event) {
     var link = event.target.closest ? event.target.closest(".lang-list a") : null;
     if (!link) return;
@@ -188,19 +181,17 @@
 
   /* ------------------------------------------------ platform notice ----- */
 
-  /* Lukotta runs on macOS and nowhere else. Somebody pressing Download on a
-     phone or on Windows is told so before the file arrives — and then allowed
-     to download it anyway. Nothing here blocks anything.
+  /* Lukotta runs on macOS only. Pressing Download elsewhere opens a dialog
+     stating that, then allows the download regardless. Nothing is blocked.
 
-     Without JavaScript this never runs and the link behaves as a plain link,
-     which is the correct fallback: an unusable download beats a broken one. */
+     Without JavaScript this never runs and the link behaves as a plain link. */
 
   function whichPlatform() {
     var ua = navigator.userAgent || "";
     var plat = (navigator.userAgentData && navigator.userAgentData.platform) ||
                navigator.platform || "";
 
-    /* iPadOS reports itself as a Mac. The touch points give it away — a real
+    /* iPadOS reports itself as a Mac. maxTouchPoints distinguishes them: a
        Mac reports none, even with a trackpad. */
     var iPadPretendingToBeAMac = /Mac/i.test(plat) && navigator.maxTouchPoints > 1;
 
@@ -209,7 +200,7 @@
     if (/Mac/i.test(plat) || /Mac OS X/i.test(ua)) return { mac: true };
     if (/Win/i.test(plat) || /Windows/i.test(ua)) return { system: "Windows" };
     if (/CrOS/i.test(ua)) return { system: "ChromeOS" };
-    /* Android also says Linux, so this has to come after it. */
+    /* Android also reports Linux, so it must be tested before this. */
     if (/Linux|X11/i.test(plat) || /Linux/i.test(ua)) return { system: "Linux" };
     return { system: null };
   }
@@ -265,7 +256,7 @@
       if (shareButton) {
         shareButton.addEventListener("click", function () {
           navigator.share({ url: location.href, title: document.title })
-            .catch(function () { /* the reader dismissed the sheet */ });
+            .catch(function () { /* sheet dismissed */ });
         });
       }
 

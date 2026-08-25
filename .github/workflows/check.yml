@@ -1,5 +1,5 @@
-# Builds the site and checks the result. Runs on every push and pull request.
-# This is the signal that a change is sound; deploy.yml is what publishes it.
+# Builds the site and checks the result on every push and pull request.
+# deploy.yml publishes it.
 
 name: Check
 

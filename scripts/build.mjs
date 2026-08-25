@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* Builds public/ from site.config.json, content/<lang>.json and src/.
-   Run: node scripts/build.mjs   —   the output directory is disposable. */
+   public/ is generated output and is not committed. */
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -15,9 +15,8 @@ const OUT = join(ROOT, "public");
 const cfg = JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"));
 const strict = process.argv.includes("--strict");
 
-/* The intrinsic size of a screenshot is read from the file rather than assumed,
-   so whatever pair is dropped in gets correct width/height attributes and the
-   layout does not shift while it loads. */
+/* Reads a PNG's dimensions from its IHDR chunk, so the <img> carries real
+   width and height attributes and the page does not shift while it loads. */
 function pngSize(file) {
   const b = readFileSync(file);
   if (b.length < 24 || b.readUInt32BE(0) !== 0x89504e47) {
@@ -31,11 +30,10 @@ const warn = (m) => { warnings.push(m); };
 
 /* ------------------------------------------------------------- content -- */
 
-/* A translation file stores each string as {en, <code>} so the file is complete
-   on its own — a reviewer needs nothing else to judge it. English stores plain
-   strings, because there is nothing to compare it with. */
-/* Strings that replace the standard one on a single language's page. They have
-   no English original and are used instead of the translation, not beside it. */
+/* Translation files store each string as {en, <code>}, so one file can be
+   reviewed without opening another. en.json stores plain strings. */
+/* Strings that replace the standard translation on one language's page.
+   They have no English original. */
 function loadLocalOnly(code) {
   const file = join(CONTENT, `${code}.json`);
   if (!existsSync(file)) return {};
@@ -60,7 +58,7 @@ function loadStrings(code) {
 }
 
 const english = loadStrings("en");
-if (!english) throw new Error("content/en.json is missing — it is the source every page is built from.");
+if (!english) throw new Error("content/en.json is missing. Every page is built from it.");
 
 const requested = new Set();
 
@@ -68,7 +66,7 @@ function translator(code, strings, localOnly) {
   const missing = new Set();
   const t = (key) => {
     requested.add(key);
-    /* A language may replace one string outright — see loadLocalOnly. */
+    /* localOnly takes precedence over the translation. */
     let value = (localOnly && localOnly[key]) || strings[key];
     if (value === undefined || value === "") {
       missing.add(key);
@@ -78,7 +76,7 @@ function translator(code, strings, localOnly) {
     return value
       .replace(/\{version\}/g, cfg.appVersion)
       .replace(/\{year\}/g, String(new Date().getUTCFullYear()));
-    /* {author} is deliberately left in place: the page turns it into a link. */
+    /* {author} is left unsubstituted; page.mjs renders it as a link. */
   };
   t.missing = missing;
   return t;
@@ -92,9 +90,8 @@ mkdirSync(OUT, { recursive: true });
 /* Static files that every page shares. */
 cpSync(join(SRC, "styles.css"), join(OUT, "styles.css"));
 cpSync(join(SRC, "script.js"), join(OUT, "script.js"));
-/* Only what a page actually loads. The other files in assets/brand are the
-   originals the favicons and the shared-card image were generated from; they
-   are kept for regenerating those, not for shipping. */
+/* Only the two marks are loaded by a page. The other files in
+   src/assets/brand are sources for the generated icons and are not published. */
 mkdirSync(join(OUT, "assets", "brand"), { recursive: true });
 for (const mark of ["lukotta-mark-light.png", "lukotta-mark-dark.png"]) {
   cpSync(join(SRC, "assets", "brand", mark), join(OUT, "assets", "brand", mark));
@@ -104,8 +101,8 @@ if (existsSync(join(SRC, "assets", "icons"))) {
 }
 cpSync(join(SRC, "assets", "fonts"), join(OUT, "assets", "fonts"), { recursive: true });
 
-/* Screenshots: one light and one dark per language. A language without its own
-   pair falls back to the placeholder, and the build says which did. */
+/* One light and one dark screenshot per language. A language without its own
+   pair uses _placeholder/; the build reports which languages did. */
 const SHOTS = join(SRC, "assets", "screenshots");
 const FALLBACK = join(SHOTS, "_placeholder");
 const usingPlaceholder = [];
@@ -127,20 +124,18 @@ function resolveShots(code) {
   const light = pngSize(join(from, "light.png"));
   const dark = pngSize(join(from, "dark.png"));
   if (light.width !== dark.width || light.height !== dark.height) {
-    warn(`${code}: light and dark screenshots differ in size (${light.width}x${light.height} vs ${dark.width}x${dark.height}); the page will shift when the appearance changes.`);
+    warn(`${code}: light and dark screenshots differ in size (${light.width}x${light.height} vs ${dark.width}x${dark.height}); the page shifts when the appearance changes.`);
   }
   return light;
 }
 
-/* Every language that has a content file gets a full page: named in the
-   hreflang cluster, listed in the sitemap, reachable from the menu, and
-   matched by the language chooser. Whether its strings are translated yet is
-   a separate question from whether the site works.
+/* Every language with a content file is built and fully wired: hreflang,
+   sitemap, language menu, language chooser. Translation state does not affect
+   this.
 
-   Completeness is still measured, because publishing thirty-seven copies of
-   the English page would be duplicate content. That is a release condition,
-   not a build one: `node scripts/check.mjs --strict` refuses to pass until
-   every language is finished, and the deploy workflow runs it. */
+   Completeness is measured only to gate release. Publishing 37 copies of the
+   English page would be duplicate content, so check.mjs --strict fails until
+   every language is translated. The deploy workflow runs it. */
 const buildable = cfg.languages.filter(
   (l) => l.code === cfg.defaultLang || existsSync(join(CONTENT, `${l.code}.json`))
 );
@@ -157,9 +152,8 @@ for (const lang of buildable) {
 const noPage = cfg.languages.filter((l) => !buildable.includes(l)).map((l) => l.code);
 const partial = buildable.filter((l) => completeness.get(l.code) !== 1).map((l) => l.code);
 
-/* One alternate per page, plus the region codes it also serves. es-419 and
-   es-MX are Spanish readers in Latin America; they get the Spanish page rather
-   than falling through to English. No extra page is created. */
+/* One alternate per page, plus the region codes listed in alsoServes.
+   es-419 and es-MX resolve to the Spanish page. No extra pages are built. */
 const alternates = [
   ...buildable.flatMap((l) => {
     const href = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
@@ -186,7 +180,7 @@ for (const lang of buildable) {
   writeFileSync(join(dir, "index.html"), html, "utf8");
 
   if (t.missing.size && completeness.get(lang.code) !== 0) {
-    warn(`${lang.code}: ${t.missing.size} of ${totalKeys} strings fell back to English — ${[...t.missing].slice(0, 4).join(", ")}${t.missing.size > 4 ? ", …" : ""}`);
+    warn(`${lang.code}: ${t.missing.size} of ${totalKeys} strings fell back to English: ${[...t.missing].slice(0, 4).join(", ")}${t.missing.size > 4 ? ", …" : ""}`);
   }
   built.push(lang.code);
 }
@@ -195,9 +189,8 @@ for (const lang of buildable) {
 
 const builtLangs = buildable.filter((l) => built.includes(l.code));
 
-/* The sitemap has to name exactly the same set of alternates as the pages do,
-   region aliases included. Two different answers to the same question is worse
-   than one imperfect answer: Google discards a cluster whose signals disagree. */
+/* The sitemap must declare the same alternates as the pages, region aliases
+   included. Google discards an hreflang cluster whose signals disagree. */
 const urlEntries = builtLangs
   .map((l) => {
     const loc = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
@@ -205,9 +198,8 @@ const urlEntries = builtLangs
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${a.href}"/>`)
       .join("\n");
 
-    /* When this language's text last changed, not when the site was last
-       built — a date that moves for every language at once tells a crawler
-       nothing. */
+    /* From the content file's mtime, not the build time, so lastmod reflects
+       when this language last changed. */
     const file = join(CONTENT, `${l.code}.json`);
     const stamp = existsSync(file) ? statSync(file).mtime : new Date();
     const lastmod = stamp.toISOString().slice(0, 10);
@@ -265,12 +257,12 @@ writeFileSync(
   "utf8"
 );
 
-/* GitHub Pages: without this it runs the output through Jekyll, which drops
-   any directory whose name begins with an underscore. */
+/* Without this, GitHub Pages runs the output through Jekyll, which drops
+   directories whose names begin with an underscore. */
 writeFileSync(join(OUT, ".nojekyll"), "", "utf8");
 writeFileSync(join(OUT, "CNAME"), `${new URL(cfg.domain).hostname}\n`, "utf8");
 
-/* A 404 that at least carries the brand and a way back. */
+/* 404 page. */
 writeFileSync(
   join(OUT, "404.html"),
   `<!doctype html>
@@ -296,16 +288,15 @@ writeFileSync(
   "utf8"
 );
 
-/* A key in the content that no page ever asks for is dead weight: it ships to
-   every translator and can never appear. Better to hear about it here. */
+/* A key no page renders is still sent to every translator. Report it. */
 for (const key of Object.keys(english)) {
-  if (!requested.has(key)) warn(`content/en.json has "${key}", which the page never renders. Remove it, or use it.`);
+  if (!requested.has(key)) warn(`content/en.json has "${key}", which no page renders.`);
 }
 
 /* --------------------------------------------------------------- report -- */
 
 const pages = built.length;
-console.log(`\n  Lukotta website — built ${pages} page${pages === 1 ? "" : "s"} into public/\n`);
+console.log(`\n  Built ${pages} page${pages === 1 ? "" : "s"} into public/\n`);
 console.log(`  pages               ${built.length}`);
 if (partial.length) {
   console.log(`  awaiting translation  ${partial.length}: ${partial.join(" ")}`);
@@ -320,6 +311,6 @@ for (const w of warnings) console.log(`  warning             ${w}`);
 console.log("");
 
 if (strict && (warnings.length || partial.length || noPage.length)) {
-  console.error("  --strict: refusing to pass with warnings or untranslated languages.\n");
+  console.error("  --strict: warnings or untranslated languages present.\n");
   process.exit(1);
 }

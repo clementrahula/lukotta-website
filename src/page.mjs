@@ -1,8 +1,9 @@
-/* Renders one language's page. Everything visible comes from content/<lang>.json
-   by key, so a string that is not in that file cannot reach the page.
+/* Renders one language's page. Everything visible comes from
+   content/<lang>.json by key, so a string absent from that file cannot reach
+   the page.
 
-   The exceptions are format names — BitLocker, ext4, qcow2, VHDX — which are
-   product names and are never translated in any script, so they live here. */
+   Format names are the exception. BitLocker, ext4, qcow2 and VHDX are product
+   names, never translated in any script, so they are defined here. */
 
 const esc = (s) =>
   String(s)
@@ -13,8 +14,8 @@ const esc = (s) =>
 
 const jsonld = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
 
-/* The support table. Read and write are facts from the application's SPECS.md,
-   not claims made here. */
+/* The support table. The read and write columns come from the application's
+   SPECS.md. */
 const FORMATS = [
   {
     group: "formats.group.encryption",
@@ -84,7 +85,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
 
-  /* [question number, how many paragraphs the answer runs to] */
+  /* [question number, paragraphs in the answer] */
   const FAQ_NS = [[1, 2], [2, 1], [3, 1], [4, 1], [5, 1], [6, 1]];
   const answerParts = (n, paras) =>
     paras === 1 ? [t(`faq.${n}.a`)] : [t(`faq.${n}.a`), t(`faq.${n}.a2`)];
@@ -111,8 +112,8 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 
   /* ------------------------------------------------------------- parts -- */
 
-  /* A tick is something Lukotta does. A disc is something macOS does by
-     itself, which the note in the same row says in words. A dash is neither. */
+  /* Tick: handled by Lukotta. Disc: handled by macOS itself, which the note
+     in the same row states. Dash: not supported. */
   const tick = (on, label, native) =>
     on
       ? `<span class="mark ${native ? "native" : "yes"}" aria-hidden="true">${native ? "" : "✓"}</span><span class="visually-hidden">${esc(label.yes)}</span>`
@@ -158,8 +159,8 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
     .map((n) => `            <li>${esc(t(`formats.not.${n}`))}</li>`)
     .join("\n");
 
-  /* Root-relative, so the menu works on whatever host the site is served from.
-     hreflang and canonical stay absolute, which is what search engines need. */
+  /* Root-relative, so the menu works on any host. hreflang and canonical
+     stay absolute, as search engines require. */
   const langLinks = buildable
     .map((l) => {
       const href = l.path ? `/${l.path}/` : "/";
@@ -168,14 +169,13 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
     })
     .join("\n");
 
-  /* lukko and -tta are Finnish and stay Finnish in all thirty-seven languages,
-     so the sentence carries placeholders and the page fills them in. */
+  /* lukko and -tta stay Finnish in all 37 languages, so the sentence carries
+     placeholders and they are substituted here. */
   const nameProse = esc(t("name.body"))
     .replace("{lukko}", '<i lang="fi">lukko</i>')
     .replace("{tta}", '<i lang="fi">-tta</i>');
 
-  /* The author's name is a link, so the string keeps its {author} placeholder
-     until here rather than being flattened into text by the build. */
+  /* The build leaves {author} unsubstituted so it can be rendered as a link. */
   const copyright = esc(t("footer.copyright"))
     .replace("{copyleft}", '<span class="copyleft">©</span>')
     .split("{author}");
@@ -230,6 +230,8 @@ ${ogAlternates}
   <link rel="stylesheet" href="${assetPrefix}styles.css">
 
   <script>
+    /* Resolves the appearance before first paint, so the page does not flash
+       the wrong one. The rest of the behaviour is in script.js. */
     (function () {
       try {
         var c = localStorage.getItem("lukotta-theme");
@@ -245,10 +247,9 @@ ${ogAlternates}
   <script type="application/ld+json">${jsonld(siteLd)}</script>
 </head>
 <body>
-  <!-- What the brand and the header's Download link scroll to. A real element
-       rather than the bare #top fragment, which browsers only honour when no
-       element claims that id and which does not scroll at all when the id sits
-       on <html> itself. -->
+  <!-- Scroll target for the brand and the header's Download link. A real
+       element, because browsers honour the bare #top fragment only when no
+       element claims that id, and not at all when it sits on <html>. -->
   <span id="top"></span>
 
   <a class="skip-link" href="#main">${esc(t("ui.skipToContent"))}</a>
@@ -415,18 +416,17 @@ ${faqItems}
   </footer>
 
   <script>
-    /* Which languages have a finished page, and every region code each one
-       serves: es-419 and es-MX are Spanish readers in Latin America, and they
-       should land on the Spanish page rather than the English one. Written by
-       the build so the matcher can never disagree with what was published. */
+    /* Published languages and the region codes each serves, so es-419 and
+       es-MX resolve to the Spanish page. Emitted by the build, so the matcher
+       cannot disagree with what was published. */
     window.LUKOTTA_LANGS = ${JSON.stringify(
       indexable.map((l) => ({ c: l.code, p: l.path, s: l.alsoServes || [] }))
     )};
     window.LUKOTTA_LANG = ${JSON.stringify(code)};
     window.LUKOTTA_DOWNLOAD = ${JSON.stringify(cfg.downloadUrl)};
   </script>
-  <!-- Shown only when someone who is not on a Mac presses Download. Without
-       JavaScript it never opens and the download link behaves normally. -->
+  <!-- Opened when a visitor who is not on a Mac presses Download. Without
+       JavaScript it never opens and the link behaves as a plain link. -->
   <dialog class="notice" id="platform-notice" aria-labelledby="notice-title">
     <h2 id="notice-title">${esc(t("dialog.title"))}</h2>
     <p class="notice-body"

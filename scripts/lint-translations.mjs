@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-/* Checks translations against the English: placeholders, lengths, and the
-   things that quietly break a page rather than merely reading oddly.
+/* Checks translations against the English: placeholders, product names and
+   lengths. These break a page rather than merely read oddly.
 
    Usage:  node scripts/lint-translations.mjs [code ...]
 */
@@ -16,11 +16,10 @@ const english = JSON.parse(readFileSync(join(CONTENT, "en.json"), "utf8")).strin
 
 const PLACEHOLDER = /\{[a-z]+\}/g;
 
-/* Names that stay in Latin script whatever the surrounding language. If the
-   English names one and the translation does not, something was translated
-   that should not have been. */
-/* Finder is deliberately absent: Apple translates it in some languages —
-   Chinese macOS calls it 访达 — so it is a glossary matter, not a lint one. */
+/* Names that stay in Latin script in every language. If the English contains
+   one and the translation does not, it was translated in error. */
+/* Finder is absent by design. Apple translates it in some languages; Chinese
+   macOS calls it 访达. It is covered by GLOSSARY.md instead. */
 const VERBATIM = [
   "Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "LVM",
   "ext2", "ext3", "ext4", "btrfs", "XFS", "exFAT", "FAT",
@@ -51,7 +50,7 @@ for (const lang of langs) {
   }
 
   const done = Object.keys(english).filter((k) => mine[k] && mine[k][lang.code]).length;
-  if (done === 0) continue;                       /* untouched placeholder file */
+  if (done === 0) continue;                       /* untouched placeholder */
   checked++;
 
   for (const [key, en] of Object.entries(english)) {
@@ -60,8 +59,8 @@ for (const lang of langs) {
     const got = pair[lang.code];
     if (!got) { say("ERROR", lang.code, `${key} is not translated`); continue; }
 
-    /* Placeholders must survive exactly. A missing one leaves a literal
-       {version} on the page; an invented one leaves a token nothing replaces. */
+    /* A missing placeholder leaves a literal {version} on the page; an added
+       one leaves a token nothing replaces. */
     const want = (en.match(PLACEHOLDER) || []).sort();
     const have = (got.match(PLACEHOLDER) || []).sort();
     if (want.join() !== have.join()) {
@@ -94,5 +93,5 @@ for (const lang of langs) {
   }
 }
 
-console.log(`\n  ${checked} language(s) with content checked — ${errors} error(s), ${warns} warning(s)\n`);
+console.log(`\n  ${checked} language(s) checked: ${errors} error(s), ${warns} warning(s)\n`);
 process.exit(errors ? 1 : 0);

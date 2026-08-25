@@ -1,12 +1,10 @@
 #!/usr/bin/env node
-/* Creates content/<code>.json with every key from the English, each one paired
-   with the English it is to be translated from and an empty slot beside it.
-   The file is complete on its own, which is what a reviewer needs.
+/* Creates content/<code>.json with every key from the English, each paired
+   with the English source and an empty slot for the translation.
 
-   Re-running it over a language that already has a file is safe and is the
-   point: existing translations are kept, keys added to the English since last
-   time are appended empty, and keys removed from the English are dropped. Run
-   it after every change to content/en.json.
+   Re-running over an existing file is safe and is the intended use: existing
+   translations are kept, new English keys are appended empty, and removed keys
+   are dropped. Run after every change to content/en.json.
 
    Usage:  node scripts/new-language.mjs de
            node scripts/new-language.mjs --all     (every language)
@@ -47,9 +45,8 @@ for (const lang of wanted) {
   const file = join(CONTENT, `${lang.code}.json`);
   const prior = existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : {};
   const existing = prior.strings || {};
-  /* A language may carry strings that exist in it and nowhere else — an aside
-     that only makes sense in that language. They have no English original, so
-     they live outside `strings` and must survive a resync. */
+  /* localOnly holds strings with no English original. They sit outside
+     `strings` and must survive a resync. */
   const localOnly = prior.localOnly;
 
   const strings = {};
@@ -76,8 +73,8 @@ for (const lang of wanted) {
   const done = Object.values(strings).filter((v) => v[lang.code]).length;
   const total = Object.keys(strings).length;
 
-  /* Say what moved, so a change to the English is visible here rather than
-     surfacing later as a page that quietly fell back. */
+  /* Report what moved, so a change to the English is visible now rather than
+     later as a page that fell back. */
   const priorKeys = Object.keys(existing);
   const added = Object.keys(strings).filter((k) => !priorKeys.includes(k)).length;
   const dropped = priorKeys.filter((k) => !(k in strings)).length;
