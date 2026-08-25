@@ -323,11 +323,11 @@ ${langLinks}
         <div class="section-head">
           <h2>${esc(t("how.title"))}</h2>
         </div>
-        <p class="prose"><span class="lead-in">${esc(t("how.lead"))}</span></p>
-
-        <ol class="steps">
+        <ol class="steps steps-first">
 ${steps}
         </ol>
+
+        <p class="prose after-steps"><span class="lead-in">${esc(t("how.lead"))}</span></p>
       </div>
     </section>
 

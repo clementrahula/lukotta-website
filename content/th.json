@@ -8,343 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "th": ""
+      "th": "เปิดไดรฟ์ BitLocker และ Linux บน macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "th": ""
+      "th": "เปิดไดรฟ์ BitLocker, NTFS, LUKS และ Linux บน Mac ของคุณ พิมพ์รหัสผ่านแล้วไดรฟ์จะปรากฏใน Finder อ่านและเขียนได้ ซอฟต์แวร์เสรี ไม่มีค่าใช้จ่าย"
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "th": ""
+      "th": "Lukotta — ไดรฟ์ BitLocker, Linux และเครื่องเสมือนบน macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "th": ""
+      "th": "เสียบไดรฟ์หรือเปิดอิมเมจดิสก์ พิมพ์รหัสผ่าน แล้วมันจะปรากฏใน Finder อ่านและเขียนได้ เหมือนดิสก์อื่น ๆ"
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "th": ""
+      "th": "ไอคอนแอป Lukotta: สี่เหลี่ยมสีเทาหินชนวนมุมมน มีตัวอักษร L เจาะอยู่ข้างใน"
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "th": ""
+      "th": "ข้ามไปยังเนื้อหา"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "th": ""
+      "th": "เลือกภาษา"
     },
     "ui.menu": {
       "en": "Menu",
-      "th": ""
+      "th": "เมนู"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "th": ""
+      "th": "กลับขึ้นด้านบน"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "th": ""
+      "th": "สลับเป็นโหมดสว่าง"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "th": ""
+      "th": "สลับเป็นโหมดมืด"
     },
     "nav.download": {
       "en": "Download",
-      "th": ""
+      "th": "ดาวน์โหลด"
     },
     "nav.features": {
       "en": "Features",
-      "th": ""
+      "th": "ความสามารถ"
     },
     "nav.how": {
       "en": "How It Works",
-      "th": ""
+      "th": "ทำงานอย่างไร"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "th": ""
+      "th": "เปิดไดรฟ์ BitLocker, Linux และเครื่องเสมือนบน macOS"
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "th": ""
+      "th": "เสียบไดรฟ์หรือเปิดอิมเมจดิสก์แล้วพิมพ์รหัสผ่าน — มันจะปรากฏใน Finder อ่านและเขียนได้ เหมือนดิสก์อื่น ๆ"
     },
     "hero.download": {
       "en": "Download",
-      "th": ""
+      "th": "ดาวน์โหลด"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "th": ""
+      "th": "ซอร์สโค้ดบน GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "th": ""
+      "th": "รุ่น {version} · Apple Silicon · macOS 15 Sequoia ขึ้นไป"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "th": ""
+      "th": "หน้าต่าง Lukotta บน macOS แสดงรายการไดรฟ์ที่ต่อกับ Mac และสิ่งที่อยู่ในแต่ละไดรฟ์"
     },
     "how.title": {
       "en": "How It Works",
-      "th": ""
+      "th": "ทำงานอย่างไร"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "th": ""
+      "th": "macOS อ่าน BitLocker และระบบไฟล์ของ Linux ไม่ได้ แต่ Linux อ่านได้ Lukotta จึงเปิดเครื่องเสมือน Linux เล็ก ๆ ปลดล็อกไดรฟ์ข้างในนั้น แล้วส่งไดรฟ์กลับให้ Finder"
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "th": ""
+      "th": "เสียบไดรฟ์"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "th": ""
+      "th": "หรือเปิดอิมเมจดิสก์"
     },
     "how.2.title": {
       "en": "Type the password",
-      "th": ""
+      "th": "พิมพ์รหัสผ่าน"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "th": ""
+      "th": "รหัสผ่านของโวลุ่ม วลีรหัสผ่าน LUKS หรือกุญแจกู้คืน BitLocker 48 หลัก"
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "th": ""
+      "th": "เปิดใน Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "th": ""
+      "th": "โวลุ่มจะปรากฏใต้ตำแหน่ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
     },
     "features.title": {
       "en": "Features",
-      "th": ""
+      "th": "ความสามารถ"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "th": ""
+      "th": "Lukotta เปิดไดรฟ์และอิมเมจดิสก์ที่ macOS ปฏิเสธจะอ่าน แล้วส่งให้ Finder ในฐานะโวลุ่มธรรมดา"
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "th": ""
+      "th": "มันรับทั้งไดรฟ์จริงและไฟล์อิมเมจเท่า ๆ กัน โวลุ่ม BitLocker เปิดด้วยรหัสผ่านของมันเองหรือด้วยกุญแจกู้คืน 48 หลัก และโวลุ่ม BitLocker กับ NTFS ทั้งอ่านและเขียนได้ จึงคัดลอกไฟล์เข้าไปในไดรฟ์ได้ ไม่ใช่แค่คัดลอกออกมา"
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "th": ""
+      "th": "ไดรฟ์หรืออิมเมจใดก็เปิดแบบอ่านอย่างเดียวได้ และ Lukotta เปิดสิ่งที่ค้างไว้ตอนเข้าระบบครั้งก่อนขึ้นมาใหม่ได้"
     },
     "formats.title": {
       "en": "Supported formats",
-      "th": ""
+      "th": "รูปแบบที่รองรับ"
     },
     "formats.col.format": {
       "en": "Format",
-      "th": ""
+      "th": "รูปแบบ"
     },
     "formats.col.read": {
       "en": "Read",
-      "th": ""
+      "th": "อ่าน"
     },
     "formats.col.write": {
       "en": "Write",
-      "th": ""
+      "th": "เขียน"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "th": ""
+      "th": "หมายเหตุ"
     },
     "formats.yes": {
       "en": "Yes",
-      "th": ""
+      "th": "ใช่"
     },
     "formats.no": {
       "en": "No",
-      "th": ""
+      "th": "ไม่"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "th": ""
+      "th": "การเข้ารหัส"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "th": ""
+      "th": "ระบบไฟล์"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "th": ""
+      "th": "อิมเมจดิสก์"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "th": ""
+      "th": "ปลดล็อกด้วยรหัสผ่านของโวลุ่มหรือกุญแจกู้คืน 48 หลัก"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "th": ""
+      "th": "ปลดล็อกด้วยวลีรหัสผ่าน"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "th": ""
+      "th": "หลายโวลุ่มบนไดรฟ์เดียวกันปลดล็อกพร้อมกัน"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "th": ""
+      "th": "รวมถึงโวลุ่มที่ Windows ทิ้งไว้ในโหมดจำศีลหรือปิดไม่เรียบร้อย"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "th": ""
+      "th": "ระบบไฟล์ของ Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "th": ""
+      "th": "macOS รองรับเองอยู่แล้ว"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "th": ""
+      "th": "macOS รองรับเองอยู่แล้ว"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "th": ""
+      "th": "QEMU และ UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "th": ""
+      "th": "VMware แบบแบนและแบบเบาบาง"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "th": ""
+      "th": "สิ่งที่อยู่ในไฟล์ OVA เขียนรวดเดียวจบ จึงแก้ไขในที่เดิมไม่ได้"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "th": ""
+      "th": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "th": ""
+      "th": "Hyper-V แบบคงที่และแบบพลวัต"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "th": ""
+      "th": "Hyper-V เปิดแบบอ่านอย่างเดียว"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "th": ""
+      "th": "ทุกรูปแบบโดยละเอียด และแต่ละรูปแบบถูกอ่านและเขียนอย่างไร"
     },
     "formats.experimental": {
       "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
-      "th": ""
+      "th": "การรองรับรูปแบบเหล่านี้ยังอยู่ในขั้นทดลอง การเขียนลงไปยังไม่ได้ทดสอบอย่างกว้างขวาง"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "th": ""
+      "th": "ไม่รองรับ"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "th": ""
+      "th": "FileVault และอิมเมจดิสก์ที่เข้ารหัส ซึ่ง macOS เปิดเองได้"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "th": ""
+      "th": "ไดรฟ์ที่ผูกกับชิป TPM แทนรหัสผ่าน รวมถึงการเข้ารหัสด้วยฮาร์ดแวร์รุ่นใหม่ใน Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "th": ""
+      "th": "โวลุ่ม LUKS ที่เก็บส่วนหัวแยกไว้ต่างหากจากไดรฟ์"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "th": ""
+      "th": "VeraCrypt และ TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "th": ""
+      "th": "อิมเมจที่อ้างถึงไฟล์อื่น: สายสแนปช็อตของ VMware, VHD แบบส่วนต่าง หรือ qcow2 ที่มีไฟล์ฐาน"
     },
     "name.title": {
       "en": "The Name",
-      "th": ""
+      "th": "ชื่อ"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "th": ""
+      "th": "Lúkotta เป็นภาษาฟินแลนด์ แปลว่า „ไม่มีกุญแจล็อก“ มาจาก {lukko} ที่แปลว่ากุญแจล็อก กับปัจจัย {tta} ที่บอกถึงการไม่มีสิ่งใดสิ่งหนึ่ง เสียงหนักตกที่พยางค์แรก อย่างที่เป็นเสมอในภาษาฟินแลนด์"
     },
     "faq.title": {
       "en": "FAQ",
-      "th": ""
+      "th": "คำถามที่พบบ่อย"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "th": ""
+      "th": "Lukotta ราคาเท่าไร"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "th": ""
+      "th": "ไม่เสียเลย ดาวน์โหลดฟรีและใช้ฟรี ไม่มีรุ่นเสียเงิน ไม่มีค่าสมาชิก ไม่มีช่วงทดลองที่หมดอายุ และไม่ต้องสร้างบัญชี"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "th": ""
+      "th": "อีกทั้งยังเป็นซอฟต์แวร์เสรีภายใต้ GNU General Public License รุ่น 3 ขึ้นไป ซอร์สโค้ดเปิดเผย คุณอ่านได้ คอมไพล์เองได้ แก้ไขได้ และส่งต่อสิ่งที่แก้ไขได้"
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "th": ""
+      "th": "Lukotta เปิดไดรฟ์ BitLocker ได้ไหม"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "th": ""
+      "th": "ได้ และเขียนลงไปได้ด้วย พิมพ์รหัสผ่านของโวลุ่มหรือวางกุญแจกู้คืน 48 หลัก แล้วไดรฟ์จะเปิดขึ้นใน Finder"
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "th": ""
+      "th": "Lukotta เขียนลงไดรฟ์ NTFS ได้ไหม"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "th": ""
+      "th": "ได้ คัดลอกไฟล์เข้าไดรฟ์ NTFS ได้พอ ๆ กับคัดลอกออกมา"
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "th": ""
+      "th": "Lukotta เปิดไดรฟ์ Linux ได้ไหม"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "th": ""
+      "th": "ได้ ext2, ext3, ext4, btrfs และ XFS เปิดได้ ทั้งแบบเปล่าและแบบอยู่ในการเข้ารหัส LUKS ไดรฟ์ที่จัดด้วย LVM จะเปิดทุกโวลุ่มพร้อมกัน"
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "th": ""
+      "th": "Lukotta เปิดดิสก์ของเครื่องเสมือนได้ไหม"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "th": ""
+      "th": "ได้ โดยไม่ต้องเปิดเครื่องเสมือน เปิดอิมเมจ qcow2, VMDK, VDI, VHD หรือ VHDX แล้วคัดลอกไฟล์ออกมาหรือใส่เข้าไป"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "th": ""
+      "th": "Lukotta ใช้กับ Mac ที่เป็น Intel ได้ไหม"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "th": ""
+      "th": "ไม่ได้ มันต้องใช้การจำลองเสมือนที่ Apple Silicon มีให้"
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "th": ""
+      "th": "ความเป็นส่วนตัว"
     },
     "footer.licence": {
       "en": "Licence",
-      "th": ""
+      "th": "สัญญาอนุญาต"
     },
     "footer.source": {
       "en": "Source",
-      "th": ""
+      "th": "ซอร์สโค้ด"
     },
     "footer.contact": {
       "en": "Contact",
-      "th": ""
+      "th": "ติดต่อ"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "th": ""
+      "th": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "th": ""
+      "th": "ซอฟต์แวร์เสรีภายใต้ GNU General Public License รุ่น 3 ขึ้นไป"
     }
   }
 }

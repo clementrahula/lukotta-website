@@ -398,8 +398,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn:hover { text-decoration: none; background: color-mix(in srgb, var(--amber) 86%, black); }
 
-.plain { color: var(--ink-2); font-size: .9375rem; display: inline-flex; align-items: center; gap: 6px; }
-.plain:hover { color: var(--amber-ink); }
+/* Underlined because it is a link: without it, a line of grey prose beside an
+   arrow reads as a caption. The rule is faint until hovered. */
+.plain {
+  color: var(--ink-2); font-size: .9375rem;
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: underline;
+  text-decoration-color: var(--border, var(--rule-2));
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.plain:hover { color: var(--amber-ink); text-decoration-color: currentColor; }
 .plain .arrow { width: 14px; height: 14px; }
 
 .spec {
@@ -511,9 +520,11 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 .asterisk { color: var(--amber-ink); margin-inline-start: 2px; }
 
-/* Sits directly under the table it annotates, before the link out to SPECS. */
+/* Sits directly under the table it annotates, before the link out to SPECS.
+   No measure limit: it is one line at desktop widths and only wraps when the
+   window is genuinely too narrow for it. */
 .footnote {
-  margin-top: 16px; max-width: var(--measure);
+  margin-top: 16px;
   color: var(--ink-3); font-size: .8438rem; line-height: 1.55;
 }
 .footnote span { color: var(--amber-ink); }
@@ -548,6 +559,10 @@ tbody tr:not(.group) th code { color: var(--ink); }
 /* ---------------------------------------------------------------- steps -- */
 
 .steps { counter-reset: step; margin-top: 34px; display: grid; gap: 0; }
+/* First thing in the section now, so it needs no lead-in space above it. */
+.steps-first { margin-top: 0; }
+.steps-first li:first-child { padding-top: 0; }
+.after-steps { margin-top: 30px; }
 .steps li {
   counter-increment: step;
   display: grid; grid-template-columns: 3.2rem 1fr; gap: 4px 8px;
@@ -567,8 +582,14 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 .site-footer { padding-block: 40px 48px; border-top: 1px solid var(--ink); }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 26px; }
-.site-footer nav a { color: var(--ink); font-size: .9375rem; }
-.site-footer nav a:hover { color: var(--amber-ink); }
+.site-footer nav a {
+  color: var(--ink); font-size: .9375rem;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.site-footer nav a:hover { color: var(--amber-ink); text-decoration-color: currentColor; }
 .colophon {
   margin-top: 26px; display: grid; gap: 3px;
   color: var(--ink-3); font-size: .8438rem;

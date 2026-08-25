@@ -32,7 +32,7 @@
     "formats.vhdx.note": "The same. The application says so before the image opens, which is worth keeping.",
     "formats.specs": "The whole string is a link to SPECS.md. It reads as a sentence, not as a button.",
     "formats.not.body": "A list of what cannot be opened, separated by full stops. Each item is a distinct reason; keep them distinct.",
-    "how.lead": "The whole explanation in three sentences: macOS cannot, Linux can, so a small Linux machine does it.",
+    "how.lead": "Sits below the three steps, explaining why a Linux virtual machine is involved at all. Three sentences: macOS cannot, Linux can, so a small Linux machine does it.",
     "footer.copyright": "Contains {copyleft}, which becomes a reversed copyright sign, and {year} and {author}, which become the year and a link to the author's own site. All three must survive, spelled exactly as they are.",
     "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is.",
     "name.body": "One paragraph. Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",

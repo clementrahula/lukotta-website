@@ -8,343 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "zh-Hans": ""
+      "zh-Hans": "在 macOS 上打开 BitLocker 和 Linux 硬盘 — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "zh-Hans": ""
+      "zh-Hans": "在 Mac 上打开 BitLocker、NTFS、LUKS 和 Linux 硬盘。输入密码，硬盘就出现在访达里，可读可写。自由软件，完全免费。"
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta — 在 macOS 上打开 BitLocker、Linux 和虚拟机硬盘"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "zh-Hans": ""
+      "zh-Hans": "接上硬盘或打开磁盘映像，输入密码，它就出现在访达里，像别的磁盘一样可读可写。"
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 应用图标：圆角的石板灰方块，中间镂空一个 L 字母。"
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "zh-Hans": ""
+      "zh-Hans": "跳到正文"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "zh-Hans": ""
+      "zh-Hans": "选择语言"
     },
     "ui.menu": {
       "en": "Menu",
-      "zh-Hans": ""
+      "zh-Hans": "菜单"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "zh-Hans": ""
+      "zh-Hans": "回到顶部"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "zh-Hans": ""
+      "zh-Hans": "切换到浅色外观"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "zh-Hans": ""
+      "zh-Hans": "切换到深色外观"
     },
     "nav.download": {
       "en": "Download",
-      "zh-Hans": ""
+      "zh-Hans": "下载"
     },
     "nav.features": {
       "en": "Features",
-      "zh-Hans": ""
+      "zh-Hans": "功能"
     },
     "nav.how": {
       "en": "How It Works",
-      "zh-Hans": ""
+      "zh-Hans": "工作原理"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "zh-Hans": ""
+      "zh-Hans": "在 macOS 上打开 BitLocker、Linux 和虚拟机硬盘。"
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "zh-Hans": ""
+      "zh-Hans": "接上硬盘或打开磁盘映像，输入密码，它就出现在访达里。像别的磁盘一样可读可写。"
     },
     "hero.download": {
       "en": "Download",
-      "zh-Hans": ""
+      "zh-Hans": "下载"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "zh-Hans": ""
+      "zh-Hans": "GitHub 上的源代码"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "zh-Hans": ""
+      "zh-Hans": "版本 {version} · Apple Silicon · macOS 15 Sequoia 或更新"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "zh-Hans": ""
+      "zh-Hans": "macOS 上的 Lukotta 窗口，列出接在 Mac 上的硬盘以及每块硬盘里的内容。"
     },
     "how.title": {
       "en": "How It Works",
-      "zh-Hans": ""
+      "zh-Hans": "工作原理"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "zh-Hans": ""
+      "zh-Hans": "macOS 读不了 BitLocker，也读不了 Linux 的文件系统。Linux 可以。Lukotta 启动一台小小的 Linux 虚拟机，在里面解锁硬盘，再把硬盘交还给访达。"
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "zh-Hans": ""
+      "zh-Hans": "接上硬盘"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "zh-Hans": ""
+      "zh-Hans": "或者打开磁盘映像。"
     },
     "how.2.title": {
       "en": "Type the password",
-      "zh-Hans": ""
+      "zh-Hans": "输入密码"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "zh-Hans": ""
+      "zh-Hans": "卷的密码、LUKS 密码短语，或 48 位的 BitLocker 恢复密钥。"
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "zh-Hans": ""
+      "zh-Hans": "在访达里打开"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "zh-Hans": ""
+      "zh-Hans": "卷出现在“位置”下面，像别的硬盘一样可以读、写和推出。"
     },
     "features.title": {
       "en": "Features",
-      "zh-Hans": ""
+      "zh-Hans": "功能"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 打开那些 macOS 拒绝读取的硬盘和磁盘映像，把它们当作普通的卷交给访达。"
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "zh-Hans": ""
+      "zh-Hans": "物理硬盘和映像文件一视同仁。BitLocker 卷用它自己的密码或 48 位恢复密钥打开，BitLocker 和 NTFS 卷既能读也能写，所以文件既能从硬盘拷出来，也能拷进去。"
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "zh-Hans": ""
+      "zh-Hans": "任何硬盘或映像也都可以只读打开，Lukotta 还能重新打开上次登录时开着的那些。"
     },
     "formats.title": {
       "en": "Supported formats",
-      "zh-Hans": ""
+      "zh-Hans": "支持的格式"
     },
     "formats.col.format": {
       "en": "Format",
-      "zh-Hans": ""
+      "zh-Hans": "格式"
     },
     "formats.col.read": {
       "en": "Read",
-      "zh-Hans": ""
+      "zh-Hans": "读取"
     },
     "formats.col.write": {
       "en": "Write",
-      "zh-Hans": ""
+      "zh-Hans": "写入"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "zh-Hans": ""
+      "zh-Hans": "说明"
     },
     "formats.yes": {
       "en": "Yes",
-      "zh-Hans": ""
+      "zh-Hans": "是"
     },
     "formats.no": {
       "en": "No",
-      "zh-Hans": ""
+      "zh-Hans": "否"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "zh-Hans": ""
+      "zh-Hans": "加密"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "zh-Hans": ""
+      "zh-Hans": "文件系统"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "zh-Hans": ""
+      "zh-Hans": "磁盘映像"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "zh-Hans": ""
+      "zh-Hans": "用卷的密码或 48 位恢复密钥解锁"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "zh-Hans": ""
+      "zh-Hans": "用密码短语解锁"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "zh-Hans": ""
+      "zh-Hans": "同一块硬盘上的多个卷一起解锁"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "zh-Hans": ""
+      "zh-Hans": "包括 Windows 留在休眠状态或没有正常关闭的卷"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "zh-Hans": ""
+      "zh-Hans": "Linux 的文件系统"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "zh-Hans": ""
+      "zh-Hans": "macOS 原生支持"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "zh-Hans": ""
+      "zh-Hans": "macOS 原生支持"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "zh-Hans": ""
+      "zh-Hans": "QEMU 和 UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "zh-Hans": ""
+      "zh-Hans": "VMware，平坦式与稀疏式"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "zh-Hans": ""
+      "zh-Hans": "OVA 里装的就是它。一次写成，因此无法就地修改"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "zh-Hans": ""
+      "zh-Hans": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "zh-Hans": ""
+      "zh-Hans": "Hyper-V，固定式与动态式"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "zh-Hans": ""
+      "zh-Hans": "Hyper-V。只读打开"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "zh-Hans": ""
+      "zh-Hans": "每种格式的完整细节，以及各自是如何读写的"
     },
     "formats.experimental": {
       "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
-      "zh-Hans": ""
+      "zh-Hans": "这些格式的支持尚属实验性质，写入还没有经过广泛测试。"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "zh-Hans": ""
+      "zh-Hans": "不支持"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "zh-Hans": ""
+      "zh-Hans": "FileVault 和加密的磁盘映像，这些 macOS 自己就能打开"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "zh-Hans": ""
+      "zh-Hans": "绑定到 TPM 芯片而非密码的硬盘，包括 Ubuntu 较新的硬件加密"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "zh-Hans": ""
+      "zh-Hans": "头部与硬盘分开存放的 LUKS 卷"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "zh-Hans": ""
+      "zh-Hans": "VeraCrypt 和 TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "zh-Hans": ""
+      "zh-Hans": "指向另一个文件的映像：VMware 快照链、差分 VHD，或带后备文件的 qcow2"
     },
     "name.title": {
       "en": "The Name",
-      "zh-Hans": ""
+      "zh-Hans": "名字的由来"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "zh-Hans": ""
+      "zh-Hans": "Lúkotta 在芬兰语里是“没有锁”的意思，来自 {lukko}，也就是锁，加上表示某物缺失的词尾 {tta}。重音落在第一个音节上，芬兰语向来如此。"
     },
     "faq.title": {
       "en": "FAQ",
-      "zh-Hans": ""
+      "zh-Hans": "常见问题"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 多少钱？"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "zh-Hans": ""
+      "zh-Hans": "不要钱。下载免费，使用也免费。没有付费版，没有订阅，没有会到期的试用期，也不用注册账号。"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "zh-Hans": ""
+      "zh-Hans": "它同时是自由软件，采用 GNU General Public License 第 3 版或更新版本。源代码是公开的：你可以阅读它、自己编译、修改，并把修改后的成果传给别人。"
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 能打开 BitLocker 硬盘吗？"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "zh-Hans": ""
+      "zh-Hans": "能，还能往里写。输入卷的密码或粘贴 48 位恢复密钥，硬盘就在访达里打开了。"
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 能往 NTFS 硬盘里写入吗？"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "zh-Hans": ""
+      "zh-Hans": "能。文件拷进 NTFS 硬盘和从里面拷出来一样方便。"
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 能打开 Linux 硬盘吗？"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "zh-Hans": ""
+      "zh-Hans": "能。ext2、ext3、ext4、btrfs 和 XFS 都能打开，无论是裸的还是装在 LUKS 加密里。用 LVM 组织的硬盘会把所有卷一起打开。"
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 能打开虚拟机的硬盘吗？"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "zh-Hans": ""
+      "zh-Hans": "能，而且不用启动虚拟机。打开 qcow2、VMDK、VDI、VHD 或 VHDX 映像，就能从中拷出文件，或者拷进去。"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 能在 Intel 的 Mac 上运行吗？"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "zh-Hans": ""
+      "zh-Hans": "不能。它需要 Apple Silicon 提供的虚拟化。"
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "zh-Hans": ""
+      "zh-Hans": "隐私政策"
     },
     "footer.licence": {
       "en": "Licence",
-      "zh-Hans": ""
+      "zh-Hans": "许可证"
     },
     "footer.source": {
       "en": "Source",
-      "zh-Hans": ""
+      "zh-Hans": "源代码"
     },
     "footer.contact": {
       "en": "Contact",
-      "zh-Hans": ""
+      "zh-Hans": "联系"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "zh-Hans": ""
+      "zh-Hans": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "zh-Hans": ""
+      "zh-Hans": "依据 GNU General Public License 第 3 版或更新版本发布的自由软件。"
     }
   }
 }

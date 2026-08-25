@@ -8,343 +8,343 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "hi": ""
+      "hi": "macOS पर BitLocker और Linux ड्राइव खोलें — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "hi": ""
+      "hi": "अपने Mac पर BitLocker, NTFS, LUKS और Linux ड्राइव खोलें। पासवर्ड टाइप करें और ड्राइव Finder में दिखने लगती है, पढ़ने और लिखने के लिए। मुफ़्त, मुक्त सॉफ़्टवेयर।"
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "hi": ""
+      "hi": "Lukotta — macOS पर BitLocker, Linux और वर्चुअल मशीन की ड्राइव"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "hi": ""
+      "hi": "ड्राइव लगाइए या डिस्क इमेज खोलिए, पासवर्ड टाइप कीजिए, और वह Finder में आ जाती है, पढ़ने और लिखने योग्य, किसी भी दूसरी डिस्क की तरह।"
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "hi": ""
+      "hi": "Lukotta ऐप का चिह्न: गोल कोनों वाला स्लेटी वर्ग जिसमें से L अक्षर कटा हुआ है।"
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "hi": ""
+      "hi": "सामग्री पर जाएँ"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "hi": ""
+      "hi": "भाषा चुनें"
     },
     "ui.menu": {
       "en": "Menu",
-      "hi": ""
+      "hi": "मेन्यू"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "hi": ""
+      "hi": "ऊपर लौटें"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "hi": ""
+      "hi": "हल्के रूप पर जाएँ"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "hi": ""
+      "hi": "गहरे रूप पर जाएँ"
     },
     "nav.download": {
       "en": "Download",
-      "hi": ""
+      "hi": "डाउनलोड"
     },
     "nav.features": {
       "en": "Features",
-      "hi": ""
+      "hi": "विशेषताएँ"
     },
     "nav.how": {
       "en": "How It Works",
-      "hi": ""
+      "hi": "यह कैसे काम करता है"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "hi": ""
+      "hi": "macOS पर BitLocker, Linux और वर्चुअल मशीन की ड्राइव खोलें।"
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "hi": ""
+      "hi": "ड्राइव लगाइए या डिस्क इमेज खोलिए और पासवर्ड टाइप कीजिए — वह Finder में आ जाती है। पढ़ने और लिखने योग्य, किसी भी दूसरी डिस्क की तरह।"
     },
     "hero.download": {
       "en": "Download",
-      "hi": ""
+      "hi": "डाउनलोड"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "hi": ""
+      "hi": "GitHub पर स्रोत कोड"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "hi": ""
+      "hi": "संस्करण {version} · Apple Silicon · macOS 15 Sequoia या नया"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "hi": ""
+      "hi": "macOS पर Lukotta की विंडो, जिसमें Mac से जुड़ी ड्राइव और हर एक में क्या है, दिखता है।"
     },
     "how.title": {
       "en": "How It Works",
-      "hi": ""
+      "hi": "यह कैसे काम करता है"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "hi": ""
+      "hi": "macOS न BitLocker पढ़ सकता है, न Linux की फ़ाइल सिस्टम। Linux पढ़ सकता है। Lukotta एक छोटी Linux वर्चुअल मशीन चलाता है, उसके भीतर ड्राइव खोलता है, और ड्राइव Finder को सौंप देता है।"
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "hi": ""
+      "hi": "ड्राइव लगाइए"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "hi": ""
+      "hi": "या डिस्क इमेज खोलिए।"
     },
     "how.2.title": {
       "en": "Type the password",
-      "hi": ""
+      "hi": "पासवर्ड टाइप कीजिए"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "hi": ""
+      "hi": "वॉल्यूम का पासवर्ड, LUKS पासफ़्रेज़, या 48 अंकों की BitLocker रिकवरी कुंजी।"
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "hi": ""
+      "hi": "इसे Finder में खोलिए"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "hi": ""
+      "hi": "वॉल्यूम स्थान के नीचे दिखता है, और किसी भी दूसरी ड्राइव की तरह पढ़ा, लिखा और निकाला जाता है।"
     },
     "features.title": {
       "en": "Features",
-      "hi": ""
+      "hi": "विशेषताएँ"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "hi": ""
+      "hi": "Lukotta उन ड्राइव और डिस्क इमेज को खोलता है जिन्हें macOS पढ़ने से मना कर देता है, और उन्हें साधारण वॉल्यूम की तरह Finder को सौंप देता है।"
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "hi": ""
+      "hi": "यह भौतिक ड्राइव और इमेज फ़ाइल, दोनों को समान रूप से लेता है। BitLocker वॉल्यूम अपने पासवर्ड से या 48 अंकों की रिकवरी कुंजी से खुलता है, और BitLocker तथा NTFS वॉल्यूम पढ़े भी जाते हैं और लिखे भी, इसलिए फ़ाइलें ड्राइव पर उतनी ही आसानी से कॉपी होती हैं जितनी उससे।"
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "hi": ""
+      "hi": "किसी भी ड्राइव या इमेज को केवल पढ़ने के लिए भी खोला जा सकता है, और Lukotta वह फिर से खोल सकता है जो पिछली बार लॉग इन करते समय खुला था।"
     },
     "formats.title": {
       "en": "Supported formats",
-      "hi": ""
+      "hi": "समर्थित प्रारूप"
     },
     "formats.col.format": {
       "en": "Format",
-      "hi": ""
+      "hi": "प्रारूप"
     },
     "formats.col.read": {
       "en": "Read",
-      "hi": ""
+      "hi": "पढ़ना"
     },
     "formats.col.write": {
       "en": "Write",
-      "hi": ""
+      "hi": "लिखना"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "hi": ""
+      "hi": "टिप्पणियाँ"
     },
     "formats.yes": {
       "en": "Yes",
-      "hi": ""
+      "hi": "हाँ"
     },
     "formats.no": {
       "en": "No",
-      "hi": ""
+      "hi": "नहीं"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "hi": ""
+      "hi": "एन्क्रिप्शन"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "hi": ""
+      "hi": "फ़ाइल सिस्टम"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "hi": ""
+      "hi": "डिस्क इमेज"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "hi": ""
+      "hi": "वॉल्यूम के पासवर्ड या 48 अंकों की रिकवरी कुंजी से खुलता है"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "hi": ""
+      "hi": "पासफ़्रेज़ से खुलता है"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "hi": ""
+      "hi": "एक ही ड्राइव के कई वॉल्यूम साथ खुलते हैं"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "hi": ""
+      "hi": "वह वॉल्यूम भी जिसे Windows ने हाइबरनेट में या ठीक से बंद किए बिना छोड़ा हो"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "hi": ""
+      "hi": "Linux की फ़ाइल सिस्टम"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "hi": ""
+      "hi": "macOS इन्हें स्वयं समर्थित करता है"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "hi": ""
+      "hi": "macOS इन्हें स्वयं समर्थित करता है"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "hi": ""
+      "hi": "QEMU और UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "hi": ""
+      "hi": "VMware, सपाट और विरल"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "hi": ""
+      "hi": "जो एक OVA में होता है। एक ही बार में लिखा जाता है, इसलिए उसी जगह बदला नहीं जा सकता"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "hi": ""
+      "hi": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "hi": ""
+      "hi": "Hyper-V, स्थिर और गतिशील"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "hi": ""
+      "hi": "Hyper-V. केवल पढ़ने के लिए खुलता है"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "hi": ""
+      "hi": "हर प्रारूप पूरे विस्तार से, और हर एक कैसे पढ़ा और लिखा जाता है"
     },
     "formats.experimental": {
       "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
-      "hi": ""
+      "hi": "इन प्रारूपों का समर्थन प्रयोगात्मक है। इनमें लिखने की व्यापक जाँच नहीं हुई है।"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "hi": ""
+      "hi": "समर्थित नहीं"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "hi": ""
+      "hi": "FileVault और एन्क्रिप्टेड डिस्क इमेज, जिन्हें macOS स्वयं खोलता है"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "hi": ""
+      "hi": "वे ड्राइव जो पासवर्ड के बजाय TPM चिप से बँधी हैं, जिनमें Ubuntu का नया हार्डवेयर एन्क्रिप्शन भी शामिल है"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "hi": ""
+      "hi": "वे LUKS वॉल्यूम जिनका हेडर ड्राइव से अलग रखा जाता है"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "hi": ""
+      "hi": "VeraCrypt और TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "hi": ""
+      "hi": "ऐसी इमेज जो किसी और फ़ाइल की ओर इशारा करती है: VMware स्नैपशॉट शृंखला, डिफ़रेंसिंग VHD, या बैकिंग फ़ाइल वाला qcow2"
     },
     "name.title": {
       "en": "The Name",
-      "hi": ""
+      "hi": "नाम"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "hi": ""
+      "hi": "Lúkotta फ़िनिश में „बिना ताले के“ है, {lukko} यानी ताला से, और अंत {tta} जो किसी चीज़ की अनुपस्थिति दर्शाता है। बल पहले अक्षर पर पड़ता है, जैसा फ़िनिश में हमेशा होता है।"
     },
     "faq.title": {
       "en": "FAQ",
-      "hi": ""
+      "hi": "अक्सर पूछे जाने वाले प्रश्न"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "hi": ""
+      "hi": "Lukotta की कीमत कितनी है?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "hi": ""
+      "hi": "कुछ नहीं। इसे डाउनलोड करना मुफ़्त है और इस्तेमाल भी। न कोई सशुल्क संस्करण है, न सदस्यता, न कोई आज़माइशी अवधि जो ख़त्म हो, और न कोई खाता बनाना पड़ता है।"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "hi": ""
+      "hi": "यह मुक्त सॉफ़्टवेयर भी है, GNU General Public License के संस्करण 3 या उससे नए के अंतर्गत। स्रोत कोड सार्वजनिक है: आप उसे पढ़ सकते हैं, स्वयं बना सकते हैं, बदल सकते हैं, और जो बदला उसे आगे दे सकते हैं।"
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "hi": ""
+      "hi": "क्या Lukotta BitLocker ड्राइव खोल सकता है?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "hi": ""
+      "hi": "हाँ, और उन पर लिख भी सकता है। वॉल्यूम का पासवर्ड टाइप कीजिए या 48 अंकों की रिकवरी कुंजी चिपकाइए, और ड्राइव Finder में खुल जाती है।"
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "hi": ""
+      "hi": "क्या Lukotta NTFS ड्राइव पर लिख सकता है?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "hi": ""
+      "hi": "हाँ। फ़ाइलें NTFS ड्राइव पर उतनी ही आसानी से कॉपी होती हैं जितनी उससे।"
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "hi": ""
+      "hi": "क्या Lukotta Linux ड्राइव खोल सकता है?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hi": ""
+      "hi": "हाँ। ext2, ext3, ext4, btrfs और XFS खुलते हैं, चाहे खुले हों या LUKS एन्क्रिप्शन के भीतर। LVM से बनी ड्राइव अपने सारे वॉल्यूम एक साथ खोलती है।"
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "hi": ""
+      "hi": "क्या Lukotta वर्चुअल मशीन की डिस्क खोल सकता है?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "hi": ""
+      "hi": "हाँ, मशीन चलाए बिना। qcow2, VMDK, VDI, VHD या VHDX इमेज खोलिए और उसमें से फ़ाइलें कॉपी कीजिए, या उसमें।"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "hi": ""
+      "hi": "क्या Lukotta Intel वाले Mac पर चलता है?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "hi": ""
+      "hi": "नहीं। इसे वह वर्चुअलाइज़ेशन चाहिए जो Apple Silicon देता है।"
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "hi": ""
+      "hi": "निजता"
     },
     "footer.licence": {
       "en": "Licence",
-      "hi": ""
+      "hi": "लाइसेंस"
     },
     "footer.source": {
       "en": "Source",
-      "hi": ""
+      "hi": "स्रोत कोड"
     },
     "footer.contact": {
       "en": "Contact",
-      "hi": ""
+      "hi": "संपर्क"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "hi": ""
+      "hi": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "hi": ""
+      "hi": "GNU General Public License के संस्करण 3 या उससे नए के अंतर्गत मुक्त सॉफ़्टवेयर।"
     }
   }
 }
