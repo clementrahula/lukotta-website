@@ -280,11 +280,12 @@ if (existsSync(llmsPath)) {
      carry them, and carry the same wording. */
   const english = JSON.parse(readFileSync(join(CONTENT, `${cfg.defaultLang}.json`), "utf8")).strings;
   const englishOf = (v) => (typeof v === "string" ? v : v?.[cfg.defaultLang] ?? v?.en);
-  for (let n = 1; n <= 6; n++) {
-    for (const part of ["q", "a"]) {
-      const text = englishOf(english[`faq.${n}.${part}`]);
-      if (text && !llms.includes(text)) err(`llms.txt does not carry faq.${n}.${part} as the page states it.`);
-    }
+  /* Every part of every answer, including the second and later paragraphs
+     that only some questions have. */
+  for (const key of Object.keys(english)) {
+    if (!/^faq\.\d+\.(q|a\d*)$/.test(key)) continue;
+    const text = englishOf(english[key]);
+    if (text && !llms.includes(text)) err(`llms.txt does not carry ${key} as the page states it.`);
   }
   for (const key of ["features.title", "formats.not.title", "hero.subtitle", "how.lead", "footer.gpl"]) {
     const text = englishOf(english[key]);

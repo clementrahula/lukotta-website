@@ -350,8 +350,15 @@ const notOpened = [1, 2, 3, 4, 5]
   .map((line) => `- ${line}`)
   .join("\n");
 
+/* An answer may run to more than one paragraph, as faq.1 does: a, then a2 and
+   onward. Collect whatever is there rather than assuming one. */
+const answerOf = (n) => {
+  const parts = [english[`faq.${n}.a`]];
+  for (let i = 2; english[`faq.${n}.a${i}`]; i++) parts.push(english[`faq.${n}.a${i}`]);
+  return parts.filter(Boolean).join("\n\n");
+};
 const questions = [1, 2, 3, 4, 5, 6]
-  .map((n) => [english[`faq.${n}.q`], english[`faq.${n}.a`]])
+  .map((n) => [english[`faq.${n}.q`], answerOf(n)])
   .filter(([q, a]) => q && a)
   .map(([q, a]) => `### ${q}\n\n${a}`)
   .join("\n\n");
