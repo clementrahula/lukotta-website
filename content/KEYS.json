@@ -10,7 +10,8 @@
     "formats": "The table inside section 02: everything the application opens, grouped into encryption, filesystems and disk images, with a Read and a Write column, and a list of what is not supported. Format names are never translated.",
     "name": "The last section on the page. One paragraph explaining the name, taken from the application's README.",
     "faq": "Six questions about Lukotta, each naming it and asking what it does. They are questions about this application, not general questions about macOS, and the answers say what the application does rather than explaining the surrounding technology. Short: a yes or a no, then one or two sentences. They are published as structured data as well as shown on the page, so a search engine may show an answer directly, which is why every answer has to stand on its own without the question.",
-    "footer": "Three links, and the copyright and licence line beneath them."
+    "footer": "Three links, and the copyright and licence line beneath them.",
+    "dialog": "A dialog shown when somebody who is not on a Mac presses Download. It states a fact and then lets them decide: the download is never blocked. The tone is the same as the rest of the page — no alarm, no scolding, and no apology. Three shapes: a phone or tablet where the browser can share a link, a phone or tablet where it cannot, and any other system, which is named."
   },
   "notes": {
     "meta.title": "At or under 60 characters — search results cut it off, and the count is characters, not words. Put the thing being searched for first and the name Lukotta last. Not a literal translation: the words most likely to be typed, in the order they would be typed.",
@@ -51,6 +52,17 @@
     "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too.",
     "footer.source": "Links to the source code on GitHub. One word if the language allows.",
     "meta.ogDescription": "The card text when the address is shared. Written for a person who has been sent a link, not for a search engine.",
-    "formats.experimental": "The footnote under the table, marked by an asterisk against the disk image formats whose drivers were written for Lukotta rather than borrowed. It is a plain statement of fact about how well tested the writing side is, not a warning and not an apology. Do not sharpen it into either."
+    "formats.experimental": "The footnote under the table, marked by an asterisk against the disk image formats whose drivers were written for Lukotta rather than borrowed. It is a plain statement of fact about how well tested the writing side is, not a warning and not an apology. Do not sharpen it into either.",
+    "dialog.title": "The heading, shared by every version of the dialog.",
+    "dialog.mobileBody": "Shown on a phone or tablet. States that it will not run there.",
+    "dialog.desktopBody": "Shown on Windows, Linux, ChromeOS and anything else. Contains {system}, which becomes the name of that system — Windows, Linux, ChromeOS — and those names are never translated. The placeholder must survive.",
+    "dialog.thisSystem": "Goes into {system} when the system cannot be identified, so the sentence reads '…will not run on this system.' It must fit that sentence grammatically in this language.",
+    "dialog.sendHint": "Shown on a phone or tablet whose browser can share a link. AirDrop is Apple's name for it and is never translated. It says the download is still possible, which matters: nobody is being stopped.",
+    "dialog.copyHint": "The same, for a browser that cannot share but can copy. Says the download is still possible.",
+    "dialog.sendToMac": "A button. It opens the system's own share sheet, from which AirDrop is one choice. Keep it short — it sits beside two other buttons.",
+    "dialog.copyLink": "A button, shown instead of Send to Mac when the browser cannot share.",
+    "dialog.copied": "Replaces the Copy Link label for a moment after it is pressed. Past tense, and short.",
+    "dialog.downloadAnyway": "A button. The word 'anyway' matters: it acknowledges what was just said and proceeds regardless.",
+    "dialog.cancel": "A button that closes the dialog and downloads nothing."
   }
 }

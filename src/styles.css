@@ -237,7 +237,6 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -594,21 +593,40 @@ tbody tr:not(.group) th code { color: var(--ink); }
   margin-top: 26px; display: grid; gap: 3px;
   color: var(--ink-3); font-size: .8438rem;
 }
-.colophon a { color: var(--ink-2); }
+.colophon a { color: var(--ink-2); padding-block: 4px; }
 /* Reversed, which is what a copyleft sign is. Done here rather than with
    U+1F12F, which most fonts have no glyph for. */
 .copyleft { display: inline-block; transform: scaleX(-1); }
 
 /* ----------------------------------------------------------- responsive -- */
 
-@media (max-width: 860px) {
-  .site-nav { display: none; }
-  .header-inner { grid-template-columns: 1fr auto; }
+/* The language button's native-name label is what crowds the header; dropping
+   it first buys enough room to keep the navigation visible on a tablet. */
+@media (max-width: 900px) {
+  .lang > summary span { display: none; }
 }
+
+/* Below this the three links no longer fit beside the brand and the controls,
+   so the header becomes two rows: brand and controls above, links below. They
+   stay visible and reachable, and it needs no JavaScript and no menu to open —
+   a menu that is hidden behind a button is a menu that can break. */
+@media (max-width: 620px) {
+  .header-inner {
+    height: auto; padding-block: 10px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "brand tools" "nav nav";
+    row-gap: 4px;
+  }
+  .brand { grid-area: brand; }
+  .header-tools { grid-area: tools; }
+  .site-nav { grid-area: nav; justify-content: flex-start; gap: 20px; flex-wrap: wrap; }
+  .site-nav a { font-size: .875rem; }
+  html { scroll-padding-top: 104px; }
+}
+
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .header-inner { height: 56px; }
-  .lang > summary span { display: none; }
   .steps li { grid-template-columns: 2.4rem 1fr; }
 }
 
@@ -650,3 +668,50 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
 [dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }
+
+/* --------------------------------------------------------------- notice -- */
+
+/* Shown when somebody who is not on a Mac presses Download. It never blocks
+   the download; it says what the software needs and lets them decide. */
+.notice {
+  width: min(440px, calc(100vw - 32px));
+  padding: 26px 26px 22px;
+  border: 1px solid var(--rule-2);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.notice::backdrop { background: rgba(0, 0, 0, .45); }
+.notice h2 {
+  font-size: 1.25rem; letter-spacing: -0.02em;
+  margin-bottom: 14px; max-width: none;
+}
+.notice p { color: var(--ink-2); font-size: .9375rem; line-height: 1.6; }
+.notice .notice-hint { margin-top: 14px; }
+.notice .notice-hint:empty { display: none; }
+
+.notice-actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin-top: 24px;
+}
+.notice-actions .btn { padding: 10px 18px; font-size: .9375rem; }
+
+.btn-quiet {
+  padding: 10px 16px; border-radius: 5px;
+  border: 1px solid var(--rule-2); background: transparent;
+  color: var(--ink); font: inherit; font-size: .9375rem; cursor: pointer;
+}
+.btn-quiet:hover { background: var(--paper-2); }
+
+.plain-btn {
+  margin-inline-start: auto;
+  padding: 10px 4px; border: 0; background: none;
+  color: var(--ink-3); font: inherit; font-size: .9375rem; cursor: pointer;
+}
+.plain-btn:hover { color: var(--ink); }
+
+@media (max-width: 460px) {
+  .notice-actions { flex-direction: column; align-items: stretch; }
+  .notice-actions .btn, .btn-quiet { width: 100%; text-align: center; justify-content: center; }
+  .plain-btn { margin-inline-start: 0; }
+}

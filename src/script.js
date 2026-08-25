@@ -185,4 +185,101 @@
   });
 
   chooseLanguage();
+
+  /* ------------------------------------------------ platform notice ----- */
+
+  /* Lukotta runs on macOS and nowhere else. Somebody pressing Download on a
+     phone or on Windows is told so before the file arrives — and then allowed
+     to download it anyway. Nothing here blocks anything.
+
+     Without JavaScript this never runs and the link behaves as a plain link,
+     which is the correct fallback: an unusable download beats a broken one. */
+
+  function whichPlatform() {
+    var ua = navigator.userAgent || "";
+    var plat = (navigator.userAgentData && navigator.userAgentData.platform) ||
+               navigator.platform || "";
+
+    /* iPadOS reports itself as a Mac. The touch points give it away — a real
+       Mac reports none, even with a trackpad. */
+    var iPadPretendingToBeAMac = /Mac/i.test(plat) && navigator.maxTouchPoints > 1;
+
+    if (/iPhone|iPod|iPad/i.test(ua) || iPadPretendingToBeAMac) return { mobile: true };
+    if (/Android/i.test(ua)) return { mobile: true };
+    if (/Mac/i.test(plat) || /Mac OS X/i.test(ua)) return { mac: true };
+    if (/Win/i.test(plat) || /Windows/i.test(ua)) return { system: "Windows" };
+    if (/CrOS/i.test(ua)) return { system: "ChromeOS" };
+    /* Android also says Linux, so this has to come after it. */
+    if (/Linux|X11/i.test(plat) || /Linux/i.test(ua)) return { system: "Linux" };
+    return { system: null };
+  }
+
+  var DOWNLOAD_URL = window.LUKOTTA_DOWNLOAD;
+  var notice = document.getElementById("platform-notice");
+
+  if (notice && typeof notice.showModal === "function") {
+    var where = whichPlatform();
+
+    if (!where.mac) {
+      var body = notice.querySelector(".notice-body");
+      var hint = notice.querySelector(".notice-hint");
+      var shareButton = notice.querySelector("[data-notice-share]");
+      var copyButton = notice.querySelector("[data-notice-copy]");
+      var canShare = typeof navigator.share === "function";
+      var canCopy = !!(navigator.clipboard && navigator.clipboard.writeText);
+
+      if (where.mobile) {
+        body.textContent = body.getAttribute("data-mobile");
+        if (canShare) {
+          hint.textContent = hint.getAttribute("data-share");
+          shareButton.hidden = false;
+        } else if (canCopy) {
+          hint.textContent = hint.getAttribute("data-copy");
+          copyButton.hidden = false;
+        }
+      } else {
+        var name = where.system || body.getAttribute("data-unknown-system");
+        body.textContent = body.getAttribute("data-desktop").replace("{system}", name);
+      }
+
+      var pending = null;
+
+      document.addEventListener("click", function (event) {
+        var link = event.target.closest ? event.target.closest("a[href]") : null;
+        if (!link) return;
+        if (link.href !== DOWNLOAD_URL) return;
+        event.preventDefault();
+        pending = link.href;
+        notice.showModal();
+      });
+
+      notice.querySelector("[data-notice-cancel]").addEventListener("click", function () {
+        notice.close();
+      });
+
+      notice.querySelector("[data-notice-download]").addEventListener("click", function () {
+        notice.close();
+        if (pending) window.location.href = pending;
+      });
+
+      if (shareButton) {
+        shareButton.addEventListener("click", function () {
+          navigator.share({ url: location.href, title: document.title })
+            .catch(function () { /* the reader dismissed the sheet */ });
+        });
+      }
+
+      if (copyButton) {
+        copyButton.addEventListener("click", function () {
+          navigator.clipboard.writeText(location.href).then(function () {
+            copyButton.textContent = copyButton.getAttribute("data-copied");
+            setTimeout(function () {
+              copyButton.textContent = copyButton.getAttribute("data-label");
+            }, 2000);
+          }).catch(function () {});
+        });
+      }
+    }
+  }
+
 })();

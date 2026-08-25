@@ -423,7 +423,30 @@ ${faqItems}
       indexable.map((l) => ({ c: l.code, p: l.path, s: l.alsoServes || [] }))
     )};
     window.LUKOTTA_LANG = ${JSON.stringify(code)};
+    window.LUKOTTA_DOWNLOAD = ${JSON.stringify(cfg.downloadUrl)};
   </script>
+  <!-- Shown only when someone who is not on a Mac presses Download. Without
+       JavaScript it never opens and the download link behaves normally. -->
+  <dialog class="notice" id="platform-notice" aria-labelledby="notice-title">
+    <h2 id="notice-title">${esc(t("dialog.title"))}</h2>
+    <p class="notice-body"
+       data-mobile="${esc(t("dialog.mobileBody"))}"
+       data-desktop="${esc(t("dialog.desktopBody"))}"
+       data-unknown-system="${esc(t("dialog.thisSystem"))}"></p>
+    <p class="notice-hint"
+       data-share="${esc(t("dialog.sendHint"))}"
+       data-copy="${esc(t("dialog.copyHint"))}"></p>
+    <div class="notice-actions">
+      <button type="button" class="btn" data-notice-download>${esc(t("dialog.downloadAnyway"))}</button>
+      <button type="button" class="btn-quiet" data-notice-share hidden
+              data-label="${esc(t("dialog.sendToMac"))}">${esc(t("dialog.sendToMac"))}</button>
+      <button type="button" class="btn-quiet" data-notice-copy hidden
+              data-label="${esc(t("dialog.copyLink"))}"
+              data-copied="${esc(t("dialog.copied"))}">${esc(t("dialog.copyLink"))}</button>
+      <button type="button" class="plain-btn" data-notice-cancel>${esc(t("dialog.cancel"))}</button>
+    </div>
+  </dialog>
+
   <script src="${assetPrefix}script.js" defer></script>
 </body>
 </html>

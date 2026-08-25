@@ -38,6 +38,50 @@
       "en": "Menu",
       "el": "Μενού"
     },
+    "dialog.title": {
+      "en": "Lukotta is a Mac application",
+      "el": ""
+    },
+    "dialog.mobileBody": {
+      "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
+      "el": ""
+    },
+    "dialog.desktopBody": {
+      "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
+      "el": ""
+    },
+    "dialog.thisSystem": {
+      "en": "this system",
+      "el": ""
+    },
+    "dialog.sendHint": {
+      "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
+      "el": ""
+    },
+    "dialog.copyHint": {
+      "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
+      "el": ""
+    },
+    "dialog.sendToMac": {
+      "en": "Send to Mac",
+      "el": ""
+    },
+    "dialog.copyLink": {
+      "en": "Copy Link",
+      "el": ""
+    },
+    "dialog.copied": {
+      "en": "Link copied",
+      "el": ""
+    },
+    "dialog.downloadAnyway": {
+      "en": "Download Anyway",
+      "el": ""
+    },
+    "dialog.cancel": {
+      "en": "Cancel",
+      "el": ""
+    },
     "ui.toTop": {
       "en": "Back to the top",
       "el": "Επιστροφή στην κορυφή"
