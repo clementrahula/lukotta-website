@@ -52,12 +52,16 @@ block. Those strings *replace* the translation of the key they name, on that
 language's page alone. Finnish uses one, in the name section. The translator
 consults `localOnly` before `strings`, so the markup knows nothing about it.
 
-**Screenshots.** Two per language at `src/assets/screenshots/<code>/{light,dark}.png`,
-the pair the same size as each other. The build reads their real dimensions and
-caps the frame at the image's own width, so nothing is ever stretched. A
-language without its own pair falls back to `_placeholder/`, and the build says
-which did. **The placeholder is a test render of the unbranded build and says
-Drive Unlocker** — every language needs a real pair before this goes public.
+**Screenshots.** Two per language at
+`src/assets/screenshots/<code>/{light,dark}.webp`, the pair the same size as
+each other. They are lossless WebP converted from 1160x1264 PNG captures with
+`cwebp -lossless`, and are shown at 720px, which is 1.6x density. The build
+reads their real dimensions from the WebP header, writes them onto the `<img>`,
+and caps the frame at the image's own width. A language without its own pair
+falls back to English, and the build reports which languages did.
+
+Both appearances are in the page at once and cross-fade on the appearance
+switch, so a page loads roughly 150 kB of screenshot.
 
 **The macOS window frame stays.** `.shot` and `.shot-bar` draw it at the
 measurements macOS uses: a 28pt title bar, 12pt buttons 8pt apart, 20pt in from

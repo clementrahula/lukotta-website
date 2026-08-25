@@ -15,14 +15,29 @@ const OUT = join(ROOT, "public");
 const cfg = JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"));
 const strict = process.argv.includes("--strict");
 
-/* Reads a PNG's dimensions from its IHDR chunk, so the <img> carries real
-   width and height attributes and the page does not shift while it loads. */
-function pngSize(file) {
+/* Reads a WebP's dimensions, so the <img> carries real width and height
+   attributes and the page does not shift while it loads. WebP stores them
+   differently in each of its three chunk types. */
+function webpSize(file) {
   const b = readFileSync(file);
-  if (b.length < 24 || b.readUInt32BE(0) !== 0x89504e47) {
-    throw new Error(`${file} is not a PNG.`);
+  if (b.length < 30 || b.toString("ascii", 0, 4) !== "RIFF" || b.toString("ascii", 8, 12) !== "WEBP") {
+    throw new Error(`${file} is not a WebP.`);
   }
-  return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
+  const chunk = b.toString("ascii", 12, 16);
+  if (chunk === "VP8X") {
+    return {
+      width: 1 + (b[24] | (b[25] << 8) | (b[26] << 16)),
+      height: 1 + (b[27] | (b[28] << 8) | (b[29] << 16)),
+    };
+  }
+  if (chunk === "VP8L") {
+    const n = b.readUInt32LE(21);
+    return { width: 1 + (n & 0x3fff), height: 1 + ((n >> 14) & 0x3fff) };
+  }
+  if (chunk === "VP8 ") {
+    return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff };
+  }
+  throw new Error(`${file}: unrecognised WebP chunk ${chunk}`);
 }
 
 const warnings = [];
@@ -102,27 +117,26 @@ if (existsSync(join(SRC, "assets", "icons"))) {
 cpSync(join(SRC, "assets", "fonts"), join(OUT, "assets", "fonts"), { recursive: true });
 
 /* One light and one dark screenshot per language. A language without its own
-   pair uses _placeholder/; the build reports which languages did. */
+   pair falls back to English, and the build reports which languages did. */
 const SHOTS = join(SRC, "assets", "screenshots");
-const FALLBACK = join(SHOTS, "_placeholder");
-const usingPlaceholder = [];
+const usingFallback = [];
 
 function resolveShots(code) {
   const own = join(SHOTS, code);
-  const hasOwn = ["light", "dark"].every((v) => existsSync(join(own, `${v}.png`)));
+  const hasOwn = ["light", "dark"].every((v) => existsSync(join(own, `${v}.webp`)));
   if (!hasOwn) {
-    usingPlaceholder.push(code);
-    if (!existsSync(join(FALLBACK, "light.png"))) {
-      throw new Error(`No screenshots for "${code}" and no placeholder at ${FALLBACK}`);
+    usingFallback.push(code);
+    if (!existsSync(join(SHOTS, cfg.defaultLang, "light.webp"))) {
+      throw new Error(`No screenshots for "${code}" and none for ${cfg.defaultLang} to fall back to.`);
     }
   }
-  const from = hasOwn ? own : FALLBACK;
+  const from = hasOwn ? own : join(SHOTS, cfg.defaultLang);
   const to = join(OUT, "assets", "screenshots", code);
   mkdirSync(to, { recursive: true });
-  for (const v of ["light", "dark"]) cpSync(join(from, `${v}.png`), join(to, `${v}.png`));
+  for (const v of ["light", "dark"]) cpSync(join(from, `${v}.webp`), join(to, `${v}.webp`));
 
-  const light = pngSize(join(from, "light.png"));
-  const dark = pngSize(join(from, "dark.png"));
+  const light = webpSize(join(from, "light.webp"));
+  const dark = webpSize(join(from, "dark.webp"));
   if (light.width !== dark.width || light.height !== dark.height) {
     warn(`${code}: light and dark screenshots differ in size (${light.width}x${light.height} vs ${dark.width}x${dark.height}); the page shifts when the appearance changes.`);
   }
@@ -304,8 +318,8 @@ if (partial.length) {
 if (noPage.length) {
   console.log(`  no content file     ${noPage.length}: ${noPage.join(" ")}`);
 }
-if (usingPlaceholder.length) {
-  console.log(`  placeholder shots   ${usingPlaceholder.length}: ${usingPlaceholder.join(" ")}`);
+if (usingFallback.length) {
+  console.log(`  english screenshots ${usingFallback.length}: ${usingFallback.join(" ")}`);
 }
 for (const w of warnings) console.log(`  warning             ${w}`);
 console.log("");

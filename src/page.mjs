@@ -51,7 +51,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
-  const shot = (v) => `${assetPrefix}assets/screenshots/${lang.code}/${v}.png`;
+  const shot = (v) => `${assetPrefix}assets/screenshots/${lang.code}/${v}.webp`;
 
   /* ------------------------------------------------------------- head -- */
 
@@ -307,14 +307,21 @@ ${langLinks}
           <p class="spec">${esc(t("hero.meta"))}</p>
         </div>
 
-        <figure class="shot" style="max-width:${Math.min(880, shotSize.width)}px">
+        <figure class="shot" style="max-width:${Math.min(720, shotSize.width)}px">
           <div class="shot-bar" aria-hidden="true">
             <i class="close"></i><i class="minimise"></i><i class="zoom"></i>
           </div>
-          <picture>
-            <source data-theme-source srcset="${shot("dark")}" media="(prefers-color-scheme: dark)">
-            <img src="${shot("light")}" alt="${esc(t("hero.screenshotAlt"))}" width="${shotSize.width}" height="${shotSize.height}" fetchpriority="high" decoding="async">
-          </picture>
+          <!-- Both appearances are present and cross-fade between them. Only
+               the light one carries the description; they show the same thing,
+               so the dark one is hidden rather than described twice. -->
+          <div class="shot-frame">
+            <img class="shot-img shot-light" src="${shot("light")}"
+                 alt="${esc(t("hero.screenshotAlt"))}"
+                 width="${shotSize.width}" height="${shotSize.height}"
+                 fetchpriority="high" decoding="async">
+            <img class="shot-img shot-dark" src="${shot("dark")}" alt="" aria-hidden="true"
+                 width="${shotSize.width}" height="${shotSize.height}" decoding="async">
+          </div>
         </figure>
       </div>
     </section>

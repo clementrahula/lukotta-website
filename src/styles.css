@@ -458,7 +458,23 @@ img { max-width: 100%; height: auto; display: block; }
 .shot-bar .close    { background: #FF5F57; }
 .shot-bar .minimise { background: #FEBC2E; }
 .shot-bar .zoom     { background: #28C840; }
-.shot img { width: 100%; display: block; }
+/* The two appearances are stacked. The light one is in flow and sets the
+   height; the dark one sits on top of it and their opacities cross-fade. With
+   no JavaScript, data-theme is never set and prefers-color-scheme decides.
+
+   The captures are 1160px wide and shown at 720, which is 1.6x density. */
+.shot-frame { position: relative; }
+.shot-img {
+  display: block; width: 100%;
+  transition: opacity .35s ease;
+}
+.shot-dark { position: absolute; inset: 0; opacity: 0; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .shot-light { opacity: 0; }
+  :root:not([data-theme="light"]) .shot-dark { opacity: 1; }
+}
+:root[data-theme="dark"] .shot-light { opacity: 0; }
+:root[data-theme="dark"] .shot-dark { opacity: 1; }
 
 /* ------------------------------------------------------------- sections -- */
 
@@ -714,3 +730,31 @@ tbody tr:not(.group) th code { color: var(--ink); }
   .plain-btn { margin-inline-start: 0; }
 }
 
+
+/* ------------------------------------------------------ appearance change -- */
+
+/* The colour change is animated, but only while it is happening. A permanent
+   transition on these properties would also slow every hover, which has its
+   own shorter timing. script.js sets this class for the length of the fade.
+
+   opacity is in the list because this shorthand replaces any other transition
+   while the class is set, and without it the screenshots would snap rather
+   than cross-fade. */
+:root.theme-changing,
+:root.theme-changing *,
+:root.theme-changing *::before,
+:root.theme-changing *::after {
+  transition: background-color .35s ease,
+              color .35s ease,
+              border-color .35s ease,
+              fill .35s ease,
+              opacity .35s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root.theme-changing,
+  :root.theme-changing *,
+  :root.theme-changing *::before,
+  :root.theme-changing *::after { transition: none !important; }
+  .shot-img { transition: none; }
+}

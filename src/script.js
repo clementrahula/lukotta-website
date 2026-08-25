@@ -23,9 +23,10 @@
     return choice || (mql.matches ? "dark" : "light");
   }
 
-  /* The screenshot is a <picture> whose dark <source> carries a media query.
-     Rewriting that attribute swaps the image without a second download and
-     leaves the no-JavaScript path, plain prefers-color-scheme, intact. */
+  /* The brand mark is a <picture> whose dark <source> carries a media query.
+     Rewriting that attribute swaps it without a second download and leaves the
+     no-JavaScript path, plain prefers-color-scheme, intact. The screenshot is
+     handled in CSS instead, because it cross-fades. */
   function syncShots(resolved, choice) {
     var sources = document.querySelectorAll("source[data-theme-source]");
     for (var i = 0; i < sources.length; i++) {
@@ -33,6 +34,16 @@
         ? "(prefers-color-scheme: dark)"
         : (resolved === "dark" ? "all" : "not all");
     }
+  }
+
+  /* Animate the colour change only while it runs. See .theme-changing. */
+  var fadeTimer = null;
+  function fadeAppearance() {
+    root.classList.add("theme-changing");
+    clearTimeout(fadeTimer);
+    fadeTimer = setTimeout(function () {
+      root.classList.remove("theme-changing");
+    }, 400);
   }
 
   function apply(choice) {
@@ -61,11 +72,16 @@
     if (!button) return;
     var next = resolve(stored()) === "dark" ? "light" : "dark";
     try { localStorage.setItem(KEY, next); } catch (e) { /* storage unavailable */ }
+    fadeAppearance();
     apply(next);
   });
 
   /* Follow the system setting until a choice is stored. */
-  var onSystemChange = function () { if (stored() === null) apply(null); };
+  var onSystemChange = function () {
+    if (stored() !== null) return;
+    fadeAppearance();
+    apply(null);
+  };
   if (mql.addEventListener) mql.addEventListener("change", onSystemChange);
   else if (mql.addListener) mql.addListener(onSystemChange);
 
