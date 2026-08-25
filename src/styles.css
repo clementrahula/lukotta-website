@@ -606,31 +606,3 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
 [dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }
-
-
-/* ---------------------------------------------------------------- story -- */
-
-/* Running prose, set for reading rather than scanning.
-
-   The gap has to beat the leading or the paragraphs disappear. At 18px over a
-   1.6 line the lines sit 28.8px apart, and a 20px gap put successive
-   paragraphs only 1.1 times that apart — so four of them read as one block.
-
-   24px puts them 1.8 times apart, which is the measure thematicthing.com uses
-   for the same kind of section and is the right one: far enough to separate,
-   near enough to stay one piece of writing. */
-.story { max-width: 58ch; display: grid; gap: 24px; }
-.story p {
-  color: var(--ink-2);
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-.story p:first-child { color: var(--ink); }
-
-.story .signature {
-  margin-top: 12px; padding-top: 18px;
-  border-top: 1px solid var(--rule);
-  font-family: var(--font-mono); font-size: .75rem; font-weight: 500;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3);
-}
-.story .signature::before { content: "— "; color: var(--amber); }

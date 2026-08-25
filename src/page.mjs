@@ -167,7 +167,6 @@ ${g.rows
 
   /* The author's name is a link, so the string keeps its {author} placeholder
      until here rather than being flattened into text by the build. */
-  const signature = esc(t("story.signature")).replace("{author}", esc(cfg.authorName));
   const copyright = esc(t("footer.copyright")).split("{author}");
   const authorLink = `<a href="${cfg.authorUrl}">${esc(cfg.authorName)}</a>`;
 
@@ -381,20 +380,6 @@ ${notSupported}
         </div>
         <div class="faq">
 ${faqItems}
-        </div>
-      </div>
-    </section>
-
-    <section id="story" class="rule">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="marker">05</p>
-          <h2>${esc(t("story.title"))}</h2>
-        </div>
-        <div class="story">
-          <p>${esc(t("story.1"))}</p>
-          <p>${esc(t("story.2"))}</p>
-          <p class="signature">${signature}</p>
         </div>
       </div>
     </section>

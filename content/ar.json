@@ -318,22 +318,6 @@
       "en": "No. Lukotta needs the virtualisation an Apple Silicon Mac provides, and runs on macOS 15 Sequoia or later.",
       "ar": ""
     },
-    "story.title": {
-      "en": "Why this app was created",
-      "ar": ""
-    },
-    "story.1": {
-      "en": "I was backing up a Windows laptop and a Mac onto one external drive. Encrypt it and only one of them can read it, so the supported answer was to buy a second drive and keep two copies of the same files. I was not going to do that.",
-      "ar": ""
-    },
-    "story.2": {
-      "en": "There are command-line tools that solve this on a Mac. They work, but they mean typing a passphrase into a shell and remembering to unmount things afterwards, which is fine if you already know how and no use at all to anyone who does not. So I wrote this instead.",
-      "ar": ""
-    },
-    "story.signature": {
-      "en": "{author}",
-      "ar": ""
-    },
     "footer.privacy": {
       "en": "Privacy",
       "ar": ""
