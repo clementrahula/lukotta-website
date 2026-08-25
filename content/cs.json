@@ -339,8 +339,8 @@
       "cs": "Kontakt"
     },
     "footer.copyright": {
-      "en": "{copyleft} {year} {author}.",
-      "cs": "{copyleft} {year} {author}."
+      "en": "{copyleft} {year} {author}",
+      "cs": "{copyleft} {year} {author}"
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",

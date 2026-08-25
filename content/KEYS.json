@@ -33,7 +33,7 @@
     "formats.specs": "The whole string is a link to SPECS.md. It reads as a sentence, not as a button.",
     "formats.not.body": "A list of what cannot be opened, separated by full stops. Each item is a distinct reason; keep them distinct.",
     "how.lead": "Sits below the three steps, explaining why a Linux virtual machine is involved at all. Three sentences: macOS cannot, Linux can, so a small Linux machine does it.",
-    "footer.copyright": "Contains {copyleft}, which becomes a reversed copyright sign, and {year} and {author}, which become the year and a link to the author's own site. All three must survive, spelled exactly as they are.",
+    "footer.copyright": "Contains {copyleft}, which becomes a reversed copyright sign, and {year} and {author}, which become the year and a link to the author's own site. All three must survive, spelled exactly as they are. There is no full stop at the end.",
     "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is.",
     "name.body": "One paragraph. Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",
     "name.stress": "About where the stress falls when the word is said aloud. The page shows this by setting the first syllable apart, so the sentence and the picture must agree.",

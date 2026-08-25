@@ -89,7 +89,7 @@
     "footer.licence": "Licence",
     "footer.source": "Source",
     "footer.contact": "Contact",
-    "footer.copyright": "{copyleft} {year} {author}.",
+    "footer.copyright": "{copyleft} {year} {author}",
     "footer.gpl": "Free software under the GNU General Public License, version 3 or later."
   }
 }

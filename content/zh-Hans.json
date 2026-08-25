@@ -339,8 +339,8 @@
       "zh-Hans": "联系"
     },
     "footer.copyright": {
-      "en": "{copyleft} {year} {author}.",
-      "zh-Hans": "{copyleft} {year} {author}."
+      "en": "{copyleft} {year} {author}",
+      "zh-Hans": "{copyleft} {year} {author}"
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
