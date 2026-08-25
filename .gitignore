@@ -11,3 +11,6 @@ lukotta-translations.zip
 # Review returned by an outside reviewer. Read, acted on, and kept out of
 # the repository — it is working material, not part of the site.
 translation-review/
+
+# Production-readiness audit. Working material, kept out of the repository.
+audit.md
