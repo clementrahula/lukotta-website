@@ -466,12 +466,6 @@ section.rule { padding-block: clamp(52px, 7vw, 88px); border-top: 1px solid var(
   letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
 }
 
-/* extras */
-.extras { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0 44px; }
-.extra { padding-block: 18px; border-bottom: 1px solid var(--rule); }
-.extra dt { font-weight: 600; font-size: .9688rem; margin-bottom: 4px; }
-.extra dd { margin: 0; color: var(--ink-2); font-size: .9063rem; line-height: 1.55; }
-
 /* ---------------------------------------------------------------- table -- */
 
 .table-scroll { overflow-x: auto; margin-top: 34px; }
@@ -522,8 +516,17 @@ tbody tr:not(.group) th code { color: var(--ink); }
   margin-bottom: 10px;
 }
 .aside p, .aside li { color: var(--ink-2); font-size: .9063rem; line-height: 1.6; }
-.aside li { padding-block: 6px; }
-.aside li + li { border-top: 1px solid var(--rule); }
+.aside .bullets li {
+  padding-block: 5px 5px;
+  padding-inline-start: 18px;
+  position: relative;
+}
+.aside .bullets li::before {
+  content: "";
+  position: absolute; inset-inline-start: 2px; top: .72em;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--amber);
+}
 
 /* ---------------------------------------------------------------- steps -- */
 
@@ -542,19 +545,6 @@ tbody tr:not(.group) th code { color: var(--ink); }
 .steps h3 { margin-bottom: 5px; }
 .steps p { color: var(--ink-2); font-size: .9375rem; max-width: 58ch; }
 
-/* -------------------------------------------------------------- closing -- */
-
-.closing h2 { max-width: 18ch; margin-bottom: 22px; }
-.reqs { margin-top: clamp(40px, 5vw, 56px); max-width: var(--measure); }
-.reqs h3 {
-  font-family: var(--font-mono); font-size: .6875rem; font-weight: 500;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
-  padding-bottom: 10px; border-bottom: 1px solid var(--rule);
-}
-.reqs li {
-  padding-block: 11px; border-bottom: 1px solid var(--rule);
-  color: var(--ink-2); font-size: .9063rem;
-}
 
 /* --------------------------------------------------------------- footer -- */
 
@@ -617,33 +607,6 @@ tbody tr:not(.group) th code { color: var(--ink); }
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
 [dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }
 
-/* ----------------------------------------------------------------- name -- */
-
-.etym { max-width: var(--measure); }
-.etym-word {
-  font-family: var(--font-display);
-  font-size: clamp(2.6rem, 1.6rem + 4vw, 4.2rem);
-  font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  color: var(--ink);
-}
-/* The first syllable is set apart because that is where the stress falls —
-   the sentence below says so, and this shows it. */
-.etym-word .stress { color: var(--amber); }
-
-.etym-meta {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px;
-  margin-top: 16px; padding-bottom: 20px;
-  border-bottom: 1px solid var(--rule);
-}
-.etym-lang {
-  font-family: var(--font-mono); font-size: .6875rem; font-weight: 500;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3);
-}
-.etym-gloss { color: var(--ink-2); font-size: 1.0625rem; }
-.etym .prose { margin-top: 22px; }
-.etym i { font-style: italic; color: var(--ink); }
 
 /* ---------------------------------------------------------------- story -- */
 

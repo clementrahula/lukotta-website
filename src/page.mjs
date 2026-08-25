@@ -84,7 +84,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
 
-  const FAQ_NS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const FAQ_NS = [1, 2, 3, 4, 5, 6];
 
   const faqLd = {
     "@context": "https://schema.org",
@@ -138,15 +138,6 @@ ${g.rows
         </details>`
   ).join("\n");
 
-  const extras = [1, 2, 3, 4, 5, 6, 7]
-    .map(
-      (n) => `          <div class="extra">
-            <dt>${esc(t(`extras.${n}.term`))}</dt>
-            <dd>${esc(t(`extras.${n}.def`))}</dd>
-          </div>`
-    )
-    .join("\n");
-
   const steps = [1, 2, 3]
     .map(
       (n) => `          <li>
@@ -156,12 +147,8 @@ ${g.rows
     )
     .join("\n");
 
-  const permissions = [1, 2, 3]
-    .map((n) => `            <li>${esc(t(`how.permissions.${n}`))}</li>`)
-    .join("\n");
-
-  const requirements = [1, 2, 3]
-    .map((n) => `            <li>${esc(t(`download.req.${n}`))}</li>`)
+  const notSupported = [1, 2, 3, 4, 5]
+    .map((n) => `            <li>${esc(t(`formats.not.${n}`))}</li>`)
     .join("\n");
 
   const langLinks = buildable
@@ -174,7 +161,7 @@ ${g.rows
 
   /* lukko and -tta are Finnish and stay Finnish in all thirty-seven languages,
      so the sentence carries placeholders and the page fills them in. */
-  const etymology = esc(t("name.body"))
+  const nameProse = esc(t("name.body"))
     .replace("{lukko}", '<i lang="fi">lukko</i>')
     .replace("{tta}", '<i lang="fi">-tta</i>');
 
@@ -261,7 +248,7 @@ ${ogAlternates}
       </a>
 
       <nav class="site-nav" aria-label="${esc(t("ui.menu"))}">
-        <a href="#download">${esc(t("nav.download"))}</a>
+        <a href="${cfg.downloadUrl}">${esc(t("nav.download"))}</a>
         <a href="#features">${esc(t("nav.features"))}</a>
         <a href="#how">${esc(t("nav.how"))}</a>
       </nav>
@@ -315,10 +302,26 @@ ${langLinks}
       </div>
     </section>
 
-    <section id="features" class="rule">
+    <section id="how" class="rule">
       <div class="wrap">
         <div class="section-head">
           <p class="marker">01</p>
+          <h2>${esc(t("how.title"))}</h2>
+        </div>
+        <p class="prose"><span class="lead-in">${esc(t("how.lead"))}</span></p>
+
+        <ol class="steps">
+${steps}
+        </ol>
+
+        <p class="note">${esc(t("how.note"))}</p>
+      </div>
+    </section>
+
+    <section id="features" class="rule">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="marker">02</p>
           <h2>${esc(t("features.title"))}</h2>
         </div>
         <div class="prose">
@@ -327,20 +330,7 @@ ${langLinks}
           <p>${esc(t("features.body2"))}</p>
         </div>
 
-        <h3 class="sub">${esc(t("extras.title"))}</h3>
-        <dl class="extras">
-${extras}
-        </dl>
-      </div>
-    </section>
-
-    <section id="formats" class="rule">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="marker">02</p>
-          <h2>${esc(t("formats.title"))}</h2>
-        </div>
-        <p class="prose"><span class="lead-in">${esc(t("formats.lead"))}</span></p>
+        <h3 class="sub">${esc(t("formats.title"))}</h3>
 
         <div class="table-scroll">
           <table class="formats">
@@ -364,29 +354,8 @@ ${tableRows}
 
         <div class="aside">
           <h3>${esc(t("formats.not.title"))}</h3>
-          <p>${esc(t("formats.not.body"))}</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="rule">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="marker">03</p>
-          <h2>${esc(t("how.title"))}</h2>
-        </div>
-        <p class="prose"><span class="lead-in">${esc(t("how.lead"))}</span></p>
-
-        <ol class="steps">
-${steps}
-        </ol>
-
-        <p class="note">${esc(t("how.note"))}</p>
-
-        <div class="aside">
-          <h3>${esc(t("how.permissions.title"))}</h3>
-          <ul>
-${permissions}
+          <ul class="bullets">
+${notSupported}
           </ul>
         </div>
       </div>
@@ -395,19 +364,11 @@ ${permissions}
     <section id="name" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">04</p>
+          <p class="marker">03</p>
           <h2>${esc(t("name.title"))}</h2>
         </div>
-        <div class="etym">
-          <p class="etym-word" lang="fi"><span class="stress">Lú</span>kotta</p>
-          <p class="etym-meta">
-            <span class="etym-lang">${esc(t("name.language"))}</span>
-            <span class="etym-gloss">“${esc(t("name.gloss"))}”</span>
-          </p>
-          <div class="prose">
-            <p>${etymology}</p>
-            <p>${esc(t("name.stress"))}</p>
-          </div>
+        <div class="prose">
+          <p>${nameProse}</p>
         </div>
       </div>
     </section>
@@ -415,7 +376,7 @@ ${permissions}
     <section id="faq" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">05</p>
+          <p class="marker">04</p>
           <h2>${esc(t("faq.title"))}</h2>
         </div>
         <div class="faq">
@@ -427,32 +388,13 @@ ${faqItems}
     <section id="story" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">06</p>
+          <p class="marker">05</p>
           <h2>${esc(t("story.title"))}</h2>
         </div>
         <div class="story">
           <p>${esc(t("story.1"))}</p>
           <p>${esc(t("story.2"))}</p>
-          <p>${esc(t("story.3"))}</p>
-          <p>${esc(t("story.4"))}</p>
           <p class="signature">${signature}</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="download" class="rule closing">
-      <div class="wrap">
-        <h2>${esc(t("download.title"))}</h2>
-        <p class="prose"><span class="lead-in">${esc(t("download.body"))}</span></p>
-        <p class="hero-actions">
-          <a class="btn" href="${cfg.downloadUrl}">${esc(t("download.cta"))}${arrow}</a>
-          <a class="plain" href="${cfg.githubRepo}">${esc(t("download.source"))}</a>
-        </p>
-        <div class="reqs">
-          <h3>${esc(t("download.req.title"))}</h3>
-          <ul>
-${requirements}
-          </ul>
         </div>
       </div>
     </section>

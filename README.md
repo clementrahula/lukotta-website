@@ -189,16 +189,18 @@ it is the other way round: amber fills and the dark ink reads on top of it.
 
 ## The page
 
-One page, five parts, in this order:
+One page, six parts, in this order:
 
 1. **Hero** — the claim, the download, the screenshot.
-2. **01 What it does** — in prose, then seven short extras.
-3. **02 What it supports** — one table: encryption, filesystems and disk images,
-   each with a Read and a Write column. This is the centrepiece, and it links to
-   `SPECS.md` for the full detail.
-4. **03 How it works** — the Linux virtual machine, three steps, and the
-   permissions it asks for.
-5. **Download** — the call to action and the requirements.
+2. **01 How it works** — the Linux virtual machine, and three steps.
+3. **02 Features** — what it does in prose, then one table: encryption,
+   filesystems and disk images, each with a Read and a Write column, and what is
+   not supported. The table is the centrepiece and links to `SPECS.md`.
+4. **03 About the name** — one paragraph.
+5. **04 Questions** — six, also published as `FAQPage` structured data.
+6. **05 Why this app was created** — two paragraphs, first person, signed. The
+   page ends here; there is no closing call to action, and Download in the
+   header goes straight to the releases page.
 
 There are no cards, no shadows and no gradients; a hairline is what separates
 one thing from another. Everything is set from the left.
