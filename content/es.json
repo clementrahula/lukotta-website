@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "es": "Abre discos BitLocker, NTFS, LUKS y Linux en tu Mac. Escribe la contraseña y el disco aparece en el Finder, en lectura y escritura. Software libre y gratuito."
+      "es": "Abre discos BitLocker, NTFS, LUKS y Linux en tu Mac. Escribe la contraseña y el disco aparece en el Finder, en lectura y escritura. Gratis y de código abierto."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,11 +56,11 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "es": "Envía esta página a tu Mac y descárgala allí; AirDrop está en la lista que se abre. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
+      "es": "Envía esta página a tu Mac y descarga el archivo allí; AirDrop está en la lista que se abre. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "es": "Copia el enlace y ábrelo en tu Mac para descargarlo allí. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
+      "es": "Copia el enlace y ábrelo en tu Mac para descargar el archivo allí. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "es": "Sí. ext2, ext3, ext4, btrfs y XFS se abren, tanto sueltos como dentro de un cifrado LUKS. Un disco organizado con LVM abre todos sus volúmenes juntos."
+      "es": "Sí. ext2, ext3, ext4, btrfs y XFS se abren, tanto sin cifrar como dentro de un cifrado LUKS. Un disco organizado con LVM abre todos sus volúmenes juntos."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "es": "Privacidad"
+      "es": "Política de privacidad"
     },
     "footer.licence": {
       "en": "Licence",

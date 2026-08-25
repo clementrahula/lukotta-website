@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ms": "Buka pemacu BitLocker, NTFS, LUKS dan Linux pada Mac anda. Taip kata laluan dan pemacu muncul dalam Finder, boleh dibaca dan ditulis. Perisian bebas."
+      "ms": "Buka pemacu BitLocker, NTFS, LUKS dan Linux pada Mac anda. Taip kata laluan dan pemacu muncul dalam Finder, boleh dibaca dan ditulis. Percuma dan sumber terbuka."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ms": "Hantar halaman ini ke Mac anda dan muat turunnya di sana; AirDrop ada dalam senarai yang terbuka. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
+      "ms": "Hantar halaman ini ke Mac anda dan muat turun fail di sana; AirDrop ada dalam senarai yang terbuka. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ms": "Lukotta membuka pemacu dan imej cakera yang enggan dibaca oleh macOS, lalu menyerahkannya kepada Finder sebagai volum biasa."
+      "ms": "Lukotta membuka pemacu dan imej cakera yang tidak dapat dibaca oleh macOS, lalu menyerahkannya kepada Finder sebagai volum biasa."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -300,7 +300,7 @@
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "ms": "Imej yang merujuk fail lain: rantaian syot kilat VMware, VHD pembezaan, atau qcow2 dengan fail sandaran"
+      "ms": "Imej yang merujuk fail lain: rantaian syot kilat VMware, VHD pembezaan, atau qcow2 dengan fail asas"
     },
     "name.title": {
       "en": "The Name",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ms": "Boleh. ext2, ext3, ext4, btrfs dan XFS dibuka, sama ada terdedah atau di dalam penyulitan LUKS. Pemacu yang disusun dengan LVM membuka semua volumnya serentak."
+      "ms": "Boleh. ext2, ext3, ext4, btrfs dan XFS dibuka, sama ada tanpa penyulitan atau di dalam penyulitan LUKS. Pemacu yang disusun dengan LVM membuka semua volumnya serentak."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "ms": "Privasi"
+      "ms": "Dasar Privasi"
     },
     "footer.licence": {
       "en": "Licence",

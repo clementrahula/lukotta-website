@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "vi": "Mở ổ đĩa BitLocker, NTFS, LUKS và Linux trên máy Mac. Nhập mật khẩu và ổ đĩa hiện ra trong Finder, đọc và ghi được. Phần mềm tự do, miễn phí."
+      "vi": "Mở ổ đĩa BitLocker, NTFS, LUKS và Linux trên máy Mac. Nhập mật khẩu và ổ đĩa hiện trong Finder, đọc và ghi được. Miễn phí, mã nguồn mở."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "vi": "Mật khẩu của phân vùng, một cụm mật khẩu LUKS, hoặc một khoá khôi phục BitLocker gồm 48 chữ số."
+      "vi": "Mật khẩu của ổ đĩa, một cụm mật khẩu LUKS, hoặc một khoá khôi phục BitLocker gồm 48 chữ số."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "vi": "Phân vùng hiện ra ở mục Vị trí, và đọc, ghi, tháo ra như mọi ổ đĩa khác."
+      "vi": "Ổ đĩa hiện ra ở mục Vị trí, và đọc, ghi, tháo ra như mọi ổ đĩa khác."
     },
     "features.title": {
       "en": "Features",
@@ -172,7 +172,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "vi": "Nó nhận ổ đĩa vật lý và tệp ảnh đĩa như nhau. Phân vùng BitLocker mở bằng mật khẩu của nó hoặc bằng khoá khôi phục 48 chữ số, còn phân vùng BitLocker và NTFS thì vừa đọc vừa ghi, nên có thể chép tệp vào ổ đĩa chứ không chỉ chép ra."
+      "vi": "Nó nhận ổ đĩa vật lý và ảnh đĩa như nhau. Một ổ đĩa BitLocker mở bằng mật khẩu của nó hoặc bằng khoá khôi phục 48 chữ số, còn các ổ đĩa BitLocker và NTFS thì vừa đọc vừa ghi, nên có thể chép tệp vào ổ đĩa chứ không chỉ chép ra."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -220,7 +220,7 @@
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "vi": "Mở khoá bằng mật khẩu phân vùng hoặc khoá khôi phục 48 chữ số"
+      "vi": "Mở khoá bằng mật khẩu ổ đĩa hoặc khoá khôi phục 48 chữ số"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
@@ -228,11 +228,11 @@
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "vi": "Nhiều phân vùng trên cùng một ổ đĩa mở khoá cùng lúc"
+      "vi": "Nhiều ổ đĩa trên cùng một ổ vật lý mở khoá cùng lúc"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "vi": "Kể cả phân vùng bị Windows để ở chế độ ngủ đông hoặc đóng không đúng cách"
+      "vi": "Kể cả ổ đĩa bị Windows để ở chế độ ngủ đông hoặc đóng không đúng cách"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "vi": "Ổ đĩa gắn với chip TPM thay vì mật khẩu, kể cả kiểu mã hoá bằng phần cứng trong các bản Ubuntu mới"
+      "vi": "Ổ đĩa gắn với chip TPM thay vì mật khẩu, kể cả kiểu mã hoá được phần cứng hỗ trợ trong các bản Ubuntu mới"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -300,7 +300,7 @@
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "vi": "Tệp ảnh trỏ tới tệp khác: chuỗi ảnh chụp VMware, VHD vi sai, hoặc qcow2 có tệp nền"
+      "vi": "Ảnh đĩa trỏ tới tệp khác: chuỗi snapshot VMware, VHD vi sai, hoặc qcow2 có tệp nền"
     },
     "name.title": {
       "en": "The Name",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "vi": "Có, và ghi được lên đó. Nhập mật khẩu phân vùng hoặc dán khoá khôi phục 48 chữ số, rồi ổ đĩa mở ra trong Finder."
+      "vi": "Có, và ghi được lên đó. Nhập mật khẩu ổ đĩa hoặc dán khoá khôi phục 48 chữ số, rồi ổ đĩa mở ra trong Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "vi": "Có. ext2, ext3, ext4, btrfs và XFS đều mở được, để trần hay nằm trong mã hoá LUKS. Ổ đĩa dựng bằng LVM sẽ mở tất cả phân vùng cùng lúc."
+      "vi": "Có. ext2, ext3, ext4, btrfs và XFS đều mở được, không mã hoá hoặc nằm trong mã hoá LUKS. Ổ đĩa dựng bằng LVM sẽ mở tất cả ổ đĩa của nó cùng lúc."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -356,7 +356,7 @@
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "vi": "Có, mà không cần khởi động máy ảo. Mở tệp ảnh qcow2, VMDK, VDI, VHD hoặc VHDX rồi chép tệp ra khỏi nó, hoặc chép vào."
+      "vi": "Có, mà không cần khởi động máy ảo. Mở ảnh đĩa qcow2, VMDK, VDI, VHD hoặc VHDX rồi chép tệp ra khỏi nó, hoặc chép vào."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "vi": "Quyền riêng tư"
+      "vi": "Chính sách quyền riêng tư"
     },
     "footer.licence": {
       "en": "Licence",

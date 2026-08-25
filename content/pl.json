@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "pl": "Otwórz dyski BitLocker, NTFS, LUKS i Linux na Macu. Wpisz hasło, a dysk pojawi się w Finderze, do odczytu i zapisu. Wolne oprogramowanie, za darmo."
+      "pl": "Otwórz dyski BitLocker, NTFS, LUKS i Linux na komputerze Mac. Wpisz hasło, a dysk pojawi się w aplikacji Finder, do odczytu i zapisu. Za darmo i open source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -20,7 +20,7 @@
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "pl": "Podłącz dysk albo otwórz obraz dysku, wpisz hasło, a pojawi się w Finderze, do odczytu i zapisu, jak każdy inny dysk."
+      "pl": "Podłącz dysk albo otwórz obraz dysku, wpisz hasło, a pojawi się w aplikacji Finder, do odczytu i zapisu, jak każdy inny dysk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -40,31 +40,31 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "pl": "Lukotta to program dla Maca"
+      "pl": "Lukotta to program dla komputerów Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na Macu z Apple Silicon i nie zadziała na telefonie ani tablecie."
+      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na komputerze Mac z Apple Silicon i nie zadziała na telefonie ani tablecie."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na Macu z Apple Silicon i nie zadziała na systemie {system}."
+      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na komputerze Mac z Apple Silicon i nie zadziała, jeśli używany jest {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "pl": "tym"
+      "pl": "ten system"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "pl": "Wyślij tę stronę na swojego Maca i pobierz ją tam; AirDrop jest na liście, która się otworzy. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
+      "pl": "Wyślij tę stronę na swój komputer Mac i pobierz tam plik; AirDrop jest na liście, która się otworzy. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "pl": "Skopiuj odnośnik i otwórz go na Macu, żeby pobrać tam. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
+      "pl": "Skopiuj odnośnik i otwórz go na komputerze Mac, żeby pobrać tam plik. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "pl": "Wyślij na Maca"
+      "pl": "Wyślij na komputer Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "pl": "Podłącz dysk albo otwórz obraz dysku i wpisz hasło, a pojawi się w Finderze. Do odczytu i zapisu, jak każdy inny dysk."
+      "pl": "Podłącz dysk albo otwórz obraz dysku i wpisz hasło, a pojawi się w aplikacji Finder. Do odczytu i zapisu, jak każdy inny dysk."
     },
     "hero.download": {
       "en": "Download",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "pl": "Kod źródłowy na GitHubie"
+      "pl": "Kod źródłowy w serwisie GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "pl": "Okno programu Lukotta na macOS z listą dysków podłączonych do Maca i tym, co każdy z nich zawiera."
+      "pl": "Okno programu Lukotta na macOS z listą dysków podłączonych do komputera Mac i tym, co każdy z nich zawiera."
     },
     "how.title": {
       "en": "How It Works",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "pl": "macOS nie potrafi czytać BitLockera ani systemów plików Linuksa. Linux potrafi. Lukotta uruchamia małą maszynę wirtualną z Linuksem, odblokowuje w niej dysk i przekazuje go Finderowi."
+      "pl": "macOS nie potrafi czytać formatu BitLocker ani systemów plików Linux. Linux potrafi. Lukotta uruchamia małą maszynę wirtualną z systemem Linux, odblokowuje w niej dysk i przekazuje go do aplikacji Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -152,15 +152,15 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "pl": "Hasło woluminu, hasło LUKS albo 48-cyfrowy klucz odzyskiwania BitLockera."
+      "pl": "Hasło woluminu, hasło dostępu LUKS albo 48-cyfrowy klucz odzyskiwania BitLocker."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "pl": "Otwórz go w Finderze"
+      "pl": "Otwórz go w aplikacji Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "pl": "Wolumin pojawia się w Lokalizacjach i daje się czytać, zapisywać i wysuwać jak każdy inny dysk."
+      "pl": "Wolumin pojawia się w sekcji Miejsca i daje się czytać, zapisywać i wysuwać jak każdy inny dysk."
     },
     "features.title": {
       "en": "Features",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "pl": "Lukotta otwiera dyski i obrazy dysków, których macOS nie chce czytać, i przekazuje je Finderowi jako zwykłe woluminy."
+      "pl": "Lukotta otwiera dyski i obrazy dysków, których macOS nie chce czytać, i przekazuje je do aplikacji Finder jako zwykłe woluminy."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "pl": "Odblokowywany hasłem"
+      "pl": "Odblokowywany hasłem dostępu"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "pl": "To, co zawiera OVA. Zapisywany jednym przebiegiem, więc nie da się go zmienić w miejscu"
+      "pl": "To, co zawiera OVA. Zapisywany jednym przebiegiem, więc nie da się go zmienić bezpośrednio"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "pl": "Dyski przypisane do układu TPM zamiast do hasła, w tym nowsze szyfrowanie sprzętowe w Ubuntu"
+      "pl": "Dyski przypisane do TPM zamiast do hasła, w tym nowsze szyfrowanie w Ubuntu wspierane sprzętowo"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "pl": "Tak, i zapisuje na nich. Wpisz hasło woluminu albo wklej 48-cyfrowy klucz odzyskiwania, a dysk otworzy się w Finderze."
+      "pl": "Tak, i zapisuje na nich. Wpisz hasło woluminu albo wklej 48-cyfrowy klucz odzyskiwania, a dysk otworzy się w aplikacji Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "pl": "Tak. ext2, ext3, ext4, btrfs i XFS otwierają się, same albo wewnątrz szyfrowania LUKS. Dysk zbudowany na LVM otwiera wszystkie swoje woluminy razem."
+      "pl": "Tak. ext2, ext3, ext4, btrfs i XFS otwierają się bez szyfrowania albo wewnątrz szyfrowania LUKS. Dysk zbudowany na LVM otwiera wszystkie swoje woluminy razem."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -360,7 +360,7 @@
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "pl": "Czy Lukotta działa na Macu z procesorem Intel?"
+      "pl": "Czy Lukotta działa na komputerze Mac z procesorem Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "pl": "Prywatność"
+      "pl": "Polityka prywatności"
     },
     "footer.licence": {
       "en": "Licence",

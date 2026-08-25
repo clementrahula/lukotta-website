@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "pt-PT": "Abra discos BitLocker, NTFS, LUKS e Linux no seu Mac. Escreva a palavra-passe e o disco aparece no Finder, para ler e escrever. Software livre e gratuito."
+      "pt-PT": "Abra discos BitLocker, NTFS, LUKS e Linux no seu Mac. Escreva a palavra-passe e o disco aparece no Finder, para ler e escrever. Gratuito e de código aberto."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -48,7 +48,7 @@
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "pt-PT": "Precisa de macOS 15 Sequoia ou posterior num Mac com Apple Silicon, e não funciona em {system}."
+      "pt-PT": "Precisa de macOS 15 Sequoia ou posterior num Mac com Apple Silicon, e {system} não o consegue executar."
     },
     "dialog.thisSystem": {
       "en": "this system",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "pt-PT": "Envie esta página para o seu Mac e transfira-a aí; o AirDrop está na lista que abre. Pode transferir o ficheiro aqui na mesma, mas nada neste dispositivo o abrirá."
+      "pt-PT": "Envie esta página para o seu Mac e transfira o ficheiro aí; o AirDrop está na lista que abre. Pode transferir o ficheiro aqui na mesma, mas nada neste dispositivo o abrirá."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "pt-PT": "O que um OVA contém. É escrito numa só passagem, pelo que não pode ser alterado no lugar"
+      "pt-PT": "O que um OVA contém. É escrito numa só passagem, pelo que não pode ser alterado diretamente"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "pt-PT": "Discos selados a um chip TPM em vez de a uma palavra-passe, incluindo a encriptação por hardware das versões recentes do Ubuntu"
+      "pt-PT": "Discos selados a um TPM em vez de a uma palavra-passe, incluindo a encriptação suportada por hardware das versões recentes do Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "pt-PT": "Sim. ext2, ext3, ext4, btrfs e XFS abrem-se, à vista ou dentro de encriptação LUKS. Um disco organizado com LVM abre todos os seus volumes em conjunto."
+      "pt-PT": "Sim. ext2, ext3, ext4, btrfs e XFS abrem-se, sem encriptação ou dentro de encriptação LUKS. Um disco organizado com LVM abre todos os seus volumes em conjunto."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "pt-PT": "Privacidade"
+      "pt-PT": "Política de Privacidade"
     },
     "footer.licence": {
       "en": "Licence",

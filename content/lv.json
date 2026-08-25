@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "lv": "Atveriet BitLocker, NTFS, LUKS un Linux diskus savā Mac datorā. Ievadiet paroli, un disks parādās Finder logā, lasāms un rakstāms. Brīva programmatūra."
+      "lv": "Atveriet BitLocker, NTFS, LUKS un Linux diskus savā Mac datorā. Ievadiet paroli, un disks parādās Finder logā, lasāms un rakstāms. Bezmaksas un atvērtā pirmkoda."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -48,15 +48,15 @@
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "lv": "Tai vajadzīga macOS 15 Sequoia vai jaunāka Mac datorā ar Apple Silicon, un tā nedarbosies sistēmā {system}."
+      "lv": "Tai vajadzīga macOS 15 Sequoia vai jaunāka Mac datorā ar Apple Silicon, un tā nedarbosies, ja izmantosiet {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "lv": "šajā"
+      "lv": "šo sistēmu"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "lv": "Nosūtiet šo lapu uz savu Mac un lejupielādējiet to tur; AirDrop ir sarakstā, kas atveras. Failu joprojām varat lejupielādēt šeit, taču šajā ierīcē to nekas neatvērs."
+      "lv": "Nosūtiet šo lapu uz savu Mac un lejupielādējiet failu tur; AirDrop ir sarakstā, kas atveras. Failu joprojām varat lejupielādēt šeit, taču šajā ierīcē to nekas neatvērs."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -172,7 +172,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "lv": "Tā vienlīdz pieņem fiziskus diskus un attēlu failus. BitLocker sējums atveras ar savu paroli vai ar 48 ciparu atkopšanas atslēgu, un BitLocker un NTFS sējumi tiek gan lasīti, gan rakstīti, tāpēc failus var kopēt uz disku tikpat labi kā no tā."
+      "lv": "Tā pieņem gan fiziskus diskus, gan attēlu failus. BitLocker sējums atveras ar savu paroli vai ar 48 ciparu atkopšanas atslēgu, un BitLocker un NTFS sējumi tiek gan lasīti, gan rakstīti, tāpēc failus var kopēt uz disku tikpat labi kā no tā."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lv": "Tas, ko satur OVA. Tiek rakstīts vienā piegājienā, tāpēc to nevar mainīt uz vietas"
+      "lv": "Tas, ko satur OVA. Tiek rakstīts vienā piegājienā, tāpēc to nevar mainīt tieši"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "lv": "Diski, kas piesaistīti TPM mikroshēmai, nevis parolei, tostarp jaunākā aparatūras šifrēšana Ubuntu sistēmā"
+      "lv": "Diski, kas piesaistīti TPM, nevis parolei, tostarp jaunākā Ubuntu šifrēšana, ko nodrošina aparatūra"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "lv": "Jā. ext2, ext3, ext4, btrfs un XFS atveras, atsevišķi vai LUKS šifrējuma iekšienē. Disks, kas veidots ar LVM, atver visus savus sējumus kopā."
+      "lv": "Jā. ext2, ext3, ext4, btrfs un XFS atveras nešifrēti vai LUKS šifrējuma iekšienē. Disks, kas veidots ar LVM, atver visus savus sējumus kopā."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "lv": "Privātums"
+      "lv": "Privātuma politika"
     },
     "footer.licence": {
       "en": "Licence",

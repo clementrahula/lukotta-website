@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "lt": "Atverkite BitLocker, NTFS, LUKS ir Linux diskus savo Mac kompiuteryje. Įveskite slaptažodį ir diskas atsiras Finder lange, skaitomas ir rašomas."
+      "lt": "Atverkite BitLocker, NTFS, LUKS ir Linux diskus Mac kompiuteryje. Įveskite slaptažodį: diskas atsiras Finder lange, skaitomas ir rašomas. Nemokama ir atvirojo kodo."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -48,11 +48,11 @@
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "lt": "Jai reikia macOS 15 Sequoia arba naujesnės Mac kompiuteryje su Apple Silicon, ir ji neveiks sistemoje {system}."
+      "lt": "Jai reikia macOS 15 Sequoia arba naujesnės Mac kompiuteryje su Apple Silicon, ir jos negalima paleisti naudojant {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "lt": "šioje"
+      "lt": "šią sistemą"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
@@ -104,7 +104,7 @@
     },
     "nav.how": {
       "en": "How It Works",
-      "lt": "Kaip veikia"
+      "lt": "Kaip tai veikia"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
@@ -132,7 +132,7 @@
     },
     "how.title": {
       "en": "How It Works",
-      "lt": "Kaip veikia"
+      "lt": "Kaip tai veikia"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "lt": "Tomas atsiranda skiltyje Vietos ir yra skaitomas, rašomas bei išstumiamas kaip bet kuris kitas diskas."
+      "lt": "Tomas atsiranda skiltyje Locations ir yra skaitomas, rašomas bei išstumiamas kaip bet kuris kitas diskas."
     },
     "features.title": {
       "en": "Features",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lt": "Tai, ką turi OVA. Rašomas vienu ypu, todėl vietoje jo pakeisti negalima"
+      "lt": "Tai, ką turi OVA. Rašomas vienu ypu, todėl jo negalima tiesiogiai keisti"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "lt": "Diskai, susieti su TPM lustu, o ne su slaptažodžiu, įskaitant naujesnį aparatinį šifravimą Ubuntu sistemoje"
+      "lt": "Diskai, susieti su TPM, o ne su slaptažodžiu, įskaitant naujesnį Ubuntu šifravimą, paremtą aparatine įranga"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "lt": "Taip. ext2, ext3, ext4, btrfs ir XFS atsiveria, atskirai arba LUKS šifravimo viduje. Diskas, sutvarkytas su LVM, atveria visus savo tomus kartu."
+      "lt": "Taip. ext2, ext3, ext4, btrfs ir XFS atsiveria nešifruoti arba LUKS šifravimo viduje. Diskas, sutvarkytas su LVM, atveria visus savo tomus kartu."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "lt": "Privatumas"
+      "lt": "Privatumo politika"
     },
     "footer.licence": {
       "en": "Licence",

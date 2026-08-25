@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "id": "Buka drive BitLocker, NTFS, LUKS, dan Linux di Mac Anda. Ketik kata sandi dan drive muncul di Finder, bisa dibaca dan ditulis. Perangkat lunak bebas."
+      "id": "Buka drive BitLocker, NTFS, LUKS, dan Linux di Mac Anda. Ketik kata sandi dan drive muncul di Finder, bisa dibaca dan ditulis. Gratis dan sumber terbuka."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -44,11 +44,11 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "id": "Ia butuh macOS 15 Sequoia atau lebih baru di Mac dengan Apple Silicon, dan tidak akan jalan di ponsel atau tablet."
+      "id": "Lukotta memerlukan macOS 15 Sequoia atau lebih baru pada Mac dengan Apple Silicon, dan tidak akan berjalan di ponsel atau tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "id": "Ia butuh macOS 15 Sequoia atau lebih baru di Mac dengan Apple Silicon, dan tidak akan jalan di {system}."
+      "id": "Lukotta memerlukan macOS 15 Sequoia atau lebih baru pada Mac dengan Apple Silicon, dan tidak akan berjalan di {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "id": "Lukotta membuka drive dan image disk yang menolak dibaca oleh macOS, lalu menyerahkannya ke Finder sebagai volume biasa."
+      "id": "Lukotta membuka drive dan image disk yang tidak dapat dibaca macOS, lalu menyerahkannya ke Finder sebagai volume biasa."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -252,7 +252,7 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "id": "VMware, datar dan jarang"
+      "id": "VMware, flat dan sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
@@ -272,11 +272,11 @@
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "id": "Setiap format selengkapnya, dan bagaimana masing-masing dibaca dan ditulis"
+      "id": "Detail lengkap setiap format, termasuk cara masing-masing dibaca dan ditulis"
     },
     "formats.experimental": {
       "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
-      "id": "Dukungan untuk format ini bersifat eksperimental. Menulis ke sana belum diuji secara luas."
+      "id": "Dukungan untuk format ini bersifat eksperimental. Penulisan ke format tersebut belum diuji secara luas."
     },
     "formats.not.title": {
       "en": "Not supported",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "id": "Ya. ext2, ext3, ext4, btrfs, dan XFS terbuka, polos maupun di dalam enkripsi LUKS. Drive yang ditata dengan LVM membuka semua volumenya sekaligus."
+      "id": "Ya. ext2, ext3, ext4, btrfs, dan XFS terbuka, baik tanpa enkripsi maupun di dalam enkripsi LUKS. Drive yang ditata dengan LVM membuka semua volumenya sekaligus."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "id": "Privasi"
+      "id": "Kebijakan Privasi"
     },
     "footer.licence": {
       "en": "Licence",

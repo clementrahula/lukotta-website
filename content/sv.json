@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "sv": "Öppna BitLocker-, NTFS-, LUKS- och Linux-diskar på din Mac. Skriv lösenordet så dyker disken upp i Finder, läs- och skrivbar. Fri programvara, gratis."
+      "sv": "Öppna BitLocker-, NTFS-, LUKS- och Linux-diskar på din Mac. Skriv lösenordet så visas disken i Finder, läs- och skrivbar. Gratis och öppen källkod."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "sv": "Skicka den här sidan till din Mac och hämta den där; AirDrop finns i listan som öppnas. Du kan ändå hämta filen här, men inget på den här enheten kan öppna den."
+      "sv": "Skicka den här sidan till din Mac och hämta filen där; AirDrop finns i listan som öppnas. Du kan ändå hämta filen här, men inget på den här enheten kan öppna den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "sv": "Lukotta-fönstret på macOS med de diskar som är anslutna till datorn och vad var och en innehåller."
+      "sv": "Lukotta-fönstret på macOS med de diskar som är anslutna till Mac och vad var och en innehåller."
     },
     "how.title": {
       "en": "How It Works",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "sv": "Volymens lösenord, en LUKS-lösenordsfras eller en 48-siffrig BitLocker-återställningsnyckel."
+      "sv": "Volymens lösenord, en LUKS-lösenfras eller en 48-siffrig BitLocker-återställningsnyckel."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "sv": "Låses upp med lösenordsfrasen"
+      "sv": "Låses upp med lösenfrasen"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sv": "Det som en OVA innehåller. Skrivs i en enda omgång och går därför inte att ändra på plats"
+      "sv": "Det som en OVA innehåller. Skrivs i en enda omgång och går därför inte att ändra direkt"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,11 +288,11 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "sv": "Diskar som är låsta till ett TPM-chip i stället för till ett lösenord, däribland den nyare hårdvarukrypteringen i Ubuntu"
+      "sv": "Diskar som är låsta till ett TPM-chip i stället för till ett lösenord, däribland den nyare hårdvarustödda krypteringen i Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "sv": "LUKS-volymer vars huvud förvaras skilt från disken"
+      "sv": "LUKS-volymer vars header förvaras skilt från disken"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "sv": "Ja. ext2, ext3, ext4, btrfs och XFS öppnas, bara eller inuti en LUKS-kryptering. En disk som satts upp med LVM öppnar alla sina volymer tillsammans."
+      "sv": "Ja. ext2, ext3, ext4, btrfs och XFS öppnas, okrypterade eller inuti LUKS-kryptering. En disk som satts upp med LVM öppnar alla sina volymer tillsammans."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",

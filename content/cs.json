@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "cs": "Otevřete disky BitLocker, NTFS, LUKS a Linux na Macu. Zadejte heslo a disk se objeví ve Finderu, ke čtení i zápisu. Svobodný software zdarma."
+      "cs": "Otevřete disky BitLocker, NTFS, LUKS a Linux na počítači Mac. Zadejte heslo a disk se objeví ve Finderu, ke čtení i zápisu. Zdarma a s otevřeným zdrojovým kódem."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -44,23 +44,23 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "cs": "Vyžaduje macOS 15 Sequoia nebo novější na Macu s Apple Silicon a na telefonu ani tabletu nepoběží."
+      "cs": "Vyžaduje macOS 15 Sequoia nebo novější na počítači Mac s Apple Silicon a na telefonu ani tabletu nepoběží."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "cs": "Vyžaduje macOS 15 Sequoia nebo novější na Macu s Apple Silicon a na systému {system} nepoběží."
+      "cs": "Vyžaduje macOS 15 Sequoia nebo novější na počítači Mac s Apple Silicon a {system} ho nespustí."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "cs": "tomto"
+      "cs": "tento systém"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "cs": "Pošlete tuto stránku na svůj Mac a stáhněte ji tam; AirDrop je v seznamu, který se otevře. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
+      "cs": "Pošlete tuto stránku na svůj Mac a soubor stáhněte tam; AirDrop je v seznamu, který se otevře. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "cs": "Zkopírujte odkaz a otevřete jej na Macu, ať stáhnete tam. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
+      "cs": "Zkopírujte odkaz a otevřete jej na počítači Mac; soubor pak stáhněte tam. Soubor můžete stáhnout i zde, ale na tomto zařízení jej nic neotevře."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "cs": "Zdrojový kód na GitHubu"
+      "cs": "Zdrojový kód na webu GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "cs": "Okno aplikace Lukotta v macOS se seznamem disků připojených k Macu a tím, co každý obsahuje."
+      "cs": "Okno aplikace Lukotta v macOS se seznamem disků připojených k počítači Mac a tím, co každý obsahuje."
     },
     "how.title": {
       "en": "How It Works",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "cs": "Heslo svazku, heslo LUKS nebo 48místný obnovovací klíč BitLocker."
+      "cs": "Heslo svazku, přístupová fráze LUKS nebo 48místný obnovovací klíč BitLocker."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "cs": "Odemyká se heslem"
+      "cs": "Odemyká se přístupovou frází"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -232,7 +232,7 @@
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "cs": "Včetně svazku, který Windows nechal uspaný nebo špatně uzavřený"
+      "cs": "Včetně svazku, který Windows ponechal v nečistém stavu nebo hibernovaný"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "cs": "Ano. ext2, ext3, ext4, btrfs a XFS se otevřou, samotné i uvnitř šifrování LUKS. Disk uspořádaný pomocí LVM otevře všechny své svazky najednou."
+      "cs": "Ano. ext2, ext3, ext4, btrfs a XFS se otevřou nešifrované i uvnitř šifrování LUKS. Disk uspořádaný pomocí LVM otevře všechny své svazky najednou."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -360,7 +360,7 @@
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "cs": "Funguje Lukotta na Macu s procesorem Intel?"
+      "cs": "Funguje Lukotta na počítači Mac s procesorem Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "cs": "Soukromí"
+      "cs": "Zásady ochrany soukromí"
     },
     "footer.licence": {
       "en": "Licence",

@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "nb": "Send denne siden til Mac-en din og last den ned der; AirDrop står i listen som åpnes. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
+      "nb": "Send denne siden til Mac-maskinen din og last ned filen der; AirDrop står i listen som åpnes. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "nb": "Lukotta-vinduet på macOS med stasjonene som er koblet til maskinen, og hva hver enkelt inneholder."
+      "nb": "Lukotta-vinduet på macOS med stasjonene som er koblet til Mac-en, og hva hver enkelt inneholder."
     },
     "how.title": {
       "en": "How It Works",
@@ -252,11 +252,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "nb": "VMware, flat og tynn"
+      "nb": "VMware, flat og sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "nb": "Det en OVA inneholder. Skrives i én omgang og kan derfor ikke endres på stedet"
+      "nb": "Det en OVA inneholder. Skrives i én omgang og kan derfor ikke endres direkte"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "nb": "Stasjoner som er bundet til en TPM-brikke i stedet for et passord, blant dem den nyere maskinvarekrypteringen i Ubuntu"
+      "nb": "Stasjoner som er bundet til en TPM i stedet for et passord, blant dem den nyere maskinvarestøttede krypteringen i Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "nb": "Ja. ext2, ext3, ext4, btrfs og XFS åpnes, bare eller inne i en LUKS-kryptering. En stasjon satt opp med LVM åpner alle volumene sine samtidig."
+      "nb": "Ja. ext2, ext3, ext4, btrfs og XFS åpnes, ukryptert eller inne i en LUKS-kryptering. En stasjon satt opp med LVM åpner alle volumene sine samtidig."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "nb": "Personvern"
+      "nb": "Personvernerklæring"
     },
     "footer.licence": {
       "en": "Licence",

@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ro": "Deschide discuri BitLocker, NTFS, LUKS și Linux pe Mac. Scrie parola și discul apare în Finder, gata de citire și scriere. Software liber, gratuit."
+      "ro": "Deschide discuri BitLocker, NTFS, LUKS și Linux pe Mac. Scrie parola și discul apare în Finder, gata de citire și scriere. Gratuit și cu sursă deschisă."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ro": "Trimite această pagină pe Mac-ul tău și descarcă acolo; AirDrop este în lista care se deschide. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
+      "ro": "Trimite această pagină pe computerul tău Mac și descarcă fișierul acolo; AirDrop este în lista care se deschide. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "ro": "macOS nu știe să citească BitLocker și nici sistemele de fișiere Linux. Linux știe. Lukotta pornește o mică mașină virtuală cu Linux, deblochează discul înăuntru și îl predă înapoi Finderului."
+      "ro": "macOS nu știe să citească BitLocker și nici sistemele de fișiere Linux. Linux știe. Lukotta pornește o mică mașină virtuală cu Linux, deblochează discul înăuntru și îl predă înapoi aplicației Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ro": "Lukotta deschide discurile și imaginile de disc pe care macOS refuză să le citească și le predă Finderului ca volume obișnuite."
+      "ro": "Lukotta deschide discurile și imaginile de disc pe care macOS refuză să le citească și le predă aplicației Finder ca volume obișnuite."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ro": "Ce conține un OVA. Se scrie dintr-o singură trecere, deci nu poate fi modificat pe loc"
+      "ro": "Ce conține un OVA. Se scrie dintr-o singură trecere, deci nu poate fi modificat direct"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "ro": "Discurile legate de un cip TPM în locul unei parole, inclusiv criptarea hardware din versiunile recente de Ubuntu"
+      "ro": "Discurile legate de un TPM în locul unei parole, inclusiv criptarea bazată pe hardware din versiunile recente de Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ro": "Da. ext2, ext3, ext4, btrfs și XFS se deschid, simple sau în interiorul unei criptări LUKS. Un disc organizat cu LVM își deschide toate volumele împreună."
+      "ro": "Da. ext2, ext3, ext4, btrfs și XFS se deschid, necriptate sau în interiorul unei criptări LUKS. Un disc organizat cu LVM își deschide toate volumele împreună."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "ro": "Confidențialitate"
+      "ro": "Politica de confidențialitate"
     },
     "footer.licence": {
       "en": "Licence",

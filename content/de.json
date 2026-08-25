@@ -44,11 +44,11 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Apple-Silicon-Mac und läuft nicht auf einem Telefon oder Tablet."
+      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Mac mit Apple Silicon und läuft nicht auf einem Telefon oder Tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Apple-Silicon-Mac und läuft nicht auf {system}."
+      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Mac mit Apple Silicon und läuft nicht auf {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
@@ -56,11 +56,11 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "de": "Schicken Sie diese Seite an Ihren Mac und laden Sie sie dort; AirDrop steht in der Liste, die sich öffnet. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
+      "de": "Schicken Sie diese Seite an Ihren Mac und laden Sie die Datei dort herunter; AirDrop steht in der Liste, die sich öffnet. Sie können die Datei auch hier herunterladen, aber nichts auf diesem Gerät kann die Datei öffnen."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "de": "Kopieren Sie den Link und öffnen Sie ihn auf Ihrem Mac, um dort zu laden. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
+      "de": "Kopieren Sie den Link und öffnen Sie ihn auf Ihrem Mac, um die Datei dort herunterzuladen. Sie können die Datei auch hier herunterladen, aber nichts auf diesem Gerät kann die Datei öffnen."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -104,7 +104,7 @@
     },
     "nav.how": {
       "en": "How It Works",
-      "de": "So funktioniert es"
+      "de": "Funktionsweise"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
@@ -128,11 +128,11 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "de": "Das Lukotta-Fenster unter macOS mit den angeschlossenen Laufwerken und ihrem Inhalt."
+      "de": "Das Lukotta-Fenster unter macOS mit den am Mac angeschlossenen Laufwerken und ihrem Inhalt."
     },
     "how.title": {
       "en": "How It Works",
-      "de": "So funktioniert es"
+      "de": "Funktionsweise"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
@@ -172,11 +172,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "de": "Es nimmt physische Laufwerke und Image-Dateien gleichermaßen. Ein BitLocker-Volume öffnet sich mit seinem Passwort oder mit einem 48-stelligen Wiederherstellungsschlüssel, und BitLocker- und NTFS-Volumes werden gelesen und beschrieben, sodass sich Dateien ebenso auf das Laufwerk kopieren lassen wie davon herunter."
+      "de": "Es verarbeitet sowohl physische Laufwerke als auch Image-Dateien. Ein BitLocker-Volume öffnet sich mit seinem Passwort oder mit einem 48-stelligen Wiederherstellungsschlüssel, und BitLocker- und NTFS-Volumes werden gelesen und beschrieben, sodass sich Dateien ebenso auf das Laufwerk kopieren lassen wie davon herunter."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "de": "Jedes Laufwerk und jedes Image lässt sich auch schreibgeschützt öffnen, und Lukotta kann wiederherstellen, was bei der letzten Anmeldung geöffnet war."
+      "de": "Jedes Laufwerk und jedes Image lässt sich auch schreibgeschützt öffnen, und Lukotta kann erneut öffnen, was bei der letzten Anmeldung geöffnet war."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "de": "Ja. ext2, ext3, ext4, btrfs und XFS werden geöffnet, offen oder innerhalb einer LUKS-Verschlüsselung. Ein mit LVM eingerichtetes Laufwerk öffnet alle seine Volumes zusammen."
+      "de": "Ja. ext2, ext3, ext4, btrfs und XFS werden geöffnet, unverschlüsselt oder innerhalb einer LUKS-Verschlüsselung. Ein mit LVM eingerichtetes Laufwerk öffnet alle seine Volumes zusammen."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "de": "Datenschutz"
+      "de": "Datenschutzerklärung"
     },
     "footer.licence": {
       "en": "Licence",

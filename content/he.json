@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "he": "פתחו כונני BitLocker, NTFS, LUKS ו‑Linux ב‑Mac. הקלידו את הסיסמה והכונן מופיע ב‑Finder, קריא וניתן לכתיבה. תוכנה חופשית בקוד פתוח."
+      "he": "פתחו כונני BitLocker, NTFS, LUKS ו‑Linux ב‑Mac. הקלידו סיסמה והכונן יופיע ב‑Finder, לקריאה ולכתיבה. חינם ובקוד פתוח."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "he": "שלחו את הדף הזה ל‑Mac שלכם והורידו אותו שם; ‏AirDrop נמצא ברשימה שנפתחת. עדיין אפשר להוריד את הקובץ כאן, אבל שום דבר במכשיר הזה לא יפתח אותו."
+      "he": "שלחו את הדף הזה ל‑Mac שלכם והורידו שם את הקובץ; ‏AirDrop נמצא ברשימה שנפתחת. עדיין אפשר להוריד את הקובץ כאן, אבל שום דבר במכשיר הזה לא יפתח אותו."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "he": "סיסמת הכרך, ביטוי סיסמה של LUKS, או מפתח שחזור של BitLocker בן 48 ספרות."
+      "he": "סיסמת הכרך, מחרוזת סיסמה של LUKS, או מפתח שחזור של BitLocker בן 48 ספרות."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -172,11 +172,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "he": "הוא מטפל בכוננים פיזיים ובקובצי תמונה כאחד. כרך BitLocker נפתח בסיסמה שלו או במפתח שחזור בן 48 ספרות, וכרכי BitLocker ו‑NTFS גם נקראים וגם נכתבים, כך שאפשר להעתיק קבצים אל הכונן ולא רק ממנו."
+      "he": "הוא מטפל בכוננים פיזיים ובקובצי תמונת דיסק כאחד. כרך BitLocker נפתח בסיסמה שלו או במפתח שחזור בן 48 ספרות, וכרכי BitLocker ו‑NTFS גם נקראים וגם נכתבים, כך שאפשר להעתיק קבצים אל הכונן ולא רק ממנו."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "he": "כל כונן או תמונה אפשר לפתוח גם לקריאה בלבד, ו‑Lukotta יכול לפתוח מחדש את מה שהיה פתוח בהתחברות האחרונה."
+      "he": "כל כונן או תמונת דיסק אפשר לפתוח גם לקריאה בלבד, ו‑Lukotta יכול לפתוח מחדש את מה שהיה פתוח בהתחברות האחרונה."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "he": "נפתח בביטוי הסיסמה"
+      "he": "נפתח במחרוזת הסיסמה"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "he": "מה שקובץ OVA מכיל. נכתב במעבר אחד, ולכן אי אפשר לשנותו במקומו"
+      "he": "מה שקובץ OVA מכיל. נכתב במעבר אחד, ולכן אי אפשר לשנות אותו ישירות"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "he": "כן. ‏ext2, ‏ext3, ‏ext4, ‏btrfs ו‑XFS נפתחים, בין שהם חשופים ובין שהם בתוך הצפנת LUKS. כונן הבנוי ב‑LVM פותח את כל כרכיו יחד."
+      "he": "כן. ‏ext2, ‏ext3, ‏ext4, ‏btrfs ו‑XFS נפתחים, ללא הצפנה או בתוך הצפנת LUKS. כונן הבנוי ב‑LVM פותח את כל כרכיו יחד."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",

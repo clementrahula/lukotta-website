@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fr": "Ouvrez des disques BitLocker, NTFS, LUKS et Linux sur votre Mac. Tapez le mot de passe et le disque apparaît dans le Finder, en lecture et en écriture."
+      "fr": "Ouvrez des disques BitLocker, NTFS, LUKS et Linux sur Mac. Entrez le mot de passe : le disque apparaît dans Finder, lisible et inscriptible. Gratuit et open source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "fr": "Envoyez cette page à votre Mac et téléchargez-la là-bas ; AirDrop figure dans la liste qui s’ouvre. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
+      "fr": "Envoyez cette page à votre Mac et téléchargez le fichier là-bas ; AirDrop figure dans la liste qui s’ouvre. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -104,7 +104,7 @@
     },
     "nav.how": {
       "en": "How It Works",
-      "fr": "Comment ça marche"
+      "fr": "Fonctionnement"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
@@ -132,7 +132,7 @@
     },
     "how.title": {
       "en": "How It Works",
-      "fr": "Comment ça marche"
+      "fr": "Fonctionnement"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "fr": "Les disques scellés à une puce TPM plutôt qu’à un mot de passe, dont le chiffrement matériel des versions récentes d’Ubuntu"
+      "fr": "Les disques scellés à une puce TPM plutôt qu’à un mot de passe, dont le chiffrement récent d’Ubuntu adossé au matériel"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -300,7 +300,7 @@
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "fr": "Une image qui en désigne une autre : une chaîne d’instantanés VMware, un VHD différentiel ou un qcow2 avec fichier de base"
+      "fr": "Une image qui désigne un autre fichier : une chaîne d’instantanés VMware, un VHD différentiel ou un qcow2 avec fichier de base"
     },
     "name.title": {
       "en": "The Name",
@@ -340,7 +340,7 @@
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "fr": "Oui. Les fichiers se copient vers un disque NTFS comme ils s’en copient."
+      "fr": "Oui. Les fichiers peuvent être copiés vers un disque NTFS comme depuis celui-ci."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fr": "Oui. ext2, ext3, ext4, btrfs et XFS s’ouvrent, nus ou à l’intérieur d’un chiffrement LUKS. Un disque organisé en LVM ouvre tous ses volumes ensemble."
+      "fr": "Oui. ext2, ext3, ext4, btrfs et XFS s’ouvrent, non chiffrés ou à l’intérieur d’un chiffrement LUKS. Un disque organisé en LVM ouvre tous ses volumes ensemble."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "fr": "Confidentialité"
+      "fr": "Politique de confidentialité"
     },
     "footer.licence": {
       "en": "Licence",

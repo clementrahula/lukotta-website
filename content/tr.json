@@ -8,19 +8,19 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "tr": "macOS’ta BitLocker ve Linux Diskleri Açın — Lukotta"
+      "tr": "BitLocker ve Linux Disklerini macOS Üzerinde Açın — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "tr": "Mac’inizde BitLocker, NTFS, LUKS ve Linux disklerini açın. Parolayı yazın, disk Finder’da görünsün; okunur ve yazılır. Özgür yazılım, ücretsiz."
+      "tr": "Mac bilgisayarınızda BitLocker, NTFS, LUKS ve Linux disklerini açın. Parolayı yazın; disk Finder uygulamasında okunup yazılabilir. Ücretsiz ve açık kaynak."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "tr": "Lukotta — macOS’ta BitLocker, Linux ve sanal makine diskleri"
+      "tr": "Lukotta — macOS üzerinde BitLocker, Linux ve sanal makine diskleri"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "tr": "Bir disk takın ya da disk kalıbı açın, parolayı yazın; Finder’da görünür, okunur ve yazılır, başka herhangi bir disk gibi."
+      "tr": "Bir disk takın ya da disk imajı açın, parolayı yazın; Finder uygulamasında görünür, okunur ve yazılır, başka herhangi bir disk gibi."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -44,11 +44,11 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "tr": "Apple Silicon işlemcili bir Mac’te macOS 15 Sequoia ya da üstü gerekir; telefonda veya tablette çalışmaz."
+      "tr": "Apple Silicon işlemcili bir Mac bilgisayarında macOS 15 Sequoia ya da üstü gerekir; telefonda veya tablette çalışmaz."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "tr": "Apple Silicon işlemcili bir Mac’te macOS 15 Sequoia ya da üstü gerekir; {system} üzerinde çalışmaz."
+      "tr": "Apple Silicon işlemcili bir Mac bilgisayarında macOS 15 Sequoia ya da üstü gerekir; {system} üzerinde çalışmaz."
     },
     "dialog.thisSystem": {
       "en": "this system",
@@ -56,15 +56,15 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "tr": "Bu sayfayı Mac’inize gönderin ve oradan indirin; açılan listede AirDrop var. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
+      "tr": "Bu sayfayı Mac bilgisayarınıza gönderin ve oradan indirin; açılan listede AirDrop var. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "tr": "Bağlantıyı kopyalayıp Mac’inizde açın ve oradan indirin. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
+      "tr": "Bağlantıyı kopyalayıp Mac bilgisayarınızda açın ve oradan indirin. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "tr": "Mac’e gönder"
+      "tr": "Mac bilgisayarına gönder"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
@@ -108,11 +108,11 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "tr": "macOS’ta BitLocker, Linux ve sanal makine disklerini açın."
+      "tr": "BitLocker, Linux ve sanal makine disklerini macOS üzerinde açın."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "tr": "Bir disk takın ya da disk kalıbı açın ve parolayı yazın; Finder’da görünür. Okunur ve yazılır, başka herhangi bir disk gibi."
+      "tr": "Bir disk takın ya da disk imajı açın ve parolayı yazın; Finder uygulamasında görünür. Okunur ve yazılır, başka herhangi bir disk gibi."
     },
     "hero.download": {
       "en": "Download",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "tr": "Kaynak kodu GitHub’da"
+      "tr": "Kaynak kodu: GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "tr": "macOS’ta Lukotta penceresi: Mac’e takılı diskler ve her birinin içinde ne olduğu."
+      "tr": "Lukotta penceresi, macOS üzerinde: Mac bilgisayarına takılı diskler ve her birinin içinde ne olduğu."
     },
     "how.title": {
       "en": "How It Works",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "tr": "macOS ne BitLocker’ı ne de Linux dosya sistemlerini okuyabilir. Linux okuyabilir. Lukotta küçük bir Linux sanal makinesi başlatır, diski onun içinde açar ve diski Finder’a geri verir."
+      "tr": "macOS, BitLocker ile şifrelenmiş diskleri veya Linux dosya sistemlerini okuyamaz. Linux okuyabilir. Lukotta küçük bir Linux sanal makinesi başlatır, diski onun içinde açar ve diski Finder uygulamasına geri verir."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -144,7 +144,7 @@
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "tr": "Ya da bir disk kalıbı açın."
+      "tr": "Ya da bir disk imajı açın."
     },
     "how.2.title": {
       "en": "Type the password",
@@ -152,11 +152,11 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "tr": "Birimin parolası, bir LUKS parola cümlesi ya da 48 haneli bir BitLocker kurtarma anahtarı."
+      "tr": "Birimin parolası, bir LUKS parola tümcesi ya da 48 haneli bir BitLocker kurtarma anahtarı."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "tr": "Finder’da açın"
+      "tr": "Finder uygulamasında açın"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
@@ -168,15 +168,15 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "tr": "Lukotta, macOS’un okumayı reddettiği diskleri ve disk kalıplarını açar ve bunları Finder’a sıradan birimler olarak verir."
+      "tr": "Lukotta, macOS sisteminin okumayı reddettiği diskleri ve disk imajlarını açar ve bunları Finder uygulamasına sıradan birimler olarak verir."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "tr": "Fiziksel diskleri de kalıp dosyalarını da aynı şekilde alır. Bir BitLocker birimi kendi parolasıyla ya da 48 haneli bir kurtarma anahtarıyla açılır; BitLocker ve NTFS birimleri hem okunur hem yazılır, yani dosyalar diskten kopyalandığı gibi diske de kopyalanabilir."
+      "tr": "Fiziksel diskleri de disk imajı dosyalarını da aynı şekilde alır. Bir BitLocker birimi kendi parolasıyla ya da 48 haneli bir kurtarma anahtarıyla açılır; BitLocker ve NTFS birimleri hem okunur hem yazılır, yani dosyalar diskten kopyalandığı gibi diske de kopyalanabilir."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "tr": "Herhangi bir disk ya da kalıp salt okunur olarak da açılabilir ve Lukotta, son oturumda açık olanları yeniden açabilir."
+      "tr": "Herhangi bir disk ya da disk imajı salt okunur olarak da açılabilir ve Lukotta, son oturumda açık olanları yeniden açabilir."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -216,7 +216,7 @@
     },
     "formats.group.images": {
       "en": "Disk images",
-      "tr": "Disk kalıpları"
+      "tr": "Disk imajları"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "tr": "Parola cümlesiyle açılır"
+      "tr": "Parola tümcesiyle açılır"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "tr": "Bir OVA’nın içindekiler. Tek geçişte yazılır, bu yüzden yerinde değiştirilemez"
+      "tr": "Bir OVA dosyasının içindekiler. Tek geçişte yazılır, bu yüzden doğrudan değiştirilemez"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -284,11 +284,11 @@
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "tr": "FileVault ve şifreli disk kalıpları; bunları macOS kendisi açar"
+      "tr": "FileVault ve şifreli disk imajları; bunları macOS kendisi açar"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "tr": "Parola yerine bir TPM yongasına bağlanmış diskler, Ubuntu’nun yeni donanım tabanlı şifrelemesi dahil"
+      "tr": "Parola yerine bir TPM yongasına bağlanmış diskler, Ubuntu sisteminin yeni donanım tabanlı şifrelemesi dahil"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -300,7 +300,7 @@
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "tr": "Başka bir dosyayı gösteren kalıp: VMware anlık görüntü zinciri, farklı yazan bir VHD ya da dayanak dosyası olan bir qcow2"
+      "tr": "Başka bir dosyayı gösteren disk imajı: VMware anlık görüntü zinciri, fark VHD’si ya da dayanak dosyası olan bir qcow2"
     },
     "name.title": {
       "en": "The Name",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "tr": "Evet, üstelik yazabilir de. Birimin parolasını yazın ya da 48 haneli kurtarma anahtarını yapıştırın; disk Finder’da açılır."
+      "tr": "Evet, üstelik yazabilir de. Birimin parolasını yazın ya da 48 haneli kurtarma anahtarını yapıştırın; disk Finder uygulamasında açılır."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "tr": "Evet. ext2, ext3, ext4, btrfs ve XFS açılır; çıplak halde ya da LUKS şifrelemesi içinde. LVM ile kurulmuş bir disk bütün birimlerini birlikte açar."
+      "tr": "Evet. ext2, ext3, ext4, btrfs ve XFS açılır; şifrelenmemiş halde ya da LUKS şifrelemesi içinde. LVM ile kurulmuş bir disk bütün birimlerini birlikte açar."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -356,19 +356,19 @@
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "tr": "Evet, makineyi başlatmadan. Bir qcow2, VMDK, VDI, VHD ya da VHDX kalıbı açın ve içinden dosya kopyalayın ya da içine kopyalayın."
+      "tr": "Evet, makineyi başlatmadan. qcow2, VMDK, VDI, VHD ya da VHDX biçiminde bir disk imajı açın ve içinden dosya kopyalayın ya da içine kopyalayın."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "tr": "Lukotta Intel işlemcili bir Mac’te çalışır mı?"
+      "tr": "Lukotta, Intel işlemcili bir Mac bilgisayarında çalışır mı?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "tr": "Hayır. Apple Silicon’ın sağladığı sanallaştırmaya ihtiyaç duyar."
+      "tr": "Hayır. Apple Silicon tarafından sağlanan sanallaştırmaya ihtiyaç duyar."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "tr": "Gizlilik"
+      "tr": "Gizlilik Politikası"
     },
     "footer.licence": {
       "en": "Licence",

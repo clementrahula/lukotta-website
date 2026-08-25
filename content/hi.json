@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "hi": "अपने Mac पर BitLocker, NTFS, LUKS और Linux ड्राइव खोलें। पासवर्ड टाइप करें और ड्राइव Finder में दिखने लगती है, पढ़ने और लिखने के लिए। मुफ़्त, मुक्त सॉफ़्टवेयर।"
+      "hi": "अपने Mac पर BitLocker, NTFS, LUKS और Linux ड्राइव खोलें। पासवर्ड टाइप करें और ड्राइव Finder में दिखने लगती है, पढ़ने और लिखने के लिए। मुफ़्त और ओपन सोर्स।"
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,11 +56,11 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "hi": "यह पन्ना अपने Mac पर भेजिए और वहीं डाउनलोड कीजिए; खुलने वाली सूची में AirDrop है। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
+      "hi": "यह पन्ना अपने Mac पर भेजिए और वहीं डाउनलोड कीजिए; खुलने वाली सूची में AirDrop है। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, लेकिन इस डिवाइस पर उसे खोलने के लिए कुछ भी नहीं है।"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "hi": "लिंक कॉपी कीजिए और अपने Mac पर खोलकर वहीं डाउनलोड कीजिए। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
+      "hi": "लिंक कॉपी कीजिए और अपने Mac पर खोलकर वहीं डाउनलोड कीजिए। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, लेकिन इस डिवाइस पर उसे खोलने के लिए कुछ भी नहीं है।"
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -72,7 +72,7 @@
     },
     "dialog.copied": {
       "en": "Link copied",
-      "hi": "लिंक कॉपी हुआ"
+      "hi": "लिंक कॉपी हो गया"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
@@ -172,11 +172,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "hi": "यह भौतिक ड्राइव और इमेज फ़ाइल, दोनों को समान रूप से लेता है। BitLocker वॉल्यूम अपने पासवर्ड से या 48 अंकों की रिकवरी कुंजी से खुलता है, और BitLocker तथा NTFS वॉल्यूम पढ़े भी जाते हैं और लिखे भी, इसलिए फ़ाइलें ड्राइव पर उतनी ही आसानी से कॉपी होती हैं जितनी उससे।"
+      "hi": "यह भौतिक ड्राइव और डिस्क इमेज फ़ाइल, दोनों को समान रूप से लेता है। BitLocker वॉल्यूम अपने पासवर्ड से या 48 अंकों की रिकवरी कुंजी से खुलता है, और BitLocker तथा NTFS वॉल्यूम पढ़े भी जाते हैं और लिखे भी, इसलिए फ़ाइलें ड्राइव पर उतनी ही आसानी से कॉपी होती हैं जितनी उससे।"
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "hi": "किसी भी ड्राइव या इमेज को केवल पढ़ने के लिए भी खोला जा सकता है, और Lukotta वह फिर से खोल सकता है जो पिछली बार लॉग इन करते समय खुला था।"
+      "hi": "किसी भी ड्राइव या डिस्क इमेज को केवल पढ़ने के लिए भी खोला जा सकता है, और Lukotta वह फिर से खोल सकता है जो पिछली बार लॉग इन करते समय खुला था।"
     },
     "formats.title": {
       "en": "Supported formats",
@@ -252,11 +252,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "hi": "VMware, सपाट और विरल"
+      "hi": "VMware, flat और sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "hi": "जो एक OVA में होता है। एक ही बार में लिखा जाता है, इसलिए उसी जगह बदला नहीं जा सकता"
+      "hi": "जो एक OVA में होता है। एक ही बार में लिखा जाता है, इसलिए सीधे बदला नहीं जा सकता"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "hi": "वे ड्राइव जो पासवर्ड के बजाय TPM चिप से बँधी हैं, जिनमें Ubuntu का नया हार्डवेयर एन्क्रिप्शन भी शामिल है"
+      "hi": "वे ड्राइव जो पासवर्ड के बजाय TPM चिप से बँधी हैं, जिनमें Ubuntu का नया हार्डवेयर-समर्थित एन्क्रिप्शन भी शामिल है"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -308,7 +308,7 @@
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "hi": "Lúkotta फ़िनिश में „बिना ताले के“ है, {lukko} यानी ताला से, और अंत {tta} जो किसी चीज़ की अनुपस्थिति दर्शाता है। बल पहले अक्षर पर पड़ता है, जैसा फ़िनिश में हमेशा होता है।"
+      "hi": "Lúkotta फ़िनिश में „बिना ताले के“ है, {lukko} यानी ताला से, और अंत {tta} जो किसी चीज़ की अनुपस्थिति दर्शाता है। बल पहले शब्दांश पर पड़ता है, जैसा फ़िनिश में हमेशा होता है।"
     },
     "faq.title": {
       "en": "FAQ",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hi": "हाँ। ext2, ext3, ext4, btrfs और XFS खुलते हैं, चाहे खुले हों या LUKS एन्क्रिप्शन के भीतर। LVM से बनी ड्राइव अपने सारे वॉल्यूम एक साथ खोलती है।"
+      "hi": "हाँ। ext2, ext3, ext4, btrfs और XFS खुलते हैं, चाहे बिना एन्क्रिप्शन के हों या LUKS एन्क्रिप्शन के भीतर। LVM से बनी ड्राइव अपने सारे वॉल्यूम एक साथ खोलती है।"
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "hi": "निजता"
+      "hi": "निजता नीति"
     },
     "footer.licence": {
       "en": "Licence",

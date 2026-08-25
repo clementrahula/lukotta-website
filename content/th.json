@@ -12,11 +12,11 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "th": "เปิดไดรฟ์ BitLocker, NTFS, LUKS และ Linux บน Mac ของคุณ พิมพ์รหัสผ่านแล้วไดรฟ์จะปรากฏใน Finder อ่านและเขียนได้ ซอฟต์แวร์เสรี ไม่มีค่าใช้จ่าย"
+      "th": "เปิดไดรฟ์ BitLocker, NTFS, LUKS และ Linux บน Mac ของคุณ พิมพ์รหัสผ่านแล้วไดรฟ์จะปรากฏใน Finder อ่านและเขียนได้ ฟรีและโอเพนซอร์ส"
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "th": "Lukotta — ไดรฟ์ BitLocker, Linux และเครื่องเสมือนบน macOS"
+      "th": "Lukotta — ดิสก์ BitLocker, Linux และดิสก์เครื่องเสมือนบน macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
@@ -108,7 +108,7 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "th": "เปิดไดรฟ์ BitLocker, Linux และเครื่องเสมือนบน macOS"
+      "th": "เปิดดิสก์ BitLocker, Linux และดิสก์เครื่องเสมือนบน macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "th": "โวลุ่มจะปรากฏใต้ตำแหน่ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
+      "th": "โวลุ่มจะปรากฏใต้ตำแหน่งที่ตั้ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
     },
     "features.title": {
       "en": "Features",
@@ -172,11 +172,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "th": "มันรับทั้งไดรฟ์จริงและไฟล์อิมเมจเท่า ๆ กัน โวลุ่ม BitLocker เปิดด้วยรหัสผ่านของมันเองหรือด้วยกุญแจกู้คืน 48 หลัก และโวลุ่ม BitLocker กับ NTFS ทั้งอ่านและเขียนได้ จึงคัดลอกไฟล์เข้าไปในไดรฟ์ได้ ไม่ใช่แค่คัดลอกออกมา"
+      "th": "มันรับทั้งไดรฟ์จริงและไฟล์อิมเมจดิสก์เท่า ๆ กัน โวลุ่ม BitLocker เปิดด้วยรหัสผ่านของมันเองหรือด้วยกุญแจกู้คืน 48 หลัก และโวลุ่ม BitLocker กับ NTFS ทั้งอ่านและเขียนได้ จึงคัดลอกไฟล์เข้าไปในไดรฟ์ได้ ไม่ใช่แค่คัดลอกออกมา"
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "th": "ไดรฟ์หรืออิมเมจใดก็เปิดแบบอ่านอย่างเดียวได้ และ Lukotta เปิดสิ่งที่ค้างไว้ตอนเข้าระบบครั้งก่อนขึ้นมาใหม่ได้"
+      "th": "ไดรฟ์หรืออิมเมจดิสก์ใดก็เปิดแบบอ่านอย่างเดียวได้ และ Lukotta เปิดสิ่งที่ค้างไว้ตอนเข้าระบบครั้งก่อนขึ้นมาใหม่ได้"
     },
     "formats.title": {
       "en": "Supported formats",
@@ -252,11 +252,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "th": "VMware แบบแบนและแบบเบาบาง"
+      "th": "VMware แบบ flat และ sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "th": "สิ่งที่อยู่ในไฟล์ OVA เขียนรวดเดียวจบ จึงแก้ไขในที่เดิมไม่ได้"
+      "th": "สิ่งที่อยู่ในไฟล์ OVA เขียนรวดเดียวจบ จึงแก้ไขโดยตรงไม่ได้"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "th": "ไดรฟ์ที่ผูกกับชิป TPM แทนรหัสผ่าน รวมถึงการเข้ารหัสด้วยฮาร์ดแวร์รุ่นใหม่ใน Ubuntu"
+      "th": "ไดรฟ์ที่ผูกกับชิป TPM แทนรหัสผ่าน รวมถึงการเข้ารหัสที่รองรับด้วยฮาร์ดแวร์รุ่นใหม่ใน Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",

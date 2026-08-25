@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "sq": "Dërgojeni këtë faqe te Mac-u juaj dhe shkarkojeni atje; AirDrop është në listën që hapet. Mund ta shkarkoni skedarin edhe këtu, por asgjë në këtë pajisje nuk do ta hapë."
+      "sq": "Dërgojeni këtë faqe te kompjuteri juaj Mac dhe shkarkoni skedarin atje; AirDrop është në listën që hapet. Mund ta shkarkoni skedarin edhe këtu, por asgjë në këtë pajisje nuk do ta hapë."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -104,7 +104,7 @@
     },
     "nav.how": {
       "en": "How It Works",
-      "sq": "Si funksionon"
+      "sq": "Si punon"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
@@ -132,7 +132,7 @@
     },
     "how.title": {
       "en": "How It Works",
-      "sq": "Si funksionon"
+      "sq": "Si punon"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "sq": "Fjalëkalimi i volumit, një frazë kalimi LUKS ose një çelës rikuperimi BitLocker me 48 shifra."
+      "sq": "Fjalëkalimi i volumit, një Frazkalimi LUKS ose një çelës rikuperimi BitLocker me 48 shifra."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "sq": "Volumi shfaqet te Vendndodhjet dhe lexohet, shkruhet e nxirret si çdo disk tjetër."
+      "sq": "Volumi shfaqet te Locations dhe lexohet, shkruhet e nxirret si çdo disk tjetër."
     },
     "features.title": {
       "en": "Features",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "sq": "Shkyçet me frazën e kalimit"
+      "sq": "Shkyçet me Frazkalimin"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sq": "Ajo që përmban një OVA. Shkruhet me një kalim të vetëm, prandaj nuk mund të ndryshohet në vend"
+      "sq": "Ajo që përmban një OVA. Shkruhet me një kalim të vetëm, prandaj nuk mund të ndryshohet drejtpërdrejt"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,11 +288,11 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "sq": "Disqet e lidhura me një çip TPM në vend të një fjalëkalimi, përfshirë enkriptimin më të ri me harduer në Ubuntu"
+      "sq": "Disqet e lidhura me një TPM në vend të një fjalëkalimi, përfshirë enkriptimin më të ri të mbështetur nga hardueri në Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "sq": "Volumet LUKS që e mbajnë kokën e tyre veçmas diskut"
+      "sq": "Volumet LUKS që e mbajnë header-in e tyre veçmas diskut"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
@@ -300,7 +300,7 @@
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "sq": "Një imazh që i referohet një skedari tjetër: një zinxhir fotografish VMware, një VHD diferencial ose një qcow2 me skedar bazë"
+      "sq": "Një imazh që i referohet një skedari tjetër: një zinxhir snapshot-esh VMware, një VHD diferencial ose një qcow2 me skedar bazë"
     },
     "name.title": {
       "en": "The Name",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "sq": "Po. ext2, ext3, ext4, btrfs dhe XFS hapen, të zhveshura ose brenda një enkriptimi LUKS. Një disk i ndërtuar me LVM i hap të gjitha volumet e tij bashkë."
+      "sq": "Po. ext2, ext3, ext4, btrfs dhe XFS hapen, pa enkriptim ose brenda një enkriptimi LUKS. Një disk i ndërtuar me LVM i hap të gjitha volumet e tij bashkë."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "sq": "Privatësia"
+      "sq": "Politika e Privatësisë"
     },
     "footer.licence": {
       "en": "Licence",

@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "bg": "Отваряйте дискове BitLocker, NTFS, LUKS и Linux на Mac. Въведете паролата и дискът се появява във Finder, за четене и запис. Свободен софтуер, безплатно."
+      "bg": "Отваряйте дискове BitLocker, NTFS, LUKS и Linux на Mac. Въведете паролата и дискът се появява във Finder, за четене и запис. Безплатен и с отворен код."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "bg": "Изпратете тази страница на своя Mac и я изтеглете там; AirDrop е в списъка, който се отваря. Пак можете да изтеглите файла тук, но нищо на това устройство няма да го отвори."
+      "bg": "Изпратете тази страница на своя Mac и изтеглете файла там; AirDrop е в списъка, който се отваря. Пак можете да изтеглите файла тук, но нищо на това устройство няма да го отвори."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -112,7 +112,7 @@
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "bg": "Включете диск или отворете образ и въведете паролата, и той се появява във Finder. За четене и запис, като всеки друг диск."
+      "bg": "Включете диск или отворете дисков образ и въведете паролата; той се появява във Finder. За четене и запис, като всеки друг диск."
     },
     "hero.download": {
       "en": "Download",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "bg": "Паролата на тома, парола на LUKS или 48-цифрен ключ за възстановяване на BitLocker."
+      "bg": "Паролата на тома, парола-фраза LUKS или 48-цифрен ключ за възстановяване BitLocker."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "bg": "Томът се появява в „Местоположения“ и се чете, записва и изважда като всеки друг диск."
+      "bg": "Томът се появява в Locations и се чете, записва и изважда като всеки друг диск."
     },
     "features.title": {
       "en": "Features",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "bg": "Отключва се с паролата"
+      "bg": "Отключва се с паролата-фраза"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "bg": "Това, което съдържа един OVA. Записва се на един път, затова не може да се променя на място"
+      "bg": "Това, което съдържа един OVA. Записва се на един път, затова не може да се променя директно"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "bg": "Дискове, вързани към чип TPM вместо към парола, включително по-новото хардуерно шифроване в Ubuntu"
+      "bg": "Дискове, вързани към TPM вместо към парола, включително по-новото шифроване с хардуерна защита в Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "bg": "Да. ext2, ext3, ext4, btrfs и XFS се отварят, сами по себе си или вътре в шифроване LUKS. Диск, подреден с LVM, отваря всичките си томове заедно."
+      "bg": "Да. ext2, ext3, ext4, btrfs и XFS се отварят нешифровани или вътре в шифроване LUKS. Диск, подреден с LVM, отваря всичките си томове заедно."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "bg": "Поверителност"
+      "bg": "Политика за поверителност"
     },
     "footer.licence": {
       "en": "Licence",

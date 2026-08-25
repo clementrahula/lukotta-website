@@ -8,19 +8,19 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "hu": "BitLocker- és Linux-lemezek megnyitása macOS-en — Lukotta"
+      "hu": "BitLocker- és Linux-lemezek megnyitása macOS alatt — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "hu": "Nyiss meg BitLocker-, NTFS-, LUKS- és Linux-lemezeket a Macen. Írd be a jelszót, és a lemez megjelenik a Finderben, olvasásra és írásra. Szabad szoftver."
+      "hu": "BitLocker, NTFS, LUKS és Linux lemezek Mac gépen. Jelszó után a lemez megjelenik a Finder alkalmazásban, írható és olvasható. Ingyenes, nyílt forráskódú."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "hu": "Lukotta — BitLocker-, Linux- és virtuálisgép-lemezek macOS-en"
+      "hu": "Lukotta — BitLocker-, Linux- és virtuálisgép-lemezek macOS alatt"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, írd be a jelszót, és megjelenik a Finderben, olvasásra és írásra, mint bármelyik másik lemez."
+      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, írd be a jelszót, és megjelenik a Finder alkalmazásban, olvasásra és írásra, mint bármelyik másik lemez."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -44,11 +44,11 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Macen, és nem fut telefonon vagy táblagépen."
+      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Mac gépen, és nem fut telefonon vagy táblagépen."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Macen, és nem fut ezen: {system}."
+      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Mac gépen, és {system} nem futtatja."
     },
     "dialog.thisSystem": {
       "en": "this system",
@@ -56,15 +56,15 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "hu": "Küldd el ezt az oldalt a Macedre, és töltsd le ott; az AirDrop ott van a megnyíló listában. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
+      "hu": "Küldd el ezt az oldalt a Mac gépedre, és töltsd le ott a fájlt; az AirDrop ott van a megnyíló listában. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "hu": "Másold ki a hivatkozást, és nyisd meg a Maceden, hogy ott töltsd le. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
+      "hu": "Másold ki a hivatkozást, és nyisd meg a Mac gépeden, hogy ott töltsd le a fájlt. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "hu": "Küldés Macre"
+      "hu": "Küldés Mac gépre"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
@@ -76,7 +76,7 @@
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "hu": "Letöltés mindenképp"
+      "hu": "Letöltés mégis"
     },
     "dialog.cancel": {
       "en": "Cancel",
@@ -108,11 +108,11 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "hu": "Nyiss meg BitLocker-, Linux- és virtuálisgép-lemezeket macOS-en."
+      "hu": "Nyiss meg BitLocker-, Linux- és virtuálisgép-lemezeket macOS alatt."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, és írd be a jelszót, és megjelenik a Finderben. Olvasásra és írásra, mint bármelyik másik lemez."
+      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, és írd be a jelszót, és megjelenik a Finder alkalmazásban. Olvasásra és írásra, mint bármelyik másik lemez."
     },
     "hero.download": {
       "en": "Download",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "hu": "A forráskód a GitHubon"
+      "hu": "A forráskód a GitHub webhelyen"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "hu": "A Lukotta ablaka macOS-en, a Machez csatlakoztatott lemezekkel és azzal, mit tartalmaz mindegyik."
+      "hu": "A Lukotta ablaka macOS alatt, a Mac géphez csatlakoztatott lemezekkel és azzal, mit tartalmaz mindegyik."
     },
     "how.title": {
       "en": "How It Works",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "hu": "A macOS nem tudja olvasni a BitLockert és a Linux fájlrendszereit. A Linux igen. A Lukotta elindít egy kis Linux virtuális gépet, azon belül feloldja a lemezt, majd átadja a lemezt a Findernek."
+      "hu": "A macOS nem tudja olvasni a BitLocker formátumot és a Linux-fájlrendszereket. A Linux igen. A Lukotta elindít egy kis Linux virtuális gépet, azon belül feloldja a lemezt, majd átadja a Finder alkalmazásnak."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -156,7 +156,7 @@
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "hu": "Nyisd meg a Finderben"
+      "hu": "Nyisd meg a Finder alkalmazásban"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "hu": "A Lukotta megnyitja azokat a lemezeket és lemezképeket, amelyeket a macOS nem hajlandó olvasni, és átadja őket a Findernek közönséges kötetként."
+      "hu": "A Lukotta megnyitja azokat a lemezeket és lemezképeket, amelyeket a macOS nem hajlandó olvasni, és átadja őket a Finder alkalmazásnak közönséges kötetként."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "hu": "A jelszó helyett TPM-chiphez kötött lemezek, köztük az Ubuntu újabb hardveres titkosítása"
+      "hu": "A jelszó helyett TPM-chiphez kötött lemezek, köztük az Ubuntu újabb, hardver által támogatott titkosítása"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "hu": "Igen, és írni is tud rájuk. Írd be a kötet jelszavát, vagy illessz be egy 48 jegyű helyreállítási kulcsot, és a lemez megnyílik a Finderben."
+      "hu": "Igen, és írni is tud rájuk. Írd be a kötet jelszavát, vagy illessz be egy 48 jegyű helyreállítási kulcsot, és a lemez megnyílik a Finder alkalmazásban."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hu": "Igen. Az ext2, ext3, ext4, btrfs és XFS megnyílik, önmagában vagy LUKS-titkosításon belül. Az LVM-mel kialakított lemez az összes kötetét együtt nyitja meg."
+      "hu": "Igen. Az ext2, ext3, ext4, btrfs és XFS megnyílik, titkosítatlanul vagy LUKS-titkosításon belül. Az LVM elrendezésű lemez az összes kötetét együtt nyitja meg."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -360,7 +360,7 @@
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "hu": "Működik a Lukotta Intel processzoros Macen?"
+      "hu": "Működik a Lukotta Intel processzoros Mac gépen?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "hu": "Adatvédelem"
+      "hu": "Adatvédelmi szabályzat"
     },
     "footer.licence": {
       "en": "Licence",

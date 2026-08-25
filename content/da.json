@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "da": "Åbn BitLocker-, NTFS-, LUKS- og Linux-drev på din Mac. Skriv adgangskoden, og drevet dukker op i Finder, klar til læsning og skrivning. Fri software."
+      "da": "Åbn BitLocker-, NTFS-, LUKS- og Linux-drev på din Mac. Skriv adgangskoden, og drevet dukker op i Finder, klar til læsning og skrivning. Gratis og open source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "da": "Send denne side til din Mac, og hent den der; AirDrop står på listen, der åbner. Du kan stadig hente filen her, men intet på denne enhed kan åbne den."
+      "da": "Send denne side til din Mac, og hent filen der; AirDrop står på listen, der åbner. Du kan stadig hente filen her, men intet på denne enhed kan åbne den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "da": "Lukotta-vinduet på macOS med de drev, der er sluttet til computeren, og hvad hvert enkelt indeholder."
+      "da": "Lukotta-vinduet på macOS med de drev, der er sluttet til en Mac, og hvad hvert enkelt indeholder."
     },
     "how.title": {
       "en": "How It Works",
@@ -252,7 +252,7 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "da": "VMware, flad og tynd"
+      "da": "VMware, flat og sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "da": "Ja. ext2, ext3, ext4, btrfs og XFS åbnes, bare eller inde i en LUKS-kryptering. Et drev, der er sat op med LVM, åbner alle sine enheder samtidig."
+      "da": "Ja. ext2, ext3, ext4, btrfs og XFS åbnes, uden kryptering eller inde i en LUKS-kryptering. Et drev, der er sat op med LVM, åbner alle sine enheder samtidig."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "da": "Privatliv"
+      "da": "Privatlivspolitik"
     },
     "footer.licence": {
       "en": "Licence",

@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "el": "Ανοίξτε δίσκους BitLocker, NTFS, LUKS και Linux στο Mac σας. Πληκτρολογήστε τον κωδικό και ο δίσκος εμφανίζεται στο Finder, για ανάγνωση και εγγραφή."
+      "el": "Ανοίξτε δίσκους BitLocker, NTFS, LUKS και Linux στο Mac. Δώστε τον κωδικό και ο δίσκος εμφανίζεται στο Finder, για ανάγνωση και εγγραφή. Δωρεάν και ανοικτού κώδικα."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,7 +56,7 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "el": "Στείλτε αυτή τη σελίδα στο Mac σας και κατεβάστε το εκεί· το AirDrop βρίσκεται στη λίστα που ανοίγει. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
+      "el": "Στείλτε αυτή τη σελίδα στο Mac σας και κατεβάστε το αρχείο εκεί· το AirDrop βρίσκεται στη λίστα που ανοίγει. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -76,7 +76,7 @@
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "el": "Λήψη ούτως ή άλλως"
+      "el": "Λήψη παρ’ όλα αυτά"
     },
     "dialog.cancel": {
       "en": "Cancel",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "el": "Ό,τι περιέχει ένα OVA. Γράφεται σε ένα πέρασμα, οπότε δεν αλλάζει επιτόπου"
+      "el": "Ό,τι περιέχει ένα OVA. Γράφεται σε ένα πέρασμα, οπότε δεν μπορεί να τροποποιηθεί απευθείας"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "el": "Δίσκοι δεμένοι σε τσιπ TPM αντί για κωδικό, μαζί με τη νεότερη κρυπτογράφηση υλικού στο Ubuntu"
+      "el": "Δίσκοι δεμένοι σε TPM αντί για κωδικό, μαζί με τη νεότερη κρυπτογράφηση που υποστηρίζεται από υλικό στο Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -324,7 +324,7 @@
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "el": "Είναι επίσης ελεύθερο λογισμικό, υπό την GNU General Public License, έκδοση 3 ή νεότερη. Ο πηγαίος κώδικας είναι δημόσιος: μπορείτε να τον διαβάσετε, να τον χτίσετε μόνοι σας, να τον αλλάξετε και να δώσετε παρακάτω ό,τι αλλάξατε."
+      "el": "Είναι επίσης ελεύθερο λογισμικό, υπό την GNU General Public License, έκδοση 3 ή νεότερη. Ο πηγαίος κώδικας είναι δημόσιος: μπορείτε να τον διαβάσετε, να τον μεταγλωττίσετε μόνοι σας, να τον αλλάξετε και να δώσετε παρακάτω ό,τι αλλάξατε."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "el": "Ναι. ext2, ext3, ext4, btrfs και XFS ανοίγουν, γυμνά ή μέσα σε κρυπτογράφηση LUKS. Δίσκος στημένος με LVM ανοίγει όλους τους τόμους του μαζί."
+      "el": "Ναι. ext2, ext3, ext4, btrfs και XFS ανοίγουν, χωρίς κρυπτογράφηση ή μέσα σε κρυπτογράφηση LUKS. Δίσκος στημένος με LVM ανοίγει όλους τους τόμους του μαζί."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,11 +368,11 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "el": "Απόρρητο"
+      "el": "Πολιτική απορρήτου"
     },
     "footer.licence": {
       "en": "Licence",
-      "el": "Άδεια"
+      "el": "Άδεια χρήσης"
     },
     "footer.source": {
       "en": "Source",

@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "et": "Ava BitLockeri, NTFS-i, LUKS-i ja Linuxi kettad Macis. Kirjuta parool ja ketas ilmub Finderisse, loetav ja kirjutatav. Vaba tarkvara, tasuta."
+      "et": "Ava BitLocker-, NTFS-, LUKS- ja Linux-kettad Mac-arvutis. Kirjuta parool ja ketas ilmub rakenduses Finder, loetav ja kirjutatav. Tasuta ja avatud lähtekoodiga."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -20,7 +20,7 @@
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "et": "Ühenda ketas või ava kettatõmmis, kirjuta parool, ja see ilmub Finderisse, loetav ja kirjutatav nagu iga teine ketas."
+      "et": "Ühenda ketas või ava kettatõmmis, kirjuta parool, ja see ilmub rakenduses Finder, loetav ja kirjutatav nagu iga teine ketas."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -44,23 +44,23 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "et": "See vajab macOS 15 Sequoiat või uuemat Apple Siliconiga Macis ega tööta telefonis ega tahvelarvutis."
+      "et": "See vajab Apple Silicon kiibiga Mac-arvutis operatsioonisüsteemi macOS 15 Sequoia või uuemat versiooni ega tööta telefonis ega tahvelarvutis."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "et": "See vajab macOS 15 Sequoiat või uuemat Apple Siliconiga Macis ega tööta süsteemis {system}."
+      "et": "See vajab Apple Silicon kiibiga Mac-arvutis operatsioonisüsteemi macOS 15 Sequoia või uuemat versiooni ega tööta, kui kasutusel on {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "et": "selles"
+      "et": "see süsteem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "et": "Saada see leht oma Maci ja laadi see seal alla; AirDrop on avanevas loendis. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
+      "et": "Saada see leht oma Mac-arvutisse ja laadi fail seal alla; AirDrop on avanevas loendis. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "et": "Kopeeri link ja ava see Macis, et sealt alla laadida. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
+      "et": "Kopeeri link ja ava see Mac-arvutis, et fail sealt alla laadida. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "et": "Lähtekood GitHubis"
+      "et": "Lähtekood veebisaidil GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -156,11 +156,11 @@
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "et": "Ava see Finderis"
+      "et": "Ava see rakenduses Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "et": "Köide ilmub Asukohtade alla ning seda loetakse, kirjutatakse ja väljutatakse nagu iga teist ketast."
+      "et": "Köide ilmub rakenduse Finder külgriba jaotise Locations alla ning seda loetakse, kirjutatakse ja väljutatakse nagu iga teist ketast."
     },
     "features.title": {
       "en": "Features",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "et": "Lukotta avab kettad ja kettatõmmised, mida macOS lugeda keeldub, ja annab need Finderile üle tavaliste köidetena."
+      "et": "Lukotta avab kettad ja kettatõmmised, mida macOS lugeda keeldub, ning annab need tavaliste köidetena üle rakendusele Finder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -264,7 +264,7 @@
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "et": "Hyper-V, püsiv ja dünaamiline"
+      "et": "Hyper-V, fikseeritud suurusega ja dünaamiline"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "et": "Jah, ja kirjutab neile. Kirjuta köite parool või kleebi 48-kohaline taastevõti, ja ketas avaneb Finderis."
+      "et": "Jah, ja kirjutab neile. Kirjuta köite parool või kleebi 48-kohaline taastevõti, ja ketas avaneb rakenduses Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "et": "Jah. ext2, ext3, ext4, btrfs ja XFS avanevad, paljalt või LUKS-i krüptimise sees. LVM-iga korraldatud ketas avab kõik oma köited koos."
+      "et": "Jah. ext2, ext3, ext4, btrfs ja XFS avanevad, krüptimata või LUKS-krüptimise sees. LVM-paigutusega ketas avab kõik oma köited koos."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "et": "Privaatsus"
+      "et": "Privaatsuspoliitika"
     },
     "footer.licence": {
       "en": "Licence",

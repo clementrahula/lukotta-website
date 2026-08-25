@@ -16,15 +16,15 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fi": "Avaa BitLocker-, NTFS-, LUKS- ja Linux-levyt Macilla. Kirjoita salasana, ja levy ilmestyy Finderiin luettavaksi ja kirjoitettavaksi. Vapaa ohjelmisto, ilmainen."
+      "fi": "Avaa BitLocker-, NTFS-, LUKS- ja Linux-levyt Mac-tietokoneessa. Syötä salasana: Finder näyttää levyn luettavana ja kirjoitettavana. Ilmainen ja avoimen lähdekoodin."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "fi": "Lukotta — BitLocker-, Linux- ja virtuaalikonelevyt macOS:ssä"
+      "fi": "Lukotta — BitLocker-, Linux- ja virtuaalikonelevyt, kun käytössä on macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "fi": "Kytke levy tai avaa levykuva, kirjoita salasana, ja se ilmestyy Finderiin luettavaksi ja kirjoitettavaksi, kuten mikä tahansa muu levy."
+      "fi": "Kytke levy tai avaa levytiedosto, kirjoita salasana, ja Finder näyttää sen luettavana ja kirjoitettavana, kuten minkä tahansa muun levyn."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -48,19 +48,19 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "fi": "Se vaatii macOS 15 Sequoian tai uudemman Apple Silicon ‑Macilla eikä toimi puhelimella tai tabletilla."
+      "fi": "Se vaatii Mac-tietokoneen, jossa on Apple Silicon ja macOS 15 Sequoia tai uudempi, eikä toimi puhelimella tai tabletilla."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "fi": "Se vaatii macOS 15 Sequoian tai uudemman Apple Silicon ‑Macilla eikä toimi järjestelmässä {system}."
+      "fi": "Se vaatii Mac-tietokoneen, jossa on Apple Silicon ja macOS 15 Sequoia tai uudempi, eikä toimi, jos käytössä on {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "fi": "tässä"
+      "fi": "tämä järjestelmä"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "fi": "Lähetä tämä sivu Macillesi ja lataa se siellä; AirDrop on avautuvassa luettelossa. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
+      "fi": "Lähetä tämä sivu Mac-tietokoneellesi ja lataa tiedosto siellä; AirDrop on avautuvassa luettelossa. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
@@ -68,7 +68,7 @@
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "fi": "Lähetä Macille"
+      "fi": "Lähetä Mac-tietokoneelle"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
@@ -84,7 +84,7 @@
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "fi": "Kumoa"
+      "fi": "Peruuta"
     },
     "ui.toTop": {
       "en": "Back to the top",
@@ -112,11 +112,11 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "fi": "Avaa BitLocker-, Linux- ja virtuaalikonelevyt macOS:ssä."
+      "fi": "Avaa BitLocker-, Linux- ja virtuaalikonelevyt, kun käytössä on macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "fi": "Kytke levy tai avaa levykuva ja kirjoita salasana, niin se ilmestyy Finderiin. Luettavissa ja kirjoitettavissa, kuten mikä tahansa muu levy."
+      "fi": "Kytke levy tai avaa levytiedosto ja kirjoita salasana, niin Finder näyttää sen. Luettavissa ja kirjoitettavissa, kuten mikä tahansa muu levy."
     },
     "hero.download": {
       "en": "Download",
@@ -124,7 +124,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "fi": "Lähdekoodi GitHubissa"
+      "fi": "Lähdekoodi: GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -132,7 +132,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "fi": "Lukotta-ikkuna macOS:ssä: luettelo Maciin kytketyistä levyistä ja siitä, mitä kukin sisältää."
+      "fi": "Lukotta-ikkuna, kun käytössä on macOS: luettelo Mac-tietokoneeseen kytketyistä levyistä ja siitä, mitä kukin sisältää."
     },
     "how.title": {
       "en": "How It Works",
@@ -148,7 +148,7 @@
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "fi": "Tai avaa levykuva."
+      "fi": "Tai avaa levytiedosto."
     },
     "how.2.title": {
       "en": "Type the password",
@@ -156,11 +156,11 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "fi": "Taltion salasana, LUKS-tunnuslause tai 48-numeroinen BitLocker-palautusavain."
+      "fi": "Taltion salasana, LUKS-salauslause tai 48-numeroinen BitLocker-palautusavain."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "fi": "Avaa se Finderissä"
+      "fi": "Avaa se Finder-sovelluksessa"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
@@ -172,15 +172,15 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "fi": "Lukotta avaa ne levyt ja levykuvat, joita macOS kieltäytyy lukemasta, ja luovuttaa ne Finderille tavallisina taltioina."
+      "fi": "Lukotta avaa levyt ja levytiedostot, joita macOS kieltäytyy lukemasta, ja antaa ne Finder-sovelluksen käyttöön tavallisina taltioina."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "fi": "Se ottaa yhtä lailla fyysiset levyt ja levykuvatiedostot. BitLocker-taltio avautuu salasanallaan tai 48-numeroisella palautusavaimella, ja BitLocker- ja NTFS-taltioita sekä luetaan että kirjoitetaan, joten tiedostoja voi kopioida levylle yhtä hyvin kuin levyltä."
+      "fi": "Se ottaa yhtä lailla fyysiset levyt ja levytiedostot. BitLocker-taltio avautuu salasanallaan tai 48-numeroisella palautusavaimella, ja BitLocker- ja NTFS-taltioita sekä luetaan että kirjoitetaan, joten tiedostoja voi kopioida levylle yhtä hyvin kuin levyltä."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "fi": "Minkä tahansa levyn tai levykuvan voi avata myös vain luettavaksi, ja Lukotta osaa avata uudelleen sen, mikä oli auki viime kirjautumisella."
+      "fi": "Minkä tahansa levyn tai levytiedoston voi avata myös vain luettavaksi, ja Lukotta osaa avata uudelleen sen, mikä oli auki viime kirjautumisella."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -220,7 +220,7 @@
     },
     "formats.group.images": {
       "en": "Disk images",
-      "fi": "Levykuvat"
+      "fi": "Levytiedostot"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
@@ -228,7 +228,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "fi": "Avataan tunnuslauseella"
+      "fi": "Avataan salauslauseella"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -260,7 +260,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "fi": "Se, mitä OVA sisältää. Kirjoitetaan yhdellä kertaa, joten sitä ei voi muuttaa paikallaan"
+      "fi": "Se, mitä OVA sisältää. Kirjoitetaan yhdellä kertaa, joten sitä ei voi muuttaa suoraan"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,11 +288,11 @@
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "fi": "FileVault ja salatut levykuvat, jotka macOS avaa itse"
+      "fi": "FileVault ja salatut levytiedostot, jotka macOS avaa itse"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "fi": "Levyt, jotka on sidottu TPM-piiriin salasanan sijaan, mukaan lukien Ubuntun uudempi laitteistopohjainen salaus"
+      "fi": "Levyt, jotka on sidottu TPM-piiriin salasanan sijaan, mukaan lukien järjestelmän Ubuntu uudempi laitteistoon tukeutuva salaus"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -336,7 +336,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "fi": "Kyllä, ja kirjoittaa niille. Kirjoita taltion salasana tai liitä 48-numeroinen palautusavain, ja levy avautuu Finderissä."
+      "fi": "Kyllä, ja kirjoittaa niille. Kirjoita taltion salasana tai liitä 48-numeroinen palautusavain, ja Finder avaa levyn."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -352,7 +352,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fi": "Kyllä. ext2, ext3, ext4, btrfs ja XFS avautuvat, sellaisenaan tai LUKS-salauksen sisällä. LVM:llä järjestetty levy avaa kaikki taltionsa yhdessä."
+      "fi": "Kyllä. ext2, ext3, ext4, btrfs ja XFS avautuvat salaamattomina tai LUKS-salauksen sisällä. LVM:llä järjestetty levy avaa kaikki taltionsa yhdessä."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -360,11 +360,11 @@
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "fi": "Kyllä, käynnistämättä konetta. Avaa qcow2-, VMDK-, VDI-, VHD- tai VHDX-levykuva ja kopioi siitä tiedostoja, tai siihen."
+      "fi": "Kyllä, käynnistämättä konetta. Avaa levytiedosto muodossa qcow2, VMDK, VDI, VHD tai VHDX ja kopioi siitä tiedostoja tai siihen."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "fi": "Toimiiko Lukotta Intel-Macissa?"
+      "fi": "Toimiiko Lukotta Mac-tietokoneessa, jossa on Intel-prosessori?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",

@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ko": "Mac에서 BitLocker, NTFS, LUKS, Linux 드라이브를 엽니다. 암호를 입력하면 Finder에 나타나 읽고 쓸 수 있습니다. 무료 자유 소프트웨어."
+      "ko": "Mac에서 BitLocker, NTFS, LUKS, Linux 드라이브를 엽니다. 암호를 입력하면 Finder에 나타나 읽고 쓸 수 있습니다. 무료 오픈 소스 소프트웨어."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -56,11 +56,11 @@
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "ko": "이 페이지를 Mac으로 보내 거기서 내려받으세요. 열리는 목록에 AirDrop이 있습니다. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 아무것도 열지 못합니다."
+      "ko": "이 페이지를 Mac으로 보내 거기서 내려받으세요. 열리는 목록에 AirDrop이 있습니다. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 어떤 앱으로도 그 파일을 열 수 없습니다."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ko": "링크를 복사해 Mac에서 열고 거기서 내려받으세요. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 아무것도 열지 못합니다."
+      "ko": "링크를 복사해 Mac에서 열고 거기서 내려받으세요. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 어떤 앱으로도 그 파일을 열 수 없습니다."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -88,11 +88,11 @@
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "ko": "밝은 모양으로 전환"
+      "ko": "라이트 화면 모드로 전환"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "ko": "어두운 모양으로 전환"
+      "ko": "다크 화면 모드로 전환"
     },
     "nav.download": {
       "en": "Download",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "ko": "macOS는 BitLocker도 Linux의 파일 시스템도 읽지 못합니다. Linux는 읽습니다. Lukotta는 작은 Linux 가상 머신을 띄워 그 안에서 드라이브를 풀고, 드라이브를 Finder에 넘깁니다."
+      "ko": "macOS는 BitLocker도 Linux의 파일 시스템도 읽지 못합니다. Linux는 읽습니다. Lukotta는 작은 Linux 가상 머신을 띄워 그 안에서 드라이브의 잠금을 해제하고, 드라이브를 Finder에 넘깁니다."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -152,7 +152,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "ko": "볼륨 암호, LUKS 암호 구절, 또는 48자리 BitLocker 복구 키."
+      "ko": "볼륨 암호, LUKS 암호 구문, 또는 48자리 BitLocker 복구 키."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "ko": "볼륨이 위치 아래에 나타나고, 다른 드라이브처럼 읽고 쓰고 꺼낼 수 있습니다."
+      "ko": "볼륨이 위치 아래에 나타나고, 다른 드라이브처럼 읽고 쓰고 추출할 수 있습니다."
     },
     "features.title": {
       "en": "Features",
@@ -176,7 +176,7 @@
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "ko": "어떤 드라이브나 이미지든 읽기 전용으로도 열 수 있고, Lukotta는 지난번 로그인했을 때 열려 있던 것을 다시 열 수 있습니다."
+      "ko": "어떤 드라이브나 디스크 이미지든 읽기 전용으로도 열 수 있고, Lukotta는 지난번 로그인했을 때 열려 있던 것을 다시 열 수 있습니다."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -220,15 +220,15 @@
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "ko": "볼륨 암호나 48자리 복구 키로 풀립니다"
+      "ko": "볼륨 암호나 48자리 복구 키로 잠금이 해제됩니다"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "ko": "암호 구절로 풀립니다"
+      "ko": "암호 구문으로 잠금이 해제됩니다"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "ko": "한 드라이브의 여러 볼륨이 함께 풀립니다"
+      "ko": "한 드라이브의 여러 볼륨이 함께 잠금 해제됩니다"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ko": "OVA가 담고 있는 것. 한 번에 기록되므로 제자리에서 고칠 수 없습니다"
+      "ko": "OVA가 담고 있는 것. 한 번에 기록되므로 직접 수정할 수 없습니다"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "ko": "암호 대신 TPM 칩에 묶인 드라이브. Ubuntu의 새로운 하드웨어 암호화도 포함됩니다"
+      "ko": "암호 대신 TPM 칩에 묶인 드라이브. Ubuntu의 새로운 암호화 방식 중 하드웨어로 보호되는 것도 포함됩니다"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ko": "열 수 있습니다. ext2, ext3, ext4, btrfs, XFS가 열리며, 그대로든 LUKS 암호화 안에 있든 상관없습니다. LVM으로 구성된 드라이브는 모든 볼륨을 함께 엽니다."
+      "ko": "열 수 있습니다. ext2, ext3, ext4, btrfs, XFS가 열리며, 암호화되지 않은 상태든 LUKS 암호화 안에 있든 상관없습니다. LVM으로 구성된 드라이브는 모든 볼륨을 함께 엽니다."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -356,7 +356,7 @@
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "ko": "열 수 있습니다. 가상 머신을 켜지 않아도 됩니다. qcow2, VMDK, VDI, VHD, VHDX 이미지를 열어 파일을 꺼내거나 넣을 수 있습니다."
+      "ko": "열 수 있습니다. 가상 머신을 켜지 않아도 됩니다. qcow2, VMDK, VDI, VHD, VHDX 디스크 이미지를 열어 파일을 꺼내거나 넣을 수 있습니다."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

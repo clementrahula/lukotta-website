@@ -16,11 +16,11 @@
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "sl": "Lukotta — diski BitLocker, Linux in navideznih naprav v macOS"
+      "sl": "Lukotta — diski BitLocker, Linux in navideznih strojev v macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "sl": "Priključite disk ali odprite sliko diska, vpišite geslo, in pojavi se v Finderju, za branje in pisanje, kot vsak drug disk."
+      "sl": "Priključite disk ali odprite sliko diska, vpišite geslo, in pojavi se v aplikaciji Finder, za branje in pisanje, kot vsak drug disk."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -44,23 +44,23 @@
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "sl": "Potrebuje macOS 15 Sequoia ali novejši na Macu z Apple Siliconom in ne bo deloval na telefonu ali tablici."
+      "sl": "Potrebuje macOS 15 Sequoia ali novejši na računalniku Mac s procesorjem Apple Silicon in ne bo deloval na telefonu ali tablici."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "sl": "Potrebuje macOS 15 Sequoia ali novejši na Macu z Apple Siliconom in ne bo deloval v sistemu {system}."
+      "sl": "Potrebuje macOS 15 Sequoia ali novejši na računalniku Mac s procesorjem Apple Silicon in {system} ga ne bo zagnal."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "sl": "tem"
+      "sl": "ta sistem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
-      "sl": "Pošljite to stran na svoj Mac in jo prenesite tam; AirDrop je na seznamu, ki se odpre. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
+      "sl": "Pošljite to stran na svoj Mac in tam prenesite datoteko; AirDrop je na seznamu, ki se odpre. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "sl": "Kopirajte povezavo in jo odprite na Macu, da prenesete tam. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
+      "sl": "Kopirajte povezavo in jo odprite na računalniku Mac, da tam prenesete datoteko. Datoteko lahko prenesete tudi tukaj, a je na tej napravi ne bo nič odprlo."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -108,11 +108,11 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "sl": "Odprite diske BitLocker, Linux in navideznih naprav v macOS."
+      "sl": "Odprite diske BitLocker, Linux in navideznih strojev v macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "sl": "Priključite disk ali odprite sliko diska in vpišite geslo, in pojavi se v Finderju. Za branje in pisanje, kot vsak drug disk."
+      "sl": "Priključite disk ali odprite sliko diska in vpišite geslo, in pojavi se v aplikaciji Finder. Za branje in pisanje, kot vsak drug disk."
     },
     "hero.download": {
       "en": "Download",
@@ -120,7 +120,7 @@
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "sl": "Izvorna koda na GitHubu"
+      "sl": "Izvorna koda na spletnem mestu GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
@@ -136,7 +136,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "sl": "macOS ne zna brati BitLockerja ne datotečnih sistemov Linux. Linux zna. Lukotta zažene majhno navidezno napravo z Linuxom, v njej odklene disk in ga izroči Finderju."
+      "sl": "macOS ne zna brati BitLocker niti datotečnih sistemov Linux. Linux zna. Lukotta zažene majhen navidezni stroj s sistemom Linux, v njem odklene disk in ga izroči aplikaciji Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -152,11 +152,11 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "sl": "Geslo nosilca, geslo LUKS ali 48-mestni obnovitveni ključ BitLocker."
+      "sl": "Geslo nosilca, geselna fraza LUKS ali 48-mestni obnovitveni ključ BitLocker."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "sl": "Odprite ga v Finderju"
+      "sl": "Odprite ga v aplikaciji Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
@@ -168,7 +168,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "sl": "Lukotta odpira diske in slike diskov, ki jih macOS noče brati, in jih izroči Finderju kot običajne nosilce."
+      "sl": "Lukotta odpira diske in slike diskov, ki jih macOS noče brati, in jih izroči aplikaciji Finder kot običajne nosilce."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -224,7 +224,7 @@
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "sl": "Odklene se z geslom"
+      "sl": "Odklene se z geselno frazo"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sl": "Kar vsebuje OVA. Zapiše se v enem prehodu, zato ga ni mogoče spreminjati na mestu"
+      "sl": "Kar vsebuje OVA. Zapiše se v enem prehodu, zato ga ni mogoče spreminjati neposredno"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -288,7 +288,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "sl": "Diski, vezani na čip TPM namesto na geslo, vključno z novejšim strojnim šifriranjem v Ubuntuju"
+      "sl": "Diski, vezani na čip TPM namesto na geslo, vključno z novejšim strojno podprtim šifriranjem v sistemu Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
@@ -332,7 +332,7 @@
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "sl": "Da, in piše nanje. Vpišite geslo nosilca ali prilepite 48-mestni obnovitveni ključ in disk se odpre v Finderju."
+      "sl": "Da, in piše nanje. Vpišite geslo nosilca ali prilepite 48-mestni obnovitveni ključ in disk se odpre v aplikaciji Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "sl": "Da. ext2, ext3, ext4, btrfs in XFS se odprejo, sami ali znotraj šifriranja LUKS. Disk, urejen z LVM, odpre vse svoje nosilce skupaj."
+      "sl": "Da. ext2, ext3, ext4, btrfs in XFS se odprejo, nešifrirani ali znotraj šifriranja LUKS. Disk, urejen z LVM, odpre vse svoje nosilce skupaj."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
@@ -360,7 +360,7 @@
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "sl": "Ali Lukotta deluje na Macu s procesorjem Intel?"
+      "sl": "Ali Lukotta deluje na računalniku Mac s procesorjem Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
@@ -368,7 +368,7 @@
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "sl": "Zasebnost"
+      "sl": "Pravilnik o zasebnosti"
     },
     "footer.licence": {
       "en": "Licence",

@@ -12,11 +12,11 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ar": "افتح أقراص BitLocker وNTFS وLUKS وLinux على جهاز Mac. اكتب كلمة السر فيظهر القرص في Finder قابلاً للقراءة والكتابة. برنامج حر ومفتوح المصدر."
+      "ar": "افتح أقراص BitLocker وNTFS وLUKS وLinux على جهاز Mac. اكتب كلمة السر فيظهر القرص في Finder قابلاً للقراءة والكتابة. مجاني ومفتوح المصدر."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "ar": "Lukotta — أقراص BitLocker وLinux والأجهزة الافتراضية على macOS"
+      "ar": "Lukotta — أقراص BitLocker وLinux وأقراص الأجهزة الافتراضية على macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
@@ -60,7 +60,7 @@
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ar": "انسخ الرابط وافتحه على جهاز Mac لتنزّله هناك. ولا يزال بإمكانك تنزيل الملف هنا، غير أن لا شيء على هذا الجهاز يفتحه."
+      "ar": "انسخ الرابط وافتحه على جهاز Mac لتنزيل الملف هناك. ولا يزال بإمكانك تنزيل الملف هنا، غير أن لا شيء على هذا الجهاز يفتحه."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
@@ -108,7 +108,7 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "ar": "افتح أقراص BitLocker وLinux والأجهزة الافتراضية على macOS."
+      "ar": "افتح أقراص BitLocker وLinux وأقراص الأجهزة الافتراضية على macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
@@ -128,7 +128,7 @@
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "ar": "نافذة Lukotta على macOS تعرض الأقراص الموصولة بالجهاز وما يحتويه كل منها."
+      "ar": "نافذة Lukotta على macOS تعرض الأقراص الموصولة بجهاز Mac وما يحتويه كل منها."
     },
     "how.title": {
       "en": "How It Works",
@@ -172,11 +172,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "ar": "يتعامل مع الأقراص المادية وملفات الصور على حد سواء. تُفتح وحدة BitLocker بكلمة سرها أو بمفتاح استرداد من 48 رقماً، ووحدات BitLocker وNTFS تُقرأ وتُكتب معاً، فيمكن نسخ الملفات إلى القرص كما تُنسخ منه."
+      "ar": "يتعامل مع الأقراص المادية وملفات صور الأقراص على حد سواء. تُفتح وحدة BitLocker بكلمة سرها أو بمفتاح استرداد من 48 رقماً، ووحدات BitLocker وNTFS تُقرأ وتُكتب معاً، فيمكن نسخ الملفات إلى القرص كما تُنسخ منه."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "ar": "ويمكن فتح أي قرص أو صورة للقراءة فقط، كما يستطيع Lukotta إعادة فتح ما كان مفتوحاً في آخر جلسة دخول."
+      "ar": "ويمكن فتح أي قرص أو صورة قرص للقراءة فقط، كما يستطيع Lukotta إعادة فتح ما كان مفتوحاً في آخر جلسة دخول."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -256,7 +256,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ar": "ما يحتويه ملف OVA. يُكتب دفعة واحدة، فلا يمكن تعديله في مكانه"
+      "ar": "ما يحتويه ملف OVA. يُكتب دفعة واحدة، فلا يمكن تعديله مباشرةً"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ar": "نعم. تُفتح ext2 وext3 وext4 وbtrfs وXFS، مكشوفةً أو داخل تشفير LUKS. والقرص المهيّأ بنظام LVM تُفتح كل وحداته معاً."
+      "ar": "نعم. تُفتح ext2 وext3 وext4 وbtrfs وXFS، غير مشفّرة أو داخل تشفير LUKS. والقرص المهيّأ بنظام LVM تُفتح كل وحداته معاً."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",

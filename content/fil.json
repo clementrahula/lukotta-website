@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fil": "Buksan ang BitLocker, NTFS, LUKS at Linux na drive sa iyong Mac. I-type ang password at lilitaw ang drive sa Finder, nababasa at nasusulatan. Libreng software."
+      "fil": "Buksan ang BitLocker, NTFS, LUKS at Linux na drive sa iyong Mac. I-type ang password at lilitaw ang drive sa Finder, nababasa at nasusulatan. Libre at open source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -52,7 +52,7 @@
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "fil": "ganitong sistema"
+      "fil": "sistemang ito"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac and download it there; AirDrop is in the list that opens. You can still download the file here, but nothing on this device will open it.",
@@ -160,7 +160,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "fil": "Lilitaw ang volume sa ilalim ng Mga Lokasyon, at nababasa, nasusulatan at naitatapon gaya ng kahit anong drive."
+      "fil": "Lilitaw ang volume sa ilalim ng Mga Lokasyon, at nababasa, nasusulatan at nai-eject gaya ng kahit anong drive."
     },
     "features.title": {
       "en": "Features",
@@ -176,7 +176,7 @@
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "fil": "Maaari ding buksan nang basahin-lamang ang kahit anong drive o image, at kayang buksang muli ng Lukotta ang nakabukas noong huling pag-log in."
+      "fil": "Maaari ding buksan nang read-only ang kahit anong drive o image, at kayang buksang muli ng Lukotta ang nakabukas noong huling pag-log in."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -268,11 +268,11 @@
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "fil": "Hyper-V. Bumubukas nang basahin-lamang"
+      "fil": "Hyper-V. Bumubukas nang read-only"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "fil": "Bawat format nang buo, at kung paano binabasa at sinusulatan ang bawat isa"
+      "fil": "Buong detalye ng bawat format, kasama kung paano binabasa at sinusulatan ang bawat isa"
     },
     "formats.experimental": {
       "en": "Support for these formats is experimental. Writing to them has not been extensively tested.",
@@ -288,11 +288,11 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "fil": "Ang mga drive na nakatali sa TPM chip sa halip na sa password, kasama ang mas bagong hardware na pag-encrypt sa Ubuntu"
+      "fil": "Ang mga drive na nakatali sa TPM sa halip na sa password, kasama ang mas bagong pag-encrypt ng Ubuntu na sinusuportahan ng hardware"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "fil": "Ang mga LUKS volume na hiwalay sa drive itinatago ang header"
+      "fil": "Ang mga LUKS volume na ang header ay itinatago nang hiwalay sa drive"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
@@ -324,7 +324,7 @@
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "fil": "Malayang software din ito, sa ilalim ng GNU General Public License, bersyon 3 o mas bago. Bukas ang source code: mababasa mo ito, mabubuo mo mismo, mababago, at maipapasa ang binago mo."
+      "fil": "Malayang software din ito, sa ilalim ng GNU General Public License, bersyon 3 o mas bago. Bukas ang source code: mababasa mo ito, maaari mo itong i-build mismo, baguhin, at ipasa ang mga pagbabago mo."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
@@ -348,7 +348,7 @@
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fil": "Oo. Bumubukas ang ext2, ext3, ext4, btrfs at XFS, hubad man o nasa loob ng LUKS na pag-encrypt. Ang drive na nakaayos sa LVM ay binubuksan lahat ang volume nito nang sabay."
+      "fil": "Oo. Bumubukas ang ext2, ext3, ext4, btrfs at XFS, nang walang encryption o nasa loob ng LUKS encryption. Ang drive na nakaayos sa LVM ay binubuksan ang lahat ng volume nito nang sabay."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
