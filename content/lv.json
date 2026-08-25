@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "lv": ""
+      "lv": "Atveriet BitLocker un Linux diskus macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "lv": ""
+      "lv": "Atveriet BitLocker, NTFS, LUKS un Linux diskus savā Mac datorā. Ievadiet paroli, un disks parādās Finder logā, lasāms un rakstāms. Brīva programmatūra."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "lv": ""
+      "lv": "Lukotta — BitLocker, Linux un virtuālo mašīnu diski macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "lv": ""
+      "lv": "Pievienojiet disku vai atveriet diska attēlu, ievadiet paroli, un tas parādās Finder logā, lasāms un rakstāms kā jebkurš cits disks."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "lv": ""
+      "lv": "Lietotnes Lukotta ikona: noapaļots slānekļa pelēks kvadrāts ar izgrieztu burtu L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "lv": ""
+      "lv": "Pāriet uz saturu"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "lv": ""
+      "lv": "Izvēlieties valodu"
     },
     "ui.menu": {
       "en": "Menu",
-      "lv": ""
+      "lv": "Izvēlne"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "lv": ""
+      "lv": "Atpakaļ uz augšu"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "lv": ""
+      "lv": "Pārslēgt uz gaišo izskatu"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "lv": ""
+      "lv": "Pārslēgt uz tumšo izskatu"
     },
     "nav.download": {
       "en": "Download",
-      "lv": ""
+      "lv": "Lejupielādēt"
     },
     "nav.features": {
       "en": "Features",
-      "lv": ""
+      "lv": "Iespējas"
     },
     "nav.how": {
       "en": "How It Works",
-      "lv": ""
+      "lv": "Kā tas darbojas"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "lv": ""
+      "lv": "Atveriet BitLocker, Linux un virtuālo mašīnu diskus macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "lv": ""
+      "lv": "Pievienojiet disku vai atveriet diska attēlu un ievadiet paroli — tas parādās Finder logā. Lasāms un rakstāms kā jebkurš cits disks."
     },
     "hero.download": {
       "en": "Download",
-      "lv": ""
+      "lv": "Lejupielādēt"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "lv": ""
+      "lv": "Pirmkods vietnē GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "lv": ""
+      "lv": "Versija {version} · Apple Silicon · macOS 15 Sequoia vai jaunāka"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "lv": ""
+      "lv": "Lukotta logs macOS vidē ar Mac datoram pievienotajiem diskiem un to, kas ir katrā no tiem."
     },
     "how.title": {
       "en": "How It Works",
-      "lv": ""
+      "lv": "Kā tas darbojas"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "lv": ""
+      "lv": "macOS neprot lasīt BitLocker un Linux failu sistēmas. Linux prot. Lukotta palaiž nelielu Linux virtuālo mašīnu, atslēdz disku tajā un nodod disku atpakaļ Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "lv": ""
+      "lv": "Pievienojiet disku"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "lv": ""
+      "lv": "Vai atveriet diska attēlu."
     },
     "how.2.title": {
       "en": "Type the password",
-      "lv": ""
+      "lv": "Ievadiet paroli"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "lv": ""
+      "lv": "Sējuma parole, LUKS paroles frāze vai 48 ciparu BitLocker atkopšanas atslēga."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "lv": ""
+      "lv": "Atveriet to Finder logā"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "lv": ""
+      "lv": "Sējums parādās sadaļā Atrašanās vietas un ir lasāms, rakstāms un izgrūžams kā jebkurš cits disks."
     },
     "features.title": {
       "en": "Features",
-      "lv": ""
+      "lv": "Iespējas"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "lv": ""
+      "lv": "Lukotta atver diskus un disku attēlus, kurus macOS atsakās lasīt, un nodod tos Finder kā parastus sējumus."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "lv": ""
+      "lv": "Tā vienlīdz pieņem fiziskus diskus un attēlu failus. BitLocker sējums atveras ar savu paroli vai ar 48 ciparu atkopšanas atslēgu, un BitLocker un NTFS sējumi tiek gan lasīti, gan rakstīti, tāpēc failus var kopēt uz disku tikpat labi kā no tā."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "lv": ""
+      "lv": "Jebkuru disku vai attēlu var atvērt arī tikai lasīšanai, un Lukotta prot atkal atvērt to, kas bija atvērts pēdējā pieteikšanās reizē."
     },
     "formats.title": {
       "en": "Supported formats",
-      "lv": ""
+      "lv": "Atbalstītie formāti"
     },
     "formats.col.format": {
       "en": "Format",
-      "lv": ""
+      "lv": "Formāts"
     },
     "formats.col.read": {
       "en": "Read",
-      "lv": ""
+      "lv": "Lasīšana"
     },
     "formats.col.write": {
       "en": "Write",
-      "lv": ""
+      "lv": "Rakstīšana"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "lv": ""
+      "lv": "Piezīmes"
     },
     "formats.yes": {
       "en": "Yes",
-      "lv": ""
+      "lv": "Jā"
     },
     "formats.no": {
       "en": "No",
-      "lv": ""
+      "lv": "Nē"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "lv": ""
+      "lv": "Šifrēšana"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "lv": ""
+      "lv": "Failu sistēmas"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "lv": ""
+      "lv": "Disku attēli"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "lv": ""
+      "lv": "Atslēdz ar sējuma paroli vai 48 ciparu atkopšanas atslēgu"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "lv": ""
+      "lv": "Atslēdz ar paroles frāzi"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "lv": ""
+      "lv": "Vairāki sējumi vienā diskā atveras kopā"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "lv": ""
+      "lv": "Arī sējums, ko Windows atstājis hibernācijā vai slikti aizvēris"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "lv": ""
+      "lv": "Linux failu sistēmas"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "lv": ""
+      "lv": "macOS tos atbalsta pats"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "lv": ""
+      "lv": "macOS tos atbalsta pats"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "lv": ""
+      "lv": "QEMU un UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "lv": ""
+      "lv": "VMware, plakans un rets"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lv": ""
+      "lv": "Tas, ko satur OVA. Tiek rakstīts vienā piegājienā, tāpēc to nevar mainīt uz vietas"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "lv": ""
+      "lv": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "lv": ""
+      "lv": "Hyper-V, fiksēts un dinamisks"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "lv": ""
+      "lv": "Hyper-V. Atveras tikai lasīšanai"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "lv": ""
+      "lv": "Katrs formāts sīkāk, un kā katrs tiek lasīts un rakstīts"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "lv": ""
+      "lv": "Netiek atbalstīts"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "lv": ""
+      "lv": "FileVault un šifrēti disku attēli, kurus macOS atver pats"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "lv": ""
+      "lv": "Diski, kas piesaistīti TPM mikroshēmai, nevis parolei, tostarp jaunākā aparatūras šifrēšana Ubuntu sistēmā"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "lv": ""
+      "lv": "LUKS sējumi, kuru galvene glabājas atsevišķi no diska"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "lv": ""
+      "lv": "VeraCrypt un TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "lv": ""
+      "lv": "Attēls, kas norāda uz citu failu: VMware momentuzņēmumu ķēde, diferenciāls VHD vai qcow2 ar pamatfailu"
     },
     "name.title": {
       "en": "The Name",
-      "lv": ""
+      "lv": "Nosaukums"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "lv": ""
+      "lv": "Lúkotta somu valodā nozīmē „bez slēdzenes”, no {lukko}, kas ir slēdzene, ar galotni {tta}, kas apzīmē kaut kā trūkumu. Uzsvars krīt uz pirmo zilbi, kā somu valodā vienmēr."
     },
     "faq.title": {
       "en": "FAQ",
-      "lv": ""
+      "lv": "Biežāk uzdotie jautājumi"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "lv": ""
+      "lv": "Cik maksā Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "lv": ""
+      "lv": "Neko. Lejupielāde ir bez maksas, un lietošana arī. Nav maksas versijas, abonementa, izmēģinājuma perioda, kas beidzas, ne konta, kas jāizveido."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "lv": ""
+      "lv": "Tā ir arī brīva programmatūra ar licenci GNU General Public License, versija 3 vai jaunāka. Pirmkods ir publisks: to var lasīt, pašam būvēt, mainīt un nodot tālāk to, kas mainīts."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "lv": ""
+      "lv": "Vai Lukotta atver BitLocker diskus?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "lv": ""
+      "lv": "Jā, un raksta tajos. Ievadiet sējuma paroli vai ielīmējiet 48 ciparu atkopšanas atslēgu, un disks atveras Finder logā."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "lv": ""
+      "lv": "Vai Lukotta raksta NTFS diskos?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "lv": ""
+      "lv": "Jā. Failus uz NTFS diska kopē tikpat labi kā no tā."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "lv": ""
+      "lv": "Vai Lukotta atver Linux diskus?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "lv": ""
+      "lv": "Jā. ext2, ext3, ext4, btrfs un XFS atveras, atsevišķi vai LUKS šifrējuma iekšienē. Disks, kas veidots ar LVM, atver visus savus sējumus kopā."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "lv": ""
+      "lv": "Vai Lukotta atver virtuālās mašīnas disku?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "lv": ""
+      "lv": "Jā, nepalaižot mašīnu. Atveriet qcow2, VMDK, VDI, VHD vai VHDX attēlu un kopējiet failus no tā vai tajā."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "lv": ""
+      "lv": "Vai Lukotta darbojas Mac datorā ar Intel procesoru?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "lv": ""
+      "lv": "Nē. Tai vajadzīga virtualizācija, ko nodrošina Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "lv": ""
+      "lv": "Privātums"
     },
     "footer.licence": {
       "en": "Licence",
-      "lv": ""
+      "lv": "Licence"
     },
     "footer.source": {
       "en": "Source",
-      "lv": ""
+      "lv": "Pirmkods"
     },
     "footer.contact": {
       "en": "Contact",
-      "lv": ""
+      "lv": "Sazināties"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "lv": ""
+      "lv": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "lv": ""
+      "lv": "Brīva programmatūra ar licenci GNU General Public License, versija 3 vai jaunāka."
     }
   }
 }

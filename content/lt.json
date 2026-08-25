@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "lt": ""
+      "lt": "Atverkite BitLocker ir Linux diskus macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "lt": ""
+      "lt": "Atverkite BitLocker, NTFS, LUKS ir Linux diskus savo Mac kompiuteryje. Įveskite slaptažodį ir diskas atsiras Finder lange, skaitomas ir rašomas."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "lt": ""
+      "lt": "Lukotta — BitLocker, Linux ir virtualiųjų mašinų diskai macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "lt": ""
+      "lt": "Prijunkite diską arba atverkite disko atvaizdį, įveskite slaptažodį, ir jis atsiras Finder lange, skaitomas ir rašomas kaip bet kuris kitas diskas."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "lt": ""
+      "lt": "Programos Lukotta piktograma: suapvalintas skalūno pilkumo kvadratas su iškirsta raide L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "lt": ""
+      "lt": "Pereiti prie turinio"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "lt": ""
+      "lt": "Pasirinkite kalbą"
     },
     "ui.menu": {
       "en": "Menu",
-      "lt": ""
+      "lt": "Meniu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "lt": ""
+      "lt": "Atgal į viršų"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "lt": ""
+      "lt": "Perjungti į šviesią išvaizdą"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "lt": ""
+      "lt": "Perjungti į tamsią išvaizdą"
     },
     "nav.download": {
       "en": "Download",
-      "lt": ""
+      "lt": "Atsisiųsti"
     },
     "nav.features": {
       "en": "Features",
-      "lt": ""
+      "lt": "Galimybės"
     },
     "nav.how": {
       "en": "How It Works",
-      "lt": ""
+      "lt": "Kaip veikia"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "lt": ""
+      "lt": "Atverkite BitLocker, Linux ir virtualiųjų mašinų diskus macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "lt": ""
+      "lt": "Prijunkite diską arba atverkite disko atvaizdį ir įveskite slaptažodį — jis atsiras Finder lange. Skaitomas ir rašomas kaip bet kuris kitas diskas."
     },
     "hero.download": {
       "en": "Download",
-      "lt": ""
+      "lt": "Atsisiųsti"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "lt": ""
+      "lt": "Pirminis kodas GitHub svetainėje"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "lt": ""
+      "lt": "Versija {version} · Apple Silicon · macOS 15 Sequoia arba naujesnė"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "lt": ""
+      "lt": "Lukotta langas macOS aplinkoje su prie Mac prijungtais diskais ir tuo, kas yra kiekviename."
     },
     "how.title": {
       "en": "How It Works",
-      "lt": ""
+      "lt": "Kaip veikia"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "lt": ""
+      "lt": "macOS nemoka skaityti BitLocker ir Linux failų sistemų. Linux moka. Lukotta paleidžia nedidelę Linux virtualiąją mašiną, joje atrakina diską ir perduoda diską Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "lt": ""
+      "lt": "Prijunkite diską"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "lt": ""
+      "lt": "Arba atverkite disko atvaizdį."
     },
     "how.2.title": {
       "en": "Type the password",
-      "lt": ""
+      "lt": "Įveskite slaptažodį"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "lt": ""
+      "lt": "Tomo slaptažodis, LUKS slaptafrazė arba 48 skaitmenų BitLocker atkūrimo raktas."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "lt": ""
+      "lt": "Atverkite jį Finder lange"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "lt": ""
+      "lt": "Tomas atsiranda skiltyje Vietos ir yra skaitomas, rašomas bei išstumiamas kaip bet kuris kitas diskas."
     },
     "features.title": {
       "en": "Features",
-      "lt": ""
+      "lt": "Galimybės"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "lt": ""
+      "lt": "Lukotta atveria diskus ir diskų atvaizdžius, kurių macOS atsisako skaityti, ir perduoda juos Finder kaip įprastus tomus."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "lt": ""
+      "lt": "Ji vienodai priima fizinius diskus ir atvaizdžių failus. BitLocker tomas atveriamas savo slaptažodžiu arba 48 skaitmenų atkūrimo raktu, o BitLocker ir NTFS tomai yra ir skaitomi, ir rašomi, tad failus galima kopijuoti į diską lygiai taip pat kaip iš jo."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "lt": ""
+      "lt": "Bet kurį diską ar atvaizdį galima atverti ir tik skaitymui, o Lukotta moka vėl atverti tai, kas buvo atverta paskutinį kartą prisijungus."
     },
     "formats.title": {
       "en": "Supported formats",
-      "lt": ""
+      "lt": "Palaikomi formatai"
     },
     "formats.col.format": {
       "en": "Format",
-      "lt": ""
+      "lt": "Formatas"
     },
     "formats.col.read": {
       "en": "Read",
-      "lt": ""
+      "lt": "Skaitymas"
     },
     "formats.col.write": {
       "en": "Write",
-      "lt": ""
+      "lt": "Rašymas"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "lt": ""
+      "lt": "Pastabos"
     },
     "formats.yes": {
       "en": "Yes",
-      "lt": ""
+      "lt": "Taip"
     },
     "formats.no": {
       "en": "No",
-      "lt": ""
+      "lt": "Ne"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "lt": ""
+      "lt": "Šifravimas"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "lt": ""
+      "lt": "Failų sistemos"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "lt": ""
+      "lt": "Diskų atvaizdžiai"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "lt": ""
+      "lt": "Atrakinama tomo slaptažodžiu arba 48 skaitmenų atkūrimo raktu"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "lt": ""
+      "lt": "Atrakinama slaptafraze"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "lt": ""
+      "lt": "Keli to paties disko tomai atrakinami kartu"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "lt": ""
+      "lt": "Taip pat tomas, kurį Windows paliko užmigdytą arba blogai uždarytą"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "lt": ""
+      "lt": "Linux failų sistemos"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "lt": ""
+      "lt": "macOS palaiko juos pats"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "lt": ""
+      "lt": "macOS palaiko juos pats"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "lt": ""
+      "lt": "QEMU ir UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "lt": ""
+      "lt": "VMware, plokščias ir retas"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lt": ""
+      "lt": "Tai, ką turi OVA. Rašomas vienu ypu, todėl vietoje jo pakeisti negalima"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "lt": ""
+      "lt": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "lt": ""
+      "lt": "Hyper-V, fiksuotas ir dinaminis"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "lt": ""
+      "lt": "Hyper-V. Atveriamas tik skaitymui"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "lt": ""
+      "lt": "Kiekvienas formatas išsamiai, ir kaip kuris skaitomas bei rašomas"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "lt": ""
+      "lt": "Nepalaikoma"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "lt": ""
+      "lt": "FileVault ir šifruoti diskų atvaizdžiai, kuriuos macOS atveria pats"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "lt": ""
+      "lt": "Diskai, susieti su TPM lustu, o ne su slaptažodžiu, įskaitant naujesnį aparatinį šifravimą Ubuntu sistemoje"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "lt": ""
+      "lt": "LUKS tomai, kurių antraštė laikoma atskirai nuo disko"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "lt": ""
+      "lt": "VeraCrypt ir TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "lt": ""
+      "lt": "Atvaizdis, nurodantis kitą failą: VMware momentinių kopijų grandinė, diferencinis VHD arba qcow2 su pagrindiniu failu"
     },
     "name.title": {
       "en": "The Name",
-      "lt": ""
+      "lt": "Pavadinimas"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "lt": ""
+      "lt": "Lúkotta suomiškai reiškia „be spynos“, iš {lukko}, kas yra spyna, su galūne {tta}, žyminčia kažko nebuvimą. Kirtis krinta ant pirmojo skiemens, kaip suomių kalboje visada."
     },
     "faq.title": {
       "en": "FAQ",
-      "lt": ""
+      "lt": "Dažni klausimai"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "lt": ""
+      "lt": "Kiek kainuoja Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "lt": ""
+      "lt": "Nieko. Atsisiųsti nemokama, naudotis taip pat. Nėra mokamos versijos, prenumeratos, bandomojo laikotarpio, kuris baigiasi, nei paskyros, kurią reikėtų susikurti."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "lt": ""
+      "lt": "Tai taip pat laisva programinė įranga pagal GNU General Public License 3 arba naujesnę versiją. Pirminis kodas yra viešas: galite jį skaityti, patys sukompiliuoti, keisti ir perduoti tai, ką pakeitėte."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "lt": ""
+      "lt": "Ar Lukotta atveria BitLocker diskus?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "lt": ""
+      "lt": "Taip, ir rašo į juos. Įveskite tomo slaptažodį arba įklijuokite 48 skaitmenų atkūrimo raktą, ir diskas atsivers Finder lange."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "lt": ""
+      "lt": "Ar Lukotta rašo į NTFS diskus?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "lt": ""
+      "lt": "Taip. Failai kopijuojami į NTFS diską lygiai taip pat kaip iš jo."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "lt": ""
+      "lt": "Ar Lukotta atveria Linux diskus?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "lt": ""
+      "lt": "Taip. ext2, ext3, ext4, btrfs ir XFS atsiveria, atskirai arba LUKS šifravimo viduje. Diskas, sutvarkytas su LVM, atveria visus savo tomus kartu."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "lt": ""
+      "lt": "Ar Lukotta atveria virtualiosios mašinos diską?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "lt": ""
+      "lt": "Taip, nepaleidžiant mašinos. Atverkite qcow2, VMDK, VDI, VHD arba VHDX atvaizdį ir kopijuokite failus iš jo arba į jį."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "lt": ""
+      "lt": "Ar Lukotta veikia Mac kompiuteryje su Intel procesoriumi?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "lt": ""
+      "lt": "Ne. Jai reikia virtualizacijos, kurią teikia Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "lt": ""
+      "lt": "Privatumas"
     },
     "footer.licence": {
       "en": "Licence",
-      "lt": ""
+      "lt": "Licencija"
     },
     "footer.source": {
       "en": "Source",
-      "lt": ""
+      "lt": "Pirminis kodas"
     },
     "footer.contact": {
       "en": "Contact",
-      "lt": ""
+      "lt": "Kontaktai"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "lt": ""
+      "lt": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "lt": ""
+      "lt": "Laisva programinė įranga pagal GNU General Public License 3 arba naujesnę versiją."
     }
   }
 }

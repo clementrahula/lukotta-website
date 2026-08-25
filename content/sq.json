@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "sq": ""
+      "sq": "Hapni disqe BitLocker dhe Linux në macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "sq": ""
+      "sq": "Hapni disqe BitLocker, NTFS, LUKS dhe Linux në Mac. Shkruani fjalëkalimin dhe disku shfaqet në Finder, i lexueshëm dhe i shkruajtshëm. Software i lirë."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "sq": ""
+      "sq": "Lukotta — disqe BitLocker, Linux dhe të makinave virtuale në macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "sq": ""
+      "sq": "Lidhni një disk ose hapni një imazh disku, shkruani fjalëkalimin, dhe shfaqet në Finder, i lexueshëm dhe i shkruajtshëm, si çdo disk tjetër."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "sq": ""
+      "sq": "Ikona e aplikacionit Lukotta: një katror gri prej rrasash me qoshe të rrumbullakosura dhe shkronjën L të prerë brenda."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "sq": ""
+      "sq": "Kalo te përmbajtja"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "sq": ""
+      "sq": "Zgjidhni gjuhën"
     },
     "ui.menu": {
       "en": "Menu",
-      "sq": ""
+      "sq": "Menyja"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "sq": ""
+      "sq": "Kthehu lart"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "sq": ""
+      "sq": "Kalo në pamjen e çelët"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "sq": ""
+      "sq": "Kalo në pamjen e errët"
     },
     "nav.download": {
       "en": "Download",
-      "sq": ""
+      "sq": "Shkarko"
     },
     "nav.features": {
       "en": "Features",
-      "sq": ""
+      "sq": "Veçoritë"
     },
     "nav.how": {
       "en": "How It Works",
-      "sq": ""
+      "sq": "Si funksionon"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "sq": ""
+      "sq": "Hapni disqe BitLocker, Linux dhe të makinave virtuale në macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "sq": ""
+      "sq": "Lidhni një disk ose hapni një imazh disku dhe shkruani fjalëkalimin — shfaqet në Finder. I lexueshëm dhe i shkruajtshëm, si çdo disk tjetër."
     },
     "hero.download": {
       "en": "Download",
-      "sq": ""
+      "sq": "Shkarko"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "sq": ""
+      "sq": "Kodi burim në GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "sq": ""
+      "sq": "Versioni {version} · Apple Silicon · macOS 15 Sequoia ose më i ri"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "sq": ""
+      "sq": "Dritarja e Lukotta në macOS, me disqet e lidhura me Mac dhe çfarë përmban secili."
     },
     "how.title": {
       "en": "How It Works",
-      "sq": ""
+      "sq": "Si funksionon"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "sq": ""
+      "sq": "macOS nuk di të lexojë BitLocker as sistemet e skedarëve të Linux. Linux di. Lukotta nis një makinë virtuale të vogël me Linux, e shkyç diskun brenda saj dhe ia dorëzon diskun Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "sq": ""
+      "sq": "Lidhni diskun"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "sq": ""
+      "sq": "Ose hapni një imazh disku."
     },
     "how.2.title": {
       "en": "Type the password",
-      "sq": ""
+      "sq": "Shkruani fjalëkalimin"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "sq": ""
+      "sq": "Fjalëkalimi i volumit, një frazë kalimi LUKS ose një çelës rikuperimi BitLocker me 48 shifra."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "sq": ""
+      "sq": "Hapeni në Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "sq": ""
+      "sq": "Volumi shfaqet te Vendndodhjet dhe lexohet, shkruhet e nxirret si çdo disk tjetër."
     },
     "features.title": {
       "en": "Features",
-      "sq": ""
+      "sq": "Veçoritë"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "sq": ""
+      "sq": "Lukotta hap disqet dhe imazhet e diskut që macOS nuk pranon t’i lexojë, dhe ia dorëzon Finder si volume të zakonshme."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "sq": ""
+      "sq": "Merr njësoj disqe fizike dhe skedarë imazhi. Një volum BitLocker hapet me fjalëkalimin e vet ose me një çelës rikuperimi me 48 shifra, dhe volumet BitLocker e NTFS lexohen dhe shkruhen, kështu që skedarët mund të kopjohen në disk po aq mirë sa prej tij."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "sq": ""
+      "sq": "Çdo disk ose imazh mund të hapet edhe vetëm për lexim, dhe Lukotta mund të rihapë atë që ishte e hapur në hyrjen e fundit."
     },
     "formats.title": {
       "en": "Supported formats",
-      "sq": ""
+      "sq": "Formatet e mbështetura"
     },
     "formats.col.format": {
       "en": "Format",
-      "sq": ""
+      "sq": "Formati"
     },
     "formats.col.read": {
       "en": "Read",
-      "sq": ""
+      "sq": "Lexim"
     },
     "formats.col.write": {
       "en": "Write",
-      "sq": ""
+      "sq": "Shkrim"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "sq": ""
+      "sq": "Shënime"
     },
     "formats.yes": {
       "en": "Yes",
-      "sq": ""
+      "sq": "Po"
     },
     "formats.no": {
       "en": "No",
-      "sq": ""
+      "sq": "Jo"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "sq": ""
+      "sq": "Enkriptimi"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "sq": ""
+      "sq": "Sistemet e skedarëve"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "sq": ""
+      "sq": "Imazhe disku"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "sq": ""
+      "sq": "Shkyçet me fjalëkalimin e volumit ose me një çelës rikuperimi me 48 shifra"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "sq": ""
+      "sq": "Shkyçet me frazën e kalimit"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "sq": ""
+      "sq": "Disa volume në të njëjtin disk shkyçen bashkë"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "sq": ""
+      "sq": "Përfshirë një volum që Windows e la në gjumë ose e mbylli keq"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "sq": ""
+      "sq": "Sistemet e skedarëve të Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "sq": ""
+      "sq": "macOS i mbështet vetë"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "sq": ""
+      "sq": "macOS i mbështet vetë"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "sq": ""
+      "sq": "QEMU dhe UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "sq": ""
+      "sq": "VMware, i sheshtë dhe i rrallë"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sq": ""
+      "sq": "Ajo që përmban një OVA. Shkruhet me një kalim të vetëm, prandaj nuk mund të ndryshohet në vend"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "sq": ""
+      "sq": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "sq": ""
+      "sq": "Hyper-V, i fiksuar dhe dinamik"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "sq": ""
+      "sq": "Hyper-V. Hapet vetëm për lexim"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "sq": ""
+      "sq": "Çdo format me hollësi, dhe si lexohet e shkruhet secili"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "sq": ""
+      "sq": "Nuk mbështetet"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "sq": ""
+      "sq": "FileVault dhe imazhet e enkriptuara të diskut, që macOS i hap vetë"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "sq": ""
+      "sq": "Disqet e lidhura me një çip TPM në vend të një fjalëkalimi, përfshirë enkriptimin më të ri me harduer në Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "sq": ""
+      "sq": "Volumet LUKS që e mbajnë kokën e tyre veçmas diskut"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "sq": ""
+      "sq": "VeraCrypt dhe TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "sq": ""
+      "sq": "Një imazh që i referohet një skedari tjetër: një zinxhir fotografish VMware, një VHD diferencial ose një qcow2 me skedar bazë"
     },
     "name.title": {
       "en": "The Name",
-      "sq": ""
+      "sq": "Emri"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "sq": ""
+      "sq": "Lúkotta do të thotë „pa bravë“ në finlandisht, nga {lukko}, që është brava, me mbaresën {tta}, e cila shënon mungesën e diçkaje. Theksi bie mbi rrokjen e parë, siç ndodh gjithmonë në finlandisht."
     },
     "faq.title": {
       "en": "FAQ",
-      "sq": ""
+      "sq": "Pyetje të shpeshta"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "sq": ""
+      "sq": "Sa kushton Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "sq": ""
+      "sq": "Asgjë. Shkarkimi është falas dhe përdorimi po ashtu. Nuk ka version me pagesë, as abonim, as periudhë prove që skadon, as llogari për t’u krijuar."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "sq": ""
+      "sq": "Është gjithashtu software i lirë, nën GNU General Public License, versioni 3 ose më i ri. Kodi burim është publik: mund ta lexoni, ta ndërtoni vetë, ta ndryshoni dhe të përcillni atë që ndryshuat."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "sq": ""
+      "sq": "A i hap Lukotta disqet BitLocker?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "sq": ""
+      "sq": "Po, dhe shkruan në to. Shkruani fjalëkalimin e volumit ose ngjitni një çelës rikuperimi me 48 shifra, dhe disku hapet në Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "sq": ""
+      "sq": "A shkruan Lukotta në disqe NTFS?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "sq": ""
+      "sq": "Po. Skedarët kopjohen në një disk NTFS po aq mirë sa prej tij."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "sq": ""
+      "sq": "A i hap Lukotta disqet Linux?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "sq": ""
+      "sq": "Po. ext2, ext3, ext4, btrfs dhe XFS hapen, të zhveshura ose brenda një enkriptimi LUKS. Një disk i ndërtuar me LVM i hap të gjitha volumet e tij bashkë."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "sq": ""
+      "sq": "A e hap Lukotta diskun e një makine virtuale?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "sq": ""
+      "sq": "Po, pa e nisur makinën. Hapni një imazh qcow2, VMDK, VDI, VHD ose VHDX dhe kopjoni skedarë prej tij, ose në të."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "sq": ""
+      "sq": "A funksionon Lukotta në një Mac me Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "sq": ""
+      "sq": "Jo. I duhet virtualizimi që ofron Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "sq": ""
+      "sq": "Privatësia"
     },
     "footer.licence": {
       "en": "Licence",
-      "sq": ""
+      "sq": "Licenca"
     },
     "footer.source": {
       "en": "Source",
-      "sq": ""
+      "sq": "Kodi burim"
     },
     "footer.contact": {
       "en": "Contact",
-      "sq": ""
+      "sq": "Kontakt"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "sq": ""
+      "sq": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "sq": ""
+      "sq": "Software i lirë nën GNU General Public License, versioni 3 ose më i ri."
     }
   }
 }

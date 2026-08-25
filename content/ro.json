@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "ro": ""
+      "ro": "Deschide discuri BitLocker și Linux pe macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ro": ""
+      "ro": "Deschide discuri BitLocker, NTFS, LUKS și Linux pe Mac. Scrie parola și discul apare în Finder, gata de citire și scriere. Software liber, gratuit."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "ro": ""
+      "ro": "Lukotta — discuri BitLocker, Linux și de mașini virtuale pe macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "ro": ""
+      "ro": "Conectează un disc sau deschide o imagine de disc, scrie parola, și apare în Finder, gata de citire și scriere, ca orice alt disc."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "ro": ""
+      "ro": "Pictograma aplicației Lukotta: un pătrat gri-ardezie cu colțuri rotunjite din care e decupată litera L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "ro": ""
+      "ro": "Sari la conținut"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "ro": ""
+      "ro": "Alege limba"
     },
     "ui.menu": {
       "en": "Menu",
-      "ro": ""
+      "ro": "Meniu"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "ro": ""
+      "ro": "Înapoi sus"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "ro": ""
+      "ro": "Treci la aspectul luminos"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "ro": ""
+      "ro": "Treci la aspectul întunecat"
     },
     "nav.download": {
       "en": "Download",
-      "ro": ""
+      "ro": "Descarcă"
     },
     "nav.features": {
       "en": "Features",
-      "ro": ""
+      "ro": "Funcții"
     },
     "nav.how": {
       "en": "How It Works",
-      "ro": ""
+      "ro": "Cum funcționează"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "ro": ""
+      "ro": "Deschide discuri BitLocker, Linux și de mașini virtuale pe macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "ro": ""
+      "ro": "Conectează un disc sau deschide o imagine de disc și scrie parola — apare în Finder. Gata de citire și scriere, ca orice alt disc."
     },
     "hero.download": {
       "en": "Download",
-      "ro": ""
+      "ro": "Descarcă"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "ro": ""
+      "ro": "Codul sursă pe GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "ro": ""
+      "ro": "Versiunea {version} · Apple Silicon · macOS 15 Sequoia sau mai nou"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "ro": ""
+      "ro": "Fereastra Lukotta pe macOS, cu discurile conectate la Mac și ce conține fiecare."
     },
     "how.title": {
       "en": "How It Works",
-      "ro": ""
+      "ro": "Cum funcționează"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "ro": ""
+      "ro": "macOS nu știe să citească BitLocker și nici sistemele de fișiere Linux. Linux știe. Lukotta pornește o mică mașină virtuală cu Linux, deblochează discul înăuntru și îl predă înapoi Finderului."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "ro": ""
+      "ro": "Conectează discul"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "ro": ""
+      "ro": "Sau deschide o imagine de disc."
     },
     "how.2.title": {
       "en": "Type the password",
-      "ro": ""
+      "ro": "Scrie parola"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "ro": ""
+      "ro": "Parola volumului, o frază de acces LUKS sau o cheie de recuperare BitLocker de 48 de cifre."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "ro": ""
+      "ro": "Deschide-l în Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "ro": ""
+      "ro": "Volumul apare la Locații și se citește, se scrie și se scoate ca orice alt disc."
     },
     "features.title": {
       "en": "Features",
-      "ro": ""
+      "ro": "Funcții"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ro": ""
+      "ro": "Lukotta deschide discurile și imaginile de disc pe care macOS refuză să le citească și le predă Finderului ca volume obișnuite."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "ro": ""
+      "ro": "Ia deopotrivă discuri fizice și fișiere imagine. Un volum BitLocker se deschide cu parola lui sau cu o cheie de recuperare de 48 de cifre, iar volumele BitLocker și NTFS sunt și citite, și scrise, așa că fișierele se pot copia pe disc la fel de bine ca de pe el."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "ro": ""
+      "ro": "Orice disc sau imagine se poate deschide și doar pentru citire, iar Lukotta poate redeschide ce era deschis la ultima autentificare."
     },
     "formats.title": {
       "en": "Supported formats",
-      "ro": ""
+      "ro": "Formate acceptate"
     },
     "formats.col.format": {
       "en": "Format",
-      "ro": ""
+      "ro": "Format"
     },
     "formats.col.read": {
       "en": "Read",
-      "ro": ""
+      "ro": "Citire"
     },
     "formats.col.write": {
       "en": "Write",
-      "ro": ""
+      "ro": "Scriere"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "ro": ""
+      "ro": "Observații"
     },
     "formats.yes": {
       "en": "Yes",
-      "ro": ""
+      "ro": "Da"
     },
     "formats.no": {
       "en": "No",
-      "ro": ""
+      "ro": "Nu"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "ro": ""
+      "ro": "Criptare"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "ro": ""
+      "ro": "Sisteme de fișiere"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "ro": ""
+      "ro": "Imagini de disc"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "ro": ""
+      "ro": "Se deblochează cu parola volumului sau cu o cheie de recuperare de 48 de cifre"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "ro": ""
+      "ro": "Se deblochează cu fraza de acces"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "ro": ""
+      "ro": "Mai multe volume de pe același disc se deblochează împreună"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "ro": ""
+      "ro": "Inclusiv un volum lăsat de Windows în hibernare sau închis prost"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "ro": ""
+      "ro": "Sistemele de fișiere Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "ro": ""
+      "ro": "Acceptate nativ de macOS"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "ro": ""
+      "ro": "Acceptate nativ de macOS"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "ro": ""
+      "ro": "QEMU și UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "ro": ""
+      "ro": "VMware, plat și rarefiat"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ro": ""
+      "ro": "Ce conține un OVA. Se scrie dintr-o singură trecere, deci nu poate fi modificat pe loc"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "ro": ""
+      "ro": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "ro": ""
+      "ro": "Hyper-V, fix și dinamic"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "ro": ""
+      "ro": "Hyper-V. Se deschide doar pentru citire"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "ro": ""
+      "ro": "Fiecare format în detaliu, și cum e citit și scris fiecare"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "ro": ""
+      "ro": "Neacceptat"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "ro": ""
+      "ro": "FileVault și imaginile de disc criptate, pe care macOS le deschide singur"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "ro": ""
+      "ro": "Discurile legate de un cip TPM în locul unei parole, inclusiv criptarea hardware din versiunile recente de Ubuntu"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "ro": ""
+      "ro": "Volumele LUKS al căror antet e păstrat separat de disc"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "ro": ""
+      "ro": "VeraCrypt și TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "ro": ""
+      "ro": "O imagine care trimite la alt fișier: un lanț de instantanee VMware, un VHD diferențial sau un qcow2 cu fișier de bază"
     },
     "name.title": {
       "en": "The Name",
-      "ro": ""
+      "ro": "Numele"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "ro": ""
+      "ro": "Lúkotta înseamnă „fără lacăt” în finlandeză, de la {lukko}, lacătul, cu terminația {tta}, care marchează absența a ceva. Accentul cade pe prima silabă, ca întotdeauna în finlandeză."
     },
     "faq.title": {
       "en": "FAQ",
-      "ro": ""
+      "ro": "Întrebări frecvente"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "ro": ""
+      "ro": "Cât costă Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "ro": ""
+      "ro": "Nimic. Descărcarea e gratuită și folosirea la fel. Nu există versiune plătită, abonament, perioadă de probă care expiră sau cont de creat."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "ro": ""
+      "ro": "Este și software liber, sub GNU General Public License, versiunea 3 sau mai nouă. Codul sursă e public: îl poți citi, compila singur, modifica și transmite mai departe ce ai modificat."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "ro": ""
+      "ro": "Poate Lukotta să deschidă discuri BitLocker?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "ro": ""
+      "ro": "Da, și să scrie pe ele. Scrie parola volumului sau lipește o cheie de recuperare de 48 de cifre, iar discul se deschide în Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "ro": ""
+      "ro": "Poate Lukotta să scrie pe discuri NTFS?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "ro": ""
+      "ro": "Da. Fișierele se copiază pe un disc NTFS la fel de bine ca de pe el."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "ro": ""
+      "ro": "Poate Lukotta să deschidă discuri Linux?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ro": ""
+      "ro": "Da. ext2, ext3, ext4, btrfs și XFS se deschid, simple sau în interiorul unei criptări LUKS. Un disc organizat cu LVM își deschide toate volumele împreună."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "ro": ""
+      "ro": "Poate Lukotta să deschidă discul unei mașini virtuale?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "ro": ""
+      "ro": "Da, fără a porni mașina. Deschide o imagine qcow2, VMDK, VDI, VHD sau VHDX și copiază fișiere din ea, ori în ea."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "ro": ""
+      "ro": "Funcționează Lukotta pe un Mac cu Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "ro": ""
+      "ro": "Nu. Are nevoie de virtualizarea pe care o oferă Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "ro": ""
+      "ro": "Confidențialitate"
     },
     "footer.licence": {
       "en": "Licence",
-      "ro": ""
+      "ro": "Licență"
     },
     "footer.source": {
       "en": "Source",
-      "ro": ""
+      "ro": "Cod sursă"
     },
     "footer.contact": {
       "en": "Contact",
-      "ro": ""
+      "ro": "Contact"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "ro": ""
+      "ro": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "ro": ""
+      "ro": "Software liber sub GNU General Public License, versiunea 3 sau mai nouă."
     }
   }
 }
