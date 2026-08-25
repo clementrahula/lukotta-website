@@ -59,7 +59,7 @@
       "it": ""
     },
     "nav.how": {
-      "en": "How it works",
+      "en": "How It Works",
       "it": ""
     },
     "hero.title": {
@@ -87,7 +87,7 @@
       "it": ""
     },
     "how.title": {
-      "en": "How it works",
+      "en": "How It Works",
       "it": ""
     },
     "how.lead": {
@@ -116,10 +116,6 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "it": ""
-    },
-    "how.note": {
-      "en": "The drive is handed to Finder over a local network connection on your own Mac, so it appears under Locations with a network icon.",
       "it": ""
     },
     "features.title": {
@@ -195,15 +191,15 @@
       "it": ""
     },
     "formats.linuxfs.note": {
-      "en": "The Linux filesystems, mounted by the guest's own drivers",
+      "en": "The Linux filesystems",
       "it": ""
     },
     "formats.exfat.note": {
-      "en": "Handed to macOS, which reads and writes these itself",
+      "en": "Supported by macOS natively",
       "it": ""
     },
     "formats.raw.note": {
-      "en": "Attached by macOS, then mounted",
+      "en": "Supported by macOS natively",
       "it": ""
     },
     "formats.qcow2.note": {
@@ -259,7 +255,7 @@
       "it": ""
     },
     "name.title": {
-      "en": "About the name",
+      "en": "The Name",
       "it": ""
     },
     "name.body": {
@@ -267,7 +263,7 @@
       "it": ""
     },
     "faq.title": {
-      "en": "Questions",
+      "en": "FAQ",
       "it": ""
     },
     "faq.1.q": {
@@ -295,7 +291,7 @@
       "it": ""
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it. A drive Windows left hibernated opens too, rather than being refused.",
+      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
       "it": ""
     },
     "faq.4.q": {
@@ -323,7 +319,7 @@
       "it": ""
     },
     "footer.privacy": {
-      "en": "Privacy",
+      "en": "Privacy Policy",
       "it": ""
     },
     "footer.licence": {
@@ -335,7 +331,7 @@
       "it": ""
     },
     "footer.copyright": {
-      "en": "© {year} {author}.",
+      "en": "{copyleft} {year} {author}.",
       "it": ""
     },
     "footer.gpl": {

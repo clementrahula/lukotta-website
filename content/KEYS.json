@@ -8,8 +8,8 @@
     "how": "Section 01. Why a Linux virtual machine is involved, and three short steps.",
     "features": "Section 02, in prose. Three short paragraphs saying what the application does. Plain statements of fact — no superlatives, no selling. The points that matter are that it takes physical drives and image files alike, that BitLocker opens with either a password or a recovery key, and that BitLocker and NTFS are written as well as read.",
     "formats": "The table inside section 02: everything the application opens, grouped into encryption, filesystems and disk images, with a Read and a Write column, and a list of what is not supported. Format names are never translated.",
-    "name": "Section 03. One paragraph explaining the name, taken from the application's README.",
-    "faq": "Section 04, and the last thing on the page. Six questions about Lukotta, each naming it and asking what it does. They are questions about this application, not general questions about macOS, and the answers say what the application does rather than explaining the surrounding technology. Short: a yes or a no, then one or two sentences. They are published as structured data as well as shown on the page, so a search engine may show an answer directly, which is why every answer has to stand on its own without the question.",
+    "name": "The last section on the page. One paragraph explaining the name, taken from the application's README.",
+    "faq": "Six questions about Lukotta, each naming it and asking what it does. They are questions about this application, not general questions about macOS, and the answers say what the application does rather than explaining the surrounding technology. Short: a yes or a no, then one or two sentences. They are published as structured data as well as shown on the page, so a search engine may show an answer directly, which is why every answer has to stand on its own without the question.",
     "footer": "Three links, and the copyright and licence line beneath them."
   },
   "notes": {
@@ -33,8 +33,7 @@
     "formats.specs": "The whole string is a link to SPECS.md. It reads as a sentence, not as a button.",
     "formats.not.body": "A list of what cannot be opened, separated by full stops. Each item is a distinct reason; keep them distinct.",
     "how.lead": "The whole explanation in three sentences: macOS cannot, Linux can, so a small Linux machine does it.",
-    "how.note": "Explains why the drive shows a network icon in Finder. Reassurance, so it must not sound like an apology or a defect.",
-    "footer.copyright": "Contains {year}, replaced when the page is built, and {author}, which becomes a link to the author's own site. Both must survive, spelled exactly as they are.",
+    "footer.copyright": "Contains {copyleft}, which becomes a reversed copyright sign, and {year} and {author}, which become the year and a link to the author's own site. All three must survive, spelled exactly as they are.",
     "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is.",
     "name.body": "One paragraph. Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",
     "name.stress": "About where the stress falls when the word is said aloud. The page shows this by setting the first syllable apart, so the sentence and the picture must agree.",
@@ -44,9 +43,11 @@
     "formats.not.5": "A single item ending in a list of three examples after a colon.",
     "faq.1.a": "The first of two paragraphs: that it costs nothing, and that none of the usual paid arrangements apply.",
     "faq.2.a": "Both halves matter: that it opens, and that it writes. The volume password and the 48-digit recovery key are two separate ways in and both must survive.",
-    "faq.3.a": "The point is writing, not reading. Keep 'onto ... as well as off it', which is what distinguishes this from what macOS already does.",
     "faq.4.a": "Filesystem names are never translated. Do not add a list of distributions.",
     "faq.6.a": "Says plainly that Intel Macs are not supported. Do not soften it.",
-    "faq.1.a2": "The second paragraph, about the licence. GNU General Public License is a proper name and is not translated, though the sentence around it is. Free software here means the licence, not the price — the price was the paragraph before. Where a language distinguishes the two senses of free, use the word for the licence."
+    "faq.1.a2": "The second paragraph, about the licence. GNU General Public License is a proper name and is not translated, though the sentence around it is. Free software here means the licence, not the price — the price was the paragraph before. Where a language distinguishes the two senses of free, use the word for the licence.",
+    "faq.3.a": "The point is writing, not reading. Keep 'onto ... as well as off it', which is what distinguishes this from what macOS already does.",
+    "formats.exfat.note": "These are handled by macOS itself rather than by the Linux virtual machine, which is why the table marks them differently. Same sentence as the raw image row.",
+    "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too."
   }
 }

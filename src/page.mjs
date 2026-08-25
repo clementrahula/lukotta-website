@@ -29,13 +29,13 @@ const FORMATS = [
     rows: [
       { name: "NTFS", read: 1, write: 1, note: "formats.ntfs.note" },
       { name: "ext2, ext3, ext4, btrfs, XFS", read: 1, write: 1, note: "formats.linuxfs.note" },
-      { name: "exFAT, FAT", read: 1, write: 1, note: "formats.exfat.note" },
+      { name: "exFAT, FAT", read: 1, write: 1, native: 1, note: "formats.exfat.note" },
     ],
   },
   {
     group: "formats.group.images",
     rows: [
-      { name: "IMG, DMG", read: 1, write: 1, note: "formats.raw.note" },
+      { name: "IMG, DMG", read: 1, write: 1, native: 1, note: "formats.raw.note" },
       { name: "qcow2", read: 1, write: 1, note: "formats.qcow2.note" },
       { name: "VMDK", read: 1, write: 1, note: "formats.vmdk.note" },
       { name: "VMDK, stream-optimized", read: 1, write: 0, note: "formats.vmdkStream.note" },
@@ -111,9 +111,11 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 
   /* ------------------------------------------------------------- parts -- */
 
-  const tick = (on, label) =>
+  /* A tick is something Lukotta does. A disc is something macOS does by
+     itself, which the note in the same row says in words. A dash is neither. */
+  const tick = (on, label, native) =>
     on
-      ? `<span class="mark yes" aria-hidden="true">✓</span><span class="visually-hidden">${esc(label.yes)}</span>`
+      ? `<span class="mark ${native ? "native" : "yes"}" aria-hidden="true">${native ? "" : "✓"}</span><span class="visually-hidden">${esc(label.yes)}</span>`
       : `<span class="mark no" aria-hidden="true">—</span><span class="visually-hidden">${esc(label.no)}</span>`;
 
   const label = { yes: t("formats.yes"), no: t("formats.no") };
@@ -126,8 +128,8 @@ ${g.rows
   .map(
     (r) => `          <tr>
             <th scope="row"><code>${esc(r.name)}</code></th>
-            <td class="col-mark">${tick(r.read, label)}</td>
-            <td class="col-mark">${tick(r.write, label)}</td>
+            <td class="col-mark">${tick(r.read, label, r.native)}</td>
+            <td class="col-mark">${tick(r.write, label, r.native)}</td>
             <td class="col-note">${esc(t(r.note))}</td>
           </tr>`
   )
@@ -172,7 +174,9 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
 
   /* The author's name is a link, so the string keeps its {author} placeholder
      until here rather than being flattened into text by the build. */
-  const copyright = esc(t("footer.copyright")).split("{author}");
+  const copyright = esc(t("footer.copyright"))
+    .replace("{copyleft}", '<span class="copyleft">©</span>')
+    .split("{author}");
   const authorLink = `<a href="${cfg.authorUrl}">${esc(cfg.authorName)}</a>`;
 
   const sunIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1v1.6M8 13.4V15M15 8h-1.6M2.6 8H1m11-5-1.1 1.1M5.1 10.9 4 12m8 0-1.1-1.1M5.1 5.1 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
@@ -253,8 +257,8 @@ ${ogAlternates}
 
       <nav class="site-nav" aria-label="${esc(t("ui.menu"))}">
         <a href="${cfg.downloadUrl}">${esc(t("nav.download"))}</a>
-        <a href="#features">${esc(t("nav.features"))}</a>
         <a href="#how">${esc(t("nav.how"))}</a>
+        <a href="#features">${esc(t("nav.features"))}</a>
       </nav>
 
       <div class="header-tools">
@@ -316,8 +320,6 @@ ${langLinks}
         <ol class="steps">
 ${steps}
         </ol>
-
-        <p class="note">${esc(t("how.note"))}</p>
       </div>
     </section>
 
@@ -363,17 +365,6 @@ ${notSupported}
       </div>
     </section>
 
-    <section id="name" class="rule">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>${esc(t("name.title"))}</h2>
-        </div>
-        <div class="prose">
-          <p>${nameProse}</p>
-        </div>
-      </div>
-    </section>
-
     <section id="faq" class="rule">
       <div class="wrap">
         <div class="section-head">
@@ -381,6 +372,17 @@ ${notSupported}
         </div>
         <div class="faq">
 ${faqItems}
+        </div>
+      </div>
+    </section>
+
+    <section id="name" class="rule">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>${esc(t("name.title"))}</h2>
+        </div>
+        <div class="prose">
+          <p>${nameProse}</p>
         </div>
       </div>
     </section>
