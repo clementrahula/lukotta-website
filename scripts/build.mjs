@@ -274,16 +274,26 @@ const urlEntries = builtLangs
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${a.href}"/>`)
       .join("\n");
 
-    /* From the commit that last touched this language's content. A fresh CI
-       checkout gives every file the same mtime, which would stamp all 37 URLs
-       with the deploy date and teach search engines to ignore the field. */
-    const lastmod = lastChanged(join(CONTENT, `${l.code}.json`));
+    /* When this page last changed, which is later than its translation file
+       alone. The version number comes from the configuration and the format
+       names from the template, and both are printed on every page, so a
+       release or a new format changes all thirty-seven without touching a
+       single content file. Taking the latest of the four keeps the field
+       honest in both directions: it does not sit still through a change a
+       reader can see, and it does not move for a deploy that changed nothing.
+       (Mtime cannot be used here: a fresh CI checkout gives every file the
+       same one, which would stamp all 37 URLs with the deploy date.) */
+    const lastmod = [
+      join(CONTENT, `${l.code}.json`),
+      join(CONTENT, `${cfg.defaultLang}.json`),   /* English shows through wherever a string is untranslated */
+      join(SRC, "page.mjs"),                      /* structure, and the format names, which are never translated */
+      join(ROOT, "site.config.json"),             /* the version, printed under the download button */
+    ].map(lastChanged).sort().at(-1);
 
     return `  <url>
     <loc>${loc}</loc>
 ${links}
     <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>${l.path ? "0.8" : "1.0"}</priority>
   </url>`;
   })
