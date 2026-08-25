@@ -172,6 +172,11 @@
 
   --tick:        #1B9E38;
 
+  /* Which way round the appearance-specific pieces sit. Dark overrides them. */
+  --sun-o: 0;   --moon-o: 1;
+  --knob-x: 2px; --knob-bg: var(--ink);
+  --shot-light-o: 1; --shot-dark-o: 0;
+
   --font-display: "Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
                   Roboto, "Noto Sans", "Nirmala UI", "Leelawadee UI",
                   "Microsoft YaHei", "Yu Gothic UI", "Malgun Gothic", sans-serif;
@@ -191,6 +196,41 @@
   --page:   1120px;
   --gutter: clamp(20px, 5vw, 56px);
   --measure: 64ch;
+}
+
+/* The dark appearance is written twice on purpose. The media query serves a
+   reader whose system asks for dark and whose JavaScript never ran; the
+   attribute serves a reader who chose, and outranks the system either way.
+   check.mjs compares the two blocks token by token, so they cannot drift. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --paper:       #15161A;
+    --paper-2:     #1C1E23;
+    --paper-3:     #23262C;
+
+    --ink:         #F2EFE8;
+    --ink-2:       #A6AAB3;
+    --ink-3:       #82868F;
+
+    --rule:        #2C2F36;
+    --rule-2:      #40444D;
+    --control-edge: #61656E;
+
+    --amber:       #FF9230;
+    --amber-ink:   #FFB061;
+    --on-amber:    #16120A;
+
+    --titlebar:    #2C2E33;
+    --titlebar-edge: #3A3D44;
+
+    --tick:        #3FD35F;
+
+    --sun-o: 1;   --moon-o: 0;
+    --knob-x: 23px; --knob-bg: var(--amber);
+    --shot-light-o: 0; --shot-dark-o: 1;
+  }
 }
 
 :root[data-theme="dark"] {
@@ -216,6 +256,10 @@
   --titlebar-edge: #3A3D44;
 
   --tick:        #3FD35F;
+
+  --sun-o: 1;   --moon-o: 0;
+  --knob-x: 23px; --knob-bg: var(--amber);
+  --shot-light-o: 0; --shot-dark-o: 1;
 }
 
 /* ------------------------------------------------------------------ base -- */
@@ -334,6 +378,12 @@ img { max-width: 100%; height: auto; display: block; }
 .header-tools { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
 
 /* Appearance: a two-state switch. */
+/* The switch only means something once script.js can store a choice, so it is
+   absent until the inline head script marks the document as scripted. The
+   appearance still follows the system without it. */
+.theme-switch { display: none; }
+:root.js .theme-switch { display: revert; }
+
 .theme-switch {
   position: relative; width: 46px; height: 25px; padding: 0;
   border: 1px solid var(--control-edge); border-radius: 999px;
@@ -344,21 +394,18 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; align-items: center; justify-content: space-between;
   padding-inline: 5px;
 }
-.theme-switch .ico { display: grid; place-items: center; color: var(--ink-3); }
+.theme-switch .ico { display: grid; place-items: center; color: var(--ink-2); }
 /* The knob covers one end, so only the far icon is shown. It indicates the
-   appearance a click will move to. */
-.theme-switch .ico-sun { opacity: 0; }
-:root[data-theme="dark"] .theme-switch .ico-sun { opacity: 1; }
-:root[data-theme="dark"] .theme-switch .ico-moon { opacity: 0; }
+   appearance a click will move to. Which one shows is a token, so the rule is
+   written once and both dark paths drive it. */
+.theme-switch .ico-sun { opacity: var(--sun-o); }
+.theme-switch .ico-moon { opacity: var(--moon-o); }
 .theme-switch svg { width: 12px; height: 12px; }
 .theme-switch .knob {
-  position: absolute; top: 2px; inset-inline-start: 2px;
+  position: absolute; top: 2px; inset-inline-start: var(--knob-x);
   width: 19px; height: 19px; border-radius: 50%;
-  background: var(--ink);
+  background: var(--knob-bg);
   transition: inset-inline-start .18s ease;
-}
-:root[data-theme="dark"] .theme-switch .knob {
-  inset-inline-start: 23px; background: var(--amber);
 }
 
 /* Language menu. */
@@ -388,7 +435,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .lang-list a:hover { background: var(--paper-2); color: var(--ink); text-decoration: none; }
 .lang-list a[aria-current="true"] { color: var(--ink); font-weight: 600; }
-.lang-list a[aria-current="true"]::before { content: "› "; color: var(--amber); }
+.lang-list a[aria-current="true"]::before { content: "› "; color: var(--amber-ink); }
 
 /* --------------------------------------------------------------- pieces -- */
 
@@ -439,6 +486,9 @@ img { max-width: 100%; height: auto; display: block; }
    macOS corners are continuous rather than circular, which border-radius
    cannot express. At 10pt the difference is under a pixel. */
 .shot {
+  /* The captures are 1160px wide and shown at 720, which is 1.6x density.
+     build.mjs warns if a capture is ever narrower than this. */
+  max-width: 720px;
   margin: clamp(44px, 6vw, 76px) 0 0;
   border: 1px solid var(--titlebar-edge);
   border-radius: 10px;
@@ -459,8 +509,9 @@ img { max-width: 100%; height: auto; display: block; }
 .shot-bar .minimise { background: #FEBC2E; }
 .shot-bar .zoom     { background: #28C840; }
 /* The two appearances are stacked. The light one is in flow and sets the
-   height; the dark one sits on top of it and their opacities cross-fade. With
-   no JavaScript, data-theme is never set and prefers-color-scheme decides.
+   height; the dark one sits on top of it and their opacities cross-fade. Which
+   is shown follows the appearance tokens, so it agrees with the page whether
+   the appearance came from data-theme or from prefers-color-scheme.
 
    The captures are 1160px wide and shown at 720, which is 1.6x density. */
 .shot-frame { position: relative; }
@@ -468,13 +519,8 @@ img { max-width: 100%; height: auto; display: block; }
   display: block; width: 100%;
   transition: opacity .35s ease;
 }
-.shot-dark { position: absolute; inset: 0; opacity: 0; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .shot-light { opacity: 0; }
-  :root:not([data-theme="light"]) .shot-dark { opacity: 1; }
-}
-:root[data-theme="dark"] .shot-light { opacity: 0; }
-:root[data-theme="dark"] .shot-dark { opacity: 1; }
+.shot-light { opacity: var(--shot-light-o); }
+.shot-dark { position: absolute; inset: 0; opacity: var(--shot-dark-o); }
 
 /* ------------------------------------------------------------- sections -- */
 
@@ -651,7 +697,26 @@ tbody tr:not(.group) th code { color: var(--ink); }
 }
 
 @media print {
-  .site-header { display: none; }
+  /* Paper is white whatever the reader was looking at. Without this a dark
+     page prints its near-white ink onto a background the browser drops. */
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+    color-scheme: light;
+    --paper: #FFFFFF; --paper-2: #FFFFFF; --paper-3: #FFFFFF;
+    --ink: #000000;   --ink-2: #222222;   --ink-3: #444444;
+    --rule: #BBBBBB;  --rule-2: #999999;  --control-edge: #888888;
+    --amber: #A05000; --amber-ink: #7A3E00; --on-amber: #000000;
+    --titlebar: #F2F2F2; --titlebar-edge: #CCCCCC; --tick: #10662A;
+    --shot-light-o: 1; --shot-dark-o: 0;
+  }
+  body { background: #FFFFFF; color: #000000; }
+  .site-header, .theme-switch, .lang { display: none; }
+  a { color: inherit; }
+  /* A URL the reader cannot click is worth spelling out. */
+  .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; word-break: break-all; }
+  section.rule, .faq details { break-inside: avoid; }
+  .faq details { border-bottom: 1px solid #BBBBBB; }
+  /* A closed <details> cannot be opened from CSS: the browser skips rendering
+     its contents and display has no say. script.js opens them for printing. */
 }
 
 /* ------------------------------------------------------------------ faq -- */
@@ -668,8 +733,8 @@ tbody tr:not(.group) th code { color: var(--ink); }
 .faq summary::after {
   content: ""; flex: none; margin-inline-start: auto; margin-top: 7px;
   width: 8px; height: 8px;
-  border-inline-end: 1.5px solid var(--amber);
-  border-block-end: 1.5px solid var(--amber);
+  border-inline-end: 1.5px solid var(--amber-ink);
+  border-block-end: 1.5px solid var(--amber-ink);
   transform: rotate(45deg); transition: transform .18s ease;
 }
 .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 10px; }
@@ -678,6 +743,10 @@ tbody tr:not(.group) th code { color: var(--ink); }
   padding-bottom: 20px; color: var(--ink-2); font-size: .9375rem; max-width: 66ch;
   display: grid; gap: 16px;      /* exceeds the 1.55 leading, so breaks register */
 }
+
+/* macOS does not mirror the window buttons in right-to-left locales, so the
+   drawn frame must not either. The screenshot inside it is localised. */
+.shot-bar { direction: ltr; }
 
 [dir="rtl"] .faq summary::after { transform: rotate(135deg); }
 [dir="rtl"] .faq details[open] summary::after { transform: rotate(-45deg); }

@@ -38,6 +38,10 @@
       "en": "Menu",
       "vi": "Trình đơn"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "vi": "Pháp lý và liên hệ"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "vi": "Lukotta là ứng dụng cho Mac"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "vi": "Phần mềm tự do theo GNU General Public License, phiên bản 3 trở lên."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "vi": "Văn bản trang theo giấy phép Creative Commons Attribution-ShareAlike 4.0."
     }
   }
 }

@@ -38,6 +38,10 @@
       "en": "Menu",
       "hi": "मेन्यू"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "hi": "कानूनी जानकारी और संपर्क"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "hi": "Lukotta एक Mac ऐप है"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "hi": "GNU General Public License के संस्करण 3 या उससे नए के अंतर्गत मुक्त सॉफ़्टवेयर।"
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "hi": "पृष्ठ का पाठ Creative Commons Attribution-ShareAlike 4.0 लाइसेंस के अंतर्गत।"
     }
   }
 }

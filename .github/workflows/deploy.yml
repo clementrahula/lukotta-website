@@ -28,17 +28,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Full history: the sitemap dates each language from the commit that
+      # last touched its content file.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
 
+      # --strict here refuses missing content files, English screenshot
+      # fallbacks, mismatched screenshot pairs and unused keys.
       - name: Build
-        run: node scripts/build.mjs
+        run: node scripts/build.mjs --strict
 
-      # --strict fails while any language still carries the English text.
-      # 37 copies of one page is duplicate content.
+      # Placeholder integrity and product names left verbatim. A mangled
+      # {version} reaches the page as a literal brace; nothing else sees it.
+      - name: Lint translations
+        run: node scripts/lint-translations.mjs
+
+      # --strict fails while any language still carries the English text,
+      # or has no page at all. 37 copies of one page is duplicate content.
       - name: Check
         run: node scripts/check.mjs --strict
 

@@ -14,4 +14,3 @@ translation-review/
 
 # Production-readiness audit. Working material, kept out of the repository.
 audit.md
-.claude/launch.json

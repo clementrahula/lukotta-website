@@ -52,7 +52,10 @@ for (const lang of wanted) {
   const strings = {};
   for (const [key, en] of Object.entries(english.strings)) {
     const prior = existing[key];
-    const kept = typeof prior === "object" && prior ? prior[lang.code] || "" : "";
+    /* A hand-edited file may hold a bare string where the pair belongs. It is
+       still someone's translation, so it is carried into the slot. */
+    const kept = typeof prior === "string" ? prior
+      : (prior && typeof prior === "object" ? prior[lang.code] || "" : "");
     strings[key] = { en, [lang.code]: kept };
   }
 

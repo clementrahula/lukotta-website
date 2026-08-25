@@ -26,6 +26,7 @@ const VERBATIM = [
   "qcow2", "VMDK", "VDI", "VHDX", "VHD", "IMG", "DMG", "OVA",
   "VMware", "VirtualBox", "Hyper-V", "QEMU", "UTM", "Windows", "Linux",
   "Apple Silicon", "Sequoia", "GitHub",
+  "Creative Commons Attribution-ShareAlike 4.0",
 ];
 
 const asked = process.argv.slice(2);
@@ -86,7 +87,7 @@ for (const lang of langs) {
   }
 
   const same = Object.entries(english).filter(([k, en]) => mine[k]?.[lang.code] === en).map(([k]) => k);
-  const expected = new Set(["formats.yes", "formats.no", "faq.title", "features.title", "nav.features", "nav.download", "footer.copyright", "story.signature", "footer.source", "footer.contact"]);
+  const expected = new Set(["formats.yes", "formats.no", "faq.title", "features.title", "nav.features", "nav.download", "footer.copyright", "footer.source", "footer.contact"]);
   const unexpected = same.filter((k) => !expected.has(k));
   if (unexpected.length > 3) {
     say("WARN", lang.code, `${unexpected.length} strings are identical to the English: ${unexpected.slice(0, 4).join(", ")}…`);

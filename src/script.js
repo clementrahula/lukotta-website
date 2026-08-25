@@ -36,6 +36,21 @@
     }
   }
 
+  /* The two theme-color metas carry media queries, so mobile browser chrome
+     follows the system even after a choice overrides it. Once a choice exists
+     the queries are dropped and a single meta states the colour in force. */
+  var PAPER = { light: "#FBF8F2", dark: "#15161A" };
+  function syncThemeColour(resolved) {
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    if (!metas.length) return;
+    for (var i = 0; i < metas.length; i++) {
+      metas[i].setAttribute("content", PAPER[resolved]);
+      metas[i].removeAttribute("media");
+    }
+    /* One is enough once they all say the same thing. */
+    for (var j = metas.length - 1; j > 0; j--) metas[j].parentNode.removeChild(metas[j]);
+  }
+
   /* Animate the colour change only while it runs. See .theme-changing. */
   var fadeTimer = null;
   function fadeAppearance() {
@@ -49,8 +64,8 @@
   function apply(choice) {
     var resolved = resolve(choice);
     root.setAttribute("data-theme", resolved);
-    root.setAttribute("data-theme-choice", choice);
     syncShots(resolved, choice);
+    syncThemeColour(resolved);
 
     /* aria-checked reports whether dark is on; the label states what a click
        will do. */
@@ -166,10 +181,17 @@
     var path = location.pathname.replace(/\/+$/, "");
     if (path !== "" && path !== "/index.html") return;
 
-    /* Rule 2: never override a reader who has already chosen. */
+    /* Rule 2: a reader who chose from the menu is sent to what they chose,
+       and the system's languages are not consulted again. */
     var chosen = null;
     try { chosen = localStorage.getItem(LANG_KEY); } catch (e) {}
-    if (chosen) return;
+    if (chosen) {
+      var target = pathFor(chosen);
+      if (target === null || target === undefined) return;   /* no longer built */
+      if (target === "") return;                             /* English is the root */
+      location.replace("/" + target + "/");
+      return;
+    }
 
     var wanted = navigator.languages && navigator.languages.length
       ? navigator.languages
@@ -252,6 +274,10 @@
       var pending = null;
 
       document.addEventListener("click", function (event) {
+        /* Ctrl/Cmd/Shift/Alt-click and anything but the primary button mean
+           the reader wants the browser's own behaviour. Leave it alone. */
+        if (event.defaultPrevented || event.button !== 0) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         var link = event.target.closest ? event.target.closest("a[href]") : null;
         if (!link) return;
         if (link.href !== DOWNLOAD_URL) return;
@@ -289,4 +315,31 @@
     }
   }
 
+  /* Printing. A closed <details> keeps its answer out of the printed page and
+     no stylesheet can overrule that, so they are opened for the print and put
+     back afterwards. Readers without JavaScript print the questions alone. */
+  var reopened = [];
+  function openForPrint() {
+    reopened = [];
+    var all = document.querySelectorAll("details");
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].classList.contains("lang")) continue;   /* the menu is not content */
+      if (!all[i].open) { all[i].open = true; reopened.push(all[i]); }
+    }
+  }
+  function restoreAfterPrint() {
+    for (var i = 0; i < reopened.length; i++) reopened[i].open = false;
+    reopened = [];
+  }
+  if (window.addEventListener) {
+    window.addEventListener("beforeprint", openForPrint);
+    window.addEventListener("afterprint", restoreAfterPrint);
+    /* Safari fires neither; it changes the print media query instead. */
+    var printQuery = window.matchMedia && window.matchMedia("print");
+    if (printQuery && printQuery.addEventListener) {
+      printQuery.addEventListener("change", function (event) {
+        if (event.matches) openForPrint(); else restoreAfterPrint();
+      });
+    }
+  }
 })();

@@ -38,6 +38,10 @@
       "en": "Menu",
       "lv": "Izvēlne"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "lv": "Juridiskā informācija un kontakti"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "lv": "Lukotta ir Mac lietotne"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "lv": "Brīva programmatūra ar licenci GNU General Public License, versija 3 vai jaunāka."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "lv": "Lapas teksts saskaņā ar Creative Commons Attribution-ShareAlike 4.0 licenci."
     }
   }
 }

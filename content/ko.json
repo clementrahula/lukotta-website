@@ -38,6 +38,10 @@
       "en": "Menu",
       "ko": "메뉴"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "ko": "법적 고지 및 연락처"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "ko": "Lukotta는 Mac 앱입니다"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "ko": "GNU General Public License 버전 3 이상에 따른 자유 소프트웨어."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "ko": "페이지 텍스트는 Creative Commons Attribution-ShareAlike 4.0 라이선스를 따릅니다."
     }
   }
 }

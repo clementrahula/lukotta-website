@@ -14,6 +14,7 @@
     "ui.skipToContent": "Skip to content",
     "ui.chooseLanguage": "Choose a language",
     "ui.menu": "Menu",
+    "ui.footerMenu": "Legal and contact",
     "dialog.title": "Lukotta is a Mac application",
     "dialog.mobileBody": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
     "dialog.desktopBody": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
@@ -101,6 +102,7 @@
     "footer.source": "Source",
     "footer.contact": "Contact",
     "footer.copyright": "{copyleft} {year} {author}",
-    "footer.gpl": "Free software under the GNU General Public License, version 3 or later."
+    "footer.gpl": "Free software under the GNU General Public License, version 3 or later.",
+    "footer.content": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence."
   }
 }

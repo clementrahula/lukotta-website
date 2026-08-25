@@ -198,6 +198,10 @@ if (existsSync(cssPath)) {
     ["button label", "on-amber", "amber", 4.5],
     ["focus ring", "amber-ink", "paper", 3],
     ["control edge", "control-edge", "paper", 3],
+    /* Indicators that carry meaning: the FAQ chevron, the current-language
+       marker, and the icon inside the appearance switch. WCAG 1.4.11. */
+    ["state indicator", "amber-ink", "paper-2", 3],
+    ["switch icon", "ink-2", "paper-2", 3],
   ];
   for (const theme of ["light", "dark"]) {
     if (!blocks[theme]) { err(`styles.css has no ${theme} theme block; contrast cannot be checked.`); continue; }
@@ -209,6 +213,32 @@ if (existsSync(cssPath)) {
       if (got < need) {
         err(`contrast: ${theme} ${label} is ${got.toFixed(2)}:1 (${a} on ${b}), below the ${need}:1 WCAG 2.2 AA minimum.`);
       }
+    }
+  }
+}
+
+/* --- the dark appearance is declared twice; the declarations must agree --- */
+if (existsSync(cssPath)) {
+  const css = readFileSync(cssPath, "utf8");
+  const grab = (start) => {
+    const at = css.indexOf(start);
+    if (at < 0) return null;
+    const body = css.slice(at + start.length, css.indexOf("}", at + start.length));
+    const map = new Map();
+    for (const m of body.matchAll(/--([\w-]+):\s*([^;]+);/g)) map.set(m[1], m[2].trim());
+    return map;
+  };
+  const bySystem = grab(':root:not([data-theme="dark"]) {') ?? grab(':root:not([data-theme="light"]) {');
+  const byChoice = grab(':root[data-theme="dark"] {');
+  if (!bySystem) err('styles.css: no prefers-color-scheme dark block. Readers without JavaScript would get the light page on a dark system.');
+  else if (!byChoice) err('styles.css: no [data-theme="dark"] block.');
+  else {
+    for (const [name, value] of byChoice) {
+      if (!bySystem.has(name)) err(`styles.css: --${name} is set for [data-theme="dark"] but not for a dark system; the two dark paths have drifted.`);
+      else if (bySystem.get(name) !== value) err(`styles.css: --${name} is "${value}" by choice but "${bySystem.get(name)}" by system; the two dark paths have drifted.`);
+    }
+    for (const name of bySystem.keys()) {
+      if (!byChoice.has(name)) err(`styles.css: --${name} is set for a dark system but not for [data-theme="dark"]; the two dark paths have drifted.`);
     }
   }
 }
@@ -253,7 +283,14 @@ if (cname !== new URL(cfg.domain).hostname) err(`CNAME says "${cname}", expected
 
 /* --- untranslated languages warn; --strict turns that into a failure --- */
 const missing = cfg.languages.filter((l) => !pages.some((p) => p.lang.code === l.code));
-if (missing.length) warn(`${missing.length} language(s) have no page yet: ${missing.map((l) => l.code).join(" ")}`);
+if (missing.length) {
+  /* A deleted content file drops a language from the build while leaving the
+     pages, hreflang cluster and sitemap mutually consistent, so nothing else
+     here objects. Under --strict a configured language must exist. */
+  const list = missing.map((l) => l.code).join(" ");
+  if (strict) err(`${missing.length} configured language(s) built no page: ${list}. Remove them from site.config.json or restore their content files.`);
+  else warn(`${missing.length} language(s) have no page yet: ${list}`);
+}
 const untranslated = pages.filter((p) => !p.translated).map((p) => p.lang.code);
 if (untranslated.length) {
   warn(`${untranslated.length} language(s) still carry the English text: ${untranslated.join(" ")}`);

@@ -5,6 +5,8 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { renderPage } from "../src/page.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -67,7 +69,10 @@ function loadStrings(code) {
   const out = {};
   for (const [key, value] of Object.entries(data.strings || {})) {
     if (typeof value === "string") out[key] = value;
-    else if (value && typeof value === "object") out[key] = value[code] ?? value.en;
+    /* An absent slot is not a translation. Leaving it empty sends it through
+       the translator's own fallback, which records the miss, so this file and
+       check.mjs count the same keys as done. */
+    else if (value && typeof value === "object") out[key] = value[code] || "";
   }
   return out;
 }
@@ -113,6 +118,9 @@ for (const mark of ["lukotta-mark-light.png", "lukotta-mark-dark.png"]) {
 }
 if (existsSync(join(SRC, "assets", "icons"))) {
   cpSync(join(SRC, "assets", "icons"), join(OUT, "assets"), { recursive: true });
+  /* Tools that ask for /favicon.ico by habit rather than reading the markup. */
+  const ico = join(SRC, "assets", "icons", "favicon.ico");
+  if (existsSync(ico)) cpSync(ico, join(OUT, "favicon.ico"));
 }
 cpSync(join(SRC, "assets", "fonts"), join(OUT, "assets", "fonts"), { recursive: true });
 
@@ -176,6 +184,28 @@ const alternates = [
   { code: "x-default", href: `${cfg.domain}/` },
 ];
 
+/* Every inline script is hashed, so the policy names exactly the ones this
+   build wrote and nothing else may run. A static host cannot send headers;
+   frame-ancestors and HSTS are Cloudflare's, and AGENTS.md states them. */
+function withPolicy(html) {
+  const hashes = [];
+  for (const m of html.matchAll(/<script(?![^>]*\ssrc=)[^>]*>([\s\S]*?)<\/script>/g)) {
+    hashes.push(`'sha256-${createHash("sha256").update(m[1], "utf8").digest("base64")}'`);
+  }
+  const policy = [
+    "default-src 'none'",
+    `script-src 'self' ${hashes.join(" ")}`,
+    "style-src 'self'",
+    "img-src 'self'",
+    "font-src 'self'",
+    "manifest-src 'self'",
+    "form-action 'none'",
+    "base-uri 'none'",
+  ].join("; ");
+  if (!html.includes("__CSP__")) throw new Error("page.mjs no longer carries the __CSP__ placeholder.");
+  return html.replace("__CSP__", policy);
+}
+
 const built = [];
 
 for (const lang of buildable) {
@@ -186,8 +216,10 @@ for (const lang of buildable) {
   const assetPrefix = lang.path ? "../" : "./";
 
   const shotSize = resolveShots(lang.code);
+  /* styles.css shows the frame at 720px. A narrower capture would be stretched. */
+  if (shotSize.width < 720) warn(`${lang.code}: screenshot is ${shotSize.width}px wide; the frame displays it at 720px.`);
 
-  const html = renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable });
+  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
@@ -201,6 +233,26 @@ for (const lang of buildable) {
 
 /* ---------------------------------------------------------- sitemap etc -- */
 
+/* The commit date of the last change to a file, falling back to its mtime
+   outside a git checkout, or in a shallow clone with no history for the path.
+   The workflows check out with fetch-depth: 0 so the history is there. */
+const stampCache = new Map();
+function lastChanged(file) {
+  if (stampCache.has(file)) return stampCache.get(file);
+  let iso = "";
+  if (existsSync(file)) {
+    try {
+      iso = execFileSync("git", ["log", "-1", "--format=%cI", "--", file],
+        { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })
+        .trim().slice(0, 10);
+    } catch { /* no git, or no checkout */ }
+    if (!iso) iso = statSync(file).mtime.toISOString().slice(0, 10);
+  }
+  if (!iso) iso = new Date().toISOString().slice(0, 10);
+  stampCache.set(file, iso);
+  return iso;
+}
+
 const builtLangs = buildable.filter((l) => built.includes(l.code));
 
 /* The sitemap must declare the same alternates as the pages, region aliases
@@ -212,11 +264,10 @@ const urlEntries = builtLangs
       .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${a.href}"/>`)
       .join("\n");
 
-    /* From the content file's mtime, not the build time, so lastmod reflects
-       when this language last changed. */
-    const file = join(CONTENT, `${l.code}.json`);
-    const stamp = existsSync(file) ? statSync(file).mtime : new Date();
-    const lastmod = stamp.toISOString().slice(0, 10);
+    /* From the commit that last touched this language's content. A fresh CI
+       checkout gives every file the same mtime, which would stamp all 37 URLs
+       with the deploy date and teach search engines to ignore the field. */
+    const lastmod = lastChanged(join(CONTENT, `${l.code}.json`));
 
     return `  <url>
     <loc>${loc}</loc>
@@ -258,8 +309,8 @@ writeFileSync(
       description: english["meta.ogDescription"],
       start_url: "/",
       display: "browser",
-      background_color: "#FBF9F5",
-      theme_color: "#FBF9F5",
+      background_color: "#FBF8F2",
+      theme_color: "#FBF8F2",
       icons: [
         { src: "/assets/icon-192.png", sizes: "192x192", type: "image/png" },
         { src: "/assets/icon-512.png", sizes: "512x512", type: "image/png" },

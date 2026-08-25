@@ -81,6 +81,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     license: "https://www.gnu.org/licenses/gpl-3.0.html",
     isAccessibleForFree: true,
     image: `${cfg.domain}/assets/og.png`,
+    screenshot: `${cfg.domain}/assets/screenshots/${lang.code}/light.webp`,
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
@@ -193,6 +194,10 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Replaced by build.mjs with the policy and the hashes of the inline
+       scripts below. GitHub Pages cannot set headers; AGENTS.md carries the
+       Cloudflare rules for the ones a <meta> cannot express. -->
+  <meta http-equiv="Content-Security-Policy" content="__CSP__">
 
   <title>${esc(t("meta.title"))}</title>
   <meta name="description" content="${esc(t("meta.description"))}">
@@ -221,6 +226,7 @@ ${ogAlternates}
   <meta name="twitter:title" content="${esc(t("meta.ogTitle"))}">
   <meta name="twitter:description" content="${esc(t("meta.ogDescription"))}">
   <meta name="twitter:image" content="${cfg.domain}/assets/og.png">
+  <meta name="twitter:image:alt" content="${esc(t("meta.imageAlt"))}">
 
   <link rel="icon" href="${A("favicon-32.png")}" sizes="32x32" type="image/png">
   <link rel="icon" href="${A("favicon-16.png")}" sizes="16x16" type="image/png">
@@ -233,6 +239,7 @@ ${ogAlternates}
     /* Resolves the appearance before first paint, so the page does not flash
        the wrong one. The rest of the behaviour is in script.js. */
     (function () {
+      document.documentElement.classList.add("js");
       try {
         var c = localStorage.getItem("lukotta-theme");
         var d = c === "dark" || (c !== "light" &&
@@ -272,6 +279,7 @@ ${ogAlternates}
 
       <div class="header-tools">
         <button type="button" class="theme-switch" role="switch" aria-checked="false" data-toggle-theme
+                aria-label="${esc(t("ui.switchToDark"))}" title="${esc(t("ui.switchToDark"))}"
                 data-label-light="${esc(t("ui.switchToLight"))}"
                 data-label-dark="${esc(t("ui.switchToDark"))}">
           <span class="track" aria-hidden="true">
@@ -282,7 +290,7 @@ ${ogAlternates}
         </button>
 
         <details class="lang">
-          <summary aria-label="${esc(t("ui.chooseLanguage"))}">${globeIcon}<span>${esc(native)}</span></summary>
+          <summary aria-label="${esc(native)}, ${esc(t("ui.chooseLanguage"))}">${globeIcon}<span>${esc(native)}</span></summary>
           <div class="lang-panel">
             <ul class="lang-list">
 ${langLinks}
@@ -307,7 +315,7 @@ ${langLinks}
           <p class="spec">${esc(t("hero.meta"))}</p>
         </div>
 
-        <figure class="shot" style="max-width:${Math.min(720, shotSize.width)}px">
+        <figure class="shot">
           <div class="shot-bar" aria-hidden="true">
             <i class="close"></i><i class="minimise"></i><i class="zoom"></i>
           </div>
@@ -320,7 +328,8 @@ ${langLinks}
                  width="${shotSize.width}" height="${shotSize.height}"
                  fetchpriority="high" decoding="async">
             <img class="shot-img shot-dark" src="${shot("dark")}" alt="" aria-hidden="true"
-                 width="${shotSize.width}" height="${shotSize.height}" decoding="async">
+                 width="${shotSize.width}" height="${shotSize.height}"
+                 fetchpriority="high" decoding="async">
           </div>
         </figure>
       </div>
@@ -409,7 +418,7 @@ ${faqItems}
 
   <footer class="site-footer">
     <div class="wrap">
-      <nav aria-label="${esc(t("ui.menu"))}">
+      <nav aria-label="${esc(t("ui.footerMenu"))}">
         <a href="${cfg.githubRepo}/blob/main/PRIVACY.md">${esc(t("footer.privacy"))}</a>
         <a href="${cfg.githubRepo}/blob/main/LICENSE.txt">${esc(t("footer.licence"))}</a>
         <a href="${cfg.githubRepo}">${esc(t("footer.source"))}</a>
@@ -418,6 +427,7 @@ ${faqItems}
       <p class="colophon">
         <span>${copyright.join(authorLink)}</span>
         <span>${esc(t("footer.gpl"))}</span>
+        <span>${esc(t("footer.content"))}</span>
       </p>
     </div>
   </footer>

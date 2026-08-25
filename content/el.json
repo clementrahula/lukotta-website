@@ -38,6 +38,10 @@
       "en": "Menu",
       "el": "Μενού"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "el": "Νομικά και επικοινωνία"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "el": "Το Lukotta είναι εφαρμογή για Mac"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "el": "Ελεύθερο λογισμικό υπό την GNU General Public License, έκδοση 3 ή νεότερη."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "el": "Το κείμενο της σελίδας υπό την άδεια Creative Commons Attribution-ShareAlike 4.0."
     }
   }
 }

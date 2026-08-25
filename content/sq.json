@@ -38,6 +38,10 @@
       "en": "Menu",
       "sq": "Menyja"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "sq": "Informacion ligjor dhe kontakt"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "sq": "Lukotta është një aplikacion për Mac"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "sq": "Software i lirë nën GNU General Public License, versioni 3 ose më i ri."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "sq": "Teksti i faqes nën licencën Creative Commons Attribution-ShareAlike 4.0."
     }
   }
 }

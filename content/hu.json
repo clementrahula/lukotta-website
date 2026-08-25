@@ -38,6 +38,10 @@
       "en": "Menu",
       "hu": "Menü"
     },
+    "ui.footerMenu": {
+      "en": "Legal and contact",
+      "hu": "Jogi tudnivalók és kapcsolat"
+    },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
       "hu": "A Lukotta Mac-alkalmazás"
@@ -389,6 +393,10 @@
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
       "hu": "Szabad szoftver a GNU General Public License 3-as vagy újabb változata alatt."
+    },
+    "footer.content": {
+      "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+      "hu": "Az oldal szövege a Creative Commons Attribution-ShareAlike 4.0 licenc alatt."
     }
   }
 }

@@ -142,7 +142,14 @@ manual, and its push trigger is commented out.
    | `A` | `lukotta.com` | `185.199.109.153` |
    | `A` | `lukotta.com` | `185.199.110.153` |
    | `A` | `lukotta.com` | `185.199.111.153` |
+   | `AAAA` | `lukotta.com` | `2606:50c0:8000::153` |
+   | `AAAA` | `lukotta.com` | `2606:50c0:8001::153` |
+   | `AAAA` | `lukotta.com` | `2606:50c0:8002::153` |
+   | `AAAA` | `lukotta.com` | `2606:50c0:8003::153` |
    | `CNAME` | `www` | `clementrahula.github.io` |
+
+   The AAAA records matter while the proxy is off: without them an IPv6-only
+   reader cannot reach the site at all.
 
    **Set SSL/TLS to Full (strict) before turning the orange cloud on.**
    Cloudflare's Flexible mode sends plain HTTP to GitHub while telling the
@@ -153,14 +160,30 @@ manual, and its push trigger is commented out.
    as issued — it validates over HTTP and cannot do that through the proxy.
    Then switch the proxy on.
 
-5. **Check the live site.**
+5. **Add the response headers GitHub Pages cannot send.**
+
+   Rules → Transform Rules → Modify Response Header, for `lukotta.com/*`:
+
+   | Header | Value |
+   | --- | --- |
+   | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` |
+   | `X-Content-Type-Options` | `nosniff` |
+   | `Referrer-Policy` | `strict-origin-when-cross-origin` |
+   | `Content-Security-Policy` | `frame-ancestors 'none'` |
+
+   The pages already carry their own content policy in a `<meta>`, hashes and
+   all, which is the part a static host can express. `frame-ancestors` is
+   ignored in a `<meta>`, so it has to come from here. Set HSTS only once the
+   certificate is issued and HTTPS works; the header is hard to walk back.
+
+6. **Check the live site.**
 
    ```bash
    curl -sI https://lukotta.com | head -1
    curl -s https://lukotta.com/sitemap.xml | head -20
    ```
 
-6. **Submit the sitemap** in Google Search Console and Bing Webmaster Tools.
+7. **Submit the sitemap** in Google Search Console and Bing Webmaster Tools.
    Search Console reports the `hreflang` cluster under International Targeting;
    it should list every language with no return-tag errors.
 

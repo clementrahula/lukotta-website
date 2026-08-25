@@ -24,7 +24,6 @@
     "ui.switchToDark": "The same switch while the page is light.",
     "hero.title": "The one sentence the page is built around. Keep the full stop.",
     "hero.meta": "Set in a monospace face at a small size. Contains {version}, which becomes the released version number. Keep the middle dots as separators.",
-    "formats.lead": "Introduces the table. The phrase 'will and will not write' is deliberate: the table has rows that are read but never written.",
     "formats.col.read": "A column heading, set in capitals in a monospace face. One word if the language allows.",
     "formats.col.write": "The same. These two headings sit above columns of ticks and dashes.",
     "formats.yes": "Never shown on screen. It is the spoken text behind a tick, for a reader using a screen reader.",
@@ -32,12 +31,10 @@
     "formats.vmdkStream.note": "Explains why this one format is read but not written. Factual, not a warning.",
     "formats.vhdx.note": "The same. The application says so before the image opens, which is worth keeping.",
     "formats.specs": "The whole string is a link to SPECS.md. It reads as a sentence, not as a button.",
-    "formats.not.body": "A list of what cannot be opened, separated by full stops. Each item is a distinct reason; keep them distinct.",
     "how.lead": "Sits below the three steps, explaining why a Linux virtual machine is involved at all. Three sentences: macOS cannot, Linux can, so a small Linux machine does it.",
     "footer.copyright": "Contains {copyleft}, which becomes a reversed copyright sign, and {year} and {author}, which become the year and a link to the author's own site. All three must survive, spelled exactly as they are. There is no full stop at the end.",
     "footer.gpl": "The licence line. GNU General Public License is a proper name and is not translated, though the surrounding sentence is.",
     "name.body": "One paragraph. Contains {lukko} and {tta}, which become the Finnish word lukko and the Finnish ending -tta. Both are Finnish and stay as they are in every language; the placeholders must survive, spelled exactly as they are, and the sentence around them is translated.",
-    "name.stress": "About where the stress falls when the word is said aloud. The page shows this by setting the first syllable apart, so the sentence and the picture must agree.",
     "features.lead": "One sentence saying what the application does. Flat and factual; it is not a slogan.",
     "features.body": "The three facts that matter most: physical drives and image files alike, BitLocker by password or by recovery key, and BitLocker and NTFS written as well as read. All three must survive translation.",
     "features.body2": "Read-only opening and reopening after a restart, mentioned once at the end rather than given their own headings.",
@@ -63,7 +60,9 @@
     "dialog.copyLink": "A button, shown instead of Send to Mac when the browser cannot share.",
     "dialog.copied": "Replaces the Copy Link label for a moment after it is pressed. Past tense, and short.",
     "dialog.downloadAnyway": "A button. The word 'anyway' matters: it acknowledges what was just said and proceeds regardless.",
-    "dialog.cancel": "A button that closes the dialog and downloads nothing."
+    "dialog.cancel": "A button that closes the dialog and downloads nothing.",
+    "ui.footerMenu": "Names the footer navigation for screen readers. The header navigation is ui.menu; the two must not read alike.",
+    "footer.content": "States the licence of the page text, beside footer.gpl which states the licence of the application."
   },
   "$localOnly": "Beside `strings`, a language file may carry a `localOnly` block: strings that exist in that language and nowhere else, with no English original. They are never shown on another language's page, they are not part of the count of translated strings, and a resync leaves them alone. Finnish carries one — an aside in the name section, which only lands for a reader who already knows what the abessive case is."
 }
