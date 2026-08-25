@@ -7,12 +7,12 @@
   },
   "localOnly": {
     "$comment": "Strings that replace the standard one on this language's page and nowhere else. The key is the same key; the text here is used instead of the translation in `strings`. See name.body: a Finnish reader does not need the abessive explained to them.",
-    "name.body": "Nimi on abessiivi sanasta lukko - sen kyllä huomasit. Olen virolainen, mutta suomeksi se kuulosti kauniimmalta, joten valitsin sen."
+    "name.body": "Nimi on sanan lukko abessiivi. Sen kyllä huomasit. Olen virolainen, mutta suomeksi se kuulosti kauniimmalta, joten valitsin sen."
   },
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "fi": "Avaa BitLocker- ja Linux-levyt macOS:ssä — Lukotta"
+      "fi": "Avaa BitLocker- ja Linux-levyt macOS-koneella — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",

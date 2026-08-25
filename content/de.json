@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "de": "BitLocker-, NTFS-, LUKS- und Linux-Laufwerke am Mac öffnen. Passwort eingeben, und das Laufwerk erscheint im Finder, lesbar und beschreibbar. Freie Software."
+      "de": "BitLocker-, NTFS-, LUKS- und Linux-Laufwerke am Mac öffnen. Passwort eingeben, und es erscheint im Finder, lesbar und beschreibbar. Kostenlos und Open Source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
