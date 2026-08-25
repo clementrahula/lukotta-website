@@ -56,7 +56,14 @@ for (const lang of wanted) {
        still someone's translation, so it is carried into the slot. */
     const kept = typeof prior === "string" ? prior
       : (prior && typeof prior === "object" ? prior[lang.code] || "" : "");
-    strings[key] = { en, [lang.code]: kept };
+    /* The English beside a translation is not a copy of the current English.
+       It records the sentence that was translated, and it is left exactly as
+       written so that a later edit to the English becomes visible instead of
+       being papered over. Where there is no translation there is nothing to
+       date, so it follows the English as it stands. */
+    const priorSource = prior && typeof prior === "object" ? prior.en : undefined;
+    const source = kept && priorSource ? priorSource : en;
+    strings[key] = { en: source, [lang.code]: kept };
   }
 
   writeFileSync(

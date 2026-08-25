@@ -47,6 +47,16 @@ duplicate content. The deploy workflow runs it.
 
 ## Things that will bite
 
+**Changing an English string invalidates its translations.** The `en` beside
+each translation is not a copy of the current English. It is the sentence that
+was translated, kept as written. Edit `content/en.json` and every language
+still holding the old sentence is reported: the build warns, `--strict`
+refuses, and `lint-translations.mjs` prints the old and the new side by side.
+Clear it by editing the pair as a unit, translation and `en` together, which
+is how a translation is delivered anyway. Never bring `en` forward on its own:
+that is the whole bug this guards against, a page that reads fluently and says
+something the English no longer says.
+
 **A string in one language only.** A language file may carry a `localOnly`
 block. Those strings *replace* the translation of the key they name, on that
 language's page alone. Finnish uses one, in the name section. The translator

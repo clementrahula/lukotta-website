@@ -58,6 +58,13 @@ for (const lang of langs) {
     const pair = mine[key];
     if (!pair) { say("ERROR", lang.code, `${key} is missing`); continue; }
     const got = pair[lang.code];
+
+    /* The English stored beside a translation is the sentence that was
+       translated. If the English has moved on, the translation is answering
+       the old one and has to be redone. Editing the pair as a unit clears it. */
+    if (got && typeof pair.en === "string" && pair.en !== en) {
+      say("ERROR", lang.code, `${key} was translated from English that has since changed\n${" ".repeat(18)}was: ${pair.en}\n${" ".repeat(18)}now: ${en}`);
+    }
     if (!got) { say("ERROR", lang.code, `${key} is not translated`); continue; }
 
     /* A missing placeholder leaves a literal {version} on the page; an added

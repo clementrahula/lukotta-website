@@ -172,6 +172,23 @@ const buildable = cfg.languages.filter(
   (l) => l.code === cfg.defaultLang || existsSync(join(CONTENT, `${l.code}.json`))
 );
 
+/* A translation carries the English it was made from. When the English moves
+   on, the translation is still answering the old sentence: the page reads
+   fluently and says the wrong thing, which is worse than an obvious gap. */
+for (const lang of cfg.languages) {
+  if (lang.code === cfg.defaultLang) continue;
+  const file = join(CONTENT, `${lang.code}.json`);
+  if (!existsSync(file)) continue;
+  const mine = JSON.parse(readFileSync(file, "utf8")).strings || {};
+  const stale = Object.entries(english).filter(([key, en]) => {
+    const pair = mine[key];
+    return pair && typeof pair === "object" && pair[lang.code] && typeof pair.en === "string" && pair.en !== en;
+  }).map(([key]) => key);
+  if (stale.length) {
+    warn(`${lang.code}: ${stale.length} translation(s) made from English that has since changed: ${stale.slice(0, 4).join(", ")}${stale.length > 4 ? "…" : ""}`);
+  }
+}
+
 const totalKeys = Object.keys(english).length;
 const completeness = new Map();
 for (const lang of buildable) {
