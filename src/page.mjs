@@ -394,6 +394,7 @@ ${faqItems}
       <nav aria-label="${esc(t("ui.menu"))}">
         <a href="${cfg.githubRepo}/blob/main/PRIVACY.md">${esc(t("footer.privacy"))}</a>
         <a href="${cfg.githubRepo}/blob/main/LICENSE.txt">${esc(t("footer.licence"))}</a>
+        <a href="${cfg.githubRepo}">${esc(t("footer.source"))}</a>
         <a href="mailto:${cfg.supportEmail}">${esc(t("footer.contact"))}</a>
       </nav>
       <p class="colophon">

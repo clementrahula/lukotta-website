@@ -48,6 +48,7 @@
     "faq.1.a2": "The second paragraph, about the licence. GNU General Public License is a proper name and is not translated, though the sentence around it is. Free software here means the licence, not the price — the price was the paragraph before. Where a language distinguishes the two senses of free, use the word for the licence.",
     "faq.3.a": "The point is writing, not reading. Keep 'onto ... as well as off it', which is what distinguishes this from what macOS already does.",
     "formats.exfat.note": "These are handled by macOS itself rather than by the Linux virtual machine, which is why the table marks them differently. Same sentence as the raw image row.",
-    "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too."
+    "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too.",
+    "footer.source": "Links to the source code on GitHub. One word if the language allows."
   }
 }

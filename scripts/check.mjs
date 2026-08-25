@@ -81,13 +81,17 @@ for (const { lang, file, html, translated } of pages) {
   if (desc && (desc.length < 70 || desc.length > 165)) {
     warn(`${where}: description is ${desc.length} characters; 70–165 shows in full.`);
   }
-  if (title) {
-    if (titles.has(title) && translated) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two published pages cannot share one.`);
-    else if (!titles.has(title)) titles.set(title, where);
+  /* Only translated pages are compared with each other. An untranslated one
+     carries the English text by definition, so counting it here would report a
+     duplicate that says nothing — and which of the two got blamed depended on
+     the order the languages happened to be listed in. */
+  if (translated && title) {
+    if (titles.has(title)) err(`${where}: duplicate <title>, same as ${titles.get(title)}. Two translated pages cannot share one.`);
+    else titles.set(title, where);
   }
-  if (desc) {
-    if (descriptions.has(desc) && translated) err(`${where}: duplicate description, same as ${descriptions.get(desc)}.`);
-    else if (!descriptions.has(desc)) descriptions.set(desc, where);
+  if (translated && desc) {
+    if (descriptions.has(desc)) err(`${where}: duplicate description, same as ${descriptions.get(desc)}.`);
+    else descriptions.set(desc, where);
   }
 
   /* --- canonical --- */

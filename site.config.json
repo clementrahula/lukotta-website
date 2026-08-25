@@ -10,45 +10,23 @@
   "defaultLang": "en",
   "languages": [
     {
-      "code": "en",
-      "path": "",
-      "name": "English",
-      "native": "English",
+      "code": "id",
+      "path": "id",
+      "name": "Indonesian",
+      "native": "Bahasa Indonesia",
       "dir": "ltr",
-      "ogLocale": "en_US",
-      "alsoServes": [
-        "en-GB",
-        "en-US",
-        "en-AU",
-        "en-CA",
-        "en-IE",
-        "en-NZ",
-        "en-ZA",
-        "en-IN"
-      ]
+      "ogLocale": "id_ID"
     },
     {
-      "code": "ar",
-      "path": "ar",
-      "name": "Arabic",
-      "native": "العربية",
-      "dir": "rtl",
-      "ogLocale": "ar_AR",
-      "alsoServes": [
-        "ar-EG",
-        "ar-SA",
-        "ar-AE",
-        "ar-MA",
-        "ar-DZ"
-      ]
-    },
-    {
-      "code": "bg",
-      "path": "bg",
-      "name": "Bulgarian",
-      "native": "Български",
+      "code": "ms",
+      "path": "ms",
+      "name": "Malay",
+      "native": "Bahasa Melayu",
       "dir": "ltr",
-      "ogLocale": "bg_BG"
+      "ogLocale": "ms_MY",
+      "alsoServes": [
+        "ms-BN"
+      ]
     },
     {
       "code": "cs",
@@ -79,12 +57,30 @@
       ]
     },
     {
-      "code": "el",
-      "path": "el",
-      "name": "Greek",
-      "native": "Ελληνικά",
+      "code": "et",
+      "path": "et",
+      "name": "Estonian",
+      "native": "Eesti",
       "dir": "ltr",
-      "ogLocale": "el_GR"
+      "ogLocale": "et_EE"
+    },
+    {
+      "code": "en",
+      "path": "",
+      "name": "English",
+      "native": "English",
+      "dir": "ltr",
+      "ogLocale": "en_US",
+      "alsoServes": [
+        "en-GB",
+        "en-US",
+        "en-AU",
+        "en-CA",
+        "en-IE",
+        "en-NZ",
+        "en-ZA",
+        "en-IN"
+      ]
     },
     {
       "code": "es",
@@ -102,22 +98,6 @@
         "es-PE",
         "es-US"
       ]
-    },
-    {
-      "code": "et",
-      "path": "et",
-      "name": "Estonian",
-      "native": "Eesti",
-      "dir": "ltr",
-      "ogLocale": "et_EE"
-    },
-    {
-      "code": "fi",
-      "path": "fi",
-      "name": "Finnish",
-      "native": "Suomi",
-      "dir": "ltr",
-      "ogLocale": "fi_FI"
     },
     {
       "code": "fil",
@@ -141,44 +121,12 @@
       ]
     },
     {
-      "code": "he",
-      "path": "he",
-      "name": "Hebrew",
-      "native": "עברית",
-      "dir": "rtl",
-      "ogLocale": "he_IL"
-    },
-    {
-      "code": "hi",
-      "path": "hi",
-      "name": "Hindi",
-      "native": "हिन्दी",
-      "dir": "ltr",
-      "ogLocale": "hi_IN"
-    },
-    {
       "code": "hr",
       "path": "hr",
       "name": "Croatian",
       "native": "Hrvatski",
       "dir": "ltr",
       "ogLocale": "hr_HR"
-    },
-    {
-      "code": "hu",
-      "path": "hu",
-      "name": "Hungarian",
-      "native": "Magyar",
-      "dir": "ltr",
-      "ogLocale": "hu_HU"
-    },
-    {
-      "code": "id",
-      "path": "id",
-      "name": "Indonesian",
-      "native": "Bahasa Indonesia",
-      "dir": "ltr",
-      "ogLocale": "id_ID"
     },
     {
       "code": "it",
@@ -192,20 +140,12 @@
       ]
     },
     {
-      "code": "ja",
-      "path": "ja",
-      "name": "Japanese",
-      "native": "日本語",
+      "code": "lv",
+      "path": "lv",
+      "name": "Latvian",
+      "native": "Latviešu",
       "dir": "ltr",
-      "ogLocale": "ja_JP"
-    },
-    {
-      "code": "ko",
-      "path": "ko",
-      "name": "Korean",
-      "native": "한국어",
-      "dir": "ltr",
-      "ogLocale": "ko_KR"
+      "ogLocale": "lv_LV"
     },
     {
       "code": "lt",
@@ -216,31 +156,12 @@
       "ogLocale": "lt_LT"
     },
     {
-      "code": "lv",
-      "path": "lv",
-      "name": "Latvian",
-      "native": "Latviešu",
+      "code": "hu",
+      "path": "hu",
+      "name": "Hungarian",
+      "native": "Magyar",
       "dir": "ltr",
-      "ogLocale": "lv_LV"
-    },
-    {
-      "code": "ms",
-      "path": "ms",
-      "name": "Malay",
-      "native": "Bahasa Melayu",
-      "dir": "ltr",
-      "ogLocale": "ms_MY",
-      "alsoServes": [
-        "ms-BN"
-      ]
-    },
-    {
-      "code": "nb",
-      "path": "nb",
-      "name": "Norwegian (Bokmål)",
-      "native": "Norsk bokmål",
-      "dir": "ltr",
-      "ogLocale": "nb_NO"
+      "ogLocale": "hu_HU"
     },
     {
       "code": "nl",
@@ -252,6 +173,14 @@
       "alsoServes": [
         "nl-BE"
       ]
+    },
+    {
+      "code": "nb",
+      "path": "nb",
+      "name": "Norwegian (Bokmål)",
+      "native": "Norsk bokmål",
+      "dir": "ltr",
+      "ogLocale": "nb_NO"
     },
     {
       "code": "pl",
@@ -282,16 +211,12 @@
       "ogLocale": "ro_RO"
     },
     {
-      "code": "ru",
-      "path": "ru",
-      "name": "Russian",
-      "native": "Русский",
+      "code": "sq",
+      "path": "sq",
+      "name": "Albanian",
+      "native": "Shqip",
       "dir": "ltr",
-      "ogLocale": "ru_RU",
-      "alsoServes": [
-        "ru-BY",
-        "ru-KZ"
-      ]
+      "ogLocale": "sq_AL"
     },
     {
       "code": "sl",
@@ -302,12 +227,12 @@
       "ogLocale": "sl_SI"
     },
     {
-      "code": "sq",
-      "path": "sq",
-      "name": "Albanian",
-      "native": "Shqip",
+      "code": "fi",
+      "path": "fi",
+      "name": "Finnish",
+      "native": "Suomi",
       "dir": "ltr",
-      "ogLocale": "sq_AL"
+      "ogLocale": "fi_FI"
     },
     {
       "code": "sv",
@@ -321,12 +246,12 @@
       ]
     },
     {
-      "code": "th",
-      "path": "th",
-      "name": "Thai",
-      "native": "ไทย",
+      "code": "vi",
+      "path": "vi",
+      "name": "Vietnamese",
+      "native": "Tiếng Việt",
       "dir": "ltr",
-      "ogLocale": "th_TH"
+      "ogLocale": "vi_VN"
     },
     {
       "code": "tr",
@@ -337,6 +262,34 @@
       "ogLocale": "tr_TR"
     },
     {
+      "code": "el",
+      "path": "el",
+      "name": "Greek",
+      "native": "Ελληνικά",
+      "dir": "ltr",
+      "ogLocale": "el_GR"
+    },
+    {
+      "code": "bg",
+      "path": "bg",
+      "name": "Bulgarian",
+      "native": "Български",
+      "dir": "ltr",
+      "ogLocale": "bg_BG"
+    },
+    {
+      "code": "ru",
+      "path": "ru",
+      "name": "Russian",
+      "native": "Русский",
+      "dir": "ltr",
+      "ogLocale": "ru_RU",
+      "alsoServes": [
+        "ru-BY",
+        "ru-KZ"
+      ]
+    },
+    {
       "code": "uk",
       "path": "uk",
       "name": "Ukrainian",
@@ -345,12 +298,59 @@
       "ogLocale": "uk_UA"
     },
     {
-      "code": "vi",
-      "path": "vi",
-      "name": "Vietnamese",
-      "native": "Tiếng Việt",
+      "code": "he",
+      "path": "he",
+      "name": "Hebrew",
+      "native": "עברית",
+      "dir": "rtl",
+      "ogLocale": "he_IL"
+    },
+    {
+      "code": "ar",
+      "path": "ar",
+      "name": "Arabic",
+      "native": "العربية",
+      "dir": "rtl",
+      "ogLocale": "ar_AR",
+      "alsoServes": [
+        "ar-EG",
+        "ar-SA",
+        "ar-AE",
+        "ar-MA",
+        "ar-DZ"
+      ]
+    },
+    {
+      "code": "hi",
+      "path": "hi",
+      "name": "Hindi",
+      "native": "हिन्दी",
       "dir": "ltr",
-      "ogLocale": "vi_VN"
+      "ogLocale": "hi_IN"
+    },
+    {
+      "code": "th",
+      "path": "th",
+      "name": "Thai",
+      "native": "ไทย",
+      "dir": "ltr",
+      "ogLocale": "th_TH"
+    },
+    {
+      "code": "ko",
+      "path": "ko",
+      "name": "Korean",
+      "native": "한국어",
+      "dir": "ltr",
+      "ogLocale": "ko_KR"
+    },
+    {
+      "code": "ja",
+      "path": "ja",
+      "name": "Japanese",
+      "native": "日本語",
+      "dir": "ltr",
+      "ogLocale": "ja_JP"
     },
     {
       "code": "zh-Hans",
