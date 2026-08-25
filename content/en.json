@@ -21,7 +21,7 @@
     "nav.features": "Features",
     "nav.how": "How It Works",
     "hero.title": "Open BitLocker, Linux and virtual machine disks on macOS.",
-    "hero.subtitle": "Plug in a drive or open a disk image and type the password, and it appears in Finder. It is readable and writable, like any other disk.",
+    "hero.subtitle": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
     "hero.download": "Download",
     "hero.source": "Source on GitHub",
     "hero.meta": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",

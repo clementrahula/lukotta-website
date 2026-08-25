@@ -67,7 +67,7 @@
       "sl": ""
     },
     "hero.subtitle": {
-      "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder — readable and writable, like any other disk.",
+      "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
       "sl": ""
     },
     "hero.download": {
@@ -315,7 +315,7 @@
       "sl": ""
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides, and macOS 15 Sequoia or later.",
+      "en": "No. It needs the virtualisation Apple Silicon provides.",
       "sl": ""
     },
     "footer.privacy": {
@@ -324,6 +324,10 @@
     },
     "footer.licence": {
       "en": "Licence",
+      "sl": ""
+    },
+    "footer.source": {
+      "en": "Source",
       "sl": ""
     },
     "footer.contact": {
