@@ -1,7 +1,5 @@
 # Third-Party Notices
 
-The website carries two third-party works, both typefaces.
-
 ## Inter
 
 Copyright (c) 2016 The Inter Project Authors, <https://github.com/rsms/inter>
@@ -35,4 +33,4 @@ format names need. No file has been modified.
 ## Lukotta Name & Logo
 
 The logo, the mark and the icon come from the Lukotta application's own
-repository and are trademarks, not covered by the GPL that covers the software.
+repository and are trademarks, not covered by the GPL or the CC BY-SA licenses.
