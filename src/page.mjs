@@ -198,6 +198,9 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
        scripts below. GitHub Pages cannot set headers; AGENTS.md carries the
        Cloudflare rules for the ones a <meta> cannot express. -->
   <meta http-equiv="Content-Security-Policy" content="__CSP__">
+  <!-- The one security header a page can set for itself. The other three have
+       to come from Cloudflare; AGENTS.md carries them. -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>${esc(t("meta.title"))}</title>
   <meta name="description" content="${esc(t("meta.description"))}">

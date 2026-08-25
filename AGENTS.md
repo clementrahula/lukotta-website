@@ -148,33 +148,91 @@ manual, and its push trigger is commented out.
    | `AAAA` | `lukotta.com` | `2606:50c0:8003::153` |
    | `CNAME` | `www` | `clementrahula.github.io` |
 
-   The AAAA records matter while the proxy is off: without them an IPv6-only
-   reader cannot reach the site at all.
+   These are the origin addresses. Keep the AAAA records: Cloudflare reaches
+   the origin over either family, and if the proxy is ever switched off they
+   are what an IPv6-only reader resolves.
 
-   **Set SSL/TLS to Full (strict) before turning the orange cloud on.**
-   Cloudflare's Flexible mode sends plain HTTP to GitHub while telling the
-   reader the connection is secure, and GitHub answers that with a redirect
-   loop.
+   **The proxy stays on, orange from the first record.** What cannot be on
+   from the first minute is *Full (strict)*, and that is what used to force
+   the grey-cloud dance. Full (strict) checks that the origin presents a
+   certificate valid for `lukotta.com`. GitHub has no such certificate until
+   it issues one, and it issues one by answering a challenge that Full
+   (strict) is busy rejecting. The proxy was never the problem; starting at
+   the strictest setting was.
 
-   Leave the records **grey (DNS only)** until GitHub reports the certificate
-   as issued — it validates over HTTP and cannot do that through the proxy.
-   Then switch the proxy on.
+   So start one notch down and move up:
+
+   | Stage | SSL/TLS mode | Why |
+   | --- | --- | --- |
+   | Setting the domain | **Full** | Encrypts Cloudflare to GitHub, and tolerates GitHub still serving its `*.github.io` certificate. Never *Flexible*: that sends plain HTTP to GitHub, which answers with a redirect loop. |
+   | Certificate issued | **Full (strict)** | GitHub now holds a certificate for the domain, so the origin can be verified. Turn on **Enforce HTTPS** in Settings → Pages at the same time. |
+
+   While the certificate is being issued, keep the challenge path out of the
+   way of anything that could answer it instead of GitHub:
+
+   - **Always Use HTTPS: off** until the certificate exists, or add a
+     configuration rule exempting `/.well-known/acme-challenge/*`. Let's
+     Encrypt follows redirects, but there is no reason to add a hop that
+     depends on the leg you are still trying to establish.
+   - **Cache: bypass** on `/.well-known/acme-challenge/*`, so a cached 404
+     from an earlier attempt cannot outlive it.
+
+   Issuance usually lands within minutes. GitHub's own documentation suggests
+   turning a proxy off for it, so this is the setup the rest of the world runs
+   rather than the one the vendor blesses. If Pages still reports the
+   certificate as pending after a day, grey-cloud the two records for the few
+   minutes it takes, then turn the proxy straight back on — as a way out of a
+   stuck state, not as the plan.
 
 5. **Add the response headers GitHub Pages cannot send.**
 
-   Rules → Transform Rules → Modify Response Header, for `lukotta.com/*`:
+   The pages already set what a page can set for itself: the content policy,
+   with a hash for each inline script, and `Referrer-Policy` through
+   `<meta name="referrer">`. Three cannot be expressed in markup at all —
+   `frame-ancestors` is ignored in a `<meta>`, and the other two are headers
+   or nothing — so they come from the proxy the site sits behind anyway.
 
    | Header | Value |
    | --- | --- |
    | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` |
    | `X-Content-Type-Options` | `nosniff` |
-   | `Referrer-Policy` | `strict-origin-when-cross-origin` |
    | `Content-Security-Policy` | `frame-ancestors 'none'` |
 
-   The pages already carry their own content policy in a `<meta>`, hashes and
-   all, which is the part a static host can express. `frame-ancestors` is
-   ignored in a `<meta>`, so it has to come from here. Set HSTS only once the
-   certificate is issued and HTTPS works; the header is hard to walk back.
+   By hand: Rules → Transform Rules → Modify Response Header → Add rule, for
+   `lukotta.com/*`, set each of the three.
+
+   Or in one call, with a token holding *Zone → Config Rules → Edit* on this
+   zone (zone id is on the Cloudflare overview page):
+
+   ```bash
+   curl -sS -X PUT \
+     "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/rulesets/phases/http_response_headers_transform/entrypoint" \
+     -H "Authorization: Bearer $CF_TOKEN" \
+     -H "Content-Type: application/json" \
+     --data @- <<'JSON'
+   {
+     "rules": [
+       {
+         "action": "rewrite",
+         "description": "Headers GitHub Pages cannot send",
+         "expression": "true",
+         "action_parameters": {
+           "headers": {
+             "Strict-Transport-Security": { "operation": "set", "value": "max-age=31536000; includeSubDomains" },
+             "X-Content-Type-Options": { "operation": "set", "value": "nosniff" },
+             "Content-Security-Policy": { "operation": "set", "value": "frame-ancestors 'none'" }
+           }
+         }
+       }
+     ]
+   }
+   JSON
+   ```
+
+   Add HSTS only once the certificate is issued and HTTPS answers. A browser
+   that has seen the header refuses plain HTTP for a year and there is no way
+   to reach back and tell it otherwise, so it is the one header worth adding
+   last. Confirm all three afterwards with `curl -sI https://lukotta.com`.
 
 6. **Check the live site.**
 
