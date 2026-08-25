@@ -167,8 +167,8 @@
       "vi": "Ổ đĩa hiện ra ở mục Vị trí, và đọc, ghi, tháo ra như mọi ổ đĩa khác."
     },
     "features.title": {
-      "en": "Features",
-      "vi": "Tính năng"
+      "en": "What Lukotta Opens",
+      "vi": "Lukotta mở được gì"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "vi": "Hỗ trợ cho các định dạng này còn ở mức thử nghiệm. Việc ghi vào chúng chưa được kiểm thử rộng rãi."
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "vi": "Không hỗ trợ"
+      "en": "What Lukotta Does Not Open",
+      "vi": "Lukotta không mở được gì"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "vi": "Câu hỏi thường gặp"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "vi": "Lukotta giá bao nhiêu?"
+      "en": "Is Lukotta free?",
+      "vi": "Lukotta có miễn phí không?"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "vi": "Không gì cả. Tải về miễn phí và dùng cũng miễn phí. Không có bản trả tiền, không thuê bao, không thời gian dùng thử hết hạn, và không tài khoản nào phải lập."
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "vi": "Có, Lukotta miễn phí tải về và miễn phí sử dụng. Không có bản trả tiền, không có thuê bao, không có thời gian dùng thử hết hạn và không có tài khoản nào phải tạo."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "vi": "Đây còn là phần mềm tự do, theo GNU General Public License, phiên bản 3 trở lên. Mã nguồn công khai: bạn có thể đọc, tự biên dịch, sửa đổi và truyền lại những gì đã sửa."
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "vi": "Lukotta có mở được ổ đĩa BitLocker không?"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "vi": "Làm sao mở ổ đĩa BitLocker trên máy Mac?"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "vi": "Có, và ghi được lên đó. Nhập mật khẩu ổ đĩa hoặc dán khoá khôi phục 48 chữ số, rồi ổ đĩa mở ra trong Finder."
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "vi": "macOS không tự gắn được một ổ đĩa BitLocker. Lukotta mở nó để đọc và ghi: nhập mật khẩu của ổ đĩa hoặc dán khoá khôi phục 48 chữ số, rồi ổ đĩa hiện ra trong Finder."
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "vi": "Lukotta có ghi được lên ổ đĩa NTFS không?"
+      "en": "Can a Mac write to an NTFS drive?",
+      "vi": "Máy Mac có ghi được lên ổ NTFS không?"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "vi": "Có. Tệp chép vào ổ NTFS cũng dễ như chép ra."
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "vi": "Tự nó thì không. macOS gắn NTFS ở chế độ chỉ đọc. Lukotta gắn nó để đọc và ghi, nên tệp chép sang ổ NTFS cũng dễ như chép ra."
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "vi": "Lukotta có mở được ổ đĩa Linux không?"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "vi": "Làm sao đọc ổ đĩa ext4 hoặc btrfs trên máy Mac?"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "vi": "Có. ext2, ext3, ext4, btrfs và XFS đều mở được, không mã hoá hoặc nằm trong mã hoá LUKS. Ổ đĩa dựng bằng LVM sẽ mở tất cả ổ đĩa của nó cùng lúc."
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "vi": "macOS không đọc được hệ tệp nào của Linux. Lukotta mở ext2, ext3, ext4, btrfs và XFS, để trần hoặc nằm trong mã hoá LUKS. Ổ đĩa bố trí bằng LVM mở tất cả các phân vùng cùng lúc."
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "vi": "Lukotta có mở được đĩa của máy ảo không?"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "vi": "Có thể mở đĩa của máy ảo mà không khởi động máy đó không?"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "vi": "Có, mà không cần khởi động máy ảo. Mở ảnh đĩa qcow2, VMDK, VDI, VHD hoặc VHDX rồi chép tệp ra khỏi nó, hoặc chép vào."
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "vi": "Có. Lukotta mở thẳng ảnh đĩa qcow2, VMDK, VDI, VHD hoặc VHDX và chép tệp ra khỏi nó, hoặc vào trong nó. Việc ghi còn là thử nghiệm với VMDK, VDI và VHD; VHDX và VMDK stream-optimized chỉ mở để đọc."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "vi": "Lukotta có chạy trên máy Mac dùng Intel không?"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "vi": "Không. Nó cần khả năng ảo hoá mà Apple Silicon cung cấp."
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "vi": "Không. Lukotta cần khả năng ảo hoá mà Apple Silicon cung cấp, nên nó chỉ chạy trên máy Mac dùng Apple Silicon, với macOS 15 Sequoia trở lên."
     },
     "footer.privacy": {
       "en": "Privacy Policy",

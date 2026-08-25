@@ -167,8 +167,8 @@
       "lt": "Tomas atsiranda skiltyje Locations ir yra skaitomas, rašomas bei išstumiamas kaip bet kuris kitas diskas."
     },
     "features.title": {
-      "en": "Features",
-      "lt": "Galimybės"
+      "en": "What Lukotta Opens",
+      "lt": "Ką Lukotta atveria"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "lt": "Šių formatų palaikymas yra eksperimentinis. Rašymas į juos nebuvo plačiai išbandytas."
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "lt": "Nepalaikoma"
+      "en": "What Lukotta Does Not Open",
+      "lt": "Ko Lukotta neatveria"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "lt": "Dažni klausimai"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "lt": "Kiek kainuoja Lukotta?"
+      "en": "Is Lukotta free?",
+      "lt": "Ar Lukotta nemokama?"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "lt": "Nieko. Atsisiųsti nemokama, naudotis taip pat. Nėra mokamos versijos, prenumeratos, bandomojo laikotarpio, kuris baigiasi, nei paskyros, kurią reikėtų susikurti."
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "lt": "Taip, Lukotta nemokamai atsisiunčiama ir nemokamai naudojama. Nėra mokamos versijos, nėra prenumeratos, nėra bandomojo laikotarpio, kuris baigiasi, ir nėra paskyros, kurią reikėtų susikurti."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "lt": "Tai taip pat laisva programinė įranga pagal GNU General Public License 3 arba naujesnę versiją. Pirminis kodas yra viešas: galite jį skaityti, patys sukompiliuoti, keisti ir perduoti tai, ką pakeitėte."
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "lt": "Ar Lukotta atveria BitLocker diskus?"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "lt": "Kaip Mac kompiuteryje atverti BitLocker diską?"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "lt": "Taip, ir rašo į juos. Įveskite tomo slaptažodį arba įklijuokite 48 skaitmenų atkūrimo raktą, ir diskas atsivers Finder lange."
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "lt": "macOS pats BitLocker tomo prijungti negali. Lukotta jį atveria skaitymui ir rašymui: įveskite tomo slaptažodį arba įklijuokite 48 skaitmenų atkūrimo raktą ir diskas pasirodo Finder lange."
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "lt": "Ar Lukotta rašo į NTFS diskus?"
+      "en": "Can a Mac write to an NTFS drive?",
+      "lt": "Ar Mac gali rašyti į NTFS diską?"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "lt": "Taip. Failai kopijuojami į NTFS diską lygiai taip pat kaip iš jo."
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "lt": "Pats savaime ne. macOS prijungia NTFS tik skaitymui. Lukotta jį prijungia skaitymui ir rašymui, tad failai kopijuojami į NTFS diską lygiai taip pat kaip ir iš jo."
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "lt": "Ar Lukotta atveria Linux diskus?"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "lt": "Kaip Mac kompiuteryje perskaityti ext4 arba btrfs diską?"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "lt": "Taip. ext2, ext3, ext4, btrfs ir XFS atsiveria nešifruoti arba LUKS šifravimo viduje. Diskas, sutvarkytas su LVM, atveria visus savo tomus kartu."
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "lt": "macOS neperskaito nė vienos Linux failų sistemos. Lukotta atveria ext2, ext3, ext4, btrfs ir XFS, plikas arba LUKS šifravimo viduje. Diskas, išdėstytas su LVM, atveria visus savo tomus kartu."
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "lt": "Ar Lukotta atveria virtualiosios mašinos diską?"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "lt": "Ar galima atverti virtualios mašinos diską nepaleidus pačios mašinos?"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "lt": "Taip, nepaleidžiant mašinos. Atverkite qcow2, VMDK, VDI, VHD arba VHDX atvaizdį ir kopijuokite failus iš jo arba į jį."
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "lt": "Taip. Lukotta tiesiogiai atveria qcow2, VMDK, VDI, VHD arba VHDX atvaizdį ir kopijuoja failus iš jo arba į jį. Rašymas yra eksperimentinis VMDK, VDI ir VHD atveju; VHDX ir VMDK stream-optimized atveriami tik skaitymui."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "lt": "Ar Lukotta veikia Mac kompiuteryje su Intel procesoriumi?"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "lt": "Ne. Jai reikia virtualizacijos, kurią teikia Apple Silicon."
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "lt": "Ne. Lukotta reikia virtualizacijos, kurią suteikia Apple Silicon, tad ji veikia tik Mac kompiuteriuose su Apple Silicon, su macOS 15 Sequoia arba naujesne."
     },
     "footer.privacy": {
       "en": "Privacy Policy",

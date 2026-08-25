@@ -167,8 +167,8 @@
       "ja": "ボリュームは「場所」の下に現れ、ほかのドライブと同じように読み書きと取り出しができます。"
     },
     "features.title": {
-      "en": "Features",
-      "ja": "機能"
+      "en": "What Lukotta Opens",
+      "ja": "Lukottaが開くもの"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "ja": "これらのフォーマットへの対応は実験的です。書き込みはまだ広範にはテストされていません。"
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "ja": "非対応"
+      "en": "What Lukotta Does Not Open",
+      "ja": "Lukottaが開かないもの"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "ja": "よくある質問"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "ja": "Lukottaはいくらですか。"
+      "en": "Is Lukotta free?",
+      "ja": "Lukottaは無料ですか？"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "ja": "無料です。ダウンロードも使用も無料で、有料版も、サブスクリプションも、期限切れになる試用期間も、作成するアカウントもありません。"
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "ja": "はい、Lukottaはダウンロードも利用も無料です。有料版もサブスクリプションも、期限切れになる試用期間も、作成すべきアカウントもありません。"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "ja": "さらにフリーソフトウェアであり、GNU General Public Licenseのバージョン3以降のもとにあります。ソースコードは公開されていて、読むことも、自分でビルドすることも、変更することも、変更したものを渡すこともできます。"
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "ja": "LukottaはBitLockerのドライブを開けますか。"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "ja": "MacでBitLockerのドライブを開くには？"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "ja": "開けますし、書き込みもできます。ボリュームのパスワードを入力するか48桁の回復キーを貼り付けると、ドライブがFinderで開きます。"
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "ja": "macOSはBitLockerのボリュームを自分ではマウントできません。Lukottaは読み書きできる状態で開きます。ボリュームのパスワードを入力するか48桁の回復キーを貼り付けると、ドライブがFinderに現れます。"
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "ja": "LukottaはNTFSのドライブに書き込めますか。"
+      "en": "Can a Mac write to an NTFS drive?",
+      "ja": "MacはNTFSのドライブに書き込めますか？"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "ja": "できます。NTFSのドライブからコピーするのと同じように、ドライブへもコピーできます。"
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "ja": "そのままでは書き込めません。macOSはNTFSを読み取り専用でマウントします。Lukottaは読み書きできる状態でマウントするので、ファイルはNTFSのドライブから取り出すのと同じように入れられます。"
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "ja": "LukottaはLinuxのドライブを開けますか。"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "ja": "Macでext4やbtrfsのドライブを読むには？"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ja": "開けます。ext2、ext3、ext4、btrfs、XFSが開き、暗号化されていない状態でもLUKSの暗号化の中にあっても構いません。LVMで構成されたドライブは、すべてのボリュームをまとめて開きます。"
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "ja": "macOSはLinuxのファイルシステムをひとつも読めません。Lukottaはext2、ext3、ext4、btrfs、XFSを開きます。そのままでも、LUKS暗号化の中にあっても同じです。LVMで構成したドライブは、すべてのボリュームをまとめて開きます。"
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "ja": "Lukottaは仮想マシンのディスクを開けますか。"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "ja": "仮想マシンを起動せずにそのディスクを開けますか？"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "ja": "開けます。仮想マシンを起動する必要はありません。qcow2、VMDK、VDI、VHD、VHDXのディスクイメージを開いて、ファイルを取り出したり入れたりできます。"
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "ja": "はい。Lukottaはqcow2、VMDK、VDI、VHD、VHDXのイメージを直接開き、ファイルを取り出したり入れたりします。書き込みはVMDK、VDI、VHDでは実験的で、VHDXとVMDK stream-optimizedは読み取り専用で開きます。"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "ja": "LukottaはIntelのMacで動きますか。"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "ja": "動きません。Apple Siliconが備える仮想化が必要です。"
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "ja": "いいえ。LukottaはApple Siliconが提供する仮想化を必要とするため、Apple SiliconのMacでのみ、macOS 15 Sequoia以降で動作します。"
     },
     "footer.privacy": {
       "en": "Privacy Policy",

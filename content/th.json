@@ -167,8 +167,8 @@
       "th": "โวลุ่มจะปรากฏใต้ตำแหน่งที่ตั้ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
     },
     "features.title": {
-      "en": "Features",
-      "th": "ความสามารถ"
+      "en": "What Lukotta Opens",
+      "th": "Lukotta เปิดอะไรได้บ้าง"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "th": "การรองรับรูปแบบเหล่านี้ยังอยู่ในขั้นทดลอง การเขียนลงไปยังไม่ได้ทดสอบอย่างกว้างขวาง"
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "th": "ไม่รองรับ"
+      "en": "What Lukotta Does Not Open",
+      "th": "Lukotta เปิดอะไรไม่ได้"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "th": "คำถามที่พบบ่อย"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "th": "Lukotta ราคาเท่าไร"
+      "en": "Is Lukotta free?",
+      "th": "Lukotta ฟรีไหม"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "th": "ไม่เสียเลย ดาวน์โหลดฟรีและใช้ฟรี ไม่มีรุ่นเสียเงิน ไม่มีค่าสมาชิก ไม่มีช่วงทดลองที่หมดอายุ และไม่ต้องสร้างบัญชี"
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "th": "ใช่ Lukotta ดาวน์โหลดฟรีและใช้ฟรี ไม่มีรุ่นเสียเงิน ไม่มีการสมัครสมาชิก ไม่มีช่วงทดลองที่หมดอายุ และไม่ต้องสร้างบัญชี"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "th": "อีกทั้งยังเป็นซอฟต์แวร์เสรีภายใต้ GNU General Public License รุ่น 3 ขึ้นไป ซอร์สโค้ดเปิดเผย คุณอ่านได้ คอมไพล์เองได้ แก้ไขได้ และส่งต่อสิ่งที่แก้ไขได้"
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "th": "Lukotta เปิดไดรฟ์ BitLocker ได้ไหม"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "th": "เปิดไดรฟ์ BitLocker บน Mac ได้อย่างไร"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "th": "ได้ และเขียนลงไปได้ด้วย พิมพ์รหัสผ่านของโวลุ่มหรือวางกุญแจกู้คืน 48 หลัก แล้วไดรฟ์จะเปิดขึ้นใน Finder"
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "th": "macOS เมานต์โวลุ่ม BitLocker เองไม่ได้ Lukotta เปิดให้ทั้งอ่านและเขียน พิมพ์รหัสผ่านของโวลุ่มหรือวางกุญแจกู้คืน 48 หลัก แล้วไดรฟ์จะปรากฏใน Finder"
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "th": "Lukotta เขียนลงไดรฟ์ NTFS ได้ไหม"
+      "en": "Can a Mac write to an NTFS drive?",
+      "th": "Mac เขียนลงไดรฟ์ NTFS ได้ไหม"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "th": "ได้ คัดลอกไฟล์เข้าไดรฟ์ NTFS ได้พอ ๆ กับคัดลอกออกมา"
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "th": "ลำพังตัวมันเองไม่ได้ macOS เมานต์ NTFS แบบอ่านอย่างเดียว Lukotta เมานต์ให้ทั้งอ่านและเขียน ไฟล์จึงคัดลอกไปยังไดรฟ์ NTFS ได้เช่นเดียวกับที่คัดลอกออกมา"
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "th": "Lukotta เปิดไดรฟ์ Linux ได้ไหม"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "th": "อ่านไดรฟ์ ext4 หรือ btrfs บน Mac ได้อย่างไร"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "th": "ได้ ext2, ext3, ext4, btrfs และ XFS เปิดได้ ทั้งแบบเปล่าและแบบอยู่ในการเข้ารหัส LUKS ไดรฟ์ที่จัดด้วย LVM จะเปิดทุกโวลุ่มพร้อมกัน"
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "th": "macOS ไม่อ่านระบบไฟล์ของ Linux เลยสักระบบ Lukotta เปิด ext2, ext3, ext4, btrfs และ XFS ทั้งแบบเปล่าและที่อยู่ในการเข้ารหัส LUKS ไดรฟ์ที่จัดวางด้วย LVM จะเปิดโวลุ่มทั้งหมดพร้อมกัน"
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "th": "Lukotta เปิดดิสก์ของเครื่องเสมือนได้ไหม"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "th": "เปิดดิสก์ของเครื่องเสมือนโดยไม่ต้องเริ่มเครื่องได้ไหม"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "th": "ได้ โดยไม่ต้องเปิดเครื่องเสมือน เปิดอิมเมจ qcow2, VMDK, VDI, VHD หรือ VHDX แล้วคัดลอกไฟล์ออกมาหรือใส่เข้าไป"
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "th": "ได้ Lukotta เปิดอิมเมจ qcow2, VMDK, VDI, VHD หรือ VHDX ได้โดยตรง และคัดลอกไฟล์ออกมาหรือใส่เข้าไป การเขียนยังเป็นการทดลองสำหรับ VMDK, VDI และ VHD ส่วน VHDX และ VMDK stream-optimized เปิดได้แบบอ่านอย่างเดียว"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "th": "Lukotta ใช้กับ Mac ที่เป็น Intel ได้ไหม"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "th": "ไม่ได้ มันต้องใช้การจำลองเสมือนที่ Apple Silicon มีให้"
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "th": "ไม่ Lukotta ต้องใช้การจำลองเสมือนที่ Apple Silicon มีให้ จึงทำงานได้เฉพาะบน Mac ที่ใช้ Apple Silicon และ macOS 15 Sequoia ขึ้นไป"
     },
     "footer.privacy": {
       "en": "Privacy Policy",

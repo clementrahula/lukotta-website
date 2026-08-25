@@ -167,8 +167,8 @@
       "hu": "A kötet megjelenik a Helyek alatt, és ugyanúgy olvasható, írható és kiadható, mint bármelyik másik lemez."
     },
     "features.title": {
-      "en": "Features",
-      "hu": "Funkciók"
+      "en": "What Lukotta Opens",
+      "hu": "Mit nyit meg a Lukotta"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "hu": "Ezeknek a formátumoknak a támogatása kísérleti. Az írásuk nincs alaposan tesztelve."
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "hu": "Nem támogatott"
+      "en": "What Lukotta Does Not Open",
+      "hu": "Mit nem nyit meg a Lukotta"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "hu": "Gyakori kérdések"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "hu": "Mennyibe kerül a Lukotta?"
+      "en": "Is Lukotta free?",
+      "hu": "Ingyenes a Lukotta?"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "hu": "Semmibe. A letöltés ingyenes, és a használat is. Nincs fizetős változat, nincs előfizetés, nincs lejáró próbaidő és nincs létrehozandó fiók."
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "hu": "Igen, a Lukotta ingyen letölthető és ingyen használható. Nincs fizetős változat, nincs előfizetés, nincs lejáró próbaidő és nincs létrehozandó fiók."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "hu": "Ezenfelül szabad szoftver, a GNU General Public License 3-as vagy újabb változata alatt. A forráskód nyilvános: elolvashatod, magad lefordíthatod, módosíthatod, és továbbadhatod, amit módosítottál."
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "hu": "Meg tudja nyitni a Lukotta a BitLocker-lemezeket?"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "hu": "Hogyan nyitsz meg egy BitLocker-meghajtót Macen?"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "hu": "Igen, és írni is tud rájuk. Írd be a kötet jelszavát, vagy illessz be egy 48 jegyű helyreállítási kulcsot, és a lemez megnyílik a Finder alkalmazásban."
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "hu": "A macOS magától nem tud BitLocker-kötetet csatolni. A Lukotta olvasásra és írásra nyitja meg: írd be a kötet jelszavát, vagy illeszd be a 48 jegyű helyreállítási kulcsot, és a meghajtó megjelenik a Finder alkalmazásban."
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "hu": "Tud a Lukotta NTFS-lemezekre írni?"
+      "en": "Can a Mac write to an NTFS drive?",
+      "hu": "Tud a Mac NTFS-meghajtóra írni?"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "hu": "Igen. A fájlok ugyanúgy másolhatók egy NTFS-lemezre, ahogy róla."
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "hu": "Magától nem. A macOS csak olvasásra csatolja az NTFS-t. A Lukotta olvasásra és írásra csatolja, így a fájlok ugyanúgy másolhatók NTFS-meghajtóra, ahogy róla."
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "hu": "Meg tudja nyitni a Lukotta a Linux-lemezeket?"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "hu": "Hogyan olvasol el egy ext4- vagy btrfs-meghajtót Macen?"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hu": "Igen. Az ext2, ext3, ext4, btrfs és XFS megnyílik, titkosítatlanul vagy LUKS-titkosításon belül. Az LVM elrendezésű lemez az összes kötetét együtt nyitja meg."
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "hu": "A macOS egyetlen Linux fájlrendszert sem olvas. A Lukotta megnyitja az ext2, ext3, ext4, btrfs és XFS rendszereket, önmagukban vagy LUKS-titkosításon belül. Az LVM-mel kiosztott meghajtó az összes kötetét együtt nyitja meg."
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "hu": "Meg tudja nyitni a Lukotta egy virtuális gép lemezét?"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "hu": "Meg lehet nyitni egy virtuális gép lemezét a gép elindítása nélkül?"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "hu": "Igen, a gép elindítása nélkül. Nyiss meg egy qcow2-, VMDK-, VDI-, VHD- vagy VHDX-lemezképet, és másolj ki belőle fájlokat, vagy bele."
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "hu": "Igen. A Lukotta közvetlenül megnyit egy qcow2-, VMDK-, VDI-, VHD- vagy VHDX-lemezképet, és fájlokat másol ki belőle vagy bele. Az írás VMDK, VDI és VHD esetén kísérleti; a VHDX és a VMDK stream-optimized csak olvasásra nyílik meg."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "hu": "Működik a Lukotta Intel processzoros Mac gépen?"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "hu": "Nem. Szüksége van arra a virtualizációra, amelyet az Apple Silicon nyújt."
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "hu": "Nem. A Lukotta igényli az Apple Silicon nyújtotta virtualizációt, ezért csak Apple Silicon alapú Maceken fut, macOS 15 Sequoia vagy újabb rendszeren."
     },
     "footer.privacy": {
       "en": "Privacy Policy",

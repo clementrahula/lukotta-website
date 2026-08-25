@@ -167,8 +167,8 @@
       "zh-Hans": "卷出现在“位置”下面，像别的驱动器一样可以读、写和推出。"
     },
     "features.title": {
-      "en": "Features",
-      "zh-Hans": "功能"
+      "en": "What Lukotta Opens",
+      "zh-Hans": "Lukotta 能打开什么"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "zh-Hans": "这些格式的支持尚属实验性质，写入还没有经过广泛测试。"
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "zh-Hans": "不支持"
+      "en": "What Lukotta Does Not Open",
+      "zh-Hans": "Lukotta 打不开什么"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "zh-Hans": "常见问题"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "zh-Hans": "Lukotta 多少钱？"
+      "en": "Is Lukotta free?",
+      "zh-Hans": "Lukotta 免费吗？"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "zh-Hans": "不要钱。下载免费，使用也免费。没有付费版，没有订阅，没有会到期的试用期，也不用注册账号。"
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "zh-Hans": "是的，Lukotta 免费下载，也免费使用。没有付费版本，没有订阅，没有会到期的试用，也不用注册账户。"
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "zh-Hans": "它同时是自由软件，采用 GNU General Public License 第 3 版或更新版本。源代码是公开的：你可以阅读它、自己编译、修改，并把修改后的成果传给别人。"
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "zh-Hans": "Lukotta 能打开 BitLocker 驱动器吗？"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "zh-Hans": "在 Mac 上怎么打开 BitLocker 驱动器？"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "zh-Hans": "能，还能往里写。输入卷的密码或粘贴 48 位恢复密钥，驱动器就在访达里打开了。"
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "zh-Hans": "macOS 自己挂载不了 BitLocker 卷。Lukotta 以可读可写的方式打开它：输入卷的密码或粘贴 48 位恢复密钥，驱动器就出现在访达里。"
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "zh-Hans": "Lukotta 能往 NTFS 驱动器里写入吗？"
+      "en": "Can a Mac write to an NTFS drive?",
+      "zh-Hans": "Mac 能往 NTFS 驱动器里写入吗？"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "zh-Hans": "能。文件拷进 NTFS 驱动器和从里面拷出来一样方便。"
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "zh-Hans": "单靠它自己不能。macOS 只以只读方式挂载 NTFS。Lukotta 以可读可写的方式挂载，文件往 NTFS 驱动器里拷贝和从里面拷出来一样顺手。"
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "zh-Hans": "Lukotta 能打开 Linux 驱动器吗？"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "zh-Hans": "在 Mac 上怎么读取 ext4 或 btrfs 驱动器？"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "zh-Hans": "能。ext2、ext3、ext4、btrfs 和 XFS 都能打开，无论是未加密还是位于 LUKS 加密中。用 LVM 组织的驱动器会把所有卷一起打开。"
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "zh-Hans": "macOS 一个 Linux 文件系统都读不了。Lukotta 能打开 ext2、ext3、ext4、btrfs 和 XFS，无论是裸的还是在 LUKS 加密里。用 LVM 划分的驱动器会把所有卷一起打开。"
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "zh-Hans": "Lukotta 能打开虚拟机的硬盘吗？"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "zh-Hans": "能不启动虚拟机就打开它的磁盘吗？"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "zh-Hans": "能，而且不用启动虚拟机。打开 qcow2、VMDK、VDI、VHD 或 VHDX 磁盘映像，就能从中拷出文件，或者拷进去。"
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "zh-Hans": "能。Lukotta 直接打开 qcow2、VMDK、VDI、VHD 或 VHDX 映像，从里面拷出文件，也能拷进去。写入对 VMDK、VDI 和 VHD 还是实验性的；VHDX 和 VMDK stream-optimized 只能以只读方式打开。"
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "zh-Hans": "Lukotta 能在 Intel 的 Mac 上运行吗？"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "zh-Hans": "不能。它需要 Apple Silicon 提供的虚拟化。"
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "zh-Hans": "不能。Lukotta 需要 Apple Silicon 提供的虚拟化，所以只能在配备 Apple Silicon 的 Mac 上运行，系统需为 macOS 15 Sequoia 或更新版本。"
     },
     "footer.privacy": {
       "en": "Privacy Policy",

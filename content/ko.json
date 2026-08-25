@@ -167,8 +167,8 @@
       "ko": "볼륨이 위치 아래에 나타나고, 다른 드라이브처럼 읽고 쓰고 추출할 수 있습니다."
     },
     "features.title": {
-      "en": "Features",
-      "ko": "기능"
+      "en": "What Lukotta Opens",
+      "ko": "Lukotta가 여는 것"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
@@ -283,8 +283,8 @@
       "ko": "이 형식들의 지원은 실험적입니다. 쓰기는 폭넓게 검증되지 않았습니다."
     },
     "formats.not.title": {
-      "en": "Not supported",
-      "ko": "지원하지 않음"
+      "en": "What Lukotta Does Not Open",
+      "ko": "Lukotta가 열지 않는 것"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
@@ -319,56 +319,56 @@
       "ko": "자주 묻는 질문"
     },
     "faq.1.q": {
-      "en": "How much does Lukotta cost?",
-      "ko": "Lukotta는 얼마인가요?"
+      "en": "Is Lukotta free?",
+      "ko": "Lukotta는 무료인가요?"
     },
     "faq.1.a": {
-      "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "ko": "무료입니다. 내려받는 것도 쓰는 것도 공짜입니다. 유료 버전도, 구독도, 만료되는 체험 기간도, 만들어야 할 계정도 없습니다."
+      "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
+      "ko": "네, Lukotta는 무료로 내려받고 무료로 사용합니다. 유료 버전도, 구독도, 만료되는 체험 기간도, 만들어야 할 계정도 없습니다."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
       "ko": "또한 GNU General Public License 버전 3 이상에 따른 자유 소프트웨어입니다. 소스 코드는 공개되어 있어 읽고, 직접 빌드하고, 고치고, 고친 것을 다른 사람에게 전할 수 있습니다."
     },
     "faq.2.q": {
-      "en": "Can Lukotta open BitLocker drives?",
-      "ko": "Lukotta가 BitLocker 드라이브를 열 수 있나요?"
+      "en": "How do you open a BitLocker drive on a Mac?",
+      "ko": "Mac에서 BitLocker 드라이브는 어떻게 여나요?"
     },
     "faq.2.a": {
-      "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "ko": "열 수 있고 쓸 수도 있습니다. 볼륨 암호를 입력하거나 48자리 복구 키를 붙여 넣으면 드라이브가 Finder에서 열립니다."
+      "en": "macOS cannot mount a BitLocker volume by itself. Lukotta opens one read and write: type the volume password, or paste a 48-digit recovery key, and the drive appears in Finder.",
+      "ko": "macOS는 BitLocker 볼륨을 스스로 마운트하지 못합니다. Lukotta는 읽기와 쓰기 모두 가능하게 엽니다. 볼륨 암호를 입력하거나 48자리 복구 키를 붙여 넣으면 드라이브가 Finder에 나타납니다."
     },
     "faq.3.q": {
-      "en": "Can Lukotta write to NTFS drives?",
-      "ko": "Lukotta가 NTFS 드라이브에 쓸 수 있나요?"
+      "en": "Can a Mac write to an NTFS drive?",
+      "ko": "Mac이 NTFS 드라이브에 쓸 수 있나요?"
     },
     "faq.3.a": {
-      "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "ko": "됩니다. NTFS 드라이브에서 복사해 오는 것처럼 드라이브로 복사해 넣을 수도 있습니다."
+      "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
+      "ko": "그 자체로는 못 합니다. macOS는 NTFS를 읽기 전용으로 마운트합니다. Lukotta는 읽기와 쓰기 모두 가능하게 마운트하므로, 파일을 NTFS 드라이브에서 가져오는 것처럼 넣을 수도 있습니다."
     },
     "faq.4.q": {
-      "en": "Can Lukotta open Linux drives?",
-      "ko": "Lukotta가 Linux 드라이브를 열 수 있나요?"
+      "en": "How do you read an ext4 or btrfs drive on a Mac?",
+      "ko": "Mac에서 ext4나 btrfs 드라이브는 어떻게 읽나요?"
     },
     "faq.4.a": {
-      "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ko": "열 수 있습니다. ext2, ext3, ext4, btrfs, XFS가 열리며, 암호화되지 않은 상태든 LUKS 암호화 안에 있든 상관없습니다. LVM으로 구성된 드라이브는 모든 볼륨을 함께 엽니다."
+      "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
+      "ko": "macOS는 Linux 파일 시스템을 하나도 읽지 못합니다. Lukotta는 ext2, ext3, ext4, btrfs, XFS를 엽니다. 그대로든 LUKS 암호화 안에 있든 마찬가지입니다. LVM으로 구성한 드라이브는 모든 볼륨을 함께 엽니다."
     },
     "faq.5.q": {
-      "en": "Can Lukotta open a virtual machine's disk?",
-      "ko": "Lukotta가 가상 머신의 디스크를 열 수 있나요?"
+      "en": "Can you open a virtual machine disk without starting the machine?",
+      "ko": "가상 머신을 켜지 않고 그 디스크를 열 수 있나요?"
     },
     "faq.5.a": {
-      "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "ko": "열 수 있습니다. 가상 머신을 켜지 않아도 됩니다. qcow2, VMDK, VDI, VHD, VHDX 디스크 이미지를 열어 파일을 꺼내거나 넣을 수 있습니다."
+      "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
+      "ko": "네. Lukotta는 qcow2, VMDK, VDI, VHD, VHDX 이미지를 곧바로 열어 파일을 꺼내거나 넣습니다. 쓰기는 VMDK, VDI, VHD에서 실험적이며, VHDX와 VMDK stream-optimized는 읽기 전용으로 열립니다."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
       "ko": "Lukotta가 Intel Mac에서 돌아가나요?"
     },
     "faq.6.a": {
-      "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "ko": "아니요. Apple Silicon이 제공하는 가상화가 필요합니다."
+      "en": "No. Lukotta needs the virtualisation Apple Silicon provides, so it runs on Apple Silicon Macs only, on macOS 15 Sequoia or later.",
+      "ko": "아니요. Lukotta에는 Apple Silicon이 제공하는 가상화가 필요하므로 Apple Silicon Mac에서만, macOS 15 Sequoia 이상에서 실행됩니다."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
