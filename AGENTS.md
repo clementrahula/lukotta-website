@@ -82,6 +82,28 @@ The rest of `src/assets/brand/` are the originals the favicons and the
 shared-card image in `src/assets/icons/` were generated from, with `sips`. Keep
 them; do not publish them.
 
+## What is under which licence
+
+Two, because the repository holds two different kinds of thing.
+
+**The code** — `scripts/`, `src/page.mjs`, `src/script.js`, `src/styles.css`,
+the workflows, `site.config.json` — is **GPL-3.0-or-later**, the same as the
+application. See [LICENSE.txt](LICENSE.txt).
+
+**The words** — everything in `content/`, which is the English copy and its
+thirty-six translations — are **CC BY-SA 4.0**. See
+[LICENSE-CONTENT.txt](LICENSE-CONTENT.txt). Creative Commons is the tool built
+for prose; the GPL is not, and its idea of source does not map onto a sentence.
+Share-alike keeps the copyleft.
+
+**The brand** — the name Lukotta, the logo, the mark, and the icons generated
+from them — is under neither. They are trademarks, and
+[TRADEMARKS.txt](https://github.com/clementrahula/lukotta/blob/main/TRADEMARKS.txt)
+in the application's repository says what is permitted.
+
+The two typefaces the site carries are under the SIL Open Font License; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ## Going live
 
 The repository is private, so Pages will not serve it — GitHub publishes a
