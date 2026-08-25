@@ -167,6 +167,52 @@ else {
   }
 }
 
+/* --- contrast, measured from the built stylesheet rather than from intent --- */
+if (existsSync(cssPath)) {
+  const css = readFileSync(cssPath, "utf8");
+  const darkAt = css.indexOf(':root[data-theme="dark"]');
+  const blocks = {
+    light: css.slice(css.indexOf(":root {"), darkAt < 0 ? undefined : darkAt),
+    dark: darkAt < 0 ? "" : css.slice(darkAt),
+  };
+  const token = (block, name) => {
+    const m = blocks[block].match(new RegExp(`--${name}:\\s*(#[0-9A-Fa-f]{6})`));
+    return m ? m[1] : null;
+  };
+  const luminance = (hex) =>
+    hex.slice(1).match(/../g)
+      .map((pair) => { const v = parseInt(pair, 16) / 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; })
+      .reduce((sum, v, i) => sum + [0.2126, 0.7152, 0.0722][i] * v, 0);
+  const ratio = (a, b) => {
+    const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+    return (hi + 0.05) / (lo + 0.05);
+  };
+
+  /* WCAG 2.2: 4.5:1 for text under 24px, 3:1 for UI boundaries and large text. */
+  const pairs = [
+    ["body text", "ink", "paper", 4.5],
+    ["secondary text", "ink-2", "paper", 4.5],
+    ["muted text", "ink-3", "paper", 4.5],
+    ["muted text on a raised panel", "ink-3", "paper-2", 4.5],
+    ["link", "amber-ink", "paper", 4.5],
+    ["button label", "on-amber", "amber", 4.5],
+    ["focus ring", "amber-ink", "paper", 3],
+    ["control edge", "control-edge", "paper", 3],
+  ];
+  for (const theme of ["light", "dark"]) {
+    if (!blocks[theme]) { err(`styles.css has no ${theme} theme block; contrast cannot be checked.`); continue; }
+    for (const [label, fg, bg, need] of pairs) {
+      const a = token(theme, fg);
+      const b = token(theme, bg);
+      if (!a || !b) { err(`styles.css: ${theme} theme is missing --${a ? bg : fg}, so ${label} contrast cannot be checked.`); continue; }
+      const got = ratio(a, b);
+      if (got < need) {
+        err(`contrast: ${theme} ${label} is ${got.toFixed(2)}:1 (${a} on ${b}), below the ${need}:1 WCAG 2.2 AA minimum.`);
+      }
+    }
+  }
+}
+
 /* --- sitemap --- */
 const sitemapPath = join(OUT, "sitemap.xml");
 if (!existsSync(sitemapPath)) err("no sitemap.xml");

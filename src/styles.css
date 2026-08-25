@@ -157,7 +157,7 @@
 
   --ink:         #1F2127;
   --ink-2:       #575B64;
-  --ink-3:       #8A8E97;
+  --ink-3:       #6A6D74;
 
   --rule:        #E3DDCE;
   --rule-2:      #CFC8B4;
@@ -640,7 +640,6 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .header-inner { height: 56px; }
   .steps li { grid-template-columns: 2.4rem 1fr; }
 }
 
