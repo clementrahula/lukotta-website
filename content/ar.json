@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "ar": ""
+      "ar": "فتح أقراص BitLocker وLinux على macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "ar": ""
+      "ar": "افتح أقراص BitLocker وNTFS وLUKS وLinux على جهاز Mac. اكتب كلمة السر فيظهر القرص في Finder قابلاً للقراءة والكتابة. برنامج حر ومفتوح المصدر."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "ar": ""
+      "ar": "Lukotta — أقراص BitLocker وLinux والأجهزة الافتراضية على macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "ar": ""
+      "ar": "وصّل قرصاً أو افتح صورة قرص واكتب كلمة السر، فيظهر في Finder قابلاً للقراءة والكتابة، مثل أي قرص آخر."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "ar": ""
+      "ar": "أيقونة تطبيق Lukotta: مربع رمادي مائل إلى الزرقة بزوايا دائرية محفور فيه حرف L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "ar": ""
+      "ar": "تخطَّ إلى المحتوى"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "ar": ""
+      "ar": "اختر لغة"
     },
     "ui.menu": {
       "en": "Menu",
-      "ar": ""
+      "ar": "القائمة"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "ar": ""
+      "ar": "العودة إلى الأعلى"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "ar": ""
+      "ar": "التبديل إلى المظهر الفاتح"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "ar": ""
+      "ar": "التبديل إلى المظهر الداكن"
     },
     "nav.download": {
       "en": "Download",
-      "ar": ""
+      "ar": "التنزيل"
     },
     "nav.features": {
       "en": "Features",
-      "ar": ""
+      "ar": "الميزات"
     },
     "nav.how": {
       "en": "How It Works",
-      "ar": ""
+      "ar": "كيف يعمل"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "ar": ""
+      "ar": "افتح أقراص BitLocker وLinux والأجهزة الافتراضية على macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "ar": ""
+      "ar": "وصّل قرصاً أو افتح صورة قرص واكتب كلمة السر، فيظهر في Finder. قابل للقراءة والكتابة، مثل أي قرص آخر."
     },
     "hero.download": {
       "en": "Download",
-      "ar": ""
+      "ar": "تنزيل"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "ar": ""
+      "ar": "المصدر على GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "ar": ""
+      "ar": "الإصدار {version} · Apple Silicon · macOS 15 Sequoia أو أحدث"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "ar": ""
+      "ar": "نافذة Lukotta على macOS تعرض الأقراص الموصولة بالجهاز وما يحتويه كل منها."
     },
     "how.title": {
       "en": "How It Works",
-      "ar": ""
+      "ar": "كيف يعمل"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "ar": ""
+      "ar": "لا يستطيع macOS قراءة BitLocker ولا أنظمة ملفات Linux، بينما يستطيع Linux ذلك. يشغّل Lukotta جهازاً افتراضياً صغيراً بنظام Linux، ويفتح القرص داخله، ثم يسلّمه إلى Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "ar": ""
+      "ar": "وصّل القرص"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "ar": ""
+      "ar": "أو افتح صورة قرص."
     },
     "how.2.title": {
       "en": "Type the password",
-      "ar": ""
+      "ar": "اكتب كلمة السر"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "ar": ""
+      "ar": "كلمة سر وحدة التخزين، أو عبارة مرور LUKS، أو مفتاح استرداد BitLocker المكوّن من 48 رقماً."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "ar": ""
+      "ar": "افتحه في Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "ar": ""
+      "ar": "تظهر وحدة التخزين ضمن المواقع، وتُقرأ وتُكتب وتُخرَج مثل أي قرص آخر."
     },
     "features.title": {
       "en": "Features",
-      "ar": ""
+      "ar": "الميزات"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ar": ""
+      "ar": "يفتح Lukotta الأقراص وصور الأقراص التي يرفض macOS قراءتها، ويسلّمها إلى Finder كوحدات تخزين عادية."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "ar": ""
+      "ar": "يتعامل مع الأقراص المادية وملفات الصور على حد سواء. تُفتح وحدة BitLocker بكلمة سرها أو بمفتاح استرداد من 48 رقماً، ووحدات BitLocker وNTFS تُقرأ وتُكتب معاً، فيمكن نسخ الملفات إلى القرص كما تُنسخ منه."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "ar": ""
+      "ar": "ويمكن فتح أي قرص أو صورة للقراءة فقط، كما يستطيع Lukotta إعادة فتح ما كان مفتوحاً في آخر جلسة دخول."
     },
     "formats.title": {
       "en": "Supported formats",
-      "ar": ""
+      "ar": "الصيغ المدعومة"
     },
     "formats.col.format": {
       "en": "Format",
-      "ar": ""
+      "ar": "الصيغة"
     },
     "formats.col.read": {
       "en": "Read",
-      "ar": ""
+      "ar": "قراءة"
     },
     "formats.col.write": {
       "en": "Write",
-      "ar": ""
+      "ar": "كتابة"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "ar": ""
+      "ar": "ملاحظات"
     },
     "formats.yes": {
       "en": "Yes",
-      "ar": ""
+      "ar": "نعم"
     },
     "formats.no": {
       "en": "No",
-      "ar": ""
+      "ar": "لا"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "ar": ""
+      "ar": "التشفير"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "ar": ""
+      "ar": "أنظمة الملفات"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "ar": ""
+      "ar": "صور الأقراص"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "ar": ""
+      "ar": "تُفتح بكلمة سر وحدة التخزين أو بمفتاح استرداد من 48 رقماً"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "ar": ""
+      "ar": "تُفتح بعبارة المرور"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "ar": ""
+      "ar": "تُفتح عدة وحدات تخزين على القرص الواحد معاً"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "ar": ""
+      "ar": "بما في ذلك وحدة تركها Windows في وضع السبات أو لم تُغلق إغلاقاً سليماً"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "ar": ""
+      "ar": "أنظمة ملفات Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "ar": ""
+      "ar": "مدعومة في macOS أصلاً"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "ar": ""
+      "ar": "مدعومة في macOS أصلاً"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "ar": ""
+      "ar": "QEMU وUTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "ar": ""
+      "ar": "VMware، المسطّحة والمتفرّقة"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ar": ""
+      "ar": "ما يحتويه ملف OVA. يُكتب دفعة واحدة، فلا يمكن تعديله في مكانه"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "ar": ""
+      "ar": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "ar": ""
+      "ar": "Hyper-V، الثابتة والديناميكية"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "ar": ""
+      "ar": "Hyper-V. تُفتح للقراءة فقط"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "ar": ""
+      "ar": "كل صيغة بتفصيلها الكامل، وكيف تُقرأ وتُكتب كل واحدة منها"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "ar": ""
+      "ar": "غير مدعوم"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "ar": ""
+      "ar": "‏FileVault وصور الأقراص المشفّرة، إذ يفتحها macOS بنفسه"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "ar": ""
+      "ar": "الأقراص المرتبطة بشريحة TPM بدل كلمة السر، ومنها التشفير المدعوم بالعتاد في إصدارات Ubuntu الأحدث"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "ar": ""
+      "ar": "وحدات LUKS التي تُحفظ ترويستها بعيداً عن القرص"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "ar": ""
+      "ar": "‏VeraCrypt وTrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "ar": ""
+      "ar": "أي صورة تشير إلى ملف آخر: سلسلة لقطات VMware، أو VHD تفاضلي، أو qcow2 له ملف خلفي"
     },
     "name.title": {
       "en": "The Name",
-      "ar": ""
+      "ar": "الاسم"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "ar": ""
+      "ar": "‏Lúkotta كلمة فنلندية تعني «بلا قفل»، من {lukko} أي القفل، مع اللاحقة {tta} التي تدل على غياب الشيء. وتقع النبرة على المقطع الأول، كما هي الحال دائماً في الفنلندية."
     },
     "faq.title": {
       "en": "FAQ",
-      "ar": ""
+      "ar": "الأسئلة الشائعة"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "ar": ""
+      "ar": "كم يكلّف Lukotta؟"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "ar": ""
+      "ar": "لا شيء. تنزيله مجاني واستعماله مجاني. لا يوجد إصدار مدفوع ولا اشتراك ولا فترة تجريبية تنتهي ولا حساب يُنشأ."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "ar": ""
+      "ar": "وهو أيضاً برنامج حر، مرخّص برخصة GNU General Public License، الإصدار الثالث أو ما بعده. الشيفرة المصدرية علنية: يمكنك قراءتها وبناؤها بنفسك وتعديلها ونشر ما تعدّله."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "ar": ""
+      "ar": "هل يستطيع Lukotta فتح أقراص BitLocker؟"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "ar": ""
+      "ar": "نعم، والكتابة عليها أيضاً. اكتب كلمة سر وحدة التخزين أو الصق مفتاح استرداد من 48 رقماً، فيُفتح القرص في Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "ar": ""
+      "ar": "هل يستطيع Lukotta الكتابة على أقراص NTFS؟"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "ar": ""
+      "ar": "نعم. تُنسخ الملفات إلى قرص NTFS كما تُنسخ منه."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "ar": ""
+      "ar": "هل يستطيع Lukotta فتح أقراص Linux؟"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "ar": ""
+      "ar": "نعم. تُفتح ext2 وext3 وext4 وbtrfs وXFS، مكشوفةً أو داخل تشفير LUKS. والقرص المهيّأ بنظام LVM تُفتح كل وحداته معاً."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "ar": ""
+      "ar": "هل يستطيع Lukotta فتح قرص جهاز افتراضي؟"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "ar": ""
+      "ar": "نعم، دون تشغيل الجهاز. افتح صورة qcow2 أو VMDK أو VDI أو VHD أو VHDX وانسخ الملفات منها أو إليها."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "ar": ""
+      "ar": "هل يعمل Lukotta على أجهزة Mac بمعالج Intel؟"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "ar": ""
+      "ar": "لا. فهو يحتاج إلى المحاكاة الافتراضية التي يوفرها Apple Silicon."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "ar": ""
+      "ar": "سياسة الخصوصية"
     },
     "footer.licence": {
       "en": "Licence",
-      "ar": ""
+      "ar": "الرخصة"
     },
     "footer.source": {
       "en": "Source",
-      "ar": ""
+      "ar": "المصدر"
     },
     "footer.contact": {
       "en": "Contact",
-      "ar": ""
+      "ar": "اتصل بنا"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "ar": ""
+      "ar": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "ar": ""
+      "ar": "برنامج حر مرخّص برخصة GNU General Public License، الإصدار الثالث أو ما بعده."
     }
   }
 }

@@ -2,7 +2,7 @@
 /* Builds public/ from site.config.json, content/<lang>.json and src/.
    Run: node scripts/build.mjs   —   the output directory is disposable. */
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderPage } from "../src/page.mjs";
@@ -174,19 +174,27 @@ for (const lang of buildable) {
 
 const builtLangs = buildable.filter((l) => built.includes(l.code));
 
+/* The sitemap has to name exactly the same set of alternates as the pages do,
+   region aliases included. Two different answers to the same question is worse
+   than one imperfect answer: Google discards a cluster whose signals disagree. */
 const urlEntries = builtLangs
   .map((l) => {
     const loc = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
-    const links = builtLangs
-      .map((a) => {
-        const href = a.path ? `${cfg.domain}/${a.path}/` : `${cfg.domain}/`;
-        return `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${href}"/>`;
-      })
+    const links = alternates
+      .map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${a.href}"/>`)
       .join("\n");
+
+    /* When this language's text last changed, not when the site was last
+       built — a date that moves for every language at once tells a crawler
+       nothing. */
+    const file = join(CONTENT, `${l.code}.json`);
+    const stamp = existsSync(file) ? statSync(file).mtime : new Date();
+    const lastmod = stamp.toISOString().slice(0, 10);
+
     return `  <url>
     <loc>${loc}</loc>
 ${links}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.domain}/"/>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${l.path ? "0.8" : "1.0"}</priority>
   </url>`;

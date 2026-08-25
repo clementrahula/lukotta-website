@@ -59,9 +59,14 @@ says so rather than passing quietly.
 5. **The tone is plain.** The English makes no promises it cannot keep, uses no
    marketing superlatives, and says what the application does and does not do.
    A translation that sells harder than the English is wrong.
-6. **Two strings are measured, not free.** `meta.title` should stay at or under
-   60 characters and `meta.description` between 70 and 165, because search
-   results cut them off. Say less rather than run over.
+6. **The `meta.*` strings are written for search, not translated.** They are
+   how somebody in this language finds the site at all. Write what a person
+   would actually type into a search engine when their Mac will not open a
+   drive — which is rarely a word-for-word rendering of the English. Keep
+   BitLocker, NTFS, LUKS, macOS and Mac in Latin script, because that is how
+   they are searched for in every language. `meta.title` must stay at or under
+   60 characters and `meta.description` between 70 and 165, since search
+   results cut them off; say less rather than run over.
 7. **Arabic and Hebrew read right to left.** `language.dir` is `"rtl"` for those
    two. The page turns round on its own; nothing in the text needs to change for
    it.

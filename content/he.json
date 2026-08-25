@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "he": ""
+      "he": "פתיחת כונני BitLocker ו‑Linux ב‑macOS — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "he": ""
+      "he": "פתחו כונני BitLocker, NTFS, LUKS ו‑Linux ב‑Mac. הקלידו את הסיסמה והכונן מופיע ב‑Finder, קריא וניתן לכתיבה. תוכנה חופשית בקוד פתוח."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "he": ""
+      "he": "Lukotta — כונני BitLocker, Linux ומכונות וירטואליות ב‑macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "he": ""
+      "he": "חברו כונן או פתחו קובץ תמונת דיסק, הקלידו את הסיסמה, והוא מופיע ב‑Finder, קריא וניתן לכתיבה, כמו כל דיסק אחר."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "he": ""
+      "he": "סמל היישום Lukotta: ריבוע אפור‑כחלחל בפינות מעוגלות שחקוקה בו האות L."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "he": ""
+      "he": "דלגו לתוכן"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "he": ""
+      "he": "בחרו שפה"
     },
     "ui.menu": {
       "en": "Menu",
-      "he": ""
+      "he": "תפריט"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "he": ""
+      "he": "חזרה לראש העמוד"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "he": ""
+      "he": "מעבר למראה בהיר"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "he": ""
+      "he": "מעבר למראה כהה"
     },
     "nav.download": {
       "en": "Download",
-      "he": ""
+      "he": "הורדה"
     },
     "nav.features": {
       "en": "Features",
-      "he": ""
+      "he": "יכולות"
     },
     "nav.how": {
       "en": "How It Works",
-      "he": ""
+      "he": "איך זה עובד"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "he": ""
+      "he": "פתחו כונני BitLocker, Linux ומכונות וירטואליות ב‑macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "he": ""
+      "he": "חברו כונן או פתחו קובץ תמונת דיסק והקלידו את הסיסמה, והוא מופיע ב‑Finder. קריא וניתן לכתיבה, כמו כל דיסק אחר."
     },
     "hero.download": {
       "en": "Download",
-      "he": ""
+      "he": "הורדה"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "he": ""
+      "he": "הקוד ב‑GitHub"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "he": ""
+      "he": "גרסה {version} · Apple Silicon · macOS 15 Sequoia ואילך"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "he": ""
+      "he": "חלון Lukotta ב‑macOS, ובו רשימת הכוננים המחוברים ל‑Mac ומה יש בכל אחד מהם."
     },
     "how.title": {
       "en": "How It Works",
-      "he": ""
+      "he": "איך זה עובד"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "he": ""
+      "he": "‏macOS אינו יודע לקרוא BitLocker או מערכות קבצים של Linux. ‏Linux כן. ‏Lukotta מפעיל מכונה וירטואלית קטנה עם Linux, פותח בתוכה את הכונן, ומוסר אותו חזרה ל‑Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "he": ""
+      "he": "חברו את הכונן"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "he": ""
+      "he": "או פתחו קובץ תמונת דיסק."
     },
     "how.2.title": {
       "en": "Type the password",
-      "he": ""
+      "he": "הקלידו את הסיסמה"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "he": ""
+      "he": "סיסמת הכרך, ביטוי סיסמה של LUKS, או מפתח שחזור של BitLocker בן 48 ספרות."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "he": ""
+      "he": "פתחו אותו ב‑Finder"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "he": ""
+      "he": "הכרך מופיע תחת מיקומים, ונקרא, נכתב ונשלף כמו כל כונן אחר."
     },
     "features.title": {
       "en": "Features",
-      "he": ""
+      "he": "יכולות"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "he": ""
+      "he": "‏Lukotta פותח כוננים וקובצי תמונת דיסק ש‑macOS מסרב לקרוא, ומוסר אותם ל‑Finder ככרכים רגילים."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "he": ""
+      "he": "הוא מטפל בכוננים פיזיים ובקובצי תמונה כאחד. כרך BitLocker נפתח בסיסמה שלו או במפתח שחזור בן 48 ספרות, וכרכי BitLocker ו‑NTFS גם נקראים וגם נכתבים, כך שאפשר להעתיק קבצים אל הכונן ולא רק ממנו."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "he": ""
+      "he": "כל כונן או תמונה אפשר לפתוח גם לקריאה בלבד, ו‑Lukotta יכול לפתוח מחדש את מה שהיה פתוח בהתחברות האחרונה."
     },
     "formats.title": {
       "en": "Supported formats",
-      "he": ""
+      "he": "תבניות נתמכות"
     },
     "formats.col.format": {
       "en": "Format",
-      "he": ""
+      "he": "תבנית"
     },
     "formats.col.read": {
       "en": "Read",
-      "he": ""
+      "he": "קריאה"
     },
     "formats.col.write": {
       "en": "Write",
-      "he": ""
+      "he": "כתיבה"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "he": ""
+      "he": "הערות"
     },
     "formats.yes": {
       "en": "Yes",
-      "he": ""
+      "he": "כן"
     },
     "formats.no": {
       "en": "No",
-      "he": ""
+      "he": "לא"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "he": ""
+      "he": "הצפנה"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "he": ""
+      "he": "מערכות קבצים"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "he": ""
+      "he": "תמונות דיסק"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "he": ""
+      "he": "נפתח בסיסמת הכרך או במפתח שחזור בן 48 ספרות"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "he": ""
+      "he": "נפתח בביטוי הסיסמה"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "he": ""
+      "he": "כמה כרכים על אותו כונן נפתחים יחד"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "he": ""
+      "he": "כולל כרך ש‑Windows השאיר במצב שינה או לא סגר כראוי"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "he": ""
+      "he": "מערכות הקבצים של Linux"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "he": ""
+      "he": "נתמך ב‑macOS באופן מובנה"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "he": ""
+      "he": "נתמך ב‑macOS באופן מובנה"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "he": ""
+      "he": "‏QEMU ו‑UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "he": ""
+      "he": "‏VMware, שטוח ודליל"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "he": ""
+      "he": "מה שקובץ OVA מכיל. נכתב במעבר אחד, ולכן אי אפשר לשנותו במקומו"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "he": ""
+      "he": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "he": ""
+      "he": "‏Hyper-V, קבוע ודינמי"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "he": ""
+      "he": "‏Hyper-V. נפתח לקריאה בלבד"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "he": ""
+      "he": "כל תבנית בפירוט מלא, וכיצד כל אחת נקראת ונכתבת"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "he": ""
+      "he": "לא נתמך"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "he": ""
+      "he": "‏FileVault ותמונות דיסק מוצפנות, ש‑macOS פותח בעצמו"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "he": ""
+      "he": "כוננים הקשורים לשבב TPM במקום לסיסמה, ובכללם ההצפנה מבוססת‑החומרה שבגרסאות Ubuntu החדשות"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "he": ""
+      "he": "כרכי LUKS שהכותרת שלהם נשמרת בנפרד מהכונן"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "he": ""
+      "he": "‏VeraCrypt ו‑TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "he": ""
+      "he": "תמונה שמפנה לקובץ אחר: שרשרת תצלומי מצב של VMware, ‏VHD הפרשי, או qcow2 עם קובץ בסיס"
     },
     "name.title": {
       "en": "The Name",
-      "he": ""
+      "he": "השם"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "he": ""
+      "he": "‏Lúkotta הוא «בלי מנעול» בפינית, מן {lukko} שהוא מנעול, עם הסיומת {tta} המציינת היעדר של דבר. ההטעמה נופלת על ההברה הראשונה, כמו תמיד בפינית."
     },
     "faq.title": {
       "en": "FAQ",
-      "he": ""
+      "he": "שאלות נפוצות"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "he": ""
+      "he": "כמה עולה Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "he": ""
+      "he": "כלום. ההורדה חינם והשימוש חינם. אין גרסה בתשלום, אין מנוי, אין תקופת ניסיון שנגמרת ואין חשבון לפתוח."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "he": ""
+      "he": "הוא גם תוכנה חופשית, תחת GNU General Public License, גרסה 3 ואילך. הקוד פתוח לכול: אפשר לקרוא אותו, לבנות אותו בעצמכם, לשנות אותו ולהעביר הלאה את מה ששיניתם."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "he": ""
+      "he": "האם Lukotta יכול לפתוח כונני BitLocker?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "he": ""
+      "he": "כן, וגם לכתוב אליהם. הקלידו את סיסמת הכרך או הדביקו מפתח שחזור בן 48 ספרות, והכונן נפתח ב‑Finder."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "he": ""
+      "he": "האם Lukotta יכול לכתוב לכונני NTFS?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "he": ""
+      "he": "כן. קבצים מועתקים אל כונן NTFS בדיוק כפי שהם מועתקים ממנו."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "he": ""
+      "he": "האם Lukotta יכול לפתוח כונני Linux?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "he": ""
+      "he": "כן. ‏ext2, ‏ext3, ‏ext4, ‏btrfs ו‑XFS נפתחים, בין שהם חשופים ובין שהם בתוך הצפנת LUKS. כונן הבנוי ב‑LVM פותח את כל כרכיו יחד."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "he": ""
+      "he": "האם Lukotta יכול לפתוח דיסק של מכונה וירטואלית?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "he": ""
+      "he": "כן, בלי להפעיל את המכונה. פתחו תמונת qcow2, ‏VMDK, ‏VDI, ‏VHD או VHDX והעתיקו ממנה קבצים, או אליה."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "he": ""
+      "he": "האם Lukotta פועל על Mac עם מעבד Intel?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "he": ""
+      "he": "לא. הוא זקוק לווירטואליזציה ש‑Apple Silicon מספק."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "he": ""
+      "he": "מדיניות פרטיות"
     },
     "footer.licence": {
       "en": "Licence",
-      "he": ""
+      "he": "רישיון"
     },
     "footer.source": {
       "en": "Source",
-      "he": ""
+      "he": "קוד המקור"
     },
     "footer.contact": {
       "en": "Contact",
-      "he": ""
+      "he": "יצירת קשר"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "he": ""
+      "he": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "he": ""
+      "he": "תוכנה חופשית תחת GNU General Public License, גרסה 3 ואילך."
     }
   }
 }

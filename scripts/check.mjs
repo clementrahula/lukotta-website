@@ -181,6 +181,24 @@ else {
     const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
     if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
   }
+  /* The sitemap and the pages must name the same alternates. Where the two
+     disagree, Google discards the cluster rather than choosing between them. */
+  for (const { lang, html } of pages) {
+    const loc = lang.path ? `${cfg.domain}/${lang.path}/` : `${cfg.domain}/`;
+    const block = xml.split("<url>").find((b) => b.includes(`<loc>${loc}</loc>`));
+    if (!block) continue;
+    const inSitemap = new Set([...block.matchAll(/hreflang="([^"]+)"/g)].map((m) => m[1]));
+    const inPage = new Set(
+      [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)"/g)].map((m) => m[1])
+    );
+    for (const code of inPage) {
+      if (!inSitemap.has(code)) err(`sitemap: ${loc} omits hreflang "${code}", which the page declares`);
+    }
+    for (const code of inSitemap) {
+      if (!inPage.has(code)) err(`sitemap: ${loc} declares hreflang "${code}", which the page does not`);
+    }
+  }
+
   const locs = [...xml.matchAll(/<loc>/g)].length;
   if (locs !== indexed.length) err(`sitemap.xml has ${locs} URLs but ${indexed.length} pages may be indexed`);
 }

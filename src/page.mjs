@@ -158,9 +158,11 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
     .map((n) => `            <li>${esc(t(`formats.not.${n}`))}</li>`)
     .join("\n");
 
+  /* Root-relative, so the menu works on whatever host the site is served from.
+     hreflang and canonical stay absolute, which is what search engines need. */
   const langLinks = buildable
     .map((l) => {
-      const href = l.path ? `${cfg.domain}/${l.path}/` : `${cfg.domain}/`;
+      const href = l.path ? `/${l.path}/` : "/";
       const current = l.code === code ? ` aria-current="true"` : "";
       return `            <li><a href="${href}" hreflang="${l.code}" lang="${l.code}"${current}>${esc(l.native)}</a></li>`;
     })

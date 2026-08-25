@@ -1,7 +1,7 @@
 {
   "$comment": "What every key on the page is for. Sections describe where a group of strings appears; notes single out the ones constrained by something other than meaning. Read with GLOSSARY.md.",
   "sections": {
-    "meta": "Never seen on the page. These are the search result, the browser tab, and the card that appears when the address is pasted into a chat application. Written for someone who has not heard of Lukotta.",
+    "meta": "Never seen on the page. These are the search result, the browser tab, and the card that appears when the address is pasted into a chat application. They are the only reason anyone finds the site at all, so they are written for search rather than translated word for word.\n\nWrite what somebody in this language would actually type into a search engine when they have a drive their Mac will not open. That is rarely a literal translation of the English: work out the ordinary phrasing for 'open', 'drive', 'disk', 'read and write' and 'encrypted' in this language and use those words. Keep BitLocker, NTFS, LUKS, macOS and Mac in Latin script — people search for those exactly as they are written, in every language.",
     "ui": "Controls in the header, and the link that lets a keyboard reader skip the navigation. Read aloud by screen readers, so they must say what the control does rather than name it cleverly.",
     "nav": "The three header links. Features and How it works match headings further down and should use the same words as those headings; Download goes straight to the releases page.",
     "hero": "The first screen. One claim, one sentence explaining it, the download link, and a technical line set in a monospace face.",
@@ -13,10 +13,10 @@
     "footer": "Three links, and the copyright and licence line beneath them."
   },
   "notes": {
-    "meta.title": "At or under 60 characters. Search results cut it off. Keyword first, brand last.",
-    "meta.description": "Between 70 and 165 characters. Longer is truncated mid-word.",
-    "meta.ogTitle": "The card title when the address is shared. May be shorter and less formal than meta.title.",
-    "meta.imageAlt": "Describes the Lukotta application icon, which is the shared card image.",
+    "meta.title": "At or under 60 characters — search results cut it off, and the count is characters, not words. Put the thing being searched for first and the name Lukotta last. Not a literal translation: the words most likely to be typed, in the order they would be typed.",
+    "meta.description": "Between 70 and 165 characters. It does not decide ranking, but it decides whether somebody clicks, so it should answer the question the searcher had. Name the formats, say the drive opens in Finder, and say it reads and writes. Keep the product names in Latin script.",
+    "meta.ogTitle": "The card title when the address is shared in a message. May be shorter and less formal than meta.title, and needs no keywords.",
+    "meta.imageAlt": "Describes the Lukotta application icon, which is the shared card image. Read aloud by screen readers.",
     "ui.skipToContent": "The first thing a keyboard reader reaches. Must say plainly that it skips to the page content.",
     "ui.toTop": "The spoken name of the logo, which is a link back to the top of the page.",
     "ui.switchToLight": "The appearance switch's spoken name while the page is dark. It names what clicking will do, not what the page currently is.",
@@ -49,6 +49,7 @@
     "faq.3.a": "The point is writing, not reading. Keep 'onto ... as well as off it', which is what distinguishes this from what macOS already does.",
     "formats.exfat.note": "These are handled by macOS itself rather than by the Linux virtual machine, which is why the table marks them differently. Same sentence as the raw image row.",
     "formats.raw.note": "Same sentence as the exFAT row, and it should read identically in this language too.",
-    "footer.source": "Links to the source code on GitHub. One word if the language allows."
+    "footer.source": "Links to the source code on GitHub. One word if the language allows.",
+    "meta.ogDescription": "The card text when the address is shared. Written for a person who has been sent a link, not for a search engine."
   }
 }
