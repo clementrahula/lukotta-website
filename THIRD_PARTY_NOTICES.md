@@ -1,7 +1,6 @@
 # Third-Party Notices
 
-The website carries two third-party works, both typefaces. The name and the
-logo are the project's own and are covered at the end.
+The website carries two third-party works, both typefaces.
 
 ## Inter
 
@@ -36,7 +35,4 @@ format names need. No file has been modified.
 ## Lukotta Name & Logo
 
 The logo, the mark and the icon come from the Lukotta application's own
-repository. They are trademarks and are covered by neither of the site's
-licences — not by the GPL over the code, and not by CC BY-SA over the words.
-[TRADEMARKS.txt](https://github.com/clementrahula/lukotta/blob/main/TRADEMARKS.txt)
-in the application's repository says what is permitted.
+repository and are trademarks, not covered by the GPL that covers the software.
