@@ -187,7 +187,7 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
   /* -------------------------------------------------------------- html -- */
 
   return `<!doctype html>
-<html lang="${code}" dir="${dir}" id="top">
+<html lang="${code}" dir="${dir}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -243,6 +243,12 @@ ${ogAlternates}
   <script type="application/ld+json">${jsonld(siteLd)}</script>
 </head>
 <body>
+  <!-- What the brand and the header's Download link scroll to. A real element
+       rather than the bare #top fragment, which browsers only honour when no
+       element claims that id and which does not scroll at all when the id sits
+       on <html> itself. -->
+  <span id="top"></span>
+
   <a class="skip-link" href="#main">${esc(t("ui.skipToContent"))}</a>
 
   <header class="site-header">
@@ -256,7 +262,7 @@ ${ogAlternates}
       </a>
 
       <nav class="site-nav" aria-label="${esc(t("ui.menu"))}">
-        <a href="${cfg.downloadUrl}">${esc(t("nav.download"))}</a>
+        <a href="#top">${esc(t("nav.download"))}</a>
         <a href="#how">${esc(t("nav.how"))}</a>
         <a href="#features">${esc(t("nav.features"))}</a>
       </nav>
