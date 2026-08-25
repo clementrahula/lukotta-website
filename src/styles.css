@@ -450,13 +450,8 @@ img { max-width: 100%; height: auto; display: block; }
 section.rule { padding-block: clamp(52px, 7vw, 88px); border-top: 1px solid var(--rule); }
 
 .section-head {
-  display: flex; align-items: baseline; gap: 16px;
   padding-bottom: 14px; margin-bottom: clamp(28px, 4vw, 44px);
   border-bottom: 1px solid var(--ink);
-}
-.marker {
-  font-family: var(--font-mono); font-size: .75rem; font-weight: 500;
-  letter-spacing: .12em; color: var(--amber-ink);
 }
 
 .sub {

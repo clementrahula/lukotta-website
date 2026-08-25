@@ -304,7 +304,6 @@ ${langLinks}
     <section id="how" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">01</p>
           <h2>${esc(t("how.title"))}</h2>
         </div>
         <p class="prose"><span class="lead-in">${esc(t("how.lead"))}</span></p>
@@ -320,7 +319,6 @@ ${steps}
     <section id="features" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">02</p>
           <h2>${esc(t("features.title"))}</h2>
         </div>
         <div class="prose">
@@ -363,7 +361,6 @@ ${notSupported}
     <section id="name" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">03</p>
           <h2>${esc(t("name.title"))}</h2>
         </div>
         <div class="prose">
@@ -375,7 +372,6 @@ ${notSupported}
     <section id="faq" class="rule">
       <div class="wrap">
         <div class="section-head">
-          <p class="marker">04</p>
           <h2>${esc(t("faq.title"))}</h2>
         </div>
         <div class="faq">
