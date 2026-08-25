@@ -93,6 +93,9 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     isAccessibleForFree: true,
     image: `${cfg.domain}/assets/og.png`,
     screenshot: `${cfg.domain}/assets/screenshots/${lang.code}/light.webp`,
+    /* The other place this application is itself, so the two are read as one
+       thing rather than two that happen to share a name. */
+    sameAs: [cfg.githubRepo],
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
     author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
   };
