@@ -86,6 +86,19 @@ The rest of `src/assets/brand/` are the originals the favicons and the
 shared-card image in `src/assets/icons/` were generated from, with `sips`. Keep
 them; do not publish them.
 
+## No co-authorship
+
+Commit messages carry no `Co-Authored-By` trailer. The trailer had built up in
+the history once and was removed by rewriting it; `.githooks/commit-msg` strips
+it from every message so it cannot return by hand or from a tool default.
+
+`core.hooksPath` is local configuration and is not versioned, so a fresh clone
+has to enable the hook once:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## What is under which licence
 
 Two, because the repository holds two different kinds of thing.

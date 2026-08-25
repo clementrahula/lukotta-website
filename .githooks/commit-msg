@@ -1,0 +1,21 @@
+#!/bin/sh
+# Strips Co-Authored-By trailers from every commit message.
+#
+# This repository does not record co-authorship. The trailer had accumulated in
+# the history once and was removed by rewriting it; this stops it returning by
+# hand or from a tool default.
+#
+# Enabled by:  git config core.hooksPath .githooks
+# core.hooksPath is local configuration, not versioned, so a fresh clone has to
+# run that line once. AGENTS.md says so.
+
+msg="$1"
+[ -f "$msg" ] || exit 0
+
+# Drop the trailer lines, then any blank lines they left at the end.
+awk '!/^[Cc]o-[Aa]uthored-[Bb]y:/' "$msg" > "$msg.tmp"
+awk 'BEGIN{blank=0}
+     /^[[:space:]]*$/{blank++; next}
+     {while (blank>0) {print ""; blank--} print}' "$msg.tmp" > "$msg"
+rm -f "$msg.tmp"
+exit 0
