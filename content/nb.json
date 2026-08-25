@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "nb": ""
+      "nb": "Lukotta er et Mac-program"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "nb": ""
+      "nb": "Det krever macOS 15 Sequoia eller nyere på en Mac med Apple Silicon og virker ikke på en telefon eller et nettbrett."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "nb": ""
+      "nb": "Det krever macOS 15 Sequoia eller nyere på en Mac med Apple Silicon og virker ikke på {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "nb": ""
+      "nb": "dette systemet"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "nb": ""
+      "nb": "Send denne siden til Mac-en din — AirDrop står i listen som åpnes — og last den ned der. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "nb": ""
+      "nb": "Kopier lenken og åpne den på Mac-en din for å laste ned der. Du kan likevel laste ned filen her, men ingenting på denne enheten kan åpne den."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "nb": ""
+      "nb": "Send til Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "nb": ""
+      "nb": "Kopier lenke"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "nb": ""
+      "nb": "Lenke kopiert"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "nb": ""
+      "nb": "Last ned likevel"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "nb": ""
+      "nb": "Avbryt"
     },
     "ui.toTop": {
       "en": "Back to the top",

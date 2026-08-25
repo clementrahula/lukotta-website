@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "bg": ""
+      "bg": "Lukotta е приложение за Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "bg": ""
+      "bg": "Нужен ѝ е macOS 15 Sequoia или по-нов на Mac с Apple Silicon и няма да работи на телефон или таблет."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "bg": ""
+      "bg": "Нужен ѝ е macOS 15 Sequoia или по-нов на Mac с Apple Silicon и няма да работи на {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "bg": ""
+      "bg": "тази система"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "bg": ""
+      "bg": "Изпратете тази страница на своя Mac — AirDrop е в списъка, който се отваря — и я изтеглете там. Пак можете да изтеглите файла тук, но нищо на това устройство няма да го отвори."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "bg": ""
+      "bg": "Копирайте връзката и я отворете на своя Mac, за да изтеглите там. Пак можете да изтеглите файла тук, но нищо на това устройство няма да го отвори."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "bg": ""
+      "bg": "Изпрати към Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "bg": ""
+      "bg": "Копирай връзката"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "bg": ""
+      "bg": "Връзката е копирана"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "bg": ""
+      "bg": "Изтегли въпреки това"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "bg": ""
+      "bg": "Отказ"
     },
     "ui.toTop": {
       "en": "Back to the top",

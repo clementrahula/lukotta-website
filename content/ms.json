@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "ms": ""
+      "ms": "Lukotta ialah aplikasi Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "ms": ""
+      "ms": "Ia memerlukan macOS 15 Sequoia atau lebih baharu pada Mac dengan Apple Silicon, dan tidak akan berjalan pada telefon atau tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "ms": ""
+      "ms": "Ia memerlukan macOS 15 Sequoia atau lebih baharu pada Mac dengan Apple Silicon, dan tidak akan berjalan pada {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "ms": ""
+      "ms": "sistem ini"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "ms": ""
+      "ms": "Hantar halaman ini ke Mac anda — AirDrop ada dalam senarai yang terbuka — dan muat turunnya di sana. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ms": ""
+      "ms": "Salin pautan dan buka pada Mac anda untuk memuat turun di sana. Anda masih boleh memuat turun failnya di sini, tetapi tiada apa-apa pada peranti ini yang akan membukanya."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "ms": ""
+      "ms": "Hantar ke Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "ms": ""
+      "ms": "Salin pautan"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "ms": ""
+      "ms": "Pautan disalin"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "ms": ""
+      "ms": "Muat turun juga"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "ms": ""
+      "ms": "Batal"
     },
     "ui.toTop": {
       "en": "Back to the top",

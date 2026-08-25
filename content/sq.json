@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "sq": ""
+      "sq": "Lukotta është një aplikacion për Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "sq": ""
+      "sq": "I duhet macOS 15 Sequoia ose më i ri në një Mac me Apple Silicon dhe nuk do të punojë në telefon ose tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "sq": ""
+      "sq": "I duhet macOS 15 Sequoia ose më i ri në një Mac me Apple Silicon dhe nuk do të punojë në {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "sq": ""
+      "sq": "këtë sistem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "sq": ""
+      "sq": "Dërgojeni këtë faqe te Mac-u juaj — AirDrop është në listën që hapet — dhe shkarkojeni atje. Mund ta shkarkoni skedarin edhe këtu, por asgjë në këtë pajisje nuk do ta hapë."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "sq": ""
+      "sq": "Kopjoni lidhjen dhe hapeni në Mac për ta shkarkuar atje. Mund ta shkarkoni skedarin edhe këtu, por asgjë në këtë pajisje nuk do ta hapë."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "sq": ""
+      "sq": "Dërgo te Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "sq": ""
+      "sq": "Kopjo lidhjen"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "sq": ""
+      "sq": "Lidhja u kopjua"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "sq": ""
+      "sq": "Shkarkoje gjithsesi"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "sq": ""
+      "sq": "Anulo"
     },
     "ui.toTop": {
       "en": "Back to the top",

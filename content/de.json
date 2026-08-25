@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "de": ""
+      "de": "Lukotta ist eine Mac-App"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "de": ""
+      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Apple-Silicon-Mac und läuft nicht auf einem Telefon oder Tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "de": ""
+      "de": "Es braucht macOS 15 Sequoia oder neuer auf einem Apple-Silicon-Mac und läuft nicht auf {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "de": ""
+      "de": "diesem System"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "de": ""
+      "de": "Schicken Sie diese Seite an Ihren Mac – AirDrop steht in der Liste, die sich öffnet – und laden Sie sie dort. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "de": ""
+      "de": "Kopieren Sie den Link und öffnen Sie ihn auf Ihrem Mac, um dort zu laden. Sie können die Datei auch hier laden, aber auf diesem Gerät öffnet sie nichts."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "de": ""
+      "de": "An Mac senden"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "de": ""
+      "de": "Link kopieren"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "de": ""
+      "de": "Link kopiert"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "de": ""
+      "de": "Trotzdem laden"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "de": ""
+      "de": "Abbrechen"
     },
     "ui.toTop": {
       "en": "Back to the top",

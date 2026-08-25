@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "nl": ""
+      "nl": "Lukotta is een Mac-app"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "nl": ""
+      "nl": "Hij heeft macOS 15 Sequoia of nieuwer nodig op een Mac met Apple Silicon, en draait niet op een telefoon of tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "nl": ""
+      "nl": "Hij heeft macOS 15 Sequoia of nieuwer nodig op een Mac met Apple Silicon, en draait niet op {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "nl": ""
+      "nl": "dit systeem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "nl": ""
+      "nl": "Stuur deze pagina naar je Mac — AirDrop staat in de lijst die opengaat — en download hem daar. Je kunt het bestand hier ook downloaden, maar niets op dit apparaat zal het openen."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "nl": ""
+      "nl": "Kopieer de link en open hem op je Mac om daar te downloaden. Je kunt het bestand hier ook downloaden, maar niets op dit apparaat zal het openen."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "nl": ""
+      "nl": "Naar Mac sturen"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "nl": ""
+      "nl": "Link kopiëren"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "nl": ""
+      "nl": "Link gekopieerd"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "nl": ""
+      "nl": "Toch downloaden"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "nl": ""
+      "nl": "Annuleer"
     },
     "ui.toTop": {
       "en": "Back to the top",

@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "hr": ""
+      "hr": "Lukotta je aplikacija za Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "hr": ""
+      "hr": "Treba mu macOS 15 Sequoia ili noviji na Macu s Apple Siliconom i neće raditi na telefonu ni tabletu."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "hr": ""
+      "hr": "Treba mu macOS 15 Sequoia ili noviji na Macu s Apple Siliconom i neće raditi na sustavu {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "hr": ""
+      "hr": "ovom"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "hr": ""
+      "hr": "Pošaljite ovu stranicu na svoj Mac — AirDrop je na popisu koji se otvori — i preuzmite je ondje. Datoteku i dalje možete preuzeti ovdje, ali ništa je na ovom uređaju neće otvoriti."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "hr": ""
+      "hr": "Kopirajte poveznicu i otvorite je na Macu da biste preuzeli ondje. Datoteku i dalje možete preuzeti ovdje, ali ništa je na ovom uređaju neće otvoriti."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "hr": ""
+      "hr": "Pošalji na Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "hr": ""
+      "hr": "Kopiraj poveznicu"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "hr": ""
+      "hr": "Poveznica kopirana"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "hr": ""
+      "hr": "Ipak preuzmi"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "hr": ""
+      "hr": "Odustani"
     },
     "ui.toTop": {
       "en": "Back to the top",

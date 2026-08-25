@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "hi": ""
+      "hi": "Lukotta एक Mac ऐप है"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "hi": ""
+      "hi": "इसे Apple Silicon वाले Mac पर macOS 15 Sequoia या नया चाहिए, और यह फ़ोन या टैबलेट पर नहीं चलेगा।"
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "hi": ""
+      "hi": "इसे Apple Silicon वाले Mac पर macOS 15 Sequoia या नया चाहिए, और यह {system} पर नहीं चलेगा।"
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "hi": ""
+      "hi": "इस सिस्टम"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "hi": ""
+      "hi": "यह पन्ना अपने Mac पर भेजिए — खुलने वाली सूची में AirDrop है — और वहीं डाउनलोड कीजिए। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "hi": ""
+      "hi": "लिंक कॉपी कीजिए और अपने Mac पर खोलकर वहीं डाउनलोड कीजिए। आप फ़ाइल यहाँ भी डाउनलोड कर सकते हैं, पर इस डिवाइस पर उसे कुछ नहीं खोलेगा।"
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "hi": ""
+      "hi": "Mac पर भेजें"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "hi": ""
+      "hi": "लिंक कॉपी करें"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "hi": ""
+      "hi": "लिंक कॉपी हुआ"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "hi": ""
+      "hi": "फिर भी डाउनलोड करें"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "hi": ""
+      "hi": "रद्द करें"
     },
     "ui.toTop": {
       "en": "Back to the top",

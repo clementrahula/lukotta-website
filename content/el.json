@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "el": ""
+      "el": "Το Lukotta είναι εφαρμογή για Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "el": ""
+      "el": "Χρειάζεται macOS 15 Sequoia ή νεότερο σε Mac με Apple Silicon και δεν θα λειτουργήσει σε τηλέφωνο ή tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "el": ""
+      "el": "Χρειάζεται macOS 15 Sequoia ή νεότερο σε Mac με Apple Silicon και δεν θα λειτουργήσει σε {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "el": ""
+      "el": "αυτό το σύστημα"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "el": ""
+      "el": "Στείλτε αυτή τη σελίδα στο Mac σας — το AirDrop βρίσκεται στη λίστα που ανοίγει — και κατεβάστε το εκεί. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "el": ""
+      "el": "Αντιγράψτε τον σύνδεσμο και ανοίξτε τον στο Mac για να κατεβάσετε εκεί. Μπορείτε πάντως να κατεβάσετε το αρχείο εδώ, αλλά τίποτα σε αυτή τη συσκευή δεν θα το ανοίξει."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "el": ""
+      "el": "Αποστολή στο Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "el": ""
+      "el": "Αντιγραφή συνδέσμου"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "el": ""
+      "el": "Ο σύνδεσμος αντιγράφηκε"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "el": ""
+      "el": "Λήψη ούτως ή άλλως"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "el": ""
+      "el": "Άκυρο"
     },
     "ui.toTop": {
       "en": "Back to the top",

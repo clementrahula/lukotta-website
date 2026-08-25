@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "lv": ""
+      "lv": "Lukotta ir Mac lietotne"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "lv": ""
+      "lv": "Tai vajadzīga macOS 15 Sequoia vai jaunāka Mac datorā ar Apple Silicon, un tā nedarbosies tālrunī vai planšetdatorā."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "lv": ""
+      "lv": "Tai vajadzīga macOS 15 Sequoia vai jaunāka Mac datorā ar Apple Silicon, un tā nedarbosies sistēmā {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "lv": ""
+      "lv": "šajā"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "lv": ""
+      "lv": "Nosūtiet šo lapu uz savu Mac — AirDrop ir sarakstā, kas atveras — un lejupielādējiet to tur. Failu joprojām varat lejupielādēt šeit, taču šajā ierīcē to nekas neatvērs."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "lv": ""
+      "lv": "Kopējiet saiti un atveriet to Mac datorā, lai lejupielādētu tur. Failu joprojām varat lejupielādēt šeit, taču šajā ierīcē to nekas neatvērs."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "lv": ""
+      "lv": "Sūtīt uz Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "lv": ""
+      "lv": "Kopēt saiti"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "lv": ""
+      "lv": "Saite nokopēta"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "lv": ""
+      "lv": "Tomēr lejupielādēt"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "lv": ""
+      "lv": "Atcelt"
     },
     "ui.toTop": {
       "en": "Back to the top",

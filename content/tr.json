@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "tr": ""
+      "tr": "Lukotta bir Mac uygulamasıdır"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "tr": ""
+      "tr": "Apple Silicon işlemcili bir Mac’te macOS 15 Sequoia ya da üstü gerekir; telefonda veya tablette çalışmaz."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "tr": ""
+      "tr": "Apple Silicon işlemcili bir Mac’te macOS 15 Sequoia ya da üstü gerekir; {system} üzerinde çalışmaz."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "tr": ""
+      "tr": "bu sistem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "tr": ""
+      "tr": "Bu sayfayı Mac’inize gönderin — açılan listede AirDrop var — ve oradan indirin. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "tr": ""
+      "tr": "Bağlantıyı kopyalayıp Mac’inizde açın ve oradan indirin. Dosyayı yine de buradan indirebilirsiniz, ama bu cihazda onu açacak bir şey yok."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "tr": ""
+      "tr": "Mac’e gönder"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "tr": ""
+      "tr": "Bağlantıyı kopyala"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "tr": ""
+      "tr": "Bağlantı kopyalandı"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "tr": ""
+      "tr": "Yine de indir"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "tr": ""
+      "tr": "Vazgeç"
     },
     "ui.toTop": {
       "en": "Back to the top",

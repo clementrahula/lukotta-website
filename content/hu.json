@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "hu": ""
+      "hu": "A Lukotta Mac-alkalmazás"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "hu": ""
+      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Macen, és nem fut telefonon vagy táblagépen."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "hu": ""
+      "hu": "macOS 15 Sequoia vagy újabb kell hozzá Apple Silicon alapú Macen, és nem fut ezen: {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "hu": ""
+      "hu": "ez a rendszer"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "hu": ""
+      "hu": "Küldd el ezt az oldalt a Macedre — az AirDrop ott van a megnyíló listában — és töltsd le ott. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "hu": ""
+      "hu": "Másold ki a hivatkozást, és nyisd meg a Maceden, hogy ott töltsd le. A fájlt itt is letöltheted, de ezen az eszközön semmi sem nyitja meg."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "hu": ""
+      "hu": "Küldés Macre"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "hu": ""
+      "hu": "Hivatkozás másolása"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "hu": ""
+      "hu": "Hivatkozás másolva"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "hu": ""
+      "hu": "Letöltés mindenképp"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "hu": ""
+      "hu": "Mégse"
     },
     "ui.toTop": {
       "en": "Back to the top",

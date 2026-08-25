@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "he": ""
+      "he": "‏Lukotta הוא יישום ל‑Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "he": ""
+      "he": "הוא דורש macOS 15 Sequoia ואילך על Mac עם Apple Silicon, ולא יפעל בטלפון או בטאבלט."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "he": ""
+      "he": "הוא דורש macOS 15 Sequoia ואילך על Mac עם Apple Silicon, ולא יפעל ב‑{system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "he": ""
+      "he": "מערכת זו"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "he": ""
+      "he": "שלחו את הדף הזה ל‑Mac שלכם — ‏AirDrop נמצא ברשימה שנפתחת — והורידו אותו שם. עדיין אפשר להוריד את הקובץ כאן, אבל שום דבר במכשיר הזה לא יפתח אותו."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "he": ""
+      "he": "העתיקו את הקישור ופתחו אותו ב‑Mac כדי להוריד שם. עדיין אפשר להוריד את הקובץ כאן, אבל שום דבר במכשיר הזה לא יפתח אותו."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "he": ""
+      "he": "שליחה ל‑Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "he": ""
+      "he": "העתקת קישור"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "he": ""
+      "he": "הקישור הועתק"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "he": ""
+      "he": "הורדה בכל זאת"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "he": ""
+      "he": "ביטול"
     },
     "ui.toTop": {
       "en": "Back to the top",

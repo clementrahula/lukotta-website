@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "et": ""
+      "et": "Lukotta on Maci rakendus"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "et": ""
+      "et": "See vajab macOS 15 Sequoiat või uuemat Apple Siliconiga Macis ega tööta telefonis ega tahvelarvutis."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "et": ""
+      "et": "See vajab macOS 15 Sequoiat või uuemat Apple Siliconiga Macis ega tööta süsteemis {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "et": ""
+      "et": "selles"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "et": ""
+      "et": "Saada see leht oma Maci — AirDrop on avanevas loendis — ja laadi see seal alla. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "et": ""
+      "et": "Kopeeri link ja ava see Macis, et sealt alla laadida. Faili saab ka siit alla laadida, kuid selles seadmes ei ava seda miski."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "et": ""
+      "et": "Saada Maci"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "et": ""
+      "et": "Kopeeri link"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "et": ""
+      "et": "Link kopeeritud"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "et": ""
+      "et": "Laadi ikkagi alla"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "et": ""
+      "et": "Loobu"
     },
     "ui.toTop": {
       "en": "Back to the top",

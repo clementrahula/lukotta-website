@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "lt": ""
+      "lt": "Lukotta yra Mac programa"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "lt": ""
+      "lt": "Jai reikia macOS 15 Sequoia arba naujesnės Mac kompiuteryje su Apple Silicon, ir ji neveiks telefone ar planšetėje."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "lt": ""
+      "lt": "Jai reikia macOS 15 Sequoia arba naujesnės Mac kompiuteryje su Apple Silicon, ir ji neveiks sistemoje {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "lt": ""
+      "lt": "šioje"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "lt": ""
+      "lt": "Nusiųskite šį puslapį į savo Mac — AirDrop yra atsivėrusiame sąraše — ir atsisiųskite ten. Failą vis tiek galite atsisiųsti čia, bet šiame įrenginyje jo niekas neatvers."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "lt": ""
+      "lt": "Nukopijuokite nuorodą ir atverkite ją Mac kompiuteryje, kad atsisiųstumėte ten. Failą vis tiek galite atsisiųsti čia, bet šiame įrenginyje jo niekas neatvers."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "lt": ""
+      "lt": "Siųsti į Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "lt": ""
+      "lt": "Kopijuoti nuorodą"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "lt": ""
+      "lt": "Nuoroda nukopijuota"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "lt": ""
+      "lt": "Vis tiek atsisiųsti"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "lt": ""
+      "lt": "Atšaukti"
     },
     "ui.toTop": {
       "en": "Back to the top",

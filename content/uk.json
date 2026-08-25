@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "uk": ""
+      "uk": "Lukotta — програма для Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "uk": ""
+      "uk": "Їй потрібна macOS 15 Sequoia або новіша на Mac з Apple Silicon, і на телефоні чи планшеті вона не працює."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "uk": ""
+      "uk": "Їй потрібна macOS 15 Sequoia або новіша на Mac з Apple Silicon, і на {system} вона не працює."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "uk": ""
+      "uk": "цій системі"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "uk": ""
+      "uk": "Надішліть цю сторінку на свій Mac — AirDrop є в списку, що відкриється — і завантажте її там. Файл можна завантажити й тут, але на цьому пристрої його ніщо не відкриє."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "uk": ""
+      "uk": "Скопіюйте посилання й відкрийте його на Mac, щоб завантажити там. Файл можна завантажити й тут, але на цьому пристрої його ніщо не відкриє."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "uk": ""
+      "uk": "Надіслати на Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "uk": ""
+      "uk": "Скопіювати посилання"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "uk": ""
+      "uk": "Посилання скопійовано"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "uk": ""
+      "uk": "Усе одно завантажити"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "uk": ""
+      "uk": "Скасувати"
     },
     "ui.toTop": {
       "en": "Back to the top",

@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "th": ""
+      "th": "Lukotta เป็นแอปสำหรับ Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "th": ""
+      "th": "ต้องใช้ macOS 15 Sequoia ขึ้นไปบน Mac ที่ใช้ Apple Silicon และจะไม่ทำงานบนโทรศัพท์หรือแท็บเล็ต"
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "th": ""
+      "th": "ต้องใช้ macOS 15 Sequoia ขึ้นไปบน Mac ที่ใช้ Apple Silicon และจะไม่ทำงานบน {system}"
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "th": ""
+      "th": "ระบบนี้"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "th": ""
+      "th": "ส่งหน้านี้ไปยัง Mac ของคุณ — AirDrop อยู่ในรายการที่เปิดขึ้น — แล้วดาวน์โหลดที่นั่น คุณยังดาวน์โหลดไฟล์ที่นี่ได้ แต่ไม่มีอะไรบนอุปกรณ์นี้ที่จะเปิดมันได้"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "th": ""
+      "th": "คัดลอกลิงก์แล้วเปิดบน Mac เพื่อดาวน์โหลดที่นั่น คุณยังดาวน์โหลดไฟล์ที่นี่ได้ แต่ไม่มีอะไรบนอุปกรณ์นี้ที่จะเปิดมันได้"
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "th": ""
+      "th": "ส่งไปยัง Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "th": ""
+      "th": "คัดลอกลิงก์"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "th": ""
+      "th": "คัดลอกลิงก์แล้ว"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "th": ""
+      "th": "ดาวน์โหลดต่อไป"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "th": ""
+      "th": "ยกเลิก"
     },
     "ui.toTop": {
       "en": "Back to the top",

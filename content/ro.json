@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "ro": ""
+      "ro": "Lukotta este o aplicație pentru Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "ro": ""
+      "ro": "Are nevoie de macOS 15 Sequoia sau mai nou pe un Mac cu Apple Silicon și nu va funcționa pe un telefon sau o tabletă."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "ro": ""
+      "ro": "Are nevoie de macOS 15 Sequoia sau mai nou pe un Mac cu Apple Silicon și nu va funcționa pe {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "ro": ""
+      "ro": "acest sistem"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "ro": ""
+      "ro": "Trimite această pagină pe Mac-ul tău — AirDrop este în lista care se deschide — și descarcă acolo. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ro": ""
+      "ro": "Copiază linkul și deschide-l pe Mac ca să descarci acolo. Poți descărca fișierul și aici, dar nimic de pe acest dispozitiv nu îl va deschide."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "ro": ""
+      "ro": "Trimite pe Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "ro": ""
+      "ro": "Copiază linkul"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "ro": ""
+      "ro": "Link copiat"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "ro": ""
+      "ro": "Descarcă oricum"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "ro": ""
+      "ro": "Anulează"
     },
     "ui.toTop": {
       "en": "Back to the top",

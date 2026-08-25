@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "pt-PT": ""
+      "pt-PT": "O Lukotta é uma aplicação para Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "pt-PT": ""
+      "pt-PT": "Precisa de macOS 15 Sequoia ou posterior num Mac com Apple Silicon, e não funciona num telemóvel nem num tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "pt-PT": ""
+      "pt-PT": "Precisa de macOS 15 Sequoia ou posterior num Mac com Apple Silicon, e não funciona em {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "pt-PT": ""
+      "pt-PT": "este sistema"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "pt-PT": ""
+      "pt-PT": "Envie esta página para o seu Mac — o AirDrop está na lista que abre — e transfira-a aí. Pode transferir o ficheiro aqui na mesma, mas nada neste dispositivo o abrirá."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "pt-PT": ""
+      "pt-PT": "Copie a ligação e abra-a no seu Mac para transferir aí. Pode transferir o ficheiro aqui na mesma, mas nada neste dispositivo o abrirá."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "pt-PT": ""
+      "pt-PT": "Enviar para o Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "pt-PT": ""
+      "pt-PT": "Copiar ligação"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "pt-PT": ""
+      "pt-PT": "Ligação copiada"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "pt-PT": ""
+      "pt-PT": "Transferir mesmo assim"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "pt-PT": ""
+      "pt-PT": "Cancelar"
     },
     "ui.toTop": {
       "en": "Back to the top",

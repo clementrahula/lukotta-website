@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "fil": ""
+      "fil": "Ang Lukotta ay isang Mac app"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "fil": ""
+      "fil": "Kailangan nito ng macOS 15 Sequoia o mas bago sa isang Mac na may Apple Silicon, at hindi ito gagana sa telepono o tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "fil": ""
+      "fil": "Kailangan nito ng macOS 15 Sequoia o mas bago sa isang Mac na may Apple Silicon, at hindi ito gagana sa {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "fil": ""
+      "fil": "ganitong sistema"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "fil": ""
+      "fil": "Ipadala ang pahinang ito sa iyong Mac — nasa listahang bubukas ang AirDrop — at doon i-download. Puwede mo pa ring i-download ang file dito, pero walang makakabukas nito sa device na ito."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "fil": ""
+      "fil": "Kopyahin ang link at buksan ito sa iyong Mac para doon mag-download. Puwede mo pa ring i-download ang file dito, pero walang makakabukas nito sa device na ito."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "fil": ""
+      "fil": "Ipadala sa Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "fil": ""
+      "fil": "Kopyahin ang link"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "fil": ""
+      "fil": "Nakopya ang link"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "fil": ""
+      "fil": "I-download pa rin"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "fil": ""
+      "fil": "Kanselahin"
     },
     "ui.toTop": {
       "en": "Back to the top",

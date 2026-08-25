@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "fi": ""
+      "fi": "Lukotta on Mac-sovellus"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "fi": ""
+      "fi": "Se vaatii macOS 15 Sequoian tai uudemman Apple Silicon ‑Macilla eikä toimi puhelimella tai tabletilla."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "fi": ""
+      "fi": "Se vaatii macOS 15 Sequoian tai uudemman Apple Silicon ‑Macilla eikä toimi järjestelmässä {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "fi": ""
+      "fi": "tässä"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "fi": ""
+      "fi": "Lähetä tämä sivu Macillesi — AirDrop on avautuvassa luettelossa — ja lataa se siellä. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "fi": ""
+      "fi": "Kopioi linkki ja avaa se Macilla, niin voit ladata siellä. Voit silti ladata tiedoston tässä, mutta mikään tällä laitteella ei avaa sitä."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "fi": ""
+      "fi": "Lähetä Macille"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "fi": ""
+      "fi": "Kopioi linkki"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "fi": ""
+      "fi": "Linkki kopioitu"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "fi": ""
+      "fi": "Lataa silti"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "fi": ""
+      "fi": "Kumoa"
     },
     "ui.toTop": {
       "en": "Back to the top",

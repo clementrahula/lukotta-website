@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "ko": ""
+      "ko": "Lukotta는 Mac 앱입니다"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "ko": ""
+      "ko": "Apple Silicon Mac에서 macOS 15 Sequoia 이상이 필요하며, 휴대폰이나 태블릿에서는 실행되지 않습니다."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "ko": ""
+      "ko": "Apple Silicon Mac에서 macOS 15 Sequoia 이상이 필요하며, {system}에서는 실행되지 않습니다."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "ko": ""
+      "ko": "이 시스템"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "ko": ""
+      "ko": "이 페이지를 Mac으로 보내고 — 열리는 목록에 AirDrop이 있습니다 — 거기서 내려받으세요. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 아무것도 열지 못합니다."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ko": ""
+      "ko": "링크를 복사해 Mac에서 열고 거기서 내려받으세요. 여기서도 파일을 내려받을 수는 있지만, 이 기기에서는 아무것도 열지 못합니다."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "ko": ""
+      "ko": "Mac으로 보내기"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "ko": ""
+      "ko": "링크 복사"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "ko": ""
+      "ko": "링크 복사됨"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "ko": ""
+      "ko": "그래도 내려받기"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "ko": ""
+      "ko": "취소"
     },
     "ui.toTop": {
       "en": "Back to the top",

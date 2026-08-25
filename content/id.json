@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "id": ""
+      "id": "Lukotta adalah aplikasi Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "id": ""
+      "id": "Ia butuh macOS 15 Sequoia atau lebih baru di Mac dengan Apple Silicon, dan tidak akan jalan di ponsel atau tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "id": ""
+      "id": "Ia butuh macOS 15 Sequoia atau lebih baru di Mac dengan Apple Silicon, dan tidak akan jalan di {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "id": ""
+      "id": "sistem ini"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "id": ""
+      "id": "Kirim halaman ini ke Mac Anda — AirDrop ada di daftar yang terbuka — lalu unduh di sana. Anda tetap bisa mengunduh berkasnya di sini, tetapi tidak ada apa pun di perangkat ini yang bisa membukanya."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "id": ""
+      "id": "Salin tautannya dan buka di Mac Anda untuk mengunduh di sana. Anda tetap bisa mengunduh berkasnya di sini, tetapi tidak ada apa pun di perangkat ini yang bisa membukanya."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "id": ""
+      "id": "Kirim ke Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "id": ""
+      "id": "Salin tautan"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "id": ""
+      "id": "Tautan disalin"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "id": ""
+      "id": "Tetap unduh"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "id": ""
+      "id": "Batal"
     },
     "ui.toTop": {
       "en": "Back to the top",

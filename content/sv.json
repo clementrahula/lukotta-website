@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "sv": ""
+      "sv": "Lukotta är ett Mac-program"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "sv": ""
+      "sv": "Det kräver macOS 15 Sequoia eller senare på en Mac med Apple Silicon och fungerar inte på en telefon eller surfplatta."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "sv": ""
+      "sv": "Det kräver macOS 15 Sequoia eller senare på en Mac med Apple Silicon och fungerar inte på {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "sv": ""
+      "sv": "detta system"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "sv": ""
+      "sv": "Skicka den här sidan till din Mac — AirDrop finns i listan som öppnas — och hämta den där. Du kan ändå hämta filen här, men inget på den här enheten kan öppna den."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "sv": ""
+      "sv": "Kopiera länken och öppna den på din Mac för att hämta där. Du kan ändå hämta filen här, men inget på den här enheten kan öppna den."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "sv": ""
+      "sv": "Skicka till Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "sv": ""
+      "sv": "Kopiera länk"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "sv": ""
+      "sv": "Länk kopierad"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "sv": ""
+      "sv": "Hämta ändå"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "sv": ""
+      "sv": "Avbryt"
     },
     "ui.toTop": {
       "en": "Back to the top",

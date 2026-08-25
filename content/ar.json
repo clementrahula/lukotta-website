@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "ar": ""
+      "ar": "‏Lukotta تطبيق لأجهزة Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "ar": ""
+      "ar": "يحتاج إلى macOS 15 Sequoia أو أحدث على جهاز Mac بمعالج Apple Silicon، ولا يعمل على هاتف أو جهاز لوحي."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "ar": ""
+      "ar": "يحتاج إلى macOS 15 Sequoia أو أحدث على جهاز Mac بمعالج Apple Silicon، ولا يعمل على {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "ar": ""
+      "ar": "هذا النظام"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "ar": ""
+      "ar": "أرسل هذه الصفحة إلى جهاز Mac لديك — ستجد AirDrop في القائمة التي تظهر — ونزّله هناك. ولا يزال بإمكانك تنزيل الملف هنا، غير أن لا شيء على هذا الجهاز يفتحه."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ar": ""
+      "ar": "انسخ الرابط وافتحه على جهاز Mac لتنزّله هناك. ولا يزال بإمكانك تنزيل الملف هنا، غير أن لا شيء على هذا الجهاز يفتحه."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "ar": ""
+      "ar": "إرسال إلى Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "ar": ""
+      "ar": "نسخ الرابط"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "ar": ""
+      "ar": "نُسخ الرابط"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "ar": ""
+      "ar": "التنزيل على أي حال"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "ar": ""
+      "ar": "إلغاء"
     },
     "ui.toTop": {
       "en": "Back to the top",

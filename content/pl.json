@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "pl": ""
+      "pl": "Lukotta to program dla Maca"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "pl": ""
+      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na Macu z Apple Silicon i nie zadziała na telefonie ani tablecie."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "pl": ""
+      "pl": "Wymaga systemu macOS 15 Sequoia lub nowszego na Macu z Apple Silicon i nie zadziała na systemie {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "pl": ""
+      "pl": "tym"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "pl": ""
+      "pl": "Wyślij tę stronę na swojego Maca — AirDrop jest na liście, która się otworzy — i pobierz ją tam. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "pl": ""
+      "pl": "Skopiuj odnośnik i otwórz go na Macu, żeby pobrać tam. Możesz i tak pobrać plik tutaj, ale nic na tym urządzeniu go nie otworzy."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "pl": ""
+      "pl": "Wyślij na Maca"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "pl": ""
+      "pl": "Kopiuj odnośnik"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "pl": ""
+      "pl": "Skopiowano"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "pl": ""
+      "pl": "Pobierz mimo to"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "pl": ""
+      "pl": "Anuluj"
     },
     "ui.toTop": {
       "en": "Back to the top",

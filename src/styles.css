@@ -163,6 +163,7 @@
 
   --rule:        #E3DDCE;
   --rule-2:      #CFC8B4;
+  --control-edge: #958E7A;
 
   --amber:       #FF8D28;
   --amber-ink:   #9A4E05;
@@ -203,10 +204,11 @@
 
   --ink:         #F2EFE8;
   --ink-2:       #A6AAB3;
-  --ink-3:       #787C85;
+  --ink-3:       #82868F;
 
   --rule:        #2C2F36;
   --rule-2:      #40444D;
+  --control-edge: #61656E;
 
   --amber:       #FF9230;
   --amber-ink:   #FFB061;
@@ -272,7 +274,11 @@ code {
 
 img { max-width: 100%; height: auto; display: block; }
 
-:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+/* The ring itself has to clear 3:1 against the page (WCAG 2.4.11). Plain
+   --amber manages only 2.36:1 on paper, so the darker --amber-ink carries it
+   in the light theme; in the dark theme that token is the lighter of the two
+   and clears 10:1. */
+:focus-visible { outline: 2px solid var(--amber-ink); outline-offset: 3px; }
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -333,7 +339,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* appearance: a two-state switch */
 .theme-switch {
   position: relative; width: 46px; height: 25px; padding: 0;
-  border: 1px solid var(--rule-2); border-radius: 999px;
+  border: 1px solid var(--control-edge); border-radius: 999px;
   background: var(--paper-2); cursor: pointer;
 }
 .theme-switch .track {
@@ -363,7 +369,7 @@ img { max-width: 100%; height: auto; display: block; }
 .lang > summary {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 4px 9px; list-style: none; cursor: pointer;
-  border: 1px solid var(--rule-2); border-radius: 4px;
+  border: 1px solid var(--control-edge); border-radius: 4px;
   background: var(--paper-2); color: var(--ink-2);
   font-size: .8125rem;
 }
@@ -698,7 +704,7 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 .btn-quiet {
   padding: 10px 16px; border-radius: 5px;
-  border: 1px solid var(--rule-2); background: transparent;
+  border: 1px solid var(--control-edge); background: transparent;
   color: var(--ink); font: inherit; font-size: .9375rem; cursor: pointer;
 }
 .btn-quiet:hover { background: var(--paper-2); }

@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "vi": ""
+      "vi": "Lukotta là ứng dụng cho Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "vi": ""
+      "vi": "Nó cần macOS 15 Sequoia trở lên trên máy Mac dùng Apple Silicon, và sẽ không chạy trên điện thoại hay máy tính bảng."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "vi": ""
+      "vi": "Nó cần macOS 15 Sequoia trở lên trên máy Mac dùng Apple Silicon, và sẽ không chạy trên {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "vi": ""
+      "vi": "hệ thống này"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "vi": ""
+      "vi": "Gửi trang này sang máy Mac của bạn — AirDrop nằm trong danh sách hiện ra — rồi tải ở đó. Bạn vẫn có thể tải tệp ở đây, nhưng không có gì trên thiết bị này mở được nó."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "vi": ""
+      "vi": "Sao chép liên kết rồi mở trên máy Mac để tải ở đó. Bạn vẫn có thể tải tệp ở đây, nhưng không có gì trên thiết bị này mở được nó."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "vi": ""
+      "vi": "Gửi sang Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "vi": ""
+      "vi": "Sao chép liên kết"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "vi": ""
+      "vi": "Đã sao chép"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "vi": ""
+      "vi": "Vẫn tải về"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "vi": ""
+      "vi": "Huỷ"
     },
     "ui.toTop": {
       "en": "Back to the top",

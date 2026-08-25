@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "it": ""
+      "it": "Lukotta è un’app per Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "it": ""
+      "it": "Richiede macOS 15 Sequoia o successivo su un Mac con Apple Silicon, e non funzionerà su un telefono o un tablet."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "it": ""
+      "it": "Richiede macOS 15 Sequoia o successivo su un Mac con Apple Silicon, e non funzionerà su {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "it": ""
+      "it": "questo sistema"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "it": ""
+      "it": "Manda questa pagina al tuo Mac — AirDrop è nell’elenco che si apre — e scaricala lì. Puoi comunque scaricare il file qui, ma su questo dispositivo non lo aprirà nulla."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "it": ""
+      "it": "Copia il link e aprilo sul tuo Mac per scaricarlo lì. Puoi comunque scaricare il file qui, ma su questo dispositivo non lo aprirà nulla."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "it": ""
+      "it": "Manda al Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "it": ""
+      "it": "Copia link"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "it": ""
+      "it": "Link copiato"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "it": ""
+      "it": "Scarica comunque"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "it": ""
+      "it": "Annulla"
     },
     "ui.toTop": {
       "en": "Back to the top",

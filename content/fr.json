@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "fr": ""
+      "fr": "Lukotta est une application Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "fr": ""
+      "fr": "Il lui faut macOS 15 Sequoia ou ultérieur sur un Mac Apple Silicon, et il ne fonctionnera pas sur un téléphone ni une tablette."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "fr": ""
+      "fr": "Il lui faut macOS 15 Sequoia ou ultérieur sur un Mac Apple Silicon, et il ne fonctionnera pas sur {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "fr": ""
+      "fr": "ce système"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "fr": ""
+      "fr": "Envoyez cette page à votre Mac — AirDrop figure dans la liste qui s’ouvre — et téléchargez-la là-bas. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "fr": ""
+      "fr": "Copiez le lien et ouvrez-le sur votre Mac pour télécharger là-bas. Vous pouvez tout de même télécharger le fichier ici, mais rien sur cet appareil ne l’ouvrira."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "fr": ""
+      "fr": "Envoyer au Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "fr": ""
+      "fr": "Copier le lien"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "fr": ""
+      "fr": "Lien copié"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "fr": ""
+      "fr": "Télécharger quand même"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "fr": ""
+      "fr": "Annuler"
     },
     "ui.toTop": {
       "en": "Back to the top",

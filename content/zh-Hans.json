@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "zh-Hans": ""
+      "zh-Hans": "Lukotta 是一款 Mac 应用"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "zh-Hans": ""
+      "zh-Hans": "它需要搭载 Apple Silicon 的 Mac 上的 macOS 15 Sequoia 或更新版本，在手机或平板上无法运行。"
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "zh-Hans": ""
+      "zh-Hans": "它需要搭载 Apple Silicon 的 Mac 上的 macOS 15 Sequoia 或更新版本，在 {system} 上无法运行。"
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "zh-Hans": ""
+      "zh-Hans": "这个系统"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "zh-Hans": ""
+      "zh-Hans": "把这个页面发送到你的 Mac — 打开的列表里就有隔空投送 — 然后在那边下载。你仍然可以在这里下载文件，但这台设备上没有东西能打开它。"
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "zh-Hans": ""
+      "zh-Hans": "复制链接并在 Mac 上打开，然后在那边下载。你仍然可以在这里下载文件，但这台设备上没有东西能打开它。"
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "zh-Hans": ""
+      "zh-Hans": "发送到 Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "zh-Hans": ""
+      "zh-Hans": "复制链接"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "zh-Hans": ""
+      "zh-Hans": "链接已复制"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "zh-Hans": ""
+      "zh-Hans": "仍然下载"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "zh-Hans": ""
+      "zh-Hans": "取消"
     },
     "ui.toTop": {
       "en": "Back to the top",

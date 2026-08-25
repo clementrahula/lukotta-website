@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "ru": ""
+      "ru": "Lukotta — программа для Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "ru": ""
+      "ru": "Ей нужна macOS 15 Sequoia или новее на Mac с Apple Silicon, и на телефоне или планшете она не работает."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "ru": ""
+      "ru": "Ей нужна macOS 15 Sequoia или новее на Mac с Apple Silicon, и на {system} она не работает."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "ru": ""
+      "ru": "этой системе"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "ru": ""
+      "ru": "Отправьте эту страницу на свой Mac — AirDrop есть в открывшемся списке — и загрузите её там. Файл можно загрузить и здесь, но на этом устройстве его ничто не откроет."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "ru": ""
+      "ru": "Скопируйте ссылку и откройте её на Mac, чтобы загрузить там. Файл можно загрузить и здесь, но на этом устройстве его ничто не откроет."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "ru": ""
+      "ru": "Отправить на Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "ru": ""
+      "ru": "Скопировать ссылку"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "ru": ""
+      "ru": "Ссылка скопирована"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "ru": ""
+      "ru": "Всё равно загрузить"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "ru": ""
+      "ru": "Отмена"
     },
     "ui.toTop": {
       "en": "Back to the top",

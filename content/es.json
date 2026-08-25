@@ -40,47 +40,47 @@
     },
     "dialog.title": {
       "en": "Lukotta is a Mac application",
-      "es": ""
+      "es": "Lukotta es una aplicación para Mac"
     },
     "dialog.mobileBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on a phone or tablet.",
-      "es": ""
+      "es": "Necesita macOS 15 Sequoia o posterior en un Mac con Apple Silicon, y no funcionará en un teléfono ni en una tableta."
     },
     "dialog.desktopBody": {
       "en": "It needs macOS 15 Sequoia or later on an Apple Silicon Mac, and will not run on {system}.",
-      "es": ""
+      "es": "Necesita macOS 15 Sequoia o posterior en un Mac con Apple Silicon, y no funcionará en {system}."
     },
     "dialog.thisSystem": {
       "en": "this system",
-      "es": ""
+      "es": "este sistema"
     },
     "dialog.sendHint": {
       "en": "Send this page to your Mac — AirDrop is in the list that opens — and download it there. You can still download the file here, but nothing on this device will open it.",
-      "es": ""
+      "es": "Envía esta página a tu Mac —AirDrop está en la lista que se abre— y descárgala allí. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
     },
     "dialog.copyHint": {
       "en": "Copy the link and open it on your Mac to download there. You can still download the file here, but nothing on this device will open it.",
-      "es": ""
+      "es": "Copia el enlace y ábrelo en tu Mac para descargarlo allí. Puedes descargar el archivo aquí de todos modos, pero nada en este dispositivo lo abrirá."
     },
     "dialog.sendToMac": {
       "en": "Send to Mac",
-      "es": ""
+      "es": "Enviar al Mac"
     },
     "dialog.copyLink": {
       "en": "Copy Link",
-      "es": ""
+      "es": "Copiar enlace"
     },
     "dialog.copied": {
       "en": "Link copied",
-      "es": ""
+      "es": "Enlace copiado"
     },
     "dialog.downloadAnyway": {
       "en": "Download Anyway",
-      "es": ""
+      "es": "Descargar igualmente"
     },
     "dialog.cancel": {
       "en": "Cancel",
-      "es": ""
+      "es": "Cancelar"
     },
     "ui.toTop": {
       "en": "Back to the top",
