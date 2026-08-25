@@ -675,13 +675,33 @@ tbody tr:not(.group) th code { color: var(--ink); }
     height: auto; padding-block: 10px;
     grid-template-columns: 1fr auto;
     grid-template-areas: "brand tools" "nav nav";
-    row-gap: 4px;
+    row-gap: 12px;
   }
   .brand { grid-area: brand; }
   .header-tools { grid-area: tools; }
-  .site-nav { grid-area: nav; justify-content: flex-start; gap: 20px; flex-wrap: wrap; }
+  .site-nav { grid-area: nav; justify-content: center; gap: 20px; flex-wrap: wrap; }
   .site-nav a { font-size: .875rem; }
-  html { scroll-padding-top: 104px; }
+  html { scroll-padding-top: 112px; }
+}
+
+/* The specification line holds one line. In the monospace face the longest of
+   the thirty-seven translations measures 470px, and the gutter is 5vw here, so
+   the monospace stops fitting below a 529px screen; keeping it would need
+   8.5px to fit a 375px screen, which cannot be read. The sans face is narrow
+   enough to hold the line at a size that can. The switch is set above the
+   measured crossover rather than at it, so a longer version number does not
+   put the line back on two. */
+@media (max-width: 560px) {
+  .spec {
+    font-family: var(--font-display);
+    letter-spacing: 0;
+    white-space: nowrap;
+    /* The longest translation is a shade under 30 times its own font size, so
+       dividing the line box by 31 keeps every language on one line with a
+       little to spare. Capped at 11px, and floored so it never shrinks past
+       reading size on a very narrow phone. */
+    font-size: clamp(.5625rem, calc((100vw - 2 * var(--gutter)) / 31), .6875rem);
+  }
 }
 
 @media (max-width: 560px) {
