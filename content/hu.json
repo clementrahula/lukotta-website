@@ -8,339 +8,339 @@
   "strings": {
     "meta.title": {
       "en": "Open BitLocker and Linux Drives on macOS — Lukotta",
-      "hu": ""
+      "hu": "BitLocker- és Linux-lemezek megnyitása macOS-en — Lukotta"
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "hu": ""
+      "hu": "Nyiss meg BitLocker-, NTFS-, LUKS- és Linux-lemezeket a Macen. Írd be a jelszót, és a lemez megjelenik a Finderben, olvasásra és írásra. Szabad szoftver."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "hu": ""
+      "hu": "Lukotta — BitLocker-, Linux- és virtuálisgép-lemezek macOS-en"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "hu": ""
+      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, írd be a jelszót, és megjelenik a Finderben, olvasásra és írásra, mint bármelyik másik lemez."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
-      "hu": ""
+      "hu": "A Lukotta alkalmazás ikonja: lekerekített palaszürke négyzet, amelyből ki van vágva az L betű."
     },
     "ui.skipToContent": {
       "en": "Skip to content",
-      "hu": ""
+      "hu": "Ugrás a tartalomra"
     },
     "ui.chooseLanguage": {
       "en": "Choose a language",
-      "hu": ""
+      "hu": "Nyelv választása"
     },
     "ui.menu": {
       "en": "Menu",
-      "hu": ""
+      "hu": "Menü"
     },
     "ui.toTop": {
       "en": "Back to the top",
-      "hu": ""
+      "hu": "Vissza a tetejére"
     },
     "ui.switchToLight": {
       "en": "Switch to light appearance",
-      "hu": ""
+      "hu": "Váltás világos megjelenésre"
     },
     "ui.switchToDark": {
       "en": "Switch to dark appearance",
-      "hu": ""
+      "hu": "Váltás sötét megjelenésre"
     },
     "nav.download": {
       "en": "Download",
-      "hu": ""
+      "hu": "Letöltés"
     },
     "nav.features": {
       "en": "Features",
-      "hu": ""
+      "hu": "Funkciók"
     },
     "nav.how": {
       "en": "How It Works",
-      "hu": ""
+      "hu": "Hogyan működik"
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "hu": ""
+      "hu": "Nyiss meg BitLocker-, Linux- és virtuálisgép-lemezeket macOS-en."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "hu": ""
+      "hu": "Csatlakoztass egy lemezt vagy nyiss meg egy lemezképet, és írd be a jelszót — megjelenik a Finderben. Olvasásra és írásra, mint bármelyik másik lemez."
     },
     "hero.download": {
       "en": "Download",
-      "hu": ""
+      "hu": "Letöltés"
     },
     "hero.source": {
       "en": "Source on GitHub",
-      "hu": ""
+      "hu": "A forráskód a GitHubon"
     },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
-      "hu": ""
+      "hu": "{version} verzió · Apple Silicon · macOS 15 Sequoia vagy újabb"
     },
     "hero.screenshotAlt": {
       "en": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
-      "hu": ""
+      "hu": "A Lukotta ablaka macOS-en, a Machez csatlakoztatott lemezekkel és azzal, mit tartalmaz mindegyik."
     },
     "how.title": {
       "en": "How It Works",
-      "hu": ""
+      "hu": "Hogyan működik"
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "hu": ""
+      "hu": "A macOS nem tudja olvasni a BitLockert és a Linux fájlrendszereit. A Linux igen. A Lukotta elindít egy kis Linux virtuális gépet, azon belül feloldja a lemezt, majd átadja a lemezt a Findernek."
     },
     "how.1.title": {
       "en": "Plug in the drive",
-      "hu": ""
+      "hu": "Csatlakoztasd a lemezt"
     },
     "how.1.body": {
       "en": "Or open a disk image.",
-      "hu": ""
+      "hu": "Vagy nyiss meg egy lemezképet."
     },
     "how.2.title": {
       "en": "Type the password",
-      "hu": ""
+      "hu": "Írd be a jelszót"
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "hu": ""
+      "hu": "A kötet jelszava, egy LUKS-jelmondat vagy egy 48 jegyű BitLocker-helyreállítási kulcs."
     },
     "how.3.title": {
       "en": "Open it in Finder",
-      "hu": ""
+      "hu": "Nyisd meg a Finderben"
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "hu": ""
+      "hu": "A kötet megjelenik a Helyek alatt, és ugyanúgy olvasható, írható és kiadható, mint bármelyik másik lemez."
     },
     "features.title": {
       "en": "Features",
-      "hu": ""
+      "hu": "Funkciók"
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "hu": ""
+      "hu": "A Lukotta megnyitja azokat a lemezeket és lemezképeket, amelyeket a macOS nem hajlandó olvasni, és átadja őket a Findernek közönséges kötetként."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "hu": ""
+      "hu": "Ugyanúgy fogadja a fizikai lemezeket és a lemezképfájlokat. Egy BitLocker-kötet a saját jelszavával vagy egy 48 jegyű helyreállítási kulccsal nyílik meg, a BitLocker- és NTFS-köteteket pedig olvassa és írja is, így a fájlok a lemezre is átmásolhatók, nemcsak róla."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "hu": ""
+      "hu": "Bármelyik lemez vagy lemezkép megnyitható csak olvasásra is, és a Lukotta újra meg tudja nyitni azt, ami a legutóbbi bejelentkezéskor nyitva volt."
     },
     "formats.title": {
       "en": "Supported formats",
-      "hu": ""
+      "hu": "Támogatott formátumok"
     },
     "formats.col.format": {
       "en": "Format",
-      "hu": ""
+      "hu": "Formátum"
     },
     "formats.col.read": {
       "en": "Read",
-      "hu": ""
+      "hu": "Olvasás"
     },
     "formats.col.write": {
       "en": "Write",
-      "hu": ""
+      "hu": "Írás"
     },
     "formats.col.notes": {
       "en": "Notes",
-      "hu": ""
+      "hu": "Megjegyzések"
     },
     "formats.yes": {
       "en": "Yes",
-      "hu": ""
+      "hu": "Igen"
     },
     "formats.no": {
       "en": "No",
-      "hu": ""
+      "hu": "Nem"
     },
     "formats.group.encryption": {
       "en": "Encryption",
-      "hu": ""
+      "hu": "Titkosítás"
     },
     "formats.group.filesystems": {
       "en": "Filesystems",
-      "hu": ""
+      "hu": "Fájlrendszerek"
     },
     "formats.group.images": {
       "en": "Disk images",
-      "hu": ""
+      "hu": "Lemezképek"
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "hu": ""
+      "hu": "A kötet jelszavával vagy 48 jegyű helyreállítási kulccsal oldható fel"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "hu": ""
+      "hu": "A jelmondattal oldható fel"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "hu": ""
+      "hu": "Egy lemez több kötete együtt oldódik fel"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "hu": ""
+      "hu": "Beleértve azt a kötetet is, amelyet a Windows hibernálva vagy rosszul lezárva hagyott"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
-      "hu": ""
+      "hu": "A Linux fájlrendszerei"
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "hu": ""
+      "hu": "A macOS natívan támogatja"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "hu": ""
+      "hu": "A macOS natívan támogatja"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
-      "hu": ""
+      "hu": "QEMU és UTM"
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "hu": ""
+      "hu": "VMware, lapos és ritka"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "hu": ""
+      "hu": "Amit egy OVA tartalmaz. Egyetlen menetben íródik, ezért helyben nem módosítható"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
-      "hu": ""
+      "hu": "VirtualBox"
     },
     "formats.vhd.note": {
       "en": "Hyper-V, fixed and dynamic",
-      "hu": ""
+      "hu": "Hyper-V, rögzített és dinamikus"
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "hu": ""
+      "hu": "Hyper-V. Csak olvasásra nyílik meg"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
-      "hu": ""
+      "hu": "Minden formátum részletesen, és hogy melyiket hogyan olvassa és írja"
     },
     "formats.not.title": {
       "en": "Not supported",
-      "hu": ""
+      "hu": "Nem támogatott"
     },
     "formats.not.1": {
       "en": "FileVault and encrypted disk images, which macOS opens itself",
-      "hu": ""
+      "hu": "A FileVault és a titkosított lemezképek, amelyeket a macOS maga nyit meg"
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "hu": ""
+      "hu": "A jelszó helyett TPM-chiphez kötött lemezek, köztük az Ubuntu újabb hardveres titkosítása"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "hu": ""
+      "hu": "Azok a LUKS-kötetek, amelyek fejléce a lemeztől külön van tárolva"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
-      "hu": ""
+      "hu": "VeraCrypt és TrueCrypt"
     },
     "formats.not.5": {
       "en": "An image that names another file: a VMware snapshot chain, a differencing VHD, or a qcow2 with a backing file",
-      "hu": ""
+      "hu": "Olyan lemezkép, amely másik fájlra hivatkozik: VMware-pillanatkép-lánc, differenciáló VHD vagy alapfájllal rendelkező qcow2"
     },
     "name.title": {
       "en": "The Name",
-      "hu": ""
+      "hu": "A név"
     },
     "name.body": {
       "en": "Lúkotta is Finnish for “without a lock”, from {lukko}, a lock, with the ending {tta} marking the absence of something. The stress falls on the first syllable, as it always does in Finnish.",
-      "hu": ""
+      "hu": "A Lúkotta finnül azt jelenti, „zár nélkül”, a {lukko} szóból, ami zárat jelent, a {tta} végződéssel, amely valaminek a hiányát jelöli. A hangsúly az első szótagra esik, ahogy a finnben mindig."
     },
     "faq.title": {
       "en": "FAQ",
-      "hu": ""
+      "hu": "Gyakori kérdések"
     },
     "faq.1.q": {
       "en": "How much does Lukotta cost?",
-      "hu": ""
+      "hu": "Mennyibe kerül a Lukotta?"
     },
     "faq.1.a": {
       "en": "Nothing. It is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "hu": ""
+      "hu": "Semmibe. A letöltés ingyenes, és a használat is. Nincs fizetős változat, nincs előfizetés, nincs lejáró próbaidő és nincs létrehozandó fiók."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "hu": ""
+      "hu": "Ezenfelül szabad szoftver, a GNU General Public License 3-as vagy újabb változata alatt. A forráskód nyilvános: elolvashatod, magad lefordíthatod, módosíthatod, és továbbadhatod, amit módosítottál."
     },
     "faq.2.q": {
       "en": "Can Lukotta open BitLocker drives?",
-      "hu": ""
+      "hu": "Meg tudja nyitni a Lukotta a BitLocker-lemezeket?"
     },
     "faq.2.a": {
       "en": "Yes, and write to them. Type the volume password or paste a 48-digit recovery key, and the drive opens in Finder.",
-      "hu": ""
+      "hu": "Igen, és írni is tud rájuk. Írd be a kötet jelszavát, vagy illessz be egy 48 jegyű helyreállítási kulcsot, és a lemez megnyílik a Finderben."
     },
     "faq.3.q": {
       "en": "Can Lukotta write to NTFS drives?",
-      "hu": ""
+      "hu": "Tud a Lukotta NTFS-lemezekre írni?"
     },
     "faq.3.a": {
       "en": "Yes. Files copy onto an NTFS drive as well as off it.",
-      "hu": ""
+      "hu": "Igen. A fájlok ugyanúgy másolhatók egy NTFS-lemezre, ahogy róla."
     },
     "faq.4.q": {
       "en": "Can Lukotta open Linux drives?",
-      "hu": ""
+      "hu": "Meg tudja nyitni a Lukotta a Linux-lemezeket?"
     },
     "faq.4.a": {
       "en": "Yes. ext2, ext3, ext4, btrfs and XFS open, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "hu": ""
+      "hu": "Igen. Az ext2, ext3, ext4, btrfs és XFS megnyílik, önmagában vagy LUKS-titkosításon belül. Az LVM-mel kialakított lemez az összes kötetét együtt nyitja meg."
     },
     "faq.5.q": {
       "en": "Can Lukotta open a virtual machine's disk?",
-      "hu": ""
+      "hu": "Meg tudja nyitni a Lukotta egy virtuális gép lemezét?"
     },
     "faq.5.a": {
       "en": "Yes, without starting the machine. Open a qcow2, VMDK, VDI, VHD or VHDX image and copy files out of it, or into it.",
-      "hu": ""
+      "hu": "Igen, a gép elindítása nélkül. Nyiss meg egy qcow2-, VMDK-, VDI-, VHD- vagy VHDX-lemezképet, és másolj ki belőle fájlokat, vagy bele."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",
-      "hu": ""
+      "hu": "Működik a Lukotta Intel processzoros Macen?"
     },
     "faq.6.a": {
       "en": "No. It needs the virtualisation Apple Silicon provides.",
-      "hu": ""
+      "hu": "Nem. Szüksége van arra a virtualizációra, amelyet az Apple Silicon nyújt."
     },
     "footer.privacy": {
       "en": "Privacy Policy",
-      "hu": ""
+      "hu": "Adatvédelem"
     },
     "footer.licence": {
       "en": "Licence",
-      "hu": ""
+      "hu": "Licenc"
     },
     "footer.source": {
       "en": "Source",
-      "hu": ""
+      "hu": "Forráskód"
     },
     "footer.contact": {
       "en": "Contact",
-      "hu": ""
+      "hu": "Kapcsolat"
     },
     "footer.copyright": {
       "en": "{copyleft} {year} {author}.",
-      "hu": ""
+      "hu": "{copyleft} {year} {author}."
     },
     "footer.gpl": {
       "en": "Free software under the GNU General Public License, version 3 or later.",
-      "hu": ""
+      "hu": "Szabad szoftver a GNU General Public License 3-as vagy újabb változata alatt."
     }
   }
 }

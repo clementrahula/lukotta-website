@@ -300,7 +300,7 @@ ${langLinks}
           <h1>${esc(t("hero.title"))}</h1>
           <p class="lead">${esc(t("hero.subtitle"))}</p>
           <p class="hero-actions">
-            <a class="btn" href="${cfg.downloadUrl}">${esc(t("hero.download"))}${arrow}</a>
+            <a class="btn" href="${cfg.downloadUrl}">${esc(t("hero.download"))}</a>
             <a class="plain" href="${cfg.githubRepo}">${esc(t("hero.source"))}</a>
           </p>
           <p class="spec">${esc(t("hero.meta"))}</p>

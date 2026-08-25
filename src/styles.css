@@ -397,7 +397,6 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 550; font-size: 1rem; letter-spacing: -0.01em;
 }
 .btn:hover { text-decoration: none; background: color-mix(in srgb, var(--amber) 86%, black); }
-.btn .arrow { width: 15px; height: 15px; }
 
 .plain { color: var(--ink-2); font-size: .9375rem; display: inline-flex; align-items: center; gap: 6px; }
 .plain:hover { color: var(--amber-ink); }
