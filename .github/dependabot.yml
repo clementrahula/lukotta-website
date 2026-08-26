@@ -1,0 +1,14 @@
+# There are no npm dependencies to watch: the build is plain Node and the site
+# carries no third-party code. What does need watching is the actions, which
+# are pinned to commit SHAs so that a moved tag cannot change what runs. A pin
+# never moves on its own, so without this it silently becomes a stale version
+# that no longer gets fixes. Dependabot understands the pins and raises the SHA
+# along with the version in the comment beside it.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "Actions:"

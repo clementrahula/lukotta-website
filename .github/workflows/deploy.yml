@@ -1,18 +1,13 @@
 # Builds public/ and publishes it to GitHub Pages.
 #
-# Manual for now. GitHub Pages serves a private repository only on a paid plan,
-# so while this one is private every run would fail at configure-pages.
-#
-# To go live: make the repository public, then uncomment the push trigger
-# below. configure-pages runs with enablement: true, so the first run turns
-# Pages on. AGENTS.md has the Cloudflare records and the SSL mode required;
-# Flexible produces a redirect loop.
+# Runs on every push to main. AGENTS.md has the Cloudflare records and the SSL
+# mode required; Flexible produces a redirect loop.
 
 name: Deploy
 
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
