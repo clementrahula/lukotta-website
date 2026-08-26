@@ -256,7 +256,12 @@ ${ogAlternates}
 
   <link rel="stylesheet" href="${assetPrefix}${assets.css}">
 
-  <script>
+  <!-- data-cfasync="false" keeps Cloudflare's Rocket Loader from deferring
+       this. Rocket Loader rewrites a script's type and runs it through its own
+       loader later, which is the one thing this script must not allow: it has
+       to resolve the appearance before the first paint or the page flashes the
+       wrong one, which is the whole reason it is inline and in the head. -->
+  <script data-cfasync="false">
     /* Resolves the appearance before first paint, so the page does not flash
        the wrong one. The rest of the behaviour is in script.js. */
     (function () {
@@ -463,7 +468,9 @@ ${faqItems}
     </div>
   </footer>
 
-  <script>
+  <!-- Also exempt: script.js reads these, so their order relative to it must
+       not be rearranged. -->
+  <script data-cfasync="false">
     /* Published languages and the region codes each serves, so es-419 and
        es-MX resolve to the Spanish page. Emitted by the build, so the matcher
        cannot disagree with what was published. */
