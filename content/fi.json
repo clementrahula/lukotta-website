@@ -130,6 +130,14 @@
       "en": "Source on GitHub",
       "fi": "Lähdekoodi: GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "fi": "Kopioi"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "fi": "Kopioitu"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "fi": "Versio {version} · Apple Silicon · macOS 15 Sequoia tai uudempi"

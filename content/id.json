@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "id": "Kode sumber di GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "id": "Salin"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "id": "Disalin"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "id": "Versi {version} · Apple Silicon · macOS 15 Sequoia atau lebih baru"

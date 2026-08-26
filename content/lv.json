@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "lv": "Pirmkods vietnē GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "lv": "Kopēt"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "lv": "Nokopēts"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "lv": "Versija {version} · Apple Silicon · macOS 15 Sequoia vai jaunāka"

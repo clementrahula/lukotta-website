@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "tr": "Kaynak kodu: GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "tr": "Kopyala"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "tr": "Kopyalandı"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "tr": "Sürüm {version} · Apple Silicon · macOS 15 Sequoia veya üstü"

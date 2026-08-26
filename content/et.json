@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "et": "Lähtekood veebisaidil GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "et": "Kopeeri"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "et": "Kopeeritud"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "et": "Versioon {version} · Apple Silicon · macOS 15 Sequoia või uuem"

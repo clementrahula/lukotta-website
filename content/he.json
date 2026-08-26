@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "he": "הקוד ב‑GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "he": "העתקה"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "he": "הועתק"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "he": "גרסה {version} · Apple Silicon · macOS 15 Sequoia ואילך"

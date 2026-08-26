@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "ro": "Codul sursă pe GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "ro": "Copiază"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "ro": "Copiat"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "ro": "Versiunea {version} · Apple Silicon · macOS 15 Sequoia sau mai nou"

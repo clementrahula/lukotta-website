@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "hi": "GitHub पर स्रोत कोड"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "hi": "कॉपी करें"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "hi": "कॉपी हो गया"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "hi": "संस्करण {version} · Apple Silicon · macOS 15 Sequoia या नया"

@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "nl": "De broncode op GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "nl": "Kopiëren"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "nl": "Gekopieerd"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "nl": "Versie {version} · Apple Silicon · macOS 15 Sequoia of nieuwer"

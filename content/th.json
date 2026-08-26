@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "th": "ซอร์สโค้ดบน GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "th": "คัดลอก"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "th": "คัดลอกแล้ว"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "th": "รุ่น {version} · Apple Silicon · macOS 15 Sequoia ขึ้นไป"

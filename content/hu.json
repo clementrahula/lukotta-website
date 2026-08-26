@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "hu": "A forráskód a GitHub webhelyen"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "hu": "Másolás"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "hu": "Másolva"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "hu": "{version} verzió · Apple Silicon · macOS 15 Sequoia vagy újabb"

@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "cs": "Zdrojový kód na webu GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "cs": "Kopírovat"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "cs": "Zkopírováno"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "cs": "Verze {version} · Apple Silicon · macOS 15 Sequoia nebo novější"

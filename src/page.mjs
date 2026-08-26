@@ -333,6 +333,16 @@ ${langLinks}
             <a class="btn" href="${cfg.downloadUrl}">${esc(t("hero.download"))}</a>
             <a class="plain" href="${cfg.githubRepo}">${esc(t("hero.source"))}</a>
           </p>
+          <div class="brew">
+            <div class="brew-line">
+              <code class="brew-cmd" id="brew-cmd-${lang.code}" dir="ltr">${esc(cfg.brewCommand)}</code>
+              <button type="button" class="brew-copy" data-copy-command
+                      data-command="${esc(cfg.brewCommand)}"
+                      data-label="${esc(t("hero.copy"))}"
+                      data-label-copied="${esc(t("hero.copied"))}"
+                      aria-describedby="brew-cmd-${lang.code}">${esc(t("hero.copy"))}</button>
+            </div>
+          </div>
           <p class="spec">${esc(t("hero.meta"))}</p>
         </div>
 

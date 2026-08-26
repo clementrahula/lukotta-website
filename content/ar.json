@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "ar": "المصدر على GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "ar": "نسخ"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "ar": "تم النسخ"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "ar": "الإصدار {version} · Apple Silicon · macOS 15 Sequoia أو أحدث"

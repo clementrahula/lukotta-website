@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "ko": "GitHub의 소스 코드"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "ko": "복사"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "ko": "복사됨"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "ko": "버전 {version} · Apple Silicon · macOS 15 Sequoia 이상"

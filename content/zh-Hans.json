@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "zh-Hans": "GitHub 上的源代码"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "zh-Hans": "复制"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "zh-Hans": "已复制"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "zh-Hans": "版本 {version} · Apple Silicon · macOS 15 Sequoia 或更新"

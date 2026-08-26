@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "sl": "Izvorna koda na spletnem mestu GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "sl": "Kopiraj"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "sl": "Kopirano"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "sl": "Različica {version} · Apple Silicon · macOS 15 Sequoia ali novejši"

@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "ja": "GitHubのソースコード"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "ja": "コピー"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "ja": "コピーしました"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "ja": "バージョン {version} · Apple Silicon · macOS 15 Sequoia以降"

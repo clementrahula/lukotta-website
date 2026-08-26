@@ -474,6 +474,34 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: 32px; }
 
+/* The Homebrew line, under the download button. The command is a shell command
+   in every language, so it is held left-to-right whatever the page direction,
+   and it never wraps: a broken command line is one that will not paste. */
+.brew { margin-top: 28px; max-width: 34rem; }
+.brew-line {
+  display: flex; align-items: stretch;
+  border: 1px solid var(--rule-2); border-radius: 6px;
+  background: var(--paper-2);
+  overflow: hidden;
+}
+.brew-cmd {
+  flex: 1 1 auto; min-width: 0;
+  direction: ltr; text-align: left;
+  padding: 11px 14px;
+  overflow-x: auto; white-space: nowrap;
+  font-family: var(--font-mono); font-size: .8125rem; color: var(--ink);
+}
+.brew-copy {
+  flex: none; padding: 0 15px;
+  border: 0; border-inline-start: 1px solid var(--rule-2);
+  background: transparent; color: var(--ink-2);
+  font-family: var(--font-mono); font-size: .75rem; font-weight: 500;
+  letter-spacing: .06em; text-transform: uppercase;
+  cursor: pointer; transition: background-color .15s ease, color .15s ease;
+}
+.brew-copy:hover { background: var(--paper-3); color: var(--ink); }
+.brew-copy[data-copied="true"] { color: var(--tick); }
+
 /* ----------------------------------------------------------------- hero -- */
 
 .hero { padding-block: clamp(52px, 8vw, 96px) clamp(40px, 6vw, 72px); }
@@ -701,6 +729,24 @@ tbody tr:not(.group) th code { color: var(--ink); }
        little to spare. Capped at 11px, and floored so it never shrinks past
        reading size on a very narrow phone. */
     font-size: clamp(.5625rem, calc((100vw - 2 * var(--gutter)) / 31), .6875rem);
+  }
+}
+
+@media (max-width: 560px) {
+  /* The command needs the whole width here, so the button goes under it, and
+     the type follows the width of the box so the line never has to scroll: a
+     command you have to drag sideways to read is a command you mistype. The
+     divisor is the command's width in multiples of its own font size, with a
+     little to spare. */
+  .brew-line { display: block; }
+  .brew-cmd {
+    display: block; padding: 10px 12px;
+    font-size: clamp(.5625rem, calc((100vw - 2 * var(--gutter) - 26px) / 28), .8125rem);
+  }
+  .brew-copy {
+    display: block; width: 100%;
+    padding: 9px 0; text-align: center;
+    border-inline-start: 0; border-top: 1px solid var(--rule-2);
   }
 }
 

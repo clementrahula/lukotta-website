@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "uk": "Вихідний код на GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "uk": "Скопіювати"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "uk": "Скопійовано"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "uk": "Версія {version} · Apple Silicon · macOS 15 Sequoia або новіша"

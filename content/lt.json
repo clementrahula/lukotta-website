@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "lt": "Pirminis kodas GitHub svetainėje"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "lt": "Kopijuoti"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "lt": "Nukopijuota"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "lt": "Versija {version} · Apple Silicon · macOS 15 Sequoia arba naujesnė"

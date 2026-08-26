@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "de": "Quellcode auf GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "de": "Kopieren"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "de": "Kopiert"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "de": "Version {version} · Apple Silicon · macOS 15 Sequoia oder neuer"

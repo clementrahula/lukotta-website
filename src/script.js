@@ -342,4 +342,44 @@
       });
     }
   }
+  /* The Homebrew command. Copying is a convenience: the command is selectable
+     text either way, and the button is simply not shown when the clipboard is
+     unavailable, which is the case on any page served over plain HTTP. */
+  function selectCommand(button) {
+    var line = button.parentNode && button.parentNode.querySelector(".brew-cmd");
+    if (!line || !window.getSelection || !document.createRange) return;
+    var range = document.createRange();
+    range.selectNodeContents(line);
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+
+  var copyButtons = document.querySelectorAll("[data-copy-command]");
+  for (var c = 0; c < copyButtons.length; c++) {
+    (function (button) {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+        button.hidden = true;
+        return;
+      }
+      var revert = null;
+      button.addEventListener("click", function () {
+        navigator.clipboard.writeText(button.getAttribute("data-command")).then(function () {
+          button.textContent = button.getAttribute("data-label-copied");
+          button.setAttribute("data-copied", "true");
+          clearTimeout(revert);
+          revert = setTimeout(function () {
+            button.textContent = button.getAttribute("data-label");
+            button.removeAttribute("data-copied");
+          }, 2000);
+        }, function () {
+          /* A browser may refuse the write: no permission, or the page is not
+             served over https. Select the command instead, so the reader is one
+             keystroke from having it rather than facing a button that did
+             nothing. */
+          selectCommand(button);
+        });
+      });
+    })(copyButtons[c]);
+  }
 })();

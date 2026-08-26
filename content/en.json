@@ -36,6 +36,8 @@
     "hero.subtitle": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
     "hero.download": "Download",
     "hero.source": "Source on GitHub",
+    "hero.copy": "Copy",
+    "hero.copied": "Copied",
     "hero.meta": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
     "hero.screenshotAlt": "The Lukotta window on macOS, listing the drives connected to the Mac and what each one holds.",
     "how.title": "How It Works",

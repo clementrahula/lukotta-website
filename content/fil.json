@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "fil": "Ang source code sa GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "fil": "Kopyahin"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "fil": "Nakopya"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "fil": "Bersyon {version} · Apple Silicon · macOS 15 Sequoia o mas bago"

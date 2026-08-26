@@ -126,6 +126,14 @@
       "en": "Source on GitHub",
       "sq": "Kodi burim në GitHub"
     },
+    "hero.copy": {
+      "en": "Copy",
+      "sq": "Kopjo"
+    },
+    "hero.copied": {
+      "en": "Copied",
+      "sq": "U kopjua"
+    },
     "hero.meta": {
       "en": "Version {version} · Apple Silicon · macOS 15 Sequoia or later",
       "sq": "Versioni {version} · Apple Silicon · macOS 15 Sequoia ose më i ri"
