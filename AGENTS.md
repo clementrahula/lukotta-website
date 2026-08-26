@@ -1,259 +1,157 @@
 # Working on the Lukotta website
 
-Everything not obvious from the files. [README.md](README.md) is the short
-version; this is the rest.
+## Layout
 
-## What this is
-
-One page, built into `public/` for every language in `site.config.json`. There
-is no framework and nothing to install — the build is Node and the standard
-library. `public/` is generated and is not committed.
+One page, built into `public/` for every language in `site.config.json`. No
+framework and nothing to install: the build is Node and the standard library.
+`public/` is generated and is not committed.
 
 ```
-site.config.json     the domain, the version, and every language
+site.config.json     domain, version, download address, brew command, languages
 content/             everything the page says, one file per language
+content/GLOSSARY.md  terms that are not free to translate
 src/page.mjs         the markup, including the whole of the <head>
 src/styles.css       the visual system, light and dark
-src/script.js        appearance, the screenshot swap, the language menu, the platform notice
-scripts/build.mjs    builds public/ from the above
-scripts/check.mjs    checks what was built; --strict is the release gate
+src/script.js        appearance, language menu, platform notice, copy button
+scripts/build.mjs    builds public/
+scripts/check.mjs    checks what was built
 ```
 
-## The commands
+## Commands
 
 ```bash
 npm start                              # build and serve at localhost:4321
 npm run check                          # build, then check
 node scripts/new-language.mjs --all    # after any change to content/en.json
-node scripts/lint-translations.mjs     # placeholders, names, lengths
+node scripts/lint-translations.mjs     # placeholders, names, staleness, lengths
 node scripts/export-translations.mjs   # a bundle for an outside reviewer
 ```
 
-**Run `new-language.mjs --all` after every change to the English.** It appends
-new keys to all thirty-six languages, drops removed ones, and leaves existing
+Run `new-language.mjs --all` after every change to the English. It appends new
+keys to all thirty-six languages, drops removed ones, and leaves existing
 translations and `localOnly` blocks alone. Nothing else keeps them in step.
 
-## Rules the build enforces
+## What the build refuses
 
-`scripts/check.mjs` fails on a wrong canonical, an incomplete `hreflang`
-cluster, a duplicate title between two translated pages, a local reference that
-is not in `public/`, an `<img>` without alt text, a page without exactly one
-`<h1>`, JSON-LD that does not parse, a `lang` or `dir` that disagrees with the
-configuration, and a sitemap that does not match the pages.
+`check.mjs` fails on a wrong canonical, an incomplete `hreflang` cluster, a
+duplicate title between two translated pages, a local reference that is not in
+`public/`, an `<img>` without alt text, a page without exactly one `<h1>`,
+JSON-LD that does not parse, a `lang` or `dir` that disagrees with the
+configuration, a sitemap that does not match the pages, a contrast ratio below
+4.5:1 for text or 3:1 for indicators in either theme, the two dark declarations
+drifting apart, more or fewer than one fingerprinted stylesheet and script, and
+an `llms.txt` that no longer states what the pages state.
 
-`--strict` additionally refuses while any language still carries English text.
-That is the condition for publishing at all: thirty-seven copies of one page is
-duplicate content. The deploy workflow runs it.
+`--strict` also refuses while any language carries English text, and when a
+configured language built no page. Both `build.mjs --strict` and
+`check.mjs --strict` run in the deploy workflow.
 
-## Things that will bite
+## Translations
 
-**Changing an English string invalidates its translations.** The `en` beside
-each translation is not a copy of the current English. It is the sentence that
-was translated, kept as written. Edit `content/en.json` and every language
-still holding the old sentence is reported: the build warns, `--strict`
-refuses, and `lint-translations.mjs` prints the old and the new side by side.
-Clear it by editing the pair as a unit, translation and `en` together, which
-is how a translation is delivered anyway. Never bring `en` forward on its own:
-that is the whole bug this guards against, a page that reads fluently and says
-something the English no longer says.
+**The English beside a translation is not a copy of the current English.** It is
+the sentence that was translated, kept as written. Change `content/en.json` and
+every language still holding the old sentence is reported: the build warns,
+`--strict` refuses, and `lint-translations.mjs` prints the old and the new under
+each other. Clear it by editing the pair as a unit, translation and `en`
+together. Never bring `en` forward on its own.
 
-**A string in one language only.** A language file may carry a `localOnly`
-block. Those strings *replace* the translation of the key they name, on that
-language's page alone. Finnish uses one, in the name section. The translator
-consults `localOnly` before `strings`, so the markup knows nothing about it.
+A language file may carry a `localOnly` block. Those strings replace the
+translation of the key they name, on that language's page alone. Finnish uses
+one, in the name section. The translator consults `localOnly` before `strings`.
 
-**Screenshots.** Two per language at
-`src/assets/screenshots/<code>/{light,dark}.webp`, the pair the same size as
-each other. They are lossless WebP converted from 1160x1264 PNG captures with
-`cwebp -lossless`, and are shown at 720px, which is 1.6x density. The build
-reads their real dimensions from the WebP header, writes them onto the `<img>`,
-and caps the frame at the image's own width. A language without its own pair
-falls back to English, and the build reports which languages did.
-
-Both appearances are in the page at once and cross-fade on the appearance
-switch, so a page loads roughly 150 kB of screenshot.
-
-**The macOS window frame stays.** `.shot` and `.shot-bar` draw it at the
-measurements macOS uses: a 28pt title bar, 12pt buttons 8pt apart, 20pt in from
-the leading edge, a 10pt corner. Do not remove it when the layout changes.
-
-**Names that are not translated.** BitLocker, NTFS, LUKS, ext4, qcow2, VMDK,
-macOS, Apple Silicon and the rest stay in Latin script in every language, and
-undeclined — a name bent into a local case is no longer the word anyone
-searches for. `content/GLOSSARY.md` is the list. Finder is *not* on it: Apple
+Product and format names stay in Latin script in every language: BitLocker,
+NTFS, LUKS, ext4, qcow2, VMDK, macOS, Apple Silicon and the rest.
+`content/GLOSSARY.md` is the list. A local case ending is acceptable where the
+letters of the name survive it, which is how the corpus already reads
+(`Finderu`, `Macilla`, `BitLockeria`). Finder is not on the list: Apple
 translates it in some languages, and Chinese macOS calls it 访达.
 
-**Where the application disagrees, it wins.** Its translations are a larger,
-shipped body of text, and the same person reads both. `export-translations.mjs`
-pulls a terminology reference out of them.
+Where the application's own translations disagree with the site, they win.
+`export-translations.mjs` pulls a terminology reference out of them.
 
-**Contrast.** `--ink-3`, the focus ring and `--control-edge` were all set by
-measurement, not by eye. Changing them means re-checking 4.5:1 for text and
-3:1 for focus rings and control borders, in both themes.
+## Assets
 
-**Only two brand files ship.** `assets/brand/lukotta-mark-{light,dark}.png`.
-The rest of `src/assets/brand/` are the originals the favicons and the
-shared-card image in `src/assets/icons/` were generated from, with `sips`. Keep
-them; do not publish them.
+Two screenshots per language at
+`src/assets/screenshots/<code>/{light,dark}.webp`, the pair the same size as
+each other. Lossless WebP from 1160x1264 captures, `cwebp -lossless`, shown at
+720px. The build reads their dimensions from the WebP header and writes them
+onto the `<img>`. A language without its own pair falls back to English, and the
+build reports which. Both appearances are in the page at once and cross-fade, so
+a page carries about 150 kB of screenshot.
 
-## No co-authorship
+The macOS window frame is drawn by `.shot` and `.shot-bar` at the measurements
+macOS uses: a 28pt title bar, 12pt buttons 8pt apart, 20pt in from the leading
+edge, a 10pt corner. It stays when the layout changes.
 
-Commit messages carry no `Co-Authored-By` trailer. The trailer had built up in
-the history once and was removed by rewriting it; `.githooks/commit-msg` strips
-it from every message so it cannot return by hand or from a tool default.
+Only `assets/brand/lukotta-mark-{light,dark}.png` ship. The rest of
+`src/assets/brand/` are the originals the favicons and the shared-card image in
+`src/assets/icons/` were generated from with `sips`. Keep them, do not publish
+them.
 
-`core.hooksPath` is local configuration and is not versioned, so a fresh clone
-has to enable the hook once:
+## Styles
+
+`--ink-3`, `--amber-ink`, `--control-edge` and the focus ring were set by
+measurement. Changing any of them means re-checking the ratios, which
+`check.mjs` does.
+
+The dark appearance is declared twice, once under
+`@media (prefers-color-scheme: dark)` for a reader whose JavaScript never ran
+and once under `[data-theme="dark"]` for a reader who chose. Everything that
+differs between appearances goes through a token so the rule is written once.
+`check.mjs` compares the two declarations.
+
+## Scripts on the page
+
+The two inline scripts carry `data-cfasync="false"`. Cloudflare's Rocket Loader
+is on, and without that attribute it rewrites their type and runs them through
+its own loader: the first has to resolve the appearance before the first paint,
+and the second has to be in place before `script.js` reads it.
+
+`build.mjs` hashes every inline script and writes the hashes into the content
+policy in the `<head>`. Adding or editing an inline script changes its hash
+automatically. An inline style attribute would need the policy widened, so there
+are none.
+
+## Commits
+
+No `Co-Authored-By` trailer. `.githooks/commit-msg` strips it.
+`core.hooksPath` is local configuration, so a fresh clone enables it once:
 
 ```bash
 git config core.hooksPath .githooks
 ```
 
-## What is under which licence
+`main` is protected against force pushes and deletion. Direct pushes are
+allowed.
 
-Two, because the repository holds two different kinds of thing.
+## Deployment
 
-**The code** — `scripts/`, `src/page.mjs`, `src/script.js`, `src/styles.css`,
-the workflows, `site.config.json` — is **GPL-3.0-or-later**, the same as the
-application. See [LICENSE.txt](LICENSE.txt).
+A push to `main` builds and publishes to GitHub Pages. The workflow runs
+`build.mjs --strict`, `lint-translations.mjs` and `check.mjs --strict` before
+publishing, so a failure of any of them stops the deploy.
 
-**The words** — everything in `content/`, which is the English copy and its
-thirty-six translations — are **CC BY-SA 4.0**. See
-[LICENSE-CONTENT.txt](LICENSE-CONTENT.txt). Creative Commons is the tool built
-for prose; the GPL is not, and its idea of source does not map onto a sentence.
-Share-alike keeps the copyleft.
+Cloudflare proxies the domain, SSL/TLS mode Full. HTML is not cached at the
+edge; the stylesheet and script carry a digest of their contents, so a change
+gives them a new name and no cache can serve the old one. Replacing an image
+under its own name is the one case that needs a manual purge.
 
-**The brand** — the name Lukotta, the logo, the mark, and the icons generated
-from them — is under neither. They are trademarks, and
-[TRADEMARKS.txt](https://github.com/clementrahula/lukotta/blob/main/TRADEMARKS.txt)
-in the application's repository says what is permitted.
+`CF_ZONE_ID` and `CF_API_TOKEN` are optional repository secrets. When set, the
+deploy purges the Cloudflare cache; when not, it says so and the deploy still
+counts as done.
 
-The two typefaces the site carries are under the SIL Open Font License; see
+To roll back, re-run an earlier successful Deploy from the Actions tab. The site
+is rebuilt from that commit and there is no state to restore.
+
+## Licences
+
+The code, meaning `scripts/`, `src/`, the workflows and `site.config.json`, is
+GPL-3.0-or-later. See [LICENSE.txt](LICENSE.txt).
+
+The words, meaning everything in `content/`, are CC BY-SA 4.0. See
+[LICENSE-CONTENT.txt](LICENSE-CONTENT.txt).
+
+The name Lukotta, the logo, the mark and the icons generated from them are
+trademarks and are under neither.
+
+The two typefaces are under the SIL Open Font License. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Going live
-
-The repository is private, so Pages will not serve it — GitHub publishes a
-private repository only on a paid plan. The deploy workflow is therefore
-manual, and its push trigger is commented out.
-
-1. **Make the repository public.**
-2. **Uncomment the push trigger** in `.github/workflows/deploy.yml`.
-   `configure-pages` runs with `enablement: true`, so the first run turns Pages
-   on and sets the source to GitHub Actions by itself.
-3. **Set the custom domain** to `lukotta.com` in Settings → Pages. The build
-   already writes `public/CNAME`, so it should stick on the first deploy. Leave
-   **Enforce HTTPS** on once the certificate is issued.
-4. **Point Cloudflare at Pages.**
-
-   | Type | Name | Content |
-   | --- | --- | --- |
-   | `A` | `lukotta.com` | `185.199.108.153` |
-   | `A` | `lukotta.com` | `185.199.109.153` |
-   | `A` | `lukotta.com` | `185.199.110.153` |
-   | `A` | `lukotta.com` | `185.199.111.153` |
-   | `AAAA` | `lukotta.com` | `2606:50c0:8000::153` |
-   | `AAAA` | `lukotta.com` | `2606:50c0:8001::153` |
-   | `AAAA` | `lukotta.com` | `2606:50c0:8002::153` |
-   | `AAAA` | `lukotta.com` | `2606:50c0:8003::153` |
-   | `CNAME` | `www` | `clementrahula.github.io` |
-
-   These are the origin addresses. Keep the AAAA records: Cloudflare reaches
-   the origin over either family, and if the proxy is ever switched off they
-   are what an IPv6-only reader resolves.
-
-   **The proxy stays on, orange from the first record.** What cannot be on
-   from the first minute is *Full (strict)*, and that is what used to force
-   the grey-cloud dance. Full (strict) checks that the origin presents a
-   certificate valid for `lukotta.com`. GitHub has no such certificate until
-   it issues one, and it issues one by answering a challenge that Full
-   (strict) is busy rejecting. The proxy was never the problem; starting at
-   the strictest setting was.
-
-   So start one notch down and move up:
-
-   | Stage | SSL/TLS mode | Why |
-   | --- | --- | --- |
-   | Setting the domain | **Full** | Encrypts Cloudflare to GitHub, and tolerates GitHub still serving its `*.github.io` certificate. Never *Flexible*: that sends plain HTTP to GitHub, which answers with a redirect loop. |
-   | Certificate issued | **Full (strict)** | GitHub now holds a certificate for the domain, so the origin can be verified. Turn on **Enforce HTTPS** in Settings → Pages at the same time. |
-
-   While the certificate is being issued, keep the challenge path out of the
-   way of anything that could answer it instead of GitHub:
-
-   - **Always Use HTTPS: off** until the certificate exists, or add a
-     configuration rule exempting `/.well-known/acme-challenge/*`. Let's
-     Encrypt follows redirects, but there is no reason to add a hop that
-     depends on the leg you are still trying to establish.
-   - **Cache: bypass** on `/.well-known/acme-challenge/*`, so a cached 404
-     from an earlier attempt cannot outlive it.
-
-   Issuance usually lands within minutes. GitHub's own documentation suggests
-   turning a proxy off for it, so this is the setup the rest of the world runs
-   rather than the one the vendor blesses. If Pages still reports the
-   certificate as pending after a day, grey-cloud the two records for the few
-   minutes it takes, then turn the proxy straight back on — as a way out of a
-   stuck state, not as the plan.
-
-5. **Add the response headers GitHub Pages cannot send.**
-
-   The pages already set what a page can set for itself: the content policy,
-   with a hash for each inline script, and `Referrer-Policy` through
-   `<meta name="referrer">`. Three cannot be expressed in markup at all —
-   `frame-ancestors` is ignored in a `<meta>`, and the other two are headers
-   or nothing — so they come from the proxy the site sits behind anyway.
-
-   | Header | Value |
-   | --- | --- |
-   | `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` |
-   | `X-Content-Type-Options` | `nosniff` |
-   | `Content-Security-Policy` | `frame-ancestors 'none'` |
-
-   By hand: Rules → Transform Rules → Modify Response Header → Add rule, for
-   `lukotta.com/*`, set each of the three.
-
-   Or in one call, with a token holding *Zone → Config Rules → Edit* on this
-   zone (zone id is on the Cloudflare overview page):
-
-   ```bash
-   curl -sS -X PUT \
-     "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/rulesets/phases/http_response_headers_transform/entrypoint" \
-     -H "Authorization: Bearer $CF_TOKEN" \
-     -H "Content-Type: application/json" \
-     --data @- <<'JSON'
-   {
-     "rules": [
-       {
-         "action": "rewrite",
-         "description": "Headers GitHub Pages cannot send",
-         "expression": "true",
-         "action_parameters": {
-           "headers": {
-             "Strict-Transport-Security": { "operation": "set", "value": "max-age=31536000; includeSubDomains" },
-             "X-Content-Type-Options": { "operation": "set", "value": "nosniff" },
-             "Content-Security-Policy": { "operation": "set", "value": "frame-ancestors 'none'" }
-           }
-         }
-       }
-     ]
-   }
-   JSON
-   ```
-
-   Add HSTS only once the certificate is issued and HTTPS answers. A browser
-   that has seen the header refuses plain HTTP for a year and there is no way
-   to reach back and tell it otherwise, so it is the one header worth adding
-   last. Confirm all three afterwards with `curl -sI https://lukotta.com`.
-
-6. **Check the live site.**
-
-   ```bash
-   curl -sI https://lukotta.com | head -1
-   curl -s https://lukotta.com/sitemap.xml | head -20
-   ```
-
-7. **Submit the sitemap** in Google Search Console and Bing Webmaster Tools.
-   Search Console reports the `hreflang` cluster under International Targeting;
-   it should list every language with no return-tag errors.
-
-To roll back, re-run an earlier successful Deploy from the Actions tab. The
-site is rebuilt from that commit; there is no state to restore.
