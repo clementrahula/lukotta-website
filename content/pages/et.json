@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "et",
+    "name": "Estonian",
+    "native": "Eesti",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Allalaadimine ja kasutamine on tasuta."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "ava-bitlockeri-ketas-macis",
+      "title": "Ava BitLockeri ketas Macis",
+      "description": "macOS ei ava BitLockeri ketast, vaid pakub selle kustutamist. Siin on põhjus ja see, kuidas ketast lugeda ja sellele faile kopeerida.",
+      "lead": "Ühendad BitLockeri ketta Maciga ja Finder pakub selle kustutamist. Siin on põhjus ja see, kuidas ketast selle asemel lugeda.",
+      "sections": [
+        {
+          "heading": "Mis on BitLocker",
+          "paragraphs": [
+            "BitLocker on Windowsi sisse ehitatud krüptimine. Kui see on sisse lülitatud, segatakse kõik kettale kirjutatu ära ja sisu ei saa ilma paroolita lugeda. Windows kasutab seda oma ketta peal ning USB-ketastel ja mälukaartidel, kus selle nimi on BitLocker To Go.",
+            "Mõlemal juhul on see sama krüptimine. Kui ketas kaob, ei saa leidja sealt midagi lugeda."
+          ]
+        },
+        {
+          "heading": "Mis juhtub, kui ühendad selle Maciga",
+          "paragraphs": [
+            "Finder ütleb, et ketas ei ole loetav, ja pakub selle lähtestamist või kustutamist. Parooli ta ei küsi ja miski ekraanil ei anna märku, et ketas on lukus, mitte katki.",
+            "Ketas ei ole kahjustatud. macOS-il on oma krüptimine, FileVault, ja BitLockerist ei saa ta üldse aru. Ta loeb ketta algust, leiab sealt ülesehituse, mida ta ei tunne, ja kohtleb ketast vormindamata kettana, nii et ainus, mida ta pakkuda oskab, on kustutamine."
+          ]
+        },
+        {
+          "heading": "Kuidas Lukotta selle avab",
+          "paragraphs": [
+            "Linux on osanud BitLockerit lugeda juba aastaid ja just seda Lukotta kasutabki. Ta käivitab taustal väikese Linuxi süsteemi, annab sellele ketta ja avab ketta seal lukust parooliga, mille kirjutad. Lukust avatud ketas läheb tagasi Finderisse, kus see ilmub jaotise Locations alla su teiste ketaste kõrvale.",
+            "Ketast ei teisendata ega kopeerita. See jääb BitLockeri kettaks, jääb krüptituks ja Windows loeb seda edasi."
+          ]
+        },
+        {
+          "heading": "Ketta avamine",
+          "list": [
+            "Ühenda ketas. Lukotta näitab seda loendis ja märgib lukus olevaks.",
+            "Klõpsa sellel ja kirjuta parool, mida Windowsis kasutad.",
+            "Ketas ilmub Finderis jaotise Locations alla."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kui sul parooli ei ole",
+          "paragraphs": [
+            "Kui ketas krüptiti, tegi Windows taastevõtme ja küsis, kuhu see hoiule panna. See avab ketta parooli asemel. Selles on 48 numbrit, kaheksas kuuekohalises rühmas:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "See võib olla Microsofti kontos, tekstifailis või paberile trükitud. Kleebi see sinna, kuhu muidu läheks parool.",
+            "Ilma parooli või võtmeta ei ava ketast ükski programm üheski arvutis."
+          ]
+        },
+        {
+          "heading": "Kettad, mis Macis lahti ei lähe",
+          "paragraphs": [
+            "Mõned Windowsi arvutid ei küsi kunagi parooli. Nad hoiavad võtit emaplaadil oleval kiibil, mille nimi on TPM, ja avavad ketta ise, kui see masin käivitub.",
+            "Nii seatud ketas töötab ainult selles arvutis, kust ta pärit on, sest võti sealt kunagi välja ei tule. Ükski Mac ei ava seda ja teine Windowsi arvuti samuti mitte. Kui ketta krüptimise ajal salvestati taastevõti, avab see selle ikka."
+          ]
+        },
+        {
+          "heading": "Failide kopeerimine kettale",
+          "paragraphs": [
+            "BitLockeri kettad avanevad nii lugemiseks kui ka kirjutamiseks, nii et Mac saab Windowsi varukoopiale faile juurde panna, mitte üksnes sealt ära võtta.",
+            "Lukotta oskab ketta avada ka ainult lugemiseks, mida tasub teha siis, kui päästad faile kettalt, mis on tõrkunud. Siis ei saa sellele midagi kirjutada."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "loe-ext4-ketast-macis",
+      "title": "Loe Macis ext4-, btrfs- või XFS-ketast",
+      "description": "macOS ei loe ext4, btrfs ega XFS ketast ja pakub selle kustutamist. Siin on põhjus ja see, kuidas avada Macis Linuxi ketas, LUKS kaasa arvatud.",
+      "lead": "Ühendad Linuxi masinast pärit ketta ja Finder pakub selle kustutamist. Siin on põhjus ja see, kuidas seda selle asemel lugeda.",
+      "sections": [
+        {
+          "heading": "Miks Mac ketast lugeda ei oska",
+          "paragraphs": [
+            "Igal kettal on failisüsteem: kord, mis paneb kirja, kust iga fail algab, mis selle nimi on ja millised ketta osad on veel vabad. Windows kasutab NTFS-i. macOS kasutab APFS-i. Linux kasutab enamasti ext4, vahel ka btrfs-i või XFS-i.",
+            "Failid ise on täiesti tavalised. Erineb nende ees olev sisukord, ja arvuti, kes seda sisukorda lugeda ei oska, ei leia sealt midagi üles, ehkki kõik on ikka alles."
+          ]
+        },
+        {
+          "heading": "Mis juhtub, kui ühendad selle Maciga",
+          "paragraphs": [
+            "Finder ütleb, et ketas ei ole loetav, ja pakub selle kustutamist. Sama teate annab macOS tühja ketta ja katkise ketta kohta, nii et teatest ei saa kuidagi aru, et ketas on korras.",
+            "macOS toetab oma failisüsteeme ja mõnda levinud süsteemi, näiteks exFAT-i. Linuxi failisüsteemid nende hulka ei kuulu, nii et ext4-ketas paistab macOS-ile tühja kettana."
+          ]
+        },
+        {
+          "heading": "Kuidas Lukotta seda loeb",
+          "paragraphs": [
+            "Lukotta käivitab taustal väikese Linuxi süsteemi ja annab sellele ketta. Linux loeb ext4, btrfs ja XFS ise, nii et ketas avaneb seal ilma igasuguse teisendamiseta, ja Lukotta annab selle edasi Finderile.",
+            "Kettale ei kirjutata midagi ja see käitub tavapäraselt, kui läheb tagasi Linuxi masinasse."
+          ]
+        },
+        {
+          "heading": "Mida Lukotta loeb",
+          "paragraphs": [
+            "ext2, ext3 ja ext4, mis katavad enamiku Linuxi süsteeme. btrfs, mis on Fedoras ja openSUSE-s vaikimisi. XFS, mis on levinud serverites.",
+            "Krüptitud või mitte. Kui ketas on seatud LVM-iga, mis jagab ühe füüsilise ketta mitmeks köiteks, avanevad need kõik korraga, mitte ükshaaval."
+          ]
+        },
+        {
+          "heading": "Ketta avamine",
+          "list": [
+            "Ühenda ketas. Lukotta näitab, mis sellel on.",
+            "Kui see on krüptitud, kirjuta paroolifraas.",
+            "Ketas ilmub Finderis jaotise Locations alla."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kui küsitakse paroolifraasi",
+          "paragraphs": [
+            "LUKS on viis, kuidas Linux krüptib terve ketta. Kui masin, kust see ketas pärit on, küsib käivitumise alguses, enne sisselogimisekraani, paroolifraasi, siis on see LUKS, ja just selle paroolifraasi tuleb siia kirjutada.",
+            "See on sisselogimisparoolist eraldi, ehkki paljud panevad mõlemaks sama."
+          ]
+        },
+        {
+          "heading": "Kettad, mis lahti ei lähe",
+          "paragraphs": [
+            "LUKS-ketta saab seada nii, et selle päis on mujal, teisel kettal või USB-pulgal. Päis on see osa, mis kirjeldab krüptimist. Ilma selleta ei ole kettal midagi lukust avada.",
+            "Uuemad Ubuntu paigaldused oskavad võtme siduda ka masina sees oleva kiibiga, samamoodi nagu BitLocker teeb. Sellised kettad avanevad ainult selles arvutis, kust nad pärit on."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "kirjuta-ntfs-kettale-macis",
+      "title": "Kirjuta NTFS-kettale Macis",
+      "description": "macOS avab NTFS-kettad ainult lugemiseks, nii et failid tulevad sealt ära, aga sinna ei lähe. Siin on põhjus ja see, kuidas NTFS-kettale kirjutada.",
+      "lead": "macOS lubab NTFS-kettalt faile ära kopeerida, aga mitte sinna. Siin on põhjus ja see, mida sellega peale hakata.",
+      "sections": [
+        {
+          "heading": "Mis on NTFS",
+          "paragraphs": [
+            "NTFS on failisüsteem, mida Windows kasutab nii oma ketta peal kui ka Windowsi arvutis vormindatud välistel ketastel. Windowsi masinas vormindatud USB-ketas on enamasti NTFS.",
+            "Teine levinud on exFAT, mida kasutavad enamik mälukaarte ja paljud USB-pulgad, sest nii Windows kui ka macOS oskavad sellele kirjutada. Kui su ketas on exFAT, saab macOS sellega juba hakkama ja miski siinsest ei puuduta sind. Kontrollimiseks klõpsa kettal Finderis ja vali File ja siis Get Info. Rida Format ütleb selle ära."
+          ]
+        },
+        {
+          "heading": "Mis juhtub, kui ühendad selle Maciga",
+          "paragraphs": [
+            "Ketas ilmub Finderisse ja sa näed faile. Failide kopeerimine sealt käib tavapäraselt. Millegi kopeerimine sinna ei käi: Finder keeldub ja ketas käitub, nagu oleks lukus.",
+            "macOS avab NTFS-kettad ainult lugemiseks. Ta on osanud NTFS-ile kirjutada juba aastaid, aga see on välja lülitatud ja seda ei saa lubatud viisil sisse lülitada. NTFS-ile kirjutamine on raskem kui lugemine ja üks viga võib jätta ketta, mida Windows pärast avada ei taha."
+          ]
+        },
+        {
+          "heading": "Kuidas Lukotta sellele kirjutab",
+          "paragraphs": [
+            "Lukotta avab ketta Linuxi NTFS-draiveriga, mis oskab kirjutada ja mida Linuxi masinad kasutavad iga päev. Ketas antakse pärast Finderile, nii et failide kopeerimine sinna käib nagu iga teine kopeerimine.",
+            "Ketas jääb NTFS-iks ja Windows loeb seda pärast."
+          ]
+        },
+        {
+          "heading": "Ketta avamine",
+          "list": [
+            "Ühenda ketas. Lukotta näitab seda loendis.",
+            "Klõpsa sellel.",
+            "See ilmub Finderis jaotise Locations alla ja failid liiguvad mõlemat pidi."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "NTFS-kettal enamasti parooli ei ole, nii et kirjutada pole midagi, kui just ei ole sisse lülitatud ka BitLocker."
+          ]
+        },
+        {
+          "heading": "Kettad, mida Windows korralikult ei sulgenud",
+          "paragraphs": [
+            "Windows märgib ketta halvasti suletuks siis, kui kirjutamine katkes, enamasti sellepärast, et ketas tõmmati välja või masinal kadus poole pealt vool. Märge hoiatab järgmist arvutit, kes ketta avab, et ketas võib olla poolik ja tasuks üle vaadata.",
+            "Kiirkäivitus jätab sama märke ka siis, kui midagi valesti ei läinud. Windows 10-s ja 11-s on see algusest peale sisse lülitatud. Masina sulgemise asemel paneb see masina unerežiimi, mis jätab kettast mulje, nagu oleks see veel kasutuses.",
+            "macOS keeldub kettast mõlemas olekus ega ütle põhjust. Lukotta avab selle.",
+            "Kui Windowsi masin on sul veel alles, on puhtam lahendus ketas sinna tagasi ühendada ja see masin korralikult sulgeda: hoia all tõstuklahvi, kui klõpsad käsul Sule arvuti, siis jääb kiirkäivitus vahele."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "ava-vmdk-vdi-vhd-fail-macis",
+      "title": "Ava VMDK-, VDI- või VHD-fail Macis",
+      "description": "Ava Macis VMDK-, VDI-, VHD- või qcow2-fail ja kopeeri sealt faile välja, ilma VMware'i või VirtualBoxi paigaldamata ja masinat käivitamata.",
+      "lead": "Virtuaalmasin hoiab kogu oma ketast ühesainsas failis. Selle faili saad Macis avada ja sealt asju välja võtta, ilma et masinat kunagi käivitaksid.",
+      "sections": [
+        {
+          "heading": "Mis on kettatõmmis",
+          "paragraphs": [
+            "Kui käitad virtuaalmasinat, on selle masina kõvaketas üksainus tavaline fail, mis on sinu Macis. Selle operatsioonisüsteem, programmid ja iga dokument on kõik selles ühes failis sees.",
+            "Iga programm kirjutab selle faili omal moel. VMware kasutab VMDK-d, VirtualBox VDI-d, Hyper-V VHD-d ja VHDX-i ning QEMU ja UTM qcow2-t. Toortõmmis, mille laiend on enamasti .img, on ketta otsene koopia, mille ümber ei ole midagi."
+          ]
+        },
+        {
+          "heading": "Miks faili kättesaamine on tülikas",
+          "paragraphs": [
+            "Tavaline tee on virtuaalmasin käivitada, oodata, kuni see üles tuleb, otsida fail sealt seest üles ja kopeerida välja. See eeldab, et masin veel töötab ja et programm, mis seda käitab, on veel paigaldatud.",
+            "Finderist siin samuti abi ei ole. Topeltklõps VMDK-l ei tee midagi, sest macOS ei tea, mis seal sees on."
+          ]
+        },
+        {
+          "heading": "Kuidas Lukotta selle avab",
+          "paragraphs": [
+            "Lukotta loeb tõmmist otse. Ta saab aru, mis vormingus fail on, leiab sealt seest ketta ja avab selle väikeses Linuxi süsteemis, mida ta taustal käitab. Sisu ilmub siis Finderisse tavalise kettana.",
+            "Virtuaalmasin jääb välja lülitatuks. VMware ja VirtualBox ei pea paigaldatud olema ja faili avamine seda ei muuda."
+          ]
+        },
+        {
+          "heading": "Milliseid faile Lukotta avab",
+          "list": [
+            "qcow2, QEMU-st ja UTM-ist.",
+            "VMDK, VMware'ist.",
+            "VDI, VirtualBoxist.",
+            "VHD ja VHDX, Hyper-V-st.",
+            "Toortõmmised, mille laiend on enamasti .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Ühe avamine",
+          "list": [
+            "Vali File ja siis Ava kettatõmmis ning otsi fail üles.",
+            "Kui sees olev ketas on krüptitud, kirjuta parool või paroolifraas.",
+            "Sisu ilmub Finderis jaotise Locations alla."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ühes failis on tihti mitu ketast",
+          "paragraphs": [
+            "Kettatõmmises on enamasti rohkem kui üks sektsioon: väike alglaadimissektsioon, põhisektsioon, kus on kõik, ja vahel taastesektsioon. Lukotta näitab neid loendis ja sa avad selle, mida vajad, samamoodi nagu valiksid ketta."
+          ]
+        },
+        {
+          "heading": "Failide kopeerimine tõmmisesse",
+          "paragraphs": [
+            "qcow2 kirjutatakse tavalisel viisil ja sellele saab ohutult kirjutada.",
+            "VMDK-le, VDI-le ja VHD-le saab kirjutada, aga see on värske töö ega ole olnud kasutuses piisavalt kaua, et usaldada sellele midagi, mille kaotamist sa endale lubada ei saa. Kopeeri fail ja tee tööd koopiaga või ava see ainult lugemiseks ja võta failid sealt välja.",
+            "VHDX avaneb ainult lugemiseks ja sama teeb see VMDK sort, mis on OVA-faili sees. Selline sort kirjutatakse ühe korraga läbi ja seda ei saa pärast kohapeal muuta."
+          ]
+        },
+        {
+          "heading": "Failid, mis lahti ei lähe",
+          "paragraphs": [
+            "Tõmmis avaneb ainult siis, kui see on omaette terviklik.",
+            "VMware'i hetktõmmiste ahel jagab masina praeguse oleku algse faili ja rea väiksemate failide vahel, mis panevad kirja, mis pärast seda muutus. Tükeldatud ketas jagab ühe tõmmise paljudeks osadeks. Hyper-V vahetõmmis sisaldab ainult erinevusi teisest failist.",
+            "Igal neist juhtudest on fail, mis sul on, ühe komplekti osa, ja Lukotta avab ühe faili korraga."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Lähemalt BitLockeri ketastest ja sellest, mida teha, kui parool on kadunud",
+    "ntfs": "Lähemalt NTFS-ketastest, ka nendest, mille Windows halvasti sulges",
+    "linux": "Lähemalt Linuxi ketastest ja LUKS-i krüptimisest",
+    "disk-images": "Lähemalt kettatõmmistest ja sellest, millistele saab kirjutada"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

@@ -55,3 +55,45 @@ site is right for the Finder sidebar, which is what both are naming.
 **Register**: the site addresses the reader as *tu* (`scrie parola`), the
 application as *dumneavoastră* (`Deblocați`). The task pages follow the site.
 One of the two should move.
+
+## Languages macOS is not offered in
+
+Estonian, Latvian, Lithuanian, Albanian, Slovenian, Bulgarian and Filipino have
+no macOS localisation, so the reader's own Mac shows **Finder**, **File**,
+**Get Info**, **Format** and **Locations** in English. The task pages in those
+languages keep those five in English and translate everything around them,
+which is what the landing page already does for Estonian.
+
+Note that Lukotta's own menu items are translated in all of them, so one
+sentence legitimately mixes the two: an English *File* menu holding a menu item
+in the reader's language.
+
+## fi — two words for a disk image, and two for a drive
+
+`features.body2` says **levytiedosto**, `faq.5.a` says **levykuva**. Apple's
+Finnish and the application both say levytiedosto, which is what the task pages
+use.
+
+Separately the application says **asema** for a drive where the site says
+**levy**. Apple's Finnish distinguishes them (asema is the drive, levy the
+disk), so this one may be right as it stands, but it is worth a look.
+
+## hu — "lemez" and "meghajtó" are used for the same thing
+
+`how.lead` and `features.body2` say **lemez**; `faq.2.a` and `faq.3.a` say
+**meghajtó**. Hungarian distinguishes them (lemez the disk, meghajtó the
+drive), which the English also does, so the task pages keep meghajtó for a
+drive and lemez for a disk. The landing page mixes them.
+
+## lv — the landing page translates a name the reader's Mac shows in English
+
+`how.3.body` says **sadaļā Atrašanās vietas** for the Finder sidebar's
+Locations. macOS is not offered in Latvian, so that sidebar reads *Locations*
+on the reader's own screen, and a translated name makes the instruction fail.
+GLOSSARY.md already says to keep the English in this case.
+
+The task pages keep **Locations**, so they and the landing page now differ.
+The landing page is the one to change.
+
+Also `how.lead` says **failu sistēmas** while `faq.3.a` says **datnes** for
+files. The task pages use fails and failu sistēma throughout.

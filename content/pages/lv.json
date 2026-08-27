@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "lv",
+    "name": "Latvian",
+    "native": "Latviešu",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Lejupielāde un lietošana ir bez maksas."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "atvert-bitlocker-disku-mac-datora",
+      "title": "Atvērt BitLocker disku Mac datorā",
+      "description": "macOS neatver BitLocker disku, bet piedāvā to izdzēst. Lūk, kāpēc, un kā disku izlasīt un kopēt uz to failus.",
+      "lead": "Pievienojat BitLocker disku Mac datoram, un Finder piedāvā to izdzēst. Lūk, kāpēc, un kā disku tā vietā izlasīt.",
+      "sections": [
+        {
+          "heading": "Kas ir BitLocker",
+          "paragraphs": [
+            "BitLocker ir šifrēšana, kas iebūvēta Windows. Kad tā ir ieslēgta, viss, kas tiek rakstīts uz diska, tiek sajaukts, un saturu bez paroles izlasīt nevar. Windows to lieto savam diskam, kā arī USB diskiem un atmiņas kartēm, kur tā saucas BitLocker To Go.",
+            "Abos gadījumos tā ir viena un tā pati šifrēšana. Ja disks pazūd, tas, kurš to atrod, no tā neko izlasīt nevar."
+          ]
+        },
+        {
+          "heading": "Kas notiek, kad pievienojat tādu Mac datoram",
+          "paragraphs": [
+            "Finder paziņo, ka disks nav lasāms, un piedāvā to inicializēt vai izdzēst. Paroli tas neprasa, un nekas ekrānā neliek domāt, ka disks ir bloķēts, nevis bojāts.",
+            "Disks nav bojāts. macOS ir sava šifrēšana, FileVault, un no BitLocker tas nesaprot neko. Tas izlasa diska sākumu, atrod uzbūvi, ko neatpazīst, un izturas pret disku kā pret neformatētu, tāpēc vienīgais, ko tas var piedāvāt, ir izdzēst."
+          ]
+        },
+        {
+          "heading": "Kā Lukotta to atver",
+          "paragraphs": [
+            "Linux BitLocker prot lasīt jau gadiem, un tieši to Lukotta izmanto. Tā fonā palaiž nelielu Linux sistēmu, nodod tai disku un atslēdz to tur ar paroli, ko ievadāt. Atslēgtais disks nonāk atpakaļ pie Finder, kur tas parādās sadaļā Locations blakus pārējiem jūsu diskiem.",
+            "Disks netiek ne pārveidots, ne kopēts. Tas paliek BitLocker disks, paliek šifrēts, un Windows to joprojām lasa."
+          ]
+        },
+        {
+          "heading": "Diska atvēršana",
+          "list": [
+            "Pievienojiet disku. Lukotta to parāda sarakstā un atzīmē kā bloķētu.",
+            "Noklikšķiniet uz tā un ievadiet paroli, ko lietojat Windows vidē.",
+            "Disks parādās Finder sadaļā Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ja paroles jums nav",
+          "paragraphs": [
+            "Kad disks tika šifrēts, Windows izveidoja atkopšanas atslēgu un pajautāja, kur to glabāt. Tā atver disku paroles vietā. Tajā ir 48 cipari, astoņās sešu ciparu grupās:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Tā var būt saglabāta Microsoft kontā, teksta failā vai izdrukāta uz papīra. Ielīmējiet to tur, kur citādi būtu jāraksta parole.",
+            "Bez paroles vai atslēgas disku nevar atvērt neviena programma nevienā datorā."
+          ]
+        },
+        {
+          "heading": "Diski, kas Mac datorā neatvērsies",
+          "paragraphs": [
+            "Daži Windows datori paroli neprasa nekad. Tie glabā atslēgu mikroshēmā uz mātesplates, ko sauc par TPM, un atslēdz disku paši, kad šī mašīna startē.",
+            "Šādi iestatīts disks strādā tikai tajā datorā, no kura tas nāk, jo atslēga to nekad nepamet. Neviens Mac to atvērt nevar, un cits Windows dators arī ne. Ja diska šifrēšanas brīdī tika saglabāta atkopšanas atslēga, tā to joprojām atver."
+          ]
+        },
+        {
+          "heading": "Failu kopēšana uz disku",
+          "paragraphs": [
+            "BitLocker diski atveras gan lasīšanai, gan rakstīšanai, tāpēc Mac var pievienot failus Windows rezerves kopijai, nevis tikai ņemt no tās.",
+            "Lukotta var atvērt disku arī tikai lasīšanai, un to ir vērts darīt, kad glābjat failus no diska, kas ir mēdzis ķibelēties. Tad uz to neko uzrakstīt nevar."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "lasit-ext4-disku-mac-datora",
+      "title": "Lasīt ext4, btrfs vai XFS disku Mac datorā",
+      "description": "macOS nelasa ne ext4, ne btrfs, ne XFS un piedāvā disku izdzēst. Lūk, kāpēc, un kā Mac datorā atvērt Linux disku, arī LUKS.",
+      "lead": "Pievienojat disku no Linux mašīnas, un Finder piedāvā to izdzēst. Lūk, kāpēc, un kā to tā vietā izlasīt.",
+      "sections": [
+        {
+          "heading": "Kāpēc Mac nespēj disku izlasīt",
+          "paragraphs": [
+            "Katram diskam ir failu sistēma: kārtība, kas pieraksta, kur sākas katrs fails, kā to sauc un kuras diska daļas vēl ir brīvas. Windows lieto NTFS. macOS lieto APFS. Linux parasti lieto ext4, dažkārt btrfs vai XFS.",
+            "Paši faili ir visparastākie. Atšķiras rādītājs to priekšā, un dators, kas šo rādītāju izlasīt nespēj, neko atrast nevar, kaut arī viss joprojām ir vietā."
+          ]
+        },
+        {
+          "heading": "Kas notiek, kad pievienojat tādu Mac datoram",
+          "paragraphs": [
+            "Finder paziņo, ka disks nav lasāms, un piedāvā to izdzēst. To pašu paziņojumu macOS dod par tukšu disku un par tādu, kas sāk bojāties, tāpēc paziņojums nekādi neļauj saprast, ka disks ir kārtībā.",
+            "macOS atbalsta savas failu sistēmas un dažas izplatītas, piemēram, exFAT. Linux failu sistēmas to vidū nav, tāpēc ext4 disks macOS acīs izskatās pēc tukša diska."
+          ]
+        },
+        {
+          "heading": "Kā Lukotta to lasa",
+          "paragraphs": [
+            "Lukotta fonā palaiž nelielu Linux sistēmu un nodod tai disku. Linux ext4, btrfs un XFS lasa pats, tāpēc disks tur atveras bez jebkādas pārveidošanas, un Lukotta to nodod tālāk Finder.",
+            "Uz diska nekas netiek rakstīts, un tas darbojas kā parasti, kad nonāk atpakaļ Linux mašīnā."
+          ]
+        },
+        {
+          "heading": "Ko Lukotta lasa",
+          "paragraphs": [
+            "ext2, ext3 un ext4, kas aptver lielāko daļu Linux sistēmu. btrfs, kas Fedora un openSUSE ir noklusējuma. XFS, kas izplatīts serveros.",
+            "Šifrētu vai nešifrētu. Ja disks iestatīts ar LVM, kas vienu fizisku disku sadala vairākos sējumos, tie visi atveras kopā, nevis pa vienam."
+          ]
+        },
+        {
+          "heading": "Diska atvēršana",
+          "list": [
+            "Pievienojiet disku. Lukotta parāda, kas uz tā ir.",
+            "Ja tas ir šifrēts, ievadiet paroles frāzi.",
+            "Disks parādās Finder sadaļā Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ja tiek prasīta paroles frāze",
+          "paragraphs": [
+            "LUKS ir veids, kā Linux šifrē visu disku. Ja mašīna, no kuras šis disks nāk, startēšanas sākumā, pirms pieteikšanās ekrāna, prasa paroles frāzi, tas ir LUKS, un tieši šī paroles frāze šeit jāievada.",
+            "Tā ir atsevišķa no pieteikšanās paroles, kaut arī daudzi abām liek vienu un to pašu."
+          ]
+        },
+        {
+          "heading": "Diski, kas neatvērsies",
+          "paragraphs": [
+            "LUKS disku var iestatīt tā, ka tā galvene glabājas citur, uz cita diska vai USB atmiņas. Galvene ir tā daļa, kas apraksta šifrēšanu. Bez tās uz diska nav nekā, ko atslēgt.",
+            "Jaunākas Ubuntu instalācijas atslēgu var piesaistīt arī mikroshēmai mašīnas iekšpusē, tāpat kā to dara BitLocker. Tādi diski atveras tikai tajā datorā, no kura tie nāk."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "rakstit-uz-ntfs-diska-mac-datora",
+      "title": "Rakstīt uz NTFS diska Mac datorā",
+      "description": "macOS atver NTFS diskus tikai lasīšanai, tāpēc faili no tiem nāk nost, bet virsū netiek. Lūk, kāpēc, un kā Mac datorā rakstīt uz NTFS diska.",
+      "lead": "macOS ļauj kopēt failus no NTFS diska, bet ne uz to. Lūk, kāpēc, un ko ar to var darīt.",
+      "sections": [
+        {
+          "heading": "Kas ir NTFS",
+          "paragraphs": [
+            "NTFS ir failu sistēma, ko lieto Windows, gan savam diskam, gan ārējiem diskiem, kas formatēti Windows datorā. USB disks, kas formatēts Windows mašīnā, parasti ir NTFS.",
+            "Otra izplatītā ir exFAT, ko lieto lielākā daļa atmiņas karšu un daudzas USB atmiņas, jo gan Windows, gan macOS uz tās prot rakstīt. Ja jūsu disks ir exFAT, macOS ar to jau tiek galā un nekas no šeit rakstītā uz jums neattiecas. Lai pārbaudītu, noklikšķiniet uz diska Finder logā un izvēlieties File un tad Get Info. Rinda Format to pasaka."
+          ]
+        },
+        {
+          "heading": "Kas notiek, kad pievienojat tādu Mac datoram",
+          "paragraphs": [
+            "Disks parādās Finder logā, un jūs redzat failus. Failu kopēšana no tā notiek kā parasti. Kaut kā kopēšana uz to nenotiek: Finder atsakās, un disks izturas tā, it kā būtu bloķēts.",
+            "macOS atver NTFS diskus tikai lasīšanai. Rakstīt NTFS tas prot jau gadiem, taču tas ir izslēgts, un nav neviena atbalstīta veida, kā to ieslēgt. Rakstīt NTFS ir grūtāk nekā lasīt, un viena kļūda var atstāt disku, ko Windows pēc tam atvērt atsakās."
+          ]
+        },
+        {
+          "heading": "Kā Lukotta uz tā raksta",
+          "paragraphs": [
+            "Lukotta atver disku ar Linux NTFS draiveri, kas rakstīt prot un ko Linux mašīnas lieto ik dienu. Disks pēc tam tiek nodots Finder, tāpēc failu kopēšana uz to notiek tāpat kā jebkura cita kopēšana.",
+            "Disks paliek NTFS, un Windows to pēc tam lasa."
+          ]
+        },
+        {
+          "heading": "Diska atvēršana",
+          "list": [
+            "Pievienojiet disku. Lukotta to parāda sarakstā.",
+            "Noklikšķiniet uz tā.",
+            "Tas parādās Finder sadaļā Locations, un faili kopējas abos virzienos."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "NTFS diskam parasti paroles nav, tāpēc nekas nav jāievada, ja vien tam nav ieslēgts arī BitLocker."
+          ]
+        },
+        {
+          "heading": "Diski, ko Windows nav kārtīgi aizvēris",
+          "paragraphs": [
+            "Windows atzīmē disku kā slikti aizvērtu tad, kad rakstīšana tika pārtraukta, parasti tāpēc, ka disks tika izrauts vai mašīnai pusceļā pazuda strāva. Šī atzīme brīdina nākamo datoru, kas to atver, ka disks var būt uzrakstīts uz pusi un to vajadzētu pārbaudīt.",
+            "Ātrā startēšana atstāj to pašu atzīmi arī tad, kad nekas nav noticis. Windows 10 un 11 tā ir ieslēgta jau no sākuma. Tā vietā, lai mašīnu izslēgtu, tā to iemidzina, un disks tāpēc izskatās tā, it kā vēl tiktu lietots.",
+            "macOS abos šajos stāvokļos disku atraida un iemeslu nenosauc. Lukotta to atver.",
+            "Ja Windows mašīna jums vēl ir, tīrāks risinājums ir pievienot disku atpakaļ tai un šo mašīnu kārtīgi izslēgt: turiet nospiestu Shift, kamēr klikšķināt uz Izslēgt, tas izlaiž ātro startēšanu."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "atvert-vmdk-vdi-vhd-failu-mac-datora",
+      "title": "Atvērt VMDK, VDI vai VHD failu Mac datorā",
+      "description": "Atveriet Mac datorā VMDK, VDI, VHD vai qcow2 failu un izkopējiet no tā failus, neinstalējot VMware vai VirtualBox un nepalaižot mašīnu.",
+      "lead": "Virtuāla mašīna glabā visu savu disku vienā vienīgā failā. Šo failu jūs varat atvērt Mac datorā un paņemt no tā lietas, nemaz nepalaižot mašīnu.",
+      "sections": [
+        {
+          "heading": "Kas ir diska attēls",
+          "paragraphs": [
+            "Kad darbiniet virtuālu mašīnu, šīs mašīnas cietais disks ir viens vienīgs parasts fails, kas atrodas jūsu Mac datorā. Tās operētājsistēma, tās programmas un katrs dokuments tajā — viss ir šajā vienā failā.",
+            "Katra programma šo failu raksta pa savam. VMware lieto VMDK, VirtualBox lieto VDI, Hyper-V lieto VHD un VHDX, bet QEMU un UTM lieto qcow2. Neapstrādāts attēls, kas parasti beidzas ar .img, ir tieša diska kopija, ap kuru nekā nav."
+          ]
+        },
+        {
+          "heading": "Kāpēc dabūt no tā failu ārā ir apgrūtinoši",
+          "paragraphs": [
+            "Ierastais ceļš ir palaist virtuālo mašīnu, sagaidīt, kamēr tā uzkāpj, atrast tajā failu un pārkopēt to. Tas nozīmē, ka mašīnai vēl jāstrādā un ka programmai, kas to darbina, vēl jābūt instalētai.",
+            "Arī Finder šeit nelīdz. Dubultklikšķis uz VMDK neizdara neko, jo macOS nezina, kas tajā ir iekšā."
+          ]
+        },
+        {
+          "heading": "Kā Lukotta to atver",
+          "paragraphs": [
+            "Lukotta lasa attēlu tieši. Tā noskaidro, kādā formātā fails ir, atrod tajā disku un atver to nelielajā Linux sistēmā, ko darbina fonā. Tas, kas ir iekšā, tad parādās Finder kā parasts disks.",
+            "Virtuālā mašīna paliek izslēgta. VMware un VirtualBox instalēti būt nav jābūt, un faila atvēršana to nemaina."
+          ]
+        },
+        {
+          "heading": "Kādus failus Lukotta atver",
+          "list": [
+            "qcow2, no QEMU un UTM.",
+            "VMDK, no VMware.",
+            "VDI, no VirtualBox.",
+            "VHD un VHDX, no Hyper-V.",
+            "Neapstrādāti attēli, kas parasti beidzas ar .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Kā atvērt vienu",
+          "list": [
+            "Izvēlieties File un tad Atvērt diska attēlu, un norādiet failu.",
+            "Ja disks iekšā ir šifrēts, ievadiet paroli vai paroles frāzi.",
+            "Saturs parādās Finder sadaļā Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Vienā failā bieži ir vairāki diski",
+          "paragraphs": [
+            "Diska attēlā parasti ir vairāk nekā viens nodalījums: mazs sāknēšanas nodalījums, galvenais, kurā ir viss, un dažkārt atkopšanas nodalījums. Lukotta tos parāda sarakstā, un jūs atverat to, kurš vajadzīgs, gluži tāpat kā izvēlētos disku."
+          ]
+        },
+        {
+          "heading": "Failu kopēšana attēlā",
+          "paragraphs": [
+            "qcow2 tiek rakstīts parastajā veidā, un tajā rakstīt ir droši.",
+            "VMDK, VDI un VHD rakstīt var, taču tas ir svaigs darbs un nav bijis lietošanā pietiekami ilgi, lai tam uzticētu to, ko nevarat atļauties pazaudēt. Nokopējiet failu un strādājiet ar kopiju vai atveriet to tikai lasīšanai un labāk paņemiet failus ārā.",
+            "VHDX atveras tikai lasīšanai, tāpat kā tā VMDK šķirne, kas mēdz būt OVA faila iekšpusē. Šī šķirne tiek uzrakstīta vienā paņēmienā, un pēc tam to uz vietas mainīt vairs nevar."
+          ]
+        },
+        {
+          "heading": "Faili, kas neatvērsies",
+          "paragraphs": [
+            "Attēls atveras tikai tad, ja tas pats par sevi ir vesels.",
+            "VMware momentuzņēmumu ķēde izkaisa mašīnas pašreizējo stāvokli pa sākotnējo failu un virkni mazāku, kas pieraksta, kas pēc tam mainījies. Sadalīts disks salauž vienu attēlu daudzos gabalos. Hyper-V starpības disks satur tikai atšķirības no cita faila.",
+            "Katrā no šiem gadījumiem fails, kas jums ir, ir daļa no kopuma, un Lukotta atver vienu failu vienlaikus."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Vairāk par BitLocker diskiem un to, ko darīt, ja parole ir pazudusi",
+    "ntfs": "Vairāk par NTFS diskiem, arī tiem, ko Windows slikti aizvēris",
+    "linux": "Vairāk par Linux diskiem un LUKS šifrēšanu",
+    "disk-images": "Vairāk par disku attēliem un to, kuros var rakstīt"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

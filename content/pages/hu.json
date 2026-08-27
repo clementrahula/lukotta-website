@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "hu",
+    "name": "Hungarian",
+    "native": "Magyar",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "A letöltés és a használat ingyenes."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "bitlocker-meghajto-megnyitasa-macen",
+      "title": "BitLocker-meghajtó megnyitása Mac gépen",
+      "description": "A macOS nem nyit meg BitLocker-meghajtót, helyette a törlését ajánlja. Íme miért, és hogyan olvasd a meghajtót és másolj rá fájlokat.",
+      "lead": "Csatlakoztatsz egy BitLocker-meghajtót egy Machez, és a Finder a törlését ajánlja. Íme miért, és hogyan olvasd inkább a meghajtót.",
+      "sections": [
+        {
+          "heading": "Mi a BitLocker",
+          "paragraphs": [
+            "A BitLocker a Windowsba épített titkosítás. Ha be van kapcsolva, minden összekeveredik, amit a meghajtóra írnak, és a tartalom jelszó nélkül nem olvasható. A Windows a saját meghajtóján használja, valamint USB-meghajtókon és memóriakártyákon, ahol BitLocker To Go a neve.",
+            "Mindkét esetben ugyanaz a titkosítás. Ha a meghajtó elvész, aki megtalálja, semmit sem tud róla leolvasni."
+          ]
+        },
+        {
+          "heading": "Mi történik, ha ilyet csatlakoztatsz egy Machez",
+          "paragraphs": [
+            "A Finder azt mondja, hogy a lemez olvashatatlan, és felajánlja az inicializálását vagy törlését. Nem kér jelszót, és a képernyőn semmi nem utal arra, hogy a meghajtó zárolt, nem pedig romlott.",
+            "A meghajtó nem sérült. A macOS-nek megvan a saját titkosítása, a FileVault, és a BitLockerből semmit sem ért. Elolvassa a meghajtó elejét, olyan felépítést talál, amelyet nem ismer fel, és formázatlanként kezeli a lemezt, ezért az egyetlen, amit felajánlhat, a törlés."
+          ]
+        },
+        {
+          "heading": "Hogyan nyitja meg a Lukotta",
+          "paragraphs": [
+            "A Linux évek óta tudja olvasni a BitLockert, és a Lukotta épp ezt használja. A háttérben elindít egy kis Linux-rendszert, átadja neki a meghajtót, és ott oldja fel a beírt jelszóval. A feloldott meghajtó visszakerül a Finderhez, ahol a Helyek alatt jelenik meg, a többi lemezed mellett.",
+            "A meghajtót nem alakítja át és nem másolja le. BitLocker-meghajtó marad, titkosítva marad, és a Windows továbbra is olvassa."
+          ]
+        },
+        {
+          "heading": "A meghajtó megnyitása",
+          "list": [
+            "Csatlakoztasd a meghajtót. A Lukotta felsorolja, és zároltként mutatja.",
+            "Kattints rá, és írd be a jelszót, amelyet a Windowsban használsz.",
+            "A meghajtó megjelenik a Finderben, a Helyek alatt."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ha nincs meg a jelszó",
+          "paragraphs": [
+            "Amikor a meghajtót titkosították, a Windows helyreállítási kulcsot készített, és megkérdezte, hová kerüljön. Ez a jelszó helyett nyitja meg a meghajtót. 48 jegyű, hat számjegyből álló nyolc csoportban:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Lehet Microsoft-fiókban, szövegfájlban, vagy papírra nyomtatva. Illeszd be oda, ahová a jelszó kerülne.",
+            "A jelszó és a kulcs nélkül a meghajtót semmilyen program nem tudja megnyitni, semmilyen gépen."
+          ]
+        },
+        {
+          "heading": "Meghajtók, amelyek Mac gépen nem nyílnak meg",
+          "paragraphs": [
+            "Egyes Windows-gépek soha nem kérnek jelszót. A kulcsot az alaplap egyik lapkájában tartják, amelynek TPM a neve, és maguktól oldják fel a meghajtót, amikor az a gép elindul.",
+            "Az így beállított meghajtó csak abban a gépben működik, amelyikből származik, mert a kulcs soha nem hagyja el. Egyetlen Mac sem tudja megnyitni, és másik Windows-gép sem. Ha a titkosításkor mentettek helyreállítási kulcsot, az továbbra is megnyitja."
+          ]
+        },
+        {
+          "heading": "Fájlok másolása a meghajtóra",
+          "paragraphs": [
+            "A BitLocker-meghajtók olvasásra és írásra is megnyílnak, így egy Mac hozzá tud tenni fájlokat egy Windows-mentéshez, nem csak levenni róla.",
+            "A Lukotta csak olvasásra is meg tudja nyitni a meghajtót, ami akkor éri meg, amikor olyan meghajtóról mentesz fájlokat, amelyik hibázgatott. Olyankor semmit sem lehet rá írni."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "ext4-meghajto-olvasasa-macen",
+      "title": "ext4-, btrfs- vagy XFS-meghajtó olvasása Macen",
+      "description": "A macOS nem olvas ext4-et, btrfs-t és XFS-t sem, és a meghajtó törlését ajánlja. Íme miért, és hogyan nyiss meg Macen Linux-meghajtót, LUKS-szal együtt.",
+      "lead": "Csatlakoztatsz egy Linux-gépből származó meghajtót, és a Finder a törlését ajánlja. Íme miért, és hogyan olvasd inkább.",
+      "sections": [
+        {
+          "heading": "Miért nem tudja egy Mac olvasni a meghajtót",
+          "paragraphs": [
+            "Minden meghajtón van fájlrendszer: az a rend, amely feljegyzi, hol kezdődik minden fájl, mi a neve, és a lemez mely részei szabadok még. A Windows NTFS-t használ. A macOS APFS-t. A Linux többnyire ext4-et, néha btrfs-t vagy XFS-t.",
+            "Maguk a fájlok hétköznapiak. Az előttük álló mutató a más, és az a gép, amelyik ezt a mutatót nem tudja olvasni, semmit sem talál meg, pedig minden ott van még."
+          ]
+        },
+        {
+          "heading": "Mi történik, ha ilyet csatlakoztatsz egy Machez",
+          "paragraphs": [
+            "A Finder azt mondja, hogy a lemez olvashatatlan, és felajánlja a törlését. Ugyanezt az üzenetet adja a macOS üres lemezre és romló lemezre is, így az üzenetből sehogy sem derül ki, hogy a meghajtó rendben van.",
+            "A macOS a saját fájlrendszereit támogatja, és néhány elterjedtet, például az exFAT-ot. A Linux fájlrendszerei nincsenek köztük, ezért a macOS szemében egy ext4-meghajtó úgy fest, mint egy üres lemez."
+          ]
+        },
+        {
+          "heading": "Hogyan olvassa a Lukotta",
+          "paragraphs": [
+            "A Lukotta a háttérben elindít egy kis Linux-rendszert, és átadja neki a meghajtót. A Linux magától olvassa az ext4-et, a btrfs-t és az XFS-t, így a meghajtó ott mindenféle átalakítás nélkül megnyílik, a Lukotta pedig továbbadja a Findernek.",
+            "A meghajtóra semmi sem íródik, és a szokásos módon működik, amikor visszakerül a Linux-gépbe."
+          ]
+        },
+        {
+          "heading": "Mit olvas a Lukotta",
+          "paragraphs": [
+            "ext2, ext3 és ext4, amelyek a Linux-rendszerek nagy részét lefedik. btrfs, amely a Fedorán és az openSUSE-n az alapértelmezett. XFS, amely kiszolgálókon elterjedt.",
+            "Titkosítva vagy anélkül. Ha a meghajtót LVM-mel állították be, amely egy fizikai meghajtót több kötetre oszt, akkor mind együtt nyílik meg, nem egyesével."
+          ]
+        },
+        {
+          "heading": "A meghajtó megnyitása",
+          "list": [
+            "Csatlakoztasd a meghajtót. A Lukotta felsorolja, mi van rajta.",
+            "Ha titkosított, írd be a jelmondatot.",
+            "A meghajtó megjelenik a Finderben, a Helyek alatt."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ha jelmondatot kér",
+          "paragraphs": [
+            "A LUKS az a mód, ahogyan a Linux egy egész meghajtót titkosít. Ha az a gép, amelyikből ez a meghajtó származik, az indulás elején, a bejelentkezési képernyő előtt jelmondatot kér, az a LUKS, és épp azt a jelmondatot kell ide beírni.",
+            "Ez nem ugyanaz, mint a bejelentkezési jelszó, bár sokan mindkettőnek ugyanazt adják meg."
+          ]
+        },
+        {
+          "heading": "Meghajtók, amelyek nem nyílnak meg",
+          "paragraphs": [
+            "Egy LUKS-meghajtó beállítható úgy, hogy a fejléce máshol legyen, egy másik lemezen vagy egy USB-kulcson. A fejléc az a rész, amely leírja a titkosítást. Nélküle a meghajtón nincs mit feloldani.",
+            "Az újabb Ubuntu-telepítések a kulcsot a gép belsejében lévő lapkához is köthetik, ugyanúgy, ahogy a BitLocker teszi. Azok a meghajtók csak abban a gépben nyílnak meg, amelyikből származnak."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "iras-ntfs-meghajtora-macen",
+      "title": "Írás NTFS-meghajtóra Mac gépen",
+      "description": "A macOS csak olvasásra nyitja meg az NTFS-meghajtókat, így a fájlok lejönnek róluk, de nem mennek rájuk. Íme miért, és hogyan írj NTFS-meghajtóra.",
+      "lead": "A macOS engedi, hogy fájlokat másolj le egy NTFS-meghajtóról, de rá nem. Íme miért, és mit lehet tenni ellene.",
+      "sections": [
+        {
+          "heading": "Mi az NTFS",
+          "paragraphs": [
+            "Az NTFS az a fájlrendszer, amelyet a Windows használ, a saját meghajtóján és a Windows-gépen formázott külső meghajtókon is. A Windows-gépen formázott USB-meghajtó többnyire NTFS.",
+            "A másik elterjedt az exFAT, amelyet a legtöbb memóriakártya és sok USB-kulcs használ, mert a Windows és a macOS is tud rá írni. Ha a meghajtód exFAT, a macOS már elbánik vele, és ebből semmi nem vonatkozik rád. Az ellenőrzéshez kattints a meghajtóra a Finderben, és válaszd a Fájl, majd az Adatok menüpontot. A Formátum sor megmondja."
+          ]
+        },
+        {
+          "heading": "Mi történik, ha ilyet csatlakoztatsz egy Machez",
+          "paragraphs": [
+            "A meghajtó megjelenik a Finderben, és látod a fájlokat. Fájlokat lemásolni róla a szokásos módon megy. Bármit rámásolni nem: a Finder megtagadja, és a meghajtó úgy viselkedik, mintha zárolva volna.",
+            "A macOS csak olvasásra nyitja meg az NTFS-meghajtókat. Évek óta tud NTFS-re írni, de ez ki van kapcsolva, és nincs támogatott mód a bekapcsolására. NTFS-re írni nehezebb, mint olvasni, és egyetlen hiba olyan meghajtót hagyhat maga után, amelyet a Windows utána nem hajlandó megnyitni."
+          ]
+        },
+        {
+          "heading": "Hogyan ír rá a Lukotta",
+          "paragraphs": [
+            "A Lukotta a Linux NTFS-illesztőprogramjával nyitja meg a meghajtót, amely tud írni, és amelyet a Linux-gépek nap mint nap használnak. A meghajtót utána átadja a Findernek, így a fájlok rámásolása ugyanúgy megy, mint bármelyik másik másolás.",
+            "A meghajtó NTFS marad, és a Windows utána is olvassa."
+          ]
+        },
+        {
+          "heading": "A meghajtó megnyitása",
+          "list": [
+            "Csatlakoztasd a meghajtót. A Lukotta felsorolja.",
+            "Kattints rá.",
+            "Megjelenik a Finderben, a Helyek alatt, és a fájlok mindkét irányba mozognak."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Egy NTFS-meghajtón többnyire nincs jelszó, így nincs mit beírni, hacsak a BitLockert is be nem kapcsolták rajta."
+          ]
+        },
+        {
+          "heading": "Meghajtók, amelyeket a Windows nem zárt le rendesen",
+          "paragraphs": [
+            "A Windows rosszul lezártként jelöl meg egy meghajtót, ha egy írás félbeszakadt, többnyire mert a meghajtót kihúzták, vagy a gép menet közben áram nélkül maradt. A jelölés figyelmezteti a következő gépet, amely megnyitja, hogy a meghajtó félig írt lehet, és érdemes átnézni.",
+            "A gyorsindítás ugyanezt a jelölést hagyja akkor is, ha semmi nem romlott el. A Windows 10-ben és 11-ben eleve be van kapcsolva. Ahelyett hogy leállítaná a gépet, hibernálja, amitől a meghajtó úgy fest, mintha még használatban volna.",
+            "A macOS mindkét állapotban visszautasítja a meghajtót, és nem mondja meg, miért. A Lukotta megnyitja.",
+            "Ha megvan még a Windows-gép, a rendesebb megoldás visszacsatlakoztatni rá a meghajtót, és rendesen leállítani azt a gépet: tartsd nyomva a Shiftet, miközben a Leállítás gombra kattintasz, ez kihagyja a gyorsindítást."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "vmdk-vdi-vhd-fajl-megnyitasa-macen",
+      "title": "VMDK-, VDI- vagy VHD-fájl megnyitása Macen",
+      "description": "Nyiss meg Macen VMDK-, VDI-, VHD- vagy qcow2-fájlt, és másolj ki belőle fájlokat, a VMware vagy a VirtualBox telepítése és a gép elindítása nélkül.",
+      "lead": "Egy virtuális gép az egész lemezét egyetlen fájlban tartja. Ezt a fájlt megnyithatod egy Macen, és kivehetsz belőle dolgokat anélkül, hogy a gépet valaha elindítanád.",
+      "sections": [
+        {
+          "heading": "Mi a lemezkép",
+          "paragraphs": [
+            "Amikor virtuális gépet futtatsz, annak a gépnek a merevlemeze egyetlen hétköznapi fájl, amely a Macedon van. Az operációs rendszere, a programjai és minden dokumentuma abban az egy fájlban van benne.",
+            "Minden program a maga módján írja ezt a fájlt. A VMware VMDK-t használ, a VirtualBox VDI-t, a Hyper-V VHD-t és VHDX-et, a QEMU és az UTM pedig qcow2-t. A nyers lemezkép, amelynek a vége többnyire .img, egy lemez egyenes másolata, minden csomagolás nélkül."
+          ]
+        },
+        {
+          "heading": "Miért körülményes kivenni belőle egy fájlt",
+          "paragraphs": [
+            "A szokásos út az, hogy elindítod a virtuális gépet, megvárod amíg felmegy, megkeresed benne a fájlt, és átmásolod. Ehhez viszont a gépnek még működnie kell, és a programnak, amely futtatja, még telepítve kell lennie.",
+            "A Finder sem segít itt. Egy VMDK-ra duplán kattintva semmi sem történik, mert a macOS nem tudja, mi van benne."
+          ]
+        },
+        {
+          "heading": "Hogyan nyitja meg a Lukotta",
+          "paragraphs": [
+            "A Lukotta közvetlenül olvassa a lemezképet. Kideríti, milyen formátumban van a fájl, megtalálja benne a lemezt, és megnyitja abban a kis Linux-rendszerben, amelyet a háttérben futtat. Ami benne van, az utána hétköznapi lemezként jelenik meg a Finderben.",
+            "A virtuális gép kikapcsolva marad. A VMware-nek és a VirtualBoxnak nem kell telepítve lennie, és a fájl megnyitása nem változtat rajta."
+          ]
+        },
+        {
+          "heading": "Milyen fájlokat nyit meg a Lukotta",
+          "list": [
+            "qcow2, a QEMU-ból és az UTM-ből.",
+            "VMDK, a VMware-ből.",
+            "VDI, a VirtualBoxból.",
+            "VHD és VHDX, a Hyper-V-ből.",
+            "Nyers lemezképek, amelyek vége többnyire .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Megnyitni egyet",
+          "list": [
+            "Válaszd a Fájl, majd a Lemezkép megnyitása menüpontot, és keresd meg a fájlt.",
+            "Ha a benne lévő lemez titkosított, írd be a jelszót vagy a jelmondatot.",
+            "A tartalom megjelenik a Finderben, a Helyek alatt."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Egy fájlban gyakran több meghajtó van",
+          "paragraphs": [
+            "Egy lemezkép többnyire egynél több partíciót tartalmaz: egy kis rendszerindító partíciót, a fő partíciót, amelyen minden van, és néha egy helyreállítási partíciót. A Lukotta felsorolja őket, te pedig azt nyitod meg, amelyikre szükséged van, ugyanúgy, ahogy meghajtót választanál."
+          ]
+        },
+        {
+          "heading": "Fájlok másolása lemezképbe",
+          "paragraphs": [
+            "A qcow2 a szokásos módon íródik, és nyugodtan írható.",
+            "A VMDK, a VDI és a VHD írható, de ez friss munka, és nem volt elég hosszú ideig használatban ahhoz, hogy olyasmit bízz rá, aminek az elvesztését nem engedheted meg magadnak. Másold le a fájlt és a másolaton dolgozz, vagy nyisd meg csak olvasásra, és inkább vedd ki belőle a fájlokat.",
+            "A VHDX csak olvasásra nyílik meg, és ugyanez igaz arra a VMDK-fajtára, amely OVA-fájlban van. Az a fajta egy menetben íródik végig, és utána a helyén már nem változtatható meg."
+          ]
+        },
+        {
+          "heading": "Fájlok, amelyek nem nyílnak meg",
+          "paragraphs": [
+            "Egy lemezkép csak akkor nyílik meg, ha önmagában teljes.",
+            "A VMware pillanatkép-láncolata a gép mostani állapotát egy eredeti fájl és sok kisebb fájl között osztja szét, amelyek azt jegyzik fel, mi változott utána. Egy felosztott lemez egy lemezképet sok darabra bont. A Hyper-V különbségi lemeze csak egy másik fájltól való eltéréseket tartalmazza.",
+            "Mindegyik esetben a fájl, amely nálad van, egy készlet része, a Lukotta pedig egyszerre egy fájlt nyit meg."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Bővebben a BitLocker-meghajtókról, és arról mit tegyél ha a jelszó elveszett",
+    "ntfs": "Bővebben az NTFS-meghajtókról, azokról is amelyeket a Windows rosszul zárt le",
+    "linux": "Bővebben a Linux-meghajtókról és a LUKS-titkosításról",
+    "disk-images": "Bővebben a lemezképekről, és arról melyikbe lehet írni"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}
