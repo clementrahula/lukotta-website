@@ -164,7 +164,7 @@
     },
     "how.2.body": {
       "en": "A volume password, a LUKS passphrase, or a 48-digit BitLocker recovery key.",
-      "sq": "Fjalëkalimi i volumit, një Frazkalimi LUKS ose një çelës rikuperimi BitLocker me 48 shifra."
+      "sq": "Fjalëkalimi i volumit, një frazkalim LUKS ose një çelës rikuperimi BitLocker me 48 shifra."
     },
     "how.3.title": {
       "en": "Open it in Finder",
@@ -244,7 +244,7 @@
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "sq": "Përfshirë një volum që Windows e la në gjumë ose e mbylli keq"
+      "sq": "Përfshirë një volum që Windows e la në hibernim ose e mbylli keq"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "sq": "VMware, i sheshtë dhe i rrallë"
+      "sq": "VMware, flat dhe sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sq": "Ajo që përmban një OVA. Shkruhet me një kalim të vetëm, prandaj nuk mund të ndryshohet drejtpërdrejt"
+      "sq": "Ajo që përmban një OVA. Shkruhet me një kalim të vetëm, prandaj më pas nuk mund të ndryshohet në të njëjtin skedar"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

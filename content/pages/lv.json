@@ -72,7 +72,7 @@
           "heading": "Failu kopēšana uz disku",
           "paragraphs": [
             "BitLocker diski atveras gan lasīšanai, gan rakstīšanai, tāpēc Mac var pievienot failus Windows rezerves kopijai, nevis tikai ņemt no tās.",
-            "Lukotta var atvērt disku arī tikai lasīšanai, un to ir vērts darīt, kad glābjat failus no diska, kas ir mēdzis ķibelēties. Tad uz to neko uzrakstīt nevar."
+            "Lukotta var atvērt disku arī tikai lasīšanai, un to ir vērts darīt, kad glābjat failus no diska, kas jau ir sagādājis problēmas. Tad uz to neko uzrakstīt nevar."
           ]
         }
       ]
@@ -181,7 +181,7 @@
           "heading": "Diski, ko Windows nav kārtīgi aizvēris",
           "paragraphs": [
             "Windows atzīmē disku kā slikti aizvērtu tad, kad rakstīšana tika pārtraukta, parasti tāpēc, ka disks tika izrauts vai mašīnai pusceļā pazuda strāva. Šī atzīme brīdina nākamo datoru, kas to atver, ka disks var būt uzrakstīts uz pusi un to vajadzētu pārbaudīt.",
-            "Ātrā startēšana atstāj to pašu atzīmi arī tad, kad nekas nav noticis. Windows 10 un 11 tā ir ieslēgta jau no sākuma. Tā vietā, lai mašīnu izslēgtu, tā to iemidzina, un disks tāpēc izskatās tā, it kā vēl tiktu lietots.",
+            "Ātrā startēšana atstāj to pašu atzīmi arī tad, kad nekas nav noticis. Windows 10 un 11 tā ir ieslēgta jau no sākuma. Tā vietā, lai mašīnu izslēgtu, tā pārslēdz to hibernācijas režīmā, un disks tāpēc izskatās tā, it kā vēl tiktu lietots.",
             "macOS abos šajos stāvokļos disku atraida un iemeslu nenosauc. Lukotta to atver.",
             "Ja Windows mašīna jums vēl ir, tīrāks risinājums ir pievienot disku atpakaļ tai un šo mašīnu kārtīgi izslēgt: turiet nospiestu Shift, kamēr klikšķināt uz Izslēgt, tas izlaiž ātro startēšanu."
           ]
@@ -197,14 +197,14 @@
         {
           "heading": "Kas ir diska attēls",
           "paragraphs": [
-            "Kad darbiniet virtuālu mašīnu, šīs mašīnas cietais disks ir viens vienīgs parasts fails, kas atrodas jūsu Mac datorā. Tās operētājsistēma, tās programmas un katrs dokuments tajā — viss ir šajā vienā failā.",
+            "Kad darbināt virtuālo mašīnu, šīs mašīnas cietais disks ir viens vienīgs parasts fails, kas atrodas jūsu Mac datorā. Tās operētājsistēma, tās programmas un katrs dokuments tajā — viss ir šajā vienā failā.",
             "Katra programma šo failu raksta pa savam. VMware lieto VMDK, VirtualBox lieto VDI, Hyper-V lieto VHD un VHDX, bet QEMU un UTM lieto qcow2. Neapstrādāts attēls, kas parasti beidzas ar .img, ir tieša diska kopija, ap kuru nekā nav."
           ]
         },
         {
           "heading": "Kāpēc dabūt no tā failu ārā ir apgrūtinoši",
           "paragraphs": [
-            "Ierastais ceļš ir palaist virtuālo mašīnu, sagaidīt, kamēr tā uzkāpj, atrast tajā failu un pārkopēt to. Tas nozīmē, ka mašīnai vēl jāstrādā un ka programmai, kas to darbina, vēl jābūt instalētai.",
+            "Ierastais ceļš ir palaist virtuālo mašīnu, sagaidīt, kamēr tā sāknējas, atrast tajā failu un pārkopēt to. Tas nozīmē, ka mašīnai vēl jāstrādā un ka programmai, kas to darbina, vēl jābūt instalētai.",
             "Arī Finder šeit nelīdz. Dubultklikšķis uz VMDK neizdara neko, jo macOS nezina, kas tajā ir iekšā."
           ]
         },
@@ -212,7 +212,7 @@
           "heading": "Kā Lukotta to atver",
           "paragraphs": [
             "Lukotta lasa attēlu tieši. Tā noskaidro, kādā formātā fails ir, atrod tajā disku un atver to nelielajā Linux sistēmā, ko darbina fonā. Tas, kas ir iekšā, tad parādās Finder kā parasts disks.",
-            "Virtuālā mašīna paliek izslēgta. VMware un VirtualBox instalēti būt nav jābūt, un faila atvēršana to nemaina."
+            "Virtuālā mašīna paliek izslēgta. VMware un VirtualBox nav jābūt instalētiem, un faila atvēršana to nemaina."
           ]
         },
         {
@@ -245,7 +245,7 @@
           "heading": "Failu kopēšana attēlā",
           "paragraphs": [
             "qcow2 tiek rakstīts parastajā veidā, un tajā rakstīt ir droši.",
-            "VMDK, VDI un VHD rakstīt var, taču tas ir svaigs darbs un nav bijis lietošanā pietiekami ilgi, lai tam uzticētu to, ko nevarat atļauties pazaudēt. Nokopējiet failu un strādājiet ar kopiju vai atveriet to tikai lasīšanai un labāk paņemiet failus ārā.",
+            "VMDK, VDI un VHD rakstīt var, taču rakstīšanas atbalsts ir jauns un nav bijis lietošanā pietiekami ilgi, lai tam uzticētu to, ko nevarat atļauties pazaudēt. Nokopējiet failu un strādājiet ar kopiju vai atveriet to tikai lasīšanai un labāk paņemiet failus ārā.",
             "VHDX atveras tikai lasīšanai, tāpat kā tā VMDK šķirne, kas mēdz būt OVA faila iekšpusē. Šī šķirne tiek uzrakstīta vienā paņēmienā, un pēc tam to uz vietas mainīt vairs nevar."
           ]
         },
@@ -253,7 +253,7 @@
           "heading": "Faili, kas neatvērsies",
           "paragraphs": [
             "Attēls atveras tikai tad, ja tas pats par sevi ir vesels.",
-            "VMware momentuzņēmumu ķēde izkaisa mašīnas pašreizējo stāvokli pa sākotnējo failu un virkni mazāku, kas pieraksta, kas pēc tam mainījies. Sadalīts disks salauž vienu attēlu daudzos gabalos. Hyper-V starpības disks satur tikai atšķirības no cita faila.",
+            "VMware momentuzņēmumu ķēde sadala mašīnas pašreizējo stāvokli starp sākotnējo failu un virkni mazāku failu, kuros tiek pierakstītas vēlākās izmaiņas. Sadalīts disks sadala vienu attēlu vairākās daļās. Hyper-V starpības disks satur tikai atšķirības no cita faila.",
             "Katrā no šiem gadījumiem fails, kas jums ir, ir daļa no kopuma, un Lukotta atver vienu failu vienlaikus."
           ]
         }

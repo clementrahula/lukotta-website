@@ -7,7 +7,7 @@
     "dir": "ltr"
   },
   "ui": {
-    "free": "Atsisiųsti ir naudotis nemokama."
+    "free": "Atsisiųsti ir naudoti galima nemokamai."
   },
   "order": [
     "bitlocker",
@@ -65,14 +65,14 @@
           "heading": "Diskai, kurie Mac kompiuteryje neatsivers",
           "paragraphs": [
             "Kai kurie Windows kompiuteriai slaptažodžio niekada neprašo. Jie laiko raktą mikroschemoje ant pagrindinės plokštės, vadinamoje TPM, ir atrakina diską patys, kai ta mašina pasileidžia.",
-            "Taip sutvarkytas diskas veikia tik tame kompiuteryje, iš kurio jis paimtas, nes raktas iš jo niekada neišeina. Jokia Mac jo atverti negali, ir kitas Windows kompiuteris taip pat ne. Jei šifruojant diską buvo išsaugotas atkūrimo raktas, jis diską vis dar atveria."
+            "Taip sutvarkytas diskas veikia tik tame kompiuteryje, iš kurio jis paimtas, nes raktas iš jo niekada neišeina. Joks Mac kompiuteris jo atverti negali, ir kitas Windows kompiuteris taip pat ne. Jei šifruojant diską buvo išsaugotas atkūrimo raktas, jis diską vis dar atveria."
           ]
         },
         {
           "heading": "Failų kopijavimas į diską",
           "paragraphs": [
             "BitLocker diskai atsiveria ir skaitymui, ir rašymui, tad Mac gali pridėti failų prie Windows atsarginės kopijos, o ne tik juos iš ten pasiimti.",
-            "Lukotta gali atverti diską ir tik skaitymui, o tai verta daryti tada, kai gelbstite failus iš disko, kuris jau krečia pokštus. Tada į jį nieko įrašyti negalima."
+            "Lukotta gali atverti diską ir tik skaitymui, o tai verta daryti tada, kai gelbstite failus iš disko, kuris jau kėlė problemų. Tada į jį nieko įrašyti negalima."
           ]
         }
       ]
@@ -181,7 +181,7 @@
           "heading": "Diskai, kurių Windows tvarkingai neuždarė",
           "paragraphs": [
             "Windows pažymi diską kaip blogai uždarytą tada, kai rašymas buvo nutrauktas, dažniausiai todėl, kad diskas buvo ištrauktas arba mašinai įpusėjus dingo elektra. Ta žymė perspėja kitą kompiuterį, kuris jį atvers, kad diskas gali būti įrašytas tik iš dalies ir kad jį vertėtų patikrinti.",
-            "Spartusis paleidimas palieka tą pačią žymę net tada, kai niekas nenutiko. Windows 10 ir 11 jis įjungtas iš karto. Užuot mašiną išjungęs, jis ją užmigdo, ir dėl to diskas atrodo taip, tarsi vis dar būtų naudojamas.",
+            "Spartusis paleidimas palieka tą pačią žymę net tada, kai niekas nenutiko. Windows 10 ir 11 jis įjungtas iš karto. Užuot mašiną išjungęs, jis perjungia ją į hibernacijos režimą, ir dėl to diskas atrodo taip, tarsi vis dar būtų naudojamas.",
             "macOS abiem šiais atvejais disko atsisako ir priežasties nenurodo. Lukotta jį atveria.",
             "Jei Windows mašiną dar turite, tvarkingesnis sprendimas yra prijungti diską atgal prie jos ir tą mašiną kaip pridera išjungti: laikykite nuspaustą Shift, kai spaudžiate Išjungti, tai praleidžia spartųjį paleidimą."
           ]
@@ -204,7 +204,7 @@
         {
           "heading": "Kodėl išsitraukti iš jo failą nepatogu",
           "paragraphs": [
-            "Įprastas kelias yra paleisti virtualiąją mašiną, palaukti, kol ji pakils, susirasti joje failą ir jį nusikopijuoti. Vadinasi, mašina dar turi veikti, o programa, kuri ją paleidžia, dar turi būti įdiegta.",
+            "Įprastas kelias yra paleisti virtualiąją mašiną, palaukti, kol ji pasileis, susirasti joje failą ir jį nusikopijuoti. Vadinasi, mašina dar turi veikti, o programa, kuri ją paleidžia, dar turi būti įdiegta.",
             "Ir Finder čia nepadeda. Dukart spustelėjus VMDK nieko neįvyksta, nes macOS nežino, kas yra viduje."
           ]
         },
@@ -245,15 +245,15 @@
           "heading": "Failų kopijavimas į atvaizdį",
           "paragraphs": [
             "qcow2 rašomas įprastu būdu, ir į jį rašyti saugu.",
-            "Į VMDK, VDI ir VHD rašyti galima, bet tai naujas darbas, ir jis dar nebuvo naudojamas pakankamai ilgai, kad jam patikėtumėte tai, ko negalite sau leisti prarasti. Nusikopijuokite failą ir dirbkite su kopija arba atverkite jį tik skaitymui ir verčiau pasiimkite failus.",
-            "VHDX atsiveria tik skaitymui, tas pats galioja ir tai VMDK rūšiai, kuri būna OVA faile. Ta rūšis įrašoma vienu ėjimu, ir paskui jos vietoje pakeisti nebegalima."
+            "Į VMDK, VDI ir VHD rašyti galima, bet rašymo palaikymas yra naujas ir dar nebuvo naudojamas pakankamai ilgai, kad jam patikėtumėte tai, ko negalite sau leisti prarasti. Nusikopijuokite failą ir dirbkite su kopija arba atverkite jį tik skaitymui ir verčiau pasiimkite failus.",
+            "VHDX atsiveria tik skaitymui, tas pats galioja ir tai VMDK rūšiai, kuri būna OVA faile. Ta rūšis įrašoma vienu nenutrūkstamu įrašymu, o vėliau jos nebegalima keisti tame pačiame faile."
           ]
         },
         {
           "heading": "Failai, kurie neatsivers",
           "paragraphs": [
             "Atvaizdis atsiveria tik tada, jei jis pats savaime yra visas.",
-            "VMware momentinių kopijų grandinė išskaido dabartinę mašinos būklę po pradinį failą ir eilę mažesnių, kurie užrašo, kas po jo pasikeitė. Padalytas diskas suskaldo vieną atvaizdį į daug gabalų. Hyper-V skirtuminiame diske yra tik skirtumai nuo kito failo.",
+            "VMware momentinių kopijų grandinė paskirsto dabartinę mašinos būseną tarp pradinio failo ir kelių mažesnių failų, kuriuose įrašomi vėlesni pakeitimai. Padalytas diskas padalija vieną atvaizdį į daug dalių. Hyper-V skirtuminiame diske saugomi tik skirtumai nuo kito failo.",
             "Kiekvienu iš šių atvejų failas, kurį turite, yra rinkinio dalis, o Lukotta atveria po vieną failą."
           ]
         }

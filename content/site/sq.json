@@ -14,14 +14,14 @@
     "about": {
       "slug": "rreth",
       "title": "Rreth Lukotta",
-      "description": "Lukotta është një aplikacion macOS falas me burim të hapur që hap disqe BitLocker, NTFS dhe Linux, nën GNU General Public License.",
+      "description": "Lukotta është një aplikacion macOS falas me burim të hapur për disqe BitLocker, NTFS dhe Linux. Mirëmbahet nga një zhvillues, nën GNU General Public License.",
       "lead": "Lukotta hap disqe dhe imazhe disku që macOS nuk i lexon dot. Është falas, me burim të hapur, dhe mirëmbahet nga një person i vetëm.",
       "sections": [
         {
           "heading": "Çfarë është",
           "paragraphs": [
-            "Lukotta është një aplikacion për macOS. Hap disqe BitLocker, NTFS, LUKS, ext4, btrfs dhe XFS, si dhe imazhe disku të makinave virtuale në formatet qcow2, VMDK, VDI, VHD dhe VHDX. macOS nuk lexon asnjë prej tyre vetë. NTFS e lexon, por nuk shkruan në të.",
-            "Nis një sistem të vogël Linux në sfond, hap diskun atje dhe ia dorëzon Finder. Linux i lexon këto formate prej vitesh. Disku as nuk shndërrohet, as nuk kopjohet. Mbetet siç ishte, dhe makina nga vjen e lexon si më parë."
+            "Lukotta është një aplikacion për macOS. Hap disqe BitLocker, NTFS, LUKS, ext4, btrfs dhe XFS, si dhe imazhe disku të makinave virtuale në formatet qcow2, VMDK, VDI, VHD dhe VHDX. macOS nuk lexon asnjë prej tyre vetë. Mund të lexojë NTFS, por nuk mund të shkruajë në të.",
+            "Nis një makinë virtuale të vogël Linux në sfond, hap diskun atje dhe ia dorëzon aplikacionit Finder. Linux i lexon këto formate prej vitesh. Disku as nuk shndërrohet, as nuk kopjohet. Mbetet siç ishte, dhe makina nga vjen e lexon si më parë."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Si të njoftoni një gabim në Lukotta, të bëni një pyetje ose të njoftoni një problem sigurie. Issues në GitHub lexohen të parat.",
+      "description": "Si të njoftoni një gabim në Lukotta, të bëni një pyetje ose të njoftoni një problem sigurie. Issues në GitHub lexohen dhe marrin përgjigje të parat.",
       "lead": "Gabimet shkojnë në GitHub. Problemet e sigurisë shkojnë te adresa në SECURITY.md. Gjithçka tjetër shkon me email.",
       "sections": [
         {
           "heading": "Një gabim, ose një disk që nuk hapet",
           "paragraphs": [
-            "Hapni një issue në github.com/clementrahula/lukotta/issues. Issues lexohen të parat dhe janë publike, kështu që personi tjetër me të njëjtin disk gjen përgjigjen.",
+            "Hapni një issue në github.com/clementrahula/lukotta/issues. Issues lexohen të parat dhe janë publike, kështu që personi tjetër me të njëjtin disk mund ta gjejë përgjigjen.",
             "Thoni cili disk është, çfarë tregoi Lukotta dhe çfarë prisnit. Citoni gabimin saktësisht. Mos ngjitni kurrë një fjalëkalim ose një çelës rikuperimi në një issue."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Sa zgjat një përgjigje",
           "paragraphs": [
-            "Lukotta mirëmbahet nga një person i vetëm. Nuk ka mbështetje dhe nuk ka afat të premtuar përgjigjeje. Disa mesazhe zgjasin, dhe disa mbeten pa përgjigje.",
+            "Lukotta mirëmbahet nga një person i vetëm. Nuk ka zyrë mbështetjeje dhe nuk ka afat të premtuar përgjigjeje. Për disa mesazhe duhet kohë për të marrë përgjigje, dhe disa mbeten pa përgjigje.",
             "Një issue në GitHub zakonisht shkon më shpejt, sepse dikush tjetër mund të përgjigjet i pari."
           ]
         }

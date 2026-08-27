@@ -14,14 +14,14 @@
     "about": {
       "slug": "par-lietotni",
       "title": "Par lietotni Lukotta",
-      "description": "Lukotta ir bezmaksas atvērtā koda macOS lietotne, kas atver BitLocker, NTFS un Linux diskus, ar licenci GNU General Public License.",
+      "description": "Lukotta ir bezmaksas atvērtā koda macOS lietotne BitLocker, NTFS un Linux diskiem. To uztur viens izstrādātājs, ar licenci GNU General Public License.",
       "lead": "Lukotta atver diskus un disku attēlus, ko macOS nespēj nolasīt. Tā ir bez maksas, ar atvērtu kodu, un to uztur viens cilvēks.",
       "sections": [
         {
           "heading": "Kas tā ir",
           "paragraphs": [
             "Lukotta ir macOS lietotne. Tā atver BitLocker, NTFS, LUKS, ext4, btrfs un XFS diskus, kā arī virtuālo mašīnu disku attēlus formātos qcow2, VMDK, VDI, VHD un VHDX. macOS nevienu no tiem pats nelasa. NTFS tas lasa, bet tajā neraksta.",
-            "Tā fonā palaiž nelielu Linux sistēmu, atver disku tur un nodod to Finder. Linux šos formātus lasa jau gadiem. Disks netiek ne pārveidots, ne kopēts. Tas paliek tāds, kāds bija, un dators, no kura tas nāk, to lasa arī turpmāk."
+            "Tā fonā palaiž nelielu Linux virtuālo mašīnu, atver disku tur un nodod to Finder. Linux šos formātus lasa jau gadiem. Disks netiek ne pārveidots, ne kopēts. Tas paliek tāds, kāds bija, un dators, no kura tas nāk, to lasa arī turpmāk."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakti",
       "title": "Kontakti",
-      "description": "Kā ziņot par kļūdu lietotnē Lukotta, uzdot jautājumu vai ziņot par drošības problēmu. GitHub issue tiek lasīti vispirms.",
+      "description": "Kā ziņot par kļūdu lietotnē Lukotta, uzdot jautājumu vai ziņot par drošības problēmu. GitHub issue tiek lasīti vispirms un parasti uz tiem atbild visātrāk.",
       "lead": "Kļūdas iet uz GitHub. Drošības problēmas iet uz adresi, kas norādīta SECURITY.md. Viss pārējais iet pa e-pastu.",
       "sections": [
         {

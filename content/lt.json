@@ -244,7 +244,7 @@
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "lt": "Taip pat tomas, kurį Windows paliko užmigdytą arba blogai uždarytą"
+      "lt": "Taip pat tomas, kurį Windows paliko hibernacijos režimu arba blogai uždarytą"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "lt": "VMware, plokščias ir retas"
+      "lt": "VMware, flat ir sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lt": "Tai, ką turi OVA. Rašomas vienu ypu, todėl jo negalima tiesiogiai keisti"
+      "lt": "Tai, ką turi OVA. Rašomas vienu ypu, todėl vėliau jo negalima keisti tame pačiame faile"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

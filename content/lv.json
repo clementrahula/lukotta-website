@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "lv": "VMware, plakans un rets"
+      "lv": "VMware, flat un sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "lv": "Tas, ko satur OVA. Tiek rakstīts vienā piegājienā, tāpēc to nevar mainīt tieši"
+      "lv": "Tas, ko satur OVA. Tiek rakstīts vienā piegājienā, tāpēc pēc tam to nevar mainīt tajā pašā failā"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
