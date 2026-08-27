@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "fil": "Teksto ng pahina sa ilalim ng lisensyang Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "fil": "Hindi nahanap ang pahina"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "fil": "Wala ang address na iyon sa lukotta.com. Nakalista sa sitemap ang bawat pahina, at nasa llms.txt ang buong site bilang plain text."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "fil": "Wala ang address na iyon sa lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "fil": "Saan tumingin sa halip"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "fil": "Mga gabay"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "fil": "Home page"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "fil": "Home page"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "fil": "kung ano ang Lukotta at paano ito i-install"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "fil": "Tungkol"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "fil": "kung sino ang nagpapanatili ng Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "fil": "Kontak"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "fil": "paano mag-ulat ng bug"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "fil": "Sitemap"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "fil": "bawat pahina sa site na ito"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "fil": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "fil": "ang buong site bilang plain text"
     }
   }
 }

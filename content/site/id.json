@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "id",
+    "name": "Indonesian",
+    "native": "Bahasa Indonesia",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "tentang",
+      "title": "Tentang Lukotta",
+      "description": "Lukotta adalah aplikasi macOS gratis dan sumber terbuka yang membuka drive BitLocker, NTFS dan Linux, di bawah GNU General Public License.",
+      "lead": "Lukotta membuka drive dan image disk yang tidak bisa dibaca macOS. Gratis, sumber terbuka, dan dirawat oleh satu orang.",
+      "sections": [
+        {
+          "heading": "Apa ini",
+          "paragraphs": [
+            "Lukotta adalah aplikasi macOS. Ia membuka drive BitLocker, NTFS, LUKS, ext4, btrfs dan XFS, serta image disk mesin virtual dalam format qcow2, VMDK, VDI, VHD dan VHDX. macOS tidak membaca satu pun dari itu sendiri. NTFS bisa dibacanya, tapi tidak ditulisi.",
+            "Ia menjalankan sistem Linux kecil di latar belakang, membuka drive di sana, dan menyerahkannya kembali ke Finder. Linux sudah bertahun-tahun membaca format ini. Drive tidak diubah dan tidak disalin. Ia tetap seperti semula, dan mesin asalnya tetap membacanya."
+          ]
+        },
+        {
+          "heading": "Siapa yang merawatnya",
+          "paragraphs": [
+            "[Satu pengembang](https://rahula.dev). Tidak ada perusahaan, tidak ada investor dan tidak ada tim."
+          ]
+        },
+        {
+          "heading": "Kenapa ada",
+          "paragraphs": [
+            "Colokkan drive BitLocker ke Mac dan Finder menawarkan untuk menghapusnya. Ia tidak meminta kata sandi, dan tidak ada apa pun di layar yang menunjukkan drive itu terkunci, bukan rusak.",
+            "Rasanya konyol bahwa di zaman sekarang tidak ada cara praktis untuk berbagi drive USB terenkripsi antara beberapa sistem operasi, jadi sebuah solusi harus dibuat.",
+            "Di ekosistem Linux sudah ada perkakas yang bisa membaca drive semacam itu. Lukotta menyatukannya dengan antarmuka Mac."
+          ]
+        },
+        {
+          "heading": "Berapa biayanya",
+          "paragraphs": [
+            "Tidak ada. Tidak ada versi berbayar, tidak ada langganan, tidak ada masa coba dan tidak ada akun.",
+            "Lukotta adalah perangkat lunak bebas di bawah GNU General Public License, versi 3 atau setelahnya. Sumbernya diterbitkan. Siapa pun boleh membacanya, mengubahnya dan meneruskannya dengan lisensi yang sama."
+          ]
+        },
+        {
+          "heading": "Tidak ada yang keluar dari Mac Anda",
+          "paragraphs": [
+            "Lukotta tidak punya analitik, tidak punya telemetri dan tidak punya laporan kerusakan.",
+            "Ia membuat satu jenis permintaan jaringan: memeriksa apakah ada versi baru dan mengunduhnya jika Anda minta. Kata sandi dan kunci pemulihan dipakai untuk membuka drive dan tidak disimpan, dikirim atau dicatat."
+          ]
+        },
+        {
+          "heading": "Kode sumber",
+          "paragraphs": [
+            "Kode sumber aplikasi ada di github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontak",
+      "title": "Kontak",
+      "description": "Cara melaporkan kesalahan di Lukotta, mengajukan pertanyaan, atau melaporkan masalah keamanan. Issue di GitHub dibaca lebih dulu.",
+      "lead": "Kesalahan pergi ke GitHub. Masalah keamanan pergi ke alamat di SECURITY.md. Selebihnya lewat surel.",
+      "sections": [
+        {
+          "heading": "Kesalahan, atau drive yang tidak mau terbuka",
+          "paragraphs": [
+            "Buka issue di github.com/clementrahula/lukotta/issues. Issue dibaca lebih dulu dan bersifat terbuka, jadi orang berikutnya dengan drive yang sama menemukan jawabannya.",
+            "Sebutkan drive apa itu, apa yang ditampilkan Lukotta, dan apa yang Anda harapkan. Kutip pesan kesalahan persis. Jangan pernah menempel kata sandi atau kunci pemulihan ke dalam issue."
+          ]
+        },
+        {
+          "heading": "Masalah keamanan",
+          "paragraphs": [
+            "Jangan buka issue terbuka. SECURITY.md di repositori menyebutkan ke mana harus dikirim dan apa yang bisa diharapkan."
+          ]
+        },
+        {
+          "heading": "Selebihnya",
+          "paragraphs": [
+            "Kirim surel ke contact_web@lukotta.com dengan pertanyaan tentang aplikasi."
+          ]
+        },
+        {
+          "heading": "Berapa lama balasannya",
+          "paragraphs": [
+            "Lukotta dirawat oleh satu orang. Tidak ada meja bantuan dan tidak ada janji waktu balasan. Sebagian pesan butuh waktu, dan sebagian tidak terbalas.",
+            "Issue di GitHub biasanya lebih cepat, karena orang lain bisa menjawab lebih dulu."
+          ]
+        }
+      ]
+    }
+  }
+}

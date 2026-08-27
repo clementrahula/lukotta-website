@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "ms",
+    "name": "Malay",
+    "native": "Bahasa Melayu",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "perihal",
+      "title": "Perihal Lukotta",
+      "description": "Lukotta ialah aplikasi macOS percuma dan sumber terbuka yang membuka pemacu BitLocker, NTFS dan Linux, di bawah GNU General Public License.",
+      "lead": "Lukotta membuka pemacu dan imej cakera yang tidak dapat dibaca oleh macOS. Ia percuma, sumber terbuka, dan diselenggara oleh seorang sahaja.",
+      "sections": [
+        {
+          "heading": "Apa ini",
+          "paragraphs": [
+            "Lukotta ialah aplikasi macOS. Ia membuka pemacu BitLocker, NTFS, LUKS, ext4, btrfs dan XFS, serta imej cakera mesin maya dalam format qcow2, VMDK, VDI, VHD dan VHDX. macOS tidak membaca satu pun daripadanya sendiri. NTFS dibacanya, tetapi tidak ditulisnya.",
+            "Ia menjalankan sistem Linux kecil di latar belakang, membuka pemacu di sana, dan menyerahkannya semula kepada Finder. Linux telah membaca format ini bertahun-tahun. Pemacu tidak ditukar dan tidak disalin. Ia kekal seperti asal, dan mesin asalnya masih membacanya."
+          ]
+        },
+        {
+          "heading": "Siapa yang menyelenggaranya",
+          "paragraphs": [
+            "[Seorang pembangun sahaja](https://rahula.dev). Tiada syarikat, tiada pelabur dan tiada pasukan."
+          ]
+        },
+        {
+          "heading": "Mengapa ia wujud",
+          "paragraphs": [
+            "Pasang pemacu BitLocker pada Mac dan Finder menawarkan untuk memadamnya. Ia tidak meminta kata laluan, dan tiada apa-apa pada skrin menunjukkan pemacu itu berkunci, bukan rosak.",
+            "Nampak tidak masuk akal bahawa pada zaman ini tiada cara praktikal untuk berkongsi pemacu USB tersulit antara beberapa sistem pengendalian, jadi satu penyelesaian perlu dibina.",
+            "Dalam ekosistem Linux sudah ada alat yang boleh membaca pemacu sebegitu. Lukotta menyatukannya dengan antara muka Mac."
+          ]
+        },
+        {
+          "heading": "Berapa kosnya",
+          "paragraphs": [
+            "Tiada. Tiada versi berbayar, tiada langganan, tiada tempoh percubaan dan tiada akaun.",
+            "Lukotta ialah perisian bebas di bawah GNU General Public License, versi 3 atau lebih baharu. Sumbernya diterbitkan. Sesiapa sahaja boleh membacanya, mengubahnya dan menyerahkannya dengan lesen yang sama."
+          ]
+        },
+        {
+          "heading": "Tiada apa-apa keluar dari Mac anda",
+          "paragraphs": [
+            "Lukotta tiada analitik, tiada telemetri dan tiada laporan ranap.",
+            "Ia membuat satu jenis permintaan rangkaian: memeriksa sama ada ada versi baharu dan memuat turunnya jika anda minta. Kata laluan dan kunci pemulihan digunakan untuk membuka pemacu dan tidak disimpan, dihantar atau dicatat."
+          ]
+        },
+        {
+          "heading": "Kod sumber",
+          "paragraphs": [
+            "Kod sumber aplikasi ada di github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "hubungi",
+      "title": "Hubungi",
+      "description": "Cara melaporkan ralat dalam Lukotta, bertanya soalan, atau melaporkan masalah keselamatan. Issue di GitHub dibaca dahulu.",
+      "lead": "Ralat pergi ke GitHub. Masalah keselamatan pergi ke alamat dalam SECURITY.md. Selain itu melalui e-mel.",
+      "sections": [
+        {
+          "heading": "Satu ralat, atau pemacu yang tidak mahu dibuka",
+          "paragraphs": [
+            "Buka issue di github.com/clementrahula/lukotta/issues. Issue dibaca dahulu dan ia terbuka kepada umum, jadi orang seterusnya dengan pemacu yang sama menemui jawapannya.",
+            "Nyatakan pemacu apa itu, apa yang Lukotta tunjukkan, dan apa yang anda jangkakan. Petik ralat itu tepat. Jangan sekali-kali tampal kata laluan atau kunci pemulihan ke dalam issue."
+          ]
+        },
+        {
+          "heading": "Masalah keselamatan",
+          "paragraphs": [
+            "Jangan buka issue umum. SECURITY.md dalam repositori menyatakan ke mana perlu dihantar dan apa yang boleh dijangka."
+          ]
+        },
+        {
+          "heading": "Selain itu",
+          "paragraphs": [
+            "E-mel ke contact_web@lukotta.com dengan soalan tentang aplikasi."
+          ]
+        },
+        {
+          "heading": "Berapa lama balasan mengambil masa",
+          "paragraphs": [
+            "Lukotta diselenggara oleh seorang sahaja. Tiada meja bantuan dan tiada masa balasan yang dijanjikan. Sesetengah mesej mengambil masa, dan sesetengahnya tidak dibalas.",
+            "Issue di GitHub biasanya lebih pantas, kerana orang lain mungkin menjawab dahulu."
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "id": "Teks halaman di bawah lisensi Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "id": "Halaman tidak ditemukan"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "id": "Alamat itu tidak ada di lukotta.com. Peta situs menyebut setiap halaman, dan llms.txt memuat seluruh situs sebagai teks biasa."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "id": "Alamat itu tidak ada di lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "id": "Ke mana harus melihat"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "id": "Panduan"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "id": "Halaman utama"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "id": "Halaman utama"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "id": "apa itu Lukotta dan cara memasangnya"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "id": "Tentang"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "id": "siapa yang merawat Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "id": "Kontak"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "id": "cara melaporkan kesalahan"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "id": "Peta situs"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "id": "setiap halaman di situs ini"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "id": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "id": "seluruh situs sebagai teks biasa"
     }
   }
 }

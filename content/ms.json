@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ms": "Teks halaman di bawah lesen Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ms": "Halaman tidak dijumpai"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ms": "Alamat itu tiada di lukotta.com. Peta laman menyebut setiap halaman, dan llms.txt mengandungi seluruh laman sebagai teks biasa."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ms": "Alamat itu tiada di lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ms": "Ke mana harus melihat"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ms": "Panduan"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ms": "Halaman utama"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ms": "Halaman utama"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ms": "apa itu Lukotta dan cara memasangnya"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ms": "Perihal"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ms": "siapa yang menyelenggara Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ms": "Hubungi"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ms": "cara melaporkan ralat"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ms": "Peta laman"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ms": "setiap halaman di laman ini"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ms": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ms": "seluruh laman sebagai teks biasa"
     }
   }
 }
