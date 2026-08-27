@@ -97,3 +97,29 @@ The landing page is the one to change.
 
 Also `how.lead` says **failu sistēmas** while `faq.3.a` says **datnes** for
 files. The task pages use fails and failu sistēma throughout.
+
+## cs — "jen pro čtení" against the application's "jen ke čtení"
+
+Both are read-only and both are ordinary Czech. The site says the first, the
+application the second. The task pages follow the site.
+
+## pl — Polish declines product names, and the checker caught nine of them
+
+Polish inflects foreign nouns and respells them doing it: *Linux* becomes
+*Linuksa*, *VirtualBox* becomes *VirtualBoksa*. That is correct Polish, and it
+is also no longer the string anyone types into a search box.
+
+The landing page already avoids it by putting the name in apposition — `how.lead`
+says **maszynę wirtualną z systemem Linux**, not *z Linuksem*. The task pages do
+the same throughout. Worth confirming a Polish reader finds this natural rather
+than stiff; if not, the trade is search visibility against fluency and somebody
+has to pick.
+
+## sl — the same translated-sidebar problem as Latvian, plus disk against pogon
+
+`how.3.body` says **pod Lokacije**. macOS is not offered in Slovenian, so that
+sidebar reads *Locations* on the reader's screen. The task pages keep the
+English; the landing page should too.
+
+Separately the site says **disk** for a drive and the application says
+**pogon**. The task pages follow the site.

@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "pl",
+    "name": "Polish",
+    "native": "Polski",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Pobranie i używanie są bezpłatne."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "otworzyc-dysk-bitlocker-na-macu",
+      "title": "Otworzyć dysk BitLocker na Macu",
+      "description": "macOS nie otwiera dysku BitLocker, tylko proponuje jego wymazanie. Oto dlaczego, i jak dysk odczytać oraz kopiować na niego pliki.",
+      "lead": "Podłączasz dysk BitLocker do Maca, a Finder proponuje, że go wymaże. Oto dlaczego, i jak zamiast tego dysk odczytać.",
+      "sections": [
+        {
+          "heading": "Czym jest BitLocker",
+          "paragraphs": [
+            "BitLocker to szyfrowanie wbudowane w Windows. Kiedy jest włączone, wszystko, co zapisuje się na dysku, zostaje przemieszane, a zawartości nie da się odczytać bez hasła. Windows używa go na własnym dysku oraz na dyskach USB i kartach pamięci, gdzie nazywa się BitLocker To Go.",
+            "W obu przypadkach jest to to samo szyfrowanie. Jeśli dysk zginie, ten, kto go znajdzie, nic z niego nie odczyta."
+          ]
+        },
+        {
+          "heading": "Co się dzieje, gdy podłączysz taki do Maca",
+          "paragraphs": [
+            "Finder mówi, że dysku nie da się odczytać, i proponuje zainicjowanie albo wymazanie. Nie pyta o hasło, a nic na ekranie nie podpowiada, że dysk jest zablokowany, a nie zepsuty.",
+            "Dysk nie jest uszkodzony. macOS ma własne szyfrowanie, FileVault, i BitLockera nie rozumie w ogóle. Odczytuje początek dysku, znajduje tam układ, którego nie rozpoznaje, i traktuje dysk jako niesformatowany, więc jedyne, co może zaproponować, to wymazanie."
+          ]
+        },
+        {
+          "heading": "Jak Lukotta go otwiera",
+          "paragraphs": [
+            "Linux potrafi czytać BitLockera od lat i właśnie z tego Lukotta korzysta. Uruchamia w tle mały system Linux, przekazuje mu dysk i odblokowuje go tam hasłem, które wpiszesz. Odblokowany dysk wraca do Findera, gdzie pojawia się w sekcji Miejsca obok pozostałych twoich dysków.",
+            "Dysk nie jest ani przekształcany, ani kopiowany. Pozostaje dyskiem BitLocker, pozostaje zaszyfrowany, a Windows nadal go czyta."
+          ]
+        },
+        {
+          "heading": "Otwieranie dysku",
+          "list": [
+            "Podłącz dysk. Lukotta wypisze go i pokaże jako zablokowany.",
+            "Kliknij go i wpisz hasło, którego używasz w Windows.",
+            "Dysk pojawia się w Finderze, w sekcji Miejsca."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Jeśli nie masz hasła",
+          "paragraphs": [
+            "Gdy dysk był szyfrowany, Windows wytworzył klucz odzyskiwania i zapytał, gdzie go trzymać. Otwiera on dysk zamiast hasła. Ma 48 cyfr, w ośmiu grupach po sześć:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Może być zapisany na koncie Microsoft, w pliku tekstowym albo wydrukowany na papierze. Wklej go tam, gdzie normalnie idzie hasło.",
+            "Bez hasła i bez klucza dysku nie otworzy żaden program, na żadnym komputerze."
+          ]
+        },
+        {
+          "heading": "Dyski, które na Macu się nie otworzą",
+          "paragraphs": [
+            "Niektóre komputery z Windows nigdy nie pytają o hasło. Trzymają klucz w układzie na płycie głównej, zwanym TPM, i odblokowują dysk same, gdy ta maszyna się uruchamia.",
+            "Tak ustawiony dysk działa tylko w komputerze, z którego pochodzi, bo klucz nigdy z niego nie wychodzi. Żaden Mac go nie otworzy ani inny komputer z Windows. Jeśli przy szyfrowaniu dysku zapisano klucz odzyskiwania, ten nadal go otwiera."
+          ]
+        },
+        {
+          "heading": "Kopiowanie plików na dysk",
+          "paragraphs": [
+            "Dyski BitLocker otwierają się i do odczytu, i do zapisu, więc Mac może dokładać pliki do kopii zapasowej z Windows, a nie tylko z niej brać.",
+            "Lukotta potrafi otworzyć dysk także tylko do odczytu, co warto zrobić, gdy ratujesz pliki z dysku, który zaczął sprawiać kłopoty. Wtedy nie da się na niego nic zapisać."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "odczytac-dysk-ext4-na-macu",
+      "title": "Odczytać dysk ext4, btrfs lub XFS na Macu",
+      "description": "macOS nie czyta ext4, btrfs ani XFS i proponuje wymazanie dysku. Oto dlaczego, i jak otworzyć na Macu dysk z systemu Linux, razem z LUKS.",
+      "lead": "Podłączasz dysk z komputera z systemem Linux, a Finder proponuje, że go wymaże. Oto dlaczego, i jak zamiast tego go odczytać.",
+      "sections": [
+        {
+          "heading": "Dlaczego Mac nie potrafi odczytać dysku",
+          "paragraphs": [
+            "Każdy dysk ma system plików: porządek, który zapisuje, gdzie zaczyna się każdy plik, jak się nazywa i które części dysku są jeszcze wolne. Windows używa NTFS. macOS używa APFS. Linux używa najczęściej ext4, a czasem btrfs albo XFS.",
+            "Same pliki są zupełnie zwyczajne. Różni się spis przed nimi, a komputer, który tego spisu nie potrafi odczytać, nie ma jak niczego znaleźć, choć wszystko wciąż tam jest."
+          ]
+        },
+        {
+          "heading": "Co się dzieje, gdy podłączysz taki do Maca",
+          "paragraphs": [
+            "Finder mówi, że dysku nie da się odczytać, i proponuje wymazanie. Ten sam komunikat macOS daje przy pustym dysku i przy takim, który zaczyna odmawiać posłuszeństwa, więc z komunikatu nijak nie widać, że dysk jest sprawny.",
+            "macOS obsługuje własne systemy plików i kilka rozpowszechnionych, takich jak exFAT. Systemów plików Linux wśród nich nie ma, więc dysk ext4 wygląda dla macOS jak pusty dysk."
+          ]
+        },
+        {
+          "heading": "Jak Lukotta go odczytuje",
+          "paragraphs": [
+            "Lukotta uruchamia w tle mały system Linux i przekazuje mu dysk. Linux czyta ext4, btrfs i XFS sam z siebie, więc dysk otwiera się tam bez żadnego przekształcania, a Lukotta podaje go dalej Finderowi.",
+            "Na dysk nic nie jest zapisywane i zachowuje się normalnie, gdy wróci do komputera z systemem Linux."
+          ]
+        },
+        {
+          "heading": "Co Lukotta czyta",
+          "paragraphs": [
+            "ext2, ext3 i ext4, które obejmują większość systemów Linux. btrfs, domyślny w Fedorze i openSUSE. XFS, rozpowszechniony na serwerach.",
+            "Zaszyfrowany albo nie. Jeśli dysk ustawiono z LVM, który dzieli jeden fizyczny dysk na kilka woluminów, otwierają się one wszystkie razem, a nie po kolei."
+          ]
+        },
+        {
+          "heading": "Otwieranie dysku",
+          "list": [
+            "Podłącz dysk. Lukotta wypisze, co na nim jest.",
+            "Jeśli jest zaszyfrowany, wpisz hasło dostępu.",
+            "Dysk pojawia się w Finderze, w sekcji Miejsca."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Jeśli prosi o hasło dostępu",
+          "paragraphs": [
+            "LUKS to sposób, w jaki Linux szyfruje cały dysk. Jeśli komputer, z którego pochodzi ten dysk, prosi o hasło dostępu zaraz przy starcie, jeszcze przed ekranem logowania, to jest właśnie LUKS, i to jest to hasło dostępu, które trzeba tutaj wpisać.",
+            "Jest inne niż hasło logowania, choć wiele osób ustawia oba takie same."
+          ]
+        },
+        {
+          "heading": "Dyski, które się nie otworzą",
+          "paragraphs": [
+            "Dysk LUKS można ustawić tak, że jego nagłówek leży gdzie indziej, na innym dysku albo na pendrivie. Nagłówek to ta część, która opisuje szyfrowanie. Bez niego na dysku nie ma czego odblokowywać.",
+            "Nowsze instalacje Ubuntu potrafią też przywiązać klucz do układu wewnątrz maszyny, tak samo jak robi to BitLocker. Takie dyski otwierają się tylko w komputerze, z którego pochodzą."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "zapisywac-na-dysk-ntfs-na-macu",
+      "title": "Zapisywać na dysk NTFS na Macu",
+      "description": "macOS otwiera dyski NTFS tylko do odczytu, więc pliki z nich schodzą, ale na nie nie wchodzą. Oto dlaczego, i jak zapisywać na dysk NTFS na Macu.",
+      "lead": "macOS pozwala kopiować pliki z dysku NTFS, ale nie na niego. Oto dlaczego, i co można z tym zrobić.",
+      "sections": [
+        {
+          "heading": "Czym jest NTFS",
+          "paragraphs": [
+            "NTFS to system plików, którego używa Windows, zarówno na własnym dysku, jak i na dyskach zewnętrznych sformatowanych na komputerze z Windows. Dysk USB sformatowany na maszynie z Windows to najczęściej NTFS.",
+            "Ten drugi rozpowszechniony to exFAT, którego używa większość kart pamięci i wiele pendrive'ów, bo i Windows, i macOS potrafią na nim zapisywać. Jeśli twój dysk to exFAT, macOS już sobie z nim radzi i nic z tego cię nie dotyczy. Żeby sprawdzić, kliknij dysk w Finderze i wybierz Plik, a potem Informacje. Wiersz Format ci to powie."
+          ]
+        },
+        {
+          "heading": "Co się dzieje, gdy podłączysz taki do Maca",
+          "paragraphs": [
+            "Dysk pojawia się w Finderze i widzisz pliki. Kopiowanie plików z niego działa normalnie. Kopiowanie czegokolwiek na niego nie działa: Finder odmawia, a dysk zachowuje się, jakby był zablokowany.",
+            "macOS otwiera dyski NTFS tylko do odczytu. Zapisywać NTFS potrafi od lat, ale to jest wyłączone i nie ma żadnego wspieranego sposobu, żeby to włączyć. Zapisywanie NTFS jest trudniejsze niż czytanie, a jeden błąd może zostawić dysk, którego Windows potem odmawia otworzyć."
+          ]
+        },
+        {
+          "heading": "Jak Lukotta na nim zapisuje",
+          "paragraphs": [
+            "Lukotta otwiera dysk sterownikiem NTFS z systemu Linux, który zapisywać potrafi i z którego komputery z systemem Linux korzystają codziennie. Dysk trafia potem do Findera, więc kopiowanie na niego plików idzie jak każde inne kopiowanie.",
+            "Dysk pozostaje NTFS, a Windows czyta go potem tak jak wcześniej."
+          ]
+        },
+        {
+          "heading": "Otwieranie dysku",
+          "list": [
+            "Podłącz dysk. Lukotta go wypisze.",
+            "Kliknij go.",
+            "Pojawia się w Finderze, w sekcji Miejsca, a pliki kopiują się w obie strony."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Dysk NTFS najczęściej nie ma hasła, więc nie ma czego wpisywać, chyba że włączono na nim także BitLockera."
+          ]
+        },
+        {
+          "heading": "Dyski, których Windows nie zamknął porządnie",
+          "paragraphs": [
+            "Windows oznacza dysk jako źle zamknięty, gdy zapis został przerwany, najczęściej dlatego, że dysk wyciągnięto albo maszyna w połowie straciła zasilanie. To oznaczenie ostrzega następny komputer, który go otworzy, że dysk może być zapisany do połowy i warto go sprawdzić.",
+            "Szybkie uruchamianie zostawia to samo oznaczenie nawet wtedy, gdy nic się nie zepsuło. W Windows 10 i 11 jest włączone od początku. Zamiast wyłączyć maszynę, wprowadza ją w hibernację, przez co dysk wygląda, jakby wciąż był w użyciu.",
+            "macOS odmawia dysku w obu tych stanach i nie podaje powodu. Lukotta go otwiera.",
+            "Jeśli masz jeszcze maszynę z Windows, czystszym rozwiązaniem jest podłączyć do niej dysk z powrotem i porządnie ją wyłączyć: przytrzymaj Shift, klikając Zamknij, to pomija szybkie uruchamianie."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "otworzyc-plik-vmdk-vdi-vhd-na-macu",
+      "title": "Otworzyć plik VMDK, VDI lub VHD na Macu",
+      "description": "Otwórz na Macu plik VMDK, VDI, VHD lub qcow2 i skopiuj z niego pliki, bez instalowania VMware ani VirtualBox i bez uruchamiania maszyny.",
+      "lead": "Maszyna wirtualna trzyma cały swój dysk wewnątrz jednego pliku. Ten plik możesz otworzyć na Macu i wyjąć z niego rzeczy, nigdy nie uruchamiając maszyny.",
+      "sections": [
+        {
+          "heading": "Czym jest obraz dysku",
+          "paragraphs": [
+            "Gdy uruchamiasz maszynę wirtualną, twardy dysk tej maszyny to jeden zwyczajny plik leżący na twoim Macu. Jej system, jej programy i każdy dokument w niej są wszystkie wewnątrz tego jednego pliku.",
+            "Każdy program zapisuje ten plik po swojemu. VMware używa VMDK, VirtualBox używa VDI, Hyper-V używa VHD i VHDX, a QEMU oraz UTM używają qcow2. Surowy obraz, który zwykle kończy się na .img, to prosta kopia dysku bez niczego dookoła."
+          ]
+        },
+        {
+          "heading": "Dlaczego wyjęcie z niego pliku jest kłopotliwe",
+          "paragraphs": [
+            "Zwykła droga to uruchomić maszynę wirtualną, poczekać, aż wstanie, znaleźć w niej plik i skopiować go na zewnątrz. To znaczy, że maszyna wciąż musi działać, a program, który ją uruchamia, wciąż musi być zainstalowany.",
+            "Finder też się tu nie przydaje. Dwukrotne kliknięcie VMDK nie robi nic, bo macOS nie wie, co jest w środku."
+          ]
+        },
+        {
+          "heading": "Jak Lukotta go otwiera",
+          "paragraphs": [
+            "Lukotta czyta obraz wprost. Ustala, w jakim formacie jest plik, znajduje w nim dysk i otwiera go w małym systemie Linux, który trzyma w tle. To, co jest w środku, pojawia się wtedy w Finderze jako zwyczajny dysk.",
+            "Maszyna wirtualna zostaje wyłączona. VMware ani VirtualBox nie muszą być zainstalowane, a otwarcie pliku go nie zmienia."
+          ]
+        },
+        {
+          "heading": "Które pliki Lukotta otwiera",
+          "list": [
+            "qcow2, z QEMU i UTM.",
+            "VMDK, z VMware.",
+            "VDI, z programu VirtualBox.",
+            "VHD i VHDX, z Hyper-V.",
+            "Surowe obrazy, zwykle kończące się na .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Jak otworzyć jeden",
+          "list": [
+            "Wybierz Plik, a potem Otwórz obraz dysku, i wskaż plik.",
+            "Jeśli dysk w środku jest zaszyfrowany, wpisz hasło albo hasło dostępu.",
+            "Zawartość pojawia się w Finderze, w sekcji Miejsca."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "W jednym pliku bywa kilka dysków",
+          "paragraphs": [
+            "Obraz dysku zwykle zawiera więcej niż jedną partycję: małą rozruchową, główną, na której jest wszystko, a czasem partycję odzyskiwania. Lukotta je wypisuje, a ty otwierasz tę, której potrzebujesz, tak samo jak wybrałbyś dysk."
+          ]
+        },
+        {
+          "heading": "Kopiowanie plików do obrazu",
+          "paragraphs": [
+            "qcow2 zapisuje się w zwykły sposób i można na nim zapisywać bezpiecznie.",
+            "Na VMDK, VDI i VHD można zapisywać, ale to świeża praca i nie jest w użyciu dość długo, by powierzać jej coś, na czyją stratę cię nie stać. Skopiuj plik i pracuj na kopii albo otwórz go tylko do odczytu i po prostu wyjmij z niego pliki.",
+            "VHDX otwiera się tylko do odczytu, tak samo jak ten rodzaj VMDK, który bywa wewnątrz pliku OVA. Ten rodzaj zapisuje się jednym przebiegiem i potem nie da się go już zmienić na miejscu."
+          ]
+        },
+        {
+          "heading": "Pliki, które się nie otworzą",
+          "paragraphs": [
+            "Obraz otwiera się tylko wtedy, gdy jest kompletny sam z siebie.",
+            "Łańcuch migawek VMware rozkłada obecny stan maszyny na plik pierwotny i szereg mniejszych, które zapisują, co się po nim zmieniło. Dysk podzielony rozbija jeden obraz na wiele kawałków. Dysk różnicowy Hyper-V zawiera tylko różnice względem innego pliku.",
+            "W każdym z tych przypadków plik, który masz, jest częścią zestawu, a Lukotta otwiera jeden plik naraz."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Więcej o dyskach BitLocker i o tym, co zrobić, gdy hasło przepadło",
+    "ntfs": "Więcej o dyskach NTFS, również o tych, które Windows źle zamknął",
+    "linux": "Więcej o dyskach z systemu Linux i o szyfrowaniu LUKS",
+    "disk-images": "Więcej o obrazach dysku i o tym, na które można zapisywać"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

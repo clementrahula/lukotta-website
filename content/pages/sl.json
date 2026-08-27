@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "sl",
+    "name": "Slovenian",
+    "native": "Slovenščina",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Prenos in uporaba sta brezplačna."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "odpreti-bitlocker-disk-na-macu",
+      "title": "Odpreti disk BitLocker na Macu",
+      "description": "macOS diska BitLocker ne odpre, ampak ponudi, da ga izbriše. Tukaj je zakaj, in kako disk prebrati ter nanj kopirati datoteke.",
+      "lead": "Priključite disk BitLocker na Mac in Finder ponudi, da ga izbriše. Tukaj je zakaj, in kako disk namesto tega prebrati.",
+      "sections": [
+        {
+          "heading": "Kaj je BitLocker",
+          "paragraphs": [
+            "BitLocker je šifriranje, vgrajeno v Windows. Ko je vklopljeno, se vse, kar se zapiše na disk, premeša, vsebine pa brez gesla ni mogoče prebrati. Windows ga uporablja na svojem disku ter na diskih USB in pomnilniških karticah, kjer se imenuje BitLocker To Go.",
+            "V obeh primerih gre za isto šifriranje. Če se disk izgubi, tisti, ki ga najde, z njega ne prebere ničesar."
+          ]
+        },
+        {
+          "heading": "Kaj se zgodi, ko takega priključite na Mac",
+          "paragraphs": [
+            "Finder pove, da diska ni mogoče prebrati, in ponudi, da ga inicializira ali izbriše. Za geslo ne vpraša, in nič na zaslonu ne namiguje, da je disk zaklenjen in ne pokvarjen.",
+            "Disk ni poškodovan. macOS ima svoje šifriranje, FileVault, BitLockerja pa ne razume prav nič. Prebere začetek diska, najde ureditev, ki je ne prepozna, in z diskom ravna kot z neformatiranim, zato je edino, kar lahko ponudi, brisanje."
+          ]
+        },
+        {
+          "heading": "Kako ga Lukotta odpre",
+          "paragraphs": [
+            "Linux zna brati BitLocker že vrsto let, in prav to Lukotta uporablja. V ozadju zažene majhen sistem Linux, mu izroči disk in ga tam odklene z geslom, ki ga vpišete. Odklenjen disk se vrne Finderju, kjer se pojavi pod Locations, poleg vaših drugih diskov.",
+            "Disk se niti ne pretvori niti ne kopira. Ostane disk BitLocker, ostane šifriran, in Windows ga še naprej bere."
+          ]
+        },
+        {
+          "heading": "Odpiranje diska",
+          "list": [
+            "Priključite disk. Lukotta ga navede in pokaže kot zaklenjenega.",
+            "Kliknite ga in vpišite geslo, ki ga uporabljate v sistemu Windows.",
+            "Disk se pojavi v Finderju, pod Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Če gesla nimate",
+          "paragraphs": [
+            "Ko je bil disk šifriran, je Windows ustvaril obnovitveni ključ in vprašal, kam naj ga shrani. Ta odpre disk namesto gesla. Ima 48 števk, v osmih skupinah po šest:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Lahko je shranjen v računu Microsoft, v besedilni datoteki ali natisnjen na papir. Prilepite ga tja, kamor bi sicer šlo geslo.",
+            "Brez gesla ali ključa diska ne odpre noben program, na nobenem računalniku."
+          ]
+        },
+        {
+          "heading": "Diski, ki se na Macu ne bodo odprli",
+          "paragraphs": [
+            "Nekateri računalniki z Windows za geslo nikoli ne vprašajo. Ključ hranijo v čipu na matični plošči, imenovanem TPM, in disk odklenejo sami, ko se tisti računalnik zažene.",
+            "Tako nastavljen disk deluje samo v računalniku, iz katerega izvira, saj ključ iz njega nikoli ne gre. Noben Mac ga ne more odpreti, in tudi drug računalnik z Windows ne. Če je bil ob šifriranju diska shranjen obnovitveni ključ, ga ta še vedno odpre."
+          ]
+        },
+        {
+          "heading": "Kopiranje datotek na disk",
+          "paragraphs": [
+            "Diski BitLocker se odprejo tako za branje kot za pisanje, zato lahko Mac varnostni kopiji iz sistema Windows datoteke dodaja, ne le jemlje z nje.",
+            "Lukotta zna disk odpreti tudi samo za branje, kar se splača takrat, ko rešujete datoteke z diska, ki je začel nagajati. Tedaj nanj ni mogoče zapisati ničesar."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "brati-ext4-disk-na-macu",
+      "title": "Brati disk ext4, btrfs ali XFS na Macu",
+      "description": "macOS ne bere ne ext4, ne btrfs, ne XFS in ponudi, da disk izbriše. Tukaj je zakaj, in kako na Macu odpreti disk iz sistema Linux, tudi LUKS.",
+      "lead": "Priključite disk iz računalnika s sistemom Linux in Finder ponudi, da ga izbriše. Tukaj je zakaj, in kako ga namesto tega prebrati.",
+      "sections": [
+        {
+          "heading": "Zakaj Mac diska ne zna prebrati",
+          "paragraphs": [
+            "Vsak disk ima datotečni sistem: red, ki zapiše, kje se vsaka datoteka začne, kako se imenuje in kateri deli diska so še prosti. Windows uporablja NTFS. macOS uporablja APFS. Linux največkrat uporablja ext4, včasih btrfs ali XFS.",
+            "Datoteke same so čisto navadne. Razlikuje se kazalo pred njimi, in računalnik, ki tega kazala ne zna prebrati, nima kako česa najti, čeprav je vse še vedno tam."
+          ]
+        },
+        {
+          "heading": "Kaj se zgodi, ko takega priključite na Mac",
+          "paragraphs": [
+            "Finder pove, da diska ni mogoče prebrati, in ponudi, da ga izbriše. Isto sporočilo macOS da za prazen disk in za takega, ki odpoveduje, zato vam sporočilo nikakor ne pove, da je disk v redu.",
+            "macOS podpira svoje datotečne sisteme in nekaj razširjenih, na primer exFAT. Datotečnih sistemov Linux med njimi ni, zato je disk ext4 za macOS videti kot prazen disk."
+          ]
+        },
+        {
+          "heading": "Kako ga Lukotta prebere",
+          "paragraphs": [
+            "Lukotta v ozadju zažene majhen sistem Linux in mu izroči disk. Linux ext4, btrfs in XFS bere sam, zato se disk tam odpre brez sleherne pretvorbe, Lukotta pa ga poda Finderju.",
+            "Na disk se ne zapiše nič, in obnaša se običajno, ko se vrne v računalnik s sistemom Linux."
+          ]
+        },
+        {
+          "heading": "Kaj Lukotta bere",
+          "paragraphs": [
+            "ext2, ext3 in ext4, ki pokrivajo večino sistemov Linux. btrfs, privzeti v Fedori in openSUSE. XFS, razširjen na strežnikih.",
+            "Šifriran ali ne. Če je disk nastavljen z LVM, ki en fizični disk razdeli na več nosilcev, se odprejo vsi skupaj in ne eden za drugim."
+          ]
+        },
+        {
+          "heading": "Odpiranje diska",
+          "list": [
+            "Priključite disk. Lukotta navede, kaj je na njem.",
+            "Če je šifriran, vpišite geselno frazo.",
+            "Disk se pojavi v Finderju, pod Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Če vpraša za geselno frazo",
+          "paragraphs": [
+            "LUKS je način, kako Linux šifrira cel disk. Če računalnik, iz katerega ta disk izvira, vpraša za geselno frazo že na začetku zagona, pred zaslonom za prijavo, je to LUKS, in prav to geselno frazo je treba vpisati sem.",
+            "Ločena je od gesla za prijavo, čeprav marsikdo za oboje nastavi isto."
+          ]
+        },
+        {
+          "heading": "Diski, ki se ne bodo odprli",
+          "paragraphs": [
+            "Disk LUKS je mogoče nastaviti tako, da je njegova glava shranjena drugje, na drugem disku ali na ključku USB. Glava je tisti del, ki opisuje šifriranje. Brez nje na disku ni česa odkleniti.",
+            "Novejše namestitve Ubuntu znajo ključ vezati tudi na čip znotraj računalnika, enako kot to počne BitLocker. Taki diski se odprejo samo v računalniku, iz katerega izvirajo."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "pisati-na-ntfs-disk-na-macu",
+      "title": "Pisati na disk NTFS na Macu",
+      "description": "macOS odpira diske NTFS samo za branje, zato datoteke z njih gredo, nanje pa ne. Tukaj je zakaj, in kako na Macu pisati na disk NTFS.",
+      "lead": "macOS vam pusti kopirati datoteke z diska NTFS, ne pa nanj. Tukaj je zakaj, in kaj se da s tem narediti.",
+      "sections": [
+        {
+          "heading": "Kaj je NTFS",
+          "paragraphs": [
+            "NTFS je datotečni sistem, ki ga uporablja Windows, tako na svojem disku kot na zunanjih diskih, formatiranih na računalniku z Windows. Disk USB, formatiran na računalniku z Windows, je največkrat NTFS.",
+            "Drugi razširjeni je exFAT, ki ga uporablja večina pomnilniških kartic in mnogo ključkov USB, saj nanj znata pisati tako Windows kot macOS. Če je vaš disk exFAT, macOS z njim že shaja in nič od tega se vas ne tiče. Za preverjanje kliknite disk v Finderju in izberite File in nato Get Info. Vrstica Format vam pove."
+          ]
+        },
+        {
+          "heading": "Kaj se zgodi, ko takega priključite na Mac",
+          "paragraphs": [
+            "Disk se pojavi v Finderju in datoteke vidite. Kopiranje datotek z njega poteka običajno. Kopiranje česar koli nanj ne: Finder odkloni, disk pa se obnaša, kot da bi bil zaklenjen.",
+            "macOS odpira diske NTFS samo za branje. Pisati NTFS zna že vrsto let, a je to izklopljeno in ni nobenega podprtega načina, da se vklopi. Pisati NTFS je težje kot ga brati, in ena napaka lahko pusti disk, ki ga Windows potem noče odpreti."
+          ]
+        },
+        {
+          "heading": "Kako Lukotta piše nanj",
+          "paragraphs": [
+            "Lukotta odpre disk z gonilnikom NTFS iz sistema Linux, ki piše in ki ga računalniki s sistemom Linux uporabljajo vsak dan. Disk se nato izroči Finderju, tako da kopiranje datotek nanj poteka kot vsako drugo kopiranje.",
+            "Disk ostane NTFS, in Windows ga potem bere."
+          ]
+        },
+        {
+          "heading": "Odpiranje diska",
+          "list": [
+            "Priključite disk. Lukotta ga navede.",
+            "Kliknite ga.",
+            "Pojavi se v Finderju, pod Locations, in datoteke se kopirajo v obe smeri."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Disk NTFS največkrat nima gesla, zato ni česa vpisati, razen če je bil nanj vklopljen tudi BitLocker."
+          ]
+        },
+        {
+          "heading": "Diski, ki jih Windows ni pravilno zaprl",
+          "paragraphs": [
+            "Windows disk označi kot slabo zaprt takrat, ko je bilo pisanje prekinjeno, običajno zato, ker je bil disk izvlečen ali je računalnik sredi dela ostal brez elektrike. Ta oznaka opozori naslednji računalnik, ki ga odpre, da je disk morda na pol zapisan in ga velja preveriti.",
+            "Hitri zagon pusti isto oznako tudi takrat, ko ni šlo nič narobe. V sistemih Windows 10 in 11 je vklopljen že od začetka. Namesto da bi računalnik zaustavil, ga da v mirovanje, zaradi česar je disk videti, kot da je še v rabi.",
+            "macOS disk v obeh stanjih odkloni in razloga ne navede. Lukotta ga odpre.",
+            "Če računalnik z Windows še imate, je čistejša rešitev disk priključiti nazaj nanj in tisti računalnik pravilno zaustaviti: držite Shift, medtem ko kliknete Zaustavitev sistema, s tem se hitri zagon preskoči."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "odpreti-vmdk-vdi-vhd-datoteko-na-macu",
+      "title": "Odpreti datoteko VMDK, VDI ali VHD na Macu",
+      "description": "Odprite na Macu datoteko VMDK, VDI, VHD ali qcow2 in iz nje prekopirajte datoteke, brez nameščanja VMware ali VirtualBox in brez zagona stroja.",
+      "lead": "Navidezni stroj hrani ves svoj disk znotraj ene same datoteke. To datoteko lahko odprete na Macu in iz nje vzamete stvari, ne da bi stroj sploh kdaj zagnali.",
+      "sections": [
+        {
+          "heading": "Kaj je slika diska",
+          "paragraphs": [
+            "Ko poganjate navidezni stroj, je trdi disk tega stroja ena sama navadna datoteka, ki leži na vašem Macu. Njegov operacijski sistem, njegovi programi in vsak dokument v njem so vsi znotraj te ene datoteke.",
+            "Vsak program to datoteko piše po svoje. VMware uporablja VMDK, VirtualBox uporablja VDI, Hyper-V uporablja VHD in VHDX, QEMU in UTM pa qcow2. Surova slika, ki se največkrat konča na .img, je neposredna kopija diska brez česar koli okoli nje."
+          ]
+        },
+        {
+          "heading": "Zakaj je datoteko iz nje zoprno dobiti",
+          "paragraphs": [
+            "Običajna pot je zagnati navidezni stroj, počakati, da se dvigne, poiskati datoteko v njem in jo prekopirati ven. To pomeni, da mora stroj še delovati in da mora biti program, ki ga poganja, še nameščen.",
+            "Tudi Finder tu ne pomaga. Dvojni klik na VMDK ne naredi nič, ker macOS ne ve, kaj je znotraj."
+          ]
+        },
+        {
+          "heading": "Kako jo Lukotta odpre",
+          "paragraphs": [
+            "Lukotta sliko bere neposredno. Ugotovi, v katerem zapisu je datoteka, v njej najde disk in ga odpre v majhnem sistemu Linux, ki ga poganja v ozadju. Kar je znotraj, se nato pojavi v Finderju kot navaden disk.",
+            "Navidezni stroj ostane ugasnjen. VMware in VirtualBox ni treba imeti nameščenih, odprtje datoteke pa je ne spremeni."
+          ]
+        },
+        {
+          "heading": "Katere datoteke Lukotta odpre",
+          "list": [
+            "qcow2, iz QEMU in UTM.",
+            "VMDK, iz VMware.",
+            "VDI, iz VirtualBox.",
+            "VHD in VHDX, iz Hyper-V.",
+            "Surove slike, ki se največkrat končajo na .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Kako odpreti eno",
+          "list": [
+            "Izberite File in nato Odpri sliko diska ter poiščite datoteko.",
+            "Če je disk znotraj šifriran, vpišite geslo ali geselno frazo.",
+            "Vsebina se pojavi v Finderju, pod Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Ena datoteka pogosto hrani več diskov",
+          "paragraphs": [
+            "Slika diska največkrat vsebuje več kot en razdelek: majhen zagonski, glavnega, na katerem je vse, in včasih obnovitvenega. Lukotta jih navede, vi pa odprete tistega, ki ga potrebujete, enako kot bi izbrali disk."
+          ]
+        },
+        {
+          "heading": "Kopiranje datotek v sliko",
+          "paragraphs": [
+            "qcow2 se piše na običajen način in nanj je varno pisati.",
+            "Na VMDK, VDI in VHD je mogoče pisati, a je to sveže delo in ni v rabi dovolj dolgo, da bi mu zaupali kaj, česar si ne morete privoščiti izgubiti. Datoteko kopirajte in delajte na kopiji, ali pa jo odprite samo za branje in datoteke raje vzemite ven.",
+            "VHDX se odpre samo za branje, in enako tista vrsta VMDK, ki je znotraj datoteke OVA. Ta vrsta se zapiše v enem prehodu in se je potem na mestu ne da več spremeniti."
+          ]
+        },
+        {
+          "heading": "Datoteke, ki se ne bodo odprle",
+          "paragraphs": [
+            "Slika se odpre samo, če je sama po sebi cela.",
+            "Veriga posnetkov iz VMware razporedi sedanje stanje stroja med izvorno datoteko in vrsto manjših, ki beležijo, kaj se je za njo spremenilo. Razdeljen disk eno sliko razlomi na mnogo kosov. Razlikovalni disk iz Hyper-V vsebuje samo razlike glede na drugo datoteko.",
+            "V vsakem od teh primerov je datoteka, ki jo imate, del kompleta, Lukotta pa odpre eno datoteko naenkrat."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Več o diskih BitLocker in o tem, kaj storiti, če je geslo izgubljeno",
+    "ntfs": "Več o diskih NTFS, tudi o tistih, ki jih je Windows slabo zaprl",
+    "linux": "Več o diskih iz sistema Linux in o šifriranju LUKS",
+    "disk-images": "Več o slikah diska in o tem, na katere je mogoče pisati"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}
