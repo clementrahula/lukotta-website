@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "vi": "Văn bản trang theo giấy phép Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "vi": "Không tìm thấy trang"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "vi": "Địa chỉ đó không có trên lukotta.com. Sơ đồ trang nêu tên từng trang, còn llms.txt chứa cả trang web dưới dạng văn bản thuần."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "vi": "Địa chỉ đó không có trên lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "vi": "Nên xem ở đâu"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "vi": "Hướng dẫn"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "vi": "Trang chủ"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "vi": "Trang chủ"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "vi": "Lukotta là gì và cài đặt thế nào"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "vi": "Giới thiệu"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "vi": "ai duy trì Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "vi": "Liên hệ"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "vi": "cách báo lỗi"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "vi": "Sơ đồ trang"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "vi": "mọi trang trên trang web này"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "vi": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "vi": "cả trang web dưới dạng văn bản thuần"
     }
   }
 }

@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "ar",
+    "name": "Arabic",
+    "native": "العربية",
+    "dir": "rtl"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "an-lukotta",
+      "title": "عن Lukotta",
+      "description": "‏Lukotta تطبيق macOS مجاني ومفتوح المصدر يفتح أقراص BitLocker وNTFS وLinux، تحت GNU General Public License.",
+      "lead": "يفتح Lukotta أقراصاً وصور أقراص لا يستطيع macOS قراءتها. وهو مجاني، مفتوح المصدر، ويتعهده شخص واحد.",
+      "sections": [
+        {
+          "heading": "ما هو",
+          "paragraphs": [
+            "‏Lukotta تطبيق لنظام macOS. يفتح أقراص BitLocker وNTFS وLUKS وext4 وbtrfs وXFS، وكذلك صور أقراص الأجهزة الافتراضية بصيغ qcow2 وVMDK وVDI وVHD وVHDX. لا يقرأ macOS أياً منها بنفسه. أما NTFS فيقرأه ولا يكتب عليه.",
+            "يشغّل في الخلفية نظام Linux صغيراً، ويفتح القرص هناك، ثم يسلّمه إلى Finder. يقرأ Linux هذه الصيغ منذ سنوات. لا يُحوَّل القرص ولا يُنسخ. يبقى كما كان، والجهاز الذي جاء منه يظل يقرأه."
+          ]
+        },
+        {
+          "heading": "من يتعهده",
+          "paragraphs": [
+            "[مطوّر واحد](https://rahula.dev). لا شركة، ولا مستثمرين، ولا فريق."
+          ]
+        },
+        {
+          "heading": "لماذا وُجد",
+          "paragraphs": [
+            "وصّل قرص BitLocker بجهاز Mac فيعرض Finder محوه. لا يطلب كلمة سر، وليس على الشاشة ما يدل على أن القرص مقفل لا معطوب.",
+            "بدا من العبث أنه في هذا الزمان لا توجد طريقة عملية لمشاركة قرص USB مشفّر بين عدة أنظمة تشغيل، فكان لا بد من بناء حل.",
+            "في منظومة Linux كانت هناك أدوات تقرأ تلك الأقراص أصلاً. يجمعها Lukotta خلف واجهة لـMac."
+          ]
+        },
+        {
+          "heading": "كم يكلّف",
+          "paragraphs": [
+            "لا شيء. لا نسخة مدفوعة، ولا اشتراك، ولا فترة تجريبية، ولا حساب.",
+            "‏Lukotta برنامج حر تحت GNU General Public License، الإصدار 3 أو ما بعده. المصدر منشور. لكل أحد أن يقرأه ويغيّره ويمرّره بالرخصة نفسها."
+          ]
+        },
+        {
+          "heading": "لا شيء يغادر جهاز Mac عندك",
+          "paragraphs": [
+            "ليس في Lukotta تحليلات ولا قياس عن بُعد ولا تقارير أعطال.",
+            "يقوم بنوع واحد من طلبات الشبكة: ينظر هل هناك إصدار جديد وينزّله إن طلبت. وكلمات السر ومفاتيح الاسترداد تُستعمل لفتح القرص ولا تُحفظ ولا تُرسل ولا تُسجَّل."
+          ]
+        },
+        {
+          "heading": "الشيفرة المصدرية",
+          "paragraphs": [
+            "الشيفرة المصدرية للتطبيق على github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "ittisal",
+      "title": "اتصال",
+      "description": "كيف تبلّغ عن خطأ في Lukotta، أو تطرح سؤالاً، أو تبلّغ عن مشكلة أمنية. تُقرأ issues على GitHub أولاً.",
+      "lead": "الأخطاء تذهب إلى GitHub. المشكلات الأمنية تذهب إلى العنوان في SECURITY.md. وكل ما عدا ذلك بالبريد.",
+      "sections": [
+        {
+          "heading": "خطأ، أو قرص لا يُفتح",
+          "paragraphs": [
+            "افتح issue على github.com/clementrahula/lukotta/issues. تُقرأ الـissues أولاً وهي علنية، فيجد الشخص التالي بالقرص نفسه الجواب.",
+            "قل أي قرص هو، وما الذي أظهره Lukotta، وما الذي توقعته. اقتبس الخطأ حرفياً. ولا تلصق أبداً كلمة سر أو مفتاح استرداد في issue."
+          ]
+        },
+        {
+          "heading": "مشكلة أمنية",
+          "paragraphs": [
+            "لا تفتح issue علنياً. ملف SECURITY.md في المستودع يقول إلى أين يُرسل وما يُتوقع."
+          ]
+        },
+        {
+          "heading": "كل ما عدا ذلك",
+          "paragraphs": [
+            "اكتب إلى contact_web@lukotta.com بأسئلة عن التطبيق."
+          ]
+        },
+        {
+          "heading": "كم يستغرق الرد",
+          "paragraphs": [
+            "يتعهد Lukotta شخص واحد. لا يوجد دعم ولا وقت رد موعود. بعض الرسائل تتأخر، وبعضها يبقى بلا رد.",
+            "‏issue على GitHub أسرع في العادة، لأن غيري قد يجيب أولاً."
+          ]
+        }
+      ]
+    }
+  }
+}

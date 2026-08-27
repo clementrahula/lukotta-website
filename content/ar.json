@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ar": "نص الصفحة مرخّص بموجب Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ar": "الصفحة غير موجودة"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ar": "هذا العنوان غير موجود على lukotta.com. خريطة الموقع تذكر كل صفحة، وllms.txt يحوي الموقع كله نصاً بسيطاً."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ar": "هذا العنوان غير موجود على lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ar": "أين تنظر بدلاً من ذلك"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ar": "أدلة"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ar": "الصفحة الرئيسية"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ar": "الصفحة الرئيسية"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ar": "ما هو Lukotta وكيف يُثبَّت"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ar": "عن البرنامج"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ar": "من يتعهد Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ar": "اتصال"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ar": "كيف يُبلَّغ عن خطأ"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ar": "خريطة الموقع"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ar": "كل صفحة في هذا الموقع"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ar": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ar": "الموقع كله نصاً بسيطاً"
     }
   }
 }

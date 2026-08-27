@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "he",
+    "name": "Hebrew",
+    "native": "עברית",
+    "dir": "rtl"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "odot",
+      "title": "אודות Lukotta",
+      "description": "‏Lukotta היא אפליקציית macOS חינמית בקוד פתוח שפותחת כונני BitLocker, ‏NTFS ו‑Linux, תחת GNU General Public License.",
+      "lead": "‏Lukotta פותחת כוננים ותמונות דיסק ש‑macOS לא מצליחה לקרוא. היא חינמית, בקוד פתוח, ומתוחזקת בידי אדם אחד.",
+      "sections": [
+        {
+          "heading": "מה זה",
+          "paragraphs": [
+            "‏Lukotta היא אפליקציה ל‑macOS. היא פותחת כונני BitLocker, ‏NTFS, ‏LUKS, ‏ext4, ‏btrfs ו‑XFS, וכן תמונות דיסק של מכונות וירטואליות בתבניות qcow2, ‏VMDK, ‏VDI, ‏VHD ו‑VHDX. ‏macOS לא קוראת אף אחת מהן בעצמה. את NTFS היא קוראת, אבל לא כותבת אליו.",
+            "היא מפעילה ברקע מערכת Linux קטנה, פותחת שם את הכונן ומוסרת אותו ל‑Finder. ‏Linux קוראת את התבניות האלה כבר שנים. הכונן אינו מומר ואינו מועתק. הוא נשאר כפי שהיה, והמכונה שממנה הגיע ממשיכה לקרוא אותו."
+          ]
+        },
+        {
+          "heading": "מי מתחזק אותה",
+          "paragraphs": [
+            "[מפתח יחיד](https://rahula.dev). אין חברה, אין משקיעים ואין צוות."
+          ]
+        },
+        {
+          "heading": "למה היא קיימת",
+          "paragraphs": [
+            "חברו כונן BitLocker ל‑Mac ו‑Finder יציע למחוק אותו. הוא לא מבקש סיסמה, ושום דבר על המסך לא מראה שהכונן נעול ולא מקולקל.",
+            "נראה מגוחך שבימינו אין דרך מעשית לשתף כונן USB מוצפן בין כמה מערכות הפעלה, ולכן היה צריך לבנות פתרון.",
+            "במערכת האקולוגית של Linux כבר היו כלים שידעו לקרוא את הכוננים האלה. ‏Lukotta מחברת אותם לממשק ל‑Mac."
+          ]
+        },
+        {
+          "heading": "כמה זה עולה",
+          "paragraphs": [
+            "כלום. אין גרסה בתשלום, אין מנוי, אין תקופת ניסיון ואין חשבון.",
+            "‏Lukotta היא תוכנה חופשית תחת GNU General Public License, גרסה 3 או מאוחרת יותר. הקוד מפורסם. כל אחד רשאי לקרוא אותו, לשנות אותו ולהעביר אותו הלאה באותו רישיון."
+          ]
+        },
+        {
+          "heading": "שום דבר לא עוזב את ה‑Mac שלכם",
+          "paragraphs": [
+            "ל‑Lukotta אין אנליטיקה, אין טלמטריה ואין דיווחי קריסה.",
+            "היא מבצעת סוג אחד של בקשת רשת: בודקת אם יש גרסה חדשה ומורידה אותה אם תבקשו. סיסמאות ומפתחות שחזור משמשים לפתיחת הכונן ואינם נשמרים, נשלחים או נרשמים."
+          ]
+        },
+        {
+          "heading": "קוד המקור",
+          "paragraphs": [
+            "קוד המקור של האפליקציה נמצא ב‑github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kesher",
+      "title": "צור קשר",
+      "description": "איך לדווח על תקלה ב‑Lukotta, לשאול שאלה או לדווח על בעיית אבטחה. ה‑issues ב‑GitHub נקראים ראשונים.",
+      "lead": "תקלות הולכות ל‑GitHub. בעיות אבטחה הולכות לכתובת שב‑SECURITY.md. כל השאר הולך במייל.",
+      "sections": [
+        {
+          "heading": "תקלה, או כונן שלא נפתח",
+          "paragraphs": [
+            "פתחו issue ב‑github.com/clementrahula/lukotta/issues. ה‑issues נקראים ראשונים והם פומביים, כך שהאדם הבא עם אותו כונן ימצא את התשובה.",
+            "כתבו איזה כונן זה, מה Lukotta הראתה ומה ציפיתם. צטטו את השגיאה במדויק. לעולם אל תדביקו סיסמה או מפתח שחזור לתוך issue."
+          ]
+        },
+        {
+          "heading": "בעיית אבטחה",
+          "paragraphs": [
+            "אל תפתחו issue פומבי. ה‑SECURITY.md במאגר אומר לאן לשלוח ומה לצפות."
+          ]
+        },
+        {
+          "heading": "כל השאר",
+          "paragraphs": [
+            "כתבו ל‑contact_web@lukotta.com בשאלות על האפליקציה."
+          ]
+        },
+        {
+          "heading": "כמה זמן לוקחת תשובה",
+          "paragraphs": [
+            "‏Lukotta מתוחזקת בידי אדם אחד. אין תמיכה ואין זמן תגובה מובטח. חלק מההודעות לוקחות זמן, וחלק נשארות ללא מענה.",
+            "‏issue ב‑GitHub בדרך כלל מהיר יותר, כי מישהו אחר עשוי לענות קודם."
+          ]
+        }
+      ]
+    }
+  }
+}
