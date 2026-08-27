@@ -184,7 +184,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "ko": "물리 드라이브와 이미지 파일을 똑같이 받습니다. BitLocker 볼륨은 자체 암호나 48자리 복구 키로 열리고, BitLocker와 NTFS 볼륨은 읽기뿐 아니라 쓰기도 되므로 드라이브에서 꺼내는 것처럼 드라이브로 복사할 수도 있습니다."
+      "ko": "물리 드라이브와 디스크 이미지 파일을 똑같이 받습니다. BitLocker 볼륨은 자체 암호나 48자리 복구 키로 열리고, BitLocker와 NTFS 볼륨은 읽기뿐 아니라 쓰기도 되므로 드라이브에서 꺼내는 것처럼 드라이브로 복사할 수도 있습니다."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -268,7 +268,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ko": "OVA가 담고 있는 것. 한 번에 기록되므로 직접 수정할 수 없습니다"
+      "ko": "OVA가 담고 있는 것. 한 번에 기록되므로 나중에 그 파일 자체를 수정할 수 없습니다"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
