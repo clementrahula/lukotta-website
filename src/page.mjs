@@ -807,7 +807,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
    rather than the raw path, because the path is in the href where a machine
    reads it, and "/sitemap.xml" as visible text only ever looked like a
    directory listing. */
-export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks }) {
+export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks, homeHref = "/" }) {
   const A = (name) => `assets/${name}`;
   const code = lang.code;
   const icons = { sunIcon, moonIcon, globeIcon };
@@ -838,8 +838,8 @@ ${items.map(([href, name, what]) =>
   <meta http-equiv="Content-Security-Policy" content="__CSP__">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <title>Page not found — Lukotta</title>
-  <meta name="description" content="That address does not exist on lukotta.com. The sitemap lists every page in all 37 languages, and llms.txt carries the whole site as plain text.">
+  <title>${esc(t("notFound.title"))} — Lukotta</title>
+  <meta name="description" content="${esc(t("notFound.description"))}">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
@@ -870,16 +870,16 @@ ${siteHeader({ t, A: (n) => `/${A(n)}`, home: "/", icons, native: lang.native, l
     <article class="task">
       <section class="hero">
         <div class="wrap">
-          <h1>Page not found</h1>
-          <p class="lead">That address does not exist on lukotta.com.</p>
+          <h1>${esc(t("notFound.title"))}</h1>
+          <p class="lead">${esc(t("notFound.lead"))}</p>
 
-          <h2 class="sub">Where to look instead</h2>
+          <h2 class="sub">${esc(t("notFound.where"))}</h2>
 ${list(links)}
 
-          <h2 class="sub">Guides</h2>
+          <h2 class="sub">${esc(t("notFound.guides"))}</h2>
 ${list(tasks)}
 
-          <p class="hero-actions"><a class="btn" href="/">Homepage</a></p>
+          <p class="hero-actions"><a class="btn" href="${homeHref}">${esc(t("notFound.home"))}</a></p>
         </div>
       </section>
     </article>

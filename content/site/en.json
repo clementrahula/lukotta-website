@@ -1,5 +1,5 @@
 {
-  "$comment": "Two pages that are about the project and the person behind it rather than about a drive. English only, on purpose: they say who publishes this software, and a machine translation of that claim is worth less than none. They are rendered with the same machinery as the task pages, and they are the pages an agent looks for when deciding whether a small application from an unknown name can be recommended to somebody.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
   "order": [
     "about",
     "contact"

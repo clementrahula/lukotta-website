@@ -274,9 +274,15 @@ function taskAlternates(key) {
    an agent asked to judge whether a small application from an unknown name can
    be recommended looks for exactly these two pages, and finding neither is an
    answer in itself. */
-const sitePages = existsSync(join(ROOT, "content", "site-pages.json"))
-  ? JSON.parse(readFileSync(join(ROOT, "content", "site-pages.json"), "utf8"))
-  : null;
+function loadSitePages(code) {
+  const file = join(ROOT, "content", "site", `${code}.json`);
+  if (!existsSync(file)) return null;
+  return JSON.parse(readFileSync(file, "utf8"));
+}
+
+const sitePagesByLang = new Map(
+  buildable.map((l) => [l.code, loadSitePages(l.code)]).filter(([, v]) => v)
+);
 
 const sitePageEntries = [];
 
@@ -461,28 +467,43 @@ function lastChanged(file) {
 
 const builtLangs = buildable.filter((l) => built.includes(l.code));
 
-/* The two site pages, written once, in English. They carry no alternates: there
-   is one of each, and saying otherwise in the sitemap would be a lie about a
-   page that does not exist. */
-if (sitePages) {
-  const t = translator(cfg.defaultLang, english, null);
-  const lang = buildable.find((l) => l.code === cfg.defaultLang);
-  for (const key of sitePages.order) {
-    const page = { ...sitePages.pages[key], free: taskPagesByLang.get(cfg.defaultLang)?.ui?.free };
+/* About and Contact, in every language that has them, each under its own slug.
+   Rendered with the guide machinery because that is what they are: a heading
+   and some prose. */
+for (const lang of buildable) {
+  const site = sitePagesByLang.get(lang.code);
+  if (!site) continue;
+  const t = translator(lang.code, loadStrings(lang.code) || english, loadLocalOnly(lang.code));
+  const base = lang.path ? `${lang.path}/` : "";
+  for (const key of site.order) {
+    const page = { ...site.pages[key], free: taskPagesByLang.get(lang.code)?.ui?.free
+                                            ?? taskPagesByLang.get(cfg.defaultLang)?.ui?.free };
     const slug = page.slug;
-    const canonical = `${cfg.domain}/${slug}/`;
+    const canonical = `${cfg.domain}/${base}${slug}/`;
+    /* Every language that has this page, under its own slug. */
+    const alternates = [];
+    for (const l of buildable) {
+      const other = sitePagesByLang.get(l.code)?.pages?.[key];
+      if (!other) continue;
+      const href = `${cfg.domain}/${l.path ? l.path + "/" : ""}${other.slug}/`;
+      for (const code of [l.code, ...(l.alsoServes || [])]) alternates.push({ code, href });
+    }
+    const en = sitePagesByLang.get(cfg.defaultLang)?.pages?.[key];
+    if (en) alternates.push({ code: "x-default", href: `${cfg.domain}/${en.slug}/` });
+
     const html = withPolicy(renderTaskPage({
-      page, slug, lang, cfg, t, buildable, canonical,
-      alternates: [{ code: "en", href: canonical }, { code: "x-default", href: canonical }],
-      assetPrefix: "../", assets: { css: CSS, js: JS }, home: "../",
+      page, slug, lang, cfg, t, buildable, canonical, alternates,
+      assetPrefix: lang.path ? "../../" : "../",
+      assets: { css: CSS, js: JS },
+      home: lang.path ? `../../${lang.path}/` : "../",
     }));
-    const dir = join(OUT, slug);
+    const dir = join(OUT, base, slug);
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, "index.html"), html, "utf8");
     writeFileSync(join(dir, "index.md"),
-      taskMarkdown({ page, canonical, home: `${cfg.domain}/` }), "utf8");
+      taskMarkdown({ page, canonical, home: `${cfg.domain}/${base}` }), "utf8");
     markdownTwins += 1;
-    sitePageEntries.push({ slug, title: page.title, description: page.description });
+    sitePageEntries.push({ code: lang.code, slug: `${base}${slug}`, title: page.title });
   }
 }
 
@@ -748,34 +769,47 @@ writeFileSync(
 writeFileSync(join(OUT, ".nojekyll"), "", "utf8");
 writeFileSync(join(OUT, "CNAME"), `${new URL(cfg.domain).hostname}\n`, "utf8");
 
-/* 404 page.
+/* 404 pages, one per language.
 
-   GitHub Pages serves this with a real 404 status, which is the part that
-   matters most: an app shell returned as 200 teaches an agent that every path
-   on the site exists. The body then has to be worth reading, for a person who
-   mistyped an address and for an agent that followed a stale link. The markup
-   lives in page.mjs with every other page. */
-const notFoundLinks = [
-  ["/", "Home page", "what Lukotta is and how to install it"],
-  ["/about/", "About", "who maintains Lukotta"],
-  ["/contact/", "Contact", "how to report a bug"],
-  ["/sitemap.xml", "Sitemap", "every page on this site"],
-  ["/llms.txt", "llms.txt", "the whole site as plain text"],
-];
+   GitHub Pages serves the root 404.html with a real 404 status, which is the
+   part that matters most: an app shell returned as 200 teaches an agent that
+   every path on the site exists. The per-language copies are written beside it
+   so a reader who was on /de/ is answered in German. Which of them actually
+   gets served depends on the host, and the worker can route by path prefix if
+   it needs to; the root one is English and is always correct as a fallback. */
+function notFoundFor(lang, t, sitePages) {
+  const base = lang.path ? `/${lang.path}/` : "/";
+  const links = [
+    [base, t("notFound.home.name"), t("notFound.home.what")],
+  ];
+  if (sitePages) {
+    for (const [key, nameKey, whatKey] of [
+      ["about", "notFound.about.name", "notFound.about.what"],
+      ["contact", "notFound.contact.name", "notFound.contact.what"],
+    ]) {
+      const page = sitePages.pages?.[key];
+      if (page) links.push([`${base}${page.slug}/`, t(nameKey), t(whatKey)]);
+    }
+  }
+  links.push(["/sitemap.xml", t("notFound.sitemap.name"), t("notFound.sitemap.what")]);
+  links.push(["/llms.txt", t("notFound.llms.name"), t("notFound.llms.what")]);
+  return { links, homeHref: base };
+}
 
-writeFileSync(
-  join(OUT, "404.html"),
-  withPolicy(renderNotFound({
-    lang: buildable.find((l) => l.code === cfg.defaultLang),
-    cfg,
-    t: translator(cfg.defaultLang, english, null),
-    buildable,
-    assets: { css: CSS, js: JS },
-    links: notFoundLinks,
-    tasks: taskPageList.map(([href, title]) => [href, title]),
-  })),
-  "utf8"
-);
+for (const lang of buildable) {
+  const t = translator(lang.code, loadStrings(lang.code) || english, loadLocalOnly(lang.code));
+  const pages = taskPagesByLang.get(lang.code);
+  const site = sitePagesByLang.get(lang.code);
+  const { links, homeHref } = notFoundFor(lang, t, site);
+  const tasks = pages
+    ? pages.order.map((k) => [`${homeHref}${pages.pages[k].slug}/`, pages.pages[k].title])
+    : [];
+  const html = withPolicy(renderNotFound({
+    lang, cfg, t, buildable, assets: { css: CSS, js: JS }, links, tasks, homeHref,
+  }));
+  const dir = lang.path ? join(OUT, lang.path) : OUT;
+  writeFileSync(join(dir, "404.html"), html, "utf8");
+}
 
 /* A key no page renders is still sent to every translator. Report it. */
 for (const key of Object.keys(english)) {

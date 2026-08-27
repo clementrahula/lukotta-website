@@ -105,6 +105,22 @@
     "footer.contact": "Contact",
     "footer.copyright": "{copyleft} {year} {author}",
     "footer.gpl": "Free software under the GNU General Public License, version 3 or later.",
-    "footer.content": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence."
+    "footer.content": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
+    "notFound.title": "Page not found",
+    "notFound.description": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+    "notFound.lead": "That address does not exist on lukotta.com.",
+    "notFound.where": "Where to look instead",
+    "notFound.guides": "Guides",
+    "notFound.home": "Homepage",
+    "notFound.home.name": "Home page",
+    "notFound.home.what": "what Lukotta is and how to install it",
+    "notFound.about.name": "About",
+    "notFound.about.what": "who maintains Lukotta",
+    "notFound.contact.name": "Contact",
+    "notFound.contact.what": "how to report a bug",
+    "notFound.sitemap.name": "Sitemap",
+    "notFound.sitemap.what": "every page on this site",
+    "notFound.llms.name": "llms.txt",
+    "notFound.llms.what": "the whole site as plain text"
   }
 }

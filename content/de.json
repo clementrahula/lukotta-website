@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "de": "Seitentext unter der Lizenz Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "de": "Seite nicht gefunden"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "de": "Diese Adresse gibt es auf lukotta.com nicht. Die Sitemap führt jede Seite auf, und llms.txt enthält die ganze Website als reinen Text."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "de": "Diese Adresse gibt es auf lukotta.com nicht."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "de": "Wo Sie stattdessen nachsehen können"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "de": "Anleitungen"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "de": "Startseite"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "de": "Startseite"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "de": "was Lukotta ist und wie man es installiert"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "de": "Über Lukotta"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "de": "wer Lukotta pflegt"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "de": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "de": "wie man einen Fehler meldet"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "de": "Sitemap"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "de": "jede Seite dieser Website"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "de": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "de": "die ganze Website als reiner Text"
     }
   }
 }
