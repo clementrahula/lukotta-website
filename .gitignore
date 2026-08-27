@@ -17,3 +17,6 @@ export-delta/
 
 # Written by an auditing agent on request. A working note, not part of the site.
 audit.md
+
+# Working files for the translation harnesses. Regenerated on demand.
+dist/

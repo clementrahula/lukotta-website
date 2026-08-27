@@ -402,7 +402,14 @@ for (const lang of buildable) {
   if (shotSize.width < 720) warn(`${lang.code}: screenshot is ${shotSize.width}px wide; the frame displays it at 720px.`);
 
   const taskPages = taskPagesByLang.get(lang.code) || null;
-  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages }));
+  /* The footer's Contact link. It pointed at the English page from every
+     language, which left the thirty-six translated contact pages with no
+     inbound link at all. */
+  const contactSlug = sitePagesByLang.get(lang.code)?.pages?.contact?.slug;
+  const contactHref = contactSlug
+    ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${contactSlug}/`
+    : `${cfg.domain}/contact/`;
+  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages, contactHref }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
@@ -422,7 +429,7 @@ for (const lang of buildable) {
       const taskHtml = withPolicy(renderTaskPage({
         page, slug, lang, cfg, t, buildable, canonical: taskCanonical,
         alternates: taskAlternates(key),
-        assetPrefix: taskPrefix, assets: { css: CSS, js: JS },
+        assetPrefix: taskPrefix, assets: { css: CSS, js: JS }, contactHref,
         home: lang.path ? `../../${lang.path}/` : "../",
       }));
       const taskDir = join(dir, slug);
@@ -495,6 +502,7 @@ for (const lang of buildable) {
       page, slug, lang, cfg, t, buildable, canonical, alternates,
       assetPrefix: lang.path ? "../../" : "../",
       assets: { css: CSS, js: JS },
+      contactHref: `${cfg.domain}/${base}${site.pages.contact.slug}/`,
       home: lang.path ? `../../${lang.path}/` : "../",
     }));
     const dir = join(OUT, base, slug);
@@ -806,6 +814,9 @@ for (const lang of buildable) {
     : [];
   const html = withPolicy(renderNotFound({
     lang, cfg, t, buildable, assets: { css: CSS, js: JS }, links, tasks, homeHref,
+    contactHref: site?.pages?.contact
+      ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${site.pages.contact.slug}/`
+      : undefined,
   }));
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   writeFileSync(join(dir, "404.html"), html, "utf8");

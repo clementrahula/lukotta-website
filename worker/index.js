@@ -44,6 +44,20 @@ function twinFor(pathname) {
 
 export default {
   async fetch(request, env, ctx) {
+    /* A worker in front of a whole zone that throws returns a Cloudflare error
+       page to a real visitor, for every request, on every page. Nothing here is
+       important enough to be worth that: if anything at all goes wrong, hand
+       the request to the origin and let the site serve HTML as it did before
+       this file existed. */
+    try {
+      return await negotiate(request);
+    } catch {
+      return fetch(request);
+    }
+  },
+};
+
+async function negotiate(request) {
     const url = new URL(request.url);
     const method = request.method.toUpperCase();
     const asked = wantsMarkdown(request.headers.get("Accept"));
@@ -74,10 +88,13 @@ export default {
         "Vary": "Accept, Accept-Encoding",
         "X-Content-Type-Options": "nosniff",
         "Link": `<${url.href}>; rel="canonical"`,
+        /* The twins are a machine-readable copy of a page that is already
+           indexed at its own address. Letting them be indexed separately is
+           thin duplicate content. */
+        "X-Robots-Tag": "noindex",
       },
     });
-  },
-};
+}
 
 /* Every response from this zone carries it, not just the markdown ones. A cache
    deciding what to do with the HTML has to know that Accept mattered, or it

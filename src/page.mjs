@@ -27,14 +27,26 @@ const away = ' target="_blank" rel="noopener noreferrer"';
    content file is still a place a link could be written badly. */
 const LINK = /\[([^\]]+)\]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g;
 
-const autolink = (escaped) =>
-  escaped
-    .replace(LINK, (whole, text, href) =>
-      /^(https:\/\/|mailto:)/.test(href) ? `<a href="${href}">${text}</a>` : whole)
+/* The bare-name passes run only on the text between anchors, never inside one.
+   Without that split, a paragraph written as [the source](https://github.com/x)
+   comes out with an anchor nested inside its own href: the github pass matches
+   the URL the first pass had just written into the attribute. No content on the
+   site triggers it today, which is exactly why it wanted finding before some
+   content did. */
+const bare = (text) =>
+  text
     .replace(/\bgithub\.com\/[A-Za-z0-9._\/-]*[A-Za-z0-9_\/-]/g,
              (m) => `<a href="https://${m}">${m}</a>`)
     .replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
              (m) => `<a href="mailto:${m}">${m}</a>`);
+
+const autolink = (escaped) =>
+  escaped
+    .replace(LINK, (whole, text, href) =>
+      /^(https:\/\/|mailto:)/.test(href) ? `<a href="${href}">${text}</a>` : whole)
+    .split(/(<a\b[^>]*>.*?<\/a>)/s)
+    .map((part, i) => (i % 2 ? part : bare(part)))
+    .join("");
 
 
 const esc = (s) =>
@@ -138,7 +150,7 @@ ${langLinks}
 }
 
 /* The site footer, on every page for the same reason. */
-export function siteFooter({ t, cfg, away, copyright, authorLink }) {
+export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref }) {
   return `  <footer class="site-footer">
     <div class="wrap">
       <nav aria-label="${esc(t("ui.footerMenu"))}">
@@ -149,7 +161,7 @@ export function siteFooter({ t, cfg, away, copyright, authorLink }) {
              which one is read first, and says how long a reply takes. The
              address is on it. An agent deciding whether this software can be
              recommended looks for a contact page and cannot follow a mailto. -->
-        <a href="${cfg.domain}/contact/">${esc(t("footer.contact"))}</a>
+        <a href="${contactHref || `${cfg.domain}/contact/`}">${esc(t("footer.contact"))}</a>
       </nav>
       <p class="colophon">
         <span>${copyright.join(authorLink)}</span>
@@ -160,7 +172,7 @@ export function siteFooter({ t, cfg, away, copyright, authorLink }) {
   </footer>`;
 }
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages, contactHref }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -538,7 +550,7 @@ ${faqItems}
 
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
 
   <!-- Also exempt: script.js reads these, so their order relative to it must
        not be rearranged. -->
@@ -605,7 +617,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
    A reader arriving here from a search should not be able to tell they have
    landed on something built differently. */
 export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
-                                 alternates = [], assetPrefix, assets, home }) {
+                                 alternates = [], assetPrefix, assets, home, contactHref }) {
   const A = (name) => `${assetPrefix}assets/${name}`;
   const code = lang.code;
   const dir = lang.dir || "ltr";
@@ -774,7 +786,7 @@ ${page.sections.map(section).join("\n")}
     </article>
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
 
 
   <!-- Structured data sits at the end of the document rather than in the head.
@@ -807,7 +819,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
    rather than the raw path, because the path is in the href where a machine
    reads it, and "/sitemap.xml" as visible text only ever looked like a
    directory listing. */
-export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks, homeHref = "/" }) {
+export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks, homeHref = "/", contactHref }) {
   const A = (name) => `assets/${name}`;
   const code = lang.code;
   const icons = { sunIcon, moonIcon, globeIcon };
@@ -885,7 +897,7 @@ ${list(tasks)}
     </article>
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
 
   <script src="/${assets.js}" defer></script>
 </body>
