@@ -1,0 +1,258 @@
+{
+  "$comment": "Draft task pages, English only. Not yet wired into the build. See drafts/README.md.",
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "More about BitLocker drives, and what to do if the password is lost",
+    "ntfs": "More about NTFS drives, including ones Windows left dirty",
+    "linux": "More about Linux drives and LUKS encryption",
+    "disk-images": "More about disk images, and which can be written to"
+  },
+  "pages": {
+    "bitlocker": {
+      "title": "Open a BitLocker drive on a Mac",
+      "lead": "Plug a BitLocker drive into a Mac and Finder offers to erase it. Here is why, and how to read the drive instead.",
+      "sections": [
+        {
+          "heading": "What BitLocker is",
+          "paragraphs": [
+            "BitLocker is the encryption built into Windows. When it is turned on, everything written to the drive is scrambled, and the contents cannot be read without the password. Windows uses it on its own drive, and on USB drives and memory cards, where it is called BitLocker To Go.",
+            "It is the same encryption in both cases. If the drive is lost, whoever finds it cannot read anything on it."
+          ]
+        },
+        {
+          "heading": "What happens when you plug one into a Mac",
+          "paragraphs": [
+            "Finder says the disk is unreadable and offers to initialise or erase it. It does not ask for a password, and nothing on screen suggests the drive is locked rather than broken.",
+            "The drive is not damaged. macOS has its own encryption, FileVault, and does not understand BitLocker at all. It reads the beginning of the drive, finds a layout it does not recognise, and treats the disk as unformatted, so the only thing it can offer is to erase it."
+          ]
+        },
+        {
+          "heading": "How Lukotta opens it",
+          "paragraphs": [
+            "Linux has been able to read BitLocker for years, and that is what Lukotta uses. It starts a small Linux system in the background, hands it the drive, and unlocks it there with the password you type. The unlocked drive goes back to Finder, where it appears under Locations alongside your other disks.",
+            "The drive is not converted or copied. It stays a BitLocker drive, still encrypted, and Windows still reads it."
+          ]
+        },
+        {
+          "heading": "Opening the drive",
+          "list": [
+            "Plug in the drive. Lukotta lists it and shows it as locked.",
+            "Click it and type the password you use on Windows.",
+            "The drive appears in Finder under Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "If you do not have the password",
+          "paragraphs": [
+            "When the drive was encrypted, Windows generated a recovery key and asked where to keep it. It opens the drive in place of the password. It is 48 digits, in eight groups of six:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "It may be saved in a Microsoft account, in a text file, or printed on paper. Paste it where the password would go.",
+            "Without the password or the key, the drive cannot be opened by any program, on any computer."
+          ]
+        },
+        {
+          "heading": "Drives that will not open on a Mac",
+          "paragraphs": [
+            "Some Windows PCs never ask for a password. They keep the key in a chip on the motherboard, called a TPM, and unlock the drive automatically when that machine starts.",
+            "A drive set up that way only works in the PC it came from, because the key never leaves it. No Mac can open it, and neither can another PC. If a recovery key was saved when the drive was encrypted, that will still open it."
+          ]
+        },
+        {
+          "heading": "Copying files onto the drive",
+          "paragraphs": [
+            "BitLocker drives open for reading and writing, so a Mac can add files to a Windows backup rather than only take them off.",
+            "Lukotta can also open the drive read-only, which is worth doing when you are recovering files from a drive that has been playing up. Nothing can be written to it then."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "title": "Read an ext4, btrfs or XFS drive on a Mac",
+      "lead": "Plug in a drive from a Linux machine and Finder offers to erase it. Here is why, and how to read it instead.",
+      "sections": [
+        {
+          "heading": "Why a Mac cannot read the drive",
+          "paragraphs": [
+            "Every drive has a filesystem: the arrangement that records where each file starts, what it is called, and which parts of the disk are still free. Windows uses NTFS. macOS uses APFS. Linux usually uses ext4, and sometimes btrfs or XFS.",
+            "The files themselves are ordinary. What differs is the index in front of them, and a computer that cannot read the index has no way to find anything, even though everything is still there."
+          ]
+        },
+        {
+          "heading": "What happens when you plug one into a Mac",
+          "paragraphs": [
+            "Finder says the disk is unreadable and offers to erase it. That is the same message macOS gives for a blank disk or a failing one, so the message gives you no way to tell the drive is fine.",
+            "macOS includes support for its own filesystems and for a few common ones such as exFAT. The Linux filesystems are not among them, so an ext4 drive looks to macOS like a blank disk."
+          ]
+        },
+        {
+          "heading": "How Lukotta reads it",
+          "paragraphs": [
+            "Lukotta starts a small Linux system in the background and gives it the drive. Linux reads ext4, btrfs and XFS on its own, so the drive opens there without any conversion, and Lukotta passes it on to Finder.",
+            "Nothing is written to the drive, and it behaves normally when it goes back into the Linux machine."
+          ]
+        },
+        {
+          "heading": "What Lukotta reads",
+          "paragraphs": [
+            "ext2, ext3 and ext4, which cover most Linux systems. btrfs, the default on Fedora and openSUSE. XFS, common on servers.",
+            "Encrypted or not. If the drive was set up with LVM, which divides one physical drive into several volumes, they all open together rather than one at a time."
+          ]
+        },
+        {
+          "heading": "Opening the drive",
+          "list": [
+            "Plug in the drive. Lukotta lists what is on it.",
+            "If it is encrypted, type the passphrase.",
+            "The drive appears in Finder under Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "If it asks for a passphrase",
+          "paragraphs": [
+            "LUKS is how Linux encrypts a whole drive. If the machine this drive came from asks for a passphrase early in startup, before the login screen, that is LUKS, and it is the passphrase to type here.",
+            "It is separate from the login password, though many people set both to the same thing."
+          ]
+        },
+        {
+          "heading": "Drives that will not open",
+          "paragraphs": [
+            "A LUKS drive can be set up with its header stored elsewhere, on another disk or a USB stick. The header is the part that describes the encryption. Without it there is nothing on the drive to unlock.",
+            "Newer Ubuntu installations can also tie the key to a chip inside the machine, in the same way BitLocker does. Those drives only open in the computer they came from."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "title": "Write to an NTFS drive on a Mac",
+      "lead": "macOS lets you copy files off an NTFS drive but not onto it. Here is why, and what to do about it.",
+      "sections": [
+        {
+          "heading": "What NTFS is",
+          "paragraphs": [
+            "NTFS is the filesystem Windows uses, both for its own drive and for external drives formatted on a PC. A USB drive formatted on a Windows machine is usually NTFS.",
+            "The other common one is exFAT, used by most memory cards and many USB sticks because Windows and macOS can both write to it. If your drive is exFAT then macOS already handles it and none of this applies. To check, click the drive in Finder and choose File, then Get Info. The Format line tells you."
+          ]
+        },
+        {
+          "heading": "What happens when you plug one into a Mac",
+          "paragraphs": [
+            "The drive appears in Finder and you can see the files. Copying files off it works normally. Copying anything onto it does not: Finder refuses, and the drive behaves as though it were locked.",
+            "macOS opens NTFS drives read-only. It has been able to write NTFS for years, but that is switched off and there is no supported way to turn it on. Writing NTFS is harder than reading it, and a mistake can leave a drive that Windows then refuses to open."
+          ]
+        },
+        {
+          "heading": "How Lukotta writes to it",
+          "paragraphs": [
+            "Lukotta opens the drive with the NTFS driver from Linux, which does write, and which Linux machines use every day. The drive is handed to Finder afterwards, so copying files onto it works like copying anything else.",
+            "The drive stays NTFS, and Windows reads it afterwards."
+          ]
+        },
+        {
+          "heading": "Opening the drive",
+          "list": [
+            "Plug in the drive. Lukotta lists it.",
+            "Click it.",
+            "It appears in Finder under Locations, and files copy in both directions."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "An NTFS drive usually has no password, so there is nothing to type unless BitLocker has been turned on as well."
+          ]
+        },
+        {
+          "heading": "Drives Windows did not shut down properly",
+          "paragraphs": [
+            "Windows marks a drive as dirty when writing was interrupted, usually because the drive was unplugged or the machine lost power partway through. The mark warns the next computer that opens it that the drive may be half-written and should be checked.",
+            "Fast Startup leaves the same mark even when nothing has gone wrong. It is on by default in Windows 10 and 11. Instead of shutting the machine down it hibernates it, which leaves the drive looking as though it is still in use.",
+            "macOS refuses a drive in either state and gives no reason. Lukotta opens it.",
+            "If you still have the Windows machine, the tidier fix is to plug the drive back in and shut that machine down properly: hold Shift as you click Shut down, which skips Fast Startup."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "title": "Open a VMDK, VDI or VHD file on a Mac",
+      "lead": "A virtual machine keeps its whole disk inside a single file. You can open that file on a Mac and take things out of it without ever starting the machine.",
+      "sections": [
+        {
+          "heading": "What a disk image is",
+          "paragraphs": [
+            "When you run a virtual machine, the machine's hard disk is a single ordinary file sitting on your Mac. Its operating system, its programs and every document in it are all inside that one file.",
+            "Each program writes that file its own way. VMware uses VMDK, VirtualBox uses VDI, Hyper-V uses VHD and VHDX, and QEMU and UTM use qcow2. A raw image, usually ending in .img, is a straight copy of a disk with nothing wrapped round it."
+          ]
+        },
+        {
+          "heading": "Why getting a file out is awkward",
+          "paragraphs": [
+            "The usual route is to start the virtual machine, wait for it to boot, find the file inside it and copy it across. That means the machine still has to work, and the program that runs it still has to be installed.",
+            "Finder is no use here either. Double-clicking a VMDK does nothing, because macOS does not know what is inside it."
+          ]
+        },
+        {
+          "heading": "How Lukotta opens it",
+          "paragraphs": [
+            "Lukotta reads the image directly. It works out what format the file is in, finds the disk inside, and opens it in the small Linux system it runs in the background. What is inside then appears in Finder as an ordinary disk.",
+            "The virtual machine stays switched off. VMware and VirtualBox do not need to be installed, and opening the file does not change it."
+          ]
+        },
+        {
+          "heading": "Which files Lukotta opens",
+          "list": [
+            "qcow2, from QEMU and UTM.",
+            "VMDK, from VMware.",
+            "VDI, from VirtualBox.",
+            "VHD and VHDX, from Hyper-V.",
+            "Raw images, usually ending in .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Opening one",
+          "list": [
+            "Choose File, then Open Disk Image, and pick the file.",
+            "If the disk inside is encrypted, type the password or passphrase.",
+            "The contents appear in Finder under Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "One file often holds several drives",
+          "paragraphs": [
+            "A disk image usually contains more than one partition: a small boot partition, the main one holding everything, and sometimes a recovery partition. Lukotta lists them and you open whichever you need, the same way you would pick a drive."
+          ]
+        },
+        {
+          "heading": "Copying files into an image",
+          "paragraphs": [
+            "qcow2 is written the ordinary way and is safe to write to.",
+            "VMDK, VDI and VHD can be written to, but that is recent work and has not been used long enough to trust with anything you cannot afford to lose. Copy the file and work on the copy, or open it read-only and take files out instead.",
+            "VHDX opens read-only, as does the kind of VMDK found inside an OVA file. That sort is written straight through in one pass and cannot be changed in place afterwards."
+          ]
+        },
+        {
+          "heading": "Files that will not open",
+          "paragraphs": [
+            "An image only opens if it is complete on its own.",
+            "A VMware snapshot chain spreads the machine's current state across an original file and a series of smaller ones recording what changed after it. A split disk divides one image into many pieces. A Hyper-V differencing disk holds only the differences from another file.",
+            "In each case the file you have is part of a set, and Lukotta opens one file at a time."
+          ]
+        }
+      ]
+    }
+  }
+}
