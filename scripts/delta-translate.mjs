@@ -24,9 +24,11 @@ const WORK = join(ROOT, "dist", "delta");
 const NOT_FOUND = Object.keys(english).filter((k) => k.startsWith("notFound."));
 
 /* Names that stay in Latin script whatever the surrounding language. */
+/* Finder is deliberately absent: Apple translates it in some languages, and
+   Chinese macOS calls it 访达. GLOSSARY.md covers it as an apple-term. */
 const VERBATIM = ["Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "APFS", "exFAT",
   "ext2", "ext3", "ext4", "btrfs", "XFS", "qcow2", "VMDK", "VDI", "VHDX", "VHD",
-  "Windows", "Linux", "Finder", "GNU General Public License", "SECURITY.md",
+  "Windows", "Linux", "GNU General Public License", "SECURITY.md",
   "llms.txt", "github.com", "rahula.dev"];
 const survives = (term, text) =>
   new RegExp(`(^|[^A-Za-z0-9])${term.replace(/[.\/]/g, "\\$&")}`, "i").test(text);

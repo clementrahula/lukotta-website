@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ja": "ページのテキストは Creative Commons Attribution-ShareAlike 4.0 ライセンスの下で提供されています。"
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ja": "ページが見つかりません"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ja": "そのアドレスは lukotta.com にありません。サイトマップがすべてのページを挙げていて、llms.txt にはサイト全体がプレーンテキストで入っています。"
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ja": "そのアドレスは lukotta.com にありません。"
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ja": "代わりに見るところ"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ja": "ガイド"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ja": "ホームページ"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ja": "ホームページ"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ja": "Lukotta とは何か、どう入れるか"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ja": "概要"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ja": "Lukotta を誰が保守しているか"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ja": "連絡先"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ja": "不具合の知らせ方"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ja": "サイトマップ"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ja": "このサイトのすべてのページ"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ja": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ja": "サイト全体をプレーンテキストで"
     }
   }
 }

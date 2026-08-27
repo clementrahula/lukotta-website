@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "zh-Hans": "页面文本采用 Creative Commons Attribution-ShareAlike 4.0 许可协议。"
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "zh-Hans": "找不到这个页面"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "zh-Hans": "lukotta.com 上没有这个地址。站点地图列出了每一个页面，llms.txt 里是整个网站的纯文本。"
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "zh-Hans": "lukotta.com 上没有这个地址。"
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "zh-Hans": "可以去哪里看"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "zh-Hans": "指南"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "zh-Hans": "首页"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "zh-Hans": "首页"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "zh-Hans": "Lukotta 是什么，怎么安装"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "zh-Hans": "关于"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "zh-Hans": "谁在维护 Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "zh-Hans": "联系"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "zh-Hans": "怎么报告问题"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "zh-Hans": "站点地图"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "zh-Hans": "这个网站的每一个页面"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "zh-Hans": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "zh-Hans": "整个网站的纯文本"
     }
   }
 }

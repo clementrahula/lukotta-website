@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ko": "페이지 텍스트는 Creative Commons Attribution-ShareAlike 4.0 라이선스를 따릅니다."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ko": "페이지를 찾을 수 없습니다"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ko": "그 주소는 lukotta.com에 없습니다. 사이트맵이 모든 페이지를 알려주고, llms.txt에는 사이트 전체가 일반 텍스트로 담겨 있습니다."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ko": "그 주소는 lukotta.com에 없습니다."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ko": "대신 볼 곳"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ko": "안내"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ko": "홈페이지"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ko": "홈페이지"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ko": "Lukotta가 무엇이고 어떻게 설치하는지"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ko": "소개"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ko": "Lukotta를 누가 관리하는지"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ko": "연락"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ko": "버그를 알리는 방법"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ko": "사이트맵"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ko": "이 사이트의 모든 페이지"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ko": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ko": "사이트 전체를 일반 텍스트로"
     }
   }
 }

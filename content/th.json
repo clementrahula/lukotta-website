@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "th": "ข้อความในหน้านี้อยู่ภายใต้สัญญาอนุญาต Creative Commons Attribution-ShareAlike 4.0"
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "th": "ไม่พบหน้านี้"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "th": "ไม่มีที่อยู่นี้บน lukotta.com แผนผังเว็บไซต์ระบุทุกหน้า และ llms.txt มีทั้งเว็บไซต์เป็นข้อความล้วน"
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "th": "ไม่มีที่อยู่นี้บน lukotta.com"
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "th": "ลองดูที่ไหนแทน"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "th": "คู่มือ"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "th": "หน้าแรก"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "th": "หน้าแรก"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "th": "Lukotta คืออะไรและติดตั้งอย่างไร"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "th": "เกี่ยวกับ"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "th": "ใครดูแล Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "th": "ติดต่อ"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "th": "แจ้งข้อผิดพลาดอย่างไร"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "th": "แผนผังเว็บไซต์"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "th": "ทุกหน้าในเว็บไซต์นี้"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "th": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "th": "ทั้งเว็บไซต์เป็นข้อความล้วน"
     }
   }
 }
