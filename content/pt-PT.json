@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "pt-PT": "Texto da página sob a licença Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "pt-PT": "Página não encontrada"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "pt-PT": "Esse endereço não existe em lukotta.com. O mapa do site nomeia cada página, e o llms.txt contém o site inteiro em texto simples."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "pt-PT": "Esse endereço não existe em lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "pt-PT": "Onde procurar em vez disso"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "pt-PT": "Guias"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "pt-PT": "Página inicial"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "pt-PT": "Página inicial"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "pt-PT": "o que é a Lukotta e como se instala"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "pt-PT": "Sobre"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "pt-PT": "quem mantém a Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "pt-PT": "Contacto"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "pt-PT": "como comunicar um erro"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "pt-PT": "Mapa do site"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "pt-PT": "todas as páginas deste site"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "pt-PT": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "pt-PT": "o site inteiro em texto simples"
     }
   }
 }

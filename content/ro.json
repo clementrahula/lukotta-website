@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ro": "Textul paginii sub licența Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ro": "Pagina nu a fost găsită"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ro": "Adresa aceasta nu există pe lukotta.com. Harta site-ului numește fiecare pagină, iar llms.txt cuprinde tot site-ul ca text simplu."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ro": "Adresa aceasta nu există pe lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ro": "Unde să cauți în schimb"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ro": "Ghiduri"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ro": "Pagina principală"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ro": "Pagina principală"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ro": "ce este Lukotta și cum se instalează"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ro": "Despre"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ro": "cine întreține Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ro": "Contact"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ro": "cum se raportează o eroare"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ro": "Harta site-ului"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ro": "fiecare pagină de pe acest site"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ro": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ro": "tot site-ul ca text simplu"
     }
   }
 }

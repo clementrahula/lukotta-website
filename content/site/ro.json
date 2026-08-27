@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "ro",
+    "name": "Romanian",
+    "native": "Română",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "despre",
+      "title": "Despre Lukotta",
+      "description": "Lukotta este o aplicație macOS gratuită și cu sursă deschisă care deschide discuri BitLocker, NTFS și Linux, sub GNU General Public License.",
+      "lead": "Lukotta deschide discuri și imagini de disc pe care macOS nu le poate citi. Este gratuită, cu sursă deschisă, și întreținută de un singur om.",
+      "sections": [
+        {
+          "heading": "Ce este",
+          "paragraphs": [
+            "Lukotta este o aplicație macOS. Deschide discuri BitLocker, NTFS, LUKS, ext4, btrfs și XFS, precum și imagini de disc ale mașinilor virtuale în formatele qcow2, VMDK, VDI, VHD și VHDX. macOS nu citește niciunul de la sine. NTFS îl citește, dar nu scrie pe el.",
+            "Pornește în fundal un mic sistem Linux, deschide discul acolo și îl predă lui Finder. Linux citește aceste formate de ani buni. Discul nu este convertit și nici copiat. Rămâne cum a fost, iar mașina din care vine îl citește în continuare."
+          ]
+        },
+        {
+          "heading": "Cine o întreține",
+          "paragraphs": [
+            "[Un singur dezvoltator](https://rahula.dev). Nu există firmă, nu există investitori și nu există echipă."
+          ]
+        },
+        {
+          "heading": "De ce există",
+          "paragraphs": [
+            "Conectezi un disc BitLocker la un Mac și Finder se oferă să îl șteargă. Nu cere parolă, iar nimic de pe ecran nu arată că discul este blocat, și nu stricat.",
+            "Părea absurd ca în ziua de azi să nu existe o cale practică de a folosi în comun un disc USB criptat între mai multe sisteme de operare, așa că a trebuit construită o soluție.",
+            "În ecosistemul Linux existau deja unelte care puteau citi acele discuri. Lukotta le pune laolaltă cu o interfață pentru Mac."
+          ]
+        },
+        {
+          "heading": "Cât costă",
+          "paragraphs": [
+            "Nimic. Nu există versiune plătită, nici abonament, nici perioadă de probă, nici cont.",
+            "Lukotta este software liber sub GNU General Public License, versiunea 3 sau mai nouă. Sursa este publicată. Oricine o poate citi, schimba și da mai departe sub aceeași licență."
+          ]
+        },
+        {
+          "heading": "Nimic nu pleacă de pe Mac-ul tău",
+          "paragraphs": [
+            "Lukotta nu are analize, nu are telemetrie și nu are rapoarte de eroare.",
+            "Face un singur fel de cerere de rețea: caută o versiune nouă și o descarcă dacă îi ceri. Parolele și cheile de recuperare servesc la deblocarea discului și nu sunt păstrate, trimise sau înregistrate."
+          ]
+        },
+        {
+          "heading": "Codul sursă",
+          "paragraphs": [
+            "Codul sursă al aplicației se află la github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact",
+      "description": "Cum raportezi o eroare în Lukotta, pui o întrebare sau raportezi o problemă de securitate. Issue-urile de pe GitHub se citesc primele.",
+      "lead": "Erorile merg pe GitHub. Problemele de securitate merg la adresa din SECURITY.md. Restul merge pe e-mail.",
+      "sections": [
+        {
+          "heading": "O eroare sau un disc care nu se deschide",
+          "paragraphs": [
+            "Deschide un issue la github.com/clementrahula/lukotta/issues. Issue-urile se citesc primele și sunt publice, așa că următorul om cu același disc găsește răspunsul.",
+            "Spune ce disc este, ce ți-a arătat Lukotta și ce te așteptai. Citează eroarea întocmai. Nu lipi niciodată o parolă sau o cheie de recuperare într-un issue."
+          ]
+        },
+        {
+          "heading": "O problemă de securitate",
+          "paragraphs": [
+            "Nu deschide un issue public. SECURITY.md din depozit spune unde se trimite și la ce să te aștepți."
+          ]
+        },
+        {
+          "heading": "Orice altceva",
+          "paragraphs": [
+            "Scrie la contact_web@lukotta.com cu întrebări despre aplicație."
+          ]
+        },
+        {
+          "heading": "Cât durează un răspuns",
+          "paragraphs": [
+            "Lukotta este întreținută de un singur om. Nu există suport și nici termen de răspuns promis. Unele mesaje durează, iar altele rămân fără răspuns.",
+            "Un issue pe GitHub merge de obicei mai repede, fiindcă altcineva poate răspunde primul."
+          ]
+        }
+      ]
+    }
+  }
+}

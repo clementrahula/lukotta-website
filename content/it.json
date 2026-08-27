@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "it": "Testo della pagina sotto licenza Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "it": "Pagina non trovata"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "it": "Quell'indirizzo non esiste su lukotta.com. La mappa del sito elenca ogni pagina, e llms.txt contiene tutto il sito come testo semplice."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "it": "Quell'indirizzo non esiste su lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "it": "Dove guardare invece"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "it": "Guide"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "it": "Pagina iniziale"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "it": "Pagina iniziale"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "it": "che cos'è Lukotta e come si installa"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "it": "Informazioni"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "it": "chi mantiene Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "it": "Contatti"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "it": "come segnalare un problema"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "it": "Mappa del sito"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "it": "ogni pagina di questo sito"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "it": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "it": "tutto il sito come testo semplice"
     }
   }
 }

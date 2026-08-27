@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "pl": "Tekst strony na licencji Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "pl": "Nie znaleziono strony"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "pl": "Tego adresu nie ma na lukotta.com. Mapa witryny wymienia każdą stronę, a llms.txt zawiera całą witrynę jako zwykły tekst."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "pl": "Tego adresu nie ma na lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "pl": "Gdzie zajrzeć zamiast tego"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "pl": "Poradniki"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "pl": "Strona główna"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "pl": "Strona główna"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "pl": "czym jest Lukotta i jak ją zainstalować"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "pl": "O programie"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "pl": "kto utrzymuje aplikację Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "pl": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "pl": "jak zgłosić błąd"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "pl": "Mapa witryny"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "pl": "każda strona tej witryny"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "pl": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "pl": "cała witryna jako zwykły tekst"
     }
   }
 }

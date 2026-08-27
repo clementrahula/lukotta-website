@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "pl",
+    "name": "Polish",
+    "native": "Polski",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "o-programie",
+      "title": "O programie Lukotta",
+      "description": "Lukotta to darmowa aplikacja macOS o otwartym źródle, która otwiera dyski BitLocker, NTFS i Linux, na GNU General Public License.",
+      "lead": "Lukotta otwiera dyski i obrazy dysku, których macOS nie potrafi odczytać. Jest darmowa, ma otwarte źródło i utrzymuje ją jedna osoba.",
+      "sections": [
+        {
+          "heading": "Czym jest",
+          "paragraphs": [
+            "Lukotta to aplikacja dla macOS. Otwiera dyski BitLocker, NTFS, LUKS, ext4, btrfs i XFS oraz obrazy dysku maszyn wirtualnych w formatach qcow2, VMDK, VDI, VHD i VHDX. macOS nie czyta żadnego z nich sam. NTFS potrafi odczytać, ale nie zapisać.",
+            "Uruchamia w tle mały system Linux, otwiera tam dysk i przekazuje go Finderowi. Linux czyta te formaty od lat. Dysk nie jest przekształcany ani kopiowany. Zostaje taki, jaki był, a komputer, z którego pochodzi, nadal go czyta."
+          ]
+        },
+        {
+          "heading": "Kto go utrzymuje",
+          "paragraphs": [
+            "[Jeden programista](https://rahula.dev). Nie ma firmy, nie ma inwestorów i nie ma zespołu."
+          ]
+        },
+        {
+          "heading": "Dlaczego powstał",
+          "paragraphs": [
+            "Podłącz dysk BitLocker do Maca, a Finder zaproponuje jego wymazanie. Nie pyta o hasło i nic na ekranie nie pokazuje, że dysk jest zablokowany, a nie zepsuty.",
+            "Wydawało się niedorzeczne, że w dzisiejszych czasach nie ma praktycznego sposobu, by dzielić zaszyfrowany dysk USB między kilka systemów operacyjnych, więc trzeba było zbudować rozwiązanie.",
+            "W ekosystemie Linux istniały już narzędzia, które potrafiły odczytać te dyski. Lukotta łączy je z interfejsem dla Maca."
+          ]
+        },
+        {
+          "heading": "Ile kosztuje",
+          "paragraphs": [
+            "Nic. Nie ma wersji płatnej, abonamentu, okresu próbnego ani konta.",
+            "Lukotta to wolne oprogramowanie na GNU General Public License, w wersji 3 lub późniejszej. Źródło jest opublikowane. Każdy może je czytać, zmieniać i przekazywać dalej na tej samej licencji."
+          ]
+        },
+        {
+          "heading": "Nic nie opuszcza twojego Maca",
+          "paragraphs": [
+            "Lukotta nie ma analityki, telemetrii ani raportów awarii.",
+            "Wykonuje jeden rodzaj zapytania sieciowego: sprawdza, czy jest nowa wersja, i pobiera ją, jeśli o to poprosisz. Hasła i klucze odzyskiwania służą do odblokowania dysku i nie są przechowywane, wysyłane ani zapisywane."
+          ]
+        },
+        {
+          "heading": "Kod źródłowy",
+          "paragraphs": [
+            "Kod źródłowy aplikacji jest na github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "description": "Jak zgłosić błąd w aplikacji Lukotta, zadać pytanie albo zgłosić problem bezpieczeństwa. Zgłoszenia na GitHubie czytane są najpierw.",
+      "lead": "Błędy trafiają na GitHub. Problemy bezpieczeństwa na adres z SECURITY.md. Wszystko inne pocztą.",
+      "sections": [
+        {
+          "heading": "Błąd albo dysk, który się nie otwiera",
+          "paragraphs": [
+            "Załóż zgłoszenie na github.com/clementrahula/lukotta/issues. Zgłoszenia czytane są najpierw i są publiczne, więc następna osoba z tym samym dyskiem znajdzie odpowiedź.",
+            "Napisz, jaki to dysk, co pokazała Lukotta i czego się spodziewałeś. Zacytuj błąd dokładnie. Nigdy nie wklejaj do zgłoszenia hasła ani klucza odzyskiwania."
+          ]
+        },
+        {
+          "heading": "Problem bezpieczeństwa",
+          "paragraphs": [
+            "Nie zakładaj publicznego zgłoszenia. SECURITY.md w repozytorium mówi, dokąd to wysłać i czego oczekiwać."
+          ]
+        },
+        {
+          "heading": "Wszystko inne",
+          "paragraphs": [
+            "Pisz na contact_web@lukotta.com z pytaniami o aplikację."
+          ]
+        },
+        {
+          "heading": "Ile trwa odpowiedź",
+          "paragraphs": [
+            "Aplikację Lukotta utrzymuje jedna osoba. Nie ma wsparcia ani obiecanego czasu odpowiedzi. Niektóre wiadomości trwają, a niektóre zostają bez odpowiedzi.",
+            "Zgłoszenie na GitHubie zwykle idzie szybciej, bo ktoś inny może odpowiedzieć wcześniej."
+          ]
+        }
+      ]
+    }
+  }
+}

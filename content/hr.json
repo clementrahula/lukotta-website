@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "hr": "Tekst stranice pod licencom Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "hr": "Stranica nije pronađena"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "hr": "Ta adresa ne postoji na lukotta.com. Karta stranica navodi svaku stranicu, a llms.txt sadrži cijelo mjesto kao običan tekst."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "hr": "Ta adresa ne postoji na lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "hr": "Gdje pogledati umjesto toga"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "hr": "Vodiči"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "hr": "Početna stranica"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "hr": "Početna stranica"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "hr": "što je Lukotta i kako se instalira"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "hr": "O aplikaciji"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "hr": "tko održava aplikaciju Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "hr": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "hr": "kako prijaviti pogrešku"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "hr": "Karta stranica"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "hr": "svaka stranica ovog mjesta"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "hr": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "hr": "cijelo mjesto kao običan tekst"
     }
   }
 }

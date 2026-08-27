@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "cs": "Text stránky pod licencí Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "cs": "Stránka nenalezena"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "cs": "Tato adresa na lukotta.com neexistuje. Mapa webu vypisuje každou stránku a llms.txt obsahuje celý web jako prostý text."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "cs": "Tato adresa na lukotta.com neexistuje."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "cs": "Kam se podívat místo toho"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "cs": "Návody"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "cs": "Úvodní stránka"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "cs": "Úvodní stránka"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "cs": "co je Lukotta a jak se instaluje"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "cs": "O aplikaci"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "cs": "kdo udržuje aplikaci Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "cs": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "cs": "jak nahlásit chybu"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "cs": "Mapa webu"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "cs": "každá stránka tohoto webu"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "cs": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "cs": "celý web jako prostý text"
     }
   }
 }

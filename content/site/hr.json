@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "hr",
+    "name": "Croatian",
+    "native": "Hrvatski",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "o-aplikaciji",
+      "title": "O aplikaciji Lukotta",
+      "description": "Lukotta je besplatna macOS aplikacija otvorenog koda koja otvara BitLocker, NTFS i Linux diskove, pod GNU General Public License.",
+      "lead": "Lukotta otvara diskove i slike diska koje macOS ne može pročitati. Besplatna je, otvorenog koda, i održava je jedna osoba.",
+      "sections": [
+        {
+          "heading": "Što je",
+          "paragraphs": [
+            "Lukotta je macOS aplikacija. Otvara BitLocker, NTFS, LUKS, ext4, btrfs i XFS diskove te slike diska virtualnih strojeva u formatima qcow2, VMDK, VDI, VHD i VHDX. macOS ne čita nijedan od njih sam. NTFS čita, ali na njega ne piše.",
+            "U pozadini pokrene mali sustav s Linuxom, ondje otvori disk i preda ga Finderu. Linux čita te formate već godinama. Disk se niti pretvara niti kopira. Ostaje kakav je bio, a stroj iz kojeg je došao i dalje ga čita."
+          ]
+        },
+        {
+          "heading": "Tko je održava",
+          "paragraphs": [
+            "[Jedan programer](https://rahula.dev). Nema tvrtke, nema ulagača i nema tima."
+          ]
+        },
+        {
+          "heading": "Zašto postoji",
+          "paragraphs": [
+            "Priključite BitLocker disk na Mac i Finder nudi da ga izbriše. Ne traži lozinku, i ništa na zaslonu ne pokazuje da je disk zaključan, a ne pokvaren.",
+            "Činilo se besmislenim da u današnje vrijeme nema praktičnog načina da se šifrirani USB disk dijeli između više operativnih sustava, pa je rješenje trebalo napraviti.",
+            "U Linux ekosustavu već su postojali alati koji su te diskove znali čitati. Lukotta ih spaja sa sučeljem za Mac."
+          ]
+        },
+        {
+          "heading": "Koliko košta",
+          "paragraphs": [
+            "Ništa. Nema plaćene inačice, nema pretplate, nema probnog roka i nema računa.",
+            "Lukotta je slobodan softver pod GNU General Public License, inačica 3 ili novija. Izvorni kod je objavljen. Svatko ga smije čitati, mijenjati i proslijediti pod istom licencijom."
+          ]
+        },
+        {
+          "heading": "Ništa ne napušta vaš Mac",
+          "paragraphs": [
+            "Lukotta nema analitiku, nema telemetriju i nema izvješća o rušenju.",
+            "Radi jednu vrstu mrežnog zahtjeva: provjerava ima li nova inačica i preuzima je ako to zatražite. Lozinke i ključevi za oporavak služe za otključavanje diska i ne pohranjuju se, ne šalju i ne bilježe."
+          ]
+        },
+        {
+          "heading": "Izvorni kod",
+          "paragraphs": [
+            "Izvorni kod aplikacije je na github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "description": "Kako prijaviti pogrešku u aplikaciji Lukotta, postaviti pitanje ili prijaviti sigurnosni problem. Prijave na GitHubu čitaju se prve.",
+      "lead": "Pogreške idu na GitHub. Sigurnosni problemi idu na adresu iz SECURITY.md. Sve ostalo ide e-poštom.",
+      "sections": [
+        {
+          "heading": "Pogreška ili disk koji se ne otvara",
+          "paragraphs": [
+            "Otvorite prijavu na github.com/clementrahula/lukotta/issues. Prijave se čitaju prve i javne su, pa sljedeća osoba s istim diskom nađe odgovor.",
+            "Recite koji je disk, što je Lukotta pokazala i što ste očekivali. Pogrešku citirajte točno. Nikada ne lijepite lozinku ili ključ za oporavak u prijavu."
+          ]
+        },
+        {
+          "heading": "Sigurnosni problem",
+          "paragraphs": [
+            "Ne otvarajte javnu prijavu. SECURITY.md u repozitoriju kaže kamo to poslati i što očekivati."
+          ]
+        },
+        {
+          "heading": "Sve ostalo",
+          "paragraphs": [
+            "Pišite na contact_web@lukotta.com s pitanjima o aplikaciji."
+          ]
+        },
+        {
+          "heading": "Koliko traje odgovor",
+          "paragraphs": [
+            "Aplikaciju Lukotta održava jedna osoba. Nema podrške ni obećanog roka odgovora. Neke poruke potraju, a neke ostanu bez odgovora.",
+            "Prijava na GitHubu obično ide brže, jer netko drugi može odgovoriti prije."
+          ]
+        }
+      ]
+    }
+  }
+}
