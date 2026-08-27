@@ -63,6 +63,18 @@ const langs = cfg.languages.filter(
   (l) => l.code !== cfg.defaultLang && (!asked.length || asked.includes(l.code))
 );
 
+/* Every row carries the translation under the language's own code, beside
+   fixed fields. Indonesian is `id`, so a field called `id` was overwritten by
+   the Indonesian text and that language went out for review with no
+   identifiers on any of its rows. Nothing failed; the column simply held the
+   wrong thing. The fields are named here so the clash is an error next time. */
+const ROW_FIELDS = ["key", "section", "note", "placeholders", "en", "is", "where"];
+for (const l of cfg.languages) {
+  if (l.code === cfg.defaultLang) continue;      /* `en` is the English column */
+  if (ROW_FIELDS.includes(l.code))
+    throw new Error(`language code "${l.code}" is also a field name in the review pack`);
+}
+
 const sectionOf = (key) => key.split(".")[0];
 const PLACEHOLDER = /\{[a-z]+\}/g;
 
@@ -105,16 +117,16 @@ for (const lang of langs) {
     const units = [];
     for (const key of enPages.order) {
       for (const u of pageUnits(enPages.pages[key], key)) {
-        units.push({ id: u.id, is: u.is, en: u.en, [lang.code]: fromPages(mine, u.id) });
+        units.push({ key: u.id, is: u.is, en: u.en, [lang.code]: fromPages(mine, u.id) });
       }
     }
     units.unshift({
-      id: "ui.free", is: "The line under the download heading at the foot of every task page.",
+      key: "ui.free", is: "The line under the download heading at the foot of every task page.",
       en: enPages.ui.free, [lang.code]: mine.ui?.free || "",
     });
     for (const [key, label] of Object.entries(enPages.linkFromFaq)) {
       units.push({
-        id: `faq.${key}`,
+        key: `faq.${key}`,
         is: `The link at the end of an answer in the FAQ on the landing page, leading to the ${key} page. It must not repeat the question it sits under.`,
         en: label, [lang.code]: mine.linkFromFaq?.[key] || "",
       });

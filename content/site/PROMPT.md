@@ -80,7 +80,7 @@ One block per finding. Nothing else.
 ```
 FINDING <n>
 language:   <code>
-id:         <the identifier, e.g. about.s2.p1>
+key:        <the identifier, e.g. about.s2.p1>
 severity:   error | wrong-register | unnatural | terminology | seo | question
 current:    <the translation as it stands>
 proposed:   <your replacement, or — if you are only raising a question>

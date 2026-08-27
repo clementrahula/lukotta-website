@@ -44,6 +44,16 @@ function siteUnits() {
   return out;
 }
 
+/* The review rows carry the translation under the language's own code. A field
+   sharing a name with a code loses to it: `id` did, so the Indonesian pack went
+   out with the translation where the identifier belonged. */
+const ROW_FIELDS = ["key", "where", "note", "en"];
+for (const l of cfg.languages) {
+  if (l.code === cfg.defaultLang) continue;      /* `en` is the English column */
+  if (ROW_FIELDS.includes(l.code))
+    throw new Error(`language code "${l.code}" is also a field name in the review pack`);
+}
+
 const [cmd, code] = process.argv.slice(2);
 const lang = cfg.languages.find((l) => l.code === code);
 if (!cmd || (cmd !== "export" && !lang)) {
@@ -80,7 +90,7 @@ if (cmd === "export") {
 
     const rows = [];
     for (const k of NOT_FOUND) {
-      rows.push({ id: k, where: "The 404 page", en: english[k],
+      rows.push({ key: k, where: "The 404 page", en: english[k],
                   [l.code]: strings[k]?.[l.code] || "" });
     }
     for (const u of siteUnits()) {
@@ -95,7 +105,7 @@ if (cmd === "export") {
             : sec.paragraphs[Number(rest.match(/\.p(\d+)/)[1])];
       }
       rows.push({
-        id: u.id,
+        key: u.id,
         where: `The ${key} page`,
         note: u.slug ? "The address. Lowercase a-z, 0-9 and single hyphens." : undefined,
         en: u.en, [l.code]: got || "",
