@@ -912,3 +912,65 @@ tbody tr:not(.group) th code { color: var(--ink); }
   :root.theme-changing *::after { transition: none !important; }
   .shot-img { transition: none; }
 }
+
+/* ------------------------------------------------------------ task page -- */
+
+/* Links from the landing page to a page about one format. The same treatment
+   as .plain, which "Every format in full detail" already uses: underlined in
+   the rule colour, amber only on hover. Not amber at rest, or the table would
+   read as a wall of links. */
+.format-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.format-link:hover { color: var(--amber-ink); text-decoration-color: currentColor; }
+.format-link code { color: inherit; text-decoration: inherit; }
+/* "tbody tr:not(.group) th code" pins the colour at a specificity the rule
+   above loses to, so the code inside the link never inherits the hover colour.
+   This is specific enough to win it back. Deleting it makes the hover appear
+   to do nothing at all. */
+.format-link:hover code { color: var(--amber-ink); }
+
+/* The line under an FAQ answer that leads to the page answering it in full. */
+.faq .answer p.more { margin-top: 1.15em; }
+.faq .answer p.more a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.faq .answer p.more a:hover { color: var(--amber-ink); text-decoration-color: currentColor; }
+
+/* The pages themselves. Prose, so it wants a measure; the landing page is
+   made of blocks and does not. */
+.task article, .task p { max-width: var(--measure, 68ch); }
+.task .lead { max-width: 60ch; }
+.task h2.sub { margin-top: clamp(32px, 4vw, 48px); }
+.task p + p { margin-top: 1.05em; }
+/* task-points and task-steps, not points and steps: the landing page's own
+   .steps already increments this counter and lays out a grid, so sharing the
+   name numbered these 2, 4, 6 and put one word on each line. */
+.task-points, .task-steps { list-style: none; margin: 1em 0; }
+.task-points li, .task-steps li { position: relative; padding-inline-start: 1.5em; margin: .5em 0; }
+.task-points li::before { content: "\2022"; position: absolute; inset-inline-start: .45em; opacity: .45; }
+.task-steps { counter-reset: taskstep; }
+.task-steps li::before {
+  counter-increment: taskstep; content: counter(taskstep) ".";
+  position: absolute; inset-inline-start: 0; opacity: .55;
+  font-family: var(--font-mono); font-size: .8125rem;
+}
+/* The recovery key, shown so a reader can recognise theirs. */
+.task .sample {
+  margin: 1.2em 0; padding: .8em 1em;
+  background: var(--paper-2); border: 1px solid var(--rule);
+  border-radius: 6px; overflow-x: auto;
+  font-family: var(--font-mono); font-size: .875rem;
+}
+.task .crumbs { margin-bottom: 18px; font-size: .875rem; }
+.task .crumbs a { color: var(--ink-3); }
+.task .crumbs a:hover { color: var(--amber-ink); }
+.task-cta .lead { max-width: 52ch; }

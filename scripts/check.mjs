@@ -297,6 +297,20 @@ if (existsSync(llmsPath)) {
   }
 }
 
+/* The task pages the build should have written, taken from the content files
+   rather than from the output, so a page that failed to build is noticed. */
+const taskPages = [];
+for (const lang of cfg.languages) {
+  const file = join(ROOT, "content", "pages", `${lang.code}.json`);
+  if (!existsSync(file)) continue;
+  const data = JSON.parse(readFileSync(file, "utf8"));
+  for (const key of data.order) {
+    const slug = data.pages[key].slug;
+    const dir = lang.path ? `${lang.path}/${slug}` : slug;
+    taskPages.push({ code: lang.code, key, slug, dir, loc: `${cfg.domain}/${dir}/` });
+  }
+}
+
 /* --- robots.txt must not shut out what the site is trying to reach --- */
 const robotsPath = join(OUT, "robots.txt");
 if (existsSync(robotsPath)) {
@@ -348,7 +362,46 @@ else {
   }
 
   const locs = [...xml.matchAll(/<loc>/g)].length;
-  if (locs !== indexed.length) err(`sitemap.xml has ${locs} URLs but ${indexed.length} pages may be indexed`);
+  if (locs !== indexed.length + taskPages.length) {
+    err(`sitemap.xml has ${locs} URLs but ${indexed.length} landing pages and ${taskPages.length} task pages were built`);
+  }
+  /* Every task page must be in the sitemap under the slug its own language
+     gave it. A page reachable only through a link is a page nobody submits. */
+  for (const { loc } of taskPages) {
+    if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
+  }
+}
+
+/* --- task pages --- */
+/* Each must exist, carry its own title and description, name itself canonical,
+   and link back to the landing page it belongs to. */
+for (const { code, slug, loc, dir } of taskPages) {
+  const file = join(OUT, dir, "index.html");
+  if (!existsSync(file)) { err(`no page at ${dir}/`); continue; }
+  const html = readFileSync(file, "utf8");
+  if (!html.includes(`<link rel="canonical" href="${loc}">`)) err(`${dir}/ does not name ${loc} as its canonical address.`);
+  const title = html.match(/<title>([^<]*)<\/title>/)?.[1] || "";
+  const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] || "";
+  if (title.length < 20 || title.length > 70) warn(`${dir}/ title is ${title.length} characters.`);
+  if (desc.length < 70 || desc.length > 160) warn(`${dir}/ description is ${desc.length} characters.`);
+  if (!html.includes('"@type": "BreadcrumbList"')) err(`${dir}/ carries no breadcrumbs.`);
+  if (!html.includes('"@type": "TechArticle"')) err(`${dir}/ carries no article markup.`);
+  if (!html.includes("__CSP__") === false) err(`${dir}/ still carries the __CSP__ placeholder.`);
+  if (!html.includes('<html lang="' + code + '"')) err(`${dir}/ does not declare lang="${code}".`);
+}
+
+/* Titles and descriptions have to be unique, or the pages compete with each
+   other for the same result. */
+for (const field of ["title", "description"]) {
+  const seen = new Map();
+  for (const { dir } of taskPages) {
+    const html = readFileSync(join(OUT, dir, "index.html"), "utf8");
+    const v = field === "title"
+      ? html.match(/<title>([^<]*)<\/title>/)?.[1]
+      : html.match(/<meta name="description" content="([^"]*)"/)?.[1];
+    if (seen.has(v)) err(`${dir}/ and ${seen.get(v)}/ share the same ${field}.`);
+    seen.set(v, dir);
+  }
 }
 
 /* --- the files GitHub Pages needs --- */

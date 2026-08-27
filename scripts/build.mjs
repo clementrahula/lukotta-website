@@ -7,7 +7,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { renderPage, FORMATS, REQUIREMENTS } from "../src/page.mjs";
+import { renderPage, renderTaskPage, FORMATS, REQUIREMENTS } from "../src/page.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "src");
@@ -233,6 +233,16 @@ function withPolicy(html) {
   return html.replace("__CSP__", policy);
 }
 
+/* Pages about one subject each. One file per language; a language without one
+   has no task pages and no links to them, rather than a half-English set. */
+function loadTaskPages(code) {
+  const file = join(ROOT, "content", "pages", `${code}.json`);
+  if (!existsSync(file)) return null;
+  return JSON.parse(readFileSync(file, "utf8"));
+}
+
+const taskPagesBuilt = [];
+
 const built = [];
 
 for (const lang of buildable) {
@@ -246,11 +256,32 @@ for (const lang of buildable) {
   /* styles.css shows the frame at 720px. A narrower capture would be stretched. */
   if (shotSize.width < 720) warn(`${lang.code}: screenshot is ${shotSize.width}px wide; the frame displays it at 720px.`);
 
-  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS } }));
+  const taskPages = loadTaskPages(lang.code);
+  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, "index.html"), html, "utf8");
+
+  if (taskPages) {
+    const taskPrefix = lang.path ? "../../" : "../";
+    for (const key of taskPages.order) {
+      const page = { ...taskPages.pages[key], free: taskPages.ui.free };
+      /* The address comes from this language's own file, so a translation can
+         carry a slug in its own words rather than an English one. */
+      const slug = page.slug;
+      const taskCanonical = `${cfg.domain}/${lang.path ? `${lang.path}/` : ""}${slug}/`;
+      const taskHtml = withPolicy(renderTaskPage({
+        page, slug, lang, cfg, t, buildable, canonical: taskCanonical,
+        assetPrefix: taskPrefix, assets: { css: CSS, js: JS },
+        home: lang.path ? `../../${lang.path}/` : "../",
+      }));
+      const taskDir = join(dir, slug);
+      mkdirSync(taskDir, { recursive: true });
+      writeFileSync(join(taskDir, "index.html"), taskHtml, "utf8");
+      taskPagesBuilt.push({ code: lang.code, slug, title: page.title, description: page.description });
+    }
+  }
 
   if (t.missing.size && completeness.get(lang.code) !== 0) {
     warn(`${lang.code}: ${t.missing.size} of ${totalKeys} strings fell back to English: ${[...t.missing].slice(0, 4).join(", ")}${t.missing.size > 4 ? ", …" : ""}`);
@@ -316,12 +347,22 @@ ${links}
   })
   .join("\n");
 
+/* The task pages, listed after the landing pages. Each names only itself:
+   hreflang describes the same page in another language, and until these are
+   translated there is no other language to point at. */
+const taskEntries = taskPagesBuilt.map(({ code, slug }) => {
+  const lang = cfg.languages.find((l) => l.code === code);
+  const loc = `${cfg.domain}/${lang.path ? `${lang.path}/` : ""}${slug}/`;
+  return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
+}).join("\n");
+
 writeFileSync(
   join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlEntries}
+${taskEntries}
 </urlset>
 `,
   "utf8"
@@ -399,6 +440,11 @@ ${cfg.languages
     return `- [${label}](${url})${l.code === cfg.defaultLang ? ": the same page, and the canonical one" : ""}`;
   })
   .join("\n")}
+
+## Pages about one task
+
+${taskPagesBuilt.filter((x) => x.code === cfg.defaultLang).map(({ slug, title, description }) =>
+  `- [${title}](${cfg.domain}/${slug}/): ${description}`).join("\n")}
 
 ## Source and policies
 

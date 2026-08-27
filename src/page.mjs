@@ -24,6 +24,11 @@ const jsonld = (obj) => JSON.stringify(obj, null, 2).replace(/</g, "\\u003c");
    SPECS.md. */
 /* What the application needs, in English, said once. The structured record and
    llms.txt both state it, and they must not come to state it differently. */
+const sunIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1v1.6M8 13.4V15M15 8h-1.6M2.6 8H1m11-5-1.1 1.1M5.1 10.9 4 12m8 0-1.1-1.1M5.1 5.1 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+const moonIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.6A5.9 5.9 0 0 1 6.4 2.5a5.9 5.9 0 1 0 7.1 7.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
+const globeIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.8c1.7 1.8 2.6 3.9 2.6 6.2S9.7 12.4 8 14.2C6.3 12.4 5.4 10.3 5.4 8s.9-4.4 2.6-6.2Z" stroke="currentColor" stroke-width="1.4"/></svg>`;
+const arrow = `<svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
 export const REQUIREMENTS = "macOS 15 Sequoia or later on an Apple Silicon Mac";
 
 export const FORMATS = [
@@ -59,7 +64,73 @@ export const FORMATS = [
   },
 ];
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets }) {
+/* The site header, shared by the landing page and the task pages. `home` is
+   what the brand and the nav point at: "#top" on the landing page itself, and
+   the landing page's address from anywhere else. Extracted rather than copied
+   so a change to the nav cannot reach one kind of page and miss the other. */
+export function siteHeader({ t, A, home, icons, native, langLinks }) {
+  const { sunIcon, moonIcon, globeIcon } = icons;
+  return `  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="${home}" aria-label="${esc(t("ui.toTop"))}">
+        <picture>
+          <source data-theme-source srcset="${A("brand/lukotta-mark-dark.png")}" media="(prefers-color-scheme: dark)">
+          <img src="${A("brand/lukotta-mark-light.png")}" alt="" width="22" height="22" decoding="async">
+        </picture>
+        <span>Lukotta</span>
+      </a>
+
+      <nav class="site-nav" aria-label="${esc(t("ui.menu"))}">
+        <a href="${home}">${esc(t("nav.download"))}</a>
+        <a href="${home === "#top" ? "#how" : home + "#how"}">${esc(t("nav.how"))}</a>
+        <a href="${home === "#top" ? "#features" : home + "#features"}">${esc(t("nav.features"))}</a>
+      </nav>
+
+      <div class="header-tools">
+        <button type="button" class="theme-switch" role="switch" aria-checked="false" data-toggle-theme
+                aria-label="${esc(t("ui.switchToDark"))}" title="${esc(t("ui.switchToDark"))}"
+                data-label-light="${esc(t("ui.switchToLight"))}"
+                data-label-dark="${esc(t("ui.switchToDark"))}">
+          <span class="track" aria-hidden="true">
+            <span class="ico ico-sun">${sunIcon}</span>
+            <span class="ico ico-moon">${moonIcon}</span>
+            <span class="knob"></span>
+          </span>
+        </button>
+
+        <details class="lang">
+          <summary aria-label="${esc(native)}, ${esc(t("ui.chooseLanguage"))}">${globeIcon}<span>${esc(native)}</span></summary>
+          <div class="lang-panel">
+            <ul class="lang-list">
+${langLinks}
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>`;
+}
+
+/* The site footer, on every page for the same reason. */
+export function siteFooter({ t, cfg, away, copyright, authorLink }) {
+  return `  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="${esc(t("ui.footerMenu"))}">
+        <a href="${cfg.githubRepo}/blob/main/PRIVACY.md"${away}>${esc(t("footer.privacy"))}</a>
+        <a href="${cfg.githubRepo}/blob/main/LICENSE.txt"${away}>${esc(t("footer.licence"))}</a>
+        <a href="${cfg.githubRepo}"${away}>${esc(t("footer.source"))}</a>
+        <a href="mailto:${cfg.supportEmail}">${esc(t("footer.contact"))}</a>
+      </nav>
+      <p class="colophon">
+        <span>${copyright.join(authorLink)}</span>
+        <span>${esc(t("footer.gpl"))}</span>
+        <span>${esc(t("footer.content"))}</span>
+      </p>
+    </div>
+  </footer>`;
+}
+
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -146,6 +217,16 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 
   const label = { yes: t("formats.yes"), no: t("formats.no") };
 
+  /* A format's name links to the page about it, where this language has one.
+     exFAT and the raw images are deliberately absent from the map: macOS opens
+     those itself, so there is nowhere useful to send anybody. */
+  /* The key identifies the page; the slug is this language's address for it. */
+  const taskHref = (key) => `${assetPrefix}${taskPages.pages[key].slug}/`;
+  const taskLink = (name, inner) => {
+    const slug = taskPages?.linkFromFormatsTable?.[name];
+    return slug ? `<a class="format-link" href="${taskHref(slug)}">${inner}</a>` : inner;
+  };
+
   const tableRows = FORMATS.map(
     (g) => `          <tr class="group">
             <th colspan="4" scope="colgroup">${esc(t(g.group))}</th>
@@ -153,7 +234,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
 ${g.rows
   .map(
     (r) => `          <tr>
-            <th scope="row"><code>${esc(r.name)}</code>${r.experimental ? '<span class="asterisk" aria-hidden="true">*</span>' : ""}</th>
+            <th scope="row">${taskLink(r.name, `<code>${esc(r.name)}</code>`)}${r.experimental ? '<span class="asterisk" aria-hidden="true">*</span>' : ""}</th>
             <td class="col-mark">${tick(r.read, label, r.native)}</td>
             <td class="col-mark">${tick(r.write, label, r.native)}</td>
             <td class="col-note">${esc(t(r.note))}</td>
@@ -162,12 +243,22 @@ ${g.rows
   .join("\n")}`
   ).join("\n");
 
+  /* The answer to four of these questions is a page of its own. The link goes
+     under the answer that already asks the question, and says what the page
+     adds rather than repeating it. Absent where the language has no such page. */
+  const faqMore = (n) => {
+    const slug = taskPages?.faqAnswerFor?.[String(n)];
+    if (!slug) return "";
+    const label = taskPages.linkFromFaq[slug];
+    return `            <p class="more"><a href="${taskHref(slug)}">${esc(label)}</a></p>\n`;
+  };
+
   const faqItems = FAQ_NS.map(
     ([n, paras]) => `        <details${n === 1 ? " open" : ""}>
           <summary>${esc(t(`faq.${n}.q`))}</summary>
           <div class="answer">
 ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\n")}
-          </div>
+${faqMore(n)}          </div>
         </details>`
   ).join("\n");
 
@@ -206,10 +297,6 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
     .split("{author}");
   const authorLink = `<a href="${cfg.authorUrl}"${away}>${esc(cfg.authorName)}</a>`;
 
-  const sunIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1v1.6M8 13.4V15M15 8h-1.6M2.6 8H1m11-5-1.1 1.1M5.1 10.9 4 12m8 0-1.1-1.1M5.1 5.1 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
-  const moonIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.6A5.9 5.9 0 0 1 6.4 2.5a5.9 5.9 0 1 0 7.1 7.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
-  const globeIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.8c1.7 1.8 2.6 3.9 2.6 6.2S9.7 12.4 8 14.2C6.3 12.4 5.4 10.3 5.4 8s.9-4.4 2.6-6.2Z" stroke="currentColor" stroke-width="1.4"/></svg>`;
-  const arrow = `<svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
   /* -------------------------------------------------------------- html -- */
 
@@ -293,45 +380,7 @@ ${ogAlternates}
 
   <a class="skip-link" href="#main">${esc(t("ui.skipToContent"))}</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="${esc(t("ui.toTop"))}">
-        <picture>
-          <source data-theme-source srcset="${A("brand/lukotta-mark-dark.png")}" media="(prefers-color-scheme: dark)">
-          <img src="${A("brand/lukotta-mark-light.png")}" alt="" width="22" height="22" decoding="async">
-        </picture>
-        <span>Lukotta</span>
-      </a>
-
-      <nav class="site-nav" aria-label="${esc(t("ui.menu"))}">
-        <a href="#top">${esc(t("nav.download"))}</a>
-        <a href="#how">${esc(t("nav.how"))}</a>
-        <a href="#features">${esc(t("nav.features"))}</a>
-      </nav>
-
-      <div class="header-tools">
-        <button type="button" class="theme-switch" role="switch" aria-checked="false" data-toggle-theme
-                aria-label="${esc(t("ui.switchToDark"))}" title="${esc(t("ui.switchToDark"))}"
-                data-label-light="${esc(t("ui.switchToLight"))}"
-                data-label-dark="${esc(t("ui.switchToDark"))}">
-          <span class="track" aria-hidden="true">
-            <span class="ico ico-sun">${sunIcon}</span>
-            <span class="ico ico-moon">${moonIcon}</span>
-            <span class="knob"></span>
-          </span>
-        </button>
-
-        <details class="lang">
-          <summary aria-label="${esc(native)}, ${esc(t("ui.chooseLanguage"))}">${globeIcon}<span>${esc(native)}</span></summary>
-          <div class="lang-panel">
-            <ul class="lang-list">
-${langLinks}
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-  </header>
+${siteHeader({ t, A, home: "#top", icons: { sunIcon, moonIcon, globeIcon }, native, langLinks })}
 
   <main id="main">
 
@@ -458,21 +507,7 @@ ${faqItems}
 
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <nav aria-label="${esc(t("ui.footerMenu"))}">
-        <a href="${cfg.githubRepo}/blob/main/PRIVACY.md"${away}>${esc(t("footer.privacy"))}</a>
-        <a href="${cfg.githubRepo}/blob/main/LICENSE.txt"${away}>${esc(t("footer.licence"))}</a>
-        <a href="${cfg.githubRepo}"${away}>${esc(t("footer.source"))}</a>
-        <a href="mailto:${cfg.supportEmail}">${esc(t("footer.contact"))}</a>
-      </nav>
-      <p class="colophon">
-        <span>${copyright.join(authorLink)}</span>
-        <span>${esc(t("footer.gpl"))}</span>
-        <span>${esc(t("footer.content"))}</span>
-      </p>
-    </div>
-  </footer>
+${siteFooter({ t, cfg, away, copyright, authorLink })}
 
   <!-- Also exempt: script.js reads these, so their order relative to it must
        not be rearranged. -->
@@ -507,6 +542,197 @@ ${faqItems}
       <button type="button" class="plain-btn" data-notice-cancel>${esc(t("dialog.cancel"))}</button>
     </div>
   </dialog>
+
+  <script src="${assetPrefix}${assets.js}" defer></script>
+</body>
+</html>
+`;
+}
+
+/* ------------------------------------------------------------ task page -- */
+
+/* A page about one thing.
+
+   The landing page is about BitLocker and ext4 and NTFS and disk images and
+   installation and privacy, all at once, so it competes badly for any single
+   one of them. These are the counterpart: one subject each, in the words
+   somebody would type, linked from the row and the answer on the landing page
+   that already raise the question.
+  
+   Everything outside the article is the landing page's own: the same header,
+   the same footer, the same appearance bootstrap, the same policy placeholder.
+   A reader arriving here from a search should not be able to tell they have
+   landed on something built differently. */
+export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
+                                 assetPrefix, assets, home }) {
+  const A = (name) => `${assetPrefix}assets/${name}`;
+  const code = lang.code;
+  const dir = lang.dir || "ltr";
+  const native = lang.native;
+  const icons = { sunIcon, moonIcon, globeIcon };
+
+  /* Root-relative, exactly as on the landing page, so the menu works at any
+     depth without a second copy of the logic. */
+  const langLinks = buildable
+    .map((l) => {
+      const href = l.path ? `/${l.path}/` : "/";
+      const current = l.code === code ? ` aria-current="true"` : "";
+      return `            <li><a href="${href}" hreflang="${l.code}" lang="${l.code}"${current}>${esc(l.native)}</a></li>`;
+    })
+    .join("\n");
+
+  const copyright = esc(t("footer.copyright"))
+    .replace("{copyleft}", '<span class="copyleft">©</span>')
+    .split("{author}");
+  const authorLink = `<a href="${cfg.authorUrl}"${away}>${esc(cfg.authorName)}</a>`;
+
+  const section = (s) => {
+    const out = [];
+    if (s.heading) out.push(`        <h2 class="sub">${esc(s.heading)}</h2>`);
+    for (const para of s.paragraphs || []) {
+      out.push(para.startsWith("    ")
+        ? `        <pre class="sample"><code>${esc(para.trim())}</code></pre>`
+        : `        <p>${esc(para)}</p>`);
+    }
+    if (s.list) {
+      const tag = s.listKind === "steps" ? "ol" : "ul";
+      out.push(`        <${tag} class="${s.listKind === "steps" ? "task-steps" : "task-points"}">`);
+      out.push(...s.list.map((i) => `          <li>${esc(i)}</li>`));
+      out.push(`        </${tag}>`);
+    }
+    return out.join("\n");
+  };
+
+  /* Breadcrumbs, because a page two levels in should say where it sits, and
+     because it is the one structured type that reliably shows in a result. */
+  const crumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Lukotta", item: `${cfg.domain}${lang.path ? `/${lang.path}/` : "/"}` },
+      { "@type": "ListItem", position: 2, name: page.title, item: canonical },
+    ],
+  };
+
+  /* TechArticle rather than HowTo: Google withdrew HowTo results in 2023, and
+     claiming a type whose rich result no longer exists gains nothing. */
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: page.title,
+    description: page.description,
+    inLanguage: code,
+    url: canonical,
+    mainEntityOfPage: canonical,
+    author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
+    publisher: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
+    about: { "@type": "SoftwareApplication", name: "Lukotta",
+             applicationCategory: "UtilitiesApplication",
+             operatingSystem: REQUIREMENTS },
+    isPartOf: { "@type": "WebSite", name: "Lukotta", url: `${cfg.domain}/` },
+  };
+
+  return `<!doctype html>
+<html lang="${code}" dir="${dir}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="__CSP__">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>${esc(page.title)} — Lukotta</title>
+  <meta name="description" content="${esc(page.description)}">
+  <link rel="canonical" href="${canonical}">
+  <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-title" content="Lukotta">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lukotta">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:title" content="${esc(page.title)}">
+  <meta property="og:description" content="${esc(page.description)}">
+  <meta property="og:image" content="${cfg.domain}/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(t("meta.imageAlt"))}">
+  <meta property="og:locale" content="${lang.ogLocale}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(page.title)}">
+  <meta name="twitter:description" content="${esc(page.description)}">
+  <meta name="twitter:image" content="${cfg.domain}/assets/og.png">
+  <meta name="twitter:image:alt" content="${esc(t("meta.imageAlt"))}">
+
+  <link rel="icon" href="${A("favicon-32.png")}" sizes="32x32" type="image/png">
+  <link rel="icon" href="${A("favicon-16.png")}" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
+  <link rel="manifest" href="${assetPrefix}site.webmanifest">
+  <link rel="stylesheet" href="${assetPrefix}${assets.css}">
+
+  <script data-cfasync="false">
+    /* Resolves the appearance before first paint, so the page does not flash
+       the wrong one. The rest of the behaviour is in script.js. */
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var c = localStorage.getItem("lukotta-theme");
+        var d = c === "dark" || (c !== "light" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.setAttribute("data-theme", d ? "dark" : "light");
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">${jsonld(crumbs)}</script>
+  <script type="application/ld+json">${jsonld(article)}</script>
+</head>
+<body>
+  <span id="top"></span>
+  <a class="skip-link" href="#main">${esc(t("ui.skipToContent"))}</a>
+
+${siteHeader({ t, A, home, icons, native, langLinks })}
+
+  <main id="main">
+    <article class="task">
+      <section class="hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="${esc(t("ui.menu"))}">
+            <a href="${home}">Lukotta</a>
+          </nav>
+          <h1>${esc(page.title)}</h1>
+          <p class="lead">${esc(page.lead)}</p>
+${page.sections.map(section).join("\n")}
+        </div>
+      </section>
+
+      <section class="rule task-cta">
+        <div class="wrap">
+          <h2>${esc(t("nav.download"))} Lukotta</h2>
+          <p class="lead">${esc(page.free)}</p>
+          <p class="hero-actions">
+            <a class="btn" href="${cfg.downloadUrl}">${esc(t("hero.download"))}</a>
+            <a class="plain" href="${cfg.githubRepo}"${away}>${esc(t("hero.source"))}</a>
+          </p>
+          <div class="brew">
+            <div class="brew-line">
+              <code class="brew-cmd" id="brew-cmd-${slug}" dir="ltr">${esc(cfg.brewCommand)}</code>
+              <button type="button" class="brew-copy" data-copy-command
+                      data-command="${esc(cfg.brewCommand)}"
+                      data-label="${esc(t("hero.copy"))}"
+                      data-label-copied="${esc(t("hero.copied"))}"
+                      aria-describedby="brew-cmd-${slug}">${esc(t("hero.copy"))}</button>
+            </div>
+          </div>
+          <p class="spec">${esc(t("hero.meta"))}</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+${siteFooter({ t, cfg, away, copyright, authorLink })}
 
   <script src="${assetPrefix}${assets.js}" defer></script>
 </body>
