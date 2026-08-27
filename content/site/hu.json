@@ -14,14 +14,14 @@
     "about": {
       "slug": "nevjegy",
       "title": "A Lukotta névjegye",
-      "description": "A Lukotta ingyenes, nyílt forráskódú macOS-alkalmazás, amely BitLocker-, NTFS- és Linux-meghajtókat nyit meg, GNU General Public License alatt.",
+      "description": "A Lukotta ingyenes, nyílt forráskódú macOS-app BitLocker-, NTFS- és Linux-meghajtókhoz. Egyetlen fejlesztő tartja karban, GNU General Public License alatt.",
       "lead": "A Lukotta olyan meghajtókat és lemezképeket nyit meg, amelyeket a macOS nem tud olvasni. Ingyenes, nyílt forráskódú, és egyetlen ember tartja karban.",
       "sections": [
         {
           "heading": "Mi ez",
           "paragraphs": [
             "A Lukotta macOS-alkalmazás. BitLocker-, NTFS-, LUKS-, ext4-, btrfs- és XFS-meghajtókat nyit meg, valamint virtuális gépek lemezképeit qcow2, VMDK, VDI, VHD és VHDX formátumban. A macOS egyiket sem olvassa magától. Az NTFS-t olvassa, de nem ír rá.",
-            "A háttérben elindít egy kis Linux-rendszert, ott megnyitja a meghajtót, és átadja a Findernek. A Linux évek óta olvassa ezeket a formátumokat. A meghajtó nem alakul át és nem másolódik. Olyan marad, amilyen volt, és a gép, amelyikből jött, továbbra is olvassa."
+            "A háttérben elindít egy kis Linux virtuális gépet, ott megnyitja a meghajtót, és átadja a Findernek. A Linux évek óta olvassa ezeket a formátumokat. A meghajtó nem alakul át és nem másolódik. Olyan marad, amilyen volt, és a gép, amelyikből jött, továbbra is olvassa."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "kapcsolat",
       "title": "Kapcsolat",
-      "description": "Hogyan jelents hibát a Lukotta alkalmazásban, tegyél fel kérdést vagy jelents biztonsági problémát. A GitHub-issue-kat olvassuk először.",
+      "description": "Hogyan jelents hibát a Lukotta alkalmazásban, tegyél fel kérdést vagy jelents biztonsági problémát. A GitHub-issue-k kerülnek sorra először és leggyorsabban.",
       "lead": "A hibák a GitHubra mennek. A biztonsági problémák a SECURITY.md-ben megadott címre. Minden más e-mailben.",
       "sections": [
         {
           "heading": "Egy hiba, vagy egy meghajtó, ami nem nyílik meg",
           "paragraphs": [
-            "Nyiss egy issue-t a github.com/clementrahula/lukotta/issues címen. Az issue-kat olvassuk először, és nyilvánosak, így a következő ember ugyanazzal a meghajtóval megtalálja a választ.",
+            "Nyiss egy issue-t a github.com/clementrahula/lukotta/issues címen. Az issue-k kerülnek először sorra, és nyilvánosak, így a következő ember ugyanazzal a meghajtóval megtalálhatja a választ.",
             "Írd meg, milyen meghajtóról van szó, mit mutatott a Lukotta, és mire számítottál. A hibaüzenetet idézd pontosan. Soha ne másolj jelszót vagy helyreállítási kulcsot egy issue-ba."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Mennyi idő a válasz",
           "paragraphs": [
-            "A Lukotta alkalmazást egyetlen ember tartja karban. Nincs ügyfélszolgálat és nincs ígért válaszidő. Néhány üzenet eltart, és néhány válasz nélkül marad.",
+            "A Lukotta alkalmazást egyetlen ember tartja karban. Nincs ügyfélszolgálat és nincs ígért válaszidő. Egyes üzenetekre csak később érkezik válasz, néhány pedig válasz nélkül marad.",
             "Egy GitHub-issue általában gyorsabb, mert valaki más előbb válaszolhat."
           ]
         }

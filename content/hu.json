@@ -264,7 +264,7 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "hu": "VMware, lapos és ritka"
+      "hu": "VMware, flat és sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",

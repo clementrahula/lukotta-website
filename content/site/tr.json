@@ -14,14 +14,14 @@
     "about": {
       "slug": "hakkinda",
       "title": "Lukotta hakkında",
-      "description": "Lukotta, BitLocker, NTFS ve Linux disklerini açan ücretsiz ve açık kaynaklı bir macOS uygulamasıdır, GNU General Public License altında.",
+      "description": "Lukotta, BitLocker, NTFS ve Linux disklerini açan ücretsiz, açık kaynaklı bir macOS uygulamasıdır. Tek bir geliştirici sürdürür, GNU General Public License ile.",
       "lead": "Lukotta, macOS'un okuyamadığı diskleri ve disk imajlarını açar. Ücretsizdir, açık kaynaklıdır ve tek bir kişi tarafından sürdürülür.",
       "sections": [
         {
           "heading": "Nedir",
           "paragraphs": [
             "Lukotta bir macOS uygulamasıdır. BitLocker, NTFS, LUKS, ext4, btrfs ve XFS disklerini, ayrıca sanal makinelerin qcow2, VMDK, VDI, VHD ve VHDX biçimlerindeki disk imajlarını açar. macOS bunların hiçbirini kendiliğinden okumaz. NTFS'i okur ama ona yazmaz.",
-            "Arka planda küçük bir Linux sistemi başlatır, diski orada açar ve Finder'a geri verir. Linux bu biçimleri yıllardır okuyor. Disk ne dönüştürülür ne kopyalanır. Olduğu gibi kalır ve geldiği makine onu okumayı sürdürür."
+            "Arka planda küçük bir Linux sanal makinesi başlatır, diski orada açar ve Finder'a geri verir. Linux bu biçimleri yıllardır okuyor. Disk ne dönüştürülür ne kopyalanır. Olduğu gibi kalır ve geldiği makine onu okumayı sürdürür."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "iletisim",
       "title": "İletişim",
-      "description": "Lukotta uygulamasında bir hatayı nasıl bildirirsiniz, nasıl soru sorarsınız veya güvenlik sorunu bildirirsiniz. GitHub issue'ları önce okunur.",
+      "description": "Lukotta uygulamasında bir hatayı nasıl bildirirsiniz, nasıl soru sorarsınız veya güvenlik sorunu bildirirsiniz. GitHub issue'ları önce ve en hızlı yanıtlanır.",
       "lead": "Hatalar GitHub'a gider. Güvenlik sorunları SECURITY.md içindeki adrese gider. Diğer her şey e-postayla gider.",
       "sections": [
         {
           "heading": "Bir hata ya da açılmayan bir disk",
           "paragraphs": [
-            "github.com/clementrahula/lukotta/issues adresinde bir issue açın. Issue'lar önce okunur ve herkese açıktır, böylece aynı diske sahip bir sonraki kişi yanıtı bulur.",
+            "github.com/clementrahula/lukotta/issues adresinde bir issue açın. Issue'lar önce okunur ve herkese açıktır, böylece aynı diske sahip bir sonraki kişi yanıtı bulabilir.",
             "Diskin ne olduğunu, Lukotta'nın ne gösterdiğini ve ne beklediğinizi yazın. Hatayı olduğu gibi aktarın. Bir issue'ya asla parola veya kurtarma anahtarı yapıştırmayın."
           ]
         },

@@ -204,7 +204,7 @@
         {
           "heading": "Miért körülményes kivenni belőle egy fájlt",
           "paragraphs": [
-            "A szokásos út az, hogy elindítod a virtuális gépet, megvárod amíg felmegy, megkeresed benne a fájlt, és átmásolod. Ehhez viszont a gépnek még működnie kell, és a programnak, amely futtatja, még telepítve kell lennie.",
+            "A szokásos út az, hogy elindítod a virtuális gépet, megvárod, amíg elindul, megkeresed benne a fájlt, és átmásolod. Ehhez viszont a gépnek még működnie kell, és a programnak, amely futtatja, még telepítve kell lennie.",
             "A Finder sem segít itt. Egy VMDK-ra duplán kattintva semmi sem történik, mert a macOS nem tudja, mi van benne."
           ]
         },
@@ -245,7 +245,7 @@
           "heading": "Fájlok másolása lemezképbe",
           "paragraphs": [
             "A qcow2 a szokásos módon íródik, és nyugodtan írható.",
-            "A VMDK, a VDI és a VHD írható, de ez friss munka, és nem volt elég hosszú ideig használatban ahhoz, hogy olyasmit bízz rá, aminek az elvesztését nem engedheted meg magadnak. Másold le a fájlt és a másolaton dolgozz, vagy nyisd meg csak olvasásra, és inkább vedd ki belőle a fájlokat.",
+            "A VMDK, a VDI és a VHD írható, de az írás támogatása új, és még nem volt elég hosszú ideig használatban ahhoz, hogy olyasmit bízz rá, aminek az elvesztését nem engedheted meg magadnak. Másold le a fájlt és a másolaton dolgozz, vagy nyisd meg csak olvasásra, és inkább vedd ki belőle a fájlokat.",
             "A VHDX csak olvasásra nyílik meg, és ugyanez igaz arra a VMDK-fajtára, amely OVA-fájlban van. Az a fajta egy menetben íródik végig, és utána a helyén már nem változtatható meg."
           ]
         },

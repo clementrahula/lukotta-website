@@ -19,8 +19,8 @@
     "bitlocker": {
       "slug": "mac-bitlocker-disk-acma",
       "title": "Mac'te BitLocker diski açma",
-      "description": "macOS bir BitLocker diskini açmaz, onun yerine silmeyi önerir. Nedeni burada, ve diski nasıl okuyup ona nasıl dosya kopyalayacağınız da.",
-      "lead": "Bir BitLocker diskini Mac'e takıyorsunuz ve Finder onu silmeyi öneriyor. Nedeni burada, ve diski bunun yerine nasıl okuyacağınız da.",
+      "description": "macOS bir BitLocker diskini açmaz, onun yerine silmeyi önerir. İşte nedeni ve diski nasıl okuyup ona nasıl dosya kopyalayacağınız.",
+      "lead": "Bir BitLocker diskini Mac'e takıyorsunuz ve Finder onu silmeyi öneriyor. İşte nedeni ve diski bunun yerine nasıl okuyacağınız.",
       "sections": [
         {
           "heading": "BitLocker nedir",
@@ -80,8 +80,8 @@
     "linux": {
       "slug": "mac-ext4-disk-okuma",
       "title": "Mac'te ext4, btrfs veya XFS diski okuma",
-      "description": "macOS ne ext4'ü, ne btrfs'yi, ne de XFS'i okur ve diski silmeyi önerir. Nedeni burada, ve Mac'te bir Linux diskini nasıl açacağınız da, LUKS dahil.",
-      "lead": "Linux'lu bir makineden gelen bir diski takıyorsunuz ve Finder onu silmeyi öneriyor. Nedeni burada, ve onu bunun yerine nasıl okuyacağınız da.",
+      "description": "macOS ne ext4'ü, ne btrfs'yi, ne de XFS'i okur ve diski silmeyi önerir. İşte nedeni ve Mac'te bir Linux diskini nasıl açacağınız, LUKS dahil.",
+      "lead": "Linux'lu bir makineden gelen bir diski takıyorsunuz ve Finder onu silmeyi öneriyor. İşte nedeni ve onu bunun yerine nasıl okuyacağınız.",
       "sections": [
         {
           "heading": "Bir Mac diski neden okuyamaz",
@@ -139,8 +139,8 @@
     "ntfs": {
       "slug": "mac-ntfs-disk-yazma",
       "title": "Mac'te NTFS diskine yazma",
-      "description": "macOS NTFS disklerini salt okunur açar, dolayısıyla dosyalar onlardan çıkar ama onlara girmez. Nedeni burada, ve Mac'te NTFS diskine nasıl yazacağınız da.",
-      "lead": "macOS bir NTFS diskinden dosya kopyalamanıza izin verir ama ona kopyalamanıza vermez. Nedeni burada, ve bu konuda ne yapılabileceği de.",
+      "description": "macOS NTFS disklerini salt okunur açar; dosyalar diskten kopyalanabilir ama diske kopyalanamaz. İşte nedeni ve Mac'te bir NTFS diskine nasıl yazacağınız.",
+      "lead": "macOS bir NTFS diskinden dosya kopyalamanıza izin verir ama ona dosya kopyalamanıza izin vermez. İşte nedeni ve bu konuda ne yapılabileceği.",
       "sections": [
         {
           "heading": "NTFS nedir",
@@ -174,14 +174,14 @@
         },
         {
           "paragraphs": [
-            "Bir NTFS diskinde çoğunlukla parola olmaz, dolayısıyla yazacak bir şey yoktur; meğer ki üzerinde BitLocker da açılmış olsun."
+            "Bir NTFS diskinde çoğunlukla parola olmaz, dolayısıyla yazacak bir şey yoktur; BitLocker da etkinleştirilmediyse."
           ]
         },
         {
           "heading": "Windows'un düzgün kapatmadığı diskler",
           "paragraphs": [
             "Windows bir yazma işlemi yarıda kesildiğinde diski düzgün kapatılmamış diye işaretler; bu çoğunlukla disk çekildiği ya da makine yarı yolda elektriksiz kaldığı içindir. O işaret, diski açacak bir sonraki bilgisayarı diskin yarım yazılmış olabileceği ve gözden geçirilmesi gerektiği konusunda uyarır.",
-            "Hızlı başlatma, hiçbir şey ters gitmediğinde bile aynı işareti bırakır. Windows 10 ve 11'de baştan açıktır. Makineyi kapatmak yerine uyku kipine alır, bu da diski hâlâ kullanılıyormuş gibi gösterir.",
+            "Hızlı başlatma, hiçbir şey ters gitmediğinde bile aynı işareti bırakır. Windows 10 ve Windows 11 sistemlerinde baştan açıktır. Makineyi kapatmak yerine hazırda bekleme moduna alır, bu da diski hâlâ kullanılıyormuş gibi gösterir.",
             "macOS her iki durumda da diski reddeder ve nedenini söylemez. Lukotta onu açar.",
             "Windows'lu makine hâlâ sizdeyse daha temiz çözüm diski ona geri takıp o makineyi düzgünce kapatmaktır: Kapat'a tıklarken Shift tuşunu basılı tutun, bu hızlı başlatmayı atlar."
           ]
@@ -245,7 +245,7 @@
           "heading": "Bir imajın içine dosya kopyalama",
           "paragraphs": [
             "qcow2 alışılmış biçimde yazılır ve ona yazmak güvenlidir.",
-            "VMDK, VDI ve VHD'ye yazılabilir, ama bu taze bir iş ve kaybetmeyi göze alamayacağınız bir şeyi emanet edecek kadar uzun süredir kullanımda değil. Dosyayı kopyalayıp kopya üzerinde çalışın ya da onu salt okunur açıp dosyaları dışarı alın.",
+            "VMDK, VDI ve VHD'ye yazılabilir, ama yazma desteği yenidir ve kaybetmeyi göze alamayacağınız bir şeyi emanet edecek kadar uzun süredir kullanımda değildir. Dosyayı kopyalayıp kopya üzerinde çalışın ya da onu salt okunur açıp dosyaları dışarı alın.",
             "VHDX salt okunur açılır; bir OVA dosyasının içinde bulunan VMDK türü de öyle. O tür tek geçişte baştan sona yazılır ve sonrasında yerinde değiştirilemez."
           ]
         },
@@ -254,7 +254,7 @@
           "paragraphs": [
             "Bir imaj ancak kendi başına eksiksizse açılır.",
             "Bir VMware anlık görüntü zinciri, makinenin şimdiki durumunu bir özgün dosya ile ondan sonra nelerin değiştiğini yazan bir dizi küçük dosya arasında dağıtır. Bölünmüş bir disk, bir imajı birçok parçaya ayırır. Bir Hyper-V fark diski yalnızca başka bir dosyadan olan farkları taşır.",
-            "Bunların her birinde elinizdeki dosya bir takımın parçasıdır ve Lukotta bir seferde tek bir dosya açar."
+            "Bunların her birinde elinizdeki dosya bir dosya kümesinin parçasıdır ve Lukotta bir seferde tek bir dosya açar."
           ]
         }
       ]

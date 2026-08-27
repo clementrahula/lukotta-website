@@ -244,7 +244,7 @@
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "tr": "Windows’un uyku kipinde ya da düzgün kapatmadan bıraktığı birim de dahil"
+      "tr": "Windows sisteminin hazırda bekleme modunda ya da düzgün kapatmadan bıraktığı birim de dahil"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "tr": "VMware, düz ve seyrek"
+      "tr": "VMware, flat ve sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "tr": "Bir OVA dosyasının içindekiler. Tek geçişte yazılır, bu yüzden doğrudan değiştirilemez"
+      "tr": "Bir OVA dosyasının içindekiler. Tek geçişte yazılır, bu yüzden daha sonra aynı dosyada değiştirilemez"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
