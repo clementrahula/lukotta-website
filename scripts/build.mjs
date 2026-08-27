@@ -605,7 +605,7 @@ Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMEN
 
 ## About and contact
 
-- [About Lukotta](${cfg.domain}/about/): who makes Lukotta and what it costs
+- [About Lukotta](${cfg.domain}/about/): who maintains Lukotta
 - [Contact](${cfg.domain}/contact/): how to report a bug or a security problem
 
 ## When to use this
@@ -757,7 +757,7 @@ writeFileSync(join(OUT, "CNAME"), `${new URL(cfg.domain).hostname}\n`, "utf8");
    lives in page.mjs with every other page. */
 const notFoundLinks = [
   ["/", "Home page", "what Lukotta is and how to install it"],
-  ["/about/", "About", "who makes Lukotta and what it costs"],
+  ["/about/", "About", "who maintains Lukotta"],
   ["/contact/", "Contact", "how to report a bug"],
   ["/sitemap.xml", "Sitemap", "every page on this site"],
   ["/llms.txt", "llms.txt", "the whole site as plain text"],
