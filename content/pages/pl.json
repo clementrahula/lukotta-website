@@ -139,7 +139,7 @@
     "ntfs": {
       "slug": "zapisywac-na-dysk-ntfs-na-macu",
       "title": "Zapisywać na dysk NTFS na Macu",
-      "description": "macOS otwiera dyski NTFS tylko do odczytu, więc można kopiować z nich pliki, ale nie można kopiować plików na nie. Oto dlaczego, i jak zapisywać na dysk NTFS na komputerze Mac.",
+      "description": "macOS otwiera dyski NTFS tylko do odczytu, więc pliki można z nich kopiować, ale nie na nie. Oto dlaczego i jak zapisywać na dysk NTFS na komputerze Mac.",
       "lead": "macOS pozwala kopiować pliki z dysku NTFS, ale nie na niego. Oto dlaczego, i co można z tym zrobić.",
       "sections": [
         {

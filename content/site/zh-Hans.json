@@ -63,7 +63,7 @@
     "contact": {
       "slug": "lianxi",
       "title": "联系",
-      "description": "怎么报告 Lukotta 的程序错误、提问，或者报告安全问题。GitHub 上的 issue 会先看，通常也回得最快。",
+      "description": "怎么报告 Lukotta 的程序错误，怎么提问，或者怎么报告安全方面的问题。GitHub 上的 issue 会先看，通常也是回复最快的途径。",
       "lead": "程序错误去 GitHub。安全问题去 SECURITY.md 里的地址。其他的走邮件。",
       "sections": [
         {
