@@ -332,11 +332,11 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "es": "Sí, Lukotta es gratis de descargar y gratis de usar. No hay versión de pago, ni suscripción, ni periodo de prueba que se acabe, ni cuenta que crear."
+      "es": "Sí, Lukotta se puede descargar y usar gratis. No hay versión de pago, ni suscripción, ni periodo de prueba que se acabe, ni cuenta que crear."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "es": "Además es software libre, bajo la GNU General Public License, versión 3 o posterior. El código fuente es público: puedes leerlo, compilarlo tú mismo, modificarlo y transmitir lo que modifiques."
+      "es": "Además es software libre, bajo la GNU General Public License, versión 3 o posterior. El código fuente es público: puedes leerlo, compilarlo tú mismo, modificarlo y compartir tus cambios."
     },
     "faq.2.q": {
       "en": "How do you open a BitLocker drive on a Mac?",

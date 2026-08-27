@@ -19,8 +19,8 @@
     "bitlocker": {
       "slug": "abrir-disco-bitlocker-en-mac",
       "title": "Abrir un disco BitLocker en un Mac",
-      "description": "macOS no abre un disco con BitLocker y en su lugar ofrece borrarlo. Aquí está por qué, y cómo leer el disco y copiarle archivos.",
-      "lead": "Conectas un disco con BitLocker a un Mac y el Finder ofrece borrarlo. Aquí está por qué, y cómo leer el disco en su lugar.",
+      "description": "macOS no abre un disco con BitLocker y en su lugar ofrece borrarlo. Aquí explicamos por qué y cómo leer el disco y copiar archivos en él.",
+      "lead": "Conectas un disco con BitLocker a un Mac y el Finder ofrece borrarlo. Aquí explicamos por qué y cómo leer el disco en su lugar.",
       "sections": [
         {
           "heading": "Qué es BitLocker",
@@ -62,10 +62,10 @@
           ]
         },
         {
-          "heading": "Discos que no se abrirán en un Mac",
+          "heading": "Discos que no se pueden abrir en un Mac",
           "paragraphs": [
             "Algunos PC con Windows no piden nunca una contraseña. Guardan la clave en un chip de la placa base, llamado TPM, y desbloquean el disco solos cuando esa máquina arranca.",
-            "Un disco montado así solo funciona en el PC del que viene, porque la clave nunca sale de él. Ningún Mac puede abrirlo, y otro PC tampoco. Si se guardó una clave de recuperación cuando se cifró el disco, esa lo sigue abriendo."
+            "Un disco configurado así solo funciona en el PC del que viene, porque la clave nunca sale de él. Ningún Mac puede abrirlo, y otro PC tampoco. Si se guardó una clave de recuperación cuando se cifró el disco, esa lo sigue abriendo."
           ]
         },
         {
@@ -80,8 +80,8 @@
     "linux": {
       "slug": "leer-disco-ext4-en-mac",
       "title": "Leer un disco ext4, btrfs o XFS en un Mac",
-      "description": "macOS no lee ext4, btrfs ni XFS y ofrece borrar el disco. Aquí está por qué, y cómo abrir un disco de Linux en un Mac, LUKS incluido.",
-      "lead": "Conectas un disco venido de una máquina con Linux y el Finder ofrece borrarlo. Aquí está por qué, y cómo leerlo en su lugar.",
+      "description": "macOS no lee ext4, btrfs ni XFS y ofrece borrar el disco. Aquí explicamos por qué y cómo abrir un disco de Linux en un Mac, LUKS incluido.",
+      "lead": "Conectas un disco procedente de una máquina con Linux y el Finder ofrece borrarlo. Aquí explicamos por qué y cómo leerlo en su lugar.",
       "sections": [
         {
           "heading": "Por qué un Mac no puede leer el disco",
@@ -108,7 +108,7 @@
           "heading": "Qué lee Lukotta",
           "paragraphs": [
             "ext2, ext3 y ext4, que cubren la mayoría de los sistemas Linux. btrfs, el de serie en Fedora y openSUSE. XFS, habitual en servidores.",
-            "Cifrado o no. Si el disco se montó con LVM, que reparte un disco físico en varios volúmenes, se abren todos juntos en lugar de uno a uno."
+            "Cifrado o no. Si el disco se configuró con LVM, que reparte un disco físico en varios volúmenes, se abren todos juntos en lugar de uno a uno."
           ]
         },
         {
@@ -128,10 +128,10 @@
           ]
         },
         {
-          "heading": "Discos que no se abrirán",
+          "heading": "Discos que no se pueden abrir",
           "paragraphs": [
-            "Un disco LUKS se puede montar con su cabecera guardada en otra parte, en otro disco o en una memoria USB. La cabecera es la parte que describe el cifrado. Sin ella no hay nada en el disco que desbloquear.",
-            "Las instalaciones recientes de Ubuntu también pueden atar la clave a un chip dentro de la máquina, igual que hace BitLocker. Esos discos solo se abren en el ordenador del que vienen."
+            "Un disco LUKS se puede configurar con su cabecera guardada en otra parte, en otro disco o en una memoria USB. La cabecera es la parte que describe el cifrado. Sin ella no hay nada en el disco que desbloquear.",
+            "Las instalaciones recientes de Ubuntu también pueden vincular la clave a un chip dentro de la máquina, igual que hace BitLocker. Esos discos solo se abren en el ordenador del que vienen."
           ]
         }
       ]
@@ -139,8 +139,8 @@
     "ntfs": {
       "slug": "escribir-en-disco-ntfs-en-mac",
       "title": "Escribir en un disco NTFS en un Mac",
-      "description": "macOS abre los discos NTFS en solo lectura, así que los archivos salen pero no entran. Aquí está por qué, y cómo escribir en un disco NTFS en un Mac.",
-      "lead": "macOS te deja copiar archivos desde un disco NTFS pero no hacia él. Aquí está por qué, y qué se puede hacer al respecto.",
+      "description": "macOS abre los discos NTFS en solo lectura, así que los archivos salen pero no entran. Aquí explicamos por qué y cómo escribir en un disco NTFS en un Mac.",
+      "lead": "macOS te deja copiar archivos desde un disco NTFS pero no hacia él. Aquí explicamos por qué y qué se puede hacer al respecto.",
       "sections": [
         {
           "heading": "Qué es NTFS",
@@ -245,15 +245,15 @@
           "heading": "Copiar archivos dentro de una imagen",
           "paragraphs": [
             "qcow2 se escribe de la manera corriente y se le puede escribir sin riesgo.",
-            "En VMDK, VDI y VHD se puede escribir, pero eso es trabajo reciente y no lleva el tiempo suficiente en uso como para confiarle algo que no te puedas permitir perder. Copia el archivo y trabaja sobre la copia, o ábrelo en solo lectura y saca los archivos.",
+            "En VMDK, VDI y VHD se puede escribir, pero esta compatibilidad de escritura es reciente y no lleva el tiempo suficiente en uso como para confiarle algo que no te puedas permitir perder. Copia el archivo y trabaja sobre la copia, o ábrelo en solo lectura y saca los archivos.",
             "VHDX se abre en solo lectura, y lo mismo la clase de VMDK que va dentro de un archivo OVA. Esa clase se escribe de una sola pasada y después no se puede cambiar en su sitio."
           ]
         },
         {
-          "heading": "Archivos que no se abrirán",
+          "heading": "Archivos que no se pueden abrir",
           "paragraphs": [
             "Una imagen solo se abre si está completa por sí sola.",
-            "Una cadena de instantáneas de VMware reparte el estado actual de la máquina entre un archivo original y una serie de archivos más pequeños que anotan lo que cambió después. Un disco partido divide una imagen en muchos trozos. Un disco de diferencia de Hyper-V guarda solo las diferencias respecto a otro archivo.",
+            "Una cadena de instantáneas de VMware reparte el estado actual de la máquina entre un archivo original y una serie de archivos más pequeños que anotan lo que cambió después. Un disco partido divide una imagen en muchos trozos. Un disco de diferenciación de Hyper-V guarda solo las diferencias respecto a otro archivo.",
             "En todos esos casos el archivo que tienes es parte de un conjunto, y Lukotta abre un archivo cada vez."
           ]
         }

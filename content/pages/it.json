@@ -19,8 +19,8 @@
     "bitlocker": {
       "slug": "aprire-disco-bitlocker-su-mac",
       "title": "Aprire un disco BitLocker su un Mac",
-      "description": "macOS non apre un disco BitLocker e propone invece di inizializzarlo. Ecco perché, e come leggere il disco e copiarci dentro dei file.",
-      "lead": "Colleghi un disco BitLocker a un Mac e il Finder propone di inizializzarlo. Ecco perché, e come leggere il disco invece.",
+      "description": "macOS non apre un disco BitLocker e propone invece di cancellarlo. Ecco perché, e come leggere il disco e copiarci dentro dei file.",
+      "lead": "Colleghi un disco BitLocker a un Mac e il Finder propone di cancellarlo. Ecco perché, e come leggere il disco invece.",
       "sections": [
         {
           "heading": "Che cos’è BitLocker",
@@ -80,13 +80,13 @@
     "linux": {
       "slug": "leggere-disco-ext4-su-mac",
       "title": "Leggere un disco ext4, btrfs o XFS su un Mac",
-      "description": "macOS non legge ext4, btrfs né XFS e propone di inizializzare il disco. Ecco perché, e come aprire un disco Linux su un Mac, LUKS compreso.",
-      "lead": "Colleghi un disco che viene da una macchina Linux e il Finder propone di inizializzarlo. Ecco perché, e come leggerlo invece.",
+      "description": "macOS non legge ext4, btrfs né XFS e propone di cancellare il disco. Ecco perché, e come aprire un disco Linux su un Mac, LUKS compreso.",
+      "lead": "Colleghi un disco che viene da una macchina Linux e il Finder propone di cancellarlo. Ecco perché, e come leggerlo invece.",
       "sections": [
         {
           "heading": "Perché un Mac non riesce a leggere il disco",
           "paragraphs": [
-            "Ogni disco ha un file system: l’ordinamento che annota dove comincia ciascun file, come si chiama, e quali parti del disco sono ancora libere. Windows usa NTFS. macOS usa APFS. Linux di solito usa ext4, e a volte btrfs o XFS.",
+            "Ogni disco ha un file system: la struttura che registra dove comincia ciascun file, come si chiama e quali parti del disco sono ancora libere. Windows usa NTFS. macOS usa APFS. Linux di solito usa ext4, e a volte btrfs o XFS.",
             "I file in sé sono normalissimi. Quel che cambia è l’indice che sta davanti, e un computer che non sa leggere quell’indice non ha modo di trovare alcunché, anche se è tutto ancora lì."
           ]
         },
@@ -145,7 +145,7 @@
         {
           "heading": "Che cos’è NTFS",
           "paragraphs": [
-            "NTFS è il file system che usa Windows, sia per il proprio disco sia per i dischi esterni inizializzati su un PC. Un disco USB inizializzato su una macchina Windows di solito è NTFS.",
+            "NTFS è il file system che usa Windows, sia per il proprio disco sia per i dischi esterni formattati su un PC. Un disco USB formattato su una macchina Windows di solito è NTFS.",
             "L’altro diffuso è exFAT, che usano quasi tutte le schede di memoria e molte chiavette USB perché sia Windows sia macOS ci sanno scrivere. Se il tuo disco è exFAT, macOS se la cava già e niente di tutto questo ti riguarda. Per verificarlo, fai clic sul disco nel Finder e scegli «File» e poi «Ottieni informazioni». La riga «Formato» te lo dice."
           ]
         },
@@ -245,8 +245,8 @@
           "heading": "Copiare file dentro un’immagine",
           "paragraphs": [
             "qcow2 viene scritto nel modo normale e ci si può scrivere senza rischi.",
-            "Su VMDK, VDI e VHD si può scrivere, ma è un lavoro recente e non è in uso da abbastanza tempo per affidargli qualcosa che non puoi permetterti di perdere. Copia il file e lavora sulla copia, oppure aprilo in sola lettura e tirane fuori i file.",
-            "VHDX si apre in sola lettura, e così pure il tipo di VMDK che si trova dentro un file OVA. Quel tipo viene scritto tutto d’un fiato e dopo non si può più modificare sul posto."
+            "Su VMDK, VDI e VHD si può scrivere, ma il supporto in scrittura è recente e non è in uso da abbastanza tempo per affidargli qualcosa che non puoi permetterti di perdere. Copia il file e lavora sulla copia, oppure aprilo in sola lettura e tirane fuori i file.",
+            "VHDX si apre in sola lettura, e così pure il tipo di VMDK che si trova dentro un file OVA. Quel tipo viene scritto in un’unica passata e dopo non si può più modificare sul posto."
           ]
         },
         {

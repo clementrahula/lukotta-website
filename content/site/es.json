@@ -14,14 +14,14 @@
     "about": {
       "slug": "acerca-de",
       "title": "Acerca de Lukotta",
-      "description": "Lukotta es una app de macOS gratuita y de código abierto que abre discos BitLocker, NTFS y Linux, bajo la GNU General Public License.",
+      "description": "Lukotta abre discos BitLocker, NTFS y Linux en macOS. App gratuita y de código abierto, mantenida por un solo desarrollador, bajo la GNU General Public License.",
       "lead": "Lukotta abre discos e imágenes de disco que macOS no puede leer. Es gratis, de código abierto, y lo mantiene una sola persona.",
       "sections": [
         {
           "heading": "Qué es",
           "paragraphs": [
             "Lukotta es una aplicación de macOS. Abre discos BitLocker, NTFS, LUKS, ext4, btrfs y XFS, e imágenes de disco de máquinas virtuales en los formatos qcow2, VMDK, VDI, VHD y VHDX. macOS no lee ninguno por su cuenta. NTFS lo lee, pero no escribe en él.",
-            "Arranca un pequeño sistema Linux en segundo plano, abre el disco allí y se lo entrega al Finder. Linux lleva años leyendo estos formatos. El disco no se convierte ni se copia. Queda como estaba, y la máquina de la que viene lo sigue leyendo."
+            "Arranca una pequeña máquina virtual Linux en segundo plano, abre el disco allí y se lo entrega al Finder. Linux lleva años leyendo estos formatos. El disco no se convierte ni se copia. Queda como estaba, y la máquina de la que viene lo sigue leyendo."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "contacto",
       "title": "Contacto",
-      "description": "Cómo informar de un fallo en Lukotta, hacer una pregunta o informar de un problema de seguridad. Las incidencias de GitHub se leen primero.",
+      "description": "Cómo informar de un fallo en Lukotta, hacer una pregunta o informar de un problema de seguridad. Las incidencias de GitHub se leen y responden antes.",
       "lead": "Los fallos van a GitHub. Los problemas de seguridad van a la dirección de SECURITY.md. Todo lo demás va por correo.",
       "sections": [
         {

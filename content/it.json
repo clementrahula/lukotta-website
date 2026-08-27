@@ -180,7 +180,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "it": "Lukotta apre i dischi e le immagini disco che macOS si rifiuta di leggere, e li consegna al Finder come volumi qualsiasi."
+      "it": "Lukotta apre i dischi e le immagini disco che macOS si rifiuta di leggere, e li consegna al Finder come volumi normali."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "it": "VMware, piatto e sparso"
+      "it": "VMware, formati flat e sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "it": "Ciò che contiene un OVA. Scritto in un’unica passata, non può essere modificato direttamente"
+      "it": "Ciò che contiene un OVA. Scritto in un’unica passata, non può essere modificato sul posto"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -336,7 +336,7 @@
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
-      "it": "È anche software libero, sotto GNU General Public License, versione 3 o successiva. Il codice sorgente è pubblico: puoi leggerlo, compilarlo da te, modificarlo e trasmettere le tue modifiche."
+      "it": "È anche software libero, sotto GNU General Public License, versione 3 o successiva. Il codice sorgente è pubblico: puoi leggerlo, compilarlo da te, modificarlo e ridistribuire le tue modifiche."
     },
     "faq.2.q": {
       "en": "How do you open a BitLocker drive on a Mac?",

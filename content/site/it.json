@@ -14,14 +14,14 @@
     "about": {
       "slug": "informazioni",
       "title": "Informazioni su Lukotta",
-      "description": "Lukotta è un'app macOS gratuita e open source che apre dischi BitLocker, NTFS e Linux, sotto GNU General Public License.",
+      "description": "Lukotta è un'app macOS gratuita e open source che apre dischi BitLocker, NTFS e Linux. Mantenuta da un solo sviluppatore, sotto GNU General Public License.",
       "lead": "Lukotta apre dischi e immagini disco che macOS non riesce a leggere. È gratuito, open source, e lo mantiene una sola persona.",
       "sections": [
         {
           "heading": "Che cos'è",
           "paragraphs": [
             "Lukotta è un'applicazione macOS. Apre dischi BitLocker, NTFS, LUKS, ext4, btrfs e XFS, e immagini disco di macchine virtuali nei formati qcow2, VMDK, VDI, VHD e VHDX. macOS non ne legge nessuno da solo. NTFS lo legge, ma non ci scrive.",
-            "Avvia un piccolo sistema Linux in secondo piano, apre lì il disco e lo consegna al Finder. Linux legge questi formati da anni. Il disco non viene convertito né copiato. Resta com'era, e la macchina da cui viene continua a leggerlo."
+            "Avvia una piccola macchina virtuale Linux in secondo piano, apre lì il disco e lo consegna al Finder. Linux legge questi formati da anni. Il disco non viene convertito né copiato. Resta com'era, e la macchina da cui viene continua a leggerlo."
           ]
         },
         {
@@ -42,7 +42,7 @@
           "heading": "Quanto costa",
           "paragraphs": [
             "Niente. Non c'è una versione a pagamento, né un abbonamento, né una prova, né un account.",
-            "Lukotta è software libero sotto GNU General Public License, versione 3 o successiva. Il codice è pubblicato. Chiunque può leggerlo, modificarlo e passarlo avanti con la stessa licenza."
+            "Lukotta è software libero sotto GNU General Public License, versione 3 o successiva. Il codice è pubblicato. Chiunque può leggerlo, modificarlo e ridistribuirlo con la stessa licenza."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "contatti",
       "title": "Contatti",
-      "description": "Come segnalare un problema in Lukotta, fare una domanda o segnalare una falla di sicurezza. Le issue su GitHub si leggono per prime.",
+      "description": "Come segnalare un problema in Lukotta, fare una domanda o segnalare una falla di sicurezza. Le issue su GitHub si leggono per prime e ricevono risposta prima.",
       "lead": "I problemi vanno su GitHub. Le falle di sicurezza vanno all'indirizzo indicato in SECURITY.md. Tutto il resto va per email.",
       "sections": [
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Quanto ci vuole per una risposta",
           "paragraphs": [
-            "Lukotta è mantenuto da una sola persona. Non c'è assistenza né un tempo di risposta promesso. Certi messaggi richiedono tempo, e certi restano senza risposta.",
+            "Lukotta è mantenuto da una sola persona. Non c'è un servizio di assistenza né un tempo di risposta promesso. Certi messaggi richiedono tempo, e certi restano senza risposta.",
             "Una issue su GitHub di solito è più veloce, perché qualcun altro può rispondere prima."
           ]
         }
