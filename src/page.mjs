@@ -12,19 +12,27 @@
 const away = ' target="_blank" rel="noopener noreferrer"';
 
 /* The pages are written as plain strings, which keeps the content files
-   readable and keeps markup out of a translator's way. It also means an address
-   the prose names arrives as text, and on the contact page the one thing a
-   reader wants to click is the one thing they cannot.
+   readable and keeps markup out of a translator's way. Two things still have to
+   be links, so two narrow forms are understood.
    
-   So this runs after esc(), never before: the input is already escaped, and
-   what it inserts is built from matches of a deliberately narrow pattern. Two
-   things are linked and nothing else, because "anything that looks like a
-   domain" also catches SECURITY.md and .img. */
+   [text](https://example.com) puts the link on the words, which is what you
+   want when the phrase and not the address is the thing to click. It is also
+   already valid markdown, so the .md twin of the page carries it unchanged.
+   
+   A bare github.com path or an email address is linked where it stands, since
+   spelling those out is the point.
+   
+   Both run after esc(), never before. The input is already escaped, and the
+   href is checked against a scheme allowlist rather than trusted, because a
+   content file is still a place a link could be written badly. */
+const LINK = /\[([^\]]+)\]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g;
+
 const autolink = (escaped) =>
   escaped
+    .replace(LINK, (whole, text, href) =>
+      /^(https:\/\/|mailto:)/.test(href) ? `<a href="${href}">${text}</a>` : whole)
     .replace(/\bgithub\.com\/[A-Za-z0-9._\/-]*[A-Za-z0-9_\/-]/g,
              (m) => `<a href="https://${m}">${m}</a>`)
-    .replace(/\brahula\.dev\b/g, (m) => `<a href="https://${m}">${m}</a>`)
     .replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
              (m) => `<a href="mailto:${m}">${m}</a>`);
 
