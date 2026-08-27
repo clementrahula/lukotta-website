@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "id",
+    "name": "Indonesian",
+    "native": "Bahasa Indonesia",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Gratis diunduh dan gratis dipakai."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "buka-drive-bitlocker-di-mac",
+      "title": "Buka drive BitLocker di Mac",
+      "description": "macOS tidak membuka drive BitLocker dan malah menawarkan untuk menghapusnya. Ini sebabnya, dan cara membaca drive serta menyalin file ke dalamnya.",
+      "lead": "Anda mencolokkan drive BitLocker ke Mac dan Finder menawarkan untuk menghapusnya. Ini sebabnya, dan cara membacanya sebagai gantinya.",
+      "sections": [
+        {
+          "heading": "Apa itu BitLocker",
+          "paragraphs": [
+            "BitLocker adalah enkripsi yang tertanam di dalam Windows. Ketika dinyalakan, segala yang ditulis ke drive itu diacak, dan isinya tidak bisa dibaca tanpa kata sandi. Windows memakainya pada drive-nya sendiri, dan pada drive USB serta kartu memori, di mana namanya BitLocker To Go.",
+            "Keduanya enkripsi yang sama. Kalau drive itu hilang, orang yang menemukannya tidak bisa membaca apa pun dari sana."
+          ]
+        },
+        {
+          "heading": "Apa yang terjadi saat Anda mencolokkannya ke Mac",
+          "paragraphs": [
+            "Finder bilang disk tidak bisa dibaca dan menawarkan untuk menyiapkan atau menghapusnya. Ia tidak meminta kata sandi, dan tidak ada apa pun di layar yang memberi tahu bahwa drive itu terkunci, bukan rusak.",
+            "Drive itu tidak rusak. macOS punya enkripsinya sendiri, FileVault, dan sama sekali tidak mengerti BitLocker. Ia membaca awal drive, menemukan susunan yang tidak dikenalinya, dan memperlakukan disk itu seperti belum diformat, sehingga satu-satunya yang bisa ditawarkannya adalah menghapus."
+          ]
+        },
+        {
+          "heading": "Bagaimana Lukotta membukanya",
+          "paragraphs": [
+            "Linux sudah bertahun-tahun bisa membaca BitLocker, dan itulah yang dipakai Lukotta. Ia menjalankan sistem Linux kecil di latar belakang, menyerahkan drive itu kepadanya, lalu membuka kuncinya di sana dengan kata sandi yang Anda ketik. Drive yang terbuka kembali ke Finder, tempat ia muncul di bawah Lokasi bersama disk Anda yang lain.",
+            "Drive itu tidak diubah dan tidak disalin. Ia tetap drive BitLocker, tetap terenkripsi, dan Windows tetap membacanya."
+          ]
+        },
+        {
+          "heading": "Membuka drive",
+          "list": [
+            "Colokkan drive. Lukotta menampilkannya dalam daftar dan menandainya terkunci.",
+            "Klik drive itu dan ketik kata sandi yang Anda pakai di Windows.",
+            "Drive muncul di Finder, di bawah Lokasi."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kalau Anda tidak punya kata sandinya",
+          "paragraphs": [
+            "Waktu drive itu dienkripsi, Windows membuat kunci pemulihan dan bertanya di mana ia harus disimpan. Kunci itu membuka drive menggantikan kata sandi. Panjangnya 48 angka, dalam delapan kelompok berisi enam:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Ia bisa tersimpan di akun Microsoft, di berkas teks, atau tercetak di kertas. Tempelkan di tempat kata sandi biasanya diketik.",
+            "Tanpa kata sandi atau kunci itu, drive tidak bisa dibuka oleh program apa pun, di komputer mana pun."
+          ]
+        },
+        {
+          "heading": "Drive yang tidak akan terbuka di Mac",
+          "paragraphs": [
+            "Sebagian komputer Windows tidak pernah meminta kata sandi. Mereka menyimpan kuncinya di sebuah cip pada papan induk, yang disebut TPM, dan membuka drive itu sendiri ketika mesin tersebut menyala.",
+            "Drive yang disiapkan begitu hanya bekerja di komputer asalnya, karena kuncinya tidak pernah keluar dari sana. Tidak ada Mac yang bisa membukanya, dan komputer Windows lain juga tidak. Kalau ada kunci pemulihan yang disimpan waktu drive itu dienkripsi, kunci itu masih membukanya."
+          ]
+        },
+        {
+          "heading": "Menyalin berkas ke drive",
+          "paragraphs": [
+            "Drive BitLocker terbuka untuk dibaca maupun ditulis, jadi sebuah Mac bisa menambahkan berkas ke cadangan dari Windows, bukan cuma mengambil darinya.",
+            "Lukotta juga bisa membuka drive itu hanya-baca, yang layak dilakukan ketika Anda menyelamatkan berkas dari drive yang mulai bermasalah. Waktu itu tidak ada yang bisa ditulis ke sana."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "baca-drive-ext4-di-mac",
+      "title": "Baca drive ext4, btrfs atau XFS di Mac",
+      "description": "macOS tidak membaca ext4, btrfs, maupun XFS dan menawarkan menghapus drive. Ini sebabnya, dan cara membuka drive Linux di Mac, termasuk LUKS.",
+      "lead": "Anda mencolokkan drive dari mesin Linux dan Finder menawarkan untuk menghapusnya. Ini sebabnya, dan cara membacanya sebagai gantinya.",
+      "sections": [
+        {
+          "heading": "Kenapa Mac tidak bisa membaca drive itu",
+          "paragraphs": [
+            "Setiap drive punya sistem berkas: susunan yang mencatat di mana tiap berkas dimulai, apa namanya, dan bagian disk mana yang masih kosong. Windows memakai NTFS. macOS memakai APFS. Linux biasanya memakai ext4, kadang btrfs atau XFS.",
+            "Berkasnya sendiri biasa saja. Yang berbeda adalah daftar isi di depannya, dan komputer yang tidak bisa membaca daftar itu tidak punya cara menemukan apa pun, walaupun semuanya masih ada di sana."
+          ]
+        },
+        {
+          "heading": "Apa yang terjadi saat Anda mencolokkannya ke Mac",
+          "paragraphs": [
+            "Finder bilang disk tidak bisa dibaca dan menawarkan untuk menghapusnya. Pesan yang sama diberikan macOS untuk disk kosong dan untuk disk yang mulai rusak, jadi pesan itu tidak memberi Anda cara apa pun untuk tahu bahwa drive itu baik-baik saja.",
+            "macOS mendukung sistem berkasnya sendiri dan beberapa yang umum seperti exFAT. Sistem berkas Linux tidak termasuk di dalamnya, jadi drive ext4 tampak seperti disk kosong bagi macOS."
+          ]
+        },
+        {
+          "heading": "Bagaimana Lukotta membacanya",
+          "paragraphs": [
+            "Lukotta menjalankan sistem Linux kecil di latar belakang dan menyerahkan drive itu kepadanya. Linux membaca ext4, btrfs dan XFS sendiri, jadi drive itu terbuka di sana tanpa perubahan apa pun, lalu Lukotta meneruskannya ke Finder.",
+            "Tidak ada yang ditulis ke drive itu, dan ia bekerja seperti biasa ketika kembali ke mesin Linux."
+          ]
+        },
+        {
+          "heading": "Apa yang dibaca Lukotta",
+          "paragraphs": [
+            "ext2, ext3 dan ext4, yang mencakup sebagian besar sistem Linux. btrfs, bawaan di Fedora dan openSUSE. XFS, umum di server.",
+            "Terenkripsi atau tidak. Kalau drive itu disiapkan dengan LVM, yang membagi satu drive fisik menjadi beberapa volume, semuanya terbuka bersama-sama, bukan satu per satu."
+          ]
+        },
+        {
+          "heading": "Membuka drive",
+          "list": [
+            "Colokkan drive. Lukotta menampilkan apa yang ada di dalamnya.",
+            "Kalau terenkripsi, ketik frasa sandinya.",
+            "Drive muncul di Finder, di bawah Lokasi."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kalau ia meminta frasa sandi",
+          "paragraphs": [
+            "LUKS adalah cara Linux mengenkripsi satu drive utuh. Kalau mesin asal drive ini meminta frasa sandi di awal proses menyala, sebelum layar masuk, itulah LUKS, dan itulah frasa sandi yang diketik di sini.",
+            "Ia terpisah dari kata sandi masuk, meski banyak orang menyetel keduanya sama."
+          ]
+        },
+        {
+          "heading": "Drive yang tidak akan terbuka",
+          "paragraphs": [
+            "Drive LUKS bisa disiapkan dengan header-nya disimpan di tempat lain, di disk lain atau di flashdisk. Header adalah bagian yang menerangkan enkripsinya. Tanpa itu, tidak ada apa pun di drive yang bisa dibuka kuncinya.",
+            "Pemasangan Ubuntu yang lebih baru juga bisa mengikat kuncinya ke cip di dalam mesin, sama seperti yang dilakukan BitLocker. Drive semacam itu hanya terbuka di komputer asalnya."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "tulis-ke-drive-ntfs-di-mac",
+      "title": "Menulis ke drive NTFS di Mac",
+      "description": "macOS membuka drive NTFS hanya-baca, jadi file bisa keluar tapi tidak bisa masuk. Ini sebabnya, dan cara menulis ke drive NTFS di Mac.",
+      "lead": "macOS mengizinkan Anda menyalin berkas dari drive NTFS tapi tidak ke dalamnya. Ini sebabnya, dan apa yang bisa dilakukan soal itu.",
+      "sections": [
+        {
+          "heading": "Apa itu NTFS",
+          "paragraphs": [
+            "NTFS adalah sistem berkas yang dipakai Windows, baik untuk drive-nya sendiri maupun untuk drive luar yang diformat di komputer Windows. Drive USB yang diformat di mesin Windows biasanya NTFS.",
+            "Yang umum satunya adalah exFAT, dipakai oleh kebanyakan kartu memori dan banyak flashdisk karena Windows dan macOS sama-sama bisa menulis ke sana. Kalau drive Anda exFAT, macOS sudah bisa menanganinya dan tidak satu pun dari ini berlaku. Untuk memeriksanya, klik drive itu di Finder lalu pilih File, kemudian Dapatkan Info. Baris Format memberi tahu Anda."
+          ]
+        },
+        {
+          "heading": "Apa yang terjadi saat Anda mencolokkannya ke Mac",
+          "paragraphs": [
+            "Drive muncul di Finder dan Anda bisa melihat berkasnya. Menyalin berkas darinya berjalan seperti biasa. Menyalin apa pun ke dalamnya tidak: Finder menolak, dan drive itu bertingkah seolah terkunci.",
+            "macOS membuka drive NTFS hanya-baca. Ia sudah bertahun-tahun bisa menulis NTFS, tapi itu dimatikan dan tidak ada cara resmi untuk menyalakannya. Menulis NTFS lebih sulit daripada membacanya, dan satu kesalahan bisa meninggalkan drive yang setelahnya ditolak Windows."
+          ]
+        },
+        {
+          "heading": "Bagaimana Lukotta menulis ke sana",
+          "paragraphs": [
+            "Lukotta membuka drive itu dengan penggerak NTFS dari Linux, yang bisa menulis dan yang dipakai mesin Linux setiap hari. Drive itu lalu diserahkan ke Finder, jadi menyalin berkas ke sana berjalan seperti penyalinan lainnya.",
+            "Drive itu tetap NTFS, dan Windows membacanya setelah itu."
+          ]
+        },
+        {
+          "heading": "Membuka drive",
+          "list": [
+            "Colokkan drive. Lukotta menampilkannya dalam daftar.",
+            "Klik drive itu.",
+            "Ia muncul di Finder, di bawah Lokasi, dan berkas bisa disalin ke dua arah."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Drive NTFS biasanya tidak berkata sandi, jadi tidak ada yang perlu diketik, kecuali BitLocker juga dinyalakan di sana."
+          ]
+        },
+        {
+          "heading": "Drive yang tidak ditutup Windows dengan benar",
+          "paragraphs": [
+            "Windows menandai sebuah drive sebagai tidak ditutup benar ketika penulisan terputus, biasanya karena drive itu dicabut atau mesinnya kehilangan listrik di tengah jalan. Tanda itu memperingatkan komputer berikutnya yang membukanya bahwa drive itu mungkin tertulis separuh dan sebaiknya diperiksa.",
+            "Mulai cepat meninggalkan tanda yang sama bahkan ketika tidak ada yang salah. Di Windows 10 dan 11 ia menyala sejak awal. Alih-alih mematikan mesin, ia membuatnya hibernasi, yang membuat drive itu tampak seolah masih dipakai.",
+            "macOS menolak drive dalam kedua keadaan itu dan tidak memberi alasan. Lukotta membukanya.",
+            "Kalau mesin Windows itu masih ada pada Anda, cara yang lebih rapi adalah mencolokkan drive itu kembali ke sana dan mematikan mesin tersebut dengan benar: tahan Shift sambil mengeklik Matikan, itu melewati mulai cepat."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "buka-file-vmdk-vdi-vhd-di-mac",
+      "title": "Buka file VMDK, VDI atau VHD di Mac",
+      "description": "Buka file VMDK, VDI, VHD atau qcow2 di Mac dan salin file dari dalamnya, tanpa memasang VMware atau VirtualBox dan tanpa menyalakan mesinnya.",
+      "lead": "Sebuah mesin virtual menyimpan seluruh disknya di dalam satu berkas. Berkas itu bisa Anda buka di Mac dan Anda ambil isinya tanpa pernah menyalakan mesinnya.",
+      "sections": [
+        {
+          "heading": "Apa itu image disk",
+          "paragraphs": [
+            "Ketika Anda menjalankan mesin virtual, hard disk mesin itu adalah satu berkas biasa yang ada di Mac Anda. Sistem operasinya, programnya, dan setiap dokumen di dalamnya semua ada di dalam satu berkas itu.",
+            "Setiap program menulis berkas itu dengan caranya sendiri. VMware memakai VMDK, VirtualBox memakai VDI, Hyper-V memakai VHD dan VHDX, sedangkan QEMU dan UTM memakai qcow2. Image mentah, yang biasanya berakhiran .img, adalah salinan lurus sebuah disk tanpa apa pun yang membungkusnya."
+          ]
+        },
+        {
+          "heading": "Kenapa mengeluarkan berkas dari sana merepotkan",
+          "paragraphs": [
+            "Jalan yang biasa adalah menyalakan mesin virtualnya, menunggu sampai hidup, mencari berkasnya di dalam, lalu menyalinnya keluar. Artinya mesin itu harus masih jalan, dan program yang menjalankannya harus masih terpasang.",
+            "Finder juga tidak membantu di sini. Mengeklik dua kali sebuah VMDK tidak melakukan apa-apa, karena macOS tidak tahu apa yang ada di dalamnya."
+          ]
+        },
+        {
+          "heading": "Bagaimana Lukotta membukanya",
+          "paragraphs": [
+            "Lukotta membaca image itu langsung. Ia mencari tahu berkas itu berformat apa, menemukan disk di dalamnya, dan membukanya di sistem Linux kecil yang dijalankannya di latar belakang. Isinya lalu muncul di Finder sebagai disk biasa.",
+            "Mesin virtualnya tetap mati. VMware dan VirtualBox tidak perlu terpasang, dan membuka berkas itu tidak mengubahnya."
+          ]
+        },
+        {
+          "heading": "Berkas apa saja yang dibuka Lukotta",
+          "list": [
+            "qcow2, dari QEMU dan UTM.",
+            "VMDK, dari VMware.",
+            "VDI, dari VirtualBox.",
+            "VHD dan VHDX, dari Hyper-V.",
+            "Image mentah, yang biasanya berakhiran .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Membuka salah satunya",
+          "list": [
+            "Pilih File, lalu Buka Image Disk, dan cari berkasnya.",
+            "Kalau disk di dalamnya terenkripsi, ketik kata sandi atau frasa sandinya.",
+            "Isinya muncul di Finder, di bawah Lokasi."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Satu berkas sering memuat beberapa drive",
+          "paragraphs": [
+            "Sebuah image disk biasanya memuat lebih dari satu partisi: partisi boot kecil, partisi utama tempat semuanya berada, dan kadang partisi pemulihan. Lukotta menampilkannya dalam daftar dan Anda membuka yang Anda perlukan, sama seperti Anda memilih drive."
+          ]
+        },
+        {
+          "heading": "Menyalin berkas ke dalam image",
+          "paragraphs": [
+            "qcow2 ditulis dengan cara biasa dan aman untuk ditulisi.",
+            "VMDK, VDI dan VHD bisa ditulisi, tapi itu pekerjaan baru dan belum cukup lama dipakai untuk dipercayai dengan sesuatu yang tidak sanggup Anda kehilangan. Salin berkasnya dan kerjakan salinannya, atau buka hanya-baca dan ambil saja berkasnya keluar.",
+            "VHDX terbuka hanya-baca, begitu pula jenis VMDK yang ada di dalam berkas OVA. Jenis itu ditulis sekali jalan dan sesudahnya tidak bisa diubah di tempatnya."
+          ]
+        },
+        {
+          "heading": "Berkas yang tidak akan terbuka",
+          "paragraphs": [
+            "Sebuah image hanya terbuka kalau ia lengkap dengan sendirinya.",
+            "Rantai snapshot VMware menyebar keadaan mesin saat ini ke sebuah berkas asal dan sederet berkas lebih kecil yang mencatat apa yang berubah sesudahnya. Disk terbelah memecah satu image menjadi banyak potongan. Disk pembeda Hyper-V hanya memuat perbedaan dari berkas lain.",
+            "Di tiap kasus itu berkas yang Anda punya adalah bagian dari satu set, dan Lukotta membuka satu berkas dalam satu waktu."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Selengkapnya tentang drive BitLocker, dan apa yang harus dilakukan jika kata sandi hilang",
+    "ntfs": "Selengkapnya tentang drive NTFS, termasuk yang ditinggalkan Windows tanpa ditutup benar",
+    "linux": "Selengkapnya tentang drive Linux dan enkripsi LUKS",
+    "disk-images": "Selengkapnya tentang image disk, dan mana yang bisa ditulisi"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

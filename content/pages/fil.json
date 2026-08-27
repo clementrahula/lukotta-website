@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "fil",
+    "name": "Filipino",
+    "native": "Filipino",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Libreng i-download at libreng gamitin."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "buksan-ang-bitlocker-drive-sa-mac",
+      "title": "Buksan ang BitLocker drive sa Mac",
+      "description": "Hindi binubuksan ng macOS ang BitLocker drive at sa halip ay nag-aalok itong burahin. Narito kung bakit, at kung paano basahin ang drive at kopyahan ito ng mga file.",
+      "lead": "Isinaksak mo ang isang BitLocker drive sa Mac at nag-aalok ang Finder na burahin ito. Narito kung bakit, at kung paano ito basahin sa halip.",
+      "sections": [
+        {
+          "heading": "Ano ang BitLocker",
+          "paragraphs": [
+            "Ang BitLocker ay ang encryption na nakapaloob sa Windows. Kapag nakabukas ito, ginugulo ang lahat ng naisusulat sa drive, at hindi mababasa ang laman nito nang walang password. Ginagamit ito ng Windows sa sarili nitong drive, at sa mga USB drive at memory card, kung saan BitLocker To Go ang tawag dito.",
+            "Iisang encryption ito sa dalawang kaso. Kapag nawala ang drive, walang mababasa rito ang sinumang makakakita nito."
+          ]
+        },
+        {
+          "heading": "Ano ang nangyayari kapag isinaksak mo ito sa Mac",
+          "paragraphs": [
+            "Sinasabi ng Finder na hindi mabasa ang disk at nag-aalok itong i-initialize o burahin ito. Hindi ito humihingi ng password, at walang anuman sa screen na nagpapahiwatig na naka-lock ang drive at hindi sira.",
+            "Hindi sira ang drive. May sarili ang macOS na encryption, ang FileVault, at wala itong maintindihan sa BitLocker. Binabasa nito ang simula ng drive, nakakakita ng ayos na hindi nito kilala, at itinuturing nitong hindi naka-format ang disk, kaya ang tanging maiaalok nito ay burahin ito."
+          ]
+        },
+        {
+          "heading": "Paano ito binubuksan ng Lukotta",
+          "paragraphs": [
+            "Kayang basahin ng Linux ang BitLocker nang maraming taon na, at iyon ang ginagamit ng Lukotta. Nagpapatakbo ito ng maliit na Linux system sa likuran, ibinibigay dito ang drive, at binubuksan ito roon gamit ang password na iti-type mo. Bumabalik ang nabuksang drive sa Finder, kung saan lumilitaw ito sa ilalim ng Locations katabi ng iba mong disk.",
+            "Hindi kino-convert ni kinokopya ang drive. Nananatili itong BitLocker drive, nananatiling naka-encrypt, at nababasa pa rin ito ng Windows."
+          ]
+        },
+        {
+          "heading": "Pagbukas ng drive",
+          "list": [
+            "Isaksak ang drive. Inililista ito ng Lukotta at ipinapakitang naka-lock.",
+            "I-click ito at i-type ang password na ginagamit mo sa Windows.",
+            "Lumilitaw ang drive sa Finder, sa ilalim ng Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kung wala sa iyo ang password",
+          "paragraphs": [
+            "Noong ini-encrypt ang drive, gumawa ang Windows ng recovery key at nagtanong kung saan ito itatago. Binubuksan nito ang drive kapalit ng password. May 48 digit ito, sa walong pangkat na tig-aanim:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Maaaring nakaimbak ito sa isang Microsoft account, sa isang text file, o nakalimbag sa papel. I-paste ito kung saan sana ilalagay ang password.",
+            "Kung wala ang password o ang key, walang programang makakabukas ng drive, sa kahit anong computer."
+          ]
+        },
+        {
+          "heading": "Mga drive na hindi bubukas sa Mac",
+          "paragraphs": [
+            "May mga computer na Windows na hindi kailanman humihingi ng password. Itinatago nila ang key sa isang chip sa motherboard, na tinatawag na TPM, at kusang binubuksan ang drive kapag umandar ang makinang iyon.",
+            "Ang drive na ganoon ang pagkakaayos ay gumagana lamang sa computer na pinagmulan nito, dahil hindi kailanman umaalis doon ang key. Walang Mac na makakabukas nito, at walang ibang computer na Windows rin. Kung may naitagong recovery key noong ini-encrypt ang drive, nabubuksan pa rin ito niyon."
+          ]
+        },
+        {
+          "heading": "Pagkopya ng mga file papunta sa drive",
+          "paragraphs": [
+            "Bumubukas ang mga BitLocker drive para mabasa at masulatan, kaya makakapagdagdag ang isang Mac ng mga file sa backup na galing sa Windows, hindi lang kumuha mula rito.",
+            "Kaya rin ng Lukotta na buksan ang drive nang read-only, na sulit gawin kapag nagliligtas ka ng mga file mula sa drive na nagsisimula nang magkaproblema. Sa ganoon ay wala nang maisusulat dito."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "basahin-ang-ext4-drive-sa-mac",
+      "title": "Basahin ang ext4, btrfs o XFS drive sa Mac",
+      "description": "Hindi nababasa ng macOS ang ext4, btrfs o XFS at nag-aalok itong burahin ang drive. Narito kung bakit, at kung paano magbukas ng Linux drive sa Mac, pati LUKS.",
+      "lead": "Isinaksak mo ang isang drive mula sa makinang Linux at nag-aalok ang Finder na burahin ito. Narito kung bakit, at kung paano ito basahin sa halip.",
+      "sections": [
+        {
+          "heading": "Bakit hindi mabasa ng Mac ang drive",
+          "paragraphs": [
+            "May file system ang bawat drive: ang ayos na nagtatala kung saan nagsisimula ang bawat file, ano ang pangalan nito, at aling bahagi ng disk ang bakante pa. NTFS ang gamit ng Windows. APFS ang gamit ng macOS. Karaniwang ext4 ang gamit ng Linux, at kung minsan ay btrfs o XFS.",
+            "Karaniwan lang ang mga file mismo. Ang naiiba ay ang talaan sa harap ng mga ito, at ang computer na hindi makabasa ng talaang iyon ay walang paraan para makakita ng anuman, kahit naroon pa rin ang lahat."
+          ]
+        },
+        {
+          "heading": "Ano ang nangyayari kapag isinaksak mo ito sa Mac",
+          "paragraphs": [
+            "Sinasabi ng Finder na hindi mabasa ang disk at nag-aalok itong burahin. Iisang mensahe rin ang ibinibigay ng macOS para sa walang lamang disk at para sa disk na nagsisimula nang masira, kaya walang paraan mula sa mensahe para malaman mong maayos ang drive.",
+            "Sinusuportahan ng macOS ang sarili nitong mga file system at ilang karaniwan gaya ng exFAT. Wala rito ang mga file system ng Linux, kaya para sa macOS ay mukhang walang lamang disk ang isang ext4 drive."
+          ]
+        },
+        {
+          "heading": "Paano ito binabasa ng Lukotta",
+          "paragraphs": [
+            "Nagpapatakbo ang Lukotta ng maliit na Linux system sa likuran at ibinibigay dito ang drive. Kusang binabasa ng Linux ang ext4, btrfs at XFS, kaya bumubukas doon ang drive nang walang anumang pagbabago, at ipinapasa ito ng Lukotta sa Finder.",
+            "Walang naisusulat sa drive, at gumagana ito gaya ng dati kapag bumalik sa makinang Linux."
+          ]
+        },
+        {
+          "heading": "Ano ang binabasa ng Lukotta",
+          "paragraphs": [
+            "ext2, ext3 at ext4, na sumasaklaw sa karamihan ng mga Linux system. btrfs, ang nakatakda sa Fedora at openSUSE. XFS, karaniwan sa mga server.",
+            "Naka-encrypt man o hindi. Kung inayos ang drive gamit ang LVM, na humahati ng isang pisikal na drive sa ilang volume, sabay-sabay itong bumubukas sa halip na isa-isa."
+          ]
+        },
+        {
+          "heading": "Pagbukas ng drive",
+          "list": [
+            "Isaksak ang drive. Inililista ng Lukotta ang laman nito.",
+            "Kung naka-encrypt ito, i-type ang passphrase.",
+            "Lumilitaw ang drive sa Finder, sa ilalim ng Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Kung humihingi ito ng passphrase",
+          "paragraphs": [
+            "Ang LUKS ang paraan ng Linux para i-encrypt ang isang buong drive. Kung humihingi ng passphrase ang makinang pinagmulan ng drive na ito sa simula pa lang ng pag-andar, bago pa ang login screen, iyon ang LUKS, at iyon ang passphrase na iti-type dito.",
+            "Hiwalay ito sa password sa pag-log in, kahit pareho ang inilalagay ng marami sa dalawa."
+          ]
+        },
+        {
+          "heading": "Mga drive na hindi bubukas",
+          "paragraphs": [
+            "Maaaring iayos ang isang LUKS drive na nasa ibang lugar ang header nito, sa ibang disk o sa isang USB stick. Ang header ang bahaging naglalarawan ng encryption. Kung wala ito, wala nang mabubuksan sa drive.",
+            "Kayang itali rin ng mas bagong instalasyon ng Ubuntu ang key sa isang chip sa loob ng makina, gaya ng ginagawa ng BitLocker. Ang mga drive na iyon ay bumubukas lamang sa computer na pinagmulan nila."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "magsulat-sa-ntfs-drive-sa-mac",
+      "title": "Magsulat sa NTFS drive sa Mac",
+      "description": "Read-only ang pagbubukas ng macOS sa mga NTFS drive, kaya nakakalabas ang mga file pero hindi nakakapasok. Narito kung bakit, at kung paano magsulat sa NTFS drive.",
+      "lead": "Pinapayagan ka ng macOS na kumopya ng mga file mula sa NTFS drive pero hindi papunta rito. Narito kung bakit, at kung ano ang magagawa tungkol dito.",
+      "sections": [
+        {
+          "heading": "Ano ang NTFS",
+          "paragraphs": [
+            "Ang NTFS ang file system na gamit ng Windows, para sa sarili nitong drive at para rin sa mga panlabas na drive na na-format sa computer na Windows. Karaniwang NTFS ang USB drive na na-format sa makinang Windows.",
+            "Ang isa pang karaniwan ay ang exFAT, na gamit ng karamihan sa mga memory card at ng maraming USB stick dahil kayang sulatan ito ng Windows at ng macOS. Kung exFAT ang drive mo, kaya na ito ng macOS at wala rito ang tumutukoy sa iyo. Para tingnan, i-click ang drive sa Finder at piliin ang File, saka ang Get Info. Sinasabi ito ng linyang Format."
+          ]
+        },
+        {
+          "heading": "Ano ang nangyayari kapag isinaksak mo ito sa Mac",
+          "paragraphs": [
+            "Lumilitaw ang drive sa Finder at nakikita mo ang mga file. Karaniwan lang ang pagkopya ng mga file mula rito. Ang pagkopya ng anuman papunta rito ay hindi: tumatanggi ang Finder, at kumikilos ang drive na para bang naka-lock.",
+            "Read-only ang pagbubukas ng macOS sa mga NTFS drive. Kaya na nitong magsulat ng NTFS nang maraming taon, pero nakapatay ito at walang sinusuportahang paraan para buksan. Mas mahirap magsulat ng NTFS kaysa basahin ito, at ang isang pagkakamali ay maaaring mag-iwan ng drive na ayaw nang buksan ng Windows pagkatapos."
+          ]
+        },
+        {
+          "heading": "Paano ito sinusulatan ng Lukotta",
+          "paragraphs": [
+            "Binubuksan ng Lukotta ang drive gamit ang NTFS driver mula sa Linux, na nakakapagsulat at ginagamit ng mga makinang Linux araw-araw. Ibinibigay ang drive sa Finder pagkatapos, kaya ang pagkopya ng mga file papunta rito ay gaya ng kahit anong ibang pagkopya.",
+            "Nananatiling NTFS ang drive, at nababasa ito ng Windows pagkatapos."
+          ]
+        },
+        {
+          "heading": "Pagbukas ng drive",
+          "list": [
+            "Isaksak ang drive. Inililista ito ng Lukotta.",
+            "I-click ito.",
+            "Lumilitaw ito sa Finder, sa ilalim ng Locations, at nakokopya ang mga file sa magkabilang direksyon."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Karaniwang walang password ang NTFS drive, kaya walang iti-type, maliban kung binuksan din dito ang BitLocker."
+          ]
+        },
+        {
+          "heading": "Mga drive na hindi maayos na isinara ng Windows",
+          "paragraphs": [
+            "Minamarkahan ng Windows ang drive bilang hindi maayos na naisara kapag naputol ang pagsusulat, karaniwan dahil hinugot ang drive o nawalan ng kuryente ang makina sa kalagitnaan. Binabalaan ng markang iyon ang susunod na computer na magbubukas nito na maaaring kalahati lang ang naisulat sa drive at dapat itong suriin.",
+            "Nag-iiwan ang Fast Startup ng parehong marka kahit walang nangyaring mali. Nakabukas ito sa Windows 10 at 11 mula pa sa simula. Sa halip na patayin ang makina, hini-hibernate nito, kaya mukhang ginagamit pa rin ang drive.",
+            "Tinatanggihan ng macOS ang drive sa dalawang kalagayang ito at hindi nagbibigay ng dahilan. Binubuksan ito ng Lukotta.",
+            "Kung nasa iyo pa ang makinang Windows, ang mas malinis na solusyon ay isaksak muli rito ang drive at isara nang maayos ang makinang iyon: pindutin nang matagal ang Shift habang kini-click ang Shut down, nilalaktawan nito ang Fast Startup."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "buksan-ang-vmdk-vdi-vhd-file-sa-mac",
+      "title": "Buksan ang VMDK, VDI o VHD file sa Mac",
+      "description": "Magbukas ng VMDK, VDI, VHD o qcow2 file sa Mac at kumopya ng mga file mula rito, nang hindi nag-i-install ng VMware o VirtualBox at hindi pinapaandar ang makina.",
+      "lead": "Iniingatan ng isang virtual machine ang buong disk nito sa loob ng iisang file. Mabubuksan mo ang file na iyon sa Mac at makakakuha ka ng laman nito nang hindi kailanman pinapaandar ang makina.",
+      "sections": [
+        {
+          "heading": "Ano ang disk image",
+          "paragraphs": [
+            "Kapag nagpapatakbo ka ng virtual machine, ang hard disk ng makinang iyon ay iisang karaniwang file na nasa Mac mo. Ang operating system nito, ang mga programa nito at ang bawat dokumento sa loob nito ay pawang nasa loob ng iisang file na iyon.",
+            "Sarili nitong paraan ang pagsusulat ng bawat programa sa file na iyon. VMDK ang gamit ng VMware, VDI ang gamit ng VirtualBox, VHD at VHDX ang gamit ng Hyper-V, at qcow2 ang gamit ng QEMU at UTM. Ang raw image, na karaniwang nagtatapos sa .img, ay tuwirang kopya ng isang disk na walang anumang nakabalot dito."
+          ]
+        },
+        {
+          "heading": "Bakit magulo ang pagkuha ng file mula rito",
+          "paragraphs": [
+            "Ang karaniwang daan ay paandarin ang virtual machine, hintaying umangat, hanapin ang file sa loob nito at kopyahin palabas. Ibig sabihin ay kailangan pa ring gumana ang makina, at kailangan pa ring naka-install ang programang nagpapaandar nito.",
+            "Wala ring saysay ang Finder dito. Walang nangyayari kapag nag-double click ka sa isang VMDK, dahil hindi alam ng macOS kung ano ang laman nito."
+          ]
+        },
+        {
+          "heading": "Paano ito binubuksan ng Lukotta",
+          "paragraphs": [
+            "Tuwirang binabasa ng Lukotta ang image. Inaalam nito kung anong format ang file, hinahanap ang disk sa loob nito, at binubuksan ito sa maliit na Linux system na pinapatakbo nito sa likuran. Lumilitaw ang laman nito sa Finder bilang karaniwang disk.",
+            "Nananatiling patay ang virtual machine. Hindi kailangang naka-install ang VMware at ang VirtualBox, at hindi nagbabago ang file kapag binuksan."
+          ]
+        },
+        {
+          "heading": "Anong mga file ang binubuksan ng Lukotta",
+          "list": [
+            "qcow2, mula sa QEMU at UTM.",
+            "VMDK, mula sa VMware.",
+            "VDI, mula sa VirtualBox.",
+            "VHD at VHDX, mula sa Hyper-V.",
+            "Mga raw image, na karaniwang nagtatapos sa .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Pagbukas ng isa",
+          "list": [
+            "Piliin ang File, saka ang Magbukas ng Disk Image, at hanapin ang file.",
+            "Kung naka-encrypt ang disk sa loob, i-type ang password o ang passphrase.",
+            "Lumilitaw ang laman sa Finder, sa ilalim ng Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Madalas na maraming drive ang nasa isang file",
+          "paragraphs": [
+            "Karaniwang may mahigit isang partition ang isang disk image: isang maliit na boot partition, ang pangunahing kinalalagyan ng lahat, at kung minsan ay isang recovery partition. Inililista ang mga ito ng Lukotta at binubuksan mo ang kailangan mo, gaya ng pagpili mo ng drive."
+          ]
+        },
+        {
+          "heading": "Pagkopya ng mga file papasok sa image",
+          "paragraphs": [
+            "Karaniwan ang pagkakasulat ng qcow2 at ligtas itong sulatan.",
+            "Nasusulatan ang VMDK, VDI at VHD, pero bago pa ang gawaing iyon at hindi pa sapat ang tagal ng paggamit para pagkatiwalaan ng bagay na hindi mo kayang mawala. Kopyahin ang file at doon magtrabaho sa kopya, o buksan ito nang read-only at kunin na lang ang mga file.",
+            "Read-only ang pagbubukas ng VHDX, gayundin ang uri ng VMDK na nasa loob ng OVA file. Isang daan lang ang pagkakasulat sa uring iyon at hindi na ito mababago sa kinalalagyan nito pagkatapos."
+          ]
+        },
+        {
+          "heading": "Mga file na hindi bubukas",
+          "paragraphs": [
+            "Bumubukas lamang ang image kung buo ito nang mag-isa.",
+            "Kinakalat ng snapshot chain ng VMware ang kasalukuyang kalagayan ng makina sa isang orihinal na file at sa serye ng mas maliliit na nagtatala kung ano ang nagbago pagkatapos nito. Hinahati ng split disk ang isang image sa maraming piraso. Ang differencing disk ng Hyper-V ay naglalaman lamang ng pagkakaiba mula sa ibang file.",
+            "Sa bawat isa sa mga ito ay bahagi ng isang set ang file na nasa iyo, at isang file lang ang binubuksan ng Lukotta sa bawat pagkakataon."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Higit pa tungkol sa mga BitLocker drive, at kung ano ang gagawin kapag nawala ang password",
+    "ntfs": "Higit pa tungkol sa mga NTFS drive, pati ang hindi maayos na naisara ng Windows",
+    "linux": "Higit pa tungkol sa mga Linux drive at sa LUKS encryption",
+    "disk-images": "Higit pa tungkol sa mga disk image, at kung alin ang masusulatan"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

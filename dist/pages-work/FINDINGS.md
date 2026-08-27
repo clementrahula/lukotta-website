@@ -156,3 +156,19 @@ application the second. The task pages follow the site.
 `how.lead` and `features.body2` say **disk**; `faq.2.a` and `faq.3.a` say
 **sürücü**. The task pages use disk for the object the reader is holding and
 keep sürücü out of it. The landing page should settle on one.
+
+## id — "berkas" in the prose, "file" in the search strings
+
+The landing page uses **berkas** throughout and the task pages keep that in the
+body. The titles, descriptions and addresses use **file**, because those are
+written for search rather than translated, and file is what an Indonesian
+reader types. Flagging the split so it is a decision rather than an oversight.
+
+Separately the site says **hanya-baca** where the application says
+**Baca-Saja** for read-only.
+
+## fil — a third translated sidebar name
+
+`how.3.body` says **Mga Lokasyon**. macOS is not offered in Filipino, so the
+sidebar reads *Locations* on the reader's screen. Same fix as Latvian and
+Slovenian. The task pages keep the English.
