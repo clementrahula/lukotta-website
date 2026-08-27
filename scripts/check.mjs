@@ -395,7 +395,10 @@ for (const { code, slug, loc, dir } of taskPages) {
   const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] || "";
   if (title.length < 20 || title.length > 70) warn(`${dir}/ title is ${title.length} characters.`);
   if (desc.length < 70 || desc.length > 160) warn(`${dir}/ description is ${desc.length} characters.`);
-  if (!html.includes('"@type": "BreadcrumbList"')) err(`${dir}/ carries no breadcrumbs.`);
+  /* No breadcrumb check. The trail was one step, "Lukotta", above a heading
+     that already said where the reader was, and the header says it too. A
+     BreadcrumbList describing a trail the page does not show is a claim to a
+     search engine that the page does not back up, so both went together. */
   if (!html.includes('"@type": "TechArticle"')) err(`${dir}/ carries no article markup.`);
   if (!html.includes("__CSP__") === false) err(`${dir}/ still carries the __CSP__ placeholder.`);
   if (!html.includes('<html lang="' + code + '"')) err(`${dir}/ does not declare lang="${code}".`);

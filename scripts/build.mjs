@@ -7,7 +7,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { renderPage, renderTaskPage, FORMATS, REQUIREMENTS } from "../src/page.mjs";
+import { renderPage, renderTaskPage, renderNotFound, FORMATS, REQUIREMENTS } from "../src/page.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = join(ROOT, "src");
@@ -340,7 +340,7 @@ function landingMarkdown({ lang, t, canonical, taskPages }) {
   }
 
   if (taskPages) {
-    line.push("## Pages about one task each", "");
+    line.push("## Guides", "");
     for (const key of taskPages.order) {
       const page = taskPages.pages[key];
       const href = `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${page.slug}/`;
@@ -605,7 +605,7 @@ Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMEN
 
 ## About and contact
 
-- [About Lukotta](${cfg.domain}/about/): who writes it, what it costs, and what it does with your data
+- [About Lukotta](${cfg.domain}/about/): who writes it, what it costs, and why nothing leaves your Mac
 - [Contact](${cfg.domain}/contact/): how to report a bug or a security problem, and how long a reply takes
 
 ## When to use this
@@ -750,68 +750,31 @@ writeFileSync(join(OUT, ".nojekyll"), "", "utf8");
 writeFileSync(join(OUT, "CNAME"), `${new URL(cfg.domain).hostname}\n`, "utf8");
 
 /* 404 page.
-   
+
    GitHub Pages serves this with a real 404 status, which is the part that
    matters most: an app shell returned as 200 teaches an agent that every path
-   on the site exists. The body then has to be worth reading. A person who
-   mistypes an address wants a way back; an agent that follows a stale link
-   wants to know where the map is, and will not go looking for a sitemap it has
-   not been told about. So this page names the three things worth fetching next
-   and links the sections of the site by hand.
-   
-   It is deliberately small and free of the header and footer: it is the one
-   page whose whole job is to be read in a single glance, by either kind of
-   reader. */
+   on the site exists. The body then has to be worth reading, for a person who
+   mistyped an address and for an agent that followed a stale link. The markup
+   lives in page.mjs with every other page. */
 const notFoundLinks = [
-  ["/", "Home page: what Lukotta is, what it opens, and how to install it"],
-  ["/sitemap.xml", "Sitemap: every page on this site, in all 37 languages"],
-  ["/llms.txt", "llms.txt: the whole site as plain text, including when to use it"],
-  ["/about/", "About: who writes Lukotta, what it costs, and what it does with your data"],
-  ["/contact/", "Contact: how to report a bug or a security problem"],
+  ["/", "Home page", "what Lukotta is, what it opens, and how to install it"],
+  ["/about/", "About", "who writes Lukotta, what it costs, and why nothing leaves your Mac"],
+  ["/contact/", "Contact", "how to report a bug or a security problem"],
+  ["/sitemap.xml", "Sitemap", "every page on this site, in all 37 languages"],
+  ["/llms.txt", "llms.txt", "the whole site as plain text, including when to use it"],
 ];
-
-const notFoundTasks = taskPageList;
 
 writeFileSync(
   join(OUT, "404.html"),
-  `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Lukotta</title>
-<meta name="robots" content="noindex">
-<meta name="description" content="That address does not exist on lukotta.com. The sitemap lists every page; llms.txt carries the whole site as plain text.">
-<link rel="stylesheet" href="/${CSS}">
-<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
-<script>(function(){try{var c=localStorage.getItem("lukotta-theme")||"auto";var d=c==="dark"||(c==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",d?"dark":"light")}catch(e){}})();</script>
-</head>
-<body>
-<main>
-<section class="hero"><div class="wrap"><div class="hero-inner">
-<h1>Page not found</h1>
-<p class="hero-sub">That address does not exist on lukotta.com. Nothing has moved; the address is simply not one this site has.</p>
-
-<h2>Where to look instead</h2>
-<ul>
-${notFoundLinks.map(([href, what]) => `<li><a href="${href}">${href}</a> — ${what}</li>`).join("\n")}
-</ul>
-
-${notFoundTasks.length ? `<h2>Pages about one task each</h2>
-<ul>
-${notFoundTasks.map(([href, title]) => `<li><a href="${href}">${href}</a> — ${title}</li>`).join("\n")}
-</ul>` : ""}
-
-<p>Lukotta is a free and open-source macOS application that opens BitLocker,
-NTFS, LUKS, Linux and virtual-machine disks which macOS cannot read by itself.
-The source is at <a href="https://github.com/clementrahula/lukotta">github.com/clementrahula/lukotta</a>.</p>
-
-<div class="hero-actions"><a class="btn btn-primary" href="/">Go to the home page</a></div>
-</div></div></section>
-</main>
-</body>
-</html>
-`,
+  withPolicy(renderNotFound({
+    lang: buildable.find((l) => l.code === cfg.defaultLang),
+    cfg,
+    t: translator(cfg.defaultLang, english, null),
+    buildable,
+    assets: { css: CSS, js: JS },
+    links: notFoundLinks,
+    tasks: taskPageList.map(([href, title]) => [href, title]),
+  })),
   "utf8"
 );
 

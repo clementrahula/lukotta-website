@@ -1,11 +1,14 @@
 {
   "$comment": "Two pages that are about the project and the person behind it rather than about a drive. English only, on purpose: they say who publishes this software, and a machine translation of that claim is worth less than none. They are rendered with the same machinery as the task pages, and they are the pages an agent looks for when deciding whether a small application from an unknown name can be recommended to somebody.",
-  "order": ["about", "contact"],
+  "order": [
+    "about",
+    "contact"
+  ],
   "pages": {
     "about": {
       "slug": "about",
       "title": "About Lukotta",
-      "description": "Who makes Lukotta, why it exists, how it is licensed, and what it does with your data. One person, free software, no account and no tracking.",
+      "description": "Who writes Lukotta, why it exists, what it costs, and why nothing it does ever leaves your Mac. One person, free software, no account, no tracking.",
       "lead": "Lukotta opens drives and disk images that macOS refuses to read. It is free software, it is written by one person, and this page says who and why.",
       "sections": [
         {
@@ -36,7 +39,7 @@
           ]
         },
         {
-          "heading": "What it does with your data",
+          "heading": "Nothing leaves your Mac",
           "paragraphs": [
             "Nothing leaves your Mac. Lukotta has no analytics, no telemetry and no crash reporting. It does not ask you to sign in, because there is nothing to sign in to.",
             "It makes two kinds of network request, both of which you can see in the source: it checks for a new version, and it downloads one if you ask it to. Passwords and recovery keys are used to unlock the drive in front of you and are not stored, transmitted or logged."

@@ -970,7 +970,4 @@ tbody tr:not(.group) th code { color: var(--ink); }
   border-radius: 6px; overflow-x: auto;
   font-family: var(--font-mono); font-size: .875rem;
 }
-.task .crumbs { margin-bottom: 18px; font-size: .875rem; }
-.task .crumbs a { color: var(--ink-3); }
-.task .crumbs a:hover { color: var(--amber-ink); }
 .task-cta .lead { max-width: 52ch; }

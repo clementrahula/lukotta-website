@@ -11,6 +11,23 @@
    again. Not the anchors, and not the language links -- those are this site. */
 const away = ' target="_blank" rel="noopener noreferrer"';
 
+/* The pages are written as plain strings, which keeps the content files
+   readable and keeps markup out of a translator's way. It also means an address
+   the prose names arrives as text, and on the contact page the one thing a
+   reader wants to click is the one thing they cannot.
+   
+   So this runs after esc(), never before: the input is already escaped, and
+   what it inserts is built from matches of a deliberately narrow pattern. Two
+   things are linked and nothing else, because "anything that looks like a
+   domain" also catches SECURITY.md and .img. */
+const autolink = (escaped) =>
+  escaped
+    .replace(/\bgithub\.com\/[A-Za-z0-9._\/-]*[A-Za-z0-9_\/-]/g,
+             (m) => `<a href="https://${m}">${m}</a>`)
+    .replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
+             (m) => `<a href="mailto:${m}">${m}</a>`);
+
+
 const esc = (s) =>
   String(s)
     .replace(/&/g, "&amp;")
@@ -621,7 +638,7 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
     for (const para of s.paragraphs || []) {
       out.push(para.startsWith("    ")
         ? `        <pre class="sample"><code>${esc(para.trim())}</code></pre>`
-        : `        <p>${esc(para)}</p>`);
+        : `        <p>${autolink(esc(para))}</p>`);
     }
     if (s.list) {
       const tag = s.listKind === "steps" ? "ol" : "ul";
@@ -632,16 +649,6 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
     return out.join("\n");
   };
 
-  /* Breadcrumbs, because a page two levels in should say where it sits, and
-     because it is the one structured type that reliably shows in a result. */
-  const crumbs = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Lukotta", item: `${cfg.domain}${lang.path ? `/${lang.path}/` : "/"}` },
-      { "@type": "ListItem", position: 2, name: page.title, item: canonical },
-    ],
-  };
 
   /* TechArticle rather than HowTo: Google withdrew HowTo results in 2023, and
      claiming a type whose rich result no longer exists gains nothing. */
@@ -728,9 +735,6 @@ ${siteHeader({ t, A, home, icons, native, langLinks })}
     <article class="task">
       <section class="hero">
         <div class="wrap">
-          <nav class="crumbs" aria-label="${esc(t("ui.menu"))}">
-            <a href="${home}">Lukotta</a>
-          </nav>
           <h1>${esc(page.title)}</h1>
           <p class="lead">${esc(page.lead)}</p>
 ${page.sections.map(section).join("\n")}
@@ -769,10 +773,112 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
        that truncates a response actually gets: three blocks of JSON-LD in front
        of the content push the first heading past the point where some agents
        stop reading. An audit of this site found exactly that. -->
-  <script type="application/ld+json">${jsonld(crumbs)}</script>
   <script type="application/ld+json">${jsonld(article)}</script>
 
   <script src="${assetPrefix}${assets.js}" defer></script>
+</body>
+</html>
+`;
+}
+
+/* ------------------------------------------------------------ not found -- */
+
+/* The 404.
+   
+   It used to be a bare string written by the build script, with no classes on
+   anything, so the headings had no spacing and the list had no bullets. It is
+   a page of this site like any other now: the real header, the real footer,
+   and the same .sub headings and .task-points lists the task pages use.
+   
+   What it says is aimed at two readers at once. A person who mistyped an
+   address wants one obvious way back, which is the button. An agent that
+   followed a stale link wants to know where the map is, and will not go
+   looking for a sitemap it has not been told about, so the three places worth
+   fetching next are named and linked. The link text is the name of the thing
+   rather than the raw path, because the path is in the href where a machine
+   reads it, and "/sitemap.xml" as visible text only ever looked like a
+   directory listing. */
+export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks }) {
+  const A = (name) => `assets/${name}`;
+  const code = lang.code;
+  const icons = { sunIcon, moonIcon, globeIcon };
+
+  const langLinks = buildable
+    .map((l) => {
+      const href = l.path ? `/${l.path}/` : "/";
+      const current = l.code === code ? ` aria-current="true"` : "";
+      return `            <li><a href="${href}" hreflang="${l.code}" lang="${l.code}"${current}>${esc(l.native)}</a></li>`;
+    })
+    .join("\n");
+
+  const copyright = esc(t("footer.copyright"))
+    .replace("{copyleft}", '<span class="copyleft">©</span>')
+    .split("{author}");
+  const authorLink = `<a href="${cfg.authorUrl}"${away}>${esc(cfg.authorName)}</a>`;
+
+  const list = (items) => `          <ul class="task-points">
+${items.map(([href, name, what]) =>
+  `            <li><a class="plain" href="${href}">${esc(name)}</a>${what ? ` — ${esc(what)}` : ""}</li>`).join("\n")}
+          </ul>`;
+
+  return `<!doctype html>
+<html lang="${code}" dir="${lang.dir || "ltr"}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="__CSP__">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Page not found — Lukotta</title>
+  <meta name="description" content="That address does not exist on lukotta.com. The sitemap lists every page in all 37 languages, and llms.txt carries the whole site as plain text.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/${A("favicon-32.png")}" sizes="32x32" type="image/png">
+  <link rel="icon" href="/${A("favicon-16.png")}" sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="/${assets.css}">
+
+  <script data-cfasync="false">
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var c = localStorage.getItem("lukotta-theme");
+        var d = c === "dark" || (c !== "light" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.setAttribute("data-theme", d ? "dark" : "light");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <span id="top"></span>
+  <a class="skip-link" href="#main">${esc(t("ui.skipToContent"))}</a>
+
+${siteHeader({ t, A: (n) => `/${A(n)}`, home: "/", icons, native: lang.native, langLinks })}
+
+  <main id="main">
+    <article class="task">
+      <section class="hero">
+        <div class="wrap">
+          <h1>Page not found</h1>
+          <p class="lead">That address does not exist on lukotta.com.</p>
+
+          <h2 class="sub">Where to look instead</h2>
+${list(links)}
+
+          <h2 class="sub">Guides</h2>
+${list(tasks)}
+
+          <p class="hero-actions"><a class="btn" href="/">Homepage</a></p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+${siteFooter({ t, cfg, away, copyright, authorLink })}
+
+  <script src="/${assets.js}" defer></script>
 </body>
 </html>
 `;
