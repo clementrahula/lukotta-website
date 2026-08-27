@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "tr": "Sayfa metni Creative Commons Attribution-ShareAlike 4.0 lisansı altındadır."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "tr": "Sayfa bulunamadı"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "tr": "Bu adres lukotta.com üzerinde yok. Site haritası her sayfayı sayar, llms.txt ise tüm siteyi düz metin olarak taşır."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "tr": "Bu adres lukotta.com üzerinde yok."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "tr": "Bunun yerine nereye bakmalı"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "tr": "Kılavuzlar"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "tr": "Ana sayfa"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "tr": "Ana sayfa"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "tr": "Lukotta nedir ve nasıl kurulur"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "tr": "Hakkında"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "tr": "Lukotta uygulamasını kimin sürdürdüğü"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "tr": "İletişim"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "tr": "bir hatanın nasıl bildirileceği"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "tr": "Site haritası"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "tr": "bu sitedeki her sayfa"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "tr": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "tr": "tüm site düz metin olarak"
     }
   }
 }

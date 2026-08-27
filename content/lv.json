@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "lv": "Lapas teksts saskaņā ar Creative Commons Attribution-ShareAlike 4.0 licenci."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "lv": "Lapa nav atrasta"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "lv": "Šādas adreses vietnē lukotta.com nav. Vietnes karte nosauc katru lapu, un llms.txt satur visu vietni kā vienkāršu tekstu."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "lv": "Šādas adreses vietnē lukotta.com nav."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "lv": "Kur skatīties tā vietā"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "lv": "Pamācības"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "lv": "Sākumlapa"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "lv": "Sākumlapa"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "lv": "kas ir Lukotta un kā to uzstādīt"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "lv": "Par lietotni"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "lv": "kas uztur lietotni Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "lv": "Kontakti"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "lv": "kā ziņot par kļūdu"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "lv": "Vietnes karte"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "lv": "katra šīs vietnes lapa"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "lv": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "lv": "visa vietne kā vienkāršs teksts"
     }
   }
 }

@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "lv",
+    "name": "Latvian",
+    "native": "Latviešu",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "par-lietotni",
+      "title": "Par lietotni Lukotta",
+      "description": "Lukotta ir bezmaksas atvērtā koda macOS lietotne, kas atver BitLocker, NTFS un Linux diskus, ar licenci GNU General Public License.",
+      "lead": "Lukotta atver diskus un disku attēlus, ko macOS nespēj nolasīt. Tā ir bez maksas, ar atvērtu kodu, un to uztur viens cilvēks.",
+      "sections": [
+        {
+          "heading": "Kas tā ir",
+          "paragraphs": [
+            "Lukotta ir macOS lietotne. Tā atver BitLocker, NTFS, LUKS, ext4, btrfs un XFS diskus, kā arī virtuālo mašīnu disku attēlus formātos qcow2, VMDK, VDI, VHD un VHDX. macOS nevienu no tiem pats nelasa. NTFS tas lasa, bet tajā neraksta.",
+            "Tā fonā palaiž nelielu Linux sistēmu, atver disku tur un nodod to Finder. Linux šos formātus lasa jau gadiem. Disks netiek ne pārveidots, ne kopēts. Tas paliek tāds, kāds bija, un dators, no kura tas nāk, to lasa arī turpmāk."
+          ]
+        },
+        {
+          "heading": "Kas to uztur",
+          "paragraphs": [
+            "[Viens vienīgs izstrādātājs](https://rahula.dev). Nav uzņēmuma, nav ieguldītāju un nav komandas."
+          ]
+        },
+        {
+          "heading": "Kāpēc tā ir",
+          "paragraphs": [
+            "Pievienojiet BitLocker disku Mac datoram, un Finder piedāvā to izdzēst. Tas neprasa paroli, un nekas ekrānā nerāda, ka disks ir bloķēts, nevis bojāts.",
+            "Likās bezjēdzīgi, ka mūsdienās nav praktiska veida, kā šifrētu USB disku lietot vairākās operētājsistēmās, tāpēc risinājums bija jāuzbūvē.",
+            "Linux ekosistēmā jau bija rīki, kas prata lasīt tos diskus. Lukotta savieno tos ar Mac saskarni."
+          ]
+        },
+        {
+          "heading": "Cik tas maksā",
+          "paragraphs": [
+            "Neko. Nav maksas versijas, nav abonementa, nav izmēģinājuma un nav konta.",
+            "Lukotta ir brīvā programmatūra ar licenci GNU General Public License, versija 3 vai jaunāka. Pirmkods ir publicēts. Ikviens to drīkst lasīt, mainīt un nodot tālāk ar to pašu licenci."
+          ]
+        },
+        {
+          "heading": "No jūsu Mac datora nekas neaiziet",
+          "paragraphs": [
+            "Lietotnē Lukotta nav analītikas, nav telemetrijas un nav avāriju ziņojumu.",
+            "Tā veic vienu veidu tīkla pieprasījumu: pārbauda, vai ir jauna versija, un lejupielādē to, ja to lūdzat. Paroles un atkopšanas atslēgas kalpo diska atbloķēšanai un netiek glabātas, sūtītas vai reģistrētas."
+          ]
+        },
+        {
+          "heading": "Pirmkods",
+          "paragraphs": [
+            "Lietotnes pirmkods ir vietnē github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontakti",
+      "title": "Kontakti",
+      "description": "Kā ziņot par kļūdu lietotnē Lukotta, uzdot jautājumu vai ziņot par drošības problēmu. GitHub issue tiek lasīti vispirms.",
+      "lead": "Kļūdas iet uz GitHub. Drošības problēmas iet uz adresi, kas norādīta SECURITY.md. Viss pārējais iet pa e-pastu.",
+      "sections": [
+        {
+          "heading": "Kļūda vai disks, kas neatveras",
+          "paragraphs": [
+            "Atveriet issue vietnē github.com/clementrahula/lukotta/issues. Issue tiek lasīti vispirms un ir publiski, tāpēc nākamais cilvēks ar to pašu disku atrod atbildi.",
+            "Pasakiet, kāds disks tas ir, ko Lukotta parādīja un ko jūs gaidījāt. Kļūdu citējiet precīzi. Nekad neielīmējiet issue paroli vai atkopšanas atslēgu."
+          ]
+        },
+        {
+          "heading": "Drošības problēma",
+          "paragraphs": [
+            "Neatveriet publisku issue. SECURITY.md krātuvē norāda, kurp to sūtīt un ko gaidīt."
+          ]
+        },
+        {
+          "heading": "Viss pārējais",
+          "paragraphs": [
+            "Rakstiet uz contact_web@lukotta.com ar jautājumiem par lietotni."
+          ]
+        },
+        {
+          "heading": "Cik ilgi jāgaida atbilde",
+          "paragraphs": [
+            "Lietotni Lukotta uztur viens cilvēks. Nav atbalsta dienesta un nav solīta atbildes termiņa. Dažas vēstules aizņem laiku, un dažas paliek bez atbildes.",
+            "Issue vietnē GitHub parasti ir ātrāks, jo kāds cits var atbildēt pirmais."
+          ]
+        }
+      ]
+    }
+  }
+}

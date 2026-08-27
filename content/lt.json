@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "lt": "Puslapio tekstas pagal Creative Commons Attribution-ShareAlike 4.0 licenciją."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "lt": "Puslapis nerastas"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "lt": "Tokio adreso svetainėje lukotta.com nėra. Svetainės žemėlapyje išvardytas kiekvienas puslapis, o llms.txt turi visą svetainę paprastu tekstu."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "lt": "Tokio adreso svetainėje lukotta.com nėra."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "lt": "Kur pažiūrėti vietoj to"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "lt": "Vadovai"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "lt": "Pradžios puslapis"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "lt": "Pradžios puslapis"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "lt": "kas yra Lukotta ir kaip ją įdiegti"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "lt": "Apie programą"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "lt": "kas prižiūri programą Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "lt": "Kontaktai"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "lt": "kaip pranešti apie klaidą"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "lt": "Svetainės žemėlapis"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "lt": "kiekvienas šios svetainės puslapis"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "lt": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "lt": "visa svetainė paprastu tekstu"
     }
   }
 }
