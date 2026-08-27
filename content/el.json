@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "el": "Το κείμενο της σελίδας υπό την άδεια Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "el": "Η σελίδα δεν βρέθηκε"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "el": "Αυτή η διεύθυνση δεν υπάρχει στο lukotta.com. Ο χάρτης του ιστότοπου αναφέρει κάθε σελίδα, και το llms.txt περιέχει όλον τον ιστότοπο ως απλό κείμενο."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "el": "Αυτή η διεύθυνση δεν υπάρχει στο lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "el": "Πού να κοιτάξετε αντ' αυτού"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "el": "Οδηγοί"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "el": "Αρχική σελίδα"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "el": "Αρχική σελίδα"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "el": "τι είναι το Lukotta και πώς εγκαθίσταται"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "el": "Σχετικά"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "el": "ποιος συντηρεί το Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "el": "Επικοινωνία"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "el": "πώς αναφέρετε ένα σφάλμα"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "el": "Χάρτης ιστότοπου"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "el": "κάθε σελίδα αυτού του ιστότοπου"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "el": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "el": "όλος ο ιστότοπος ως απλό κείμενο"
     }
   }
 }

@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "sq": "Teksti i faqes nën licencën Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "sq": "Faqja nuk u gjet"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "sq": "Kjo adresë nuk ekziston në lukotta.com. Harta e sajtit emërton çdo faqe, dhe llms.txt përmban tërë sajtin si tekst i thjeshtë."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "sq": "Kjo adresë nuk ekziston në lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "sq": "Ku të shihni në vend të kësaj"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "sq": "Udhëzues"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "sq": "Faqja kryesore"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "sq": "Faqja kryesore"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "sq": "çfarë është Lukotta dhe si instalohet"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "sq": "Rreth"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "sq": "kush e mirëmban Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "sq": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "sq": "si të njoftohet një gabim"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "sq": "Harta e sajtit"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "sq": "çdo faqe e këtij sajti"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "sq": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "sq": "tërë sajti si tekst i thjeshtë"
     }
   }
 }

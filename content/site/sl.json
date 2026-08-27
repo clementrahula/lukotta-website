@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "sl",
+    "name": "Slovenian",
+    "native": "Slovenščina",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "o-aplikaciji",
+      "title": "O aplikaciji Lukotta",
+      "description": "Lukotta je brezplačna macOS aplikacija z odprto kodo, ki odpira diske BitLocker, NTFS in Linux, pod GNU General Public License.",
+      "lead": "Lukotta odpira diske in slike diska, ki jih macOS ne zna prebrati. Je brezplačna, odprtokodna in vzdržuje jo en sam človek.",
+      "sections": [
+        {
+          "heading": "Kaj je",
+          "paragraphs": [
+            "Lukotta je aplikacija za macOS. Odpira diske BitLocker, NTFS, LUKS, ext4, btrfs in XFS ter slike diska navideznih strojev v zapisih qcow2, VMDK, VDI, VHD in VHDX. macOS ne bere nobenega od njih sam. NTFS zna brati, ne pa pisati nanj.",
+            "V ozadju zažene majhen sistem Linux, tam odpre disk in ga izroči Finderju. Linux te zapise bere že leta. Disk se niti ne pretvori niti ne kopira. Ostane tak, kot je bil, in stroj, iz katerega je prišel, ga še naprej bere."
+          ]
+        },
+        {
+          "heading": "Kdo jo vzdržuje",
+          "paragraphs": [
+            "[En sam razvijalec](https://rahula.dev). Ni podjetja, ni vlagateljev in ni ekipe."
+          ]
+        },
+        {
+          "heading": "Zakaj obstaja",
+          "paragraphs": [
+            "Priključite disk BitLocker na Mac in Finder ponudi, da ga izbriše. Ne vpraša za geslo, in nič na zaslonu ne pokaže, da je disk zaklenjen in ne pokvarjen.",
+            "Zdelo se je nesmiselno, da dandanes ni praktičnega načina, da bi šifriran disk USB delili med več operacijskimi sistemi, zato je bilo treba zgraditi rešitev.",
+            "V ekosistemu Linux so že obstajala orodja, ki so znala brati te diske. Lukotta jih poveže z vmesnikom za Mac."
+          ]
+        },
+        {
+          "heading": "Koliko stane",
+          "paragraphs": [
+            "Nič. Ni plačljive različice, ni naročnine, ni preizkusnega obdobja in ni računa.",
+            "Lukotta je prosta programska oprema pod GNU General Public License, različica 3 ali novejša. Izvorna koda je objavljena. Vsakdo jo sme brati, spreminjati in predati naprej pod isto licenco."
+          ]
+        },
+        {
+          "heading": "Nič ne zapusti vašega Maca",
+          "paragraphs": [
+            "Lukotta nima analitike, nima telemetrije in nima poročil o sesutju.",
+            "Naredi eno vrsto omrežne zahteve: pogleda, ali je nova različica, in jo prenese, če to želite. Gesla in obnovitveni ključi služijo odklepanju diska in se ne shranjujejo, ne pošiljajo in ne beležijo."
+          ]
+        },
+        {
+          "heading": "Izvorna koda",
+          "paragraphs": [
+            "Izvorna koda aplikacije je na github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "stik",
+      "title": "Stik",
+      "description": "Kako prijaviti napako v aplikaciji Lukotta, postaviti vprašanje ali prijaviti varnostno težavo. Prijave na GitHubu se preberejo prve.",
+      "lead": "Napake gredo na GitHub. Varnostne težave gredo na naslov iz SECURITY.md. Vse drugo gre po e-pošti.",
+      "sections": [
+        {
+          "heading": "Napaka ali disk, ki se ne odpre",
+          "paragraphs": [
+            "Odprite prijavo na github.com/clementrahula/lukotta/issues. Prijave se preberejo prve in so javne, tako da naslednji človek z istim diskom najde odgovor.",
+            "Povejte, kateri disk je, kaj je Lukotta pokazala in kaj ste pričakovali. Napako navedite natanko. Nikoli ne prilepite gesla ali obnovitvenega ključa v prijavo."
+          ]
+        },
+        {
+          "heading": "Varnostna težava",
+          "paragraphs": [
+            "Ne odpirajte javne prijave. SECURITY.md v repozitoriju pove, kam jo poslati in kaj pričakovati."
+          ]
+        },
+        {
+          "heading": "Vse drugo",
+          "paragraphs": [
+            "Pišite na contact_web@lukotta.com z vprašanji o aplikaciji."
+          ]
+        },
+        {
+          "heading": "Kako dolgo traja odgovor",
+          "paragraphs": [
+            "Aplikacijo Lukotta vzdržuje en sam človek. Ni podpore in ni obljubljenega časa odgovora. Nekatera sporočila trajajo, nekatera pa ostanejo brez odgovora.",
+            "Prijava na GitHubu je običajno hitrejša, ker lahko kdo drug odgovori prej."
+          ]
+        }
+      ]
+    }
+  }
+}

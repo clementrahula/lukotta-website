@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "sl": "Besedilo strani pod licenco Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "sl": "Strani ni mogoče najti"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "sl": "Tega naslova na lukotta.com ni. Zemljevid strani navaja vsako stran, llms.txt pa vsebuje celotno mesto kot navadno besedilo."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "sl": "Tega naslova na lukotta.com ni."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "sl": "Kam pogledati namesto tega"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "sl": "Vodniki"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "sl": "Začetna stran"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "sl": "Začetna stran"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "sl": "kaj je Lukotta in kako se namesti"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "sl": "O aplikaciji"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "sl": "kdo vzdržuje aplikacijo Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "sl": "Stik"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "sl": "kako prijaviti napako"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "sl": "Zemljevid strani"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "sl": "vsaka stran tega mesta"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "sl": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "sl": "celotno mesto kot navadno besedilo"
     }
   }
 }

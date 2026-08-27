@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "bg": "Текстът на страницата е под лиценз Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "bg": "Страницата не е намерена"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "bg": "Този адрес не съществува в lukotta.com. Картата на сайта изброява всяка страница, а llms.txt съдържа целия сайт като обикновен текст."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "bg": "Този адрес не съществува в lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "bg": "Къде да погледнете вместо това"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "bg": "Ръководства"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "bg": "Начална страница"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "bg": "Начална страница"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "bg": "какво е Lukotta и как се инсталира"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "bg": "За приложението"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "bg": "кой поддържа Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "bg": "Контакт"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "bg": "как се съобщава за грешка"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "bg": "Карта на сайта"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "bg": "всяка страница в този сайт"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "bg": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "bg": "целият сайт като обикновен текст"
     }
   }
 }

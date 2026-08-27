@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "uk": "Текст сторінки за ліцензією Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "uk": "Сторінку не знайдено"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "uk": "Такої адреси на lukotta.com немає. Карта сайту перелічує кожну сторінку, а llms.txt містить увесь сайт простим текстом."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "uk": "Такої адреси на lukotta.com немає."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "uk": "Куди подивитися натомість"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "uk": "Посібники"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "uk": "Головна сторінка"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "uk": "Головна сторінка"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "uk": "що таке Lukotta і як її встановити"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "uk": "Про програму"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "uk": "хто супроводжує Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "uk": "Зв'язатися"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "uk": "як повідомити про помилку"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "uk": "Карта сайту"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "uk": "кожна сторінка цього сайту"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "uk": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "uk": "увесь сайт простим текстом"
     }
   }
 }

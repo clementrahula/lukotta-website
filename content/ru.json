@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "ru": "Текст страницы под лицензией Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "ru": "Страница не найдена"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "ru": "Такого адреса на lukotta.com нет. Карта сайта перечисляет каждую страницу, а llms.txt содержит весь сайт простым текстом."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "ru": "Такого адреса на lukotta.com нет."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "ru": "Куда посмотреть вместо этого"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "ru": "Руководства"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "ru": "Главная страница"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "ru": "Главная страница"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "ru": "что такое Lukotta и как её установить"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "ru": "О программе"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "ru": "кто сопровождает Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "ru": "Связаться"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "ru": "как сообщить об ошибке"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "ru": "Карта сайта"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "ru": "каждая страница этого сайта"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "ru": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "ru": "весь сайт простым текстом"
     }
   }
 }
