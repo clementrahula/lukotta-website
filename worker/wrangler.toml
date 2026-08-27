@@ -1,0 +1,19 @@
+# The markdown negotiator. See worker/index.js for what it does and why.
+#
+# The account id is not here on purpose: it is an account identifier, and those
+# stay out of the repository. Wrangler reads it from CLOUDFLARE_ACCOUNT_ID,
+# which the deploy workflow takes from a repository secret.
+
+name = "lukotta-markdown"
+main = "index.js"
+compatibility_date = "2026-08-01"
+
+# The whole zone: the negotiation has to be available on every page, and the
+# worker passes through anything that did not ask for markdown.
+routes = [
+  { pattern = "lukotta.com/*", zone_name = "lukotta.com" },
+  { pattern = "www.lukotta.com/*", zone_name = "lukotta.com" },
+]
+
+[observability]
+enabled = true

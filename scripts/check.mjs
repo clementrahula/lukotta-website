@@ -361,9 +361,20 @@ else {
     }
   }
 
+  /* About and Contact exist once each, in English, and are listed with no
+     alternates. They are counted here so that adding a page and forgetting the
+     sitemap still fails, which is the whole point of this check. */
+  const sitePages = ["about", "contact"].filter((slug) =>
+    existsSync(join(OUT, slug, "index.html")));
+  for (const slug of sitePages) {
+    const loc = `${cfg.domain}/${slug}/`;
+    if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
+  }
+
   const locs = [...xml.matchAll(/<loc>/g)].length;
-  if (locs !== indexed.length + taskPages.length) {
-    err(`sitemap.xml has ${locs} URLs but ${indexed.length} landing pages and ${taskPages.length} task pages were built`);
+  const expected = indexed.length + taskPages.length + sitePages.length;
+  if (locs !== expected) {
+    err(`sitemap.xml has ${locs} URLs but ${indexed.length} landing pages, ${taskPages.length} task pages and ${sitePages.length} site pages were built`);
   }
   /* Every task page must be in the sitemap under the slug its own language
      gave it. A page reachable only through a link is a page nobody submits. */

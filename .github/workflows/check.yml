@@ -30,3 +30,7 @@ jobs:
         run: node scripts/lint-translations.mjs
       - name: Check
         run: node scripts/check.mjs --strict
+      # The worker sits in front of the whole zone. Its two decisions are pure
+      # functions so they can be checked here rather than after a deploy.
+      - name: Test the markdown negotiator
+        run: node worker/negotiation.test.mjs

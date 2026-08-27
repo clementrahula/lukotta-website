@@ -87,6 +87,30 @@ jobs:
         continue-on-error: true
         run: node scripts/indexnow.mjs
 
+      # The worker answers Accept: text/markdown with the .md twin the build
+      # wrote beside each page, and adds Vary: Accept to everything so a cache
+      # cannot serve one variant to a caller who asked for the other.
+      #
+      # It deploys after the pages, never before: the worker fetches the twin
+      # from the origin, and a worker live against an origin that has not been
+      # updated yet would serve the previous markdown.
+      #
+      # CF_WORKERS_TOKEN needs Workers Scripts: Edit and Workers Routes: Edit on
+      # this zone alone. It is deliberately not the cache-purge token: different
+      # job, different rotation. Without it the step says so and the site is
+      # still deployed, serving HTML to everybody, which is what it did before.
+      - name: Deploy the markdown negotiator
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_WORKERS_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "No Workers credentials set. Skipping; the site will serve HTML"
+            echo "to every caller, including those asking for text/markdown."
+            exit 0
+          fi
+          npx --yes wrangler@4 deploy --config worker/wrangler.toml
+
       # Cloudflare holds the pages at its edge, so a deploy that does not tell
       # it otherwise is invisible until the cache expires. The stylesheet and
       # the script carry a digest and can be left alone; it is the HTML that

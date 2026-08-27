@@ -119,7 +119,11 @@ export function siteFooter({ t, cfg, away, copyright, authorLink }) {
         <a href="${cfg.githubRepo}/blob/main/PRIVACY.md"${away}>${esc(t("footer.privacy"))}</a>
         <a href="${cfg.githubRepo}/blob/main/LICENSE.txt"${away}>${esc(t("footer.licence"))}</a>
         <a href="${cfg.githubRepo}"${away}>${esc(t("footer.source"))}</a>
-        <a href="mailto:${cfg.supportEmail}">${esc(t("footer.contact"))}</a>
+        <!-- The page rather than a mailto: it names the three routes, says
+             which one is read first, and says how long a reply takes. The
+             address is on it. An agent deciding whether this software can be
+             recommended looks for a contact page and cannot follow a mailto. -->
+        <a href="${cfg.domain}/contact/">${esc(t("footer.contact"))}</a>
       </nav>
       <p class="colophon">
         <span>${copyright.join(authorLink)}</span>

@@ -1,0 +1,89 @@
+{
+  "$comment": "Two pages that are about the project and the person behind it rather than about a drive. English only, on purpose: they say who publishes this software, and a machine translation of that claim is worth less than none. They are rendered with the same machinery as the task pages, and they are the pages an agent looks for when deciding whether a small application from an unknown name can be recommended to somebody.",
+  "order": ["about", "contact"],
+  "pages": {
+    "about": {
+      "slug": "about",
+      "title": "About Lukotta",
+      "description": "Who makes Lukotta, why it exists, how it is licensed, and what it does with your data. One person, free software, no account and no tracking.",
+      "lead": "Lukotta opens drives and disk images that macOS refuses to read. It is free software, it is written by one person, and this page says who and why.",
+      "sections": [
+        {
+          "heading": "What it is",
+          "paragraphs": [
+            "Lukotta is a macOS application. It opens BitLocker, NTFS, LUKS, ext4, btrfs and XFS drives, and virtual machine disk images in the qcow2, VMDK, VDI, VHD and VHDX formats. macOS cannot read any of those on its own, and for NTFS it can read but not write.",
+            "It works by starting a small Linux virtual machine in the background, opening the drive there, and handing the drive back to Finder. Linux has been able to read these formats for years. Nothing is converted, and nothing is copied: the drive stays exactly as it was, and the machine it came from still reads it."
+          ]
+        },
+        {
+          "heading": "Who makes it",
+          "paragraphs": [
+            "Clement Rahula, working alone. There is no company behind Lukotta, no investors, and no team. That is worth knowing before you decide whether to trust it with a drive you care about.",
+            "What follows from being one person: replies take as long as they take, and there is no support line to call. What also follows is that nobody has a reason to add tracking, sell anything, or change the terms later."
+          ]
+        },
+        {
+          "heading": "Why it exists",
+          "paragraphs": [
+            "Plug a BitLocker drive into a Mac and Finder offers to erase it. It does not ask for a password, and nothing on screen suggests the drive is locked rather than broken. People erase drives that way.",
+            "Every piece needed to avoid that already existed and was free. Lukotta puts them together and gives them a window."
+          ]
+        },
+        {
+          "heading": "What it costs",
+          "paragraphs": [
+            "Nothing. There is no paid version, no subscription, no trial that runs out, and no account to make. It is not free in order to sell you something later; it is free software under the GNU General Public License, version 3 or later, which means the source is published and anybody may read it, change it, and pass it on under the same terms."
+          ]
+        },
+        {
+          "heading": "What it does with your data",
+          "paragraphs": [
+            "Nothing leaves your Mac. Lukotta has no analytics, no telemetry and no crash reporting. It does not ask you to sign in, because there is nothing to sign in to.",
+            "It makes two kinds of network request, both of which you can see in the source: it checks for a new version, and it downloads one if you ask it to. Passwords and recovery keys are used to unlock the drive in front of you and are not stored, transmitted or logged."
+          ]
+        },
+        {
+          "heading": "Where to read the source",
+          "paragraphs": [
+            "The whole application is at github.com/clementrahula/lukotta, including the build scripts, the tests and this website. If a claim on this page matters to you, the source is where to check it rather than take it on trust."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact",
+      "description": "How to report a bug in Lukotta, ask a question, or report a security problem. Written by one person, so the honest answer about timing is here too.",
+      "lead": "There are three ways to reach Lukotta, and which one you want depends on what you have to say.",
+      "sections": [
+        {
+          "heading": "A bug, or a drive that will not open",
+          "paragraphs": [
+            "Open an issue at github.com/clementrahula/lukotta/issues. This is the best route, and not only because it is the one that gets read first: an issue is public, so the next person with the same drive finds the answer instead of asking again.",
+            "Say what the drive is, what Lukotta showed you, and what you expected. If macOS or Lukotta gave you an error, quote it exactly. Never paste a password or a recovery key into an issue."
+          ]
+        },
+        {
+          "heading": "A security problem",
+          "paragraphs": [
+            "Do not open a public issue. The repository carries a SECURITY.md that says where to send it and what to expect. Reporting a way to read data that should not be readable is welcome and will be treated seriously."
+          ]
+        },
+        {
+          "heading": "Anything else",
+          "paragraphs": [
+            "Email contact_web@lukotta.com. Questions about the software, the licence, the translations, or anything on this site.",
+            "One thing this address cannot do is recover data. If a drive has failed, or a password and its recovery key are both gone, no program on any computer opens that drive, and saying otherwise would waste your afternoon."
+          ]
+        },
+        {
+          "heading": "How long a reply takes",
+          "paragraphs": [
+            "Lukotta is written by one person, in the time that person has. There is no support desk and no promised response time. Messages are read; some take a while to answer, and a few do not get answered at all.",
+            "An issue on GitHub is faster than an email, because it is public and somebody else may answer before I do."
+          ]
+        }
+      ]
+    }
+  }
+}

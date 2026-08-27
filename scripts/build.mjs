@@ -267,6 +267,19 @@ function taskAlternates(key) {
   return out;
 }
 
+/* --------------------------------------------------------- site pages -- */
+
+/* About and Contact. English only, and rendered with the task-page machinery
+   because that is what they are: a heading and some prose. They exist because
+   an agent asked to judge whether a small application from an unknown name can
+   be recommended looks for exactly these two pages, and finding neither is an
+   answer in itself. */
+const sitePages = existsSync(join(ROOT, "content", "site-pages.json"))
+  ? JSON.parse(readFileSync(join(ROOT, "content", "site-pages.json"), "utf8"))
+  : null;
+
+const sitePageEntries = [];
+
 /* ------------------------------------------------------- markdown twins -- */
 
 /* Every page is also written as markdown beside its HTML, at index.md.
@@ -448,6 +461,31 @@ function lastChanged(file) {
 
 const builtLangs = buildable.filter((l) => built.includes(l.code));
 
+/* The two site pages, written once, in English. They carry no alternates: there
+   is one of each, and saying otherwise in the sitemap would be a lie about a
+   page that does not exist. */
+if (sitePages) {
+  const t = translator(cfg.defaultLang, english, null);
+  const lang = buildable.find((l) => l.code === cfg.defaultLang);
+  for (const key of sitePages.order) {
+    const page = { ...sitePages.pages[key], free: taskPagesByLang.get(cfg.defaultLang)?.ui?.free };
+    const slug = page.slug;
+    const canonical = `${cfg.domain}/${slug}/`;
+    const html = withPolicy(renderTaskPage({
+      page, slug, lang, cfg, t, buildable, canonical,
+      alternates: [{ code: "en", href: canonical }, { code: "x-default", href: canonical }],
+      assetPrefix: "../", assets: { css: CSS, js: JS }, home: "../",
+    }));
+    const dir = join(OUT, slug);
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, "index.html"), html, "utf8");
+    writeFileSync(join(dir, "index.md"),
+      taskMarkdown({ page, canonical, home: `${cfg.domain}/` }), "utf8");
+    markdownTwins += 1;
+    sitePageEntries.push({ slug, title: page.title, description: page.description });
+  }
+}
+
 /* The sitemap must declare the same alternates as the pages, region aliases
    included. Google discards an hreflang cluster whose signals disagree. */
 const urlEntries = builtLangs
@@ -491,6 +529,11 @@ const taskEntries = taskPagesBuilt.map(({ code, slug }) => {
   return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
 }).join("\n");
 
+/* One entry each, no alternates: there is one About and one Contact. */
+const siteEntries = sitePageEntries
+  .map(({ slug }) => `  <url>\n    <loc>${cfg.domain}/${slug}/</loc>\n  </url>`)
+  .join("\n");
+
 writeFileSync(
   join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -498,6 +541,7 @@ writeFileSync(
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urlEntries}
 ${taskEntries}
+${siteEntries}
 </urlset>
 `,
   "utf8"
@@ -558,6 +602,11 @@ writeFileSync(
 ${english["hero.subtitle"]}
 
 Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMENTS}. ${english["footer.gpl"]}
+
+## About and contact
+
+- [About Lukotta](${cfg.domain}/about/): who writes it, what it costs, and what it does with your data
+- [Contact](${cfg.domain}/contact/): how to report a bug or a security problem, and how long a reply takes
 
 ## When to use this
 
@@ -717,6 +766,8 @@ const notFoundLinks = [
   ["/", "Home page: what Lukotta is, what it opens, and how to install it"],
   ["/sitemap.xml", "Sitemap: every page on this site, in all 37 languages"],
   ["/llms.txt", "llms.txt: the whole site as plain text, including when to use it"],
+  ["/about/", "About: who writes Lukotta, what it costs, and what it does with your data"],
+  ["/contact/", "Contact: how to report a bug or a security problem"],
 ];
 
 const notFoundTasks = taskPageList;
