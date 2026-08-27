@@ -21,7 +21,7 @@
           "heading": "Hva det er",
           "paragraphs": [
             "Lukotta er et macOS-program. Det åpner BitLocker-, NTFS-, LUKS-, ext4-, btrfs- og XFS-stasjoner, og diskbilder fra virtuelle maskiner i formatene qcow2, VMDK, VDI, VHD og VHDX. macOS leser ingen av dem på egen hånd. NTFS kan det lese, men ikke skrive til.",
-            "Det starter et lite Linux-system i bakgrunnen, åpner stasjonen der og gir den tilbake til Finder. Linux har lest disse formatene i årevis. Stasjonen blir verken gjort om eller kopiert. Den blir som den var, og maskinen den kom fra leser den fortsatt."
+            "Det starter en liten virtuell Linux-maskin i bakgrunnen, åpner stasjonen der og gir den tilbake til Finder. Linux har lest disse formatene i årevis. Stasjonen blir verken gjort om eller kopiert. Den blir som den var, og maskinen den kom fra leser den fortsatt."
           ]
         },
         {
@@ -63,20 +63,20 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Hvordan man melder en feil i Lukotta, stiller et spørsmål eller melder et sikkerhetsproblem. Issues på GitHub leses først.",
+      "description": "Hvordan man melder en feil i Lukotta, stiller et spørsmål eller melder et sikkerhetsproblem. Issues på GitHub leses først og får vanligvis svar raskest.",
       "lead": "Feil går til GitHub. Sikkerhetsproblemer går til adressen i SECURITY.md. Alt annet går på e-post.",
       "sections": [
         {
           "heading": "En feil, eller en stasjon som ikke vil åpne",
           "paragraphs": [
-            "Opprett et issue på github.com/clementrahula/lukotta/issues. Issues leses først, og de er offentlige, så den neste med samme stasjon finner svaret.",
+            "Opprett et issue på github.com/clementrahula/lukotta/issues. Issues leses først, og de er offentlige, så den neste med samme stasjon kan finne svaret.",
             "Skriv hvilken stasjon det er, hva Lukotta viste, og hva du ventet. Siter en feilmelding ordrett. Lim aldri inn et passord eller en gjenopprettingsnøkkel i et issue."
           ]
         },
         {
           "heading": "Et sikkerhetsproblem",
           "paragraphs": [
-            "Ikke opprett et offentlig issue. SECURITY.md i arkivet sier hvor det skal sendes, og hva du kan vente."
+            "Ikke opprett et offentlig issue. SECURITY.md i repositoriet sier hvor det skal sendes, og hva du kan forvente."
           ]
         },
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Hvor lang tid et svar tar",
           "paragraphs": [
-            "Lukotta vedlikeholdes av én person. Det finnes ingen brukerstøtte og ingen lovet svartid. Noen meldinger tar tid, og noen blir ikke besvart.",
+            "Lukotta vedlikeholdes av én person. Det finnes ingen brukerstøtteavdeling og ingen lovet svartid. Noen meldinger tar tid, og noen blir ikke besvart.",
             "Et issue på GitHub går som regel raskere, fordi noen andre kan rekke å svare først."
           ]
         }

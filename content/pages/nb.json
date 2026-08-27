@@ -32,7 +32,7 @@
         {
           "heading": "Hva som skjer når du kobler en til en Mac",
           "paragraphs": [
-            "Finder sier at disken ikke er leselig, og tilbyr å klargjøre eller slette den. Den spør ikke om noe passord, og ingenting på skjermen tyder på at stasjonen er låst og ikke ødelagt.",
+            "Finder sier at disken ikke er leselig, og tilbyr å initialisere eller slette den. Den spør ikke om noe passord, og ingenting på skjermen tyder på at stasjonen er låst og ikke ødelagt.",
             "Stasjonen er ikke skadet. macOS har sin egen kryptering, FileVault, og forstår ikke BitLocker i det hele tatt. Den leser begynnelsen av stasjonen, finner en oppbygning den ikke kjenner igjen, og behandler disken som uformatert, så det eneste den kan tilby er å slette den."
           ]
         },
@@ -182,7 +182,7 @@
           "paragraphs": [
             "Windows merker en stasjon som ikke lukket når en skriving ble avbrutt, som regel fordi stasjonen ble trukket ut eller maskinen mistet strømmen underveis. Merket advarer den neste maskinen som åpner den om at stasjonen kan være halvveis skrevet og bør sjekkes.",
             "Hurtigoppstart legger igjen det samme merket selv når ingenting har gått galt. Den er slått på fra før i Windows 10 og 11. I stedet for å slå av maskinen setter den den i dvale, noe som får stasjonen til å se ut som om den fortsatt er i bruk.",
-            "macOS nekter en stasjon i begge tilstander og oppgir ingen grunn. Lukotta åpner den.",
+            "macOS nekter å åpne en stasjon i begge tilstander og oppgir ingen grunn. Lukotta åpner den.",
             "Har du fortsatt Windows-maskinen, er den ryddigere løsningen å koble stasjonen til igjen og slå av den maskinen ordentlig: hold Skift nede mens du klikker på «Avslutt», det hopper over Hurtigoppstart."
           ]
         }
@@ -245,7 +245,7 @@
           "heading": "Kopiere filer inn i et diskbilde",
           "paragraphs": [
             "qcow2 skrives på vanlig måte og er trygt å skrive til.",
-            "VMDK, VDI og VHD går det an å skrive til, men det er nytt arbeid og har ikke vært i bruk lenge nok til å betro det noe du ikke har råd til å miste. Kopier filen og arbeid på kopien, eller åpne den skrivebeskyttet og hent ut filer i stedet.",
+            "VMDK, VDI og VHD går det an å skrive til, men skrivestøtten er ny og har ikke vært i bruk lenge nok til å betro den noe du ikke har råd til å miste. Kopier filen og arbeid på kopien, eller åpne den skrivebeskyttet og hent ut filer i stedet.",
             "VHDX åpnes skrivebeskyttet, og det samme gjør den typen VMDK som ligger inne i en OVA-fil. Den typen skrives gjennom i én omgang og kan ikke endres der den ligger etterpå."
           ]
         },

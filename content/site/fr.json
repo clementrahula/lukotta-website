@@ -14,14 +14,14 @@
     "about": {
       "slug": "a-propos",
       "title": "À propos de Lukotta",
-      "description": "Lukotta est une application macOS libre et gratuite qui ouvre les disques BitLocker, NTFS et Linux, sous GNU General Public License.",
+      "description": "Lukotta ouvre les disques BitLocker, NTFS et Linux sur macOS. Application libre et gratuite, maintenue par un seul développeur, sous GNU General Public License.",
       "lead": "Lukotta ouvre des disques et des images disque que macOS ne sait pas lire. Il est gratuit, libre, et maintenu par une seule personne.",
       "sections": [
         {
           "heading": "Ce que c'est",
           "paragraphs": [
             "Lukotta est une application macOS. Elle ouvre les disques BitLocker, NTFS, LUKS, ext4, btrfs et XFS, ainsi que les images disque de machines virtuelles aux formats qcow2, VMDK, VDI, VHD et VHDX. macOS n'en lit aucun de lui-même. Il lit le NTFS mais n'y écrit pas.",
-            "Elle démarre un petit système Linux en arrière-plan, y ouvre le disque, et le remet au Finder. Linux lit ces formats depuis des années. Le disque n'est ni converti ni copié. Il reste tel quel, et la machine dont il vient le lit toujours."
+            "Elle démarre une petite machine virtuelle Linux en arrière-plan, y ouvre le disque, et le remet au Finder. Linux lit ces formats depuis des années. Le disque n'est ni converti ni copié. Il reste tel quel, et la machine dont il vient le lit toujours."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "contact",
       "title": "Contact",
-      "description": "Comment signaler un problème dans Lukotta, poser une question ou signaler une faille. Les tickets GitHub sont lus en premier.",
+      "description": "Comment signaler un problème dans Lukotta, poser une question ou signaler une faille. Les tickets GitHub sont lus en premier et traités le plus vite.",
       "lead": "Les problèmes vont sur GitHub. Les failles vont à l'adresse indiquée dans SECURITY.md. Le reste passe par courriel.",
       "sections": [
         {
@@ -89,7 +89,7 @@
           "heading": "Le délai de réponse",
           "paragraphs": [
             "Lukotta est maintenu par une seule personne. Il n'y a pas de service d'assistance ni de délai promis. Certains messages prennent du temps, et certains restent sans réponse.",
-            "Un ticket GitHub va généralement plus vite, parce que quelqu'un d'autre peut répondre avant moi."
+            "Un ticket GitHub va généralement plus vite, parce que quelqu'un d'autre peut répondre en premier."
           ]
         }
       ]

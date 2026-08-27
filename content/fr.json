@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fr": "Ouvrez des disques BitLocker, NTFS, LUKS et Linux sur Mac. Entrez le mot de passe : le disque apparaît dans Finder, lisible et inscriptible. Gratuit et open source."
+      "fr": "Ouvrez des disques BitLocker, NTFS, LUKS et Linux sur Mac. Entrez le mot de passe : le disque apparaît dans Finder, en lecture et écriture. Gratuit et open source."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -184,7 +184,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "fr": "Il prend aussi bien les disques physiques que les fichiers image. Un volume BitLocker s’ouvre avec son mot de passe ou avec une clé de récupération à 48 chiffres, et les volumes BitLocker et NTFS sont lus autant qu’écrits : on peut copier des fichiers vers le disque comme depuis le disque."
+      "fr": "Il prend aussi bien les disques physiques que les fichiers image. Un volume BitLocker s’ouvre avec son mot de passe ou avec une clé de récupération à 48 chiffres, et les volumes BitLocker et NTFS sont accessibles en lecture comme en écriture : on peut copier des fichiers vers le disque comme depuis le disque."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -264,7 +264,7 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "fr": "VMware, plat et fragmenté"
+      "fr": "VMware, plat et sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",

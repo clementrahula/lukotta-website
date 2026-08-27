@@ -62,17 +62,17 @@
           ]
         },
         {
-          "heading": "Les disques qui ne s’ouvriront pas sur un Mac",
+          "heading": "Les disques qui ne peuvent pas s’ouvrir sur un Mac",
           "paragraphs": [
             "Certains PC Windows ne demandent jamais de mot de passe. Ils gardent la clé dans une puce de la carte mère, appelée TPM, et déverrouillent le disque d’eux-mêmes au démarrage de cette machine.",
-            "Un disque monté ainsi ne fonctionne que dans le PC dont il vient, car la clé n’en sort jamais. Aucun Mac ne peut l’ouvrir, et aucun autre PC non plus. Si une clé de récupération a été enregistrée au moment du chiffrement, elle l’ouvre encore."
+            "Un disque configuré ainsi ne fonctionne que dans le PC dont il vient, car la clé n’en sort jamais. Aucun Mac ne peut l’ouvrir, et aucun autre PC non plus. Si une clé de récupération a été enregistrée au moment du chiffrement, elle l’ouvre encore."
           ]
         },
         {
           "heading": "Copier des fichiers sur le disque",
           "paragraphs": [
             "Les disques BitLocker s’ouvrent en lecture et en écriture, si bien qu’un Mac peut ajouter des fichiers à une sauvegarde Windows au lieu de seulement en retirer.",
-            "Lukotta peut aussi ouvrir le disque en lecture seule, ce qui vaut la peine quand vous récupérez des fichiers sur un disque qui donne des signes de faiblesse. Rien ne peut alors s’y écrire."
+            "Lukotta peut aussi ouvrir le disque en lecture seule, ce qui vaut la peine quand vous récupérez des fichiers sur un disque qui pose des problèmes. Rien ne peut alors s’y écrire."
           ]
         }
       ]
@@ -107,8 +107,8 @@
         {
           "heading": "Ce que Lukotta lit",
           "paragraphs": [
-            "ext2, ext3 et ext4, qui couvrent la plupart des systèmes Linux. btrfs, celui d’origine sur Fedora et openSUSE. XFS, courant sur les serveurs.",
-            "Chiffré ou non. Si le disque a été monté avec LVM, qui découpe un disque physique en plusieurs volumes, ils s’ouvrent tous ensemble plutôt qu’un à la fois."
+            "ext2, ext3 et ext4, qui couvrent la plupart des systèmes Linux. btrfs, celui par défaut sur Fedora et openSUSE. XFS, courant sur les serveurs.",
+            "Chiffré ou non. Si le disque a été configuré avec LVM, qui découpe un disque physique en plusieurs volumes, ils s’ouvrent tous ensemble plutôt qu’un à la fois."
           ]
         },
         {
@@ -128,9 +128,9 @@
           ]
         },
         {
-          "heading": "Les disques qui ne s’ouvriront pas",
+          "heading": "Les disques qui ne peuvent pas s’ouvrir",
           "paragraphs": [
-            "Un disque LUKS peut être monté avec son en-tête rangé ailleurs, sur un autre disque ou sur une clé USB. L’en-tête est la partie qui décrit le chiffrement. Sans lui, il n’y a rien à déverrouiller sur le disque.",
+            "Un disque LUKS peut être configuré avec son en-tête rangé ailleurs, sur un autre disque ou sur une clé USB. L’en-tête est la partie qui décrit le chiffrement. Sans lui, il n’y a rien à déverrouiller sur le disque.",
             "Les installations Ubuntu récentes peuvent aussi lier la clé à une puce à l’intérieur de la machine, de la même façon que BitLocker. Ces disques-là ne s’ouvrent que dans l’ordinateur dont ils viennent."
           ]
         }
@@ -180,10 +180,10 @@
         {
           "heading": "Les disques que Windows n’a pas fermés proprement",
           "paragraphs": [
-            "Windows marque un disque comme mal fermé quand une écriture a été interrompue, le plus souvent parce que le disque a été débranché ou que la machine a perdu le courant en cours de route. Cette marque prévient l’ordinateur suivant qui l’ouvre que le disque est peut-être à moitié écrit et mérite une vérification.",
-            "Le démarrage rapide laisse la même marque même quand rien n’a mal tourné. Il est activé d’origine dans Windows 10 et 11. Au lieu d’éteindre la machine, il la met en veille prolongée, ce qui donne au disque l’air d’être encore en service.",
+            "Windows marque un disque comme mal fermé quand une écriture a été interrompue, le plus souvent parce que le disque a été débranché ou que la machine a perdu le courant en cours de route. Cette marque prévient l’ordinateur suivant qui l’ouvre que le disque n’a peut-être été que partiellement écrit et mérite une vérification.",
+            "Le démarrage rapide laisse la même marque même quand rien n’a mal tourné. Il est activé par défaut dans Windows 10 et 11. Au lieu d’éteindre la machine, il la met en veille prolongée, ce qui donne au disque l’air d’être encore en service.",
             "macOS refuse un disque dans l’un comme dans l’autre état, sans dire pourquoi. Lukotta l’ouvre.",
-            "Si vous avez encore la machine Windows, le remède le plus propre est d’y rebrancher le disque et d’éteindre cette machine correctement : maintenez Maj en cliquant sur « Arrêter », ce qui saute le démarrage rapide."
+            "Si vous avez encore la machine Windows, le remède le plus propre est d’y rebrancher le disque et d’éteindre cette machine correctement : maintenez Maj en cliquant sur « Arrêter », ce qui contourne le démarrage rapide."
           ]
         }
       ]
@@ -197,7 +197,7 @@
         {
           "heading": "Ce qu’est une image disque",
           "paragraphs": [
-            "Quand vous faites tourner une machine virtuelle, le disque dur de cette machine est un seul fichier ordinaire posé sur votre Mac. Son système, ses programmes et chacun de ses documents tiennent tous dans ce fichier-là.",
+            "Quand vous faites tourner une machine virtuelle, le disque dur de cette machine est un seul fichier ordinaire posé sur votre Mac. Son système d’exploitation, ses programmes et chacun de ses documents tiennent tous dans ce fichier-là.",
             "Chaque programme écrit ce fichier à sa manière. VMware se sert de VMDK, VirtualBox de VDI, Hyper-V de VHD et VHDX, et QEMU et UTM de qcow2. Une image brute, dont le nom finit le plus souvent par .img, est une copie directe d’un disque sans rien autour."
           ]
         },
@@ -229,7 +229,7 @@
         {
           "heading": "En ouvrir une",
           "list": [
-            "Choisissez « Fichier », puis « Ouvrir une image disque », et désignez le fichier.",
+            "Choisissez « Fichier », puis « Ouvrir une image disque », et sélectionnez le fichier.",
             "Si le disque qui est dedans est chiffré, tapez le mot de passe ou la phrase secrète.",
             "Le contenu apparaît dans le Finder sous Emplacements."
           ],
@@ -238,19 +238,19 @@
         {
           "heading": "Un fichier contient souvent plusieurs disques",
           "paragraphs": [
-            "Une image disque contient le plus souvent plus d’une partition : une petite partition de démarrage, la principale qui porte tout, et parfois une partition de récupération. Lukotta les liste et vous ouvrez celle dont vous avez besoin, comme vous choisiriez un disque."
+            "Une image disque contient le plus souvent plus d’une partition : une petite partition de démarrage, la principale qui contient tout, et parfois une partition de récupération. Lukotta les liste et vous ouvrez celle dont vous avez besoin, comme vous choisiriez un disque."
           ]
         },
         {
           "heading": "Copier des fichiers dans une image",
           "paragraphs": [
-            "qcow2 s’écrit de la manière ordinaire et se laisse écrire sans risque.",
-            "VMDK, VDI et VHD acceptent l’écriture, mais c’est un travail récent qui n’a pas servi assez longtemps pour lui confier ce que vous ne pouvez pas vous permettre de perdre. Copiez le fichier et travaillez sur la copie, ou ouvrez-le en lecture seule et sortez-en les fichiers.",
+            "qcow2 s’écrit de la manière ordinaire et on peut y écrire sans risque.",
+            "VMDK, VDI et VHD acceptent l’écriture, mais cette prise en charge est récente et n’a pas été utilisée assez longtemps pour lui confier ce que vous ne pouvez pas vous permettre de perdre. Copiez le fichier et travaillez sur la copie, ou ouvrez-le en lecture seule et sortez-en les fichiers.",
             "VHDX s’ouvre en lecture seule, tout comme le genre de VMDK qu’on trouve dans un fichier OVA. Ce genre-là s’écrit d’un seul trait et ne se modifie plus sur place ensuite."
           ]
         },
         {
-          "heading": "Les fichiers qui ne s’ouvriront pas",
+          "heading": "Les fichiers qui ne peuvent pas s’ouvrir",
           "paragraphs": [
             "Une image ne s’ouvre que si elle se suffit à elle-même.",
             "Une chaîne d’instantanés VMware répartit l’état actuel de la machine entre un fichier d’origine et une série de fichiers plus petits qui notent ce qui a changé après lui. Un disque scindé découpe une image en de nombreux morceaux. Un disque de différenciation Hyper-V ne porte que les différences avec un autre fichier.",

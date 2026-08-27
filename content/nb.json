@@ -12,7 +12,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "nb": "Åpne BitLocker-, NTFS-, LUKS- og Linux-stasjoner på Mac-en. Skriv passordet, og stasjonen dukker opp i Finder, klar til lesing og skriving. Gratis og åpen kildekode."
+      "nb": "Åpne BitLocker-, NTFS-, LUKS- og Linux-stasjoner på Mac. Skriv passordet, og stasjonen dukker opp i Finder, lesbar og skrivbar. Gratis og åpen kildekode."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -184,7 +184,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "nb": "Den tar fysiske stasjoner og bildefiler like gjerne. Et BitLocker-volum åpnes med passordet sitt eller med en 48-sifret gjenopprettingsnøkkel, og BitLocker- og NTFS-volumer både leses og skrives, så filer kan kopieres til stasjonen like godt som fra den."
+      "nb": "Den håndterer både fysiske stasjoner og diskbildefiler. Et BitLocker-volum åpnes med passordet sitt eller med en 48-sifret gjenopprettingsnøkkel, og BitLocker- og NTFS-volumer både leses og skrives, så filer kan kopieres til stasjonen like godt som fra den."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -268,7 +268,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "nb": "Det en OVA inneholder. Skrives i én omgang og kan derfor ikke endres direkte"
+      "nb": "Det en OVA inneholder. Skrives i én omgang og kan derfor ikke endres i samme fil etterpå"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -304,7 +304,7 @@
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
-      "nb": "LUKS-volumer der hodet lagres atskilt fra stasjonen"
+      "nb": "LUKS-volumer der headeren lagres atskilt fra stasjonen"
     },
     "formats.not.4": {
       "en": "VeraCrypt and TrueCrypt",
