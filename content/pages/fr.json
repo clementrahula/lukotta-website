@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "fr",
+    "name": "French",
+    "native": "Français",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Le téléchargement et l’utilisation sont gratuits."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "ouvrir-disque-bitlocker-sur-mac",
+      "title": "Ouvrir un disque BitLocker sur un Mac",
+      "description": "macOS n’ouvre pas un disque BitLocker et propose de l’effacer. Voici pourquoi, et comment lire le disque et y copier des fichiers.",
+      "lead": "Vous branchez un disque BitLocker sur un Mac et le Finder propose de l’effacer. Voici pourquoi, et comment lire le disque à la place.",
+      "sections": [
+        {
+          "heading": "Ce qu’est BitLocker",
+          "paragraphs": [
+            "BitLocker est le chiffrement intégré à Windows. Quand il est activé, tout ce qui s’écrit sur le disque est brouillé, et le contenu ne se lit pas sans le mot de passe. Windows s’en sert pour son propre disque, et pour les disques USB et les cartes mémoire, où il s’appelle BitLocker To Go.",
+            "C’est le même chiffrement dans les deux cas. Si le disque se perd, celui qui le trouve n’en lira rien."
+          ]
+        },
+        {
+          "heading": "Ce qui se passe quand vous en branchez un sur un Mac",
+          "paragraphs": [
+            "Le Finder annonce que le disque est illisible et propose de l’initialiser ou de l’effacer. Il ne demande pas de mot de passe, et rien à l’écran ne laisse penser que le disque est verrouillé plutôt qu’en panne.",
+            "Le disque n’est pas abîmé. macOS a son propre chiffrement, FileVault, et ne comprend pas BitLocker du tout. Il lit le début du disque, y trouve une organisation qu’il ne reconnaît pas, traite le disque comme non formaté, et la seule chose qu’il puisse alors proposer est de l’effacer."
+          ]
+        },
+        {
+          "heading": "Comment Lukotta l’ouvre",
+          "paragraphs": [
+            "Linux sait lire BitLocker depuis des années, et c’est ce dont Lukotta se sert. Il démarre un petit système Linux en arrière-plan, lui confie le disque, et l’y déverrouille avec le mot de passe que vous tapez. Le disque déverrouillé repart au Finder, où il apparaît sous Emplacements à côté de vos autres disques.",
+            "Le disque n’est ni converti ni copié. Il reste un disque BitLocker, toujours chiffré, et Windows le lit toujours."
+          ]
+        },
+        {
+          "heading": "Ouvrir le disque",
+          "list": [
+            "Branchez le disque. Lukotta le liste et le montre verrouillé.",
+            "Cliquez dessus et tapez le mot de passe dont vous vous servez sous Windows.",
+            "Le disque apparaît dans le Finder sous Emplacements."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Si vous n’avez pas le mot de passe",
+          "paragraphs": [
+            "Quand le disque a été chiffré, Windows a produit une clé de récupération et demandé où la conserver. Elle ouvre le disque à la place du mot de passe. Elle fait 48 chiffres, en huit groupes de six :",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Elle peut se trouver dans un compte Microsoft, dans un fichier texte, ou imprimée sur papier. Collez-la là où irait le mot de passe.",
+            "Sans le mot de passe ni la clé, aucun programme ne peut ouvrir le disque, sur aucun ordinateur."
+          ]
+        },
+        {
+          "heading": "Les disques qui ne s’ouvriront pas sur un Mac",
+          "paragraphs": [
+            "Certains PC Windows ne demandent jamais de mot de passe. Ils gardent la clé dans une puce de la carte mère, appelée TPM, et déverrouillent le disque d’eux-mêmes au démarrage de cette machine.",
+            "Un disque monté ainsi ne fonctionne que dans le PC dont il vient, car la clé n’en sort jamais. Aucun Mac ne peut l’ouvrir, et aucun autre PC non plus. Si une clé de récupération a été enregistrée au moment du chiffrement, elle l’ouvre encore."
+          ]
+        },
+        {
+          "heading": "Copier des fichiers sur le disque",
+          "paragraphs": [
+            "Les disques BitLocker s’ouvrent en lecture et en écriture, si bien qu’un Mac peut ajouter des fichiers à une sauvegarde Windows au lieu de seulement en retirer.",
+            "Lukotta peut aussi ouvrir le disque en lecture seule, ce qui vaut la peine quand vous récupérez des fichiers sur un disque qui donne des signes de faiblesse. Rien ne peut alors s’y écrire."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "lire-disque-ext4-sur-mac",
+      "title": "Lire un disque ext4, btrfs ou XFS sur un Mac",
+      "description": "macOS ne lit ni ext4, ni btrfs, ni XFS et propose d’effacer le disque. Voici pourquoi, et comment ouvrir un disque Linux sur un Mac, LUKS compris.",
+      "lead": "Vous branchez un disque venu d’une machine Linux et le Finder propose de l’effacer. Voici pourquoi, et comment le lire à la place.",
+      "sections": [
+        {
+          "heading": "Pourquoi un Mac ne peut pas lire le disque",
+          "paragraphs": [
+            "Chaque disque a un système de fichiers : l’organisation qui note où commence chaque fichier, comment il s’appelle, et quelles parties du disque sont encore libres. Windows se sert de NTFS. macOS se sert d’APFS. Linux se sert le plus souvent d’ext4, et parfois de btrfs ou de XFS.",
+            "Les fichiers eux-mêmes sont ordinaires. Ce qui change, c’est l’index placé devant eux, et un ordinateur qui ne sait pas lire cet index n’a aucun moyen de retrouver quoi que ce soit, même si tout est encore là."
+          ]
+        },
+        {
+          "heading": "Ce qui se passe quand vous en branchez un sur un Mac",
+          "paragraphs": [
+            "Le Finder annonce que le disque est illisible et propose de l’effacer. C’est le message que macOS donne aussi pour un disque vide et pour un disque en train de lâcher, si bien que le message ne vous permet pas de voir que le disque va bien.",
+            "macOS prend en charge ses propres systèmes de fichiers et quelques-uns des plus répandus, comme exFAT. Les systèmes de fichiers Linux n’en font pas partie, et un disque ext4 ressemble donc à un disque vide pour macOS."
+          ]
+        },
+        {
+          "heading": "Comment Lukotta le lit",
+          "paragraphs": [
+            "Lukotta démarre un petit système Linux en arrière-plan et lui confie le disque. Linux lit ext4, btrfs et XFS tout seul, si bien que le disque s’y ouvre sans aucune conversion, et Lukotta le transmet au Finder.",
+            "Rien n’est écrit sur le disque, et il se comporte normalement quand il retourne dans la machine Linux."
+          ]
+        },
+        {
+          "heading": "Ce que Lukotta lit",
+          "paragraphs": [
+            "ext2, ext3 et ext4, qui couvrent la plupart des systèmes Linux. btrfs, celui d’origine sur Fedora et openSUSE. XFS, courant sur les serveurs.",
+            "Chiffré ou non. Si le disque a été monté avec LVM, qui découpe un disque physique en plusieurs volumes, ils s’ouvrent tous ensemble plutôt qu’un à la fois."
+          ]
+        },
+        {
+          "heading": "Ouvrir le disque",
+          "list": [
+            "Branchez le disque. Lukotta liste ce qu’il contient.",
+            "S’il est chiffré, tapez la phrase secrète.",
+            "Le disque apparaît dans le Finder sous Emplacements."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "S’il demande une phrase secrète",
+          "paragraphs": [
+            "LUKS est la façon dont Linux chiffre un disque entier. Si la machine dont vient ce disque demande une phrase secrète tôt au démarrage, avant l’écran de connexion, c’est LUKS, et c’est cette phrase secrète qu’il faut taper ici.",
+            "Elle est distincte du mot de passe de session, même si beaucoup de gens mettent la même chose pour les deux."
+          ]
+        },
+        {
+          "heading": "Les disques qui ne s’ouvriront pas",
+          "paragraphs": [
+            "Un disque LUKS peut être monté avec son en-tête rangé ailleurs, sur un autre disque ou sur une clé USB. L’en-tête est la partie qui décrit le chiffrement. Sans lui, il n’y a rien à déverrouiller sur le disque.",
+            "Les installations Ubuntu récentes peuvent aussi lier la clé à une puce à l’intérieur de la machine, de la même façon que BitLocker. Ces disques-là ne s’ouvrent que dans l’ordinateur dont ils viennent."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "ecrire-sur-disque-ntfs-sur-mac",
+      "title": "Écrire sur un disque NTFS sur un Mac",
+      "description": "macOS ouvre les disques NTFS en lecture seule : les fichiers en sortent mais n’y entrent pas. Voici pourquoi, et comment écrire sur un disque NTFS.",
+      "lead": "macOS vous laisse copier des fichiers depuis un disque NTFS mais pas vers lui. Voici pourquoi, et ce qu’on peut y faire.",
+      "sections": [
+        {
+          "heading": "Ce qu’est NTFS",
+          "paragraphs": [
+            "NTFS est le système de fichiers dont Windows se sert, à la fois pour son propre disque et pour les disques externes formatés sur un PC. Un disque USB formaté sur une machine Windows est le plus souvent en NTFS.",
+            "L’autre système répandu est exFAT, dont se servent la plupart des cartes mémoire et beaucoup de clés USB, parce que Windows et macOS savent tous deux y écrire. Si votre disque est en exFAT, macOS s’en occupe déjà et rien de tout ceci ne s’applique. Pour le vérifier, cliquez sur le disque dans le Finder et choisissez « Fichier », puis « Lire les informations ». La ligne « Format » vous le dit."
+          ]
+        },
+        {
+          "heading": "Ce qui se passe quand vous en branchez un sur un Mac",
+          "paragraphs": [
+            "Le disque apparaît dans le Finder et vous voyez les fichiers. En copier depuis le disque marche normalement. En copier vers le disque, non : le Finder refuse, et le disque se comporte comme s’il était verrouillé.",
+            "macOS ouvre les disques NTFS en lecture seule. Il sait écrire en NTFS depuis des années, mais c’est désactivé et il n’existe aucun moyen pris en charge de l’activer. Écrire en NTFS est plus difficile que le lire, et une erreur peut laisser un disque que Windows refuse ensuite d’ouvrir."
+          ]
+        },
+        {
+          "heading": "Comment Lukotta y écrit",
+          "paragraphs": [
+            "Lukotta ouvre le disque avec le pilote NTFS de Linux, qui écrit, et dont les machines Linux se servent tous les jours. Le disque est ensuite remis au Finder, si bien qu’y copier des fichiers se passe comme n’importe quelle autre copie.",
+            "Le disque reste en NTFS, et Windows le lit après coup."
+          ]
+        },
+        {
+          "heading": "Ouvrir le disque",
+          "list": [
+            "Branchez le disque. Lukotta le liste.",
+            "Cliquez dessus.",
+            "Il apparaît dans le Finder sous Emplacements, et les fichiers circulent dans les deux sens."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Un disque NTFS n’a le plus souvent pas de mot de passe, il n’y a donc rien à taper, à moins que BitLocker n’ait été activé en plus."
+          ]
+        },
+        {
+          "heading": "Les disques que Windows n’a pas fermés proprement",
+          "paragraphs": [
+            "Windows marque un disque comme mal fermé quand une écriture a été interrompue, le plus souvent parce que le disque a été débranché ou que la machine a perdu le courant en cours de route. Cette marque prévient l’ordinateur suivant qui l’ouvre que le disque est peut-être à moitié écrit et mérite une vérification.",
+            "Le démarrage rapide laisse la même marque même quand rien n’a mal tourné. Il est activé d’origine dans Windows 10 et 11. Au lieu d’éteindre la machine, il la met en veille prolongée, ce qui donne au disque l’air d’être encore en service.",
+            "macOS refuse un disque dans l’un comme dans l’autre état, sans dire pourquoi. Lukotta l’ouvre.",
+            "Si vous avez encore la machine Windows, le remède le plus propre est d’y rebrancher le disque et d’éteindre cette machine correctement : maintenez Maj en cliquant sur « Arrêter », ce qui saute le démarrage rapide."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "ouvrir-fichier-vmdk-vdi-vhd-sur-mac",
+      "title": "Ouvrir un fichier VMDK, VDI ou VHD sur un Mac",
+      "description": "Ouvrir un fichier VMDK, VDI, VHD ou qcow2 sur un Mac et en copier des fichiers, sans installer VMware ni VirtualBox et sans démarrer la machine.",
+      "lead": "Une machine virtuelle garde tout son disque dans un seul fichier. Ce fichier, vous pouvez l’ouvrir sur un Mac et en sortir des choses sans jamais démarrer la machine.",
+      "sections": [
+        {
+          "heading": "Ce qu’est une image disque",
+          "paragraphs": [
+            "Quand vous faites tourner une machine virtuelle, le disque dur de cette machine est un seul fichier ordinaire posé sur votre Mac. Son système, ses programmes et chacun de ses documents tiennent tous dans ce fichier-là.",
+            "Chaque programme écrit ce fichier à sa manière. VMware se sert de VMDK, VirtualBox de VDI, Hyper-V de VHD et VHDX, et QEMU et UTM de qcow2. Une image brute, dont le nom finit le plus souvent par .img, est une copie directe d’un disque sans rien autour."
+          ]
+        },
+        {
+          "heading": "Pourquoi en sortir un fichier est pénible",
+          "paragraphs": [
+            "La voie habituelle consiste à démarrer la machine virtuelle, attendre qu’elle soit prête, y retrouver le fichier et le copier au-dehors. Cela suppose que la machine marche encore, et que le programme qui la fait tourner soit encore installé.",
+            "Le Finder n’est d’aucun secours ici non plus. Double-cliquer sur un VMDK ne fait rien, parce que macOS ne sait pas ce qu’il y a dedans."
+          ]
+        },
+        {
+          "heading": "Comment Lukotta l’ouvre",
+          "paragraphs": [
+            "Lukotta lit l’image directement. Il détermine dans quel format est le fichier, y trouve le disque, et l’ouvre dans le petit système Linux qu’il fait tourner en arrière-plan. Ce qui est dedans apparaît alors dans le Finder comme un disque ordinaire.",
+            "La machine virtuelle reste éteinte. VMware et VirtualBox n’ont pas besoin d’être installés, et ouvrir le fichier ne le modifie pas."
+          ]
+        },
+        {
+          "heading": "Les fichiers que Lukotta ouvre",
+          "list": [
+            "qcow2, de QEMU et UTM.",
+            "VMDK, de VMware.",
+            "VDI, de VirtualBox.",
+            "VHD et VHDX, de Hyper-V.",
+            "Les images brutes, dont le nom finit le plus souvent par .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "En ouvrir une",
+          "list": [
+            "Choisissez « Fichier », puis « Ouvrir une image disque », et désignez le fichier.",
+            "Si le disque qui est dedans est chiffré, tapez le mot de passe ou la phrase secrète.",
+            "Le contenu apparaît dans le Finder sous Emplacements."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Un fichier contient souvent plusieurs disques",
+          "paragraphs": [
+            "Une image disque contient le plus souvent plus d’une partition : une petite partition de démarrage, la principale qui porte tout, et parfois une partition de récupération. Lukotta les liste et vous ouvrez celle dont vous avez besoin, comme vous choisiriez un disque."
+          ]
+        },
+        {
+          "heading": "Copier des fichiers dans une image",
+          "paragraphs": [
+            "qcow2 s’écrit de la manière ordinaire et se laisse écrire sans risque.",
+            "VMDK, VDI et VHD acceptent l’écriture, mais c’est un travail récent qui n’a pas servi assez longtemps pour lui confier ce que vous ne pouvez pas vous permettre de perdre. Copiez le fichier et travaillez sur la copie, ou ouvrez-le en lecture seule et sortez-en les fichiers.",
+            "VHDX s’ouvre en lecture seule, tout comme le genre de VMDK qu’on trouve dans un fichier OVA. Ce genre-là s’écrit d’un seul trait et ne se modifie plus sur place ensuite."
+          ]
+        },
+        {
+          "heading": "Les fichiers qui ne s’ouvriront pas",
+          "paragraphs": [
+            "Une image ne s’ouvre que si elle se suffit à elle-même.",
+            "Une chaîne d’instantanés VMware répartit l’état actuel de la machine entre un fichier d’origine et une série de fichiers plus petits qui notent ce qui a changé après lui. Un disque scindé découpe une image en de nombreux morceaux. Un disque de différenciation Hyper-V ne porte que les différences avec un autre fichier.",
+            "Dans chacun de ces cas, le fichier que vous avez fait partie d’un ensemble, et Lukotta ouvre un fichier à la fois."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "En savoir plus sur les disques BitLocker, et que faire si le mot de passe est perdu",
+    "ntfs": "En savoir plus sur les disques NTFS, y compris ceux que Windows a mal fermés",
+    "linux": "En savoir plus sur les disques Linux et le chiffrement LUKS",
+    "disk-images": "En savoir plus sur les images disque, et lesquelles acceptent l’écriture"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}
