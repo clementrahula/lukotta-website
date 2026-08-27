@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "sv",
+    "name": "Swedish",
+    "native": "Svenska",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Det är gratis att hämta och använda."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "oppna-bitlocker-disk-pa-mac",
+      "title": "Öppna en BitLocker-disk på en Mac",
+      "description": "macOS öppnar inte en BitLocker-disk utan erbjuder sig att radera den. Här är varför, och hur du läser disken och kopierar filer till den.",
+      "lead": "Du ansluter en BitLocker-disk till en Mac och Finder erbjuder sig att radera den. Här är varför, och hur du läser disken i stället.",
+      "sections": [
+        {
+          "heading": "Vad BitLocker är",
+          "paragraphs": [
+            "BitLocker är krypteringen som är inbyggd i Windows. När den är påslagen blandas allt som skrivs till disken om, och innehållet går inte att läsa utan lösenordet. Windows använder den på sin egen disk, och på USB-diskar och minneskort, där den heter BitLocker To Go.",
+            "Det är samma kryptering i båda fallen. Kommer disken bort kan den som hittar den inte läsa något på den."
+          ]
+        },
+        {
+          "heading": "Vad som händer när du ansluter en till en Mac",
+          "paragraphs": [
+            "Finder säger att skivan inte går att läsa och erbjuder sig att initiera eller radera den. Den frågar inte efter något lösenord, och ingenting på skärmen antyder att disken är låst snarare än trasig.",
+            "Disken är inte skadad. macOS har sin egen kryptering, FileVault, och förstår inte BitLocker alls. Systemet läser början av disken, hittar en uppbyggnad det inte känner igen, och behandlar skivan som oformaterad, så det enda det kan erbjuda är att radera den."
+          ]
+        },
+        {
+          "heading": "Hur Lukotta öppnar den",
+          "paragraphs": [
+            "Linux har kunnat läsa BitLocker i åratal, och det är det Lukotta använder. Programmet startar ett litet Linux-system i bakgrunden, ger det disken och låser upp den där inne med lösenordet du skriver. Den upplåsta disken går tillbaka till Finder, där den dyker upp under Platser bredvid dina andra skivor.",
+            "Disken görs varken om eller kopieras. Den fortsätter att vara en BitLocker-disk, fortfarande krypterad, och Windows läser den som förut."
+          ]
+        },
+        {
+          "heading": "Öppna disken",
+          "list": [
+            "Anslut disken. Lukotta visar den i listan och märker den som låst.",
+            "Klicka på den och skriv lösenordet du använder i Windows.",
+            "Disken dyker upp i Finder under Platser."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Om du inte har lösenordet",
+          "paragraphs": [
+            "När disken krypterades skapade Windows en återställningsnyckel och frågade var den skulle sparas. Den öppnar disken i stället för lösenordet. Den består av 48 siffror, i åtta grupper om sex:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Den kan ligga i ett Microsoft-konto, i en textfil, eller vara utskriven på papper. Klistra in den där lösenordet annars skulle stå.",
+            "Utan lösenordet eller nyckeln går disken inte att öppna med något program, på någon dator."
+          ]
+        },
+        {
+          "heading": "Diskar som inte går att öppna på en Mac",
+          "paragraphs": [
+            "Vissa Windows-datorer frågar aldrig efter något lösenord. De förvarar nyckeln i ett chip på moderkortet, kallat en TPM, och låser upp disken av sig själva när den maskinen startar.",
+            "En disk som är uppsatt så fungerar bara i den dator den kommer från, för nyckeln lämnar den aldrig. Ingen Mac kan öppna den, och inte någon annan PC heller. Sparades en återställningsnyckel när disken krypterades öppnar den den fortfarande."
+          ]
+        },
+        {
+          "heading": "Kopiera filer till disken",
+          "paragraphs": [
+            "BitLocker-diskar öppnas för både läsning och skrivning, så en Mac kan lägga till filer i en Windows-säkerhetskopia och inte bara hämta filer från den.",
+            "Lukotta kan också öppna disken skrivskyddad, vilket är värt att göra när du räddar filer från en disk som krånglat. Då går det inte att skriva något till den."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "lasa-ext4-disk-pa-mac",
+      "title": "Läs en ext4-, btrfs- eller XFS-disk på en Mac",
+      "description": "macOS läser varken ext4, btrfs eller XFS och erbjuder sig att radera disken. Här är varför, och hur du öppnar en Linux-disk på en Mac, LUKS inräknat.",
+      "lead": "Du ansluter en disk från en Linux-maskin och Finder erbjuder sig att radera den. Här är varför, och hur du läser den i stället.",
+      "sections": [
+        {
+          "heading": "Varför en Mac inte kan läsa disken",
+          "paragraphs": [
+            "Varje disk har ett filsystem: den ordning som håller reda på var varje fil börjar, vad den heter, och vilka delar av skivan som fortfarande är lediga. Windows använder NTFS. macOS använder APFS. Linux använder oftast ext4, och ibland btrfs eller XFS.",
+            "Filerna i sig är alldeles vanliga. Det som skiljer är registret framför dem, och en dator som inte kan läsa registret har inget sätt att hitta något, trots att allt fortfarande finns kvar."
+          ]
+        },
+        {
+          "heading": "Vad som händer när du ansluter en till en Mac",
+          "paragraphs": [
+            "Finder säger att skivan inte går att läsa och erbjuder sig att radera den. Det är samma meddelande som macOS ger för en tom skiva och för en som håller på att gå sönder, så meddelandet ger dig inget sätt att se att disken är hel.",
+            "macOS har stöd för sina egna filsystem och för några få vanliga som exFAT. Linux filsystem hör inte dit, så en ext4-disk ser ut som en tom skiva för macOS."
+          ]
+        },
+        {
+          "heading": "Hur Lukotta läser den",
+          "paragraphs": [
+            "Lukotta startar ett litet Linux-system i bakgrunden och ger det disken. Linux läser ext4, btrfs och XFS på egen hand, så disken öppnas där utan någon omvandling, och Lukotta skickar den vidare till Finder.",
+            "Ingenting skrivs till disken, och den beter sig som vanligt när den sätts tillbaka i Linux-maskinen."
+          ]
+        },
+        {
+          "heading": "Vad Lukotta läser",
+          "paragraphs": [
+            "ext2, ext3 och ext4, som täcker de flesta Linux-system. btrfs, standarden på Fedora och openSUSE. XFS, vanlig på servrar.",
+            "Krypterad eller inte. Är disken uppsatt med LVM, som delar en fysisk disk i flera volymer, öppnas de allihop tillsammans i stället för en i taget."
+          ]
+        },
+        {
+          "heading": "Öppna disken",
+          "list": [
+            "Anslut disken. Lukotta visar vad som finns på den.",
+            "Är den krypterad, skriv lösenfrasen.",
+            "Disken dyker upp i Finder under Platser."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Om den frågar efter en lösenfras",
+          "paragraphs": [
+            "LUKS är sättet Linux krypterar en hel disk på. Frågar maskinen som disken kommer från efter en lösenfras tidigt i starten, före inloggningsskärmen, då är det LUKS, och det är den lösenfrasen du ska skriva här.",
+            "Den är en annan än inloggningslösenordet, även om många sätter båda till samma sak."
+          ]
+        },
+        {
+          "heading": "Diskar som inte går att öppna",
+          "paragraphs": [
+            "En LUKS-disk kan sättas upp med sin header sparad någon annanstans, på en annan skiva eller ett USB-minne. Headern är den del som beskriver krypteringen. Utan den finns det ingenting på disken att låsa upp.",
+            "Nyare Ubuntu-installationer kan också knyta nyckeln till ett chip inuti maskinen, på samma sätt som BitLocker gör. Sådana diskar öppnas bara i den dator de kommer från."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "skriva-till-ntfs-disk-pa-mac",
+      "title": "Skriv till en NTFS-disk på en Mac",
+      "description": "macOS öppnar NTFS-diskar skrivskyddade, så filer kopieras från dem men inte till dem. Här är varför, och hur du skriver till en NTFS-disk på en Mac.",
+      "lead": "Med macOS kan du kopiera filer från en NTFS-disk, men inte till den. Här är varför, och vad du kan göra åt det.",
+      "sections": [
+        {
+          "heading": "Vad NTFS är",
+          "paragraphs": [
+            "NTFS är det filsystem Windows använder, både till sin egen disk och till externa diskar som formaterats på en PC. En USB-disk som formaterats på en Windows-maskin är oftast NTFS.",
+            "Det andra vanliga är exFAT, som de flesta minneskort och många USB-minnen använder eftersom både Windows och macOS kan skriva till det. Är din disk exFAT klarar macOS redan av den och inget av det här gäller. Klicka på disken i Finder för att se efter, och välj ”Arkiv” och sedan ”Visa info”. Raden ”Format” säger det."
+          ]
+        },
+        {
+          "heading": "Vad som händer när du ansluter en till en Mac",
+          "paragraphs": [
+            "Disken dyker upp i Finder och du ser filerna. Att kopiera filer från den fungerar som vanligt. Att kopiera något till den gör det inte: Finder vägrar, och disken beter sig som om den vore låst.",
+            "macOS öppnar NTFS-diskar skrivskyddade. Systemet har kunnat skriva NTFS i åratal, men det är avstängt och det finns inget sätt att slå på det som stöds. Att skriva NTFS är svårare än att läsa det, och ett misstag kan lämna en disk som Windows sedan vägrar öppna."
+          ]
+        },
+        {
+          "heading": "Hur Lukotta skriver till den",
+          "paragraphs": [
+            "Lukotta öppnar disken med NTFS-drivrutinen från Linux, som skriver, och som Linux-maskiner använder varje dag. Disken lämnas sedan till Finder, så att kopiera filer till den fungerar som all annan kopiering.",
+            "Disken fortsätter att vara NTFS, och Windows läser den efteråt."
+          ]
+        },
+        {
+          "heading": "Öppna disken",
+          "list": [
+            "Anslut disken. Lukotta visar den i listan.",
+            "Klicka på den.",
+            "Den dyker upp i Finder under Platser, och filer kopieras åt båda hållen."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "En NTFS-disk har oftast inget lösenord, så det finns inget att skriva om inte BitLocker också är påslaget."
+          ]
+        },
+        {
+          "heading": "Diskar som Windows inte stängt ordentligt",
+          "paragraphs": [
+            "Windows märker en disk som inte ordentligt stängd när en skrivning avbröts, oftast för att disken drogs ur eller maskinen förlorade strömmen mitt i. Märkningen varnar nästa dator som öppnar den för att disken kan vara till hälften skriven och bör kontrolleras.",
+            "Snabbstart lämnar samma märkning även när ingenting har gått fel. Den är påslagen från början i Windows 10 och 11. I stället för att stänga av maskinen försätter den den i viloläge, vilket får disken att se ut som om den fortfarande används.",
+            "macOS vägrar en disk i båda tillstånden och anger inget skäl. Lukotta öppnar den.",
+            "Har du kvar Windows-maskinen är den snyggare lösningen att ansluta disken igen och stänga av den maskinen ordentligt: håll ned Skift medan du klickar på ”Avsluta”, det hoppar över Snabbstart."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "oppna-vmdk-vdi-vhd-fil-pa-mac",
+      "title": "Öppna en VMDK-, VDI- eller VHD-fil på en Mac",
+      "description": "Öppna en VMDK-, VDI-, VHD- eller qcow2-fil på en Mac och kopiera filer ur den, utan att installera VMware eller VirtualBox eller starta maskinen.",
+      "lead": "En virtuell maskin håller hela sin skiva inuti en enda fil. Den filen kan du öppna på en Mac och hämta saker ur utan att någonsin starta maskinen.",
+      "sections": [
+        {
+          "heading": "Vad en skivavbild är",
+          "paragraphs": [
+            "När du kör en virtuell maskin är maskinens hårddisk en enda vanlig fil som ligger på din Mac. Dess operativsystem, dess program och varje dokument i den ligger allihop inuti den enda filen.",
+            "Varje program skriver den filen på sitt eget sätt. VMware använder VMDK, VirtualBox använder VDI, Hyper-V använder VHD och VHDX, och QEMU och UTM använder qcow2. En rå avbild, oftast med ändelsen .img, är en rak kopia av en skiva utan något runtom."
+          ]
+        },
+        {
+          "heading": "Varför det är omständligt att få ut en fil",
+          "paragraphs": [
+            "Den vanliga vägen är att starta den virtuella maskinen, vänta tills den är uppe, leta rätt på filen inuti den och kopiera över den. Det betyder att maskinen fortfarande måste fungera, och att programmet som kör den fortfarande måste vara installerat.",
+            "Finder hjälper inte heller här. Ett dubbelklick på en VMDK gör ingenting, för macOS vet inte vad som finns inuti den."
+          ]
+        },
+        {
+          "heading": "Hur Lukotta öppnar den",
+          "paragraphs": [
+            "Lukotta läser skivavbilden direkt. Programmet listar ut vilket format filen har, hittar skivan inuti den, och öppnar den i det lilla Linux-system det kör i bakgrunden. Det som finns inuti dyker sedan upp i Finder som en vanlig skiva.",
+            "Den virtuella maskinen förblir avstängd. VMware och VirtualBox behöver inte vara installerade, och att öppna filen ändrar den inte."
+          ]
+        },
+        {
+          "heading": "Vilka filer Lukotta öppnar",
+          "list": [
+            "qcow2, från QEMU och UTM.",
+            "VMDK, från VMware.",
+            "VDI, från VirtualBox.",
+            "VHD och VHDX, från Hyper-V.",
+            "Råa avbilder, oftast med ändelsen .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Öppna en",
+          "list": [
+            "Välj ”Arkiv” och sedan ”Öppna skivavbild”, och leta rätt på filen.",
+            "Är skivan inuti krypterad, skriv lösenordet eller lösenfrasen.",
+            "Innehållet dyker upp i Finder under Platser."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "En fil rymmer ofta flera diskar",
+          "paragraphs": [
+            "En skivavbild innehåller oftast mer än en partition: en liten startpartition, den stora där allt ligger, och ibland en återställningspartition. Lukotta visar dem i listan och du öppnar den du behöver, på samma sätt som du väljer en disk."
+          ]
+        },
+        {
+          "heading": "Kopiera filer in i en skivavbild",
+          "paragraphs": [
+            "qcow2 skrivs på vanligt sätt och är säker att skriva till.",
+            "VMDK, VDI och VHD går att skriva till, men det är nytt arbete och har inte använts länge nog för att anförtro det något du inte har råd att förlora. Kopiera filen och arbeta på kopian, eller öppna den skrivskyddad och hämta ut filer i stället.",
+            "VHDX öppnas skrivskyddad, och det gör även den sortens VMDK som ligger inuti en OVA-fil. Den sorten skrivs igenom i en enda omgång och går inte att ändra på plats efteråt."
+          ]
+        },
+        {
+          "heading": "Filer som inte går att öppna",
+          "paragraphs": [
+            "En skivavbild öppnas bara om den är fullständig i sig själv.",
+            "En kedja av ögonblicksbilder från VMware fördelar maskinens nuvarande tillstånd över en ursprunglig fil och en rad mindre som håller reda på vad som ändrats efteråt. En delad skiva delar upp en skivavbild i många bitar. En differensdisk från Hyper-V rymmer bara skillnaderna mot en annan fil.",
+            "I vart och ett av fallen är filen du har en del av en uppsättning, och Lukotta öppnar en fil i taget."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Mer om BitLocker-diskar, och vad du gör om lösenordet är borta",
+    "ntfs": "Mer om NTFS-diskar, även sådana som Windows inte stängt ordentligt",
+    "linux": "Mer om Linux-diskar och LUKS-kryptering",
+    "disk-images": "Mer om skivavbilder, och vilka som går att skriva till"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

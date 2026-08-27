@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "nb",
+    "name": "Norwegian (Bokmål)",
+    "native": "Norsk bokmål",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Det er gratis å laste ned og bruke."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "apne-bitlocker-stasjon-pa-mac",
+      "title": "Åpne en BitLocker-stasjon på en Mac",
+      "description": "macOS åpner ikke en BitLocker-stasjon og tilbyr i stedet å slette den. Her er hvorfor, og hvordan du leser stasjonen og kopierer filer til den.",
+      "lead": "Du kobler til en BitLocker-stasjon på en Mac, og Finder tilbyr å slette den. Her er hvorfor, og hvordan du leser stasjonen i stedet.",
+      "sections": [
+        {
+          "heading": "Hva BitLocker er",
+          "paragraphs": [
+            "BitLocker er krypteringen som er innebygd i Windows. Når den er slått på, blir alt som skrives til stasjonen stokket om, og innholdet er ikke leselig uten passordet. Windows bruker den på sin egen stasjon, og på USB-stasjoner og minnekort, der den heter BitLocker To Go.",
+            "Det er den samme krypteringen i begge tilfeller. Blir stasjonen borte, kan ikke den som finner den lese noe på den."
+          ]
+        },
+        {
+          "heading": "Hva som skjer når du kobler en til en Mac",
+          "paragraphs": [
+            "Finder sier at disken ikke er leselig, og tilbyr å klargjøre eller slette den. Den spør ikke om noe passord, og ingenting på skjermen tyder på at stasjonen er låst og ikke ødelagt.",
+            "Stasjonen er ikke skadet. macOS har sin egen kryptering, FileVault, og forstår ikke BitLocker i det hele tatt. Den leser begynnelsen av stasjonen, finner en oppbygning den ikke kjenner igjen, og behandler disken som uformatert, så det eneste den kan tilby er å slette den."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta åpner den",
+          "paragraphs": [
+            "Linux har kunnet lese BitLocker i årevis, og det er det Lukotta bruker. Programmet starter et lite Linux-system i bakgrunnen, gir det stasjonen og låser den opp der inne med passordet du skriver. Den opplåste stasjonen går tilbake til Finder, der den dukker opp under Plasseringer ved siden av de andre diskene dine.",
+            "Stasjonen blir verken gjort om eller kopiert. Den fortsetter å være en BitLocker-stasjon, fortsatt kryptert, og Windows leser den fremdeles."
+          ]
+        },
+        {
+          "heading": "Åpne stasjonen",
+          "list": [
+            "Koble til stasjonen. Lukotta viser den i listen og merker den som låst.",
+            "Klikk på den, og skriv passordet du bruker i Windows.",
+            "Stasjonen dukker opp i Finder under Plasseringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Hvis du ikke har passordet",
+          "paragraphs": [
+            "Da stasjonen ble kryptert, laget Windows en gjenopprettingsnøkkel og spurte hvor den skulle oppbevares. Den åpner stasjonen i stedet for passordet. Den er på 48 sifre, i åtte grupper på seks:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Den kan ligge i en Microsoft-konto, i en tekstfil, eller være skrevet ut på papir. Lim den inn der passordet ellers skulle stått.",
+            "Uten passordet eller nøkkelen kan ikke stasjonen åpnes av noe program, på noen maskin."
+          ]
+        },
+        {
+          "heading": "Stasjoner som ikke lar seg åpne på en Mac",
+          "paragraphs": [
+            "Noen Windows-PC-er spør aldri om passord. De oppbevarer nøkkelen i en brikke på hovedkortet, kalt en TPM, og låser opp stasjonen av seg selv når den maskinen starter.",
+            "En stasjon som er satt opp slik, virker bare i den PC-en den kommer fra, for nøkkelen forlater den aldri. Ingen Mac kan åpne den, og det kan ikke en annen PC heller. Ble det lagret en gjenopprettingsnøkkel da stasjonen ble kryptert, åpner den den fortsatt."
+          ]
+        },
+        {
+          "heading": "Kopiere filer til stasjonen",
+          "paragraphs": [
+            "BitLocker-stasjoner åpnes både for lesing og skriving, så en Mac kan legge filer til en Windows-sikkerhetskopi og ikke bare hente filer fra den.",
+            "Lukotta kan også åpne stasjonen skrivebeskyttet, noe som er verdt å gjøre når du redder filer fra en stasjon som har vært ustabil. Da kan ingenting skrives til den."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "lese-ext4-stasjon-pa-mac",
+      "title": "Les en ext4-, btrfs- eller XFS-stasjon på en Mac",
+      "description": "macOS leser verken ext4, btrfs eller XFS og tilbyr å slette stasjonen. Her er hvorfor, og hvordan du åpner en Linux-stasjon på en Mac, LUKS medregnet.",
+      "lead": "Du kobler til en stasjon fra en Linux-maskin, og Finder tilbyr å slette den. Her er hvorfor, og hvordan du leser den i stedet.",
+      "sections": [
+        {
+          "heading": "Hvorfor en Mac ikke kan lese stasjonen",
+          "paragraphs": [
+            "Hver stasjon har et filsystem: ordningen som holder rede på hvor hver fil begynner, hva den heter, og hvilke deler av disken som fortsatt er ledige. Windows bruker NTFS. macOS bruker APFS. Linux bruker som regel ext4, og noen ganger btrfs eller XFS.",
+            "Filene i seg selv er helt vanlige. Det som er forskjellig, er registeret foran dem, og en maskin som ikke kan lese registeret har ingen måte å finne noe på, selv om alt fortsatt ligger der."
+          ]
+        },
+        {
+          "heading": "Hva som skjer når du kobler en til en Mac",
+          "paragraphs": [
+            "Finder sier at disken ikke er leselig, og tilbyr å slette den. Det er den samme meldingen macOS gir for en tom disk og for en som holder på å svikte, så meldingen gir deg ingen måte å se at stasjonen er i orden.",
+            "macOS støtter sine egne filsystemer og noen få utbredte som exFAT. Filsystemene til Linux er ikke blant dem, så en ext4-stasjon ser ut som en tom disk for macOS."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta leser den",
+          "paragraphs": [
+            "Lukotta starter et lite Linux-system i bakgrunnen og gir det stasjonen. Linux leser ext4, btrfs og XFS på egen hånd, så stasjonen åpner seg der uten noen omgjøring, og Lukotta sender den videre til Finder.",
+            "Ingenting blir skrevet til stasjonen, og den oppfører seg som normalt når den settes tilbake i Linux-maskinen."
+          ]
+        },
+        {
+          "heading": "Hva Lukotta leser",
+          "paragraphs": [
+            "ext2, ext3 og ext4, som dekker de fleste Linux-systemer. btrfs, standarden på Fedora og openSUSE. XFS, utbredt på tjenere.",
+            "Kryptert eller ikke. Er stasjonen satt opp med LVM, som deler én fysisk stasjon i flere volumer, åpner de seg alle sammen i stedet for ett om gangen."
+          ]
+        },
+        {
+          "heading": "Åpne stasjonen",
+          "list": [
+            "Koble til stasjonen. Lukotta viser hva som ligger på den.",
+            "Er den kryptert, skriv passordfrasen.",
+            "Stasjonen dukker opp i Finder under Plasseringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Hvis den spør om en passordfrase",
+          "paragraphs": [
+            "LUKS er måten Linux krypterer en hel stasjon på. Spør maskinen denne stasjonen kommer fra om en passordfrase tidlig i oppstarten, før påloggingsskjermen, så er det LUKS, og det er den passordfrasen du skal skrive her.",
+            "Den er noe annet enn påloggingspassordet, selv om mange setter begge til det samme."
+          ]
+        },
+        {
+          "heading": "Stasjoner som ikke lar seg åpne",
+          "paragraphs": [
+            "En LUKS-stasjon kan settes opp med headeren lagret et annet sted, på en annen disk eller en USB-pinne. Headeren er den delen som beskriver krypteringen. Uten den er det ingenting på stasjonen å låse opp.",
+            "Nyere Ubuntu-installasjoner kan også knytte nøkkelen til en brikke inni maskinen, på samme måte som BitLocker gjør. Slike stasjoner åpner seg bare i maskinen de kommer fra."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "skrive-til-ntfs-stasjon-pa-mac",
+      "title": "Skriv til en NTFS-stasjon på en Mac",
+      "description": "macOS åpner NTFS-stasjoner skrivebeskyttet, så filer kopieres fra dem, men ikke til dem. Her er hvorfor, og hvordan du skriver til en NTFS-stasjon.",
+      "lead": "Med macOS kan du kopiere filer fra en NTFS-stasjon, men ikke til den. Her er hvorfor, og hva du kan gjøre med det.",
+      "sections": [
+        {
+          "heading": "Hva NTFS er",
+          "paragraphs": [
+            "NTFS er filsystemet Windows bruker, både til sin egen stasjon og til eksterne stasjoner som er formatert på en PC. En USB-stasjon som er formatert på en Windows-maskin, er som regel NTFS.",
+            "Det andre utbredte er exFAT, som de fleste minnekort og mange USB-pinner bruker fordi både Windows og macOS kan skrive til det. Er stasjonen din exFAT, håndterer macOS den allerede, og ingenting av dette gjelder. Klikk på stasjonen i Finder for å sjekke, og velg «Arkiv» og så «Vis info». Linjen «Format» sier det."
+          ]
+        },
+        {
+          "heading": "Hva som skjer når du kobler en til en Mac",
+          "paragraphs": [
+            "Stasjonen dukker opp i Finder, og du ser filene. Å kopiere filer fra den går som normalt. Å kopiere noe til den går ikke: Finder nekter, og stasjonen oppfører seg som om den var låst.",
+            "macOS åpner NTFS-stasjoner skrivebeskyttet. Systemet har kunnet skrive NTFS i årevis, men det er slått av, og det finnes ingen støttet måte å slå det på. Å skrive NTFS er vanskeligere enn å lese det, og en feil kan etterlate en stasjon som Windows deretter nekter å åpne."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta skriver til den",
+          "paragraphs": [
+            "Lukotta åpner stasjonen med NTFS-driveren fra Linux, som skriver, og som Linux-maskiner bruker hver dag. Stasjonen gis så til Finder, slik at det å kopiere filer til den går som all annen kopiering.",
+            "Stasjonen fortsetter å være NTFS, og Windows leser den etterpå."
+          ]
+        },
+        {
+          "heading": "Åpne stasjonen",
+          "list": [
+            "Koble til stasjonen. Lukotta viser den i listen.",
+            "Klikk på den.",
+            "Den dukker opp i Finder under Plasseringer, og filer kopieres begge veier."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "En NTFS-stasjon har som regel ikke noe passord, så det er ingenting å skrive med mindre BitLocker også er slått på."
+          ]
+        },
+        {
+          "heading": "Stasjoner Windows ikke lukket ordentlig",
+          "paragraphs": [
+            "Windows merker en stasjon som ikke lukket når en skriving ble avbrutt, som regel fordi stasjonen ble trukket ut eller maskinen mistet strømmen underveis. Merket advarer den neste maskinen som åpner den om at stasjonen kan være halvveis skrevet og bør sjekkes.",
+            "Hurtigoppstart legger igjen det samme merket selv når ingenting har gått galt. Den er slått på fra før i Windows 10 og 11. I stedet for å slå av maskinen setter den den i dvale, noe som får stasjonen til å se ut som om den fortsatt er i bruk.",
+            "macOS nekter en stasjon i begge tilstander og oppgir ingen grunn. Lukotta åpner den.",
+            "Har du fortsatt Windows-maskinen, er den ryddigere løsningen å koble stasjonen til igjen og slå av den maskinen ordentlig: hold Skift nede mens du klikker på «Avslutt», det hopper over Hurtigoppstart."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "apne-vmdk-vdi-vhd-fil-pa-mac",
+      "title": "Åpne en VMDK-, VDI- eller VHD-fil på en Mac",
+      "description": "Åpne en VMDK-, VDI-, VHD- eller qcow2-fil på en Mac og kopier filer ut av den, uten å installere VMware eller VirtualBox eller starte maskinen.",
+      "lead": "En virtuell maskin holder hele disken sin inne i én enkelt fil. Den filen kan du åpne på en Mac og hente ting ut av uten noen gang å starte maskinen.",
+      "sections": [
+        {
+          "heading": "Hva et diskbilde er",
+          "paragraphs": [
+            "Når du kjører en virtuell maskin, er maskinens harddisk én enkelt vanlig fil som ligger på Macen din. Operativsystemet, programmene og hvert eneste dokument i den ligger alt sammen inne i den ene filen.",
+            "Hvert program skriver den filen på sin egen måte. VMware bruker VMDK, VirtualBox bruker VDI, Hyper-V bruker VHD og VHDX, og QEMU og UTM bruker qcow2. Et rått diskbilde, som regel med endelsen .img, er en rett kopi av en disk uten noe pakket rundt."
+          ]
+        },
+        {
+          "heading": "Hvorfor det er tungvint å få ut en fil",
+          "paragraphs": [
+            "Den vanlige veien er å starte den virtuelle maskinen, vente til den er oppe, finne filen inne i den og kopiere den over. Det betyr at maskinen fortsatt må virke, og at programmet som kjører den fortsatt må være installert.",
+            "Finder hjelper ikke her heller. Et dobbeltklikk på en VMDK gjør ingenting, for macOS vet ikke hva som er inni den."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta åpner den",
+          "paragraphs": [
+            "Lukotta leser diskbildet direkte. Programmet finner ut hvilket format filen er i, finner disken inne i den, og åpner den i det lille Linux-systemet det kjører i bakgrunnen. Det som ligger inni, dukker så opp i Finder som en vanlig disk.",
+            "Den virtuelle maskinen forblir avslått. VMware og VirtualBox trenger ikke være installert, og det å åpne filen endrer den ikke."
+          ]
+        },
+        {
+          "heading": "Hvilke filer Lukotta åpner",
+          "list": [
+            "qcow2, fra QEMU og UTM.",
+            "VMDK, fra VMware.",
+            "VDI, fra VirtualBox.",
+            "VHD og VHDX, fra Hyper-V.",
+            "Rå diskbilder, som regel med endelsen .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Åpne ett",
+          "list": [
+            "Velg «Arkiv» og så «Åpne diskbilde», og finn filen.",
+            "Er disken inni kryptert, skriv passordet eller passordfrasen.",
+            "Innholdet dukker opp i Finder under Plasseringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Én fil rommer ofte flere stasjoner",
+          "paragraphs": [
+            "Et diskbilde inneholder som regel mer enn én partisjon: en liten oppstartspartisjon, den store der alt ligger, og noen ganger en gjenopprettingspartisjon. Lukotta viser dem i listen, og du åpner den du trenger, på samme måte som du velger en stasjon."
+          ]
+        },
+        {
+          "heading": "Kopiere filer inn i et diskbilde",
+          "paragraphs": [
+            "qcow2 skrives på vanlig måte og er trygt å skrive til.",
+            "VMDK, VDI og VHD går det an å skrive til, men det er nytt arbeid og har ikke vært i bruk lenge nok til å betro det noe du ikke har råd til å miste. Kopier filen og arbeid på kopien, eller åpne den skrivebeskyttet og hent ut filer i stedet.",
+            "VHDX åpnes skrivebeskyttet, og det samme gjør den typen VMDK som ligger inne i en OVA-fil. Den typen skrives gjennom i én omgang og kan ikke endres der den ligger etterpå."
+          ]
+        },
+        {
+          "heading": "Filer som ikke lar seg åpne",
+          "paragraphs": [
+            "Et diskbilde åpner seg bare hvis det er fullstendig i seg selv.",
+            "En kjede av øyeblikksbilder fra VMware fordeler maskinens nåværende tilstand over en opprinnelig fil og en rekke mindre som holder rede på hva som ble endret etterpå. En delt disk deler ett diskbilde opp i mange biter. En differansedisk fra Hyper-V rommer bare forskjellene fra en annen fil.",
+            "I hvert av tilfellene er filen du har en del av et sett, og Lukotta åpner én fil om gangen."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Mer om BitLocker-stasjoner, og hva du gjør hvis passordet er borte",
+    "ntfs": "Mer om NTFS-stasjoner, også dem Windows ikke lukket ordentlig",
+    "linux": "Mer om Linux-stasjoner og LUKS-kryptering",
+    "disk-images": "Mer om diskbilder, og hvilke det går an å skrive til"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

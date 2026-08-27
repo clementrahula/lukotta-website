@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "da",
+    "name": "Danish",
+    "native": "Dansk",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Det er gratis at hente og bruge."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "aabn-bitlocker-drev-paa-mac",
+      "title": "Åbn et BitLocker-drev på en Mac",
+      "description": "macOS åbner ikke et BitLocker-drev og tilbyder i stedet at slette det. Her er hvorfor, og hvordan du læser drevet og kopierer filer til det.",
+      "lead": "Du sætter et BitLocker-drev til en Mac, og Finder tilbyder at slette det. Her er hvorfor, og hvordan du læser drevet i stedet.",
+      "sections": [
+        {
+          "heading": "Hvad BitLocker er",
+          "paragraphs": [
+            "BitLocker er den kryptering, der er indbygget i Windows. Når den er slået til, bliver alt, hvad der skrives til drevet, rodet sammen, og indholdet kan ikke læses uden adgangskoden. Windows bruger den på sit eget drev og på USB-drev og hukommelseskort, hvor den hedder BitLocker To Go.",
+            "Det er den samme kryptering i begge tilfælde. Bliver drevet væk, kan den, der finder det, ikke læse noget på det."
+          ]
+        },
+        {
+          "heading": "Hvad der sker, når du sætter et til en Mac",
+          "paragraphs": [
+            "Finder siger, at disken ikke kan læses, og tilbyder at klargøre eller slette den. Der bliver ikke spurgt om en adgangskode, og intet på skærmen antyder, at drevet er låst frem for i stykker.",
+            "Drevet er ikke beskadiget. macOS har sin egen kryptering, FileVault, og forstår slet ikke BitLocker. Den læser begyndelsen af drevet, finder en opbygning, den ikke kender, og behandler disken som uformateret, så det eneste, den kan tilbyde, er at slette den."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta åbner det",
+          "paragraphs": [
+            "Linux har kunnet læse BitLocker i årevis, og det er det, Lukotta bruger. Programmet starter et lille Linux-system i baggrunden, giver det drevet og låser det op derinde med den adgangskode, du skriver. Det oplåste drev går tilbage til Finder, hvor det dukker op under Placeringer ved siden af dine andre diske.",
+            "Drevet bliver hverken lavet om eller kopieret. Det bliver ved med at være et BitLocker-drev, stadig krypteret, og Windows læser det stadig."
+          ]
+        },
+        {
+          "heading": "Åbn drevet",
+          "list": [
+            "Sæt drevet til. Lukotta viser det på listen og markerer det som låst.",
+            "Klik på det, og skriv den adgangskode, du bruger i Windows.",
+            "Drevet dukker op i Finder under Placeringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Hvis du ikke har adgangskoden",
+          "paragraphs": [
+            "Da drevet blev krypteret, lavede Windows en genoprettelsesnøgle og spurgte, hvor den skulle gemmes. Den åbner drevet i stedet for adgangskoden. Den er på 48 cifre i otte grupper à seks:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Den kan ligge i en Microsoft-konto, i en tekstfil eller være skrevet ud på papir. Sæt den ind der, hvor adgangskoden ellers skulle stå.",
+            "Uden adgangskoden eller nøglen kan drevet ikke åbnes af noget program på nogen computer."
+          ]
+        },
+        {
+          "heading": "Drev, der ikke kan åbnes på en Mac",
+          "paragraphs": [
+            "Nogle Windows-pc'er spørger aldrig om en adgangskode. De gemmer nøglen i en chip på bundkortet, kaldet en TPM, og låser drevet op af sig selv, når den maskine starter.",
+            "Et drev, der er sat op sådan, virker kun i den pc, det kommer fra, for nøglen forlader den aldrig. Ingen Mac kan åbne det, og det kan en anden pc heller ikke. Blev der gemt en genoprettelsesnøgle, da drevet blev krypteret, åbner den det stadig."
+          ]
+        },
+        {
+          "heading": "Kopiér filer til drevet",
+          "paragraphs": [
+            "BitLocker-drev åbnes til både læsning og skrivning, så en Mac kan lægge filer til en Windows-sikkerhedskopi frem for kun at hente filer fra den.",
+            "Lukotta kan også åbne drevet skrivebeskyttet, hvilket er værd at gøre, når du redder filer fra et drev, der har drillet. Så kan der ikke skrives noget til det."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "laes-ext4-drev-paa-mac",
+      "title": "Læs et ext4-, btrfs- eller XFS-drev på en Mac",
+      "description": "macOS kan ikke læse ext4, btrfs eller XFS og tilbyder at slette drevet. Her er hvorfor, og hvordan du åbner et Linux-drev på en Mac, LUKS med.",
+      "lead": "Du sætter et drev fra en Linux-maskine til, og Finder tilbyder at slette det. Her er hvorfor, og hvordan du læser det i stedet.",
+      "sections": [
+        {
+          "heading": "Hvorfor en Mac ikke kan læse drevet",
+          "paragraphs": [
+            "Ethvert drev har et filsystem: den orden, der holder styr på, hvor hver fil begynder, hvad den hedder, og hvilke dele af disken der stadig er ledige. Windows bruger NTFS. macOS bruger APFS. Linux bruger som regel ext4 og somme tider btrfs eller XFS.",
+            "Filerne i sig selv er helt almindelige. Det, der er forskelligt, er registret foran dem, og en computer, der ikke kan læse registret, har ingen måde at finde noget på, selvom det hele stadig er der."
+          ]
+        },
+        {
+          "heading": "Hvad der sker, når du sætter et til en Mac",
+          "paragraphs": [
+            "Finder siger, at disken ikke kan læses, og tilbyder at slette den. Det er den samme besked, macOS giver ved en tom disk og ved en, der er ved at gå i stykker, så beskeden giver dig ingen måde at se på, at drevet er i orden.",
+            "macOS understøtter sine egne filsystemer og nogle få udbredte som exFAT. Linux-filsystemerne er ikke blandt dem, så et ext4-drev ligner en tom disk for macOS."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta læser det",
+          "paragraphs": [
+            "Lukotta starter et lille Linux-system i baggrunden og giver det drevet. Linux læser selv ext4, btrfs og XFS, så drevet åbner derinde uden nogen omdannelse, og Lukotta sender det videre til Finder.",
+            "Der bliver ikke skrevet noget til drevet, og det opfører sig normalt, når det kommer tilbage i Linux-maskinen."
+          ]
+        },
+        {
+          "heading": "Hvad Lukotta læser",
+          "paragraphs": [
+            "ext2, ext3 og ext4, som dækker de fleste Linux-systemer. btrfs, standarden på Fedora og openSUSE. XFS, udbredt på servere.",
+            "Krypteret eller ej. Er drevet sat op med LVM, som deler ét fysisk drev op i flere enheder, åbner de alle sammen frem for én ad gangen."
+          ]
+        },
+        {
+          "heading": "Åbn drevet",
+          "list": [
+            "Sæt drevet til. Lukotta viser, hvad der er på det.",
+            "Er det krypteret, så skriv adgangssætningen.",
+            "Drevet dukker op i Finder under Placeringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Hvis der bliver spurgt om en adgangssætning",
+          "paragraphs": [
+            "LUKS er den måde, Linux krypterer et helt drev på. Spørger den maskine, drevet kommer fra, om en adgangssætning tidligt i opstarten, før logindskærmen, så er det LUKS, og det er den adgangssætning, du skal skrive her.",
+            "Den er en anden end logindadgangskoden, selvom mange sætter begge to til det samme."
+          ]
+        },
+        {
+          "heading": "Drev, der ikke kan åbnes",
+          "paragraphs": [
+            "Et LUKS-drev kan sættes op, så dets header ligger et andet sted, på en anden disk eller en USB-nøgle. Headeren er den del, der beskriver krypteringen. Uden den er der ikke noget på drevet at låse op.",
+            "Nyere Ubuntu-installationer kan også binde nøglen til en chip inde i maskinen, på samme måde som BitLocker gør. Sådanne drev åbner kun i den computer, de kommer fra."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "skriv-til-ntfs-drev-paa-mac",
+      "title": "Skriv til et NTFS-drev på en Mac",
+      "description": "macOS åbner NTFS-drev skrivebeskyttet, så filer kan kopieres fra dem, men ikke til dem. Her er hvorfor, og hvordan du skriver til et NTFS-drev på en Mac.",
+      "lead": "Med macOS kan du kopiere filer fra et NTFS-drev, men ikke til det. Her er hvorfor, og hvad du kan gøre ved det.",
+      "sections": [
+        {
+          "heading": "Hvad NTFS er",
+          "paragraphs": [
+            "NTFS er det filsystem, Windows bruger, både til sit eget drev og til eksterne drev, der er formateret på en pc. Et USB-drev, der er formateret på en Windows-maskine, er som regel NTFS.",
+            "Det andet udbredte er exFAT, som de fleste hukommelseskort og mange USB-nøgler bruger, fordi både Windows og macOS kan skrive til det. Er dit drev exFAT, klarer macOS det allerede, og intet af dette gælder. Klik på drevet i Finder for at se efter, og vælg “Arkiv” og så “Vis info”. Linjen “Format” siger det."
+          ]
+        },
+        {
+          "heading": "Hvad der sker, når du sætter et til en Mac",
+          "paragraphs": [
+            "Drevet dukker op i Finder, og du kan se filerne. At kopiere filer fra det virker som normalt. At kopiere noget til det gør ikke: Finder nægter, og drevet opfører sig, som var det låst.",
+            "macOS åbner NTFS-drev skrivebeskyttet. Systemet har kunnet skrive NTFS i årevis, men det er slået fra, og der er ingen understøttet måde at slå det til på. Det er sværere at skrive NTFS end at læse det, og en fejl kan efterlade et drev, som Windows bagefter nægter at åbne."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta skriver til det",
+          "paragraphs": [
+            "Lukotta åbner drevet med NTFS-driveren fra Linux, som kan skrive, og som Linux-maskiner bruger hver dag. Drevet bliver derefter givet til Finder, så det at kopiere filer til det virker som al anden kopiering.",
+            "Drevet bliver ved med at være NTFS, og Windows læser det bagefter."
+          ]
+        },
+        {
+          "heading": "Åbn drevet",
+          "list": [
+            "Sæt drevet til. Lukotta viser det på listen.",
+            "Klik på det.",
+            "Det dukker op i Finder under Placeringer, og filer kan kopieres begge veje."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Et NTFS-drev har som regel ingen adgangskode, så der er ikke noget at skrive, medmindre BitLocker også er slået til."
+          ]
+        },
+        {
+          "heading": "Drev, Windows ikke har lukket ordentligt ned",
+          "paragraphs": [
+            "Windows markerer et drev som ikke lukket ordentligt, når en skrivning blev afbrudt, som regel fordi drevet blev trukket ud, eller maskinen mistede strømmen undervejs. Markeringen advarer den næste computer, der åbner det, om at drevet kan være halvt skrevet og bør efterses.",
+            "Hurtig start efterlader den samme markering, også når intet er gået galt. Den er slået til fra starten i Windows 10 og 11. I stedet for at lukke maskinen ned sætter den den i dvale, hvilket får drevet til at se ud, som var det stadig i brug.",
+            "macOS nægter et drev i begge tilstande og siger ikke hvorfor. Lukotta åbner det.",
+            "Har du stadig Windows-maskinen, er den pænere løsning at sætte drevet i igen og lukke den maskine ordentligt ned: hold Skift nede, mens du klikker på “Luk ned”, det springer Hurtig start over."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "aabn-vmdk-vdi-vhd-fil-paa-mac",
+      "title": "Åbn en VMDK-, VDI- eller VHD-fil på en Mac",
+      "description": "Åbn en VMDK-, VDI-, VHD- eller qcow2-fil på en Mac, og kopiér filer ud af den, uden at installere VMware eller VirtualBox eller starte maskinen.",
+      "lead": "En virtuel maskine holder hele sin disk inde i én enkelt fil. Den fil kan du åbne på en Mac og tage ting ud af uden nogensinde at starte maskinen.",
+      "sections": [
+        {
+          "heading": "Hvad et diskbillede er",
+          "paragraphs": [
+            "Når du kører en virtuel maskine, er maskinens harddisk én enkelt almindelig fil, der ligger på din Mac. Dens styresystem, dens programmer og hvert eneste dokument i den ligger alt sammen inde i den ene fil.",
+            "Hvert program skriver den fil på sin egen måde. VMware bruger VMDK, VirtualBox bruger VDI, Hyper-V bruger VHD og VHDX, og QEMU og UTM bruger qcow2. Et råt diskbillede, som regel med endelsen .img, er en lige kopi af en disk uden noget viklet omkring."
+          ]
+        },
+        {
+          "heading": "Hvorfor det er besværligt at få en fil ud",
+          "paragraphs": [
+            "Den sædvanlige vej er at starte den virtuelle maskine, vente på at den kommer op, finde filen inde i den og kopiere den over. Det betyder, at maskinen stadig skal virke, og at det program, der kører den, stadig skal være installeret.",
+            "Finder hjælper heller ikke her. Et dobbeltklik på en VMDK gør ingenting, for macOS ved ikke, hvad der er inde i den."
+          ]
+        },
+        {
+          "heading": "Hvordan Lukotta åbner den",
+          "paragraphs": [
+            "Lukotta læser diskbilledet direkte. Programmet finder ud af, hvilket format filen er i, finder disken inde i den og åbner den i det lille Linux-system, det kører i baggrunden. Det, der er indeni, dukker så op i Finder som en almindelig disk.",
+            "Den virtuelle maskine bliver ved med at være slukket. VMware og VirtualBox behøver ikke være installeret, og det at åbne filen ændrer den ikke."
+          ]
+        },
+        {
+          "heading": "Hvilke filer Lukotta åbner",
+          "list": [
+            "qcow2, fra QEMU og UTM.",
+            "VMDK, fra VMware.",
+            "VDI, fra VirtualBox.",
+            "VHD og VHDX, fra Hyper-V.",
+            "Rå diskbilleder, som regel med endelsen .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Åbn et",
+          "list": [
+            "Vælg “Arkiv” og så “Åbn diskbillede”, og find filen.",
+            "Er disken indeni krypteret, så skriv adgangskoden eller adgangssætningen.",
+            "Indholdet dukker op i Finder under Placeringer."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Én fil rummer ofte flere drev",
+          "paragraphs": [
+            "Et diskbillede rummer som regel mere end én partition: en lille startpartition, den store, hvor alt ligger, og somme tider en genoprettelsespartition. Lukotta viser dem på listen, og du åbner den, du har brug for, på samme måde som du vælger et drev."
+          ]
+        },
+        {
+          "heading": "Kopiér filer ind i et diskbillede",
+          "paragraphs": [
+            "qcow2 bliver skrevet på den almindelige måde og er sikkert at skrive til.",
+            "VMDK, VDI og VHD kan der skrives til, men det er nyt arbejde og har ikke været i brug længe nok til at betro det noget, du ikke har råd til at miste. Kopiér filen og arbejd på kopien, eller åbn den skrivebeskyttet og tag filer ud i stedet.",
+            "VHDX åbnes skrivebeskyttet, og det samme gør den slags VMDK, der ligger inde i en OVA-fil. Den slags bliver skrevet igennem i ét stræk og kan ikke laves om bagefter, hvor den ligger."
+          ]
+        },
+        {
+          "heading": "Filer, der ikke kan åbnes",
+          "paragraphs": [
+            "Et diskbillede åbner kun, hvis det er helt i sig selv.",
+            "En kæde af øjebliksbilleder fra VMware fordeler maskinens nuværende tilstand over en oprindelig fil og en række mindre, der holder styr på, hvad der er lavet om bagefter. En opdelt disk deler ét diskbillede op i mange stykker. En forskelsdisk fra Hyper-V rummer kun forskellene fra en anden fil.",
+            "I hvert af tilfældene er den fil, du har, en del af et sæt, og Lukotta åbner én fil ad gangen."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Mere om BitLocker-drev, og hvad du gør, hvis adgangskoden er væk",
+    "ntfs": "Mere om NTFS-drev, også dem Windows ikke har lukket ordentligt",
+    "linux": "Mere om Linux-drev og LUKS-kryptering",
+    "disk-images": "Mere om diskbilleder, og hvilke der kan skrives til"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}
