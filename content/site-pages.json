@@ -9,7 +9,7 @@
       "slug": "about",
       "title": "About Lukotta",
       "description": "Lukotta is a free, open-source macOS app that opens BitLocker, NTFS and Linux drives. Written by Clement Rahula under the GNU General Public License.",
-      "lead": "Lukotta opens drives and disk images that macOS cannot read. It is free, open source, and written by one person.",
+      "lead": "Lukotta opens drives and disk images that macOS cannot read. It is free, open source, and maintained by one person.",
       "sections": [
         {
           "heading": "What it is",
@@ -19,17 +19,17 @@
           ]
         },
         {
-          "heading": "Who makes it",
+          "heading": "Who maintains it",
           "paragraphs": [
-            "Clement Rahula. There is no company, no investors and no team.",
-            "Replies can be slow and there is no support line."
+            "A single developer, rahula.dev. There is no company, no investors and no team."
           ]
         },
         {
           "heading": "Why it exists",
           "paragraphs": [
             "Plug a BitLocker drive into a Mac and Finder offers to erase it. It does not ask for a password, and nothing on screen shows that the drive is locked rather than broken.",
-            "Linux could already read these drives. Lukotta puts that together with a Mac interface."
+            "It seemed silly that in this day and age there is no practical way to share an encrypted USB drive between multiple operating systems, so a solution had to be developed.",
+            "The Linux ecosystem already had tools that could read those drives. Lukotta puts that together with a Mac interface."
           ]
         },
         {
@@ -42,14 +42,14 @@
         {
           "heading": "Nothing leaves your Mac",
           "paragraphs": [
-            "Lukotta has no analytics, no telemetry and no crash reporting. There is no sign-in.",
-            "It makes two kinds of network request: it checks for a new version, and it downloads one if you ask. Passwords and recovery keys are used to unlock the drive and are not stored, sent or logged."
+            "Lukotta has no analytics, no telemetry and no crash reporting.",
+            "It makes one kind of network request: it checks for updates and downloads one if you ask. Passwords and recovery keys are used to unlock the drive and are not stored, sent or logged."
           ]
         },
         {
           "heading": "Source code",
           "paragraphs": [
-            "The application, the build scripts, the tests and this website are at github.com/clementrahula/lukotta."
+            "The application source code is at github.com/clementrahula/lukotta."
           ]
         }
       ]
@@ -76,14 +76,13 @@
         {
           "heading": "Anything else",
           "paragraphs": [
-            "Email contact_web@lukotta.com with questions about the software, the licence, the translations or this site.",
-            "This address cannot recover data. If a drive has failed, or both the password and the recovery key are gone, no program can open it."
+            "Email contact_web@lukotta.com with questions about the app."
           ]
         },
         {
           "heading": "How long a reply takes",
           "paragraphs": [
-            "Lukotta is written by one person. There is no support desk and no promised response time. Some messages take a while, and some go unanswered.",
+            "Lukotta is maintained by one person. There is no support desk and no promised response time. Some messages take a while, and some go unanswered.",
             "A GitHub issue is usually faster, because someone else may answer first."
           ]
         }

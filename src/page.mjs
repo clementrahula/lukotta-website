@@ -24,6 +24,7 @@ const autolink = (escaped) =>
   escaped
     .replace(/\bgithub\.com\/[A-Za-z0-9._\/-]*[A-Za-z0-9_\/-]/g,
              (m) => `<a href="https://${m}">${m}</a>`)
+    .replace(/\brahula\.dev\b/g, (m) => `<a href="https://${m}">${m}</a>`)
     .replace(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g,
              (m) => `<a href="mailto:${m}">${m}</a>`);
 
