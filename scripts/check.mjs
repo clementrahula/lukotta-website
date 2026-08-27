@@ -361,14 +361,19 @@ else {
     }
   }
 
-  /* About and Contact exist once each, in English, and are listed with no
-     alternates. They are counted here so that adding a page and forgetting the
-     sitemap still fails, which is the whole point of this check. */
-  const sitePages = ["about", "contact"].filter((slug) =>
-    existsSync(join(OUT, slug, "index.html")));
-  for (const slug of sitePages) {
-    const loc = `${cfg.domain}/${slug}/`;
-    if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
+  /* About and Contact, in every language that has them, each under its own
+     slug. Discovered from the content rather than named here, so a language
+     gaining the pages cannot silently miss the sitemap. */
+  const sitePages = [];
+  for (const lang of cfg.languages) {
+    const file = join(ROOT, "content", "site", `${lang.code}.json`);
+    if (!existsSync(file)) continue;
+    const data = JSON.parse(readFileSync(file, "utf8"));
+    for (const key of data.order) {
+      const loc = `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${data.pages[key].slug}/`;
+      sitePages.push(loc);
+      if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
+    }
   }
 
   const locs = [...xml.matchAll(/<loc>/g)].length;
