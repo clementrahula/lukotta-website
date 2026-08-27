@@ -8,6 +8,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { VERBATIM } from "./verbatim.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
@@ -16,18 +17,6 @@ const english = JSON.parse(readFileSync(join(CONTENT, "en.json"), "utf8")).strin
 
 const PLACEHOLDER = /\{[a-z]+\}/g;
 
-/* Names that stay in Latin script in every language. If the English contains
-   one and the translation does not, it was translated in error. */
-/* Finder is absent by design. Apple translates it in some languages; Chinese
-   macOS calls it 访达. It is covered by GLOSSARY.md instead. */
-const VERBATIM = [
-  "Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "LVM",
-  "ext2", "ext3", "ext4", "btrfs", "XFS", "exFAT", "FAT",
-  "qcow2", "VMDK", "VDI", "VHDX", "VHD", "IMG", "DMG", "OVA",
-  "VMware", "VirtualBox", "Hyper-V", "QEMU", "UTM", "Windows", "Linux",
-  "Apple Silicon", "Sequoia", "GitHub",
-  "Creative Commons Attribution-ShareAlike 4.0",
-];
 
 const asked = process.argv.slice(2);
 const langs = cfg.languages.filter(

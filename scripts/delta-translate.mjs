@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { VERBATIM, survives } from "./verbatim.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
@@ -23,15 +24,6 @@ const WORK = join(ROOT, "dist", "delta");
 
 const NOT_FOUND = Object.keys(english).filter((k) => k.startsWith("notFound."));
 
-/* Names that stay in Latin script whatever the surrounding language. */
-/* Finder is deliberately absent: Apple translates it in some languages, and
-   Chinese macOS calls it 访达. GLOSSARY.md covers it as an apple-term. */
-const VERBATIM = ["Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "APFS", "exFAT",
-  "ext2", "ext3", "ext4", "btrfs", "XFS", "qcow2", "VMDK", "VDI", "VHDX", "VHD",
-  "Windows", "Linux", "GNU General Public License", "SECURITY.md",
-  "llms.txt", "github.com", "rahula.dev"];
-const survives = (term, text) =>
-  new RegExp(`(^|[^A-Za-z0-9])${term.replace(/[.\/]/g, "\\$&")}`, "i").test(text);
 
 /* Every translatable unit of a site page, under an identifier that says where
    it belongs. Derived from the English both when writing the sheet and when

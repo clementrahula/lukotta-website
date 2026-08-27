@@ -10,12 +10,16 @@ import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const src = readFileSync(join(here, "index.js"), "utf8");
+/* The worker's own imports are stripped: this evaluates the module as a data
+   URL, where a relative import has nothing to resolve against, and the two
+   functions under test do not use them. */
+const body = src
+  .slice(0, src.indexOf("export default"))
+  .replace(/^import .*$/gm, "");
+
 const { wantsMarkdown, twinFor } = await import(
   "data:text/javascript," +
-    encodeURIComponent(
-      src.slice(0, src.indexOf("export default")) +
-        "\nexport { wantsMarkdown, twinFor };"
-    )
+    encodeURIComponent(body + "\nexport { wantsMarkdown, twinFor };")
 );
 
 let failed = 0;
@@ -36,6 +40,12 @@ is(wantsMarkdown("TEXT/MARKDOWN"), true, "the header is case-insensitive");
 is(wantsMarkdown("text/markdown;q=0"), false, "q=0 is a refusal, not a preference");
 is(wantsMarkdown("text/markdown;charset=utf-8"), true, "a charset parameter is not a q value");
 is(wantsMarkdown("text/plain"), false, "plain text is not markdown");
+is(wantsMarkdown("text/html, text/markdown;q=0.5"), false,
+   "a caller preferring html over markdown gets html");
+is(wantsMarkdown("text/markdown;q=0.9, text/html;q=0.8"), true,
+   "and one preferring markdown gets markdown");
+is(wantsMarkdown("text/markdown, text/html"), true,
+   "equal preference goes to markdown, since asking for it at all is deliberate");
 
 console.log("\n  Which file is the twin?\n");
 is(twinFor("/"), "/index.md", "the root");
@@ -45,6 +55,8 @@ is(twinFor("/de"), "/de/index.md", "and the same without the trailing slash");
 is(twinFor("/sitemap.xml"), null, "a file the build wrote deliberately is left alone");
 is(twinFor("/llms.txt"), null, "llms.txt is already markdown and is left alone");
 is(twinFor("/styles.abc123.css"), null, "an asset is left alone");
+is(twinFor("/assets/og.png"), null, "and so is everything under /assets/");
+is(twinFor("/assets/fonts/inter-latin.woff2"), null, "however deep it sits");
 
 console.log(failed ? `\n  ${failed} failed\n` : "\n  All passed\n");
 process.exit(failed ? 1 : 0);

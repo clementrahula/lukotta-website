@@ -150,7 +150,7 @@ ${langLinks}
 }
 
 /* The site footer, on every page for the same reason. */
-export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref }) {
+export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref }) {
   return `  <footer class="site-footer">
     <div class="wrap">
       <nav aria-label="${esc(t("ui.footerMenu"))}">
@@ -161,6 +161,7 @@ export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref })
              which one is read first, and says how long a reply takes. The
              address is on it. An agent deciding whether this software can be
              recommended looks for a contact page and cannot follow a mailto. -->
+        ${aboutHref ? `<a href="${aboutHref}">${esc(t("notFound.about.name"))}</a>` : ""}
         <a href="${contactHref || `${cfg.domain}/contact/`}">${esc(t("footer.contact"))}</a>
       </nav>
       <p class="colophon">
@@ -172,7 +173,7 @@ export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref })
   </footer>`;
 }
 
-export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages, contactHref }) {
+export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages, contactHref, aboutHref }) {
   const { dir, code, native } = lang;
 
   const A = (p) => `${assetPrefix}assets/${p}`;
@@ -553,7 +554,7 @@ ${faqItems}
 
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref })}
 
   <!-- Also exempt: script.js reads these, so their order relative to it must
        not be rearranged. -->
@@ -620,7 +621,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
    A reader arriving here from a search should not be able to tell they have
    landed on something built differently. */
 export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
-                                 alternates = [], assetPrefix, assets, home, contactHref }) {
+                                 alternates = [], assetPrefix, assets, home, contactHref, aboutHref }) {
   const A = (name) => `${assetPrefix}assets/${name}`;
   const code = lang.code;
   const dir = lang.dir || "ltr";
@@ -792,7 +793,7 @@ ${page.sections.map(section).join("\n")}
     </article>
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref })}
 
 
   <!-- Structured data sits at the end of the document rather than in the head.
@@ -825,7 +826,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
    rather than the raw path, because the path is in the href where a machine
    reads it, and "/sitemap.xml" as visible text only ever looked like a
    directory listing. */
-export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks, homeHref = "/", contactHref }) {
+export function renderNotFound({ lang, cfg, t, buildable, assets, links, tasks, homeHref = "/", contactHref, aboutHref }) {
   const A = (name) => `assets/${name}`;
   const code = lang.code;
   const icons = { sunIcon, moonIcon, globeIcon };
@@ -903,7 +904,7 @@ ${list(tasks)}
     </article>
   </main>
 
-${siteFooter({ t, cfg, away, copyright, authorLink, contactHref })}
+${siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref })}
 
   <script src="/${assets.js}" defer></script>
 </body>

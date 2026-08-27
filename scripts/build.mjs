@@ -414,7 +414,11 @@ for (const lang of buildable) {
   const contactHref = contactSlug
     ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${contactSlug}/`
     : `${cfg.domain}/contact/`;
-  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages, contactHref }));
+  const aboutSlug = sitePagesByLang.get(lang.code)?.pages?.about?.slug;
+  const aboutHref = aboutSlug
+    ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${aboutSlug}/`
+    : undefined;
+  const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages, contactHref, aboutHref }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   mkdirSync(dir, { recursive: true });
@@ -434,7 +438,7 @@ for (const lang of buildable) {
       const taskHtml = withPolicy(renderTaskPage({
         page, slug, lang, cfg, t, buildable, canonical: taskCanonical,
         alternates: taskAlternates(key),
-        assetPrefix: taskPrefix, assets: { css: CSS, js: JS }, contactHref,
+        assetPrefix: taskPrefix, assets: { css: CSS, js: JS }, contactHref, aboutHref,
         home: lang.path ? `../../${lang.path}/` : "../",
       }));
       const taskDir = join(dir, slug);
@@ -508,6 +512,7 @@ for (const lang of buildable) {
       assetPrefix: lang.path ? "../../" : "../",
       assets: { css: CSS, js: JS },
       contactHref: `${cfg.domain}/${base}${site.pages.contact.slug}/`,
+      aboutHref: `${cfg.domain}/${base}${site.pages.about.slug}/`,
       home: lang.path ? `../../${lang.path}/` : "../",
     }));
     const dir = join(OUT, base, slug);
@@ -563,7 +568,7 @@ const taskEntries = taskPagesBuilt.map(({ code, slug }) => {
   return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
 }).join("\n");
 
-/* One entry each, no alternates: there is one About and one Contact. */
+/* One entry per language per page: each has its own slug. */
 const siteEntries = sitePageEntries
   .map(({ slug }) => `  <url>\n    <loc>${cfg.domain}/${slug}/</loc>\n  </url>`)
   .join("\n");
@@ -822,6 +827,9 @@ for (const lang of buildable) {
     contactHref: site?.pages?.contact
       ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${site.pages.contact.slug}/`
       : undefined,
+    aboutHref: site?.pages?.about
+      ? `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${site.pages.about.slug}/`
+      : undefined,
   }));
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   writeFileSync(join(dir, "404.html"), html, "utf8");
@@ -838,6 +846,18 @@ const pages = built.length;
 console.log(`\n  Built ${pages} page${pages === 1 ? "" : "s"} into public/\n`);
 console.log(`  pages               ${built.length}`);
 console.log(`  markdown twins      ${markdownTwins}`);
+
+/* The worker answers a 404 under /de/ with the German page, and needs to know
+   which prefixes are languages. Written here so the list cannot drift from the
+   directories the build actually made. */
+writeFileSync(
+  join(ROOT, "worker", "languages.js"),
+  `/* Written by scripts/build.mjs. Do not edit.\n` +
+  `   The language directories, for the worker's localised 404 routing. */\n` +
+  `export const LANGUAGE_PATHS = ${JSON.stringify(
+    buildable.map((l) => l.path).filter(Boolean).sort())};\n`,
+  "utf8"
+);
 if (partial.length) {
   console.log(`  awaiting translation  ${partial.length}: ${partial.join(" ")}`);
 }

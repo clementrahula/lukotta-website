@@ -32,6 +32,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { VERBATIM, survives } from "./verbatim.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
@@ -41,14 +42,6 @@ const WORK = join(ROOT, "dist", "pages-work");
 const cfg = JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"));
 const en = JSON.parse(readFileSync(join(PAGES, "en.json"), "utf8"));
 
-/* Names that stay in Latin script in every language, from the landing page's
-   own linter so the two cannot disagree, plus the ones only these pages use. */
-const VERBATIM = [
-  "Lukotta", "macOS", "BitLocker", "NTFS", "LUKS", "LVM", "APFS", "FileVault",
-  "ext2", "ext3", "ext4", "btrfs", "XFS", "exFAT",
-  "qcow2", "VMDK", "VDI", "VHDX", "VHD", "OVA", "TPM",
-  "VMware", "VirtualBox", "Hyper-V", "QEMU", "UTM", "Windows", "Linux", "Apple",
-];
 
 /* The recovery key is an example of a thing the reader will hold beside the
    screen and compare digit by digit. It is not language. */
@@ -157,12 +150,6 @@ const langOf = (code) => cfg.languages.find((l) => l.code === code);
 
 /* ----------------------------------------------------------- the checks -- */
 
-/* A name has survived if it is still there in Latin script. Only the start of
-   the word is anchored: Estonian writes "BitLockeriga" and Finnish
-   "BitLockerilla", and a name carrying a case ending is still the name. What
-   this is looking for is the name replaced by a local spelling of it. */
-const survives = (term, text) =>
-  new RegExp(`(^|[^A-Za-z0-9])${term.replace(/[-]/g, "\\-")}`, "i").test(text);
 
 function judge(code, data) {
   const notes = [];
