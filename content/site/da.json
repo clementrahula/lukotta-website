@@ -21,7 +21,7 @@
           "heading": "Hvad det er",
           "paragraphs": [
             "Lukotta er et macOS-program. Det åbner BitLocker-, NTFS-, LUKS-, ext4-, btrfs- og XFS-drev samt diskbilleder fra virtuelle maskiner i formaterne qcow2, VMDK, VDI, VHD og VHDX. macOS læser ingen af dem af sig selv. NTFS kan det læse, men ikke skrive til.",
-            "Det starter et lille virtuelt Linux-system i baggrunden, åbner drevet der og giver det tilbage til Finder. Linux har læst disse formater i årevis. Drevet bliver hverken lavet om eller kopieret. Det bliver, som det var, og maskinen det kom fra læser det stadig."
+            "Det starter en lille virtuel Linux-maskine i baggrunden, åbner drevet der og giver det tilbage til Finder. Linux har læst disse formater i årevis. Drevet bliver hverken lavet om eller kopieret. Det bliver, som det var, og maskinen det kom fra læser det stadig."
           ]
         },
         {
@@ -48,7 +48,7 @@
         {
           "heading": "Intet forlader din Mac",
           "paragraphs": [
-            "Lukotta har ingen analyse, ingen telemetri og ingen fejlrapportering.",
+            "Lukotta har ingen analyse, ingen telemetri og ingen rapportering af programnedbrud.",
             "Det laver én slags netværkskald: det ser efter en ny udgave og henter den, hvis du beder om det. Adgangskoder og genoprettelsesnøgler bruges til at låse drevet op og bliver ikke gemt, sendt eller logget."
           ]
         },
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Hvordan man melder en fejl i Lukotta, stiller et spørgsmål eller melder et sikkerhedsproblem. Issues på GitHub bliver læst først.",
+      "description": "Hvordan man melder en fejl i Lukotta, stiller et spørgsmål eller melder et sikkerhedsproblem. Issues på GitHub læses først og besvares som regel hurtigst.",
       "lead": "Fejl går til GitHub. Sikkerhedsproblemer går til adressen i SECURITY.md. Alt andet går på e-mail.",
       "sections": [
         {
@@ -76,7 +76,7 @@
         {
           "heading": "Et sikkerhedsproblem",
           "paragraphs": [
-            "Opret ikke et offentligt issue. SECURITY.md i arkivet siger, hvor det skal sendes hen, og hvad du kan vente."
+            "Opret ikke et offentligt issue. SECURITY.md i arkivet siger, hvor det skal sendes hen, og hvad du kan forvente."
           ]
         },
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Hvor lang tid et svar tager",
           "paragraphs": [
-            "Lukotta vedligeholdes af én person. Der er ingen support og ingen lovet svartid. Nogle beskeder tager tid, og nogle bliver ikke besvaret.",
+            "Lukotta vedligeholdes af én person. Der er ingen supporttjeneste og ingen lovet svartid. Nogle beskeder tager tid, og nogle bliver ikke besvaret.",
             "Et issue på GitHub går som regel hurtigere, fordi en anden kan nå at svare først."
           ]
         }

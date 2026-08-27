@@ -184,7 +184,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "da": "Den tager fysiske drev og billedfiler lige godt. En BitLocker-enhed åbnes med sin adgangskode eller med en 48-cifret genoprettelsesnøgle, og BitLocker- og NTFS-enheder både læses og skrives, så filer kan kopieres til drevet såvel som fra det."
+      "da": "Den tager fysiske drev og diskbilledfiler lige godt. En BitLocker-enhed åbnes med sin adgangskode eller med en 48-cifret genoprettelsesnøgle, og BitLocker- og NTFS-enheder både læses og skrives, så filer kan kopieres til drevet såvel som fra det."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
@@ -360,7 +360,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "da": "macOS læser ingen af Linux-filsystemerne. Lukotta åbner ext2, ext3, ext4, btrfs og XFS, uden kryptering eller inde i LUKS-kryptering. Et drev sat op med LVM åbner alle sine enheder samlet."
+      "da": "macOS læser ingen af Linux-filsystemerne. Lukotta åbner ext2, ext3, ext4, btrfs og XFS, uden kryptering eller inde i LUKS-kryptering. Et drev sat op med LVM åbner alle sine diskenheder samlet."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

@@ -148,7 +148,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "sv": "macOS kan inte läsa BitLocker eller Linux filsystem. Det kan Linux. Lukotta startar en liten virtuell Linux-maskin, låser upp disken där inne och lämnar tillbaka den till Finder."
+      "sv": "macOS kan inte läsa BitLocker eller Linux-filsystem. Det kan Linux. Lukotta startar en liten virtuell Linux-maskin, låser upp disken där inne och lämnar tillbaka den till Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "sv": "VMware, platt och gles"
+      "sv": "VMware, flat och sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "sv": "Det som en OVA innehåller. Skrivs i en enda omgång och går därför inte att ändra direkt"
+      "sv": "Det som en OVA innehåller. Skrivs i en enda omgång och går därför inte att ändra i samma fil efteråt"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

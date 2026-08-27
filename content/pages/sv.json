@@ -65,7 +65,7 @@
           "heading": "Diskar som inte går att öppna på en Mac",
           "paragraphs": [
             "Vissa Windows-datorer frågar aldrig efter något lösenord. De förvarar nyckeln i ett chip på moderkortet, kallat en TPM, och låser upp disken av sig själva när den maskinen startar.",
-            "En disk som är uppsatt så fungerar bara i den dator den kommer från, för nyckeln lämnar den aldrig. Ingen Mac kan öppna den, och inte någon annan PC heller. Sparades en återställningsnyckel när disken krypterades öppnar den den fortfarande."
+            "En disk som är konfigurerad så fungerar bara i den dator den kommer från, för nyckeln lämnar den aldrig. Ingen Mac kan öppna den, och inte någon annan PC heller. Sparades en återställningsnyckel när disken krypterades öppnar den den fortfarande."
           ]
         },
         {
@@ -94,7 +94,7 @@
           "heading": "Vad som händer när du ansluter en till en Mac",
           "paragraphs": [
             "Finder säger att skivan inte går att läsa och erbjuder sig att radera den. Det är samma meddelande som macOS ger för en tom skiva och för en som håller på att gå sönder, så meddelandet ger dig inget sätt att se att disken är hel.",
-            "macOS har stöd för sina egna filsystem och för några få vanliga som exFAT. Linux filsystem hör inte dit, så en ext4-disk ser ut som en tom skiva för macOS."
+            "macOS har stöd för sina egna filsystem och för några få vanliga som exFAT. Linux-filsystem hör inte dit, så en ext4-disk ser ut som en tom skiva för macOS."
           ]
         },
         {
@@ -124,7 +124,7 @@
           "heading": "Om den frågar efter en lösenfras",
           "paragraphs": [
             "LUKS är sättet Linux krypterar en hel disk på. Frågar maskinen som disken kommer från efter en lösenfras tidigt i starten, före inloggningsskärmen, då är det LUKS, och det är den lösenfrasen du ska skriva här.",
-            "Den är en annan än inloggningslösenordet, även om många sätter båda till samma sak."
+            "Den är skild från inloggningslösenordet, även om många sätter båda till samma sak."
           ]
         },
         {
@@ -180,9 +180,9 @@
         {
           "heading": "Diskar som Windows inte stängt ordentligt",
           "paragraphs": [
-            "Windows märker en disk som inte ordentligt stängd när en skrivning avbröts, oftast för att disken drogs ur eller maskinen förlorade strömmen mitt i. Märkningen varnar nästa dator som öppnar den för att disken kan vara till hälften skriven och bör kontrolleras.",
+            "Windows märker en disk som felaktigt stängd när en skrivning avbröts, oftast för att disken drogs ur eller maskinen förlorade strömmen mitt i. Märkningen varnar nästa dator som öppnar den för att disken kan vara till hälften skriven och bör kontrolleras.",
             "Snabbstart lämnar samma märkning även när ingenting har gått fel. Den är påslagen från början i Windows 10 och 11. I stället för att stänga av maskinen försätter den den i viloläge, vilket får disken att se ut som om den fortfarande används.",
-            "macOS vägrar en disk i båda tillstånden och anger inget skäl. Lukotta öppnar den.",
+            "macOS vägrar att öppna en disk i båda tillstånden och anger inget skäl. Lukotta öppnar den.",
             "Har du kvar Windows-maskinen är den snyggare lösningen att ansluta disken igen och stänga av den maskinen ordentligt: håll ned Skift medan du klickar på ”Avsluta”, det hoppar över Snabbstart."
           ]
         }
@@ -245,8 +245,8 @@
           "heading": "Kopiera filer in i en skivavbild",
           "paragraphs": [
             "qcow2 skrivs på vanligt sätt och är säker att skriva till.",
-            "VMDK, VDI och VHD går att skriva till, men det är nytt arbete och har inte använts länge nog för att anförtro det något du inte har råd att förlora. Kopiera filen och arbeta på kopian, eller öppna den skrivskyddad och hämta ut filer i stället.",
-            "VHDX öppnas skrivskyddad, och det gör även den sortens VMDK som ligger inuti en OVA-fil. Den sorten skrivs igenom i en enda omgång och går inte att ändra på plats efteråt."
+            "VMDK, VDI och VHD går att skriva till, men skrivstödet är nytt och har inte använts länge nog för att anförtro det något du inte har råd att förlora. Kopiera filen och arbeta på kopian, eller öppna den skrivskyddad och hämta ut filer i stället.",
+            "VHDX öppnas skrivskyddad, och det gör även den sortens VMDK som ligger inuti en OVA-fil. Den sorten skrivs igenom i en enda omgång och går inte att ändra i samma fil efteråt."
           ]
         },
         {

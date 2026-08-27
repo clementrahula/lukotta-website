@@ -80,7 +80,7 @@
     "linux": {
       "slug": "laes-ext4-drev-paa-mac",
       "title": "Læs et ext4-, btrfs- eller XFS-drev på en Mac",
-      "description": "macOS kan ikke læse ext4, btrfs eller XFS og tilbyder at slette drevet. Her er hvorfor, og hvordan du åbner et Linux-drev på en Mac, LUKS med.",
+      "description": "macOS kan ikke læse ext4, btrfs eller XFS og tilbyder at slette drevet. Her er hvorfor, og hvordan du åbner et Linux-drev på en Mac, også med LUKS.",
       "lead": "Du sætter et drev fra en Linux-maskine til, og Finder tilbyder at slette det. Her er hvorfor, og hvordan du læser det i stedet.",
       "sections": [
         {
@@ -108,7 +108,7 @@
           "heading": "Hvad Lukotta læser",
           "paragraphs": [
             "ext2, ext3 og ext4, som dækker de fleste Linux-systemer. btrfs, standarden på Fedora og openSUSE. XFS, udbredt på servere.",
-            "Krypteret eller ej. Er drevet sat op med LVM, som deler ét fysisk drev op i flere enheder, åbner de alle sammen frem for én ad gangen."
+            "Krypteret eller ej. Er drevet sat op med LVM, som deler ét fysisk drev op i flere diskenheder, åbner de alle sammen frem for én ad gangen."
           ]
         },
         {
@@ -180,7 +180,7 @@
         {
           "heading": "Drev, Windows ikke har lukket ordentligt ned",
           "paragraphs": [
-            "Windows markerer et drev som ikke lukket ordentligt, når en skrivning blev afbrudt, som regel fordi drevet blev trukket ud, eller maskinen mistede strømmen undervejs. Markeringen advarer den næste computer, der åbner det, om at drevet kan være halvt skrevet og bør efterses.",
+            "Windows markerer et drev som ikke lukket ordentligt, når en skrivning blev afbrudt, som regel fordi drevet blev trukket ud, eller maskinen mistede strømmen undervejs. Markeringen advarer den næste computer, der åbner det, om at skrivningen på drevet kan være ufuldstændig, og at drevet bør efterses.",
             "Hurtig start efterlader den samme markering, også når intet er gået galt. Den er slået til fra starten i Windows 10 og 11. I stedet for at lukke maskinen ned sætter den den i dvale, hvilket får drevet til at se ud, som var det stadig i brug.",
             "macOS nægter et drev i begge tilstande og siger ikke hvorfor. Lukotta åbner det.",
             "Har du stadig Windows-maskinen, er den pænere løsning at sætte drevet i igen og lukke den maskine ordentligt ned: hold Skift nede, mens du klikker på “Luk ned”, det springer Hurtig start over."
@@ -198,7 +198,7 @@
           "heading": "Hvad et diskbillede er",
           "paragraphs": [
             "Når du kører en virtuel maskine, er maskinens harddisk én enkelt almindelig fil, der ligger på din Mac. Dens styresystem, dens programmer og hvert eneste dokument i den ligger alt sammen inde i den ene fil.",
-            "Hvert program skriver den fil på sin egen måde. VMware bruger VMDK, VirtualBox bruger VDI, Hyper-V bruger VHD og VHDX, og QEMU og UTM bruger qcow2. Et råt diskbillede, som regel med endelsen .img, er en lige kopi af en disk uden noget viklet omkring."
+            "Hvert program skriver den fil på sin egen måde. VMware bruger VMDK, VirtualBox bruger VDI, Hyper-V bruger VHD og VHDX, og QEMU og UTM bruger qcow2. Et råt diskbillede, som regel med endelsen .img, er en direkte kopi af en disk uden noget viklet omkring."
           ]
         },
         {
@@ -245,14 +245,14 @@
           "heading": "Kopiér filer ind i et diskbillede",
           "paragraphs": [
             "qcow2 bliver skrevet på den almindelige måde og er sikkert at skrive til.",
-            "VMDK, VDI og VHD kan der skrives til, men det er nyt arbejde og har ikke været i brug længe nok til at betro det noget, du ikke har råd til at miste. Kopiér filen og arbejd på kopien, eller åbn den skrivebeskyttet og tag filer ud i stedet.",
-            "VHDX åbnes skrivebeskyttet, og det samme gør den slags VMDK, der ligger inde i en OVA-fil. Den slags bliver skrevet igennem i ét stræk og kan ikke laves om bagefter, hvor den ligger."
+            "Der kan skrives til VMDK, VDI og VHD, men skriveunderstøttelsen er ny og har ikke været i brug længe nok til, at du bør betro den noget, du ikke har råd til at miste. Kopiér filen og arbejd på kopien, eller åbn den skrivebeskyttet og tag filer ud i stedet.",
+            "VHDX åbnes skrivebeskyttet, og det samme gør den slags VMDK, der ligger inde i en OVA-fil. Den slags bliver skrevet igennem i ét stræk og kan ikke ændres på stedet bagefter."
           ]
         },
         {
           "heading": "Filer, der ikke kan åbnes",
           "paragraphs": [
-            "Et diskbillede åbner kun, hvis det er helt i sig selv.",
+            "Et diskbillede åbner kun, hvis det er komplet i sig selv.",
             "En kæde af øjebliksbilleder fra VMware fordeler maskinens nuværende tilstand over en oprindelig fil og en række mindre, der holder styr på, hvad der er lavet om bagefter. En opdelt disk deler ét diskbillede op i mange stykker. En forskelsdisk fra Hyper-V rummer kun forskellene fra en anden fil.",
             "I hvert af tilfældene er den fil, du har, en del af et sæt, og Lukotta åbner én fil ad gangen."
           ]

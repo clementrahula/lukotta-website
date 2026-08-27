@@ -21,13 +21,13 @@
           "heading": "Vad det är",
           "paragraphs": [
             "Lukotta är ett macOS-program. Det öppnar BitLocker-, NTFS-, LUKS-, ext4-, btrfs- och XFS-diskar, och skivavbilder från virtuella maskiner i formaten qcow2, VMDK, VDI, VHD och VHDX. macOS läser inget av dem på egen hand. NTFS kan det läsa men inte skriva till.",
-            "Det startar ett litet Linux-system i bakgrunden, öppnar disken där och lämnar den till Finder. Linux har läst dessa format i åratal. Disken görs varken om eller kopieras. Den blir som den var, och maskinen den kom från läser den fortfarande."
+            "Det startar en liten virtuell Linux-maskin i bakgrunden, öppnar disken där och lämnar den till Finder. Linux har läst dessa format i åratal. Disken görs varken om eller kopieras. Den blir som den var, och maskinen den kom från läser den fortfarande."
           ]
         },
         {
           "heading": "Vem som underhåller det",
           "paragraphs": [
-            "[En ensam utvecklare](https://rahula.dev). Det finns inget företag, inga investerare och inget team."
+            "[En enda utvecklare](https://rahula.dev). Det finns inget företag, inga investerare och inget team."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Hur man rapporterar ett fel i Lukotta, ställer en fråga eller rapporterar ett säkerhetsproblem. Issues på GitHub läses först.",
+      "description": "Hur man rapporterar ett fel i Lukotta, ställer en fråga eller rapporterar ett säkerhetsproblem. Issues på GitHub läses först och besvaras vanligtvis snabbast.",
       "lead": "Fel går till GitHub. Säkerhetsproblem går till adressen i SECURITY.md. Allt annat går via e-post.",
       "sections": [
         {
           "heading": "Ett fel, eller en disk som inte går att öppna",
           "paragraphs": [
-            "Skapa ett issue på github.com/clementrahula/lukotta/issues. Issues läses först, och de är offentliga, så nästa person med samma disk hittar svaret.",
+            "Skapa ett issue på github.com/clementrahula/lukotta/issues. Issues läses först, och de är offentliga, så nästa person med samma disk kan hitta svaret.",
             "Skriv vilken disk det är, vad Lukotta visade och vad du väntade dig. Citera ett felmeddelande ordagrant. Klistra aldrig in ett lösenord eller en återställningsnyckel i ett issue."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Hur lång tid ett svar tar",
           "paragraphs": [
-            "Lukotta underhålls av en person. Det finns ingen support och ingen utlovad svarstid. Vissa meddelanden dröjer, och en del blir obesvarade.",
+            "Lukotta underhålls av en person. Det finns ingen supportfunktion och ingen utlovad svarstid. Vissa svar dröjer, och en del meddelanden blir obesvarade.",
             "Ett issue på GitHub går oftast fortare, eftersom någon annan kan hinna svara först."
           ]
         }
