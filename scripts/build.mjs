@@ -433,6 +433,16 @@ Sitemap: ${cfg.domain}/sitemap.xml
   "utf8"
 );
 
+/* IndexNow proves the site is ours by fetching this file and comparing it with
+   the key we send. The name and the contents must be the same string, so both
+   come from one place in site.config.json -- written by hand they drift, and a
+   drifted key fails silently: submissions are accepted and then ignored.
+
+   It is not a secret. Being publicly readable is the whole mechanism. */
+if (cfg.indexNowKey) {
+  writeFileSync(join(OUT, `${cfg.indexNowKey}.txt`), cfg.indexNowKey, "utf8");
+}
+
 writeFileSync(
   join(OUT, "site.webmanifest"),
   JSON.stringify(

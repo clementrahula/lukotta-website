@@ -2,12 +2,15 @@
   "name": "lukotta-website",
   "private": true,
   "version": "1.0.0",
-  "description": "The website for Lukotta — lukotta.com",
+  "description": "The website for Lukotta \u2014 lukotta.com",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs && node scripts/check.mjs",
-    "start": "node scripts/build.mjs && node scripts/serve.mjs"
+    "start": "node scripts/build.mjs && node scripts/serve.mjs",
+    "indexnow": "node scripts/build.mjs && node scripts/indexnow.mjs"
   }
 }

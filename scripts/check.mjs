@@ -308,6 +308,18 @@ if (existsSync(robotsPath)) {
   }
 }
 
+/* --- IndexNow --- */
+/* The key file proves the site is ours. Its name and its contents must be the
+   same string: if they drift, submissions are accepted and then quietly
+   ignored, which looks exactly like working. */
+if (cfg.indexNowKey) {
+  const keyFile = join(OUT, `${cfg.indexNowKey}.txt`);
+  if (!existsSync(keyFile)) err(`no ${cfg.indexNowKey}.txt — IndexNow cannot verify the site.`);
+  else if (readFileSync(keyFile, "utf8").trim() !== cfg.indexNowKey) {
+    err("the IndexNow key file does not contain its own name.");
+  }
+}
+
 /* --- sitemap --- */
 const sitemapPath = join(OUT, "sitemap.xml");
 if (!existsSync(sitemapPath)) err("no sitemap.xml");
