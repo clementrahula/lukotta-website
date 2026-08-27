@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "tr",
+    "name": "Turkish",
+    "native": "Türkçe",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "İndirmesi de kullanması da ücretsiz."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "mac-bitlocker-disk-acma",
+      "title": "Mac'te BitLocker diski açma",
+      "description": "macOS bir BitLocker diskini açmaz, onun yerine silmeyi önerir. Nedeni burada, ve diski nasıl okuyup ona nasıl dosya kopyalayacağınız da.",
+      "lead": "Bir BitLocker diskini Mac'e takıyorsunuz ve Finder onu silmeyi öneriyor. Nedeni burada, ve diski bunun yerine nasıl okuyacağınız da.",
+      "sections": [
+        {
+          "heading": "BitLocker nedir",
+          "paragraphs": [
+            "BitLocker, Windows'un içine yerleştirilmiş şifrelemedir. Açıkken diske yazılan her şey karıştırılır ve içerik parola olmadan okunamaz. Windows onu kendi diskinde, ayrıca USB disklerinde ve hafıza kartlarında kullanır; oralarda adı BitLocker To Go'dur.",
+            "İki durumda da aynı şifrelemedir. Disk kaybolursa onu bulan kişi içinden hiçbir şey okuyamaz."
+          ]
+        },
+        {
+          "heading": "Böyle bir diski Mac'e taktığınızda ne olur",
+          "paragraphs": [
+            "Finder diskin okunamadığını söyler ve onu ilklendirmeyi ya da silmeyi önerir. Parola sormaz ve ekranda hiçbir şey diskin bozuk değil kilitli olduğunu düşündürmez.",
+            "Disk hasarlı değil. macOS'un kendi şifrelemesi var, FileVault, ve BitLocker'dan hiç anlamaz. Diskin başını okur, tanımadığı bir düzen bulur ve diske biçimlendirilmemiş gibi davranır, dolayısıyla önerebileceği tek şey onu silmektir."
+          ]
+        },
+        {
+          "heading": "Lukotta onu nasıl açar",
+          "paragraphs": [
+            "Linux BitLocker'ı yıllardır okuyabiliyor ve Lukotta'nın kullandığı da tam olarak bu. Arka planda küçük bir Linux sistemi başlatır, diski ona verir ve yazdığınız parolayla orada açar. Kilidi açılan disk Finder'a döner ve orada Konumlar altında, diğer disklerinizin yanında görünür.",
+            "Disk ne dönüştürülür ne kopyalanır. BitLocker diski olarak kalır, şifreli kalır ve Windows onu eskisi gibi okur."
+          ]
+        },
+        {
+          "heading": "Diski açma",
+          "list": [
+            "Diski takın. Lukotta onu listeler ve kilitli olarak gösterir.",
+            "Üzerine tıklayın ve Windows'ta kullandığınız parolayı yazın.",
+            "Disk Finder'da, Konumlar altında görünür."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Parola sizde yoksa",
+          "paragraphs": [
+            "Disk şifrelenirken Windows bir kurtarma anahtarı üretti ve nereye saklanacağını sordu. O anahtar diski parolanın yerine açar. 48 rakamdan oluşur, altışarlık sekiz öbek halinde:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Bir Microsoft hesabında, bir metin dosyasında ya da kâğıda basılmış olabilir. Parolanın gideceği yere onu yapıştırın.",
+            "Parola ya da anahtar olmadan diski hiçbir bilgisayarda hiçbir program açamaz."
+          ]
+        },
+        {
+          "heading": "Mac'te açılmayacak diskler",
+          "paragraphs": [
+            "Bazı Windows bilgisayarları hiç parola sormaz. Anahtarı anakart üzerindeki TPM adlı bir yongada tutar ve o makine açılınca diski kendiliğinden açar.",
+            "Böyle kurulmuş bir disk yalnızca geldiği bilgisayarda çalışır, çünkü anahtar oradan hiç çıkmaz. Hiçbir Mac onu açamaz, başka bir Windows bilgisayarı da açamaz. Disk şifrelenirken bir kurtarma anahtarı saklandıysa o hâlâ diski açar."
+          ]
+        },
+        {
+          "heading": "Diske dosya kopyalama",
+          "paragraphs": [
+            "BitLocker diskleri hem okuma hem yazma için açılır, böylece bir Mac Windows'ta alınmış bir yedeğe dosya ekleyebilir, yalnızca ondan almakla kalmaz.",
+            "Lukotta diski salt okunur olarak da açabilir; bu, sorun çıkarmaya başlamış bir diskten dosya kurtarırken yapmaya değer. O zaman diske hiçbir şey yazılamaz."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "mac-ext4-disk-okuma",
+      "title": "Mac'te ext4, btrfs veya XFS diski okuma",
+      "description": "macOS ne ext4'ü, ne btrfs'yi, ne de XFS'i okur ve diski silmeyi önerir. Nedeni burada, ve Mac'te bir Linux diskini nasıl açacağınız da, LUKS dahil.",
+      "lead": "Linux'lu bir makineden gelen bir diski takıyorsunuz ve Finder onu silmeyi öneriyor. Nedeni burada, ve onu bunun yerine nasıl okuyacağınız da.",
+      "sections": [
+        {
+          "heading": "Bir Mac diski neden okuyamaz",
+          "paragraphs": [
+            "Her diskin bir dosya sistemi vardır: her dosyanın nerede başladığını, adının ne olduğunu ve diskin hangi bölümlerinin hâlâ boş olduğunu yazan düzen. Windows NTFS kullanır. macOS APFS kullanır. Linux çoğunlukla ext4, kimi zaman btrfs ya da XFS kullanır.",
+            "Dosyaların kendisi son derece sıradandır. Farklı olan, önlerindeki dizindir; o dizini okuyamayan bir bilgisayarın hiçbir şeyi bulmasının yolu yoktur, her şey hâlâ orada dursa bile."
+          ]
+        },
+        {
+          "heading": "Böyle bir diski Mac'e taktığınızda ne olur",
+          "paragraphs": [
+            "Finder diskin okunamadığını söyler ve onu silmeyi önerir. Aynı iletiyi macOS boş bir disk için de, bozulmaya başlamış bir disk için de verir; dolayısıyla ileti size diskin sağlam olduğunu anlamanın hiçbir yolunu bırakmaz.",
+            "macOS kendi dosya sistemlerini ve exFAT gibi birkaç yaygın olanı destekler. Linux'un dosya sistemleri bunların arasında değildir, bu yüzden bir ext4 diski macOS'a boş bir disk gibi görünür."
+          ]
+        },
+        {
+          "heading": "Lukotta onu nasıl okur",
+          "paragraphs": [
+            "Lukotta arka planda küçük bir Linux sistemi başlatır ve diski ona verir. Linux ext4, btrfs ve XFS'i kendisi okur, böylece disk orada hiçbir dönüştürme olmadan açılır ve Lukotta onu Finder'a aktarır.",
+            "Diske hiçbir şey yazılmaz ve Linux'lu makineye geri döndüğünde her zamanki gibi çalışır."
+          ]
+        },
+        {
+          "heading": "Lukotta neyi okur",
+          "paragraphs": [
+            "Linux sistemlerinin çoğunu kapsayan ext2, ext3 ve ext4. Fedora ve openSUSE'de öntanımlı olan btrfs. Sunucularda yaygın olan XFS.",
+            "Şifreli olsun ya da olmasın. Disk, tek bir fiziksel diski birkaç birime bölen LVM ile kurulmuşsa hepsi teker teker değil birlikte açılır."
+          ]
+        },
+        {
+          "heading": "Diski açma",
+          "list": [
+            "Diski takın. Lukotta üzerinde ne olduğunu listeler.",
+            "Şifreliyse parola tümcesini yazın.",
+            "Disk Finder'da, Konumlar altında görünür."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Parola tümcesi isterse",
+          "paragraphs": [
+            "LUKS, Linux'un bütün bir diski şifreleme biçimidir. Bu diskin geldiği makine açılışın hemen başında, oturum açma ekranından önce bir parola tümcesi istiyorsa o LUKS'tur ve buraya yazılacak parola tümcesi de odur.",
+            "Oturum açma parolasından ayrıdır, gerçi birçok kişi ikisine de aynısını koyar."
+          ]
+        },
+        {
+          "heading": "Açılmayacak diskler",
+          "paragraphs": [
+            "Bir LUKS diski, başlığı başka bir yerde, başka bir diskte ya da bir USB bellekte duracak biçimde kurulabilir. Başlık, şifrelemeyi anlatan kısımdır. O olmadan diskte açılacak bir şey kalmaz.",
+            "Daha yeni Ubuntu kurulumları anahtarı makinenin içindeki bir yongaya da bağlayabilir, tıpkı BitLocker'ın yaptığı gibi. O diskler yalnızca geldikleri bilgisayarda açılır."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "mac-ntfs-disk-yazma",
+      "title": "Mac'te NTFS diskine yazma",
+      "description": "macOS NTFS disklerini salt okunur açar, dolayısıyla dosyalar onlardan çıkar ama onlara girmez. Nedeni burada, ve Mac'te NTFS diskine nasıl yazacağınız da.",
+      "lead": "macOS bir NTFS diskinden dosya kopyalamanıza izin verir ama ona kopyalamanıza vermez. Nedeni burada, ve bu konuda ne yapılabileceği de.",
+      "sections": [
+        {
+          "heading": "NTFS nedir",
+          "paragraphs": [
+            "NTFS, Windows'un hem kendi diskinde hem de bir Windows bilgisayarında biçimlendirilmiş dış disklerde kullandığı dosya sistemidir. Windows'lu bir makinede biçimlendirilmiş bir USB diski çoğunlukla NTFS'tir.",
+            "Yaygın olan öteki exFAT'tir; hafıza kartlarının çoğu ve birçok USB bellek onu kullanır, çünkü hem Windows hem macOS ona yazabilir. Diskiniz exFAT ise macOS onunla zaten baş ediyordur ve bunların hiçbiri sizi ilgilendirmez. Bakmak için Finder'da diske tıklayın ve Dosya, sonra Bilgi Al'ı seçin. Biçim satırı size söyler."
+          ]
+        },
+        {
+          "heading": "Böyle bir diski Mac'e taktığınızda ne olur",
+          "paragraphs": [
+            "Disk Finder'da görünür ve dosyaları görürsünüz. Ondan dosya kopyalamak her zamanki gibi yürür. Ona bir şey kopyalamak yürümez: Finder reddeder ve disk kilitliymiş gibi davranır.",
+            "macOS NTFS disklerini salt okunur açar. NTFS'e yazmayı yıllardır biliyor ama bu kapalı ve açmanın desteklenen bir yolu yok. NTFS'e yazmak onu okumaktan zordur ve bir hata, Windows'un sonradan açmayı reddettiği bir disk bırakabilir."
+          ]
+        },
+        {
+          "heading": "Lukotta ona nasıl yazar",
+          "paragraphs": [
+            "Lukotta diski Linux'un NTFS sürücüsüyle açar; o yazabiliyor ve Linux'lu makineler onu her gün kullanıyor. Disk sonrasında Finder'a verilir, böylece ona dosya kopyalamak başka herhangi bir kopyalama gibi yürür.",
+            "Disk NTFS olarak kalır ve Windows onu sonrasında okur."
+          ]
+        },
+        {
+          "heading": "Diski açma",
+          "list": [
+            "Diski takın. Lukotta onu listeler.",
+            "Üzerine tıklayın.",
+            "Finder'da, Konumlar altında görünür ve dosyalar iki yöne de kopyalanır."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Bir NTFS diskinde çoğunlukla parola olmaz, dolayısıyla yazacak bir şey yoktur; meğer ki üzerinde BitLocker da açılmış olsun."
+          ]
+        },
+        {
+          "heading": "Windows'un düzgün kapatmadığı diskler",
+          "paragraphs": [
+            "Windows bir yazma işlemi yarıda kesildiğinde diski düzgün kapatılmamış diye işaretler; bu çoğunlukla disk çekildiği ya da makine yarı yolda elektriksiz kaldığı içindir. O işaret, diski açacak bir sonraki bilgisayarı diskin yarım yazılmış olabileceği ve gözden geçirilmesi gerektiği konusunda uyarır.",
+            "Hızlı başlatma, hiçbir şey ters gitmediğinde bile aynı işareti bırakır. Windows 10 ve 11'de baştan açıktır. Makineyi kapatmak yerine uyku kipine alır, bu da diski hâlâ kullanılıyormuş gibi gösterir.",
+            "macOS her iki durumda da diski reddeder ve nedenini söylemez. Lukotta onu açar.",
+            "Windows'lu makine hâlâ sizdeyse daha temiz çözüm diski ona geri takıp o makineyi düzgünce kapatmaktır: Kapat'a tıklarken Shift tuşunu basılı tutun, bu hızlı başlatmayı atlar."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "mac-vmdk-vdi-vhd-dosya-acma",
+      "title": "Mac'te VMDK, VDI veya VHD dosyası açma",
+      "description": "Mac'te bir VMDK, VDI, VHD ya da qcow2 dosyası açın ve içinden dosya kopyalayın; VMware ya da VirtualBox kurmadan ve makineyi başlatmadan.",
+      "lead": "Bir sanal makine bütün diskini tek bir dosyanın içinde tutar. O dosyayı bir Mac'te açıp içinden bir şeyler alabilirsiniz, makineyi hiç başlatmadan.",
+      "sections": [
+        {
+          "heading": "Disk imajı nedir",
+          "paragraphs": [
+            "Bir sanal makineyi çalıştırdığınızda o makinenin sabit diski, Mac'inizde duran tek bir sıradan dosyadır. İşletim sistemi, programları ve içindeki her belge, hepsi o tek dosyanın içindedir.",
+            "Her program o dosyayı kendi yöntemiyle yazar. VMware VMDK, VirtualBox VDI, Hyper-V VHD ve VHDX, QEMU ile UTM ise qcow2 kullanır. Çoğunlukla .img ile biten ham imaj, bir diskin çevresine hiçbir şey sarılmamış düz kopyasıdır."
+          ]
+        },
+        {
+          "heading": "İçinden dosya almak neden zahmetli",
+          "paragraphs": [
+            "Alışılmış yol, sanal makineyi başlatmak, açılmasını beklemek, dosyayı içinde bulmak ve dışarı kopyalamaktır. Bu da makinenin hâlâ çalışıyor olmasını ve onu çalıştıran programın hâlâ kurulu olmasını gerektirir.",
+            "Finder de burada işe yaramaz. Bir VMDK'ya çift tıklamak hiçbir şey yapmaz, çünkü macOS içinde ne olduğunu bilmez."
+          ]
+        },
+        {
+          "heading": "Lukotta onu nasıl açar",
+          "paragraphs": [
+            "Lukotta imajı doğrudan okur. Dosyanın hangi biçimde olduğunu anlar, içindeki diski bulur ve onu arka planda çalıştırdığı küçük Linux sisteminde açar. İçindekiler sonra Finder'da sıradan bir disk olarak görünür.",
+            "Sanal makine kapalı kalır. VMware ile VirtualBox'ın kurulu olması gerekmez ve dosyayı açmak onu değiştirmez."
+          ]
+        },
+        {
+          "heading": "Lukotta hangi dosyaları açar",
+          "list": [
+            "qcow2, QEMU ve UTM'den.",
+            "VMDK, VMware'den.",
+            "VDI, VirtualBox'tan.",
+            "VHD ve VHDX, Hyper-V'den.",
+            "Çoğunlukla .img ile biten ham imajlar."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Bir tanesini açma",
+          "list": [
+            "Dosya, sonra Disk İmajı Aç'ı seçin ve dosyayı bulun.",
+            "İçindeki disk şifreliyse parolayı ya da parola tümcesini yazın.",
+            "İçerik Finder'da, Konumlar altında görünür."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Bir dosya çoğu zaman birden çok disk taşır",
+          "paragraphs": [
+            "Bir disk imajı çoğunlukla birden fazla bölüm içerir: küçük bir açılış bölümü, her şeyin durduğu ana bölüm ve kimi zaman bir kurtarma bölümü. Lukotta onları listeler, siz de ihtiyacınız olanı açarsınız, tıpkı bir disk seçer gibi."
+          ]
+        },
+        {
+          "heading": "Bir imajın içine dosya kopyalama",
+          "paragraphs": [
+            "qcow2 alışılmış biçimde yazılır ve ona yazmak güvenlidir.",
+            "VMDK, VDI ve VHD'ye yazılabilir, ama bu taze bir iş ve kaybetmeyi göze alamayacağınız bir şeyi emanet edecek kadar uzun süredir kullanımda değil. Dosyayı kopyalayıp kopya üzerinde çalışın ya da onu salt okunur açıp dosyaları dışarı alın.",
+            "VHDX salt okunur açılır; bir OVA dosyasının içinde bulunan VMDK türü de öyle. O tür tek geçişte baştan sona yazılır ve sonrasında yerinde değiştirilemez."
+          ]
+        },
+        {
+          "heading": "Açılmayacak dosyalar",
+          "paragraphs": [
+            "Bir imaj ancak kendi başına eksiksizse açılır.",
+            "Bir VMware anlık görüntü zinciri, makinenin şimdiki durumunu bir özgün dosya ile ondan sonra nelerin değiştiğini yazan bir dizi küçük dosya arasında dağıtır. Bölünmüş bir disk, bir imajı birçok parçaya ayırır. Bir Hyper-V fark diski yalnızca başka bir dosyadan olan farkları taşır.",
+            "Bunların her birinde elinizdeki dosya bir takımın parçasıdır ve Lukotta bir seferde tek bir dosya açar."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "BitLocker diskleri ve parola kaybolduğunda ne yapılacağı hakkında daha fazlası",
+    "ntfs": "NTFS diskleri hakkında daha fazlası, Windows'un düzgün kapatmadıkları dahil",
+    "linux": "Linux diskleri ve LUKS şifrelemesi hakkında daha fazlası",
+    "disk-images": "Disk imajları ve hangilerine yazılabildiği hakkında daha fazlası"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

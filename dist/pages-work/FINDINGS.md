@@ -145,3 +145,14 @@ also be read correctly by the search engines those readers actually use.
 
 Both mean unlock. The site says the first, the application the second, and the
 same reader meets both. The task pages follow the site.
+
+## el — "κωδικός" on the site against "συνθηματικό" in the application
+
+Both are used for a password in Greek software. The site says the first, the
+application the second. The task pages follow the site.
+
+## tr — "disk" and "sürücü" both used for a drive
+
+`how.lead` and `features.body2` say **disk**; `faq.2.a` and `faq.3.a` say
+**sürücü**. The task pages use disk for the object the reader is holding and
+keep sürücü out of it. The landing page should settle on one.
