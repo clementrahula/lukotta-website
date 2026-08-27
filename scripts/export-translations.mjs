@@ -170,6 +170,12 @@ for (const lang of langs) {
   });
 }
 
+/* PROMPT.md is the one to hand to a reviewer: it is self-contained and covers
+   both halves of a language file. The others stay as reference. */
+for (const doc of ["PROMPT.md"]) {
+  if (existsSync(join(PAGES, doc))) cpSync(join(PAGES, doc), join(OUT, doc));
+}
+
 for (const doc of ["GLOSSARY.md", "README.md", "REVIEW-PROMPT.md"]) {
   if (existsSync(join(CONTENT, doc))) cpSync(join(CONTENT, doc), join(OUT, doc));
 }
