@@ -19,7 +19,7 @@
     "bitlocker": {
       "slug": "buksan-ang-bitlocker-drive-sa-mac",
       "title": "Buksan ang BitLocker drive sa Mac",
-      "description": "Hindi binubuksan ng macOS ang BitLocker drive at sa halip ay nag-aalok itong burahin. Narito kung bakit, at kung paano basahin ang drive at kopyahan ito ng mga file.",
+      "description": "Hindi binubuksan ng macOS ang BitLocker drive at nag-aalok itong burahin. Narito kung bakit, at kung paano basahin ang drive at sulatan ito.",
       "lead": "Isinaksak mo ang isang BitLocker drive sa Mac at nag-aalok ang Finder na burahin ito. Narito kung bakit, at kung paano ito basahin sa halip.",
       "sections": [
         {
@@ -139,7 +139,7 @@
     "ntfs": {
       "slug": "magsulat-sa-ntfs-drive-sa-mac",
       "title": "Magsulat sa NTFS drive sa Mac",
-      "description": "Read-only ang pagbubukas ng macOS sa mga NTFS drive, kaya nakakalabas ang mga file pero hindi nakakapasok. Narito kung bakit, at kung paano magsulat sa NTFS drive.",
+      "description": "Read-only ang pagbubukas ng macOS sa mga NTFS drive, kaya nakakalabas ang mga file pero hindi nakakapasok. Narito kung bakit, at ang solusyon.",
       "lead": "Pinapayagan ka ng macOS na kumopya ng mga file mula sa NTFS drive pero hindi papunta rito. Narito kung bakit, at kung ano ang magagawa tungkol dito.",
       "sections": [
         {
@@ -191,7 +191,7 @@
     "disk-images": {
       "slug": "buksan-ang-vmdk-vdi-vhd-file-sa-mac",
       "title": "Buksan ang VMDK, VDI o VHD file sa Mac",
-      "description": "Magbukas ng VMDK, VDI, VHD o qcow2 file sa Mac at kumopya ng mga file mula rito, nang hindi nag-i-install ng VMware o VirtualBox at hindi pinapaandar ang makina.",
+      "description": "Magbukas ng VMDK, VDI, VHD o qcow2 file sa Mac at kumopya mula rito, nang walang VMware o VirtualBox at hindi pinapaandar ang makina.",
       "lead": "Iniingatan ng isang virtual machine ang buong disk nito sa loob ng iisang file. Mabubuksan mo ang file na iyon sa Mac at makakakuha ka ng laman nito nang hindi kailanman pinapaandar ang makina.",
       "sections": [
         {

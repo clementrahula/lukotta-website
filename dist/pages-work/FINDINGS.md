@@ -172,3 +172,22 @@ Separately the site says **hanya-baca** where the application says
 `how.3.body` says **Mga Lokasyon**. macOS is not offered in Filipino, so the
 sidebar reads *Locations* on the reader's screen. Same fix as Latvian and
 Slovenian. The task pages keep the English.
+
+## vi — the site writes "khoá", the application writes "khóa"
+
+Two accepted Vietnamese conventions for where the tone mark sits. The task
+pages follow the site's spelling, but the two should agree.
+
+## he — the site gives macOS and Lukotta both genders
+
+`how.lead` says **macOS אינו יודע** and **Lukotta מפעיל**, both masculine.
+`faq.2.a`, `faq.3.a` and `faq.5.a` say **macOS לא יודעת**, **Lukotta פותחת**
+and **מחברת**, all feminine. The task pages use the feminine throughout, taking
+מערכת and תוכנה as the implied nouns, but the landing page needs one gender
+picked and applied to both names everywhere.
+
+## ar — "قرص" on the site against "محرك الأقراص" in the application
+
+The site calls a drive قرص throughout; the application says محرك الأقراص. The
+task pages follow the site, which is also the shorter and more readable of the
+two in running prose.
