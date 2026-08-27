@@ -243,6 +243,30 @@ function loadTaskPages(code) {
 
 const taskPagesBuilt = [];
 
+/* Loaded before anything is written, because a task page has to declare the
+   other languages it exists in, and each of those carries its own address. A
+   language without a file is simply absent from that list, which is the honest
+   answer: there is no German page to point a reader at until there is one. */
+const taskPagesByLang = new Map(
+  buildable.map((l) => [l.code, loadTaskPages(l.code)]).filter(([, v]) => v)
+);
+
+/* The alternates for one task page: every language that has this page, under
+   that language's own slug. x-default is the English, as on the landing page. */
+function taskAlternates(key) {
+  const out = [];
+  for (const l of buildable) {
+    const pages = taskPagesByLang.get(l.code);
+    const slug = pages?.pages?.[key]?.slug;
+    if (!slug) continue;
+    const href = `${cfg.domain}/${l.path ? `${l.path}/` : ""}${slug}/`;
+    for (const code of [l.code, ...(l.alsoServes || [])]) out.push({ code, href });
+  }
+  const en = taskPagesByLang.get(cfg.defaultLang)?.pages?.[key]?.slug;
+  if (en) out.push({ code: "x-default", href: `${cfg.domain}/${en}/` });
+  return out;
+}
+
 const built = [];
 
 for (const lang of buildable) {
@@ -256,7 +280,7 @@ for (const lang of buildable) {
   /* styles.css shows the frame at 720px. A narrower capture would be stretched. */
   if (shotSize.width < 720) warn(`${lang.code}: screenshot is ${shotSize.width}px wide; the frame displays it at 720px.`);
 
-  const taskPages = loadTaskPages(lang.code);
+  const taskPages = taskPagesByLang.get(lang.code) || null;
   const html = withPolicy(renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable: buildable, assets: { css: CSS, js: JS }, taskPages }));
 
   const dir = lang.path ? join(OUT, lang.path) : OUT;
@@ -273,6 +297,7 @@ for (const lang of buildable) {
       const taskCanonical = `${cfg.domain}/${lang.path ? `${lang.path}/` : ""}${slug}/`;
       const taskHtml = withPolicy(renderTaskPage({
         page, slug, lang, cfg, t, buildable, canonical: taskCanonical,
+        alternates: taskAlternates(key),
         assetPrefix: taskPrefix, assets: { css: CSS, js: JS },
         home: lang.path ? `../../${lang.path}/` : "../",
       }));

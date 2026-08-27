@@ -220,8 +220,12 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
   /* A format's name links to the page about it, where this language has one.
      exFAT and the raw images are deliberately absent from the map: macOS opens
      those itself, so there is nowhere useful to send anybody. */
-  /* The key identifies the page; the slug is this language's address for it. */
-  const taskHref = (key) => `${assetPrefix}${taskPages.pages[key].slug}/`;
+  /* The key identifies the page; the slug is this language's address for it.
+     Always "./": a task page sits inside its language's own directory, beside
+     this one, whereas assetPrefix climbs out to the assets at the root. Using
+     the asset prefix here sent every German link to a root that has no German
+     pages on it. */
+  const taskHref = (key) => `./${taskPages.pages[key].slug}/`;
   const taskLink = (name, inner) => {
     const slug = taskPages?.linkFromFormatsTable?.[name];
     return slug ? `<a class="format-link" href="${taskHref(slug)}">${inner}</a>` : inner;
@@ -564,12 +568,26 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
    A reader arriving here from a search should not be able to tell they have
    landed on something built differently. */
 export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
-                                 assetPrefix, assets, home }) {
+                                 alternates = [], assetPrefix, assets, home }) {
   const A = (name) => `${assetPrefix}assets/${name}`;
   const code = lang.code;
   const dir = lang.dir || "ltr";
   const native = lang.native;
   const icons = { sunIcon, moonIcon, globeIcon };
+
+  /* Each language's own address for this same page. Without these, the German
+     page and the English one are two unrelated pages competing for the same
+     search, rather than one page in two languages. Only languages that have
+     the page appear: the list is built from the files that exist. */
+  const taskHreflang = alternates
+    .map((a) => `  <link rel="alternate" hreflang="${a.code}" href="${a.href}">`)
+    .join("\n");
+
+  const alternateCodes = new Set(alternates.map((a) => a.code));
+  const taskOgAlternates = buildable
+    .filter((l) => l.code !== code && alternateCodes.has(l.code))
+    .map((l) => `  <meta property="og:locale:alternate" content="${l.ogLocale}">`)
+    .join("\n");
 
   /* Root-relative, exactly as on the landing page, so the menu works at any
      depth without a second copy of the logic. */
@@ -643,6 +661,7 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
   <title>${esc(page.title)} — Lukotta</title>
   <meta name="description" content="${esc(page.description)}">
   <link rel="canonical" href="${canonical}">
+${taskHreflang}
   <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
@@ -659,6 +678,7 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="${esc(t("meta.imageAlt"))}">
   <meta property="og:locale" content="${lang.ogLocale}">
+${taskOgAlternates}
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.title)}">
