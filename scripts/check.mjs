@@ -370,11 +370,47 @@ else {
     if (!existsSync(file)) continue;
     const data = JSON.parse(readFileSync(file, "utf8"));
     for (const key of data.order) {
-      const loc = `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${data.pages[key].slug}/`;
+      const slug = data.pages[key].slug;
+      const loc = `${cfg.domain}/${lang.path ? lang.path + "/" : ""}${slug}/`;
       sitePages.push(loc);
       if (!xml.includes(`<loc>${loc}</loc>`)) err(`sitemap.xml does not list ${loc}`);
+
+      /* The same per-file checks the guides get. They had none: the page type
+         added last was the one type nothing looked at, which is how the
+         asset-prefix bug got a whole language's links wrong before. */
+      const dir = join(OUT, lang.path || "", slug);
+      const page = join(dir, "index.html");
+      if (!existsSync(page)) { err(`${loc} is in the sitemap and not in public/`); continue; }
+      const html = readFileSync(page, "utf8");
+      if (!html.includes(`<link rel="canonical" href="${loc}">`))
+        err(`${lang.code}/${slug}/ does not name ${loc} as its canonical address.`);
+      const title = html.match(/<title>([^<]*)<\/title>/)?.[1] || "";
+      const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1] || "";
+      if (title.length < 10 || title.length > 70) warn(`${lang.code}/${slug}/ title is ${title.length} characters.`);
+      if (desc.length < 70 || desc.length > 160) warn(`${lang.code}/${slug}/ description is ${desc.length} characters.`);
+      if (!existsSync(join(dir, "index.md"))) err(`${lang.code}/${slug}/ has no markdown twin.`);
     }
   }
+
+  /* Every page carries a twin, and a twin that is empty or that lost its
+     heading is worse than none: it is what an agent asking for markdown gets
+     instead of the page. */
+  let twins = 0;
+  const walk = (dir) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) { walk(full); continue; }
+      if (entry.name !== "index.md") continue;
+      twins += 1;
+      const text = readFileSync(full, "utf8");
+      const where = full.slice(OUT.length) || "/";
+      if (text.length < 200) err(`${where} is only ${text.length} bytes.`);
+      if (!text.startsWith("# ")) err(`${where} does not begin with a heading.`);
+      if (!text.includes("Lukotta")) err(`${where} never names Lukotta.`);
+    }
+  };
+  walk(OUT);
+  if (twins === 0) err("no markdown twins were written at all.");
 
   const locs = [...xml.matchAll(/<loc>/g)].length;
   const expected = indexed.length + taskPages.length + sitePages.length;

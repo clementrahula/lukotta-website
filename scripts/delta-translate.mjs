@@ -176,9 +176,15 @@ const take = (id) => {
   if (!v) note(`${id} is empty`);
   return v;
 };
+const slugsSeen = new Set();
 for (const key of enSite.order) {
   const p = enSite.pages[key];
   const slug = take(`${key}.slug`);
+  /* Two pages at one address means the build writes one over the other and the
+     sitemap promises a page that is not there. Nothing else notices: the file
+     is valid, the count is right, and the loser simply stops existing. */
+  if (slug && slugsSeen.has(slug)) note(`${key}.slug: "${slug}" is already used by another page`);
+  if (slug) slugsSeen.add(slug);
   if (slug && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug))
     note(`${key}.slug: "${slug}" is not a usable address`);
   site.pages[key] = {
