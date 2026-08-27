@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Wie man einen Fehler in Lukotta meldet, eine Frage stellt oder ein Sicherheitsproblem meldet. Issues auf GitHub werden zuerst gelesen.",
+      "description": "Wie man Fehler in Lukotta meldet, Fragen stellt oder ein Sicherheitsproblem meldet. Issues auf GitHub werden zuerst gelesen und am schnellsten beantwortet.",
       "lead": "Fehler gehen zu GitHub. Sicherheitsprobleme gehen an die Adresse in SECURITY.md. Alles andere geht per E-Mail.",
       "sections": [
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Wie lange eine Antwort dauert",
           "paragraphs": [
-            "Lukotta wird von einer Person gepflegt. Es gibt keinen Support und keine zugesagte Antwortzeit. Manche Nachrichten dauern, und manche bleiben unbeantwortet.",
+            "Lukotta wird von einer Person gepflegt. Es gibt keinen Helpdesk und keine zugesagte Antwortzeit. Manche Antworten dauern, und manche Nachrichten bleiben unbeantwortet.",
             "Ein Issue auf GitHub geht meist schneller, weil jemand anderes zuerst antworten könnte."
           ]
         }

@@ -14,7 +14,7 @@
     "about": {
       "slug": "over",
       "title": "Over Lukotta",
-      "description": "Lukotta is een gratis, opensource macOS-app die BitLocker-, NTFS- en Linux-schijven opent. Onderhouden door één ontwikkelaar onder de GNU GPL versie 3.",
+      "description": "Lukotta is een gratis opensource macOS-app die BitLocker-, NTFS- en Linux-schijven opent. Onderhouden door één ontwikkelaar onder de GNU General Public License.",
       "lead": "Lukotta opent schijven en schijfkopieën die macOS niet kan lezen. Het is gratis, opensource, en wordt door één persoon onderhouden.",
       "sections": [
         {
@@ -35,7 +35,7 @@
           "paragraphs": [
             "Sluit een BitLocker-schijf aan op een Mac en de Finder biedt aan hem te wissen. Hij vraagt niet om een wachtwoord, en niets op het scherm laat zien dat de schijf vergrendeld is en niet stuk.",
             "Het leek onzinnig dat er tegenwoordig geen praktische manier is om een versleutelde USB-schijf te delen tussen meerdere besturingssystemen, dus moest er een oplossing komen.",
-            "In het Linux-ecosysteem bestonden al hulpmiddelen die deze schijven konden lezen. Lukotta brengt die samen met een Mac-venster."
+            "In het Linux-ecosysteem bestonden al hulpmiddelen die deze schijven konden lezen. Lukotta brengt die samen met een Mac-interface."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "contact",
       "title": "Contact",
-      "description": "Hoe je een fout in Lukotta meldt, een vraag stelt of een beveiligingsprobleem meldt. Issues op GitHub worden het eerst gelezen.",
+      "description": "Hoe je een fout in Lukotta meldt, een vraag stelt of een beveiligingsprobleem meldt. Issues op GitHub worden het eerst gelezen en meestal het snelst beantwoord.",
       "lead": "Fouten gaan naar GitHub. Beveiligingsproblemen gaan naar het adres in SECURITY.md. Al het andere gaat per e-mail.",
       "sections": [
         {
           "heading": "Een fout, of een schijf die niet opengaat",
           "paragraphs": [
-            "Open een issue op github.com/clementrahula/lukotta/issues. Issues worden het eerst gelezen, en ze zijn openbaar, dus de volgende met dezelfde schijf vindt het antwoord.",
+            "Open een issue op github.com/clementrahula/lukotta/issues. Issues worden het eerst gelezen, en ze zijn openbaar, zodat de volgende persoon met dezelfde schijf het antwoord kan vinden.",
             "Zeg wat voor schijf het is, wat Lukotta liet zien, en wat je verwachtte. Citeer een foutmelding letterlijk. Plak nooit een wachtwoord of een herstelsleutel in een issue."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Hoe lang een antwoord duurt",
           "paragraphs": [
-            "Lukotta wordt door één persoon onderhouden. Er is geen helpdesk en geen beloofde reactietijd. Sommige berichten duren, en sommige blijven onbeantwoord.",
+            "Lukotta wordt door één persoon onderhouden. Er is geen helpdesk en geen beloofde reactietijd. Op sommige berichten laat een antwoord even op zich wachten, en sommige blijven onbeantwoord.",
             "Een issue op GitHub gaat meestal sneller, omdat iemand anders eerder kan antwoorden."
           ]
         }

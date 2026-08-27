@@ -268,7 +268,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "nl": "Wat een OVA bevat. Wordt in één keer geschreven en kan daarom niet direct worden gewijzigd"
+      "nl": "Wat een OVA bevat. Wordt in één keer geschreven en kan daarna niet in hetzelfde bestand worden gewijzigd"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -368,7 +368,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "nl": "Ja. Lukotta opent een qcow2-, VMDK-, VDI-, VHD- of VHDX-image rechtstreeks en kopieert er bestanden uit of naartoe. Schrijven is experimenteel bij VMDK, VDI en VHD; VHDX en VMDK stream-optimized openen alleen-lezen."
+      "nl": "Ja. Lukotta opent een qcow2-, VMDK-, VDI-, VHD- of VHDX-schijfkopie rechtstreeks en kopieert er bestanden uit of naartoe. Schrijven is experimenteel bij VMDK, VDI en VHD; VHDX en VMDK stream-optimized openen alleen-lezen."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

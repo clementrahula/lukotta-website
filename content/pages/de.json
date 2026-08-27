@@ -26,7 +26,7 @@
           "heading": "Was BitLocker ist",
           "paragraphs": [
             "BitLocker ist die Verschlüsselung, die in Windows eingebaut ist. Ist sie eingeschaltet, wird alles verwürfelt, was auf das Laufwerk geschrieben wird, und der Inhalt lässt sich ohne das Passwort nicht lesen. Windows benutzt sie für das eigene Laufwerk und für USB-Laufwerke und Speicherkarten, wo sie BitLocker To Go heißt.",
-            "Es ist in beiden Fällen dieselbe Verschlüsselung. Geht das Laufwerk verloren, kann der Finder nichts davon lesen."
+            "Es ist in beiden Fällen dieselbe Verschlüsselung. Geht das Laufwerk verloren, kann derjenige, der es findet, nichts darauf lesen."
           ]
         },
         {
@@ -72,7 +72,7 @@
           "heading": "Dateien auf das Laufwerk kopieren",
           "paragraphs": [
             "BitLocker-Laufwerke öffnen sich zum Lesen und Schreiben, sodass ein Mac einer Windows-Sicherung Dateien hinzufügen kann, statt nur welche herunterzuholen.",
-            "Lukotta kann das Laufwerk auch schreibgeschützt öffnen, was sich lohnt, wenn Sie Dateien von einem Laufwerk retten, das Ärger macht. Dann lässt sich nichts darauf schreiben."
+            "Lukotta kann das Laufwerk auch nur lesend öffnen, was sich lohnt, wenn Sie Dateien von einem Laufwerk retten, das Ärger macht. Dann lässt sich nichts darauf schreiben."
           ]
         }
       ]
@@ -80,7 +80,7 @@
     "linux": {
       "slug": "ext4-laufwerk-am-mac-lesen",
       "title": "ext4-, btrfs- oder XFS-Laufwerk am Mac lesen",
-      "description": "macOS liest weder ext4 noch btrfs oder XFS und bietet an, das Laufwerk zu löschen. Warum das so ist, und wie Sie ein Linux- oder LUKS-Laufwerk am Mac öffnen.",
+      "description": "macOS liest weder ext4 noch btrfs oder XFS und bietet an, das Laufwerk zu löschen. Warum das so ist und wie Sie ein Linux-Laufwerk am Mac öffnen, auch mit LUKS.",
       "lead": "Sie schließen ein Laufwerk aus einem Linux-Rechner an, und der Finder bietet an, es zu löschen. Warum das so ist, und wie Sie es stattdessen lesen.",
       "sections": [
         {
@@ -130,7 +130,7 @@
         {
           "heading": "Laufwerke, die sich nicht öffnen lassen",
           "paragraphs": [
-            "Ein LUKS-Laufwerk lässt sich so einrichten, dass sein Header anderswo liegt, auf einem anderen Volume oder einem USB-Stick. Der Header ist der Teil, der die Verschlüsselung beschreibt. Ohne ihn gibt es auf dem Laufwerk nichts zu entsperren.",
+            "Ein LUKS-Laufwerk lässt sich so einrichten, dass sein Header anderswo liegt, auf einem anderen Laufwerk oder einem USB-Stick. Der Header ist der Teil, der die Verschlüsselung beschreibt. Ohne ihn gibt es auf dem Laufwerk nichts zu entsperren.",
             "Neuere Ubuntu-Installationen können den Schlüssel auch an einen Chip im Rechner binden, so wie BitLocker es tut. Solche Laufwerke öffnen sich nur in dem Rechner, aus dem sie stammen."
           ]
         }
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "heading": "Laufwerke, die Windows nicht sauber abgemeldet hat",
+          "heading": "Laufwerke, die Windows nicht sauber geschlossen hat",
           "paragraphs": [
             "Windows markiert ein Laufwerk als unsauber, wenn ein Schreibvorgang unterbrochen wurde, meist weil das Laufwerk abgezogen wurde oder der Rechner mittendrin den Strom verlor. Die Markierung warnt den nächsten Rechner, der es öffnet, dass das Laufwerk halb beschrieben sein könnte und geprüft werden sollte.",
             "Der Schnellstart hinterlässt dieselbe Markierung, auch wenn nichts schiefgegangen ist. Er ist in Windows 10 und 11 von Haus aus eingeschaltet. Statt den Rechner herunterzufahren, versetzt er ihn in den Ruhezustand, was das Laufwerk aussehen lässt, als wäre es noch in Benutzung.",
@@ -204,7 +204,7 @@
         {
           "heading": "Warum es umständlich ist, eine Datei herauszuholen",
           "paragraphs": [
-            "Der übliche Weg ist, die virtuelle Maschine zu starten, ihren Start abzuwarten, die Datei darin zu suchen und sie herüberzukopieren. Das setzt voraus, dass die Maschine noch läuft und dass das Programm, das sie ausführt, noch installiert ist.",
+            "Der übliche Weg ist, die virtuelle Maschine zu starten, ihren Start abzuwarten, die Datei darin zu suchen und sie herüberzukopieren. Das setzt voraus, dass die Maschine noch funktioniert und dass das Programm, das sie ausführt, noch installiert ist.",
             "Der Finder hilft hier auch nicht weiter. Ein Doppelklick auf eine VMDK bewirkt nichts, weil macOS nicht weiß, was darin steckt."
           ]
         },
@@ -245,7 +245,7 @@
           "heading": "Dateien in ein Image kopieren",
           "paragraphs": [
             "qcow2 wird auf die gewöhnliche Weise geschrieben und lässt sich gefahrlos beschreiben.",
-            "VMDK, VDI und VHD lassen sich beschreiben, aber das ist neue Arbeit und noch nicht lange genug im Einsatz, um ihr etwas anzuvertrauen, dessen Verlust Sie sich nicht leisten können. Kopieren Sie die Datei und arbeiten Sie an der Kopie, oder öffnen Sie sie nur lesend und holen Sie stattdessen Dateien heraus.",
+            "VMDK, VDI und VHD lassen sich beschreiben, aber diese Schreibunterstützung ist neu und noch nicht lange genug im Einsatz, um ihr etwas anzuvertrauen, dessen Verlust Sie sich nicht leisten können. Kopieren Sie die Datei und arbeiten Sie an der Kopie, oder öffnen Sie sie nur lesend und holen Sie stattdessen Dateien heraus.",
             "VHDX öffnet sich nur lesend, ebenso die Art von VMDK, die in einer OVA-Datei steckt. Diese Art wird in einem Durchgang durchgeschrieben und lässt sich danach nicht mehr an Ort und Stelle ändern."
           ]
         },

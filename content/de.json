@@ -112,7 +112,7 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "de": "BitLocker-, Linux- und Virtuelle-Maschinen-Laufwerke unter macOS öffnen."
+      "de": "BitLocker-, Linux- und Laufwerke virtueller Maschinen unter macOS öffnen."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
@@ -188,7 +188,7 @@
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "de": "Jedes Laufwerk und jedes Image lässt sich auch schreibgeschützt öffnen, und Lukotta kann erneut öffnen, was bei der letzten Anmeldung geöffnet war."
+      "de": "Jedes Laufwerk und jedes Image lässt sich auch nur lesend öffnen, und Lukotta kann erneut öffnen, was bei der letzten Anmeldung geöffnet war."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -280,7 +280,7 @@
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "de": "Hyper-V. Öffnet schreibgeschützt"
+      "de": "Hyper-V. Öffnet nur lesend"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",

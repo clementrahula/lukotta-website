@@ -32,8 +32,8 @@
         {
           "heading": "Wat er gebeurt als je er een op een Mac aansluit",
           "paragraphs": [
-            "De Finder zegt dat de schijf onleesbaar is en biedt aan hem te structureren of te wissen. Er wordt niet om een wachtwoord gevraagd, en niets op het scherm wijst erop dat de schijf vergrendeld is in plaats van stuk.",
-            "De schijf is niet beschadigd. macOS heeft met FileVault zijn eigen versleuteling en begrijpt van BitLocker helemaal niets. Het leest het begin van de schijf, vindt een indeling die het niet kent, en behandelt de schijf als ongestructureerd, zodat het alleen kan aanbieden hem te wissen."
+            "De Finder zegt dat de schijf onleesbaar is en biedt aan hem te initialiseren of te wissen. Er wordt niet om een wachtwoord gevraagd, en niets op het scherm wijst erop dat de schijf vergrendeld is in plaats van stuk.",
+            "De schijf is niet beschadigd. macOS heeft met FileVault zijn eigen versleuteling en begrijpt van BitLocker helemaal niets. Het leest het begin van de schijf, vindt een indeling die het niet kent, en behandelt de schijf als ongeformatteerd, zodat het alleen kan aanbieden hem te wissen."
           ]
         },
         {
@@ -114,7 +114,7 @@
         {
           "heading": "De schijf openen",
           "list": [
-            "Sluit de schijf aan. Lukotta zet erin wat erop staat.",
+            "Sluit de schijf aan. Lukotta toont wat erop staat.",
             "Is hij versleuteld, typ dan de wachtwoordzin.",
             "De schijf verschijnt in de Finder onder Locaties."
           ],
@@ -145,7 +145,7 @@
         {
           "heading": "Wat NTFS is",
           "paragraphs": [
-            "NTFS is het bestandssysteem dat Windows gebruikt, zowel voor zijn eigen schijf als voor externe schijven die op een pc zijn gestructureerd. Een USB-schijf die op een Windows-machine is gestructureerd, is meestal NTFS.",
+            "NTFS is het bestandssysteem dat Windows gebruikt, zowel voor zijn eigen schijf als voor externe schijven die op een pc zijn geformatteerd. Een USB-schijf die op een Windows-machine is geformatteerd, is meestal NTFS.",
             "Het andere gangbare is exFAT, dat de meeste geheugenkaarten en veel USB-sticks gebruiken omdat Windows en macOS er allebei naartoe kunnen schrijven. Is je schijf exFAT, dan kan macOS er al mee overweg en gaat hier niets van op. Klik om dat na te gaan de schijf aan in de Finder en kies ‘Archief’ en dan ‘Toon info’. De regel ‘Structuur’ vertelt het je."
           ]
         },
@@ -211,7 +211,7 @@
         {
           "heading": "Hoe Lukotta hem opent",
           "paragraphs": [
-            "Lukotta leest de schijfkopie rechtstreeks. Het zoekt uit in welke structuur het bestand staat, vindt de schijf erin, en opent die in het kleine Linux-systeem dat het op de achtergrond draait. Wat erin zit verschijnt dan in de Finder als een gewone schijf.",
+            "Lukotta leest de schijfkopie rechtstreeks. Het zoekt uit in welk formaat het bestand staat, vindt de schijf erin, en opent die in het kleine Linux-systeem dat het op de achtergrond draait. Wat erin zit verschijnt dan in de Finder als een gewone schijf.",
             "De virtuele machine blijft uit. VMware en VirtualBox hoeven niet geïnstalleerd te zijn, en het bestand openen verandert het niet."
           ]
         },
@@ -245,7 +245,7 @@
           "heading": "Bestanden in een schijfkopie kopiëren",
           "paragraphs": [
             "qcow2 wordt op de gewone manier geschreven en is veilig om naartoe te schrijven.",
-            "VMDK, VDI en VHD kunnen beschreven worden, maar dat is recent werk en het is nog niet lang genoeg in gebruik om er iets aan toe te vertrouwen dat je niet kwijt mag. Kopieer het bestand en werk aan de kopie, of open het alleen-lezen en haal er bestanden uit.",
+            "VMDK, VDI en VHD kunnen beschreven worden, maar de schrijfondersteuning is nieuw en nog niet lang genoeg in gebruik om er iets aan toe te vertrouwen dat je niet kwijt mag. Kopieer het bestand en werk aan de kopie, of open het alleen-lezen en haal er bestanden uit.",
             "VHDX gaat alleen-lezen open, en de soort VMDK die in een OVA-bestand zit ook. Die soort wordt in één keer doorgeschreven en is achteraf niet meer ter plekke te veranderen."
           ]
         },
