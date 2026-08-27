@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "he": "‏VMware, שטוח ודליל"
+      "he": "‏VMware, flat ו‑sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "he": "מה שקובץ OVA מכיל. נכתב במעבר אחד, ולכן אי אפשר לשנות אותו ישירות"
+      "he": "מה שקובץ OVA מכיל. נכתב במעבר אחד, ולכן אחר כך אי אפשר לשנות אותו באותו קובץ"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

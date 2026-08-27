@@ -172,7 +172,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "th": "โวลุ่มจะปรากฏใต้ตำแหน่งที่ตั้ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
+      "th": "โวลุ่มจะปรากฏใต้ตำแหน่ง และอ่าน เขียน และดีดออกได้เหมือนไดรฟ์อื่น ๆ"
     },
     "features.title": {
       "en": "What Lukotta Opens",
@@ -268,7 +268,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "th": "สิ่งที่อยู่ในไฟล์ OVA เขียนรวดเดียวจบ จึงแก้ไขโดยตรงไม่ได้"
+      "th": "สิ่งที่อยู่ในไฟล์ OVA เขียนรวดเดียวจบ จึงแก้ไขในไฟล์เดิมภายหลังไม่ได้"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

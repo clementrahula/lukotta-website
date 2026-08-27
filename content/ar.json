@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "ar": "VMware، المسطّحة والمتفرّقة"
+      "ar": "VMware، flat وsparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ar": "ما يحتويه ملف OVA. يُكتب دفعة واحدة، فلا يمكن تعديله مباشرةً"
+      "ar": "ما يحتويه ملف OVA. يُكتب دفعة واحدة، فلا يمكن تعديله بعد ذلك في الملف نفسه"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -444,7 +444,7 @@
     },
     "notFound.about.what": {
       "en": "who maintains Lukotta",
-      "ar": "من يتعهد Lukotta"
+      "ar": "من يتولى صيانة Lukotta"
     },
     "notFound.contact.name": {
       "en": "Contact",

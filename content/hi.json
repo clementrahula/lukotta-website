@@ -268,7 +268,7 @@
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "hi": "जो एक OVA में होता है। एक ही बार में लिखा जाता है, इसलिए सीधे बदला नहीं जा सकता"
+      "hi": "जो एक OVA में होता है। एक ही बार में लिखा जाता है, इसलिए बाद में उसी फ़ाइल में बदला नहीं जा सकता"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
