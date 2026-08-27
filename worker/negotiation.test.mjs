@@ -1,8 +1,8 @@
-/* The two decisions the worker makes per request, tested without deploying it.
-   Both are pure functions of a header and a path, which is the whole reason
-   they are written as pure functions: a worker sitting in front of an entire
-   zone should not need a deploy to find out whether it answers a browser
-   correctly. Run with: node worker/negotiation.test.mjs */
+/* The decisions the worker makes per request, tested without deploying it.
+   Each is a pure function of a header or a URL, which is the whole reason they
+   are written as pure functions: a worker sitting in front of an entire zone
+   should not need a deploy to find out whether it answers a browser correctly.
+   Run with: node worker/negotiation.test.mjs */
 
 import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -11,15 +11,17 @@ import { fileURLToPath } from "node:url";
 const here = dirname(fileURLToPath(import.meta.url));
 const src = readFileSync(join(here, "index.js"), "utf8");
 /* The worker's own imports are stripped: this evaluates the module as a data
-   URL, where a relative import has nothing to resolve against, and the two
+   URL, where a relative import has nothing to resolve against, and the
    functions under test do not use them. */
 const body = src
   .slice(0, src.indexOf("export default"))
   .replace(/^import .*$/gm, "");
 
-const { wantsMarkdown, twinFor } = await import(
+const { wantsMarkdown, twinFor, isMarkdownFile, canonicalFor } = await import(
   "data:text/javascript," +
-    encodeURIComponent(body + "\nexport { wantsMarkdown, twinFor };")
+    encodeURIComponent(
+      body + "\nexport { wantsMarkdown, twinFor, isMarkdownFile, canonicalFor };"
+    )
 );
 
 let failed = 0;
@@ -57,6 +59,24 @@ is(twinFor("/llms.txt"), null, "llms.txt is already markdown and is left alone")
 is(twinFor("/styles.abc123.css"), null, "an asset is left alone");
 is(twinFor("/assets/og.png"), null, "and so is everything under /assets/");
 is(twinFor("/assets/fonts/inter-latin.woff2"), null, "however deep it sits");
+
+console.log("\n  Is this a twin fetched at its own address?\n");
+is(isMarkdownFile("/index.md"), true, "the root twin");
+is(isMarkdownFile("/de/ueber/index.md"), true, "a twin under a language");
+is(isMarkdownFile("/INDEX.MD"), true, "whatever the case");
+is(isMarkdownFile("/de/"), false, "a page is not");
+is(isMarkdownFile("/llms.txt"), false, "and neither is llms.txt");
+is(isMarkdownFile("/notes.md.html"), false, "nor a path that merely contains .md");
+
+console.log("\n  Which address does a twin call canonical?\n");
+const c = (href) => canonicalFor(new URL(href));
+is(c("https://lukotta.com/de/"), "https://lukotta.com/de/", "a page is its own canonical");
+is(c("https://lukotta.com/?utm_source=x"), "https://lukotta.com/",
+   "a campaign parameter is not part of the address");
+is(c("https://www.lukotta.com/de/"), "https://lukotta.com/de/",
+   "www points at the apex, which is what the pages canonicalise to");
+is(c("https://www.lukotta.com/?a=1#b"), "https://lukotta.com/",
+   "query and fragment both go");
 
 console.log(failed ? `\n  ${failed} failed\n` : "\n  All passed\n");
 process.exit(failed ? 1 : 0);

@@ -60,6 +60,25 @@ function twinFor(pathname) {
   return pathname.endsWith("/") ? `${pathname}index.md` : `${pathname}/index.md`;
 }
 
+/* The twins are fetchable at their own addresses as well as through
+   negotiation, and at that address nothing marks them. A negotiated response
+   carries X-Robots-Tag already, but Googlebot never negotiates: it sends no
+   markdown Accept, so the only way it can ever meet a twin is by following a
+   bare .md URL out of somebody's transcript. Each one is a thin copy of a page
+   that is already indexed at its own address. */
+function isMarkdownFile(pathname) {
+  return /\.md$/i.test(pathname);
+}
+
+/* One address per page. The header used to echo whatever was asked for, so
+   /?utm_source=x declared itself canonical with the campaign parameter still
+   on it, and a request to www declared the www address rather than the apex
+   the rest of the site canonicalises to. */
+function canonicalFor(url) {
+  const host = url.hostname.replace(/^www\./i, "");
+  return `${url.protocol}//${host}${url.pathname}`;
+}
+
 /* The language directories, so a 404 under one can be answered in that
    language. Written by the build into worker/languages.js rather than kept by
    hand here, because a list of languages maintained in two places is a list
@@ -116,11 +135,11 @@ async function negotiate(request) {
         const localised = await localisedNotFound(request, url);
         if (localised) return withVary(localised);
       }
-      return withVary(passed);
+      return withVary(passed, url);
     }
 
     const twin = twinFor(url.pathname);
-    if (!twin) return withVary(await fetch(request));
+    if (!twin) return withVary(await fetch(request), url);
 
     const md = await fetch(new URL(twin, url).toString(), {
       headers: { "User-Agent": request.headers.get("User-Agent") || "" },
@@ -129,7 +148,7 @@ async function negotiate(request) {
 
     /* No twin, or the origin had something to say about it: answer the original
        request rather than handing back a 404 for a page that exists in HTML. */
-    if (!md.ok) return withVary(await fetch(request));
+    if (!md.ok) return withVary(await fetch(request), url);
 
     const body = method === "HEAD" ? null : md.body;
     return new Response(body, {
@@ -139,7 +158,7 @@ async function negotiate(request) {
         "Cache-Control": md.headers.get("Cache-Control") || "public, max-age=3600",
         "Vary": "Accept, Accept-Encoding",
         "X-Content-Type-Options": "nosniff",
-        "Link": `<${url.href}>; rel="canonical"`,
+        "Link": `<${canonicalFor(url)}>; rel="canonical"`,
         /* The twins are a machine-readable copy of a page that is already
            indexed at its own address. Letting them be indexed separately is
            thin duplicate content. */
@@ -151,8 +170,11 @@ async function negotiate(request) {
 /* Every response from this zone carries it, not just the markdown ones. A cache
    deciding what to do with the HTML has to know that Accept mattered, or it
    will serve that HTML to the next caller who asked for markdown. */
-function withVary(response) {
+function withVary(response, url) {
   const out = new Response(response.body, response);
+  if (url && isMarkdownFile(url.pathname) && !out.headers.has("X-Robots-Tag")) {
+    out.headers.set("X-Robots-Tag", "noindex");
+  }
   const existing = out.headers.get("Vary") || "";
   const parts = new Set(
     existing.split(",").map((p) => p.trim()).filter(Boolean).map((p) => p.toLowerCase())
