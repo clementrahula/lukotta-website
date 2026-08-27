@@ -65,7 +65,7 @@
           "heading": "Discuri care nu se vor deschide pe un Mac",
           "paragraphs": [
             "Unele calculatoare cu Windows nu cer niciodată o parolă. Țin cheia într-un cip de pe placa de bază, numit TPM, și deblochează discul singure când pornește acea mașină.",
-            "Un disc pus la punct așa merge numai în calculatorul din care vine, fiindcă cheia nu iese niciodată din el. Niciun Mac nu îl poate deschide, și nici alt calculator. Dacă la criptare a fost salvată o cheie de recuperare, aceea încă îl deschide."
+            "Un disc configurat astfel merge numai în calculatorul din care vine, fiindcă cheia nu iese niciodată din el. Niciun Mac nu îl poate deschide, și nici alt calculator. Dacă la criptare a fost salvată o cheie de recuperare, aceea încă îl deschide."
           ]
         },
         {
@@ -86,7 +86,7 @@
         {
           "heading": "De ce un Mac nu poate citi discul",
           "paragraphs": [
-            "Orice disc are un sistem de fișiere: rânduiala care ține minte unde începe fiecare fișier, cum se numește și ce părți din disc sunt încă libere. Windows folosește NTFS. macOS folosește APFS. Linux folosește de obicei ext4, iar câteodată btrfs sau XFS.",
+            "Orice disc are un sistem de fișiere: structura care înregistrează unde începe fiecare fișier, cum se numește și ce părți din disc sunt încă libere. Windows folosește NTFS. macOS folosește APFS. Linux folosește de obicei ext4, iar câteodată btrfs sau XFS.",
             "Fișierele în sine sunt obișnuite. Ce diferă este catalogul dinaintea lor, iar un calculator care nu poate citi catalogul nu are cum să găsească nimic, chiar dacă totul este încă acolo."
           ]
         },
@@ -100,15 +100,15 @@
         {
           "heading": "Cum îl citește Lukotta",
           "paragraphs": [
-            "Lukotta pornește un mic sistem Linux în fundal și îi dă discul. Linux citește ext4, btrfs și XFS de unul singur, așa că discul se deschide acolo fără nicio prefacere, iar Lukotta îl trimite mai departe la Finder.",
+            "Lukotta pornește un mic sistem Linux în fundal și îi dă discul. Linux citește ext4, btrfs și XFS de unul singur, așa că discul se deschide acolo fără nicio conversie, iar Lukotta îl trimite mai departe la Finder.",
             "Pe disc nu se scrie nimic, iar el se poartă normal când se întoarce în mașina cu Linux."
           ]
         },
         {
           "heading": "Ce citește Lukotta",
           "paragraphs": [
-            "ext2, ext3 și ext4, care acoperă cele mai multe sisteme Linux. btrfs, cel din pornire pe Fedora și openSUSE. XFS, răspândit pe servere.",
-            "Criptat sau nu. Dacă discul a fost pus la punct cu LVM, care împarte un disc fizic în mai multe volume, ele se deschid toate deodată, nu unul câte unul."
+            "ext2, ext3 și ext4, care acoperă cele mai multe sisteme Linux. btrfs, cel implicit pe Fedora și openSUSE. XFS, răspândit pe servere.",
+            "Criptat sau nu. Dacă discul a fost configurat cu LVM, care împarte un disc fizic în mai multe volume, ele se deschid toate deodată, nu unul câte unul."
           ]
         },
         {
@@ -130,7 +130,7 @@
         {
           "heading": "Discuri care nu se vor deschide",
           "paragraphs": [
-            "Un disc LUKS poate fi pus la punct cu antetul păstrat în altă parte, pe alt disc sau pe un stick USB. Antetul este partea care descrie criptarea. Fără el, pe disc nu este nimic de deblocat.",
+            "Un disc LUKS poate fi configurat cu antetul păstrat în altă parte, pe alt disc sau pe un stick USB. Antetul este partea care descrie criptarea. Fără el, pe disc nu este nimic de deblocat.",
             "Instalările mai noi de Ubuntu pot lega cheia și de un cip din interiorul mașinii, la fel cum face BitLocker. Discurile acelea se deschid numai în calculatorul din care vin."
           ]
         }
@@ -146,14 +146,14 @@
           "heading": "Ce este NTFS",
           "paragraphs": [
             "NTFS este sistemul de fișiere pe care îl folosește Windows, atât pentru propriul disc, cât și pentru discurile externe formatate pe un calculator cu Windows. Un disc USB formatat pe o mașină cu Windows este de obicei NTFS.",
-            "Celălalt răspândit este exFAT, folosit de cele mai multe carduri de memorie și de multe stickuri USB, fiindcă și Windows, și macOS pot scrie pe el. Dacă discul tău este exFAT, macOS se descurcă deja cu el și nimic din toate acestea nu se aplică. Ca să verifici, dă clic pe disc în Finder și alege „Fișier”, apoi „Afișează informații”. Rândul „Format” îți spune."
+            "Celălalt răspândit este exFAT, folosit de cele mai multe carduri de memorie și de multe stickuri USB, fiindcă și Windows, și macOS pot scrie pe el. Dacă discul tău este exFAT, macOS se descurcă deja cu el și nimic din toate acestea nu se aplică. Ca să verifici, dă clic pe disc în Finder și alege „Fișier”, apoi „Obțineți informații”. Rândul „Format” îți spune."
           ]
         },
         {
           "heading": "Ce se întâmplă când conectezi unul la un Mac",
           "paragraphs": [
             "Discul apare în Finder și vezi fișierele. Copierea fișierelor de pe el merge ca de obicei. Copierea a ceva pe el nu merge: Finder refuză, iar discul se poartă de parcă ar fi blocat.",
-            "macOS deschide discurile NTFS doar pentru citire. Știe să scrie NTFS de ani buni, dar asta este oprită și nu există niciun fel admis de a o porni. Scrierea pe NTFS este mai grea decât citirea, iar o greșeală poate lăsa un disc pe care Windows refuză apoi să îl deschidă."
+            "macOS deschide discurile NTFS doar pentru citire. Știe să scrie NTFS de ani buni, dar funcția este dezactivată și nu există nicio metodă acceptată de a o activa. Scrierea pe NTFS este mai grea decât citirea, iar o greșeală poate lăsa un disc pe care Windows refuză apoi să îl deschidă."
           ]
         },
         {
@@ -180,7 +180,7 @@
         {
           "heading": "Discuri pe care Windows nu le-a închis cum trebuie",
           "paragraphs": [
-            "Windows însemnează un disc drept închis prost atunci când o scriere a fost întreruptă, de obicei fiindcă discul a fost scos sau mașina a rămas fără curent la jumătate. Semnul acela previne următorul calculator care îl deschide că discul poate fi scris pe jumătate și că ar trebui verificat.",
+            "Windows însemnează un disc drept închis prost atunci când o scriere a fost întreruptă, de obicei fiindcă discul a fost scos sau mașina a rămas fără curent la jumătate. Semnul acela avertizează următorul calculator care îl deschide că discul poate fi scris pe jumătate și că ar trebui verificat.",
             "Pornirea rapidă lasă același semn chiar și când nu a mers nimic prost. Vine pornită din capul locului în Windows 10 și 11. În loc să închidă mașina, o pune în hibernare, ceea ce face ca discul să pară că este încă în folosință.",
             "macOS refuză un disc în oricare dintre cele două stări și nu spune de ce. Lukotta îl deschide.",
             "Dacă mai ai mașina cu Windows, rezolvarea mai curată este să conectezi discul înapoi la ea și să o închizi cum trebuie: ține apăsat Shift în timp ce dai clic pe „Închidere”, ceea ce sare peste pornirea rapidă."
@@ -197,7 +197,7 @@
         {
           "heading": "Ce este o imagine de disc",
           "paragraphs": [
-            "Când pui în funcțiune o mașină virtuală, discul acelei mașini este un singur fișier obișnuit care stă pe Mac-ul tău. Sistemul ei, programele ei și fiecare document din ea încap toate în acel unic fișier.",
+            "Când pui în funcțiune o mașină virtuală, discul acelei mașini este un singur fișier obișnuit care stă pe Mac-ul tău. Sistemul ei de operare, programele ei și fiecare document din ea încap toate în acel unic fișier.",
             "Fiecare program scrie fișierul acela în felul lui. VMware folosește VMDK, VirtualBox folosește VDI, Hyper-V folosește VHD și VHDX, iar QEMU și UTM folosesc qcow2. O imagine brută, care de obicei se termină în .img, este o copie directă a unui disc, fără nimic în jurul ei."
           ]
         },
@@ -229,7 +229,7 @@
         {
           "heading": "Deschiderea uneia",
           "list": [
-            "Alege „Fișier”, apoi „Deschide o imagine de disc”, și caută fișierul.",
+            "Alege „Fișier”, apoi „Deschideți o imagine de disc…”, și caută fișierul.",
             "Dacă discul dinăuntru este criptat, scrie parola sau fraza de acces.",
             "Conținutul apare în Finder, la Locații."
           ],
@@ -245,16 +245,16 @@
           "heading": "Copierea fișierelor într-o imagine",
           "paragraphs": [
             "qcow2 se scrie în felul obișnuit și se poate scrie pe el fără grijă.",
-            "Pe VMDK, VDI și VHD se poate scrie, dar asta este muncă recentă și nu a fost în folosință destul de mult timp cât să îi încredințezi ceva ce nu îți permiți să pierzi. Copiază fișierul și lucrează pe copie, sau deschide-l doar pentru citire și scoate fișierele din el.",
-            "VHDX se deschide doar pentru citire, la fel și felul de VMDK care se află într-un fișier OVA. Felul acela se scrie dintr-o singură trecere și nu mai poate fi schimbat pe loc după aceea."
+            "Pe VMDK, VDI și VHD se poate scrie, dar suportul pentru scriere este recent și nu a fost în folosință destul de mult timp cât să îi încredințezi ceva ce nu îți permiți să pierzi. Copiază fișierul și lucrează pe copie, sau deschide-l doar pentru citire și scoate fișierele din el.",
+            "VHDX se deschide doar pentru citire, la fel și felul de VMDK care se află într-un fișier OVA. Felul acela se scrie dintr-o singură trecere și nu mai poate fi modificat în același fișier după aceea."
           ]
         },
         {
           "heading": "Fișiere care nu se vor deschide",
           "paragraphs": [
             "O imagine se deschide numai dacă este întreagă de una singură.",
-            "Un lanț de instantanee VMware împarte starea de acum a mașinii între un fișier de la început și un șir de fișiere mai mici care țin minte ce s-a schimbat după el. Un disc împărțit rupe o imagine în multe bucăți. Un disc de diferențe Hyper-V cuprinde numai deosebirile față de alt fișier.",
-            "În fiecare dintre aceste cazuri, fișierul pe care îl ai face parte dintr-un set, iar Lukotta deschide un fișier o dată."
+            "Un lanț de instantanee VMware împarte starea de acum a mașinii între un fișier de la început și un șir de fișiere mai mici care țin minte ce s-a schimbat după el. Un disc împărțit împarte o imagine în mai multe părți. Un disc de diferențe Hyper-V cuprinde numai deosebirile față de alt fișier.",
+            "În fiecare dintre aceste cazuri, fișierul pe care îl ai face parte dintr-un set, iar Lukotta deschide câte un fișier pe rând."
           ]
         }
       ]

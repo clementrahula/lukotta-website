@@ -20,7 +20,7 @@
       "slug": "abrir-disco-bitlocker-no-mac",
       "title": "Abrir um disco BitLocker num Mac",
       "description": "O macOS não abre um disco BitLocker e propõe apagá-lo. Eis porquê, e como ler o disco e copiar ficheiros para ele.",
-      "lead": "Liga um disco BitLocker a um Mac e o Finder propõe apagá-lo. Eis porquê, e como ler o disco em vez disso.",
+      "lead": "Ligue um disco BitLocker a um Mac e o Finder propõe apagá-lo. Eis porquê, e como ler o disco em vez disso.",
       "sections": [
         {
           "heading": "O que é o BitLocker",
@@ -39,7 +39,7 @@
         {
           "heading": "Como a Lukotta o abre",
           "paragraphs": [
-            "O Linux sabe ler BitLocker há anos, e é disso que a Lukotta se serve. Arranca um pequeno sistema Linux em segundo plano, entrega-lhe o disco, e desbloqueia-o lá com a palavra-passe que escrever. O disco desbloqueado volta ao Finder, onde aparece em Localizações ao lado dos seus outros discos.",
+            "O Linux sabe ler BitLocker há anos, e é disso que a Lukotta se serve. Arranca um pequeno sistema Linux em segundo plano, entrega-lhe o disco, e desbloqueia-o lá com a palavra-passe que escrever. O disco desbloqueado volta ao Finder, onde aparece em Locais ao lado dos seus outros discos.",
             "O disco não é convertido nem copiado. Continua a ser um disco BitLocker, continua encriptado, e o Windows continua a lê-lo."
           ]
         },
@@ -48,7 +48,7 @@
           "list": [
             "Ligue o disco. A Lukotta mostra-o na lista e assinala-o como bloqueado.",
             "Clique nele e escreva a palavra-passe que usa no Windows.",
-            "O disco aparece no Finder, em Localizações."
+            "O disco aparece no Finder, em Locais."
           ],
           "listKind": "steps"
         },
@@ -64,8 +64,8 @@
         {
           "heading": "Discos que não abrem num Mac",
           "paragraphs": [
-            "Alguns PC com Windows nunca pedem palavra-passe. Guardam a chave num chip da placa principal, chamado TPM, e desbloqueiam o disco sozinhos quando essa máquina arranca.",
-            "Um disco montado assim só funciona no PC de onde veio, porque a chave nunca sai de lá. Nenhum Mac o consegue abrir, e outro PC também não. Se foi guardada uma chave de recuperação quando o disco foi encriptado, essa ainda o abre."
+            "Alguns PCs com Windows nunca pedem palavra-passe. Guardam a chave num chip da placa principal, chamado TPM, e desbloqueiam o disco sozinhos quando essa máquina arranca.",
+            "Um disco configurado assim só funciona no PC de onde veio, porque a chave nunca sai de lá. Nenhum Mac o consegue abrir, e outro PC também não. Se foi guardada uma chave de recuperação quando o disco foi encriptado, essa ainda o abre."
           ]
         },
         {
@@ -81,12 +81,12 @@
       "slug": "ler-disco-ext4-no-mac",
       "title": "Ler um disco ext4, btrfs ou XFS num Mac",
       "description": "O macOS não lê ext4, btrfs nem XFS e propõe apagar o disco. Eis porquê, e como abrir um disco Linux num Mac, LUKS incluído.",
-      "lead": "Liga um disco vindo de uma máquina com Linux e o Finder propõe apagá-lo. Eis porquê, e como lê-lo em vez disso.",
+      "lead": "Ligue um disco vindo de uma máquina com Linux e o Finder propõe apagá-lo. Eis porquê, e como lê-lo em vez disso.",
       "sections": [
         {
           "heading": "Porque é que um Mac não consegue ler o disco",
           "paragraphs": [
-            "Todo o disco tem um sistema de ficheiros: a arrumação que regista onde começa cada ficheiro, como se chama, e que partes do disco estão ainda livres. O Windows usa NTFS. O macOS usa APFS. O Linux usa quase sempre ext4, e por vezes btrfs ou XFS.",
+            "Todo o disco tem um sistema de ficheiros: a arrumação que regista onde começa cada ficheiro, como se chama, e que partes do disco estão ainda livres. O Windows usa NTFS. O macOS usa APFS. O Linux usa normalmente ext4, e por vezes btrfs ou XFS.",
             "Os ficheiros em si são vulgares. O que muda é o índice à frente deles, e um computador que não consegue ler esse índice não tem maneira de encontrar seja o que for, mesmo estando tudo lá."
           ]
         },
@@ -108,7 +108,7 @@
           "heading": "O que a Lukotta lê",
           "paragraphs": [
             "ext2, ext3 e ext4, que cobrem a maior parte dos sistemas Linux. btrfs, o de origem no Fedora e no openSUSE. XFS, corrente em servidores.",
-            "Encriptado ou não. Se o disco foi montado com LVM, que divide um disco físico em vários volumes, abrem todos juntos em vez de um de cada vez."
+            "Encriptado ou não. Se o disco foi configurado com LVM, que divide um disco físico em vários volumes, abrem todos juntos em vez de um de cada vez."
           ]
         },
         {
@@ -116,7 +116,7 @@
           "list": [
             "Ligue o disco. A Lukotta mostra o que está nele.",
             "Se estiver encriptado, escreva a frase-passe.",
-            "O disco aparece no Finder, em Localizações."
+            "O disco aparece no Finder, em Locais."
           ],
           "listKind": "steps"
         },
@@ -130,7 +130,7 @@
         {
           "heading": "Discos que não abrem",
           "paragraphs": [
-            "Um disco LUKS pode ser montado com o cabeçalho guardado noutro sítio, noutro disco ou numa pen USB. O cabeçalho é a parte que descreve a encriptação. Sem ele não há nada no disco para desbloquear.",
+            "Um disco LUKS pode ser configurado com o cabeçalho guardado noutro sítio, noutro disco ou numa pen USB. O cabeçalho é a parte que descreve a encriptação. Sem ele não há nada no disco para desbloquear.",
             "As instalações mais recentes do Ubuntu também podem prender a chave a um chip dentro da máquina, da mesma maneira que o BitLocker faz. Esses discos só abrem no computador de onde vieram."
           ]
         }
@@ -145,7 +145,7 @@
         {
           "heading": "O que é o NTFS",
           "paragraphs": [
-            "O NTFS é o sistema de ficheiros que o Windows usa, tanto no seu próprio disco como nos discos externos formatados num PC. Um disco USB formatado numa máquina com Windows é quase sempre NTFS.",
+            "O NTFS é o sistema de ficheiros que o Windows usa, tanto no seu próprio disco como nos discos externos formatados num PC. Um disco USB formatado numa máquina com Windows é normalmente NTFS.",
             "O outro corrente é o exFAT, que a maioria dos cartões de memória e muitas pens USB usam porque tanto o Windows como o macOS lhe sabem escrever. Se o seu disco for exFAT, o macOS já se desenrasca com ele e nada disto se aplica. Para verificar, clique no disco no Finder e escolha «Ficheiro» e depois «Obter informações». A linha «Formato» di-lo."
           ]
         },
@@ -168,13 +168,13 @@
           "list": [
             "Ligue o disco. A Lukotta mostra-o na lista.",
             "Clique nele.",
-            "Aparece no Finder, em Localizações, e os ficheiros copiam-se nos dois sentidos."
+            "Aparece no Finder, em Locais, e os ficheiros copiam-se nos dois sentidos."
           ],
           "listKind": "steps"
         },
         {
           "paragraphs": [
-            "Um disco NTFS quase nunca tem palavra-passe, pelo que não há nada a escrever, a não ser que o BitLocker também tenha sido ligado."
+            "Um disco NTFS normalmente não tem palavra-passe, pelo que não há nada a escrever, a não ser que o BitLocker também tenha sido ligado."
           ]
         },
         {
@@ -197,8 +197,8 @@
         {
           "heading": "O que é uma imagem de disco",
           "paragraphs": [
-            "Quando põe uma máquina virtual a trabalhar, o disco rígido dessa máquina é um único ficheiro vulgar que está no seu Mac. O sistema dela, os programas dela e cada documento lá dentro cabem todos nesse único ficheiro.",
-            "Cada programa escreve esse ficheiro à sua maneira. O VMware usa VMDK, o VirtualBox usa VDI, o Hyper-V usa VHD e VHDX, e o QEMU e o UTM usam qcow2. Uma imagem em bruto, que quase sempre acaba em .img, é uma cópia direta de um disco sem nada à volta."
+            "Quando põe uma máquina virtual a trabalhar, o disco rígido dessa máquina é um único ficheiro vulgar que está no seu Mac. O sistema operativo dela, os programas dela e cada documento lá dentro cabem todos nesse único ficheiro.",
+            "Cada programa escreve esse ficheiro à sua maneira. O VMware usa VMDK, o VirtualBox usa VDI, o Hyper-V usa VHD e VHDX, e o QEMU e o UTM usam qcow2. Uma imagem em bruto, que normalmente acaba em .img, é uma cópia direta de um disco sem nada à volta."
           ]
         },
         {
@@ -222,7 +222,7 @@
             "VMDK, do VMware.",
             "VDI, do VirtualBox.",
             "VHD e VHDX, do Hyper-V.",
-            "Imagens em bruto, que quase sempre acabam em .img."
+            "Imagens em bruto, que normalmente acabam em .img."
           ],
           "listKind": "bullets"
         },
@@ -231,22 +231,22 @@
           "list": [
             "Escolha «Ficheiro» e depois «Abrir imagem de disco», e procure o ficheiro.",
             "Se o disco lá dentro estiver encriptado, escreva a palavra-passe ou a frase-passe.",
-            "O conteúdo aparece no Finder, em Localizações."
+            "O conteúdo aparece no Finder, em Locais."
           ],
           "listKind": "steps"
         },
         {
           "heading": "Um ficheiro guarda muitas vezes vários discos",
           "paragraphs": [
-            "Uma imagem de disco contém quase sempre mais do que uma partição: uma pequena de arranque, a principal onde está tudo, e por vezes uma de recuperação. A Lukotta mostra-as na lista e abre aquela de que precisar, do mesmo modo que escolheria um disco."
+            "Uma imagem de disco normalmente contém mais do que uma partição: uma pequena de arranque, a principal onde está tudo, e por vezes uma de recuperação. A Lukotta mostra-as na lista e abre aquela de que precisar, do mesmo modo que escolheria um disco."
           ]
         },
         {
           "heading": "Copiar ficheiros para dentro de uma imagem",
           "paragraphs": [
             "O qcow2 é escrito da maneira vulgar e pode escrever-se-lhe sem risco.",
-            "Em VMDK, VDI e VHD pode escrever-se, mas isso é trabalho recente e não está em uso há tempo suficiente para lhe confiar aquilo que não pode dar-se ao luxo de perder. Copie o ficheiro e trabalhe sobre a cópia, ou abra-o apenas para leitura e tire de lá os ficheiros.",
-            "O VHDX abre apenas para leitura, e o mesmo acontece com o tipo de VMDK que vem dentro de um ficheiro OVA. Esse tipo é escrito de uma assentada e depois não pode ser alterado no lugar."
+            "Em VMDK, VDI e VHD pode escrever-se, mas o suporte para escrita é recente e não está em uso há tempo suficiente para lhe confiar aquilo que não pode dar-se ao luxo de perder. Copie o ficheiro e trabalhe sobre a cópia, ou abra-o apenas para leitura e tire de lá os ficheiros.",
+            "O VHDX abre apenas para leitura, e o mesmo acontece com o tipo de VMDK que vem dentro de um ficheiro OVA. Esse tipo é escrito de uma assentada e depois não pode ser alterado no próprio ficheiro."
           ]
         },
         {

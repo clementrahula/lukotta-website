@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "ro": "VMware, plat și rarefiat"
+      "ro": "VMware, flat și sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "ro": "Ce conține un OVA. Se scrie dintr-o singură trecere, deci nu poate fi modificat direct"
+      "ro": "Ce conține un OVA. Se scrie dintr-o singură trecere, deci nu mai poate fi modificat în același fișier"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",

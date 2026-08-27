@@ -14,14 +14,14 @@
     "about": {
       "slug": "sobre",
       "title": "Sobre a Lukotta",
-      "description": "A Lukotta é uma aplicação macOS gratuita e de código aberto que abre discos BitLocker, NTFS e Linux, sob a GNU General Public License.",
+      "description": "A Lukotta abre discos BitLocker, NTFS e Linux no macOS. Aplicação gratuita e de código aberto, mantida por um programador, sob a GNU General Public License.",
       "lead": "A Lukotta abre discos e imagens de disco que o macOS não consegue ler. É gratuita, de código aberto, e mantida por uma só pessoa.",
       "sections": [
         {
           "heading": "O que é",
           "paragraphs": [
             "A Lukotta é uma aplicação macOS. Abre discos BitLocker, NTFS, LUKS, ext4, btrfs e XFS, e imagens de disco de máquinas virtuais nos formatos qcow2, VMDK, VDI, VHD e VHDX. O macOS não lê nenhum deles por si. Lê NTFS, mas não escreve nele.",
-            "Arranca um pequeno sistema Linux em segundo plano, abre lá o disco e entrega-o ao Finder. O Linux lê estes formatos há anos. O disco não é convertido nem copiado. Fica como estava, e a máquina de onde veio continua a lê-lo."
+            "Arranca uma pequena máquina virtual Linux em segundo plano, abre lá o disco e entrega-o ao Finder. O Linux lê estes formatos há anos. O disco não é convertido nem copiado. Fica como estava, e a máquina de onde veio continua a lê-lo."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "contacto",
       "title": "Contacto",
-      "description": "Como comunicar um erro na Lukotta, fazer uma pergunta ou comunicar um problema de segurança. As issues no GitHub são lidas primeiro.",
+      "description": "Como comunicar um erro na Lukotta, fazer uma pergunta ou comunicar um problema de segurança. As issues no GitHub são lidas e respondidas primeiro.",
       "lead": "Os erros vão para o GitHub. Os problemas de segurança vão para o endereço em SECURITY.md. Tudo o resto vai por email.",
       "sections": [
         {
           "heading": "Um erro, ou um disco que não abre",
           "paragraphs": [
-            "Abra uma issue em github.com/clementrahula/lukotta/issues. As issues são lidas primeiro, e são públicas, por isso a próxima pessoa com o mesmo disco encontra a resposta.",
+            "Abra uma issue em github.com/clementrahula/lukotta/issues. As issues são lidas primeiro, e são públicas, por isso a próxima pessoa com o mesmo disco pode encontrar a resposta.",
             "Diga que disco é, o que a Lukotta mostrou e o que esperava. Cite o erro tal como aparece. Nunca cole uma palavra-passe ou uma chave de recuperação numa issue."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Quanto demora uma resposta",
           "paragraphs": [
-            "A Lukotta é mantida por uma só pessoa. Não há apoio ao cliente nem prazo de resposta prometido. Algumas mensagens demoram, e algumas ficam sem resposta.",
+            "A Lukotta é mantida por uma só pessoa. Não há uma equipa de apoio nem prazo de resposta prometido. Algumas mensagens demoram, e algumas ficam sem resposta.",
             "Uma issue no GitHub costuma ser mais rápida, porque outra pessoa pode responder primeiro."
           ]
         }

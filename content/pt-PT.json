@@ -172,7 +172,7 @@
     },
     "how.3.body": {
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
-      "pt-PT": "O volume aparece em Localizações e lê-se, escreve-se e ejeta-se como qualquer outro disco."
+      "pt-PT": "O volume aparece em Locais e lê-se, escreve-se e ejeta-se como qualquer outro disco."
     },
     "features.title": {
       "en": "What Lukotta Opens",
@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "pt-PT": "VMware, plano e esparso"
+      "pt-PT": "VMware, flat e sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "pt-PT": "O que um OVA contém. É escrito numa só passagem, pelo que não pode ser alterado diretamente"
+      "pt-PT": "O que um OVA contém. É escrito numa só passagem, pelo que não pode ser alterado no próprio ficheiro"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
