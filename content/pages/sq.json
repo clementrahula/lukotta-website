@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "sq",
+    "name": "Albanian",
+    "native": "Shqip",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "Shkarkimi dhe përdorimi janë falas."
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "hap-disk-bitlocker-ne-mac",
+      "title": "Hapni një disk BitLocker në Mac",
+      "description": "macOS nuk e hap një disk BitLocker dhe në vend të kësaj ofron ta fshijë. Ja pse, dhe si ta lexoni diskun e të kopjoni skedarë në të.",
+      "lead": "Lidhni një disk BitLocker me një Mac dhe Finder ofron ta fshijë. Ja pse, dhe si ta lexoni diskun në vend të kësaj.",
+      "sections": [
+        {
+          "heading": "Çfarë është BitLocker",
+          "paragraphs": [
+            "BitLocker është fshehtëzimi i ndërtuar brenda Windows. Kur është i ndezur, gjithçka që shkruhet në disk përzihet, dhe përmbajtja nuk lexohet dot pa fjalëkalim. Windows e përdor në diskun e vet, si edhe në disqe USB e karta memorieje, ku quhet BitLocker To Go.",
+            "Në të dyja rastet është i njëjti fshehtëzim. Nëse disku humbet, ai që e gjen nuk lexon dot asgjë prej tij."
+          ]
+        },
+        {
+          "heading": "Çfarë ndodh kur lidhni një të tillë me një Mac",
+          "paragraphs": [
+            "Finder thotë se disku nuk lexohet dhe ofron ta nisë nga e para ose ta fshijë. Nuk kërkon fjalëkalim, dhe asgjë në ekran nuk të lë të kuptosh se disku është i kyçur e jo i prishur.",
+            "Disku nuk është dëmtuar. macOS ka fshehtëzimin e vet, FileVault, dhe nga BitLocker nuk kupton fare. Lexon fillimin e diskut, gjen një rregullim që nuk e njeh, dhe e trajton diskun si të paformatuar, kështu që e vetmja gjë që mund të ofrojë është ta fshijë."
+          ]
+        },
+        {
+          "heading": "Si e hap Lukotta",
+          "paragraphs": [
+            "Linux di ta lexojë BitLocker prej vitesh, dhe pikërisht këtë përdor Lukotta. Nis në sfond një sistem të vogël Linux, i dorëzon diskun, dhe e shkyç atje me fjalëkalimin që shkruani. Disku i shkyçur kthehet te Finder, ku shfaqet te Locations, pranë disqeve tuaja të tjera.",
+            "Disku as shndërrohet, as kopjohet. Mbetet disk BitLocker, mbetet i fshehtëzuar, dhe Windows e lexon si më parë."
+          ]
+        },
+        {
+          "heading": "Si ta hapni diskun",
+          "list": [
+            "Lidhni diskun. Lukotta e rendit dhe e tregon si të kyçur.",
+            "Klikoni mbi të dhe shkruani fjalëkalimin që përdorni në Windows.",
+            "Disku shfaqet në Finder, te Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Nëse nuk e keni fjalëkalimin",
+          "paragraphs": [
+            "Kur disku u fshehtëzua, Windows nxori një çelës rikuperimi dhe pyeti ku të ruhej. Ai e hap diskun në vend të fjalëkalimit. Ka 48 shifra, në tetë grupe nga gjashtë:",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "Mund të jetë ruajtur në një llogari Microsoft, në një skedar teksti, ose i shtypur në letër. Ngjiteni aty ku do të shkonte fjalëkalimi.",
+            "Pa fjalëkalimin ose çelësin, diskun nuk e hap dot asnjë program, në asnjë kompjuter."
+          ]
+        },
+        {
+          "heading": "Disqe që nuk hapen në një Mac",
+          "paragraphs": [
+            "Disa kompjutera me Windows nuk kërkojnë kurrë fjalëkalim. E mbajnë çelësin në një çip mbi pllakën amë, të quajtur TPM, dhe e shkyçin diskun vetë kur ajo makinë niset.",
+            "Një disk i rregulluar kështu punon vetëm në kompjuterin nga i cili vjen, sepse çelësi nuk del kurrë prej tij. Asnjë Mac nuk e hap dot, e as ndonjë kompjuter tjetër me Windows. Nëse gjatë fshehtëzimit të diskut u ruajt një çelës rikuperimi, ai e hap ende."
+          ]
+        },
+        {
+          "heading": "Si të kopjoni skedarë në disk",
+          "paragraphs": [
+            "Disqet BitLocker hapen si për lexim ashtu edhe për shkrim, kështu që një Mac mund t'i shtojë skedarë një kopjeje rezervë nga Windows, jo vetëm të marrë prej saj.",
+            "Lukotta mund ta hapë diskun edhe vetëm për lexim, gjë që ia vlen kur po shpëtoni skedarë nga një disk që ka nisur të bëjë probleme. Atëherë nuk shkruhet dot asgjë në të."
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "lexo-disk-ext4-ne-mac",
+      "title": "Lexoni një disk ext4, btrfs ose XFS në Mac",
+      "description": "macOS nuk lexon as ext4, as btrfs, as XFS dhe ofron ta fshijë diskun. Ja pse, dhe si të hapni një disk Linux në Mac, LUKS përfshirë.",
+      "lead": "Lidhni një disk të ardhur nga një makinë me Linux dhe Finder ofron ta fshijë. Ja pse, dhe si ta lexoni në vend të kësaj.",
+      "sections": [
+        {
+          "heading": "Pse një Mac nuk e lexon dot diskun",
+          "paragraphs": [
+            "Çdo disk ka një sistem skedarësh: rregullimi që shënon ku nis çdo skedar, si quhet, dhe cilat pjesë të diskut janë ende të lira. Windows përdor NTFS. macOS përdor APFS. Linux zakonisht përdor ext4, e nganjëherë btrfs ose XFS.",
+            "Vetë skedarët janë krejt të zakonshëm. Ndryshon treguesi para tyre, dhe një kompjuter që nuk e lexon dot atë tregues nuk ka si të gjejë asgjë, edhe pse gjithçka është ende aty."
+          ]
+        },
+        {
+          "heading": "Çfarë ndodh kur lidhni një të tillë me një Mac",
+          "paragraphs": [
+            "Finder thotë se disku nuk lexohet dhe ofron ta fshijë. Të njëjtin mesazh macOS e jep për një disk bosh dhe për një që po prishet, kështu që mesazhi nuk të lë asnjë mënyrë të kuptosh se disku është në rregull.",
+            "macOS mbështet sistemet e veta të skedarëve dhe pak të tjerë të përhapur, si exFAT. Sistemet e skedarëve të Linux nuk janë mes tyre, ndaj një disk ext4 i duket macOS si disk bosh."
+          ]
+        },
+        {
+          "heading": "Si e lexon Lukotta",
+          "paragraphs": [
+            "Lukotta nis në sfond një sistem të vogël Linux dhe i jep diskun. Linux i lexon vetë ext4, btrfs dhe XFS, ndaj disku hapet atje pa asnjë shndërrim, dhe Lukotta ia kalon Finder.",
+            "Në disk nuk shkruhet asgjë, dhe sillet normalisht kur kthehet në makinën me Linux."
+          ]
+        },
+        {
+          "heading": "Çfarë lexon Lukotta",
+          "paragraphs": [
+            "ext2, ext3 dhe ext4, që mbulojnë shumicën e sistemeve me Linux. btrfs, i parazgjedhuri në Fedora dhe openSUSE. XFS, i përhapur në servera.",
+            "I fshehtëzuar ose jo. Nëse disku u rregullua me LVM, që një disk fizik e ndan në disa volume, ato hapen të gjitha bashkë e jo një nga një."
+          ]
+        },
+        {
+          "heading": "Si ta hapni diskun",
+          "list": [
+            "Lidhni diskun. Lukotta rendit ç'ka mbi të.",
+            "Nëse është i fshehtëzuar, shkruani frazkalimin.",
+            "Disku shfaqet në Finder, te Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Nëse kërkon një frazkalim",
+          "paragraphs": [
+            "LUKS është mënyra si Linux e fshehtëzon një disk të tërë. Nëse makina nga vjen ky disk kërkon një frazkalim herët gjatë nisjes, para ekranit të hyrjes, ajo është LUKS, dhe ai është frazkalimi që duhet shkruar këtu.",
+            "Është i ndarë nga fjalëkalimi i hyrjes, edhe pse shumë veta i vënë të njëjtin për të dyja."
+          ]
+        },
+        {
+          "heading": "Disqe që nuk hapen",
+          "paragraphs": [
+            "Një disk LUKS mund të rregullohet me kokën e tij të ruajtur diku tjetër, në një disk tjetër ose në një çelës USB. Koka është pjesa që përshkruan fshehtëzimin. Pa të, në disk nuk ka çfarë të shkyçet.",
+            "Instalimet më të reja të Ubuntu mund ta lidhin çelësin edhe me një çip brenda makinës, njësoj si e bën BitLocker. Ata disqe hapen vetëm në kompjuterin nga vijnë."
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "shkruaj-ne-disk-ntfs-ne-mac",
+      "title": "Shkruani në një disk NTFS në Mac",
+      "description": "macOS i hap disqet NTFS vetëm për lexim, ndaj skedarët dalin prej tyre por nuk hyjnë. Ja pse, dhe si të shkruani në një disk NTFS në Mac.",
+      "lead": "macOS ju lë të kopjoni skedarë prej një disku NTFS por jo mbi të. Ja pse, dhe çfarë mund të bëhet për këtë.",
+      "sections": [
+        {
+          "heading": "Çfarë është NTFS",
+          "paragraphs": [
+            "NTFS është sistemi i skedarëve që përdor Windows, si për diskun e vet ashtu edhe për disqet e jashtme të formatuar në një kompjuter me Windows. Një disk USB i formatuar në një makinë me Windows zakonisht është NTFS.",
+            "Tjetri i përhapur është exFAT, që e përdorin shumica e kartave të memories dhe shumë çelësa USB, sepse edhe Windows edhe macOS dinë të shkruajnë në të. Nëse disku juaj është exFAT, macOS ia del me të dhe asgjë nga kjo nuk ju përket. Për ta kontrolluar, klikoni diskun në Finder dhe zgjidhni File e pastaj Get Info. Rreshti Format jua thotë."
+          ]
+        },
+        {
+          "heading": "Çfarë ndodh kur lidhni një të tillë me një Mac",
+          "paragraphs": [
+            "Disku shfaqet në Finder dhe skedarët i shihni. Kopjimi i skedarëve prej tij shkon normalisht. Kopjimi i çfarëdo gjëje mbi të nuk shkon: Finder refuzon, dhe disku sillet sikur të ishte i kyçur.",
+            "macOS i hap disqet NTFS vetëm për lexim. Di të shkruajë NTFS prej vitesh, por kjo është e fikur dhe s'ka asnjë mënyrë të mbështetur për ta ndezur. Të shkruash NTFS është më e vështirë se ta lexosh, dhe një gabim mund të lërë një disk që Windows pastaj refuzon ta hapë."
+          ]
+        },
+        {
+          "heading": "Si shkruan Lukotta në të",
+          "paragraphs": [
+            "Lukotta e hap diskun me shoferin NTFS të Linux, që shkruan dhe që makinat me Linux e përdorin çdo ditë. Disku i dorëzohet më pas Finder, kështu që kopjimi i skedarëve mbi të shkon si çdo kopjim tjetër.",
+            "Disku mbetet NTFS, dhe Windows e lexon më pas."
+          ]
+        },
+        {
+          "heading": "Si ta hapni diskun",
+          "list": [
+            "Lidhni diskun. Lukotta e rendit.",
+            "Klikoni mbi të.",
+            "Shfaqet në Finder, te Locations, dhe skedarët kopjohen në të dyja drejtimet."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "Një disk NTFS zakonisht nuk ka fjalëkalim, ndaj s'ka çfarë të shkruhet, veç nëse mbi të është ndezur edhe BitLocker."
+          ]
+        },
+        {
+          "heading": "Disqe që Windows nuk i mbylli si duhet",
+          "paragraphs": [
+            "Windows e shënon një disk si të mbyllur keq kur një shkrim u ndërpre, zakonisht sepse disku u hoq ose makina mbeti pa rrymë në mes. Ajo shenjë paralajmëron kompjuterin tjetër që e hap se disku mund të jetë shkruar përgjysmë dhe duhet kontrolluar.",
+            "Nisja e shpejtë e lë të njëjtën shenjë edhe kur asgjë nuk ka shkuar keq. Në Windows 10 dhe 11 është e ndezur që në fillim. Në vend që ta fikë makinën, e vë në gjumë, gjë që e lë diskun të duket sikur është ende në përdorim.",
+            "macOS e refuzon diskun në të dyja gjendjet dhe nuk jep arsye. Lukotta e hap.",
+            "Nëse makinën me Windows e keni ende, zgjidhja më e pastër është ta lidhni diskun sërish me të dhe ta fikni atë makinë si duhet: mbani shtypur Shift ndërsa klikoni fikjen e kompjuterit, kjo e kapërcen nisjen e shpejtë."
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "hap-skedar-vmdk-vdi-vhd-ne-mac",
+      "title": "Hapni një skedar VMDK, VDI ose VHD në Mac",
+      "description": "Hapni në Mac një skedar VMDK, VDI, VHD ose qcow2 dhe kopjoni skedarë prej tij, pa instaluar VMware ose VirtualBox dhe pa nisur makinën.",
+      "lead": "Një makinë virtuale e mban tërë diskun e vet brenda një skedari të vetëm. Atë skedar mund ta hapni në një Mac dhe të nxirrni gjëra prej tij pa e nisur kurrë makinën.",
+      "sections": [
+        {
+          "heading": "Çfarë është një imazh disku",
+          "paragraphs": [
+            "Kur mbani në punë një makinë virtuale, disku i asaj makine është një skedar i vetëm i zakonshëm që rri në Mac-un tuaj. Sistemi i saj, programet e saj dhe çdo dokument brenda saj janë të gjithë brenda atij skedari të vetëm.",
+            "Çdo program e shkruan atë skedar në mënyrën e vet. VMware përdor VMDK, VirtualBox përdor VDI, Hyper-V përdor VHD e VHDX, kurse QEMU dhe UTM përdorin qcow2. Një imazh i papërpunuar, që zakonisht mbaron me .img, është kopje e drejtpërdrejtë e një disku pa asgjë përreth."
+          ]
+        },
+        {
+          "heading": "Pse është e bezdisshme të nxjerrësh një skedar prej tij",
+          "paragraphs": [
+            "Rruga e zakonshme është të nisësh makinën virtuale, të presësh sa të ngrihet, të gjesh skedarin brenda saj dhe ta kopjosh jashtë. Kjo do të thotë se makina duhet ende të punojë, dhe se programi që e mban në punë duhet të jetë ende i instaluar.",
+            "As Finder nuk ndihmon këtu. Klikimi dyfish mbi një VMDK nuk bën asgjë, sepse macOS nuk e di ç'ka brenda."
+          ]
+        },
+        {
+          "heading": "Si e hap Lukotta",
+          "paragraphs": [
+            "Lukotta e lexon imazhin drejtpërdrejt. Kupton në ç'format është skedari, gjen diskun brenda tij, dhe e hap në sistemin e vogël Linux që mban në sfond. Ajo që është brenda shfaqet pastaj në Finder si disk i zakonshëm.",
+            "Makina virtuale mbetet e fikur. VMware dhe VirtualBox s'kanë nevojë të jenë të instaluar, dhe hapja e skedarit nuk e ndryshon atë."
+          ]
+        },
+        {
+          "heading": "Cilët skedarë hap Lukotta",
+          "list": [
+            "qcow2, nga QEMU dhe UTM.",
+            "VMDK, nga VMware.",
+            "VDI, nga VirtualBox.",
+            "VHD dhe VHDX, nga Hyper-V.",
+            "Imazhe të papërpunuara, që zakonisht mbarojnë me .img."
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "Si të hapni një",
+          "list": [
+            "Zgjidhni File e pastaj Hap imazh disku, dhe gjeni skedarin.",
+            "Nëse disku brenda është i fshehtëzuar, shkruani fjalëkalimin ose frazkalimin.",
+            "Përmbajtja shfaqet në Finder, te Locations."
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "Një skedar shpesh mban disa disqe",
+          "paragraphs": [
+            "Një imazh disku zakonisht përmban më shumë se një ndarje: një ndarje të vogël nisjeje, atë kryesoren ku rri gjithçka, dhe nganjëherë një ndarje rikuperimi. Lukotta i rendit dhe ju hapni atë që ju duhet, njësoj siç do të zgjidhnit një disk."
+          ]
+        },
+        {
+          "heading": "Si të kopjoni skedarë brenda një imazhi",
+          "paragraphs": [
+            "qcow2 shkruhet në mënyrën e zakonshme dhe në të shkruhet pa rrezik.",
+            "Në VMDK, VDI dhe VHD mund të shkruhet, por kjo është punë e freskët dhe nuk ka qenë në përdorim aq gjatë sa t'i besohet diçka që nuk keni si ta humbisni. Kopjoni skedarin dhe punoni mbi kopjen, ose hapeni vetëm për lexim dhe nxirrni prej tij skedarët.",
+            "VHDX hapet vetëm për lexim, dhe po ashtu ai lloj VMDK që gjendet brenda një skedari OVA. Ai lloj shkruhet tejpërtej me një të vetme dhe pastaj nuk ndryshohet dot aty ku është."
+          ]
+        },
+        {
+          "heading": "Skedarë që nuk hapen",
+          "paragraphs": [
+            "Një imazh hapet vetëm nëse është i plotë më vete.",
+            "Një varg fotografish të çastit nga VMware e shpërndan gjendjen e tanishme të makinës mes një skedari fillestar dhe një sërë të tjerësh më të vegjël që shënojnë ç'ndryshoi pas tij. Një disk i ndarë e copëton një imazh në shumë pjesë. Një disk diferencash nga Hyper-V mban vetëm dallimet nga një skedar tjetër.",
+            "Në secilin prej këtyre rasteve skedari që keni është pjesë e një grupi, dhe Lukotta hap një skedar në një kohë."
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "Më shumë për disqet BitLocker dhe çfarë të bëni nëse fjalëkalimi ka humbur",
+    "ntfs": "Më shumë për disqet NTFS, edhe për ato që Windows i mbylli keq",
+    "linux": "Më shumë për disqet e Linux dhe për fshehtëzimin LUKS",
+    "disk-images": "Më shumë për imazhet e diskut dhe se në cilat mund të shkruhet"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

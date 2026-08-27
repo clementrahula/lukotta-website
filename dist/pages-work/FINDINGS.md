@@ -123,3 +123,25 @@ English; the landing page should too.
 
 Separately the site says **disk** for a drive and the application says
 **pogon**. The task pages follow the site.
+
+## Addresses in the languages that do not use the Latin alphabet
+
+Bulgarian, Russian, Ukrainian, Greek, Hebrew, Arabic, Hindi, Thai, Korean,
+Japanese and Chinese all get a Latin address rather than one in their own
+script. Two reasons, and the second is the one that decides it:
+
+The address becomes a directory name on the build machine, a line in the
+sitemap and a URL submitted to IndexNow. macOS stores directory names in a
+different Unicode normalisation from the one those files carry, so a non-ASCII
+address quietly stops matching itself between the folder and the sitemap.
+
+And the words being searched for in these pages — bitlocker, ntfs, ext4, vmdk —
+are typed in Latin in every one of these languages anyway.
+
+Worth a second opinion for Russian and Greek, where a native-script URL would
+also be read correctly by the search engines those readers actually use.
+
+## uk — "відмикати" on the site against "розблокувати" in the application
+
+Both mean unlock. The site says the first, the application the second, and the
+same reader meets both. The task pages follow the site.
