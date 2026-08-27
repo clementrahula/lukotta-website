@@ -20,7 +20,7 @@
       "slug": "avaa-bitlocker-levy-macissa",
       "title": "Avaa BitLocker-levy Macissa",
       "description": "macOS ei avaa BitLocker-levyä vaan tarjoutuu tyhjentämään sen. Tässä on syy, ja se miten luet levyn ja kopioit sille tiedostoja.",
-      "lead": "Kytket BitLocker-levyn Maciin ja Finder tarjoutuu tyhjentämään sen. Tässä on syy, ja se miten luet levyn sen sijaan.",
+      "lead": "Kytket BitLocker-levyn Maciin ja Finder tarjoutuu tyhjentämään sen. Tässä syy ja tapa lukea levy sen sijaan.",
       "sections": [
         {
           "heading": "Mikä BitLocker on",
@@ -80,7 +80,7 @@
     "linux": {
       "slug": "lue-ext4-levya-macissa",
       "title": "Lue ext4-, btrfs- tai XFS-levyä Macissa",
-      "description": "macOS ei lue ext4:ää, btrfs:ää eikä XFS:ää ja tarjoutuu tyhjentämään levyn. Tässä on syy, ja se miten avaat Linux-levyn Macissa, LUKS mukaan lukien.",
+      "description": "macOS ei lue ext4:ää, btrfs:ää eikä XFS:ää ja tarjoutuu tyhjentämään levyn. Tässä syy ja tapa avata Linux-levy Macissa, LUKS mukaan lukien.",
       "lead": "Kytket levyn joka on peräisin Linux-koneesta, ja Finder tarjoutuu tyhjentämään sen. Tässä on syy, ja se miten luet sen sen sijaan.",
       "sections": [
         {
@@ -139,7 +139,7 @@
     "ntfs": {
       "slug": "kirjoita-ntfs-levylle-macissa",
       "title": "Kirjoita NTFS-levylle Macissa",
-      "description": "macOS avaa NTFS-levyt vain luettaviksi, joten tiedostot lähtevät niiltä mutta eivät mene niille. Tässä on syy, ja se miten kirjoitat NTFS-levylle.",
+      "description": "macOS avaa NTFS-levyt vain luettaviksi, joten tiedostoja voi kopioida niiltä mutta ei niille. Tässä syy ja tapa kirjoittaa NTFS-levylle Mac-tietokoneessa.",
       "lead": "macOS antaa kopioida tiedostoja NTFS-levyltä mutta ei sille. Tässä on syy, ja se mitä asialle voi tehdä.",
       "sections": [
         {
@@ -181,7 +181,7 @@
           "heading": "Levyt joita Windows ei sulkenut kunnolla",
           "paragraphs": [
             "Windows merkitsee levyn huonosti suljetuksi silloin kun kirjoitus keskeytyi, useimmiten koska levy irrotettiin tai koneesta katkesi virta kesken kaiken. Merkintä varoittaa seuraavaa konetta joka avaa sen, että levy voi olla puoliksi kirjoitettu ja se kannattaa tarkistaa.",
-            "Nopea käynnistys jättää saman merkinnän silloinkin kun mikään ei ole mennyt pieleen. Se on Windows 10:ssä ja 11:ssä päällä valmiiksi. Sen sijaan että se sammuttaisi koneen, se panee sen lepotilaan, mikä jättää levyn näyttämään siltä kuin se olisi yhä käytössä.",
+            "Nopea käynnistys jättää saman merkinnän silloinkin kun mikään ei ole mennyt pieleen. Se on Windows 10:ssä ja 11:ssä päällä valmiiksi. Sen sijaan että se sammuttaisi koneen, se siirtää sen horrostilaan, mikä jättää levyn näyttämään siltä kuin se olisi yhä käytössä.",
             "macOS kieltäytyy levystä kummassakin tilassa eikä kerro syytä. Lukotta avaa sen.",
             "Jos Windows-kone on sinulla vielä, siistimpi korjaus on kytkeä levy takaisin siihen ja sammuttaa se kone kunnolla: pidä vaihtonäppäintä pohjassa kun osoitat Sammuta, se ohittaa nopean käynnistyksen."
           ]
@@ -204,7 +204,7 @@
         {
           "heading": "Miksi tiedoston saaminen ulos on hankalaa",
           "paragraphs": [
-            "Tavallinen tapa on käynnistää virtuaalikone, odottaa että se nousee pystyyn, etsiä tiedosto sen sisältä ja kopioida se yli. Se edellyttää että kone yhä toimii ja että ohjelma joka sitä ajaa on yhä asennettuna.",
+            "Tavallinen tapa on käynnistää virtuaalikone, odottaa että se käynnistyy, etsiä tiedosto sen sisältä ja kopioida se yli. Se edellyttää että kone yhä toimii ja että ohjelma joka sitä ajaa on yhä asennettuna.",
             "Finderistäkään ei ole tässä apua. VMDK:n kaksoisosoittaminen ei tee mitään, koska macOS ei tiedä mitä sen sisällä on."
           ]
         },
@@ -245,15 +245,15 @@
           "heading": "Tiedostojen kopioiminen levytiedostoon",
           "paragraphs": [
             "qcow2 kirjoitetaan tavalliseen tapaan ja sille voi kirjoittaa turvallisesti.",
-            "VMDK:lle, VDI:lle ja VHD:lle voi kirjoittaa, mutta se on tuoretta työtä eikä ole ollut käytössä tarpeeksi kauan, jotta sille uskaltaisi antaa jotain jonka menettämiseen sinulla ei ole varaa. Kopioi tiedosto ja työskentele kopiolla, tai avaa se vain luettavaksi ja ota tiedostot sieltä ulos.",
-            "VHDX aukeaa vain luettavaksi, ja samoin se VMDK:n laji joka on OVA-tiedoston sisällä. Se laji kirjoitetaan yhdellä kertaa läpi eikä sitä voi jälkeenpäin muuttaa paikallaan."
+            "VMDK-, VDI- ja VHD-muotoihin voi kirjoittaa, mutta kirjoitustuki on uusi eikä ole ollut käytössä tarpeeksi kauan, jotta sille uskaltaisi antaa jotain jonka menettämiseen sinulla ei ole varaa. Kopioi tiedosto ja työskentele kopiolla, tai avaa se vain luettavaksi ja ota tiedostot sieltä ulos.",
+            "VHDX aukeaa vain luettavaksi, ja samoin OVA-tiedoston sisältämä VMDK-tyyppi. Se tyyppi kirjoitetaan yhdellä kertaa läpi eikä sitä voi jälkeenpäin muuttaa samassa tiedostossa."
           ]
         },
         {
           "heading": "Tiedostot jotka eivät aukea",
           "paragraphs": [
             "Levytiedosto aukeaa vain jos se on itsessään täydellinen.",
-            "VMwaren tilannevedosten ketju jakaa koneen nykyisen tilan alkuperäisen tiedoston ja joukon pienempiä tiedostoja kesken, jotka kirjaavat mikä sen jälkeen muuttui. Jaettu levy pilkkoo yhden levytiedoston moneksi palaksi. Hyper-V:n erotuslevy sisältää vain erot toiseen tiedostoon.",
+            "VMwaren tilannevedosten ketju jakaa koneen nykyisen tilan alkuperäisen tiedoston ja joukon pienempiä tiedostoja kesken, jotka kirjaavat mikä sen jälkeen muuttui. Jaettu levy jakaa yhden levytiedoston moneen osaan. Hyper-V:n erotuslevy sisältää vain erot toiseen tiedostoon.",
             "Kussakin näistä tapauksista tiedosto joka sinulla on kuuluu joukkoon, ja Lukotta avaa yhden tiedoston kerrallaan."
           ]
         }

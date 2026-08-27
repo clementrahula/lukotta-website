@@ -16,7 +16,7 @@
     },
     "meta.description": {
       "en": "Open BitLocker, NTFS, LUKS and Linux drives on your Mac. Type the password and the drive appears in Finder, readable and writable. Free and open source.",
-      "fi": "Avaa BitLocker-, NTFS-, LUKS- ja Linux-levyt Mac-tietokoneessa. Syötä salasana: Finder näyttää levyn luettavana ja kirjoitettavana. Ilmainen ja avoimen lähdekoodin."
+      "fi": "Avaa BitLocker-, NTFS-, LUKS- ja Linux-levyt Mac-tietokoneessa. Syötä salasana: levy näkyy Finderissa luettavana ja kirjoitettavana. Ilmainen ja avoimen lähdekoodin."
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
@@ -248,7 +248,7 @@
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
-      "fi": "Myös taltio, jonka Windows jätti lepotilaan tai sulki huonosti"
+      "fi": "Myös taltio, jonka Windows jätti horrostilaan tai sulki huonosti"
     },
     "formats.linuxfs.note": {
       "en": "The Linux filesystems",
@@ -268,11 +268,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "fi": "VMware, litteä ja harva"
+      "fi": "VMware, flat ja sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "fi": "Se, mitä OVA sisältää. Kirjoitetaan yhdellä kertaa, joten sitä ei voi muuttaa suoraan"
+      "fi": "Se, mitä OVA sisältää. Kirjoitetaan yhdellä kertaa, joten sitä ei voi jälkeenpäin muuttaa samassa tiedostossa"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -304,7 +304,7 @@
     },
     "formats.not.2": {
       "en": "Drives sealed to a TPM rather than a password, including Ubuntu's newer hardware-backed encryption",
-      "fi": "Levyt, jotka on sidottu TPM-piiriin salasanan sijaan, mukaan lukien järjestelmän Ubuntu uudempi laitteistoon tukeutuva salaus"
+      "fi": "Levyt, jotka on sidottu TPM-piiriin salasanan sijaan, mukaan lukien Ubuntu-järjestelmän uudempi laitteistoon tukeutuva salaus"
     },
     "formats.not.3": {
       "en": "LUKS volumes whose header is stored away from the drive",
