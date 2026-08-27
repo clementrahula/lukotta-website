@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "bg": "VMware, плосък и разреден"
+      "bg": "VMware, flat и sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "bg": "Това, което съдържа един OVA. Записва се на един път, затова не може да се променя директно"
+      "bg": "Това, което съдържа един OVA. Записва се наведнъж, затова после не може да се променя в същия файл"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
