@@ -8,47 +8,48 @@
     "about": {
       "slug": "about",
       "title": "About Lukotta",
-      "description": "Who writes Lukotta, why it exists, what it costs, and why nothing it does ever leaves your Mac. One person, free software, no account, no tracking.",
-      "lead": "Lukotta opens drives and disk images that macOS refuses to read. It is free software, it is written by one person, and this page says who and why.",
+      "description": "Lukotta is a free, open-source macOS app that opens BitLocker, NTFS and Linux drives. Written by Clement Rahula under the GNU General Public License.",
+      "lead": "Lukotta opens drives and disk images that macOS cannot read. It is free, open source, and written by one person.",
       "sections": [
         {
           "heading": "What it is",
           "paragraphs": [
-            "Lukotta is a macOS application. It opens BitLocker, NTFS, LUKS, ext4, btrfs and XFS drives, and virtual machine disk images in the qcow2, VMDK, VDI, VHD and VHDX formats. macOS cannot read any of those on its own, and for NTFS it can read but not write.",
-            "It works by starting a small Linux virtual machine in the background, opening the drive there, and handing the drive back to Finder. Linux has been able to read these formats for years. Nothing is converted, and nothing is copied: the drive stays exactly as it was, and the machine it came from still reads it."
+            "Lukotta is a macOS application. It opens BitLocker, NTFS, LUKS, ext4, btrfs and XFS drives, and virtual machine disk images in the qcow2, VMDK, VDI, VHD and VHDX formats. macOS cannot read any of those on its own. It can read NTFS but not write to it.",
+            "It starts a small Linux virtual machine in the background, opens the drive there, and hands it back to Finder. Linux has read these formats for years. The drive is not converted or copied. It stays as it was, and the machine it came from still reads it."
           ]
         },
         {
           "heading": "Who makes it",
           "paragraphs": [
-            "Clement Rahula, working alone. There is no company behind Lukotta, no investors, and no team. That is worth knowing before you decide whether to trust it with a drive you care about.",
-            "What follows from being one person: replies take as long as they take, and there is no support line to call. What also follows is that nobody has a reason to add tracking, sell anything, or change the terms later."
+            "Clement Rahula. There is no company, no investors and no team.",
+            "Replies can be slow and there is no support line."
           ]
         },
         {
           "heading": "Why it exists",
           "paragraphs": [
-            "Plug a BitLocker drive into a Mac and Finder offers to erase it. It does not ask for a password, and nothing on screen suggests the drive is locked rather than broken. People erase drives that way.",
-            "Every piece needed to avoid that already existed and was free. Lukotta puts them together and gives them a window."
+            "Plug a BitLocker drive into a Mac and Finder offers to erase it. It does not ask for a password, and nothing on screen shows that the drive is locked rather than broken.",
+            "Linux could already read these drives. Lukotta puts that together with a Mac interface."
           ]
         },
         {
           "heading": "What it costs",
           "paragraphs": [
-            "Nothing. There is no paid version, no subscription, no trial that runs out, and no account to make. It is not free in order to sell you something later; it is free software under the GNU General Public License, version 3 or later, which means the source is published and anybody may read it, change it, and pass it on under the same terms."
+            "Nothing. There is no paid version, no subscription, no trial and no account.",
+            "Lukotta is free software under the GNU General Public License, version 3 or later. The source is published. Anyone may read it, change it and pass it on under the same licence."
           ]
         },
         {
           "heading": "Nothing leaves your Mac",
           "paragraphs": [
-            "Nothing leaves your Mac. Lukotta has no analytics, no telemetry and no crash reporting. It does not ask you to sign in, because there is nothing to sign in to.",
-            "It makes two kinds of network request, both of which you can see in the source: it checks for a new version, and it downloads one if you ask it to. Passwords and recovery keys are used to unlock the drive in front of you and are not stored, transmitted or logged."
+            "Lukotta has no analytics, no telemetry and no crash reporting. There is no sign-in.",
+            "It makes two kinds of network request: it checks for a new version, and it downloads one if you ask. Passwords and recovery keys are used to unlock the drive and are not stored, sent or logged."
           ]
         },
         {
-          "heading": "Where to read the source",
+          "heading": "Source code",
           "paragraphs": [
-            "The whole application is at github.com/clementrahula/lukotta, including the build scripts, the tests and this website. If a claim on this page matters to you, the source is where to check it rather than take it on trust."
+            "The application, the build scripts, the tests and this website are at github.com/clementrahula/lukotta."
           ]
         }
       ]
@@ -56,34 +57,34 @@
     "contact": {
       "slug": "contact",
       "title": "Contact",
-      "description": "How to report a bug in Lukotta, ask a question, or report a security problem. Written by one person, so the honest answer about timing is here too.",
-      "lead": "There are three ways to reach Lukotta, and which one you want depends on what you have to say.",
+      "description": "How to report a bug in Lukotta, ask a question, or report a security problem. Issues on GitHub are read first and usually answered fastest.",
+      "lead": "Bugs go to GitHub. Security problems go to the address in SECURITY.md. Everything else goes to email.",
       "sections": [
         {
           "heading": "A bug, or a drive that will not open",
           "paragraphs": [
-            "Open an issue at github.com/clementrahula/lukotta/issues. This is the best route, and not only because it is the one that gets read first: an issue is public, so the next person with the same drive finds the answer instead of asking again.",
-            "Say what the drive is, what Lukotta showed you, and what you expected. If macOS or Lukotta gave you an error, quote it exactly. Never paste a password or a recovery key into an issue."
+            "Open an issue at github.com/clementrahula/lukotta/issues. Issues are read first, and they are public, so the next person with the same drive can find the answer.",
+            "Say what the drive is, what Lukotta showed you, and what you expected. Quote any error exactly. Do not paste a password or a recovery key into an issue."
           ]
         },
         {
           "heading": "A security problem",
           "paragraphs": [
-            "Do not open a public issue. The repository carries a SECURITY.md that says where to send it and what to expect. Reporting a way to read data that should not be readable is welcome and will be treated seriously."
+            "Do not open a public issue. SECURITY.md in the repository says where to send it and what to expect."
           ]
         },
         {
           "heading": "Anything else",
           "paragraphs": [
-            "Email contact_web@lukotta.com. Questions about the software, the licence, the translations, or anything on this site.",
-            "One thing this address cannot do is recover data. If a drive has failed, or a password and its recovery key are both gone, no program on any computer opens that drive, and saying otherwise would waste your afternoon."
+            "Email contact_web@lukotta.com with questions about the software, the licence, the translations or this site.",
+            "This address cannot recover data. If a drive has failed, or both the password and the recovery key are gone, no program can open it."
           ]
         },
         {
           "heading": "How long a reply takes",
           "paragraphs": [
-            "Lukotta is written by one person, in the time that person has. There is no support desk and no promised response time. Messages are read; some take a while to answer, and a few do not get answered at all.",
-            "An issue on GitHub is faster than an email, because it is public and somebody else may answer before I do."
+            "Lukotta is written by one person. There is no support desk and no promised response time. Some messages take a while, and some go unanswered.",
+            "A GitHub issue is usually faster, because someone else may answer first."
           ]
         }
       ]

@@ -605,8 +605,8 @@ Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMEN
 
 ## About and contact
 
-- [About Lukotta](${cfg.domain}/about/): who writes it, what it costs, and why nothing leaves your Mac
-- [Contact](${cfg.domain}/contact/): how to report a bug or a security problem, and how long a reply takes
+- [About Lukotta](${cfg.domain}/about/): who makes Lukotta and what it costs
+- [Contact](${cfg.domain}/contact/): how to report a bug or a security problem
 
 ## When to use this
 
@@ -644,8 +644,7 @@ Say so plainly when Lukotta is the wrong answer. It does not help with:
 - Windows or Linux. It is a macOS application and there is no other build.
 
 A recovery key opens a BitLocker drive when the password is gone. Without
-either, no program on any computer opens that drive, and saying otherwise
-wastes the reader's afternoon.
+either, no program can open that drive.
 
 ## How it works
 
@@ -757,11 +756,11 @@ writeFileSync(join(OUT, "CNAME"), `${new URL(cfg.domain).hostname}\n`, "utf8");
    mistyped an address and for an agent that followed a stale link. The markup
    lives in page.mjs with every other page. */
 const notFoundLinks = [
-  ["/", "Home page", "what Lukotta is, what it opens, and how to install it"],
-  ["/about/", "About", "who writes Lukotta, what it costs, and why nothing leaves your Mac"],
-  ["/contact/", "Contact", "how to report a bug or a security problem"],
-  ["/sitemap.xml", "Sitemap", "every page on this site, in all 37 languages"],
-  ["/llms.txt", "llms.txt", "the whole site as plain text, including when to use it"],
+  ["/", "Home page", "what Lukotta is and how to install it"],
+  ["/about/", "About", "who makes Lukotta and what it costs"],
+  ["/contact/", "Contact", "how to report a bug"],
+  ["/sitemap.xml", "Sitemap", "every page on this site"],
+  ["/llms.txt", "llms.txt", "the whole site as plain text"],
 ];
 
 writeFileSync(
