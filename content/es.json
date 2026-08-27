@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "es": "Texto de la página bajo la licencia Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "es": "Página no encontrada"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "es": "Esa dirección no existe en lukotta.com. El mapa del sitio nombra cada página, y llms.txt contiene el sitio entero como texto plano."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "es": "Esa dirección no existe en lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "es": "Dónde mirar en su lugar"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "es": "Guías"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "es": "Inicio"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "es": "Inicio"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "es": "qué es Lukotta y cómo se instala"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "es": "Acerca de"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "es": "quién mantiene Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "es": "cómo informar de un fallo"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "es": "Mapa del sitio"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "es": "todas las páginas de este sitio"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "es": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "es": "el sitio entero como texto plano"
     }
   }
 }

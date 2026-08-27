@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "fr": "Texte de la page sous licence Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "fr": "Page introuvable"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "fr": "Cette adresse n'existe pas sur lukotta.com. Le plan du site nomme chaque page, et llms.txt contient tout le site en texte brut."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "fr": "Cette adresse n'existe pas sur lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "fr": "Où regarder à la place"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "fr": "Guides"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "fr": "Accueil"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "fr": "Accueil"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "fr": "ce qu'est Lukotta et comment l'installer"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "fr": "À propos"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "fr": "qui maintient Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "fr": "Contact"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "fr": "comment signaler un problème"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "fr": "Plan du site"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "fr": "chaque page de ce site"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "fr": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "fr": "tout le site en texte brut"
     }
   }
 }

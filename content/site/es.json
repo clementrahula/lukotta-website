@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "es",
+    "name": "Spanish",
+    "native": "Español",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "acerca-de",
+      "title": "Acerca de Lukotta",
+      "description": "Lukotta es una app de macOS gratuita y de código abierto que abre discos BitLocker, NTFS y Linux, bajo la GNU General Public License.",
+      "lead": "Lukotta abre discos e imágenes de disco que macOS no puede leer. Es gratis, de código abierto, y lo mantiene una sola persona.",
+      "sections": [
+        {
+          "heading": "Qué es",
+          "paragraphs": [
+            "Lukotta es una aplicación de macOS. Abre discos BitLocker, NTFS, LUKS, ext4, btrfs y XFS, e imágenes de disco de máquinas virtuales en los formatos qcow2, VMDK, VDI, VHD y VHDX. macOS no lee ninguno por su cuenta. NTFS lo lee, pero no escribe en él.",
+            "Arranca un pequeño sistema Linux en segundo plano, abre el disco allí y se lo entrega al Finder. Linux lleva años leyendo estos formatos. El disco no se convierte ni se copia. Queda como estaba, y la máquina de la que viene lo sigue leyendo."
+          ]
+        },
+        {
+          "heading": "Quién lo mantiene",
+          "paragraphs": [
+            "[Un solo desarrollador](https://rahula.dev). No hay empresa, ni inversores, ni equipo."
+          ]
+        },
+        {
+          "heading": "Por qué existe",
+          "paragraphs": [
+            "Conecta un disco con BitLocker a un Mac y el Finder ofrece borrarlo. No pide contraseña, y nada en la pantalla muestra que el disco está bloqueado y no averiado.",
+            "Parecía absurdo que a día de hoy no haya una manera práctica de compartir un disco USB cifrado entre varios sistemas operativos, así que hubo que construir una solución.",
+            "En el ecosistema de Linux ya había herramientas capaces de leer esos discos. Lukotta las junta con una interfaz de Mac."
+          ]
+        },
+        {
+          "heading": "Cuánto cuesta",
+          "paragraphs": [
+            "Nada. No hay versión de pago, ni suscripción, ni prueba, ni cuenta.",
+            "Lukotta es software libre bajo la GNU General Public License, versión 3 o posterior. El código está publicado. Cualquiera puede leerlo, cambiarlo y transmitirlo bajo la misma licencia."
+          ]
+        },
+        {
+          "heading": "Nada sale de tu Mac",
+          "paragraphs": [
+            "Lukotta no tiene analíticas, ni telemetría, ni informes de fallos.",
+            "Hace un solo tipo de petición de red: busca una versión nueva y la descarga si se lo pides. Las contraseñas y las claves de recuperación sirven para desbloquear el disco y no se guardan, ni se envían, ni se registran."
+          ]
+        },
+        {
+          "heading": "Código fuente",
+          "paragraphs": [
+            "El código fuente de la aplicación está en github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "contacto",
+      "title": "Contacto",
+      "description": "Cómo informar de un fallo en Lukotta, hacer una pregunta o informar de un problema de seguridad. Las incidencias de GitHub se leen primero.",
+      "lead": "Los fallos van a GitHub. Los problemas de seguridad van a la dirección de SECURITY.md. Todo lo demás va por correo.",
+      "sections": [
+        {
+          "heading": "Un fallo, o un disco que no se abre",
+          "paragraphs": [
+            "Abre una incidencia en github.com/clementrahula/lukotta/issues. Las incidencias se leen primero, y son públicas, así que la siguiente persona con el mismo disco encuentra la respuesta.",
+            "Di qué disco es, qué mostró Lukotta y qué esperabas. Cita el error tal cual. No pegues nunca una contraseña ni una clave de recuperación en una incidencia."
+          ]
+        },
+        {
+          "heading": "Un problema de seguridad",
+          "paragraphs": [
+            "No abras una incidencia pública. SECURITY.md en el repositorio dice adónde enviarlo y qué esperar."
+          ]
+        },
+        {
+          "heading": "Cualquier otra cosa",
+          "paragraphs": [
+            "Escribe a contact_web@lukotta.com con preguntas sobre la app."
+          ]
+        },
+        {
+          "heading": "Cuánto tarda una respuesta",
+          "paragraphs": [
+            "Lukotta lo mantiene una sola persona. No hay servicio de soporte ni plazo de respuesta prometido. Algunos mensajes tardan, y algunos se quedan sin responder.",
+            "Una incidencia en GitHub suele ir más rápido, porque otra persona puede responder antes."
+          ]
+        }
+      ]
+    }
+  }
+}

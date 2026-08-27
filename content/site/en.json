@@ -8,7 +8,7 @@
     "about": {
       "slug": "about",
       "title": "About Lukotta",
-      "description": "Lukotta is a free, open-source macOS app that opens BitLocker, NTFS and Linux drives. Written by Clement Rahula under the GNU General Public License.",
+      "description": "Lukotta is a free, open-source macOS app that opens BitLocker, NTFS and Linux drives. Maintained by one developer under the GNU General Public License.",
       "lead": "Lukotta opens drives and disk images that macOS cannot read. It is free, open source, and maintained by one person.",
       "sections": [
         {

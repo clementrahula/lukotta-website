@@ -14,7 +14,7 @@
     "about": {
       "slug": "over",
       "title": "Over Lukotta",
-      "description": "Lukotta is een gratis, opensource macOS-app die BitLocker-, NTFS- en Linux-schijven opent. Van Clement Rahula, onder de GNU General Public License.",
+      "description": "Lukotta is een gratis, opensource macOS-app die BitLocker-, NTFS- en Linux-schijven opent. Onderhouden door één ontwikkelaar onder de GNU GPL versie 3.",
       "lead": "Lukotta opent schijven en schijfkopieën die macOS niet kan lezen. Het is gratis, opensource, en wordt door één persoon onderhouden.",
       "sections": [
         {
