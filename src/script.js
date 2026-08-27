@@ -51,7 +51,16 @@
     for (var j = metas.length - 1; j > 0; j--) metas[j].parentNode.removeChild(metas[j]);
   }
 
-  /* Animate the colour change only while it runs. See .theme-changing. */
+  /* Animate the colour change only while it runs. See .theme-changing.
+
+     This is the fallback. It transitions colour on every element on the page,
+     which means the browser re-rasterises every glyph on every frame for the
+     length of the fade -- and a 64px headline is a great many glyphs. That is
+     what made the headings stutter while the small text did not.
+
+     Where the browser has view transitions, changeAppearance below uses them
+     instead: both states are captured as images and cross-faded by the
+     compositor, so no text is re-drawn at all. */
   var fadeTimer = null;
   function fadeAppearance() {
     root.classList.add("theme-changing");
@@ -59,6 +68,18 @@
     fadeTimer = setTimeout(function () {
       root.classList.remove("theme-changing");
     }, 400);
+  }
+
+  var stillMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  /* Swap the appearance, animated by whichever route this browser has. */
+  function changeAppearance(swap) {
+    if (stillMotion.matches) return swap();
+    if (typeof document.startViewTransition !== "function") {
+      fadeAppearance();
+      return swap();
+    }
+    document.startViewTransition(swap);
   }
 
   function apply(choice) {
@@ -87,15 +108,13 @@
     if (!button) return;
     var next = resolve(stored()) === "dark" ? "light" : "dark";
     try { localStorage.setItem(KEY, next); } catch (e) { /* storage unavailable */ }
-    fadeAppearance();
-    apply(next);
+    changeAppearance(function () { apply(next); });
   });
 
   /* Follow the system setting until a choice is stored. */
   var onSystemChange = function () {
     if (stored() !== null) return;
-    fadeAppearance();
-    apply(null);
+    changeAppearance(function () { apply(null); });
   };
   if (mql.addEventListener) mql.addEventListener("change", onSystemChange);
   else if (mql.addListener) mql.addListener(onSystemChange);

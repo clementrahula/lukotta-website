@@ -867,6 +867,26 @@ tbody tr:not(.group) th code { color: var(--ink); }
 
 /* ------------------------------------------------------ appearance change -- */
 
+/* Where the browser has view transitions, the appearance change is one: both
+   states are captured as images and cross-faded by the compositor. Nothing is
+   laid out again and no text is re-rasterised, which is what the rule below
+   was making the browser do sixty times a second to every heading on the
+   page. script.js picks the route; this only sets the timing so the two
+   routes look the same.
+
+   .25s is the default. .35s matches the fallback. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: .35s;
+  animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}
+
+
 /* The colour change is animated, but only while it is happening. A permanent
    transition on these properties would also slow every hover, which has its
    own shorter timing. script.js sets this class for the length of the fade.

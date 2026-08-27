@@ -5,6 +5,12 @@
    Format names are the exception. BitLocker, ext4, qcow2 and VHDX are product
    names, never translated in any script, so they are defined here. */
 
+/* Anything that leaves lukotta.com opens in its own window, so a visitor
+   half-way through the page does not lose it. Not the download: that link is
+   the disk image itself, and a new window for a file opens blank and closes
+   again. Not the anchors, and not the language links -- those are this site. */
+const away = ' target="_blank" rel="noopener noreferrer"';
+
 const esc = (s) =>
   String(s)
     .replace(/&/g, "&amp;")
@@ -198,7 +204,7 @@ ${answerParts(n, paras).map((para) => `            <p>${esc(para)}</p>`).join("\
   const copyright = esc(t("footer.copyright"))
     .replace("{copyleft}", '<span class="copyleft">©</span>')
     .split("{author}");
-  const authorLink = `<a href="${cfg.authorUrl}">${esc(cfg.authorName)}</a>`;
+  const authorLink = `<a href="${cfg.authorUrl}"${away}>${esc(cfg.authorName)}</a>`;
 
   const sunIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="3.1" stroke="currentColor" stroke-width="1.5"/><path d="M8 1v1.6M8 13.4V15M15 8h-1.6M2.6 8H1m11-5-1.1 1.1M5.1 10.9 4 12m8 0-1.1-1.1M5.1 5.1 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`;
   const moonIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 9.6A5.9 5.9 0 0 1 6.4 2.5a5.9 5.9 0 1 0 7.1 7.1Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
@@ -336,7 +342,7 @@ ${langLinks}
           <p class="lead">${esc(t("hero.subtitle"))}</p>
           <p class="hero-actions">
             <a class="btn" href="${cfg.downloadUrl}">${esc(t("hero.download"))}</a>
-            <a class="plain" href="${cfg.githubRepo}">${esc(t("hero.source"))}</a>
+            <a class="plain" href="${cfg.githubRepo}"${away}>${esc(t("hero.source"))}</a>
           </p>
           <div class="brew">
             <div class="brew-line">
@@ -416,7 +422,7 @@ ${tableRows}
         <p class="footnote"><span aria-hidden="true">*</span> ${esc(t("formats.experimental"))}</p>
 
         <p class="after-table">
-          <a class="plain" href="${cfg.githubRepo}/blob/main/SPECS.md">${esc(t("formats.specs"))}${arrow}</a>
+          <a class="plain" href="${cfg.githubRepo}/blob/main/SPECS.md"${away}>${esc(t("formats.specs"))}${arrow}</a>
         </p>
 
         <div class="aside">
@@ -455,9 +461,9 @@ ${faqItems}
   <footer class="site-footer">
     <div class="wrap">
       <nav aria-label="${esc(t("ui.footerMenu"))}">
-        <a href="${cfg.githubRepo}/blob/main/PRIVACY.md">${esc(t("footer.privacy"))}</a>
-        <a href="${cfg.githubRepo}/blob/main/LICENSE.txt">${esc(t("footer.licence"))}</a>
-        <a href="${cfg.githubRepo}">${esc(t("footer.source"))}</a>
+        <a href="${cfg.githubRepo}/blob/main/PRIVACY.md"${away}>${esc(t("footer.privacy"))}</a>
+        <a href="${cfg.githubRepo}/blob/main/LICENSE.txt"${away}>${esc(t("footer.licence"))}</a>
+        <a href="${cfg.githubRepo}"${away}>${esc(t("footer.source"))}</a>
         <a href="mailto:${cfg.supportEmail}">${esc(t("footer.contact"))}</a>
       </nav>
       <p class="colophon">
