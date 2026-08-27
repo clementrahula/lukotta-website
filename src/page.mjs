@@ -380,7 +380,10 @@ ${hreflang}
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="${esc(t("meta.imageAlt"))}">
   <meta property="og:locale" content="${lang.ogLocale}">
-${ogAlternates}
+  <!-- No og:locale:alternate. Thirty-six of them is two kilobytes of head, read
+       by social-card scrapers and nothing else, in front of the content an
+       agent that truncates a response is trying to reach. hreflang carries the
+       real signal, and og:locale below still names this page's own language. -->
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(t("meta.ogTitle"))}">
@@ -717,7 +720,10 @@ ${taskHreflang}
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="${esc(t("meta.imageAlt"))}">
   <meta property="og:locale" content="${lang.ogLocale}">
-${taskOgAlternates}
+  <!-- No og:locale:alternate. Thirty-six of them is two kilobytes of head, read
+       by social-card scrapers and nothing else, in front of the content an
+       agent that truncates a response is trying to reach. hreflang carries the
+       real signal, and og:locale below still names this page's own language. -->
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.title)}">

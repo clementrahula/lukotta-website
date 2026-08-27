@@ -305,7 +305,11 @@ const mdEscape = (x) => String(x).replace(/\|/g, "\\|");
 
 function landingMarkdown({ lang, t, canonical, taskPages }) {
   const line = [];
-  line.push(`# ${t("hero.title")}`, "");
+  /* The name first. An audit found an agent could not say what this site was
+     for; a document whose first line is a feature sentence and whose subject
+     does not appear until halfway down is part of why. */
+  line.push("# Lukotta", "");
+  line.push(t("hero.title"), "");
   line.push(`> ${t("meta.description")}`, "");
   line.push(t("hero.subtitle"), "");
   line.push(`${t("hero.meta").replace("{version}", cfg.appVersion)}. ${t("footer.gpl")}`, "");
@@ -366,6 +370,7 @@ function landingMarkdown({ lang, t, canonical, taskPages }) {
 function taskMarkdown({ page, canonical, home }) {
   const line = [];
   line.push(`# ${page.title}`, "");
+  line.push(`Lukotta — ${home}`, "");
   line.push(`> ${page.description}`, "");
   line.push(page.lead, "");
   line.push(`Canonical: ${canonical}`, "");

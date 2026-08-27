@@ -105,9 +105,11 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "No Workers credentials set. Skipping; the site will serve HTML"
-            echo "to every caller, including those asking for text/markdown."
-            exit 0
+            echo "::error::CF_WORKERS_TOKEN or CF_ACCOUNT_ID is not set."
+            echo "The markdown negotiator cannot deploy without them, and a"
+            echo "deploy that skipped it quietly is how the site goes on serving"
+            echo "HTML to callers asking for markdown with nobody noticing."
+            exit 1
           fi
           npx --yes wrangler@4 deploy --config worker/wrangler.toml
 
@@ -137,3 +139,41 @@ jobs:
             echo "The purge was refused. The site is deployed but the edge is stale."
             exit 1
           }
+
+      # The deploy said it succeeded. This asks the live site whether it did.
+      #
+      # Everything up to here can pass while the one thing the worker exists
+      # for does not work: a route that did not attach, a propagation that has
+      # not landed, an origin fetch that fails. So the job ends by making the
+      # request an agent would make and checking the answer, and fails if it is
+      # still HTML.
+      #
+      # It runs after the purge, because the edge would otherwise hand back the
+      # HTML it cached before the worker existed.
+      - name: Check that markdown negotiation actually works
+        run: |
+          url="https://lukotta.com/"
+          for attempt in 1 2 3 4 5; do
+            type=$(curl -sS -o /dev/null -w '%{content_type}' \
+                     -H 'Accept: text/markdown' "$url" || true)
+            vary=$(curl -sSI -H 'Accept: text/markdown' "$url" \
+                     | tr 'A-Z' 'a-z' | grep '^vary:' || true)
+            echo "attempt $attempt: content-type=$type  $vary"
+            case "$type" in
+              text/markdown*)
+                case "$vary" in
+                  *accept*)
+                    echo "Markdown negotiation is live and Vary names Accept."
+                    exit 0 ;;
+                esac
+                echo "::warning::Serving markdown but Vary does not name Accept."
+                echo "A cache can hand this to a browser. Check the worker."
+                exit 1 ;;
+            esac
+            sleep 10
+          done
+          echo "::error::Asked for text/markdown and got '$type'."
+          echo "The worker is deployed but not answering on this route. The site"
+          echo "is up and serving HTML; nothing is broken for people, but the"
+          echo "markdown twins are unreachable to anything that asks for them."
+          exit 1
