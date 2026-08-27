@@ -65,7 +65,7 @@
           "heading": "Kettad, mis Macis lahti ei lähe",
           "paragraphs": [
             "Mõned Windowsi arvutid ei küsi kunagi parooli. Nad hoiavad võtit emaplaadil oleval kiibil, mille nimi on TPM, ja avavad ketta ise, kui see masin käivitub.",
-            "Nii seatud ketas töötab ainult selles arvutis, kust ta pärit on, sest võti sealt kunagi välja ei tule. Ükski Mac ei ava seda ja teine Windowsi arvuti samuti mitte. Kui ketta krüptimise ajal salvestati taastevõti, avab see selle ikka."
+            "Nii seatud ketas töötab ainult selles arvutis, kust ta pärit on, sest võti sealt kunagi välja ei tule. Ükski Mac ei ava seda ja ükski teine arvuti samuti mitte. Kui ketta krüptimise ajal salvestati taastevõti, avab see selle ikka."
           ]
         },
         {
@@ -80,7 +80,7 @@
     "linux": {
       "slug": "loe-ext4-ketast-macis",
       "title": "Loe Macis ext4-, btrfs- või XFS-ketast",
-      "description": "macOS ei loe ext4, btrfs ega XFS ketast ja pakub selle kustutamist. Siin on põhjus ja see, kuidas avada Macis Linuxi ketas, LUKS kaasa arvatud.",
+      "description": "macOS ei loe ext4-, btrfs- ega XFS-ketast ja pakub selle kustutamist. Siin on põhjus ja see, kuidas avada Macis Linux-ketas, LUKS kaasa arvatud.",
       "lead": "Ühendad Linuxi masinast pärit ketta ja Finder pakub selle kustutamist. Siin on põhjus ja see, kuidas seda selle asemel lugeda.",
       "sections": [
         {
@@ -181,9 +181,9 @@
           "heading": "Kettad, mida Windows korralikult ei sulgenud",
           "paragraphs": [
             "Windows märgib ketta halvasti suletuks siis, kui kirjutamine katkes, enamasti sellepärast, et ketas tõmmati välja või masinal kadus poole pealt vool. Märge hoiatab järgmist arvutit, kes ketta avab, et ketas võib olla poolik ja tasuks üle vaadata.",
-            "Kiirkäivitus jätab sama märke ka siis, kui midagi valesti ei läinud. Windows 10-s ja 11-s on see algusest peale sisse lülitatud. Masina sulgemise asemel paneb see masina unerežiimi, mis jätab kettast mulje, nagu oleks see veel kasutuses.",
+            "Kiirkäivitus jätab sama märgi ka siis, kui midagi valesti ei läinud. Windows 10-s ja 11-s on see vaikimisi sisse lülitatud. Masina väljalülitamise asemel paneb see masina talveunerežiimi, mistõttu näib ketas endiselt kasutuses olevat.",
             "macOS keeldub kettast mõlemas olekus ega ütle põhjust. Lukotta avab selle.",
-            "Kui Windowsi masin on sul veel alles, on puhtam lahendus ketas sinna tagasi ühendada ja see masin korralikult sulgeda: hoia all tõstuklahvi, kui klõpsad käsul Sule arvuti, siis jääb kiirkäivitus vahele."
+            "Kui Windows-arvuti on sul veel alles, on puhtam lahendus ketas sinna tagasi ühendada ja see masin korralikult sulgeda: hoia all Shift-klahvi, kui klõpsad käsul Sule arvuti, siis jääb kiirkäivitus vahele."
           ]
         }
       ]
@@ -245,7 +245,7 @@
           "heading": "Failide kopeerimine tõmmisesse",
           "paragraphs": [
             "qcow2 kirjutatakse tavalisel viisil ja sellele saab ohutult kirjutada.",
-            "VMDK-le, VDI-le ja VHD-le saab kirjutada, aga see on värske töö ega ole olnud kasutuses piisavalt kaua, et usaldada sellele midagi, mille kaotamist sa endale lubada ei saa. Kopeeri fail ja tee tööd koopiaga või ava see ainult lugemiseks ja võta failid sealt välja.",
+            "VMDK-, VDI- ja VHD-vormingusse saab kirjutada, aga see kirjutamistugi on hiljuti lisatud ega ole olnud kasutuses piisavalt kaua, et usaldada sellele midagi, mille kaotamist sa endale lubada ei saa. Kopeeri fail ja tee tööd koopiaga või ava see ainult lugemiseks ja võta failid sealt välja.",
             "VHDX avaneb ainult lugemiseks ja sama teeb see VMDK sort, mis on OVA-faili sees. Selline sort kirjutatakse ühe korraga läbi ja seda ei saa pärast kohapeal muuta."
           ]
         },

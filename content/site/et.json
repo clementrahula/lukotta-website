@@ -14,14 +14,14 @@
     "about": {
       "slug": "teave",
       "title": "Teave rakenduse Lukotta kohta",
-      "description": "Lukotta on tasuta avatud lähtekoodiga macOS-i rakendus, mis avab BitLockeri, NTFS-i ja Linuxi kettaid, litsentsi GNU General Public License all.",
+      "description": "Lukotta on tasuta avatud lähtekoodiga macOS-i rakendus BitLockeri, NTFS-i ja Linuxi ketaste avamiseks. Hooldab üks arendaja, GNU General Public License.",
       "lead": "Lukotta avab kettaid ja kettatõmmiseid, mida macOS lugeda ei oska. See on tasuta, avatud lähtekoodiga ja seda hooldab üks inimene.",
       "sections": [
         {
           "heading": "Mis see on",
           "paragraphs": [
             "Lukotta on macOS-i rakendus. See avab BitLockeri, NTFS-i, LUKS-i, ext4, btrfs-i ja XFS-i kettaid ning virtuaalmasinate kettatõmmiseid vormingutes qcow2, VMDK, VDI, VHD ja VHDX. macOS ei loe neist ühtegi ise. NTFS-i ta loeb, aga sellele ei kirjuta.",
-            "See käivitab taustal väikese Linuxi süsteemi, avab ketta seal ja annab selle Finderile üle. Linux on neid vorminguid lugenud aastaid. Ketast ei teisendata ega kopeerita. See jääb selliseks, nagu oli, ja masin, kust see pärit on, loeb seda edasi."
+            "See käivitab taustal väikese Linuxi virtuaalmasina, avab ketta seal ja annab selle Finderile üle. Linux on neid vorminguid lugenud aastaid. Ketast ei teisendata ega kopeerita. See jääb selliseks, nagu oli, ja masin, kust see pärit on, loeb seda edasi."
           ]
         },
         {
@@ -48,7 +48,7 @@
         {
           "heading": "Sinu Macist ei lähe midagi välja",
           "paragraphs": [
-            "Lukottal ei ole analüütikat, ei ole telemeetriat ega tõrketeateid.",
+            "Lukottal ei ole analüütikat, ei ole telemeetriat ega krahhiaruandlust.",
             "See teeb ühte liiki võrgupäringu: vaatab, kas on uus versioon, ja laadib selle alla, kui sa palud. Paroole ja taastevõtmeid kasutatakse ketta avamiseks ning neid ei salvestata, ei saadeta ega logita."
           ]
         },
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Kuidas teatada veast rakenduses Lukotta, küsida küsimus või teatada turvaprobleemist. GitHubi issue'd loetakse esimesena.",
+      "description": "Kuidas teatada veast rakenduses Lukotta, küsida küsimus või teatada turvaprobleemist. GitHubi issue'd loetakse esimesena ja neile vastatakse kiiremini.",
       "lead": "Vead lähevad GitHubi. Turvaprobleemid lähevad aadressile, mis on failis SECURITY.md. Kõik muu läheb e-postiga.",
       "sections": [
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Kui kaua vastus võtab",
           "paragraphs": [
-            "Rakendust Lukotta hooldab üks inimene. Ei ole tuge ega lubatud vastamisaega. Mõni kiri võtab aega ja mõni jääb vastuseta.",
+            "Rakendust Lukotta hooldab üks inimene. Ei ole tugiteenust ega lubatud vastamisaega. Mõni kiri võtab aega ja mõni jääb vastuseta.",
             "GitHubi issue on tavaliselt kiirem, sest keegi teine võib enne vastata."
           ]
         }
