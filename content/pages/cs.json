@@ -39,7 +39,7 @@
         {
           "heading": "Jak jej Lukotta otevře",
           "paragraphs": [
-            "Linux umí BitLocker číst už léta a přesně toho Lukotta využívá. Na pozadí spustí malý systém s Linuxem, předá mu disk a odemkne jej tam heslem, které zadáte. Odemčený disk se vrátí Finderu, kde se objeví v Umístěních vedle vašich ostatních disků.",
+            "Linux umí BitLocker číst už léta a přesně toho Lukotta využívá. Na pozadí spustí malý systém s Linuxem, předá mu disk a odemkne jej tam heslem, které zadáte. Odemčený disk se vrátí Finderu, kde se objeví v oddílu Místa vedle vašich ostatních disků.",
             "Disk se nepřevádí ani nekopíruje. Zůstává diskem s BitLockerem, zůstává zašifrovaný a Windows jej dál čtou."
           ]
         },
@@ -48,7 +48,7 @@
           "list": [
             "Připojte disk. Lukotta jej vypíše a označí jako zamčený.",
             "Klikněte na něj a zadejte heslo, které používáte ve Windows.",
-            "Disk se objeví ve Finderu v Umístěních."
+            "Disk se objeví ve Finderu v oddílu Místa."
           ],
           "listKind": "steps"
         },
@@ -116,7 +116,7 @@
           "list": [
             "Připojte disk. Lukotta vypíše, co na něm je.",
             "Pokud je šifrovaný, zadejte přístupovou frázi.",
-            "Disk se objeví ve Finderu v Umístěních."
+            "Disk se objeví ve Finderu v oddílu Místa."
           ],
           "listKind": "steps"
         },
@@ -168,7 +168,7 @@
           "list": [
             "Připojte disk. Lukotta jej vypíše.",
             "Klikněte na něj.",
-            "Objeví se ve Finderu v Umístěních a soubory se kopírují oběma směry."
+            "Objeví se ve Finderu v oddílu Místa a soubory se kopírují oběma směry."
           ],
           "listKind": "steps"
         },
@@ -231,7 +231,7 @@
           "list": [
             "Zvolte Soubor a pak Otevřít obraz disku a vyhledejte soubor.",
             "Pokud je disk uvnitř šifrovaný, zadejte heslo nebo přístupovou frázi.",
-            "Obsah se objeví ve Finderu v Umístěních."
+            "Obsah se objeví ve Finderu v oddílu Místa."
           ],
           "listKind": "steps"
         },
@@ -245,7 +245,7 @@
           "heading": "Kopírování souborů do obrazu",
           "paragraphs": [
             "qcow2 se zapisuje obvyklým způsobem a zapisovat do něj je bezpečné.",
-            "Do VMDK, VDI a VHD zapisovat lze, ale je to čerstvá práce a není v používání dost dlouho na to, aby se jí svěřilo něco, co si nemůžete dovolit ztratit. Soubor si zkopírujte a pracujte s kopií, nebo jej otevřete jen pro čtení a soubory z něj raději jen vyberte.",
+            "Do VMDK, VDI a VHD zapisovat lze, ale tato podpora zápisu je nová a nepoužívá se ještě dost dlouho na to, aby jí bylo rozumné svěřit něco, co si nemůžete dovolit ztratit. Soubor si zkopírujte a pracujte s kopií, nebo jej otevřete jen pro čtení a soubory z něj raději jen vyberte.",
             "VHDX se otevírá jen pro čtení a stejně tak ten druh VMDK, který bývá uvnitř souboru OVA. Ten druh se zapisuje jedním průchodem a potom už se na místě měnit nedá."
           ]
         },

@@ -14,14 +14,14 @@
     "about": {
       "slug": "o-programie",
       "title": "O programie Lukotta",
-      "description": "Lukotta to darmowa aplikacja macOS o otwartym źródle, która otwiera dyski BitLocker, NTFS i Linux, na GNU General Public License.",
-      "lead": "Lukotta otwiera dyski i obrazy dysku, których macOS nie potrafi odczytać. Jest darmowa, ma otwarte źródło i utrzymuje ją jedna osoba.",
+      "description": "Lukotta to darmowa aplikacja macOS o otwartym kodzie źródłowym do dysków BitLocker, NTFS i Linux. Utrzymuje ją jeden programista, na GNU General Public License.",
+      "lead": "Lukotta otwiera dyski i obrazy dysku, których macOS nie potrafi odczytać. Jest darmowa, ma otwarty kod źródłowy i utrzymuje ją jedna osoba.",
       "sections": [
         {
           "heading": "Czym jest",
           "paragraphs": [
             "Lukotta to aplikacja dla macOS. Otwiera dyski BitLocker, NTFS, LUKS, ext4, btrfs i XFS oraz obrazy dysku maszyn wirtualnych w formatach qcow2, VMDK, VDI, VHD i VHDX. macOS nie czyta żadnego z nich sam. NTFS potrafi odczytać, ale nie zapisać.",
-            "Uruchamia w tle mały system Linux, otwiera tam dysk i przekazuje go Finderowi. Linux czyta te formaty od lat. Dysk nie jest przekształcany ani kopiowany. Zostaje taki, jaki był, a komputer, z którego pochodzi, nadal go czyta."
+            "Uruchamia w tle małą maszynę wirtualną z systemem Linux, otwiera tam dysk i przekazuje go Finderowi. Linux czyta te formaty od lat. Dysk nie jest przekształcany ani kopiowany. Zostaje taki, jaki był, a komputer, z którego pochodzi, nadal go czyta."
           ]
         },
         {
@@ -42,7 +42,7 @@
           "heading": "Ile kosztuje",
           "paragraphs": [
             "Nic. Nie ma wersji płatnej, abonamentu, okresu próbnego ani konta.",
-            "Lukotta to wolne oprogramowanie na GNU General Public License, w wersji 3 lub późniejszej. Źródło jest opublikowane. Każdy może je czytać, zmieniać i przekazywać dalej na tej samej licencji."
+            "Lukotta to wolne oprogramowanie na licencji GNU General Public License, w wersji 3 lub późniejszej. Kod źródłowy jest opublikowany. Każdy może go czytać, zmieniać i przekazywać dalej na tej samej licencji."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Jak zgłosić błąd w aplikacji Lukotta, zadać pytanie albo zgłosić problem bezpieczeństwa. Zgłoszenia na GitHubie czytane są najpierw.",
-      "lead": "Błędy trafiają na GitHub. Problemy bezpieczeństwa na adres z SECURITY.md. Wszystko inne pocztą.",
+      "description": "Jak zgłosić błąd w aplikacji Lukotta, zadać pytanie albo zgłosić problem bezpieczeństwa. Zgłoszenia na GitHubie czytane są najpierw i najszybciej.",
+      "lead": "Błędy trafiają na GitHub. Problemy bezpieczeństwa na adres z SECURITY.md. Wszystko inne e-mailem.",
       "sections": [
         {
           "heading": "Błąd albo dysk, który się nie otwiera",
           "paragraphs": [
-            "Załóż zgłoszenie na github.com/clementrahula/lukotta/issues. Zgłoszenia czytane są najpierw i są publiczne, więc następna osoba z tym samym dyskiem znajdzie odpowiedź.",
+            "Załóż zgłoszenie na github.com/clementrahula/lukotta/issues. Zgłoszenia czytane są najpierw i są publiczne, więc następna osoba z tym samym dyskiem może znaleźć odpowiedź.",
             "Napisz, jaki to dysk, co pokazała Lukotta i czego się spodziewałeś. Zacytuj błąd dokładnie. Nigdy nie wklejaj do zgłoszenia hasła ani klucza odzyskiwania."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Ile trwa odpowiedź",
           "paragraphs": [
-            "Aplikację Lukotta utrzymuje jedna osoba. Nie ma wsparcia ani obiecanego czasu odpowiedzi. Niektóre wiadomości trwają, a niektóre zostają bez odpowiedzi.",
+            "Aplikację Lukotta utrzymuje jedna osoba. Nie ma działu wsparcia ani obiecanego czasu odpowiedzi. Na niektóre wiadomości odpowiedź zajmuje trochę czasu, a niektóre zostają bez odpowiedzi.",
             "Zgłoszenie na GitHubie zwykle idzie szybciej, bo ktoś inny może odpowiedzieć wcześniej."
           ]
         }

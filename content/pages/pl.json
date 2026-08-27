@@ -139,7 +139,7 @@
     "ntfs": {
       "slug": "zapisywac-na-dysk-ntfs-na-macu",
       "title": "Zapisywać na dysk NTFS na Macu",
-      "description": "macOS otwiera dyski NTFS tylko do odczytu, więc pliki z nich schodzą, ale na nie nie wchodzą. Oto dlaczego, i jak zapisywać na dysk NTFS na Macu.",
+      "description": "macOS otwiera dyski NTFS tylko do odczytu, więc można kopiować z nich pliki, ale nie można kopiować plików na nie. Oto dlaczego, i jak zapisywać na dysk NTFS na komputerze Mac.",
       "lead": "macOS pozwala kopiować pliki z dysku NTFS, ale nie na niego. Oto dlaczego, i co można z tym zrobić.",
       "sections": [
         {
@@ -153,7 +153,7 @@
           "heading": "Co się dzieje, gdy podłączysz taki do Maca",
           "paragraphs": [
             "Dysk pojawia się w Finderze i widzisz pliki. Kopiowanie plików z niego działa normalnie. Kopiowanie czegokolwiek na niego nie działa: Finder odmawia, a dysk zachowuje się, jakby był zablokowany.",
-            "macOS otwiera dyski NTFS tylko do odczytu. Zapisywać NTFS potrafi od lat, ale to jest wyłączone i nie ma żadnego wspieranego sposobu, żeby to włączyć. Zapisywanie NTFS jest trudniejsze niż czytanie, a jeden błąd może zostawić dysk, którego Windows potem odmawia otworzyć."
+            "macOS otwiera dyski NTFS tylko do odczytu. Zapisywać NTFS potrafi od lat, ale to jest wyłączone i nie ma żadnego wspieranego sposobu, żeby to włączyć. Zapisywanie NTFS jest trudniejsze niż czytanie, a jeden błąd może zostawić dysk, którego Windows potem nie chce otworzyć."
           ]
         },
         {
@@ -182,7 +182,7 @@
           "paragraphs": [
             "Windows oznacza dysk jako źle zamknięty, gdy zapis został przerwany, najczęściej dlatego, że dysk wyciągnięto albo maszyna w połowie straciła zasilanie. To oznaczenie ostrzega następny komputer, który go otworzy, że dysk może być zapisany do połowy i warto go sprawdzić.",
             "Szybkie uruchamianie zostawia to samo oznaczenie nawet wtedy, gdy nic się nie zepsuło. W Windows 10 i 11 jest włączone od początku. Zamiast wyłączyć maszynę, wprowadza ją w hibernację, przez co dysk wygląda, jakby wciąż był w użyciu.",
-            "macOS odmawia dysku w obu tych stanach i nie podaje powodu. Lukotta go otwiera.",
+            "macOS odmawia otwarcia dysku w obu tych stanach i nie podaje powodu. Lukotta go otwiera.",
             "Jeśli masz jeszcze maszynę z Windows, czystszym rozwiązaniem jest podłączyć do niej dysk z powrotem i porządnie ją wyłączyć: przytrzymaj Shift, klikając Zamknij, to pomija szybkie uruchamianie."
           ]
         }
@@ -197,7 +197,7 @@
         {
           "heading": "Czym jest obraz dysku",
           "paragraphs": [
-            "Gdy uruchamiasz maszynę wirtualną, twardy dysk tej maszyny to jeden zwyczajny plik leżący na twoim Macu. Jej system, jej programy i każdy dokument w niej są wszystkie wewnątrz tego jednego pliku.",
+            "Gdy uruchamiasz maszynę wirtualną, twardy dysk tej maszyny to jeden zwyczajny plik leżący na twoim Macu. Jej system operacyjny, programy i wszystkie dokumenty są w tym jednym pliku.",
             "Każdy program zapisuje ten plik po swojemu. VMware używa VMDK, VirtualBox używa VDI, Hyper-V używa VHD i VHDX, a QEMU oraz UTM używają qcow2. Surowy obraz, który zwykle kończy się na .img, to prosta kopia dysku bez niczego dookoła."
           ]
         },
@@ -212,7 +212,7 @@
           "heading": "Jak Lukotta go otwiera",
           "paragraphs": [
             "Lukotta czyta obraz wprost. Ustala, w jakim formacie jest plik, znajduje w nim dysk i otwiera go w małym systemie Linux, który trzyma w tle. To, co jest w środku, pojawia się wtedy w Finderze jako zwyczajny dysk.",
-            "Maszyna wirtualna zostaje wyłączona. VMware ani VirtualBox nie muszą być zainstalowane, a otwarcie pliku go nie zmienia."
+            "Maszyna wirtualna pozostaje wyłączona. VMware ani VirtualBox nie muszą być zainstalowane, a otwarcie pliku go nie zmienia."
           ]
         },
         {
@@ -245,14 +245,14 @@
           "heading": "Kopiowanie plików do obrazu",
           "paragraphs": [
             "qcow2 zapisuje się w zwykły sposób i można na nim zapisywać bezpiecznie.",
-            "Na VMDK, VDI i VHD można zapisywać, ale to świeża praca i nie jest w użyciu dość długo, by powierzać jej coś, na czyją stratę cię nie stać. Skopiuj plik i pracuj na kopii albo otwórz go tylko do odczytu i po prostu wyjmij z niego pliki.",
-            "VHDX otwiera się tylko do odczytu, tak samo jak ten rodzaj VMDK, który bywa wewnątrz pliku OVA. Ten rodzaj zapisuje się jednym przebiegiem i potem nie da się go już zmienić na miejscu."
+            "Na VMDK, VDI i VHD można zapisywać, ale obsługa zapisu jest nowa i nie jest w użyciu dość długo, by powierzać jej coś, na czego utratę nie możesz sobie pozwolić. Skopiuj plik i pracuj na kopii albo otwórz go tylko do odczytu i po prostu wyjmij z niego pliki.",
+            "VHDX otwiera się tylko do odczytu, tak samo jak ten rodzaj VMDK, który bywa wewnątrz pliku OVA. Ten rodzaj zapisuje się jednym przebiegiem i potem nie da się go już zmienić w tym samym pliku."
           ]
         },
         {
           "heading": "Pliki, które się nie otworzą",
           "paragraphs": [
-            "Obraz otwiera się tylko wtedy, gdy jest kompletny sam z siebie.",
+            "Obraz otwiera się tylko wtedy, gdy jest kompletny sam w sobie.",
             "Łańcuch migawek VMware rozkłada obecny stan maszyny na plik pierwotny i szereg mniejszych, które zapisują, co się po nim zmieniło. Dysk podzielony rozbija jeden obraz na wiele kawałków. Dysk różnicowy Hyper-V zawiera tylko różnice względem innego pliku.",
             "W każdym z tych przypadków plik, który masz, jest częścią zestawu, a Lukotta otwiera jeden plik naraz."
           ]

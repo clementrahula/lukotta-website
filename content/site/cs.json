@@ -14,14 +14,14 @@
     "about": {
       "slug": "o-aplikaci",
       "title": "O aplikaci Lukotta",
-      "description": "Lukotta je bezplatná macOS aplikace s otevřeným zdrojovým kódem, která otevírá disky BitLocker, NTFS a Linux, pod GNU General Public License.",
+      "description": "Lukotta je bezplatná macOS aplikace s otevřeným zdrojovým kódem pro disky BitLocker, NTFS a Linux. Udržuje ji jeden vývojář, pod GNU General Public License.",
       "lead": "Lukotta otevírá disky a obrazy disku, které macOS neumí přečíst. Je zdarma, má otevřený zdrojový kód a udržuje ji jeden člověk.",
       "sections": [
         {
           "heading": "Co to je",
           "paragraphs": [
             "Lukotta je aplikace pro macOS. Otevírá disky BitLocker, NTFS, LUKS, ext4, btrfs a XFS a obrazy disku virtuálních strojů ve formátech qcow2, VMDK, VDI, VHD a VHDX. macOS nečte ani jeden z nich sám. NTFS umí číst, ale ne na něj zapisovat.",
-            "Na pozadí spustí malý systém s Linuxem, otevře tam disk a předá jej Finderu. Linux tyto formáty čte už léta. Disk se nepřevádí ani nekopíruje. Zůstane, jaký byl, a stroj, ze kterého pochází, jej čte dál."
+            "Na pozadí spustí malý virtuální stroj se systémem Linux, otevře tam disk a předá jej Finderu. Linux tyto formáty čte už léta. Disk se nepřevádí ani nekopíruje. Zůstane, jaký byl, a stroj, ze kterého pochází, jej čte dál."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Jak nahlásit chybu v aplikaci Lukotta, položit dotaz nebo nahlásit bezpečnostní problém. Issues na GitHubu se čtou jako první.",
+      "description": "Jak nahlásit chybu v aplikaci Lukotta, položit dotaz nebo nahlásit bezpečnostní problém. Issues na GitHubu se čtou jako první a odpovídá se na ně nejrychleji.",
       "lead": "Chyby patří na GitHub. Bezpečnostní problémy na adresu v SECURITY.md. Všechno ostatní e-mailem.",
       "sections": [
         {
@@ -88,7 +88,7 @@
         {
           "heading": "Jak dlouho trvá odpověď",
           "paragraphs": [
-            "Aplikaci Lukotta udržuje jeden člověk. Není tu žádná podpora ani slíbená doba odpovědi. Některé zprávy chvíli trvají a některé zůstanou bez odpovědi.",
+            "Aplikaci Lukotta udržuje jeden člověk. Není tu žádný helpdesk ani slíbená doba odpovědi. Některé zprávy chvíli trvají a některé zůstanou bez odpovědi.",
             "Issue na GitHubu bývá rychlejší, protože může odpovědět někdo jiný dřív."
           ]
         }
