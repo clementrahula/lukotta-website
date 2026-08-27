@@ -19,8 +19,8 @@
     "bitlocker": {
       "slug": "odpreti-bitlocker-disk-na-macu",
       "title": "Odpreti disk BitLocker na Macu",
-      "description": "macOS diska BitLocker ne odpre, ampak ponudi, da ga izbriše. Tukaj je zakaj, in kako disk prebrati ter nanj kopirati datoteke.",
-      "lead": "Priključite disk BitLocker na Mac in Finder ponudi, da ga izbriše. Tukaj je zakaj, in kako disk namesto tega prebrati.",
+      "description": "macOS diska BitLocker ne odpre, ampak ponudi, da ga izbriše. Evo zakaj in kako disk prebrati ter nanj kopirati datoteke.",
+      "lead": "Priključite disk BitLocker na Mac in Finder ponudi, da ga izbriše. Evo zakaj in kako disk namesto tega prebrati.",
       "sections": [
         {
           "heading": "Kaj je BitLocker",
@@ -80,8 +80,8 @@
     "linux": {
       "slug": "brati-ext4-disk-na-macu",
       "title": "Brati disk ext4, btrfs ali XFS na Macu",
-      "description": "macOS ne bere ne ext4, ne btrfs, ne XFS in ponudi, da disk izbriše. Tukaj je zakaj, in kako na Macu odpreti disk iz sistema Linux, tudi LUKS.",
-      "lead": "Priključite disk iz računalnika s sistemom Linux in Finder ponudi, da ga izbriše. Tukaj je zakaj, in kako ga namesto tega prebrati.",
+      "description": "macOS ne bere ne ext4, ne btrfs, ne XFS in ponudi, da disk izbriše. Evo zakaj in kako na Macu odpreti disk iz sistema Linux, tudi LUKS.",
+      "lead": "Priključite disk iz računalnika s sistemom Linux in Finder ponudi, da ga izbriše. Evo zakaj in kako ga namesto tega prebrati.",
       "sections": [
         {
           "heading": "Zakaj Mac diska ne zna prebrati",
@@ -139,8 +139,8 @@
     "ntfs": {
       "slug": "pisati-na-ntfs-disk-na-macu",
       "title": "Pisati na disk NTFS na Macu",
-      "description": "macOS odpira diske NTFS samo za branje, zato datoteke z njih gredo, nanje pa ne. Tukaj je zakaj, in kako na Macu pisati na disk NTFS.",
-      "lead": "macOS vam pusti kopirati datoteke z diska NTFS, ne pa nanj. Tukaj je zakaj, in kaj se da s tem narediti.",
+      "description": "macOS odpira diske NTFS samo za branje, zato datoteke z njih gredo, nanje pa ne. Evo zakaj in kako na Macu pisati na disk NTFS.",
+      "lead": "macOS vam pusti kopirati datoteke z diska NTFS, ne pa nanj. Evo zakaj in kaj se da s tem narediti.",
       "sections": [
         {
           "heading": "Kaj je NTFS",
@@ -204,7 +204,7 @@
         {
           "heading": "Zakaj je datoteko iz nje zoprno dobiti",
           "paragraphs": [
-            "Običajna pot je zagnati navidezni stroj, počakati, da se dvigne, poiskati datoteko v njem in jo prekopirati ven. To pomeni, da mora stroj še delovati in da mora biti program, ki ga poganja, še nameščen.",
+            "Običajna pot je zagnati navidezni stroj, počakati, da se zažene, poiskati datoteko v njem in jo prekopirati ven. To pomeni, da mora stroj še delovati in da mora biti program, ki ga poganja, še nameščen.",
             "Tudi Finder tu ne pomaga. Dvojni klik na VMDK ne naredi nič, ker macOS ne ve, kaj je znotraj."
           ]
         },
@@ -238,22 +238,22 @@
         {
           "heading": "Ena datoteka pogosto hrani več diskov",
           "paragraphs": [
-            "Slika diska največkrat vsebuje več kot en razdelek: majhen zagonski, glavnega, na katerem je vse, in včasih obnovitvenega. Lukotta jih navede, vi pa odprete tistega, ki ga potrebujete, enako kot bi izbrali disk."
+            "Slika diska največkrat vsebuje več kot en razdelek: majhen zagonski razdelek, glavni razdelek, na katerem je vse, in včasih obnovitveni razdelek. Lukotta jih navede, vi pa odprete tistega, ki ga potrebujete, enako kot bi izbrali disk."
           ]
         },
         {
           "heading": "Kopiranje datotek v sliko",
           "paragraphs": [
             "qcow2 se piše na običajen način in nanj je varno pisati.",
-            "Na VMDK, VDI in VHD je mogoče pisati, a je to sveže delo in ni v rabi dovolj dolgo, da bi mu zaupali kaj, česar si ne morete privoščiti izgubiti. Datoteko kopirajte in delajte na kopiji, ali pa jo odprite samo za branje in datoteke raje vzemite ven.",
-            "VHDX se odpre samo za branje, in enako tista vrsta VMDK, ki je znotraj datoteke OVA. Ta vrsta se zapiše v enem prehodu in se je potem na mestu ne da več spremeniti."
+            "Na VMDK, VDI in VHD je mogoče pisati, a je podpora za pisanje nova in ni v rabi dovolj dolgo, da bi ji zaupali kaj, česar si ne morete privoščiti izgubiti. Datoteko kopirajte in delajte na kopiji, ali pa jo odprite samo za branje in datoteke raje vzemite ven.",
+            "VHDX se odpre samo za branje, enako pa velja za tisto vrsto VMDK, ki je znotraj datoteke OVA. Ta vrsta se zapiše v enem prehodu in je potem ni več mogoče spremeniti v isti datoteki."
           ]
         },
         {
           "heading": "Datoteke, ki se ne bodo odprle",
           "paragraphs": [
             "Slika se odpre samo, če je sama po sebi cela.",
-            "Veriga posnetkov iz VMware razporedi sedanje stanje stroja med izvorno datoteko in vrsto manjših, ki beležijo, kaj se je za njo spremenilo. Razdeljen disk eno sliko razlomi na mnogo kosov. Razlikovalni disk iz Hyper-V vsebuje samo razlike glede na drugo datoteko.",
+            "Veriga posnetkov iz VMware razporedi sedanje stanje stroja med izvorno datoteko in vrsto manjših, ki beležijo, kaj se je za njo spremenilo. Razdeljen disk eno sliko razdeli na več delov. Razlikovalni disk iz Hyper-V vsebuje samo razlike glede na drugo datoteko.",
             "V vsakem od teh primerov je datoteka, ki jo imate, del kompleta, Lukotta pa odpre eno datoteko naenkrat."
           ]
         }

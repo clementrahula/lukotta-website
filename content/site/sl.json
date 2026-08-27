@@ -14,14 +14,14 @@
     "about": {
       "slug": "o-aplikaciji",
       "title": "O aplikaciji Lukotta",
-      "description": "Lukotta je brezplačna macOS aplikacija z odprto kodo, ki odpira diske BitLocker, NTFS in Linux, pod GNU General Public License.",
+      "description": "Lukotta je brezplačna macOS aplikacija z odprto kodo za diske BitLocker, NTFS in Linux. Vzdržuje jo en razvijalec, pod GNU General Public License.",
       "lead": "Lukotta odpira diske in slike diska, ki jih macOS ne zna prebrati. Je brezplačna, odprtokodna in vzdržuje jo en sam človek.",
       "sections": [
         {
           "heading": "Kaj je",
           "paragraphs": [
             "Lukotta je aplikacija za macOS. Odpira diske BitLocker, NTFS, LUKS, ext4, btrfs in XFS ter slike diska navideznih strojev v zapisih qcow2, VMDK, VDI, VHD in VHDX. macOS ne bere nobenega od njih sam. NTFS zna brati, ne pa pisati nanj.",
-            "V ozadju zažene majhen sistem Linux, tam odpre disk in ga izroči Finderju. Linux te zapise bere že leta. Disk se niti ne pretvori niti ne kopira. Ostane tak, kot je bil, in stroj, iz katerega je prišel, ga še naprej bere."
+            "V ozadju zažene majhen navidezni stroj Linux, tam odpre disk in ga izroči Finderju. Linux te zapise bere že leta. Disk se niti ne pretvori niti ne kopira. Ostane tak, kot je bil, in stroj, iz katerega je prišel, ga še naprej bere."
           ]
         },
         {
@@ -63,13 +63,13 @@
     "contact": {
       "slug": "stik",
       "title": "Stik",
-      "description": "Kako prijaviti napako v aplikaciji Lukotta, postaviti vprašanje ali prijaviti varnostno težavo. Prijave na GitHubu se preberejo prve.",
+      "description": "Kako prijaviti napako v aplikaciji Lukotta, postaviti vprašanje ali prijaviti varnostno težavo. Prijave na GitHubu se preberejo in odgovorijo prve.",
       "lead": "Napake gredo na GitHub. Varnostne težave gredo na naslov iz SECURITY.md. Vse drugo gre po e-pošti.",
       "sections": [
         {
           "heading": "Napaka ali disk, ki se ne odpre",
           "paragraphs": [
-            "Odprite prijavo na github.com/clementrahula/lukotta/issues. Prijave se preberejo prve in so javne, tako da naslednji človek z istim diskom najde odgovor.",
+            "Odprite prijavo na github.com/clementrahula/lukotta/issues. Prijave se preberejo prve in so javne, tako da lahko naslednji človek z istim diskom najde odgovor.",
             "Povejte, kateri disk je, kaj je Lukotta pokazala in kaj ste pričakovali. Napako navedite natanko. Nikoli ne prilepite gesla ali obnovitvenega ključa v prijavo."
           ]
         },
@@ -88,7 +88,7 @@
         {
           "heading": "Kako dolgo traja odgovor",
           "paragraphs": [
-            "Aplikacijo Lukotta vzdržuje en sam človek. Ni podpore in ni obljubljenega časa odgovora. Nekatera sporočila trajajo, nekatera pa ostanejo brez odgovora.",
+            "Aplikacijo Lukotta vzdržuje en sam človek. Ni službe za podporo in ni obljubljenega časa odgovora. Na nekatera sporočila odgovor traja dlje, nekatera pa ostanejo brez odgovora.",
             "Prijava na GitHubu je običajno hitrejša, ker lahko kdo drug odgovori prej."
           ]
         }

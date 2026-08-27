@@ -14,14 +14,14 @@
     "about": {
       "slug": "o-aplikaciji",
       "title": "O aplikaciji Lukotta",
-      "description": "Lukotta je besplatna macOS aplikacija otvorenog koda koja otvara BitLocker, NTFS i Linux diskove, pod GNU General Public License.",
+      "description": "Lukotta je besplatna macOS aplikacija otvorenog koda za BitLocker, NTFS i Linux diskove. Održava je jedan programer, pod GNU General Public License.",
       "lead": "Lukotta otvara diskove i slike diska koje macOS ne može pročitati. Besplatna je, otvorenog koda, i održava je jedna osoba.",
       "sections": [
         {
           "heading": "Što je",
           "paragraphs": [
             "Lukotta je macOS aplikacija. Otvara BitLocker, NTFS, LUKS, ext4, btrfs i XFS diskove te slike diska virtualnih strojeva u formatima qcow2, VMDK, VDI, VHD i VHDX. macOS ne čita nijedan od njih sam. NTFS čita, ali na njega ne piše.",
-            "U pozadini pokrene mali sustav s Linuxom, ondje otvori disk i preda ga Finderu. Linux čita te formate već godinama. Disk se niti pretvara niti kopira. Ostaje kakav je bio, a stroj iz kojeg je došao i dalje ga čita."
+            "U pozadini pokrene mali virtualni stroj sa sustavom Linux, ondje otvori disk i preda ga Finderu. Linux čita te formate već godinama. Disk se niti pretvara niti kopira. Ostaje kakav je bio, a stroj iz kojeg je došao i dalje ga čita."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Kako prijaviti pogrešku u aplikaciji Lukotta, postaviti pitanje ili prijaviti sigurnosni problem. Prijave na GitHubu čitaju se prve.",
+      "description": "Kako prijaviti pogrešku u aplikaciji Lukotta, postaviti pitanje ili prijaviti sigurnosni problem. Prijave na GitHubu čitaju se prve i najbrže.",
       "lead": "Pogreške idu na GitHub. Sigurnosni problemi idu na adresu iz SECURITY.md. Sve ostalo ide e-poštom.",
       "sections": [
         {
@@ -86,9 +86,9 @@
           ]
         },
         {
-          "heading": "Koliko traje odgovor",
+          "heading": "Koliko se čeka na odgovor",
           "paragraphs": [
-            "Aplikaciju Lukotta održava jedna osoba. Nema podrške ni obećanog roka odgovora. Neke poruke potraju, a neke ostanu bez odgovora.",
+            "Aplikaciju Lukotta održava jedna osoba. Nema službe za podršku ni obećanog roka odgovora. Neke poruke potraju, a neke ostanu bez odgovora.",
             "Prijava na GitHubu obično ide brže, jer netko drugi može odgovoriti prije."
           ]
         }

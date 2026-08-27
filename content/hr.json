@@ -264,11 +264,11 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "hr": "VMware, ravni i rijetki"
+      "hr": "VMware, flat i sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
-      "hr": "Ono što sadrži OVA. Zapisuje se u jednom prolazu pa se ne može izravno mijenjati"
+      "hr": "Ono što sadrži OVA. Zapisuje se u jednom prolazu pa se poslije ne može mijenjati u istoj datoteci"
     },
     "formats.vdi.note": {
       "en": "VirtualBox",
@@ -412,7 +412,7 @@
     },
     "notFound.description": {
       "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
-      "hr": "Ta adresa ne postoji na lukotta.com. Karta stranica navodi svaku stranicu, a llms.txt sadrži cijelo mjesto kao običan tekst."
+      "hr": "Ta adresa ne postoji na lukotta.com. Karta web-mjesta navodi svaku stranicu, a llms.txt sadrži cijelo web-mjesto kao običan tekst."
     },
     "notFound.lead": {
       "en": "That address does not exist on lukotta.com.",
@@ -456,11 +456,11 @@
     },
     "notFound.sitemap.name": {
       "en": "Sitemap",
-      "hr": "Karta stranica"
+      "hr": "Karta web-mjesta"
     },
     "notFound.sitemap.what": {
       "en": "every page on this site",
-      "hr": "svaka stranica ovog mjesta"
+      "hr": "svaka stranica ovog web-mjesta"
     },
     "notFound.llms.name": {
       "en": "llms.txt",
@@ -468,7 +468,7 @@
     },
     "notFound.llms.what": {
       "en": "the whole site as plain text",
-      "hr": "cijelo mjesto kao običan tekst"
+      "hr": "cijelo web-mjesto kao običan tekst"
     }
   }
 }
