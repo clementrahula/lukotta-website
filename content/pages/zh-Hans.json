@@ -1,0 +1,287 @@
+{
+  "$comment": "Pages about one subject each, linked from the formats table and the FAQ. The key identifies the page and is the same in every language; the slug is the address a reader sees and belongs to the language. One file per language; a language without one has no task pages, and its landing page shows no links to them.",
+  "language": {
+    "code": "zh-Hans",
+    "name": "Chinese (Simplified)",
+    "native": "简体中文",
+    "dir": "ltr"
+  },
+  "ui": {
+    "free": "下载和使用都是免费的。"
+  },
+  "order": [
+    "bitlocker",
+    "linux",
+    "ntfs",
+    "disk-images"
+  ],
+  "pages": {
+    "bitlocker": {
+      "slug": "bitlocker-drive-mac",
+      "title": "在 Mac 上打开 BitLocker 驱动器",
+      "description": "macOS 不会打开 BitLocker 驱动器，反而提出把它抹掉。这里说明这究竟是为什么，以及怎样读取这个驱动器，还有怎样把文件拷贝进去。",
+      "lead": "你把一个 BitLocker 驱动器插到 Mac 上，访达提出要把它抹掉。这里说明原因，以及怎样改为读取它。",
+      "sections": [
+        {
+          "heading": "BitLocker 是什么",
+          "paragraphs": [
+            "BitLocker 是内建在 Windows 里的加密。打开之后，写到驱动器上的一切都会被打乱，没有密码就读不出内容。Windows 在自己的驱动器上用它，也在 U 盘和存储卡上用，在那里它叫 BitLocker To Go。",
+            "两种情形是同一种加密。驱动器要是丢了，捡到的人从里面读不出任何东西。"
+          ]
+        },
+        {
+          "heading": "把这样的驱动器插到 Mac 上会怎样",
+          "paragraphs": [
+            "访达说这个磁盘读不了，并提出把它初始化或者抹掉。它不问密码，屏幕上也没有任何迹象说明驱动器是锁着的而不是坏了。",
+            "驱动器没有损坏。macOS 有自己的加密，叫 FileVault，对 BitLocker 一点也不了解。它读了驱动器的开头，发现一种认不出来的结构，就把这个磁盘当成没格式化过的，因此唯一能提出的就是抹掉。"
+          ]
+        },
+        {
+          "heading": "Lukotta 是怎么打开它的",
+          "paragraphs": [
+            "Linux 读 BitLocker 已经读了很多年，Lukotta 用的正是这一点。它在后台启动一套小小的 Linux 系统，把驱动器交给它，再用你输入的密码在那里解锁。解锁后的驱动器回到访达，出现在“位置”下面，和你别的磁盘排在一起。",
+            "驱动器既不会被转换，也不会被拷贝。它还是 BitLocker 驱动器，还是加密的，Windows 也照样读得了。"
+          ]
+        },
+        {
+          "heading": "打开驱动器",
+          "list": [
+            "插上驱动器。Lukotta 会把它列出来，并标明是锁着的。",
+            "点一下它，输入你在 Windows 里用的那个密码。",
+            "驱动器就出现在访达的“位置”下面。"
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "要是你没有密码",
+          "paragraphs": [
+            "驱动器加密的时候，Windows 生成了一个恢复密钥，并问过要把它放在哪里。它能代替密码打开驱动器。一共 48 位数字，分成八组，每组六位：",
+            "    123456-789012-345678-901234-567890-123456-789012-345678",
+            "它可能存在 Microsoft 账户里，可能在一个文本文件里，也可能印在纸上。把它粘贴到本该填密码的地方。",
+            "没有密码也没有恢复密钥，这个驱动器在任何电脑上、用任何程序都打不开。"
+          ]
+        },
+        {
+          "heading": "在 Mac 上打不开的驱动器",
+          "paragraphs": [
+            "有些 Windows 电脑从来不问密码。它们把密钥放在主板上一块叫 TPM 的芯片里，那台机器一开机就自己把驱动器解锁了。",
+            "这样设置的驱动器只能在它原来那台电脑上用，因为密钥从不离开那台机器。任何 Mac 都打不开它，别的 Windows 电脑也打不开。要是加密的时候存过恢复密钥，那把密钥现在仍然打得开。"
+          ]
+        },
+        {
+          "heading": "把文件拷贝到驱动器上",
+          "paragraphs": [
+            "BitLocker 驱动器是可读可写地打开的，所以 Mac 可以往 Windows 上做的备份里添文件，而不只是从里面取。",
+            "Lukotta 也能以只读方式打开驱动器。要是你正在从一个开始出毛病的驱动器里抢救文件，这么做很值得。那时候什么都写不进去。"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "slug": "ext4-drive-mac",
+      "title": "在 Mac 上读取 ext4、btrfs 或 XFS 驱动器",
+      "description": "macOS 读不了 ext4、btrfs 和 XFS，还提出要抹掉驱动器。这里说明原因，以及怎样在 Mac 上打开 Linux 驱动器，包括 LUKS 的。",
+      "lead": "你插上一个从 Linux 机器上拿下来的驱动器，访达提出要把它抹掉。这里说明原因，以及怎样改为读取它。",
+      "sections": [
+        {
+          "heading": "Mac 为什么读不了这个驱动器",
+          "paragraphs": [
+            "每个驱动器都有一套文件系统：它记下每个文件从哪里开始、叫什么名字、磁盘的哪些部分还空着。Windows 用 NTFS。macOS 用 APFS。Linux 多半用 ext4，有时用 btrfs 或 XFS。",
+            "文件本身很平常。不一样的是排在它们前面的那份目录，而读不了这份目录的电脑，就算东西都还在，也没有办法找到任何一样。"
+          ]
+        },
+        {
+          "heading": "把这样的驱动器插到 Mac 上会怎样",
+          "paragraphs": [
+            "访达说这个磁盘读不了，并提出把它抹掉。macOS 对空盘和快坏的盘给的是同一句话，所以这句话没法让你看出驱动器其实是好的。",
+            "macOS 支持自己的文件系统，也支持 exFAT 这类少数常见的。Linux 的文件系统不在其中，所以一个 ext4 驱动器在 macOS 眼里就像一块空盘。"
+          ]
+        },
+        {
+          "heading": "Lukotta 是怎么读它的",
+          "paragraphs": [
+            "Lukotta 在后台启动一套小小的 Linux 系统，把驱动器交给它。Linux 自己就能读 ext4、btrfs 和 XFS，所以驱动器在那里不经任何转换就打开了，Lukotta 再把它转交给访达。",
+            "驱动器上不会写进任何东西，放回 Linux 机器里它照常运转。"
+          ]
+        },
+        {
+          "heading": "Lukotta 读得了什么",
+          "paragraphs": [
+            "ext2、ext3 和 ext4，涵盖了大多数 Linux 系统。btrfs，Fedora 和 openSUSE 上的默认选择。XFS，服务器上常见。",
+            "加密的和没加密的都行。要是这个驱动器是用 LVM 做的，也就是把一块物理驱动器分成好几个卷，那么它们会一起打开，而不是一个一个来。"
+          ]
+        },
+        {
+          "heading": "打开驱动器",
+          "list": [
+            "插上驱动器。Lukotta 会列出上面有什么。",
+            "要是它是加密的，输入密码短语。",
+            "驱动器就出现在访达的“位置”下面。"
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "要是它问你要密码短语",
+          "paragraphs": [
+            "LUKS 是 Linux 给整块驱动器加密的办法。要是这个驱动器原来那台机器在开机很早的时候、还没到登录界面就问密码短语，那就是 LUKS，要在这里输入的也正是那个密码短语。",
+            "它和登录密码是两回事，尽管不少人把两个设成一样。"
+          ]
+        },
+        {
+          "heading": "打不开的驱动器",
+          "paragraphs": [
+            "LUKS 驱动器可以做成把头部存在别处，存在另一块磁盘上或者一个 U 盘上。头部就是描述加密方式的那部分。没有它，驱动器上就没有什么可解锁的了。",
+            "较新的 Ubuntu 安装还能把密钥绑到机器里的一块芯片上，做法和 BitLocker 一样。那样的驱动器只能在它原来那台电脑上打开。"
+          ]
+        }
+      ]
+    },
+    "ntfs": {
+      "slug": "ntfs-drive-write-mac",
+      "title": "在 Mac 上往 NTFS 驱动器写入",
+      "description": "macOS 只以只读方式打开 NTFS 驱动器，文件出得来却进不去。这里说明这是为什么，以及怎样在 Mac 上往 NTFS 驱动器里写东西。",
+      "lead": "macOS 让你从 NTFS 驱动器里拷文件出来，却不让你拷进去。这里说明原因，以及能拿它怎么办。",
+      "sections": [
+        {
+          "heading": "NTFS 是什么",
+          "paragraphs": [
+            "NTFS 是 Windows 用的文件系统，既用在自己的驱动器上，也用在 Windows 电脑上格式化过的外置驱动器上。在 Windows 机器上格式化的 U 盘多半是 NTFS。",
+            "另一种常见的是 exFAT，大多数存储卡和很多 U 盘都用它，因为 Windows 和 macOS 都能往上面写。要是你的驱动器是 exFAT，macOS 早就应付得来，这里说的都跟你无关。想确认的话，在访达里点一下这个驱动器，选“文件”，再选“显示简介”。“格式”那一行会告诉你。"
+          ]
+        },
+        {
+          "heading": "把这样的驱动器插到 Mac 上会怎样",
+          "paragraphs": [
+            "驱动器出现在访达里，文件你也看得见。从上面拷文件出来一切正常。往上面拷东西就不行了：访达拒绝，驱动器表现得像是锁着的一样。",
+            "macOS 只以只读方式打开 NTFS 驱动器。它能写 NTFS 已经好些年了，但这功能是关着的，也没有受支持的办法把它打开。写 NTFS 比读要难，一次失手就可能留下一个 Windows 之后拒绝打开的驱动器。"
+          ]
+        },
+        {
+          "heading": "Lukotta 是怎么往里写的",
+          "paragraphs": [
+            "Lukotta 用 Linux 的 NTFS 驱动程序打开这个驱动器，那个驱动程序会写，Linux 机器每天都在用。之后驱动器交给访达，所以往里拷文件跟别的拷贝没有两样。",
+            "驱动器还是 NTFS，Windows 之后照样读得了。"
+          ]
+        },
+        {
+          "heading": "打开驱动器",
+          "list": [
+            "插上驱动器。Lukotta 会把它列出来。",
+            "点一下它。",
+            "它出现在访达的“位置”下面，文件两个方向都拷得动。"
+          ],
+          "listKind": "steps"
+        },
+        {
+          "paragraphs": [
+            "NTFS 驱动器多半没有密码，所以没什么可输入的，除非上面同时还开了 BitLocker。"
+          ]
+        },
+        {
+          "heading": "Windows 没有正常关闭的驱动器",
+          "paragraphs": [
+            "写入被打断的时候，Windows 会给驱动器打上没有正常关闭的记号，多半是因为驱动器被拔了，或者机器中途断了电。这个记号是在提醒下一台打开它的电脑：这个驱动器可能只写了一半，值得检查一下。",
+            "就算什么问题都没出，快速启动也会留下同样的记号。在 Windows 10 和 11 上它一开始就是开着的。它不是把机器关掉，而是让机器休眠，于是驱动器看上去还在用着。",
+            "这两种状态 macOS 都拒绝，也不说原因。Lukotta 打得开。",
+            "要是那台 Windows 机器还在你手上，更干净的办法是把驱动器插回去，把那台机器好好关掉：点“关机”的时候按住 Shift，这样就跳过了快速启动。"
+          ]
+        }
+      ]
+    },
+    "disk-images": {
+      "slug": "vmdk-vdi-vhd-file-mac",
+      "title": "在 Mac 上打开 VMDK、VDI 或 VHD 文件",
+      "description": "不装 VMware 或 VirtualBox，也不启动虚拟机，就在 Mac 上打开 VMDK、VDI、VHD 或 qcow2 文件，把里面的文件拷出来。",
+      "lead": "虚拟机把自己整块磁盘装在一个文件里。这个文件你可以在 Mac 上打开，从里面取东西出来，而完全不用启动那台虚拟机。",
+      "sections": [
+        {
+          "heading": "磁盘映像是什么",
+          "paragraphs": [
+            "你运行一台虚拟机的时候，那台机器的硬盘就是放在你 Mac 上的一个普通文件。它的操作系统、它的程序、里面的每一份文稿，全都装在这一个文件里。",
+            "每个程序写这个文件的方式都不一样。VMware 用 VMDK，VirtualBox 用 VDI，Hyper-V 用 VHD 和 VHDX，QEMU 和 UTM 用 qcow2。原始映像通常以 .img 结尾，就是把一块磁盘照原样拷下来，外面什么都没包。"
+          ]
+        },
+        {
+          "heading": "为什么从里面取一个文件出来这么麻烦",
+          "paragraphs": [
+            "平常的做法是启动虚拟机，等它开起来，在里面找到文件再拷出来。这就要求那台机器还跑得起来，跑它的那个程序也还装着。",
+            "访达在这里也帮不上忙。双击一个 VMDK 什么也不会发生，因为 macOS 不知道里面装的是什么。"
+          ]
+        },
+        {
+          "heading": "Lukotta 是怎么打开它的",
+          "paragraphs": [
+            "Lukotta 直接读这个映像。它弄清文件是哪种格式，找到里面那块磁盘，再在后台运行的那套小小的 Linux 系统里把它打开。里面的东西随后就以普通磁盘的样子出现在访达里。",
+            "虚拟机一直是关着的。VMware 和 VirtualBox 不必装着，打开这个文件也不会改动它。"
+          ]
+        },
+        {
+          "heading": "Lukotta 打得开哪些文件",
+          "list": [
+            "qcow2，来自 QEMU 和 UTM。",
+            "VMDK，来自 VMware。",
+            "VDI，来自 VirtualBox。",
+            "VHD 和 VHDX，来自 Hyper-V。",
+            "原始映像，通常以 .img 结尾。"
+          ],
+          "listKind": "bullets"
+        },
+        {
+          "heading": "打开一个",
+          "list": [
+            "选“文件”，再选“打开磁盘映像”，然后找到那个文件。",
+            "要是里面那块磁盘是加密的，输入密码或密码短语。",
+            "内容就出现在访达的“位置”下面。"
+          ],
+          "listKind": "steps"
+        },
+        {
+          "heading": "一个文件里常常装着好几块驱动器",
+          "paragraphs": [
+            "一个磁盘映像里通常不止一个分区：一个小的启动分区、装着所有东西的主分区，有时还有一个恢复分区。Lukotta 会把它们列出来，你挑需要的那个打开，跟挑驱动器一样。"
+          ]
+        },
+        {
+          "heading": "把文件拷进映像里",
+          "paragraphs": [
+            "qcow2 是按常规方式写的，往里写很安全。",
+            "VMDK、VDI 和 VHD 也能写，但这是新做的工夫，用的时间还不够长，不足以托付你丢不起的东西。把文件拷一份，在副本上做事，或者以只读方式打开，只把文件取出来。",
+            "VHDX 只能以只读方式打开，OVA 文件里装的那种 VMDK 也一样。那种是一口气写通的，之后没法在原地改动。"
+          ]
+        },
+        {
+          "heading": "打不开的文件",
+          "paragraphs": [
+            "映像只有在自己是完整的时候才打得开。",
+            "VMware 的快照链把机器眼下的状态摊在一个原始文件和一串更小的文件上，那些小文件记着它之后有什么变化。拆分磁盘把一个映像切成许多块。Hyper-V 的差异磁盘只装着跟另一个文件之间的差别。",
+            "这几种情形里，你手上的那个文件都只是一整套里的一份，而 Lukotta 一次只打开一个文件。"
+          ]
+        }
+      ]
+    }
+  },
+  "linkFromFormatsTable": {
+    "BitLocker": "bitlocker",
+    "LUKS1, LUKS2": "linux",
+    "LVM inside LUKS": "linux",
+    "NTFS": "ntfs",
+    "ext2, ext3, ext4, btrfs, XFS": "linux",
+    "qcow2": "disk-images",
+    "VMDK": "disk-images",
+    "VDI": "disk-images",
+    "VHD": "disk-images",
+    "VHDX": "disk-images"
+  },
+  "linkFromFaq": {
+    "bitlocker": "关于 BitLocker 驱动器的更多内容，以及密码丢了该怎么办",
+    "ntfs": "关于 NTFS 驱动器的更多内容，包括 Windows 没有正常关闭的那些",
+    "linux": "关于 Linux 驱动器和 LUKS 加密的更多内容",
+    "disk-images": "关于磁盘映像的更多内容，以及哪些可以写入"
+  },
+  "faqAnswerFor": {
+    "2": "bitlocker",
+    "3": "ntfs",
+    "4": "linux",
+    "5": "disk-images"
+  }
+}

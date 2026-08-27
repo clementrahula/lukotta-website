@@ -191,3 +191,17 @@ picked and applied to both names everywhere.
 The site calls a drive قرص throughout; the application says محرك الأقراص. The
 task pages follow the site, which is also the shorter and more readable of the
 two in running prose.
+
+## th — "กุญแจกู้คืน" on the site against "คีย์กู้คืน" in the application
+
+Both render recovery key. The task pages follow the site.
+
+Note also that Thai writes without spaces between words, so the 70-to-160
+character window for a description holds far more Thai than English. The Thai
+descriptions sit near the lower end of it and are not short.
+
+## ja — two words for read-only
+
+`features.body2` says **読み出し専用**, `faq.3.a` says **読み取り専用**. The
+application and Apple's own Disk Utility say 読み出し専用, which is what the
+task pages use.
