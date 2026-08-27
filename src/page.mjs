@@ -372,9 +372,6 @@ ${ogAlternates}
     })();
   </script>
 
-  <script type="application/ld+json">${jsonld(softwareLd)}</script>
-  <script type="application/ld+json">${jsonld(faqLd)}</script>
-  <script type="application/ld+json">${jsonld(siteLd)}</script>
 </head>
 <body>
   <!-- Scroll target for the brand and the header's Download link. A real
@@ -547,6 +544,16 @@ ${siteFooter({ t, cfg, away, copyright, authorLink })}
     </div>
   </dialog>
 
+
+  <!-- Structured data sits at the end of the document rather than in the head.
+       Schema.org is read wherever it appears, and the head is the part an agent
+       that truncates a response actually gets: three blocks of JSON-LD in front
+       of the content push the first heading past the point where some agents
+       stop reading. An audit of this site found exactly that. -->
+  <script type="application/ld+json">${jsonld(softwareLd)}</script>
+  <script type="application/ld+json">${jsonld(faqLd)}</script>
+  <script type="application/ld+json">${jsonld(siteLd)}</script>
+
   <script src="${assetPrefix}${assets.js}" defer></script>
 </body>
 </html>
@@ -706,8 +713,6 @@ ${taskOgAlternates}
     })();
   </script>
 
-  <script type="application/ld+json">${jsonld(crumbs)}</script>
-  <script type="application/ld+json">${jsonld(article)}</script>
 </head>
 <body>
   <span id="top"></span>
@@ -753,6 +758,15 @@ ${page.sections.map(section).join("\n")}
   </main>
 
 ${siteFooter({ t, cfg, away, copyright, authorLink })}
+
+
+  <!-- Structured data sits at the end of the document rather than in the head.
+       Schema.org is read wherever it appears, and the head is the part an agent
+       that truncates a response actually gets: three blocks of JSON-LD in front
+       of the content push the first heading past the point where some agents
+       stop reading. An audit of this site found exactly that. -->
+  <script type="application/ld+json">${jsonld(crumbs)}</script>
+  <script type="application/ld+json">${jsonld(article)}</script>
 
   <script src="${assetPrefix}${assets.js}" defer></script>
 </body>
