@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "sv",
+    "name": "Swedish",
+    "native": "Svenska",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "om",
+      "title": "Om Lukotta",
+      "description": "Lukotta är en gratis macOS-app med öppen källkod som öppnar BitLocker-, NTFS- och Linux-diskar. Av Clement Rahula under GNU General Public License.",
+      "lead": "Lukotta öppnar diskar och skivavbilder som macOS inte kan läsa. Det är gratis, har öppen källkod och underhålls av en person.",
+      "sections": [
+        {
+          "heading": "Vad det är",
+          "paragraphs": [
+            "Lukotta är ett macOS-program. Det öppnar BitLocker-, NTFS-, LUKS-, ext4-, btrfs- och XFS-diskar, och skivavbilder från virtuella maskiner i formaten qcow2, VMDK, VDI, VHD och VHDX. macOS läser inget av dem på egen hand. NTFS kan det läsa men inte skriva till.",
+            "Det startar ett litet Linux-system i bakgrunden, öppnar disken där och lämnar den till Finder. Linux har läst dessa format i åratal. Disken görs varken om eller kopieras. Den blir som den var, och maskinen den kom från läser den fortfarande."
+          ]
+        },
+        {
+          "heading": "Vem som underhåller det",
+          "paragraphs": [
+            "[En ensam utvecklare](https://rahula.dev). Det finns inget företag, inga investerare och inget team."
+          ]
+        },
+        {
+          "heading": "Varför det finns",
+          "paragraphs": [
+            "Anslut en BitLocker-disk till en Mac och Finder erbjuder sig att radera den. Den frågar inte efter något lösenord, och ingenting på skärmen visar att disken är låst och inte trasig.",
+            "Det verkade befängt att det i dag inte finns något praktiskt sätt att dela en krypterad USB-disk mellan flera operativsystem, så en lösning fick byggas.",
+            "I Linux-ekosystemet fanns redan verktyg som kunde läsa de diskarna. Lukotta för samman dem med ett Mac-gränssnitt."
+          ]
+        },
+        {
+          "heading": "Vad det kostar",
+          "paragraphs": [
+            "Ingenting. Det finns ingen betald version, ingen prenumeration, ingen provperiod och inget konto.",
+            "Lukotta är fri programvara under GNU General Public License, version 3 eller senare. Källkoden är publicerad. Vem som helst får läsa den, ändra den och ge den vidare under samma licens."
+          ]
+        },
+        {
+          "heading": "Ingenting lämnar din Mac",
+          "paragraphs": [
+            "Lukotta har ingen analys, ingen telemetri och ingen kraschrapportering.",
+            "Det gör en sorts nätverksanrop: det ser efter en ny version och hämtar den om du ber om det. Lösenord och återställningsnycklar används för att låsa upp disken och sparas, skickas eller loggas inte."
+          ]
+        },
+        {
+          "heading": "Källkod",
+          "paragraphs": [
+            "Programmets källkod finns på github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "description": "Hur man rapporterar ett fel i Lukotta, ställer en fråga eller rapporterar ett säkerhetsproblem. Issues på GitHub läses först.",
+      "lead": "Fel går till GitHub. Säkerhetsproblem går till adressen i SECURITY.md. Allt annat går via e-post.",
+      "sections": [
+        {
+          "heading": "Ett fel, eller en disk som inte går att öppna",
+          "paragraphs": [
+            "Skapa ett issue på github.com/clementrahula/lukotta/issues. Issues läses först, och de är offentliga, så nästa person med samma disk hittar svaret.",
+            "Skriv vilken disk det är, vad Lukotta visade och vad du väntade dig. Citera ett felmeddelande ordagrant. Klistra aldrig in ett lösenord eller en återställningsnyckel i ett issue."
+          ]
+        },
+        {
+          "heading": "Ett säkerhetsproblem",
+          "paragraphs": [
+            "Skapa inte ett offentligt issue. SECURITY.md i arkivet säger vart det ska skickas och vad du kan vänta dig."
+          ]
+        },
+        {
+          "heading": "Allt annat",
+          "paragraphs": [
+            "Skriv till contact_web@lukotta.com med frågor om appen."
+          ]
+        },
+        {
+          "heading": "Hur lång tid ett svar tar",
+          "paragraphs": [
+            "Lukotta underhålls av en person. Det finns ingen support och ingen utlovad svarstid. Vissa meddelanden dröjer, och en del blir obesvarade.",
+            "Ett issue på GitHub går oftast fortare, eftersom någon annan kan hinna svara först."
+          ]
+        }
+      ]
+    }
+  }
+}

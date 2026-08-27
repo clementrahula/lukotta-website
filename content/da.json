@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "da": "Sidens tekst er under licensen Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "da": "Siden blev ikke fundet"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "da": "Den adresse findes ikke på lukotta.com. Sitemappet nævner hver side, og llms.txt indeholder hele websitet som ren tekst."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "da": "Den adresse findes ikke på lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "da": "Hvor du i stedet kan kigge"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "da": "Vejledninger"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "da": "Forsiden"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "da": "Forsiden"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "da": "hvad Lukotta er, og hvordan man installerer det"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "da": "Om Lukotta"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "da": "hvem der vedligeholder Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "da": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "da": "hvordan man melder en fejl"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "da": "Sitemap"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "da": "hver side på dette website"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "da": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "da": "hele websitet som ren tekst"
     }
   }
 }

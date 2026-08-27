@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "nb": "Sidens tekst under lisensen Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "nb": "Siden ble ikke funnet"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "nb": "Den adressen finnes ikke på lukotta.com. Nettstedskartet nevner hver side, og llms.txt inneholder hele nettstedet som ren tekst."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "nb": "Den adressen finnes ikke på lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "nb": "Hvor du kan se i stedet"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "nb": "Veiledninger"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "nb": "Forsiden"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "nb": "Forsiden"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "nb": "hva Lukotta er, og hvordan man installerer det"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "nb": "Om Lukotta"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "nb": "hvem som vedlikeholder Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "nb": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "nb": "hvordan man melder en feil"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "nb": "Nettstedskart"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "nb": "hver side på dette nettstedet"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "nb": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "nb": "hele nettstedet som ren tekst"
     }
   }
 }

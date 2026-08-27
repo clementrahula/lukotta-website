@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "sv": "Sidans text under licensen Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "sv": "Sidan hittades inte"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "sv": "Den adressen finns inte på lukotta.com. Webbplatskartan nämner varje sida, och llms.txt innehåller hela webbplatsen som ren text."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "sv": "Den adressen finns inte på lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "sv": "Var du kan titta i stället"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "sv": "Guider"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "sv": "Startsidan"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "sv": "Startsidan"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "sv": "vad Lukotta är och hur man installerar det"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "sv": "Om Lukotta"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "sv": "vem som underhåller Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "sv": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "sv": "hur man rapporterar ett fel"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "sv": "Webbplatskarta"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "sv": "varje sida på den här webbplatsen"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "sv": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "sv": "hela webbplatsen som ren text"
     }
   }
 }

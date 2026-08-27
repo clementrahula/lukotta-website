@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "nl": "Tekst van de pagina onder de licentie Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "nl": "Pagina niet gevonden"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "nl": "Dat adres bestaat niet op lukotta.com. De sitemap noemt elke pagina, en llms.txt bevat de hele site als platte tekst."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "nl": "Dat adres bestaat niet op lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "nl": "Waar je dan wel moet kijken"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "nl": "Handleidingen"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "nl": "Startpagina"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "nl": "Startpagina"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "nl": "wat Lukotta is en hoe je het installeert"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "nl": "Over Lukotta"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "nl": "wie Lukotta onderhoudt"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "nl": "Contact"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "nl": "hoe je een fout meldt"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "nl": "Sitemap"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "nl": "elke pagina op deze site"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "nl": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "nl": "de hele site als platte tekst"
     }
   }
 }

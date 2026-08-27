@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "nl",
+    "name": "Dutch",
+    "native": "Nederlands",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "over",
+      "title": "Over Lukotta",
+      "description": "Lukotta is een gratis, opensource macOS-app die BitLocker-, NTFS- en Linux-schijven opent. Van Clement Rahula, onder de GNU General Public License.",
+      "lead": "Lukotta opent schijven en schijfkopieën die macOS niet kan lezen. Het is gratis, opensource, en wordt door één persoon onderhouden.",
+      "sections": [
+        {
+          "heading": "Wat het is",
+          "paragraphs": [
+            "Lukotta is een macOS-programma. Het opent BitLocker-, NTFS-, LUKS-, ext4-, btrfs- en XFS-schijven, en schijfkopieën van virtuele machines in de formaten qcow2, VMDK, VDI, VHD en VHDX. macOS leest daar zelf geen van. NTFS kan het lezen maar niet beschrijven.",
+            "Het start op de achtergrond een kleine virtuele Linux-machine, opent de schijf daar, en geeft hem terug aan de Finder. Linux leest deze formaten al jaren. De schijf wordt niet omgezet of gekopieerd. Hij blijft zoals hij was, en de machine waar hij vandaan komt leest hem gewoon."
+          ]
+        },
+        {
+          "heading": "Wie het onderhoudt",
+          "paragraphs": [
+            "[Eén ontwikkelaar](https://rahula.dev). Er is geen bedrijf, geen investeerders en geen team."
+          ]
+        },
+        {
+          "heading": "Waarom het bestaat",
+          "paragraphs": [
+            "Sluit een BitLocker-schijf aan op een Mac en de Finder biedt aan hem te wissen. Hij vraagt niet om een wachtwoord, en niets op het scherm laat zien dat de schijf vergrendeld is en niet stuk.",
+            "Het leek onzinnig dat er tegenwoordig geen praktische manier is om een versleutelde USB-schijf te delen tussen meerdere besturingssystemen, dus moest er een oplossing komen.",
+            "In het Linux-ecosysteem bestonden al hulpmiddelen die deze schijven konden lezen. Lukotta brengt die samen met een Mac-venster."
+          ]
+        },
+        {
+          "heading": "Wat het kost",
+          "paragraphs": [
+            "Niets. Er is geen betaalde versie, geen abonnement, geen proefperiode en geen account.",
+            "Lukotta is vrije software onder de GNU General Public License, versie 3 of later. De broncode is gepubliceerd. Iedereen mag hem lezen, wijzigen en onder dezelfde licentie doorgeven."
+          ]
+        },
+        {
+          "heading": "Er verlaat niets je Mac",
+          "paragraphs": [
+            "Lukotta heeft geen analyse, geen telemetrie en geen crashrapportage.",
+            "Het doet één soort netwerkverzoek: het kijkt of er een nieuwe versie is en haalt die op als je dat wilt. Wachtwoorden en herstelsleutels worden gebruikt om de schijf te ontgrendelen en worden niet bewaard, verstuurd of gelogd."
+          ]
+        },
+        {
+          "heading": "Broncode",
+          "paragraphs": [
+            "De broncode van het programma staat op github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact",
+      "description": "Hoe je een fout in Lukotta meldt, een vraag stelt of een beveiligingsprobleem meldt. Issues op GitHub worden het eerst gelezen.",
+      "lead": "Fouten gaan naar GitHub. Beveiligingsproblemen gaan naar het adres in SECURITY.md. Al het andere gaat per e-mail.",
+      "sections": [
+        {
+          "heading": "Een fout, of een schijf die niet opengaat",
+          "paragraphs": [
+            "Open een issue op github.com/clementrahula/lukotta/issues. Issues worden het eerst gelezen, en ze zijn openbaar, dus de volgende met dezelfde schijf vindt het antwoord.",
+            "Zeg wat voor schijf het is, wat Lukotta liet zien, en wat je verwachtte. Citeer een foutmelding letterlijk. Plak nooit een wachtwoord of een herstelsleutel in een issue."
+          ]
+        },
+        {
+          "heading": "Een beveiligingsprobleem",
+          "paragraphs": [
+            "Open geen openbaar issue. SECURITY.md in de repository zegt waar het heen moet en wat je kunt verwachten."
+          ]
+        },
+        {
+          "heading": "Al het andere",
+          "paragraphs": [
+            "Mail contact_web@lukotta.com met vragen over de app."
+          ]
+        },
+        {
+          "heading": "Hoe lang een antwoord duurt",
+          "paragraphs": [
+            "Lukotta wordt door één persoon onderhouden. Er is geen helpdesk en geen beloofde reactietijd. Sommige berichten duren, en sommige blijven onbeantwoord.",
+            "Een issue op GitHub gaat meestal sneller, omdat iemand anders eerder kan antwoorden."
+          ]
+        }
+      ]
+    }
+  }
+}
