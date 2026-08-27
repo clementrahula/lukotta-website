@@ -14,14 +14,14 @@
     "about": {
       "slug": "tentang",
       "title": "Tentang Lukotta",
-      "description": "Lukotta adalah aplikasi macOS gratis dan sumber terbuka yang membuka drive BitLocker, NTFS dan Linux, di bawah GNU General Public License.",
+      "description": "Lukotta adalah aplikasi macOS gratis, sumber terbuka, untuk drive BitLocker, NTFS dan Linux. Dipelihara satu pengembang, di bawah GNU General Public License.",
       "lead": "Lukotta membuka drive dan image disk yang tidak bisa dibaca macOS. Gratis, sumber terbuka, dan dirawat oleh satu orang.",
       "sections": [
         {
           "heading": "Apa ini",
           "paragraphs": [
             "Lukotta adalah aplikasi macOS. Ia membuka drive BitLocker, NTFS, LUKS, ext4, btrfs dan XFS, serta image disk mesin virtual dalam format qcow2, VMDK, VDI, VHD dan VHDX. macOS tidak membaca satu pun dari itu sendiri. NTFS bisa dibacanya, tapi tidak ditulisi.",
-            "Ia menjalankan sistem Linux kecil di latar belakang, membuka drive di sana, dan menyerahkannya kembali ke Finder. Linux sudah bertahun-tahun membaca format ini. Drive tidak diubah dan tidak disalin. Ia tetap seperti semula, dan mesin asalnya tetap membacanya."
+            "Ia menjalankan mesin virtual Linux kecil di latar belakang, membuka drive di sana, dan menyerahkannya kembali ke Finder. Linux sudah bertahun-tahun membaca format ini. Drive tidak diubah dan tidak disalin. Ia tetap seperti semula, dan mesin asalnya tetap membacanya."
           ]
         },
         {
@@ -48,7 +48,7 @@
         {
           "heading": "Tidak ada yang keluar dari Mac Anda",
           "paragraphs": [
-            "Lukotta tidak punya analitik, tidak punya telemetri dan tidak punya laporan kerusakan.",
+            "Lukotta tidak punya analitik, tidak punya telemetri dan tidak punya pelaporan crash.",
             "Ia membuat satu jenis permintaan jaringan: memeriksa apakah ada versi baru dan mengunduhnya jika Anda minta. Kata sandi dan kunci pemulihan dipakai untuk membuka drive dan tidak disimpan, dikirim atau dicatat."
           ]
         },
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontak",
       "title": "Kontak",
-      "description": "Cara melaporkan kesalahan di Lukotta, mengajukan pertanyaan, atau melaporkan masalah keamanan. Issue di GitHub dibaca lebih dulu.",
+      "description": "Cara melaporkan kesalahan di Lukotta, mengajukan pertanyaan, atau melaporkan masalah keamanan. Issue di GitHub dibaca lebih dulu dan paling cepat dijawab.",
       "lead": "Kesalahan pergi ke GitHub. Masalah keamanan pergi ke alamat di SECURITY.md. Selebihnya lewat surel.",
       "sections": [
         {
@@ -76,7 +76,7 @@
         {
           "heading": "Masalah keamanan",
           "paragraphs": [
-            "Jangan buka issue terbuka. SECURITY.md di repositori menyebutkan ke mana harus dikirim dan apa yang bisa diharapkan."
+            "Jangan buka issue publik. SECURITY.md di repositori menyebutkan ke mana harus dikirim dan apa yang bisa diharapkan."
           ]
         },
         {

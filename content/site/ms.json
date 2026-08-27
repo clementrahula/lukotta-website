@@ -14,14 +14,14 @@
     "about": {
       "slug": "perihal",
       "title": "Perihal Lukotta",
-      "description": "Lukotta ialah aplikasi macOS percuma dan sumber terbuka yang membuka pemacu BitLocker, NTFS dan Linux, di bawah GNU General Public License.",
+      "description": "Lukotta ialah aplikasi macOS percuma dan sumber terbuka untuk pemacu BitLocker, NTFS dan Linux. Diselenggara seorang pembangun, GNU General Public License.",
       "lead": "Lukotta membuka pemacu dan imej cakera yang tidak dapat dibaca oleh macOS. Ia percuma, sumber terbuka, dan diselenggara oleh seorang sahaja.",
       "sections": [
         {
           "heading": "Apa ini",
           "paragraphs": [
             "Lukotta ialah aplikasi macOS. Ia membuka pemacu BitLocker, NTFS, LUKS, ext4, btrfs dan XFS, serta imej cakera mesin maya dalam format qcow2, VMDK, VDI, VHD dan VHDX. macOS tidak membaca satu pun daripadanya sendiri. NTFS dibacanya, tetapi tidak ditulisnya.",
-            "Ia menjalankan sistem Linux kecil di latar belakang, membuka pemacu di sana, dan menyerahkannya semula kepada Finder. Linux telah membaca format ini bertahun-tahun. Pemacu tidak ditukar dan tidak disalin. Ia kekal seperti asal, dan mesin asalnya masih membacanya."
+            "Ia menjalankan mesin maya Linux kecil di latar belakang, membuka pemacu di sana, dan menyerahkannya semula kepada Finder. Linux telah membaca format ini bertahun-tahun. Pemacu tidak ditukar dan tidak disalin. Ia kekal seperti asal, dan mesin asalnya masih membacanya."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "hubungi",
       "title": "Hubungi",
-      "description": "Cara melaporkan ralat dalam Lukotta, bertanya soalan, atau melaporkan masalah keselamatan. Issue di GitHub dibaca dahulu.",
+      "description": "Cara melaporkan ralat dalam Lukotta, bertanya soalan, atau melaporkan masalah keselamatan. Issue di GitHub dibaca dahulu dan biasanya dijawab paling cepat.",
       "lead": "Ralat pergi ke GitHub. Masalah keselamatan pergi ke alamat dalam SECURITY.md. Selain itu melalui e-mel.",
       "sections": [
         {
@@ -76,7 +76,7 @@
         {
           "heading": "Masalah keselamatan",
           "paragraphs": [
-            "Jangan buka issue umum. SECURITY.md dalam repositori menyatakan ke mana perlu dihantar dan apa yang boleh dijangka."
+            "Jangan buka issue yang terbuka kepada umum. SECURITY.md dalam repositori menyatakan ke mana perlu dihantar dan apa yang boleh dijangka."
           ]
         },
         {

@@ -180,7 +180,7 @@
     },
     "features.lead": {
       "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "vi": "Lukotta mở những ổ đĩa và tệp ảnh đĩa mà macOS từ chối đọc, rồi giao chúng cho Finder như những phân vùng bình thường."
+      "vi": "Lukotta mở những ổ đĩa và tệp ảnh đĩa mà macOS từ chối đọc, rồi giao chúng cho Finder như những ổ đĩa bình thường."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -264,7 +264,7 @@
     },
     "formats.vmdk.note": {
       "en": "VMware, flat and sparse",
-      "vi": "VMware, phẳng và thưa"
+      "vi": "VMware, flat và sparse"
     },
     "formats.vmdkStream.note": {
       "en": "What an OVA carries. Written in one pass, so it cannot be changed in place",
@@ -360,7 +360,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "vi": "macOS không đọc được hệ tệp nào của Linux. Lukotta mở ext2, ext3, ext4, btrfs và XFS, không mã hoá hoặc nằm trong mã hoá LUKS. Ổ đĩa bố trí bằng LVM mở tất cả các ổ đĩa của nó cùng lúc."
+      "vi": "macOS không đọc được hệ tệp nào của Linux. Lukotta mở ext2, ext3, ext4, btrfs và XFS, không mã hoá hoặc nằm trong mã hoá LUKS. Ổ đĩa bố trí bằng LVM mở tất cả các phân vùng của nó cùng lúc."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",

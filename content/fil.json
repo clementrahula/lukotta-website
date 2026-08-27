@@ -148,7 +148,7 @@
     },
     "how.lead": {
       "en": "macOS cannot read BitLocker or Linux filesystems. Linux can. Lukotta starts a small Linux virtual machine, unlocks the drive inside it, and hands the drive back to Finder.",
-      "fil": "Hindi mabasa ng macOS ang BitLocker at ang mga file system ng Linux. Kaya ito ng Linux. Nagpapatakbo ang Lukotta ng maliit na Linux virtual machine, binubuksan doon ang drive, at ibinibigay ang drive pabalik sa Finder."
+      "fil": "Hindi mabasa ng macOS ang BitLocker at ang mga file system ng Linux. Kaya ito ng Linux. Nagpapatakbo ang Lukotta ng maliit na Linux virtual machine, ina-unlock doon ang drive, at ibinibigay ang drive pabalik sa Finder."
     },
     "how.1.title": {
       "en": "Plug in the drive",
@@ -232,15 +232,15 @@
     },
     "formats.bitlocker.note": {
       "en": "Unlocked with the volume password or a 48-digit recovery key",
-      "fil": "Binubuksan gamit ang password ng volume o 48-digit na recovery key"
+      "fil": "Ina-unlock gamit ang password ng volume o 48-digit na recovery key"
     },
     "formats.luks.note": {
       "en": "Unlocked with the passphrase",
-      "fil": "Binubuksan gamit ang passphrase"
+      "fil": "Ina-unlock gamit ang passphrase"
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "fil": "Sabay na bumubukas ang ilang volume sa iisang drive"
+      "fil": "Sabay na naa-unlock ang ilang volume sa iisang drive"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
@@ -332,7 +332,7 @@
     },
     "faq.1.a": {
       "en": "Yes, Lukotta is free to download and free to use. There is no paid version, no subscription, no trial that runs out and no account to make.",
-      "fil": "Oo, libre ang Lukotta na i-download at libreng gamitin. Walang bayad na bersyon, walang subscription, walang trial na nag-e-expire at walang account na gagawin."
+      "fil": "Oo, libre ang pag-download at paggamit ng Lukotta. Walang bayad na bersyon, walang subscription, walang trial na nag-e-expire at walang account na gagawin."
     },
     "faq.1.a2": {
       "en": "It is also free software, under the GNU General Public License, version 3 or later. The source is public: you can read it, build it yourself, change it, and pass on what you change.",
@@ -360,7 +360,7 @@
     },
     "faq.4.a": {
       "en": "macOS reads none of the Linux filesystems. Lukotta opens ext2, ext3, ext4, btrfs and XFS, plain or inside LUKS encryption. A drive laid out with LVM opens all its volumes together.",
-      "fil": "Wala ni isang file system ng Linux ang nababasa ng macOS. Binubuksan ng Lukotta ang ext2, ext3, ext4, btrfs at XFS, nang walang encryption o nasa loob ng pag-encrypt na LUKS. Ang drive na nakaayos sa LVM ay binubuksan ang lahat ng volume nito nang sabay."
+      "fil": "Wala ni isang file system ng Linux ang nababasa ng macOS. Binubuksan ng Lukotta ang ext2, ext3, ext4, btrfs at XFS, hindi naka-encrypt o nasa loob ng LUKS encryption. Sa drive na nakaayos gamit ang LVM, sabay-sabay na bumubukas ang lahat ng volume."
     },
     "faq.5.q": {
       "en": "Can you open a virtual machine disk without starting the machine?",
@@ -368,7 +368,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "fil": "Oo. Direktang binubuksan ng Lukotta ang image na qcow2, VMDK, VDI, VHD o VHDX at kinokopya ang mga file mula rito, o papasok dito. Eksperimental ang pagsusulat sa VMDK, VDI at VHD; read-only ang pagbubukas ng VHDX at VMDK stream-optimized."
+      "fil": "Oo. Direktang binubuksan ng Lukotta ang image na qcow2, VMDK, VDI, VHD o VHDX at kinokopya ang mga file mula rito, o papasok dito. Eksperimental ang pagsusulat sa VMDK, VDI at VHD; read-only ang pagbubukas ng VHDX at stream-optimized VMDK."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

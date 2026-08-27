@@ -25,7 +25,7 @@
         {
           "heading": "BitLocker là gì",
           "paragraphs": [
-            "BitLocker là phần mã hoá dựng sẵn trong Windows. Khi nó bật, mọi thứ ghi lên ổ đĩa đều bị xáo trộn, và không đọc được nội dung nếu không có mật khẩu. Windows dùng nó cho ổ đĩa của chính nó, và cho ổ USB cùng thẻ nhớ, ở đó nó tên là BitLocker To Go.",
+            "BitLocker là tính năng mã hoá tích hợp trong Windows. Khi nó bật, mọi thứ ghi lên ổ đĩa đều bị xáo trộn, và không đọc được nội dung nếu không có mật khẩu. Windows dùng nó cho ổ đĩa của chính nó, và cho ổ USB cùng thẻ nhớ, ở đó nó tên là BitLocker To Go.",
             "Cả hai trường hợp đều là cùng một cách mã hoá. Nếu ổ đĩa thất lạc, người nhặt được không đọc nổi thứ gì trong đó."
           ]
         },
@@ -55,7 +55,7 @@
         {
           "heading": "Nếu bạn không có mật khẩu",
           "paragraphs": [
-            "Khi ổ đĩa được mã hoá, Windows đã tạo ra một khoá khôi phục và hỏi cất nó ở đâu. Khoá đó mở ổ đĩa thay cho mật khẩu. Nó gồm 48 chữ số, chia thành tám nhóm sáu chữ:",
+            "Khi ổ đĩa được mã hoá, Windows đã tạo ra một khoá khôi phục và hỏi cất nó ở đâu. Khoá đó mở ổ đĩa thay cho mật khẩu. Nó gồm 48 chữ số, chia thành tám nhóm sáu chữ số:",
             "    123456-789012-345678-901234-567890-123456-789012-345678",
             "Nó có thể nằm trong một tài khoản Microsoft, trong một tệp văn bản, hoặc in ra giấy. Dán nó vào chỗ đáng lẽ nhập mật khẩu.",
             "Không có mật khẩu hay khoá đó thì không chương trình nào mở nổi ổ đĩa, trên bất kỳ máy nào."
@@ -65,7 +65,7 @@
           "heading": "Những ổ đĩa sẽ không mở được trên Mac",
           "paragraphs": [
             "Một số máy Windows không bao giờ hỏi mật khẩu. Chúng giữ khoá trong một con chip trên bo mạch chủ, gọi là TPM, và tự mở khoá ổ đĩa khi máy đó khởi động.",
-            "Ổ đĩa đặt kiểu đó chỉ chạy được trong chính chiếc máy nó ra đi, vì khoá không bao giờ rời khỏi máy ấy. Không Mac nào mở được nó, và máy Windows khác cũng vậy. Nếu lúc mã hoá ổ đĩa có lưu một khoá khôi phục thì khoá ấy vẫn mở được."
+            "Ổ đĩa đặt kiểu đó chỉ chạy được trong chính chiếc máy mà nó được tháo ra, vì khoá không bao giờ rời khỏi máy ấy. Không Mac nào mở được nó, và máy Windows khác cũng vậy. Nếu lúc mã hoá ổ đĩa có lưu một khoá khôi phục thì khoá ấy vẫn mở được."
           ]
         },
         {
@@ -108,7 +108,7 @@
           "heading": "Lukotta đọc được những gì",
           "paragraphs": [
             "ext2, ext3 và ext4, bao trùm phần lớn các hệ Linux. btrfs, mặc định trên Fedora và openSUSE. XFS, phổ biến trên máy chủ.",
-            "Mã hoá hay không cũng được. Nếu ổ đĩa được đặt với LVM, thứ chia một ổ đĩa vật lý thành nhiều phân vùng, thì tất cả mở ra cùng lúc chứ không phải từng cái một."
+            "Mã hoá hay không cũng được. Nếu ổ đĩa được thiết lập bằng LVM, thứ chia một ổ đĩa vật lý thành nhiều phân vùng, thì tất cả mở ra cùng lúc chứ không phải từng cái một."
           ]
         },
         {
@@ -123,15 +123,15 @@
         {
           "heading": "Nếu nó hỏi cụm mật khẩu",
           "paragraphs": [
-            "LUKS là cách Linux mã hoá cả một ổ đĩa. Nếu chiếc máy mà ổ đĩa này ra đi hỏi cụm mật khẩu ngay đầu lúc khởi động, trước cả màn hình đăng nhập, thì đó là LUKS, và đó chính là cụm mật khẩu cần nhập ở đây.",
+            "LUKS là cách Linux mã hoá cả một ổ đĩa. Nếu chiếc máy mà ổ đĩa này được tháo ra hỏi cụm mật khẩu ngay đầu lúc khởi động, trước cả màn hình đăng nhập, thì đó là LUKS, và đó chính là cụm mật khẩu cần nhập ở đây.",
             "Nó tách biệt với mật khẩu đăng nhập, dù nhiều người đặt cả hai giống nhau."
           ]
         },
         {
           "heading": "Những ổ đĩa sẽ không mở được",
           "paragraphs": [
-            "Một ổ đĩa LUKS có thể được đặt sao cho phần đầu của nó nằm ở chỗ khác, trên một đĩa khác hoặc trên một thẻ USB. Phần đầu là phần mô tả cách mã hoá. Không có nó thì trên ổ đĩa chẳng còn gì để mở khoá.",
-            "Các bản Ubuntu mới hơn cũng có thể buộc khoá vào một con chip bên trong máy, y như cách BitLocker làm. Những ổ đĩa đó chỉ mở được trong chính chiếc máy chúng ra đi."
+            "Một ổ đĩa LUKS có thể được thiết lập sao cho phần đầu của nó nằm ở chỗ khác, trên một đĩa khác hoặc trên một ổ USB. Phần đầu là phần mô tả cách mã hoá. Không có nó thì trên ổ đĩa chẳng còn gì để mở khoá.",
+            "Các bản Ubuntu mới hơn cũng có thể buộc khoá vào một con chip bên trong máy, y như cách BitLocker làm. Những ổ đĩa đó chỉ mở được trong chính chiếc máy mà chúng được tháo ra."
           ]
         }
       ]
@@ -146,7 +146,7 @@
           "heading": "NTFS là gì",
           "paragraphs": [
             "NTFS là hệ thống tệp Windows dùng, cho cả ổ đĩa của chính nó lẫn các ổ đĩa ngoài được định dạng trên máy Windows. Một ổ USB định dạng trên máy Windows thường là NTFS.",
-            "Hệ phổ biến còn lại là exFAT, thứ mà phần lớn thẻ nhớ và nhiều thẻ USB dùng, vì cả Windows lẫn macOS đều ghi được lên nó. Nếu ổ đĩa của bạn là exFAT thì macOS đã xoay xở được rồi và không điều nào ở đây liên quan tới bạn. Để kiểm tra, hãy bấm vào ổ đĩa trong Finder rồi chọn Tệp, sau đó Lấy thông tin. Dòng Định dạng sẽ cho bạn biết."
+            "Hệ phổ biến còn lại là exFAT, thứ mà phần lớn thẻ nhớ và nhiều ổ USB dùng, vì cả Windows lẫn macOS đều ghi được lên nó. Nếu ổ đĩa của bạn là exFAT thì macOS đã xoay xở được rồi và không điều nào ở đây liên quan tới bạn. Để kiểm tra, hãy bấm vào ổ đĩa trong Finder rồi chọn Tệp, sau đó Lấy thông tin. Dòng Định dạng sẽ cho bạn biết."
           ]
         },
         {
@@ -198,7 +198,7 @@
           "heading": "Ảnh đĩa là gì",
           "paragraphs": [
             "Khi bạn chạy một máy ảo, ổ cứng của máy đó là một tệp bình thường duy nhất nằm trên chiếc Mac của bạn. Hệ điều hành của nó, các chương trình của nó và mọi tài liệu bên trong nó đều nằm trong đúng một tệp ấy.",
-            "Mỗi chương trình ghi tệp đó theo cách riêng. VMware dùng VMDK, VirtualBox dùng VDI, Hyper-V dùng VHD và VHDX, còn QEMU và UTM dùng qcow2. Ảnh thô, thường kết thúc bằng .img, là bản sao thẳng của một đĩa mà không có gì bọc quanh."
+            "Mỗi chương trình ghi tệp đó theo cách riêng. VMware dùng VMDK, VirtualBox dùng VDI, Hyper-V dùng VHD và VHDX, còn QEMU và UTM dùng qcow2. Ảnh thô, thường kết thúc bằng .img, là bản sao trực tiếp của một đĩa mà không có lớp bao bọc nào."
           ]
         },
         {
@@ -245,7 +245,7 @@
           "heading": "Chép tệp vào trong ảnh đĩa",
           "paragraphs": [
             "qcow2 được ghi theo cách thông thường và ghi vào nó thì an toàn.",
-            "VMDK, VDI và VHD ghi được, nhưng đó là phần việc mới và chưa dùng đủ lâu để giao cho nó thứ mà bạn không kham nổi khi mất. Hãy chép tệp ra rồi làm việc trên bản chép, hoặc mở nó ở chế độ chỉ đọc và lấy tệp ra thôi.",
+            "VMDK, VDI và VHD ghi được, nhưng hỗ trợ ghi còn mới và chưa được dùng đủ lâu để giao cho nó dữ liệu mà bạn không thể chấp nhận mất. Hãy chép tệp ra rồi làm việc trên bản chép, hoặc mở nó ở chế độ chỉ đọc và lấy tệp ra thôi.",
             "VHDX chỉ mở để đọc, loại VMDK nằm trong tệp OVA cũng vậy. Loại đó được ghi một mạch từ đầu đến cuối và sau đó không sửa tại chỗ được nữa."
           ]
         },
@@ -253,7 +253,7 @@
           "heading": "Những tệp sẽ không mở được",
           "paragraphs": [
             "Một ảnh đĩa chỉ mở được nếu tự nó đã đầy đủ.",
-            "Một chuỗi ảnh chụp của VMware rải trạng thái hiện thời của máy ảo ra một tệp gốc và một loạt tệp nhỏ hơn ghi lại những gì đổi sau đó. Đĩa chia nhỏ bẻ một ảnh đĩa thành nhiều mảnh. Đĩa sai biệt của Hyper-V chỉ chứa phần khác so với một tệp khác.",
+            "Một chuỗi ảnh chụp của VMware phân bố trạng thái hiện thời của máy ảo giữa một tệp gốc và một loạt tệp nhỏ hơn ghi lại những gì đổi sau đó. Đĩa chia nhỏ chia một ảnh đĩa thành nhiều phần. Đĩa sai biệt của Hyper-V chỉ chứa phần khác so với một tệp khác.",
             "Trong từng trường hợp ấy, tệp bạn đang có là một phần của cả bộ, còn Lukotta thì mở mỗi lần một tệp."
           ]
         }

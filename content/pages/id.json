@@ -32,15 +32,15 @@
         {
           "heading": "Apa yang terjadi saat Anda mencolokkannya ke Mac",
           "paragraphs": [
-            "Finder bilang disk tidak bisa dibaca dan menawarkan untuk menyiapkan atau menghapusnya. Ia tidak meminta kata sandi, dan tidak ada apa pun di layar yang memberi tahu bahwa drive itu terkunci, bukan rusak.",
+            "Finder bilang disk tidak bisa dibaca dan menawarkan untuk menginisialisasi atau menghapusnya. Ia tidak meminta kata sandi, dan tidak ada apa pun di layar yang memberi tahu bahwa drive itu terkunci, bukan rusak.",
             "Drive itu tidak rusak. macOS punya enkripsinya sendiri, FileVault, dan sama sekali tidak mengerti BitLocker. Ia membaca awal drive, menemukan susunan yang tidak dikenalinya, dan memperlakukan disk itu seperti belum diformat, sehingga satu-satunya yang bisa ditawarkannya adalah menghapus."
           ]
         },
         {
           "heading": "Bagaimana Lukotta membukanya",
           "paragraphs": [
-            "Linux sudah bertahun-tahun bisa membaca BitLocker, dan itulah yang dipakai Lukotta. Ia menjalankan sistem Linux kecil di latar belakang, menyerahkan drive itu kepadanya, lalu membuka kuncinya di sana dengan kata sandi yang Anda ketik. Drive yang terbuka kembali ke Finder, tempat ia muncul di bawah Lokasi bersama disk Anda yang lain.",
-            "Drive itu tidak diubah dan tidak disalin. Ia tetap drive BitLocker, tetap terenkripsi, dan Windows tetap membacanya."
+            "Linux sudah bertahun-tahun bisa membaca BitLocker, dan itulah yang dipakai Lukotta. Ia menjalankan sistem Linux kecil di latar belakang, menyerahkan drive itu kepadanya, lalu membuka kuncinya di sana dengan kata sandi yang Anda ketik. Drive yang sudah dibuka kuncinya kembali ke Finder, tempat ia muncul di bawah Lokasi bersama disk Anda yang lain.",
+            "Drive itu tidak dikonversi atau disalin. Ia tetap drive BitLocker, tetap terenkripsi, dan Windows tetap membacanya."
           ]
         },
         {
@@ -64,7 +64,7 @@
         {
           "heading": "Drive yang tidak akan terbuka di Mac",
           "paragraphs": [
-            "Sebagian komputer Windows tidak pernah meminta kata sandi. Mereka menyimpan kuncinya di sebuah cip pada papan induk, yang disebut TPM, dan membuka drive itu sendiri ketika mesin tersebut menyala.",
+            "Sebagian komputer Windows tidak pernah meminta kata sandi. Kuncinya disimpan di sebuah cip pada papan induk, yang disebut TPM, dan drive dibuka kuncinya secara otomatis ketika komputer itu menyala.",
             "Drive yang disiapkan begitu hanya bekerja di komputer asalnya, karena kuncinya tidak pernah keluar dari sana. Tidak ada Mac yang bisa membukanya, dan komputer Windows lain juga tidak. Kalau ada kunci pemulihan yang disimpan waktu drive itu dienkripsi, kunci itu masih membukanya."
           ]
         },
@@ -72,7 +72,7 @@
           "heading": "Menyalin berkas ke drive",
           "paragraphs": [
             "Drive BitLocker terbuka untuk dibaca maupun ditulis, jadi sebuah Mac bisa menambahkan berkas ke cadangan dari Windows, bukan cuma mengambil darinya.",
-            "Lukotta juga bisa membuka drive itu hanya-baca, yang layak dilakukan ketika Anda menyelamatkan berkas dari drive yang mulai bermasalah. Waktu itu tidak ada yang bisa ditulis ke sana."
+            "Lukotta juga bisa membuka drive itu dalam mode baca-saja, yang layak dilakukan ketika Anda menyelamatkan berkas dari drive yang mulai bermasalah. Dalam mode itu tidak ada yang bisa ditulis ke sana."
           ]
         }
       ]
@@ -139,27 +139,27 @@
     "ntfs": {
       "slug": "tulis-ke-drive-ntfs-di-mac",
       "title": "Menulis ke drive NTFS di Mac",
-      "description": "macOS membuka drive NTFS hanya-baca, jadi file bisa keluar tapi tidak bisa masuk. Ini sebabnya, dan cara menulis ke drive NTFS di Mac.",
+      "description": "macOS membuka drive NTFS dalam mode baca-saja, jadi file bisa keluar tapi tidak bisa masuk. Ini sebabnya, dan cara menulis ke drive NTFS di Mac.",
       "lead": "macOS mengizinkan Anda menyalin berkas dari drive NTFS tapi tidak ke dalamnya. Ini sebabnya, dan apa yang bisa dilakukan soal itu.",
       "sections": [
         {
           "heading": "Apa itu NTFS",
           "paragraphs": [
             "NTFS adalah sistem berkas yang dipakai Windows, baik untuk drive-nya sendiri maupun untuk drive luar yang diformat di komputer Windows. Drive USB yang diformat di mesin Windows biasanya NTFS.",
-            "Yang umum satunya adalah exFAT, dipakai oleh kebanyakan kartu memori dan banyak flashdisk karena Windows dan macOS sama-sama bisa menulis ke sana. Kalau drive Anda exFAT, macOS sudah bisa menanganinya dan tidak satu pun dari ini berlaku. Untuk memeriksanya, klik drive itu di Finder lalu pilih File, kemudian Dapatkan Info. Baris Format memberi tahu Anda."
+            "Format umum lainnya adalah exFAT, dipakai oleh kebanyakan kartu memori dan banyak flashdisk karena Windows dan macOS sama-sama bisa menulis ke sana. Kalau drive Anda exFAT, macOS sudah bisa menanganinya dan tidak satu pun dari ini berlaku. Untuk memeriksanya, klik drive itu di Finder lalu pilih File, kemudian Dapatkan Info. Baris Format memberi tahu Anda."
           ]
         },
         {
           "heading": "Apa yang terjadi saat Anda mencolokkannya ke Mac",
           "paragraphs": [
-            "Drive muncul di Finder dan Anda bisa melihat berkasnya. Menyalin berkas darinya berjalan seperti biasa. Menyalin apa pun ke dalamnya tidak: Finder menolak, dan drive itu bertingkah seolah terkunci.",
-            "macOS membuka drive NTFS hanya-baca. Ia sudah bertahun-tahun bisa menulis NTFS, tapi itu dimatikan dan tidak ada cara resmi untuk menyalakannya. Menulis NTFS lebih sulit daripada membacanya, dan satu kesalahan bisa meninggalkan drive yang setelahnya ditolak Windows."
+            "Drive muncul di Finder dan Anda bisa melihat berkasnya. Menyalin berkas darinya berjalan seperti biasa. Namun, menyalin apa pun ke dalamnya tidak bisa: Finder menolaknya, dan drive itu bertingkah seolah terkunci.",
+            "macOS membuka drive NTFS dalam mode baca-saja. Ia sudah bertahun-tahun bisa menulis NTFS, tapi itu dimatikan dan tidak ada cara resmi untuk menyalakannya. Menulis NTFS lebih sulit daripada membacanya, dan satu kesalahan bisa membuat drive kemudian tidak dapat dibuka oleh Windows."
           ]
         },
         {
           "heading": "Bagaimana Lukotta menulis ke sana",
           "paragraphs": [
-            "Lukotta membuka drive itu dengan penggerak NTFS dari Linux, yang bisa menulis dan yang dipakai mesin Linux setiap hari. Drive itu lalu diserahkan ke Finder, jadi menyalin berkas ke sana berjalan seperti penyalinan lainnya.",
+            "Lukotta membuka drive itu dengan driver NTFS dari Linux, yang bisa menulis dan yang dipakai mesin Linux setiap hari. Drive itu lalu diserahkan ke Finder, jadi menyalin berkas ke sana berjalan seperti penyalinan lainnya.",
             "Drive itu tetap NTFS, dan Windows membacanya setelah itu."
           ]
         },
@@ -174,16 +174,16 @@
         },
         {
           "paragraphs": [
-            "Drive NTFS biasanya tidak berkata sandi, jadi tidak ada yang perlu diketik, kecuali BitLocker juga dinyalakan di sana."
+            "Drive NTFS biasanya tidak memiliki kata sandi, jadi tidak ada yang perlu diketik, kecuali BitLocker juga dinyalakan di sana."
           ]
         },
         {
           "heading": "Drive yang tidak ditutup Windows dengan benar",
           "paragraphs": [
-            "Windows menandai sebuah drive sebagai tidak ditutup benar ketika penulisan terputus, biasanya karena drive itu dicabut atau mesinnya kehilangan listrik di tengah jalan. Tanda itu memperingatkan komputer berikutnya yang membukanya bahwa drive itu mungkin tertulis separuh dan sebaiknya diperiksa.",
-            "Mulai cepat meninggalkan tanda yang sama bahkan ketika tidak ada yang salah. Di Windows 10 dan 11 ia menyala sejak awal. Alih-alih mematikan mesin, ia membuatnya hibernasi, yang membuat drive itu tampak seolah masih dipakai.",
+            "Windows menandai sebuah drive sebagai tidak ditutup benar ketika penulisan terputus, biasanya karena drive itu dicabut atau mesinnya kehilangan listrik di tengah jalan. Tanda itu memperingatkan komputer berikutnya yang membukanya bahwa drive itu mungkin baru tertulis sebagian dan sebaiknya diperiksa.",
+            "Startup cepat meninggalkan tanda yang sama bahkan ketika tidak ada yang salah. Di Windows 10 dan 11 fitur ini aktif secara default. Alih-alih mematikan mesin, fitur ini membuatnya hibernasi, sehingga drive itu tampak seolah masih dipakai.",
             "macOS menolak drive dalam kedua keadaan itu dan tidak memberi alasan. Lukotta membukanya.",
-            "Kalau mesin Windows itu masih ada pada Anda, cara yang lebih rapi adalah mencolokkan drive itu kembali ke sana dan mematikan mesin tersebut dengan benar: tahan Shift sambil mengeklik Matikan, itu melewati mulai cepat."
+            "Kalau mesin Windows itu masih ada pada Anda, cara yang lebih rapi adalah mencolokkan drive itu kembali ke sana dan mematikan mesin tersebut dengan benar: tahan Shift sambil mengeklik Matikan; tindakan ini melewati startup cepat."
           ]
         }
       ]
@@ -198,7 +198,7 @@
           "heading": "Apa itu image disk",
           "paragraphs": [
             "Ketika Anda menjalankan mesin virtual, hard disk mesin itu adalah satu berkas biasa yang ada di Mac Anda. Sistem operasinya, programnya, dan setiap dokumen di dalamnya semua ada di dalam satu berkas itu.",
-            "Setiap program menulis berkas itu dengan caranya sendiri. VMware memakai VMDK, VirtualBox memakai VDI, Hyper-V memakai VHD dan VHDX, sedangkan QEMU dan UTM memakai qcow2. Image mentah, yang biasanya berakhiran .img, adalah salinan lurus sebuah disk tanpa apa pun yang membungkusnya."
+            "Setiap program menulis berkas itu dengan caranya sendiri. VMware memakai VMDK, VirtualBox memakai VDI, Hyper-V memakai VHD dan VHDX, sedangkan QEMU dan UTM memakai qcow2. Image mentah, yang biasanya berakhiran .img, adalah salinan langsung sebuah disk tanpa apa pun yang membungkusnya."
           ]
         },
         {
@@ -229,7 +229,7 @@
         {
           "heading": "Membuka salah satunya",
           "list": [
-            "Pilih File, lalu Buka Image Disk, dan cari berkasnya.",
+            "Pilih File, lalu Buka Image Disk, dan pilih berkasnya.",
             "Kalau disk di dalamnya terenkripsi, ketik kata sandi atau frasa sandinya.",
             "Isinya muncul di Finder, di bawah Lokasi."
           ],
@@ -245,16 +245,16 @@
           "heading": "Menyalin berkas ke dalam image",
           "paragraphs": [
             "qcow2 ditulis dengan cara biasa dan aman untuk ditulisi.",
-            "VMDK, VDI dan VHD bisa ditulisi, tapi itu pekerjaan baru dan belum cukup lama dipakai untuk dipercayai dengan sesuatu yang tidak sanggup Anda kehilangan. Salin berkasnya dan kerjakan salinannya, atau buka hanya-baca dan ambil saja berkasnya keluar.",
-            "VHDX terbuka hanya-baca, begitu pula jenis VMDK yang ada di dalam berkas OVA. Jenis itu ditulis sekali jalan dan sesudahnya tidak bisa diubah di tempatnya."
+            "VMDK, VDI dan VHD bisa ditulisi, tetapi dukungan penulisannya masih baru dan belum cukup lama digunakan, sehingga belum layak dipercaya untuk data yang tidak boleh sampai hilang. Salin berkasnya dan kerjakan salinannya, atau buka dalam mode baca-saja dan hanya keluarkan berkas dari dalamnya.",
+            "VHDX dibuka dalam mode baca-saja, begitu pula jenis VMDK yang ada di dalam berkas OVA. Jenis itu ditulis sekali jalan dan sesudahnya tidak bisa diubah di tempatnya."
           ]
         },
         {
           "heading": "Berkas yang tidak akan terbuka",
           "paragraphs": [
-            "Sebuah image hanya terbuka kalau ia lengkap dengan sendirinya.",
-            "Rantai snapshot VMware menyebar keadaan mesin saat ini ke sebuah berkas asal dan sederet berkas lebih kecil yang mencatat apa yang berubah sesudahnya. Disk terbelah memecah satu image menjadi banyak potongan. Disk pembeda Hyper-V hanya memuat perbedaan dari berkas lain.",
-            "Di tiap kasus itu berkas yang Anda punya adalah bagian dari satu set, dan Lukotta membuka satu berkas dalam satu waktu."
+            "Sebuah image hanya bisa dibuka kalau berkas itu lengkap tanpa bergantung pada berkas lain.",
+            "Rantai snapshot VMware menyimpan keadaan mesin saat ini di sebuah berkas asal dan sederet berkas lebih kecil yang mencatat apa yang berubah sesudahnya. Disk terbelah memecah satu image menjadi banyak potongan. Disk pembeda Hyper-V hanya memuat perbedaan dari berkas lain.",
+            "Dalam setiap kasus, berkas yang Anda punya adalah bagian dari satu set, dan Lukotta hanya membuka satu berkas pada satu waktu."
           ]
         }
       ]

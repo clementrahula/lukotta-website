@@ -16,11 +16,11 @@
     },
     "meta.ogTitle": {
       "en": "Lukotta — BitLocker, Linux and VM disks on macOS",
-      "id": "Lukotta — drive BitLocker, Linux, dan mesin virtual di macOS"
+      "id": "Lukotta — drive BitLocker dan Linux, serta disk mesin virtual di macOS"
     },
     "meta.ogDescription": {
       "en": "Plug in a drive or open a disk image, type the password, and it appears in Finder, readable and writable, like any other disk.",
-      "id": "Colokkan drive atau buka image disk, ketik kata sandi, dan drive muncul di Finder, bisa dibaca dan ditulis, seperti disk lain."
+      "id": "Colokkan drive atau buka image disk, ketik kata sandi, dan volumenya muncul di Finder, bisa dibaca dan ditulis, seperti disk lain."
     },
     "meta.imageAlt": {
       "en": "The Lukotta application icon: a rounded slate square with a letter L cut out of it.",
@@ -112,11 +112,11 @@
     },
     "hero.title": {
       "en": "Open BitLocker, Linux and virtual machine disks on macOS.",
-      "id": "Buka drive BitLocker, Linux, dan mesin virtual di macOS."
+      "id": "Buka drive BitLocker dan Linux, serta disk mesin virtual di macOS."
     },
     "hero.subtitle": {
       "en": "Plug in a drive or open a disk image and type the password, and it appears in Finder. Readable and writable, like any other disk.",
-      "id": "Colokkan drive atau buka image disk lalu ketik kata sandi, dan drive muncul di Finder. Bisa dibaca dan ditulis, seperti disk lain."
+      "id": "Colokkan drive atau buka image disk lalu ketik kata sandi, dan volumenya muncul di Finder. Bisa dibaca dan ditulis, seperti disk lain."
     },
     "hero.download": {
       "en": "Download",
@@ -184,11 +184,11 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "id": "Ia menerima drive fisik dan berkas image sama saja. Volume BitLocker terbuka dengan kata sandinya atau dengan kunci pemulihan 48 digit, dan volume BitLocker serta NTFS dibaca sekaligus ditulis, jadi berkas bisa disalin ke drive sebagaimana disalin darinya."
+      "id": "Lukotta bisa membuka drive fisik maupun berkas image. Volume BitLocker terbuka dengan kata sandinya atau dengan kunci pemulihan 48 digit, dan volume BitLocker serta NTFS bisa dibaca dan ditulis, jadi berkas bisa disalin ke drive maupun darinya."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "id": "Drive atau image mana pun juga bisa dibuka hanya-baca, dan Lukotta bisa membuka kembali apa yang terbuka saat Anda masuk terakhir kali."
+      "id": "Drive atau image mana pun juga bisa dibuka dalam mode baca-saja, dan Lukotta bisa membuka kembali apa yang terbuka saat Anda masuk terakhir kali."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -240,7 +240,7 @@
     },
     "formats.lvm.note": {
       "en": "Several volumes on one drive unlock together",
-      "id": "Beberapa volume pada satu drive terbuka bersamaan"
+      "id": "Beberapa volume pada satu drive dibuka kuncinya bersamaan"
     },
     "formats.ntfs.note": {
       "en": "Including a volume Windows left dirty or hibernated",
@@ -252,11 +252,11 @@
     },
     "formats.exfat.note": {
       "en": "Supported by macOS natively",
-      "id": "Didukung macOS secara asli"
+      "id": "Didukung langsung oleh macOS"
     },
     "formats.raw.note": {
       "en": "Supported by macOS natively",
-      "id": "Didukung macOS secara asli"
+      "id": "Didukung langsung oleh macOS"
     },
     "formats.qcow2.note": {
       "en": "QEMU and UTM",
@@ -280,7 +280,7 @@
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "id": "Hyper-V. Terbuka hanya-baca"
+      "id": "Hyper-V. Dibuka dalam mode baca-saja"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
@@ -352,7 +352,7 @@
     },
     "faq.3.a": {
       "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
-      "id": "Tidak dengan sendirinya. macOS memasang NTFS hanya-baca. Lukotta memasangnya untuk dibaca dan ditulis, sehingga berkas disalin ke drive NTFS maupun darinya."
+      "id": "Tidak dengan sendirinya. macOS memasang NTFS dalam mode baca-saja. Lukotta memasangnya untuk dibaca dan ditulis, sehingga berkas disalin ke drive NTFS maupun darinya."
     },
     "faq.4.q": {
       "en": "How do you read an ext4 or btrfs drive on a Mac?",
@@ -368,7 +368,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "id": "Ya. Lukotta membuka image qcow2, VMDK, VDI, VHD atau VHDX secara langsung dan menyalin berkas darinya, atau ke dalamnya. Penulisan masih eksperimental untuk VMDK, VDI dan VHD; VHDX dan VMDK stream-optimized dibuka hanya-baca."
+      "id": "Ya. Lukotta membuka image qcow2, VMDK, VDI, VHD atau VHDX secara langsung dan menyalin berkas darinya, atau ke dalamnya. Penulisan masih eksperimental untuk VMDK, VDI dan VHD; VHDX dan VMDK stream-optimized dibuka dalam mode baca-saja."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

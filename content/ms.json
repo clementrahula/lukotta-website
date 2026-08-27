@@ -184,7 +184,7 @@
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
-      "ms": "Ia menerima pemacu fizikal dan fail imej sama sahaja. Volum BitLocker dibuka dengan kata laluannya atau dengan kunci pemulihan 48 digit, dan volum BitLocker serta NTFS dibaca dan ditulis, jadi fail boleh disalin ke pemacu sebagaimana disalin daripadanya."
+      "ms": "Lukotta membuka pemacu fizikal dan fail imej dengan cara yang sama. Volum BitLocker dibuka dengan kata laluannya atau dengan kunci pemulihan 48 digit, dan volum BitLocker serta NTFS dibaca dan ditulis, jadi fail boleh disalin ke pemacu dan juga daripadanya."
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",

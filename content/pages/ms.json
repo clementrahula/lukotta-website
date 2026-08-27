@@ -40,7 +40,7 @@
           "heading": "Bagaimana Lukotta membukanya",
           "paragraphs": [
             "Linux sudah bertahun-tahun boleh membaca BitLocker, dan itulah yang digunakan Lukotta. Ia menjalankan sistem Linux kecil di latar belakang, menyerahkan pemacu itu kepadanya, lalu membuka kuncinya di sana dengan kata laluan yang anda taip. Pemacu yang terbuka kembali kepada Finder, tempat ia muncul di bawah Lokasi bersama cakera anda yang lain.",
-            "Pemacu itu tidak ditukar dan tidak disalin. Ia kekal pemacu BitLocker, kekal tersulit, dan Windows terus membacanya."
+            "Pemacu itu tidak ditukar format dan tidak disalin. Ia kekal pemacu BitLocker, kekal tersulit, dan Windows terus membacanya."
           ]
         },
         {
@@ -80,7 +80,7 @@
     "linux": {
       "slug": "baca-pemacu-ext4-di-mac",
       "title": "Baca pemacu ext4, btrfs atau XFS di Mac",
-      "description": "macOS tidak membaca ext4, btrfs mahupun XFS dan menawarkan memadam pemacu. Inilah sebabnya, dan cara membuka pemacu Linux di Mac, termasuk LUKS.",
+      "description": "macOS tidak membaca ext4, btrfs mahupun XFS dan menawarkan untuk memadam pemacu. Inilah sebabnya, dan cara membuka pemacu Linux di Mac, termasuk LUKS.",
       "lead": "Anda memasang pemacu daripada mesin Linux dan Finder menawarkan untuk memadamnya. Inilah sebabnya, dan cara membacanya sebaliknya.",
       "sections": [
         {
@@ -181,7 +181,7 @@
           "heading": "Pemacu yang tidak ditutup Windows dengan betul",
           "paragraphs": [
             "Windows menandakan sebuah pemacu sebagai tidak ditutup betul apabila penulisan terganggu, biasanya kerana pemacu itu dicabut atau mesinnya hilang kuasa di pertengahan. Tanda itu memberi amaran kepada komputer seterusnya yang membukanya bahawa pemacu itu mungkin tertulis separuh dan patut diperiksa.",
-            "Permulaan pantas meninggalkan tanda yang sama walaupun tiada apa-apa yang tersasar. Dalam Windows 10 dan 11 ia dihidupkan sejak awal. Daripada mematikan mesin, ia menghibernasikannya, yang membuatkan pemacu itu kelihatan seolah-olah masih digunakan.",
+            "Permulaan Pantas meninggalkan tanda yang sama walaupun tiada apa-apa yang tidak kena. Dalam Windows 10 dan 11 ciri ini diaktifkan secara lalai. Daripada mematikan mesin, ciri ini menghibernasikannya, yang membuatkan pemacu itu kelihatan seolah-olah masih digunakan.",
             "macOS menolak pemacu dalam kedua-dua keadaan itu dan tidak memberi sebab. Lukotta membukanya.",
             "Jika mesin Windows itu masih ada pada anda, cara yang lebih kemas ialah memasang semula pemacu itu padanya dan menutup mesin tersebut dengan betul: tahan Shift sambil mengklik Tutup, itu melangkau permulaan pantas."
           ]
@@ -198,13 +198,13 @@
           "heading": "Apa itu imej cakera",
           "paragraphs": [
             "Apabila anda menjalankan mesin maya, cakera keras mesin itu ialah satu fail biasa yang terletak pada Mac anda. Sistem pengendaliannya, programnya, dan setiap dokumen di dalamnya semuanya ada di dalam satu fail itu.",
-            "Setiap program menulis fail itu dengan caranya sendiri. VMware menggunakan VMDK, VirtualBox menggunakan VDI, Hyper-V menggunakan VHD dan VHDX, manakala QEMU dan UTM menggunakan qcow2. Imej mentah, yang biasanya berakhir dengan .img, ialah salinan lurus sebuah cakera tanpa apa-apa membalutnya."
+            "Setiap program menulis fail itu dengan caranya sendiri. VMware menggunakan VMDK, VirtualBox menggunakan VDI, Hyper-V menggunakan VHD dan VHDX, manakala QEMU dan UTM menggunakan qcow2. Imej mentah, yang biasanya berakhir dengan .img, ialah salinan langsung sebuah cakera tanpa apa-apa membalutnya."
           ]
         },
         {
           "heading": "Kenapa mengeluarkan fail daripadanya menyusahkan",
           "paragraphs": [
-            "Cara yang biasa ialah menghidupkan mesin maya itu, menunggu sehingga ia naik, mencari fail di dalamnya dan menyalinnya keluar. Ertinya mesin itu masih perlu berfungsi, dan program yang menjalankannya masih perlu terpasang.",
+            "Cara yang biasa ialah menghidupkan mesin maya itu, menunggu sehingga ia selesai bermula, mencari fail di dalamnya dan menyalinnya keluar. Ertinya mesin itu masih perlu berfungsi, dan program yang menjalankannya masih perlu terpasang.",
             "Finder pun tidak membantu di sini. Mengklik dua kali pada VMDK tidak melakukan apa-apa, kerana macOS tidak tahu apa yang ada di dalamnya."
           ]
         },
@@ -212,7 +212,7 @@
           "heading": "Bagaimana Lukotta membukanya",
           "paragraphs": [
             "Lukotta membaca imej itu terus. Ia mengenal pasti format fail itu, menjumpai cakera di dalamnya, dan membukanya dalam sistem Linux kecil yang dijalankannya di latar belakang. Isinya kemudian muncul dalam Finder sebagai cakera biasa.",
-            "Mesin maya itu kekal ditutup. VMware dan VirtualBox tidak perlu dipasang, dan membuka fail itu tidak mengubahnya."
+            "Mesin maya itu kekal dimatikan. VMware dan VirtualBox tidak perlu dipasang, dan membuka fail itu tidak mengubahnya."
           ]
         },
         {
@@ -229,7 +229,7 @@
         {
           "heading": "Membuka salah satunya",
           "list": [
-            "Pilih Fail, kemudian Buka Imej Cakera, dan cari fail itu.",
+            "Pilih Fail, kemudian Buka Imej Cakera, dan pilih fail itu.",
             "Jika cakera di dalamnya tersulit, taip kata laluan atau frasa laluannya.",
             "Isinya muncul dalam Finder, di bawah Lokasi."
           ],
@@ -245,14 +245,14 @@
           "heading": "Menyalin fail ke dalam imej",
           "paragraphs": [
             "qcow2 ditulis dengan cara biasa dan selamat untuk ditulis.",
-            "VMDK, VDI dan VHD boleh ditulis, tetapi itu kerja baharu dan belum cukup lama digunakan untuk diamanahkan sesuatu yang anda tidak mampu kehilangannya. Salin fail itu dan bekerja pada salinannya, atau bukanya baca sahaja dan keluarkan failnya.",
+            "VMDK, VDI dan VHD boleh ditulis, tetapi sokongan penulisannya masih baharu dan belum cukup lama digunakan untuk dipercayai bagi data yang anda tidak mampu kehilangan. Salin fail itu dan bekerja pada salinannya, atau bukanya baca sahaja dan keluarkan fail daripadanya.",
             "VHDX terbuka baca sahaja, begitu juga jenis VMDK yang ada di dalam fail OVA. Jenis itu ditulis sekali jalan dan selepas itu tidak boleh diubah di tempatnya."
           ]
         },
         {
           "heading": "Fail yang tidak akan terbuka",
           "paragraphs": [
-            "Sebuah imej hanya terbuka jika ia lengkap dengan sendirinya.",
+            "Sebuah imej hanya boleh dibuka jika ia lengkap tanpa bergantung pada fail lain.",
             "Rantaian syot kilat VMware menyebarkan keadaan semasa mesin itu antara satu fail asal dan sederet fail lebih kecil yang mencatat apa yang berubah selepasnya. Cakera terbelah memecahkan satu imej kepada banyak kepingan. Cakera pembeza Hyper-V hanya memuatkan perbezaan daripada fail lain.",
             "Dalam setiap kes itu fail yang ada pada anda ialah sebahagian daripada satu set, dan Lukotta membuka satu fail pada satu masa."
           ]

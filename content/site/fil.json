@@ -14,14 +14,14 @@
     "about": {
       "slug": "tungkol",
       "title": "Tungkol sa Lukotta",
-      "description": "Ang Lukotta ay libre at open-source na macOS app na nagbubukas ng BitLocker, NTFS at Linux drive, sa ilalim ng GNU General Public License.",
+      "description": "Ang Lukotta ay libre, open-source na macOS app para sa BitLocker, NTFS at Linux drive. Pinapanatili ng isang developer, sa ilalim ng GNU General Public License.",
       "lead": "Nagbubukas ang Lukotta ng mga drive at disk image na hindi mabasa ng macOS. Libre ito, open source, at pinapanatili ng iisang tao.",
       "sections": [
         {
           "heading": "Ano ito",
           "paragraphs": [
             "Ang Lukotta ay isang macOS na aplikasyon. Binubuksan nito ang mga BitLocker, NTFS, LUKS, ext4, btrfs at XFS na drive, at ang mga disk image ng virtual machine sa format na qcow2, VMDK, VDI, VHD at VHDX. Wala sa mga iyon ang nababasa ng macOS nang mag-isa. Nababasa nito ang NTFS pero hindi nasusulatan.",
-            "Nagpapatakbo ito ng maliit na Linux system sa likuran, binubuksan doon ang drive, at ibinabalik ito sa Finder. Matagal nang nababasa ng Linux ang mga format na ito. Hindi kino-convert ni kinokopya ang drive. Nananatili itong gaya ng dati, at nababasa pa rin ito ng makinang pinanggalingan nito."
+            "Nagpapatakbo ito ng maliit na Linux virtual machine sa likuran, binubuksan doon ang drive, at ibinabalik ito sa Finder. Matagal nang nababasa ng Linux ang mga format na ito. Hindi kino-convert ni kinokopya ang drive. Nananatili itong gaya ng dati, at nababasa pa rin ito ng makinang pinanggalingan nito."
           ]
         },
         {
@@ -63,7 +63,7 @@
     "contact": {
       "slug": "kontak",
       "title": "Kontak",
-      "description": "Paano mag-ulat ng bug sa Lukotta, magtanong, o mag-ulat ng isyu sa seguridad. Unang binabasa ang mga issue sa GitHub.",
+      "description": "Paano mag-ulat ng bug sa Lukotta, magtanong, o mag-ulat ng isyu sa seguridad. Unang binabasa ang mga issue sa GitHub at pinakamabilis masagot.",
       "lead": "Sa GitHub ang mga bug. Sa address na nasa SECURITY.md ang mga isyu sa seguridad. Sa email ang lahat ng iba pa.",
       "sections": [
         {
