@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "et",
+    "name": "Estonian",
+    "native": "Eesti",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "teave",
+      "title": "Teave rakenduse Lukotta kohta",
+      "description": "Lukotta on tasuta avatud lähtekoodiga macOS-i rakendus, mis avab BitLockeri, NTFS-i ja Linuxi kettaid, litsentsi GNU General Public License all.",
+      "lead": "Lukotta avab kettaid ja kettatõmmiseid, mida macOS lugeda ei oska. See on tasuta, avatud lähtekoodiga ja seda hooldab üks inimene.",
+      "sections": [
+        {
+          "heading": "Mis see on",
+          "paragraphs": [
+            "Lukotta on macOS-i rakendus. See avab BitLockeri, NTFS-i, LUKS-i, ext4, btrfs-i ja XFS-i kettaid ning virtuaalmasinate kettatõmmiseid vormingutes qcow2, VMDK, VDI, VHD ja VHDX. macOS ei loe neist ühtegi ise. NTFS-i ta loeb, aga sellele ei kirjuta.",
+            "See käivitab taustal väikese Linuxi süsteemi, avab ketta seal ja annab selle Finderile üle. Linux on neid vorminguid lugenud aastaid. Ketast ei teisendata ega kopeerita. See jääb selliseks, nagu oli, ja masin, kust see pärit on, loeb seda edasi."
+          ]
+        },
+        {
+          "heading": "Kes seda hooldab",
+          "paragraphs": [
+            "[Üksainus arendaja](https://rahula.dev). Ei ole ettevõtet, ei ole investoreid ega meeskonda."
+          ]
+        },
+        {
+          "heading": "Miks see olemas on",
+          "paragraphs": [
+            "Ühenda BitLockeri ketas Maciga ja Finder pakub selle kustutamist. Ta ei küsi parooli ja miski ekraanil ei näita, et ketas on lukus, mitte katki.",
+            "Tundus rumal, et tänapäeval ei ole praktilist viisi jagada krüptitud USB-ketast mitme operatsioonisüsteemi vahel, nii et lahendus tuli ehitada.",
+            "Linuxi ökosüsteemis oli juba tööriistu, mis neid kettaid lugeda oskasid. Lukotta ühendab need Maci liidesega."
+          ]
+        },
+        {
+          "heading": "Mis see maksab",
+          "paragraphs": [
+            "Mitte midagi. Ei ole tasulist versiooni, ei ole tellimust, ei ole prooviaega ega kontot.",
+            "Lukotta on vaba tarkvara litsentsi GNU General Public License versiooni 3 või uuema all. Lähtekood on avaldatud. Igaüks võib seda lugeda, muuta ja sama litsentsi all edasi anda."
+          ]
+        },
+        {
+          "heading": "Sinu Macist ei lähe midagi välja",
+          "paragraphs": [
+            "Lukottal ei ole analüütikat, ei ole telemeetriat ega tõrketeateid.",
+            "See teeb ühte liiki võrgupäringu: vaatab, kas on uus versioon, ja laadib selle alla, kui sa palud. Paroole ja taastevõtmeid kasutatakse ketta avamiseks ning neid ei salvestata, ei saadeta ega logita."
+          ]
+        },
+        {
+          "heading": "Lähtekood",
+          "paragraphs": [
+            "Rakenduse lähtekood on aadressil github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "description": "Kuidas teatada veast rakenduses Lukotta, küsida küsimus või teatada turvaprobleemist. GitHubi issue'd loetakse esimesena.",
+      "lead": "Vead lähevad GitHubi. Turvaprobleemid lähevad aadressile, mis on failis SECURITY.md. Kõik muu läheb e-postiga.",
+      "sections": [
+        {
+          "heading": "Viga või ketas, mis lahti ei lähe",
+          "paragraphs": [
+            "Ava issue aadressil github.com/clementrahula/lukotta/issues. Issue'd loetakse esimesena ja need on avalikud, nii et järgmine inimene sama kettaga leiab vastuse.",
+            "Ütle, milline ketas see on, mida Lukotta näitas ja mida sa ootasid. Tsiteeri viga täpselt. Ära kunagi kleebi issue'sse parooli ega taastevõtit."
+          ]
+        },
+        {
+          "heading": "Turvaprobleem",
+          "paragraphs": [
+            "Ära ava avalikku issue't. Hoidlas olev SECURITY.md ütleb, kuhu see saata ja mida oodata."
+          ]
+        },
+        {
+          "heading": "Kõik muu",
+          "paragraphs": [
+            "Kirjuta aadressile contact_web@lukotta.com küsimustega rakenduse kohta."
+          ]
+        },
+        {
+          "heading": "Kui kaua vastus võtab",
+          "paragraphs": [
+            "Rakendust Lukotta hooldab üks inimene. Ei ole tuge ega lubatud vastamisaega. Mõni kiri võtab aega ja mõni jääb vastuseta.",
+            "GitHubi issue on tavaliselt kiirem, sest keegi teine võib enne vastata."
+          ]
+        }
+      ]
+    }
+  }
+}

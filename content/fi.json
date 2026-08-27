@@ -409,6 +409,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "fi": "Sivun teksti lisenssillä Creative Commons Attribution-ShareAlike 4.0."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "fi": "Sivua ei löytynyt"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "fi": "Tätä osoitetta ei ole sivustolla lukotta.com. Sivukartta luettelee jokaisen sivun, ja llms.txt sisältää koko sivuston pelkkänä tekstinä."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "fi": "Tätä osoitetta ei ole sivustolla lukotta.com."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "fi": "Mistä katsoa sen sijaan"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "fi": "Oppaat"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "fi": "Etusivu"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "fi": "Etusivu"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "fi": "mikä Lukotta on ja miten se asennetaan"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "fi": "Tietoja"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "fi": "kuka ylläpitää sovellusta Lukotta"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "fi": "Yhteystiedot"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "fi": "miten virheestä ilmoitetaan"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "fi": "Sivukartta"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "fi": "jokainen tämän sivuston sivu"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "fi": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "fi": "koko sivusto pelkkänä tekstinä"
     }
   }
 }

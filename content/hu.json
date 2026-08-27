@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "hu": "Az oldal szövege a Creative Commons Attribution-ShareAlike 4.0 licenc alatt."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "hu": "Az oldal nem található"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "hu": "Ez a cím nem létezik a lukotta.com oldalon. Az oldaltérkép minden oldalt felsorol, az llms.txt pedig az egész oldalt egyszerű szövegként tartalmazza."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "hu": "Ez a cím nem létezik a lukotta.com oldalon."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "hu": "Hol érdemes helyette megnézni"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "hu": "Útmutatók"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "hu": "Kezdőlap"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "hu": "Kezdőlap"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "hu": "mi az a Lukotta és hogyan kell telepíteni"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "hu": "Névjegy"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "hu": "ki tartja karban a Lukotta alkalmazást"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "hu": "Kapcsolat"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "hu": "hogyan lehet hibát jelenteni"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "hu": "Oldaltérkép"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "hu": "az oldal minden lapja"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "hu": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "hu": "az egész oldal egyszerű szövegként"
     }
   }
 }

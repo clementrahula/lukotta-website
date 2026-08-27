@@ -405,6 +405,70 @@
     "footer.content": {
       "en": "Page text under the Creative Commons Attribution-ShareAlike 4.0 licence.",
       "et": "Lehe tekst litsentsi Creative Commons Attribution-ShareAlike 4.0 alusel."
+    },
+    "notFound.title": {
+      "en": "Page not found",
+      "et": "Lehte ei leitud"
+    },
+    "notFound.description": {
+      "en": "That address does not exist on lukotta.com. The sitemap lists every page, and llms.txt carries the whole site as plain text.",
+      "et": "Seda aadressi saidil lukotta.com ei ole. Saidikaart nimetab iga lehe ja llms.txt sisaldab kogu saiti lihttekstina."
+    },
+    "notFound.lead": {
+      "en": "That address does not exist on lukotta.com.",
+      "et": "Seda aadressi saidil lukotta.com ei ole."
+    },
+    "notFound.where": {
+      "en": "Where to look instead",
+      "et": "Kust selle asemel vaadata"
+    },
+    "notFound.guides": {
+      "en": "Guides",
+      "et": "Juhendid"
+    },
+    "notFound.home": {
+      "en": "Homepage",
+      "et": "Avaleht"
+    },
+    "notFound.home.name": {
+      "en": "Home page",
+      "et": "Avaleht"
+    },
+    "notFound.home.what": {
+      "en": "what Lukotta is and how to install it",
+      "et": "mis on Lukotta ja kuidas seda paigaldada"
+    },
+    "notFound.about.name": {
+      "en": "About",
+      "et": "Teave"
+    },
+    "notFound.about.what": {
+      "en": "who maintains Lukotta",
+      "et": "kes rakendust Lukotta hooldab"
+    },
+    "notFound.contact.name": {
+      "en": "Contact",
+      "et": "Kontakt"
+    },
+    "notFound.contact.what": {
+      "en": "how to report a bug",
+      "et": "kuidas veast teatada"
+    },
+    "notFound.sitemap.name": {
+      "en": "Sitemap",
+      "et": "Saidikaart"
+    },
+    "notFound.sitemap.what": {
+      "en": "every page on this site",
+      "et": "iga selle saidi leht"
+    },
+    "notFound.llms.name": {
+      "en": "llms.txt",
+      "et": "llms.txt"
+    },
+    "notFound.llms.what": {
+      "en": "the whole site as plain text",
+      "et": "kogu sait lihttekstina"
     }
   }
 }

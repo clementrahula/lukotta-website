@@ -1,0 +1,98 @@
+{
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "language": {
+    "code": "fi",
+    "name": "Finnish",
+    "native": "Suomi",
+    "dir": "ltr"
+  },
+  "order": [
+    "about",
+    "contact"
+  ],
+  "pages": {
+    "about": {
+      "slug": "tietoja",
+      "title": "Tietoja sovelluksesta Lukotta",
+      "description": "Lukotta on ilmainen avoimen lähdekoodin macOS-sovellus, joka avaa BitLocker-, NTFS- ja Linux-levyjä, lisenssillä GNU General Public License.",
+      "lead": "Lukotta avaa levyjä ja levytiedostoja, joita macOS ei osaa lukea. Se on ilmainen, avointa lähdekoodia, ja sitä ylläpitää yksi ihminen.",
+      "sections": [
+        {
+          "heading": "Mikä se on",
+          "paragraphs": [
+            "Lukotta on macOS-sovellus. Se avaa BitLocker-, NTFS-, LUKS-, ext4-, btrfs- ja XFS-levyjä sekä virtuaalikoneiden levytiedostoja muodoissa qcow2, VMDK, VDI, VHD ja VHDX. macOS ei lue niistä yhtäkään itse. NTFS:ää se lukee, mutta ei kirjoita siihen.",
+            "Se käynnistää taustalle pienen Linux-järjestelmän, avaa levyn siellä ja luovuttaa sen Finderille. Linux on lukenut näitä muotoja vuosia. Levyä ei muunneta eikä kopioida. Se pysyy sellaisena kuin oli, ja kone josta se tuli lukee sitä yhä."
+          ]
+        },
+        {
+          "heading": "Kuka sitä ylläpitää",
+          "paragraphs": [
+            "[Yksi ainoa kehittäjä](https://rahula.dev). Ei ole yritystä, ei sijoittajia eikä tiimiä."
+          ]
+        },
+        {
+          "heading": "Miksi se on olemassa",
+          "paragraphs": [
+            "Kytke BitLocker-levy Maciin ja Finder tarjoutuu tyhjentämään sen. Se ei kysy salasanaa, eikä mikään näytöllä kerro, että levy on lukittu eikä rikki.",
+            "Tuntui järjettömältä, ettei nykyaikana ole käytännöllistä tapaa jakaa salattua USB-levyä useamman käyttöjärjestelmän kesken, joten ratkaisu oli rakennettava.",
+            "Linuxin ekosysteemissä oli jo työkaluja, jotka osasivat lukea nuo levyt. Lukotta yhdistää ne Macin käyttöliittymään."
+          ]
+        },
+        {
+          "heading": "Mitä se maksaa",
+          "paragraphs": [
+            "Ei mitään. Ei ole maksullista versiota, ei tilausta, ei koeaikaa eikä tiliä.",
+            "Lukotta on vapaa ohjelmisto lisenssillä GNU General Public License, versio 3 tai uudempi. Lähdekoodi on julkaistu. Kuka tahansa saa lukea sitä, muuttaa sitä ja jakaa sitä eteenpäin samalla lisenssillä."
+          ]
+        },
+        {
+          "heading": "Mikään ei lähde Macistasi",
+          "paragraphs": [
+            "Sovelluksessa Lukotta ei ole analytiikkaa, ei telemetriaa eikä kaatumisraportteja.",
+            "Se tekee yhdenlaisen verkkopyynnön: se katsoo onko uutta versiota ja lataa sen jos pyydät. Salasanoja ja palautusavaimia käytetään levyn avaamiseen, eikä niitä tallenneta, lähetetä tai kirjata."
+          ]
+        },
+        {
+          "heading": "Lähdekoodi",
+          "paragraphs": [
+            "Sovelluksen lähdekoodi on osoitteessa github.com/clementrahula/lukotta."
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "slug": "yhteystiedot",
+      "title": "Yhteystiedot",
+      "description": "Miten ilmoitat virheestä sovelluksessa Lukotta, kysyt kysymyksen tai ilmoitat tietoturvaongelmasta. GitHubin issuet luetaan ensin.",
+      "lead": "Virheet menevät GitHubiin. Tietoturvaongelmat menevät SECURITY.md:ssä olevaan osoitteeseen. Kaikki muu menee sähköpostilla.",
+      "sections": [
+        {
+          "heading": "Virhe tai levy joka ei aukea",
+          "paragraphs": [
+            "Avaa issue osoitteessa github.com/clementrahula/lukotta/issues. Issuet luetaan ensin ja ne ovat julkisia, joten seuraava samaa levyä käyttävä löytää vastauksen.",
+            "Kerro mikä levy on kyseessä, mitä Lukotta näytti ja mitä odotit. Lainaa virhe tarkasti. Älä koskaan liitä issueen salasanaa tai palautusavainta."
+          ]
+        },
+        {
+          "heading": "Tietoturvaongelma",
+          "paragraphs": [
+            "Älä avaa julkista issueta. Arkiston SECURITY.md kertoo minne se lähetetään ja mitä odottaa."
+          ]
+        },
+        {
+          "heading": "Kaikki muu",
+          "paragraphs": [
+            "Kirjoita osoitteeseen contact_web@lukotta.com kysymyksistä sovelluksesta."
+          ]
+        },
+        {
+          "heading": "Kauanko vastaus kestää",
+          "paragraphs": [
+            "Sovellusta Lukotta ylläpitää yksi ihminen. Ei ole tukipalvelua eikä luvattua vastausaikaa. Osa viesteistä kestää, ja osa jää vastaamatta.",
+            "GitHubin issue on yleensä nopeampi, koska joku muu voi ehtiä vastata ensin."
+          ]
+        }
+      ]
+    }
+  }
+}
