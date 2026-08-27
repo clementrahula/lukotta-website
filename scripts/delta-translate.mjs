@@ -10,7 +10,7 @@
    English rather than retyped, so a paragraph cannot land in the wrong section,
    and the names that stay in Latin script are checked rather than trusted. */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -54,8 +54,8 @@ function siteUnits() {
 
 const [cmd, code] = process.argv.slice(2);
 const lang = cfg.languages.find((l) => l.code === code);
-if (!cmd || !lang) {
-  console.error("usage: delta-translate.mjs show|apply <code>");
+if (!cmd || (cmd !== "export" && !lang)) {
+  console.error("usage: delta-translate.mjs show|apply <code>  |  export");
   process.exit(1);
 }
 
@@ -67,6 +67,87 @@ if (cmd === "show") {
   writeFileSync(join(WORK, `${code}.json`), JSON.stringify(out, null, 2) + "\n", "utf8");
   console.log(`  ${join(WORK, `${code}.json`)}`);
   console.log(`  ${NOT_FOUND.length} strings for the 404, ${siteUnits().length} for About and Contact`);
+  process.exit(0);
+}
+
+if (cmd === "export") {
+  /* The review pack for this delta only. The task pages went out in their own
+     pack already; sending the whole site again would make a reviewer hunt for
+     what changed, which is how the new material gets the least attention. */
+  const OUT = join(ROOT, "export-delta");
+  rmSync(OUT, { recursive: true, force: true });
+  mkdirSync(OUT, { recursive: true });
+
+  const summary = [];
+  for (const l of cfg.languages) {
+    if (l.code === cfg.defaultLang) continue;
+    const sitePath = join(CONTENT, "site", `${l.code}.json`);
+    if (!existsSync(sitePath)) continue;
+    const site = JSON.parse(readFileSync(sitePath, "utf8"));
+    const strings = JSON.parse(readFileSync(join(CONTENT, `${l.code}.json`), "utf8")).strings;
+
+    const rows = [];
+    for (const k of NOT_FOUND) {
+      rows.push({ id: k, where: "The 404 page", en: english[k],
+                  [l.code]: strings[k]?.[l.code] || "" });
+    }
+    for (const u of siteUnits()) {
+      const key = u.id.slice(0, u.id.indexOf("."));
+      const rest = u.id.slice(key.length + 1);
+      const page = site.pages[key];
+      let got = "";
+      if (["slug", "title", "description", "lead"].includes(rest)) got = page[rest];
+      else {
+        const sec = page.sections[Number(rest.match(/^s(\d+)/)[1])];
+        got = rest.includes(".heading") ? sec.heading
+            : sec.paragraphs[Number(rest.match(/\.p(\d+)/)[1])];
+      }
+      rows.push({
+        id: u.id,
+        where: `The ${key} page`,
+        note: u.slug ? "The address. Lowercase a-z, 0-9 and single hyphens." : undefined,
+        en: u.en, [l.code]: got || "",
+      });
+    }
+    for (const r of rows) if (r.note === undefined) delete r.note;
+
+    writeFileSync(join(OUT, `${l.code}.json`), JSON.stringify({
+      language: { code: l.code, name: l.name, native: l.native, direction: l.dir },
+      whatThisIs:
+        "Everything added to the site after the last review pack: the 404 page and two new pages, " +
+        "About and Contact. 51 strings. The landing page and the four guides are not here; they " +
+        "went out already and are unchanged.",
+      strings: rows,
+    }, null, 2) + "\n", "utf8");
+    summary.push(`| ${l.code} | ${l.name} | ${l.native} | ${l.dir} | ${rows.length} |`);
+  }
+
+  for (const doc of ["GLOSSARY.md", "README.md"]) {
+    if (existsSync(join(CONTENT, doc))) cpSync(join(CONTENT, doc), join(OUT, doc));
+  }
+  cpSync(join(CONTENT, "site", "PROMPT.md"), join(OUT, "PROMPT.md"));
+  writeFileSync(join(OUT, "INDEX.md"),
+`# Lukotta: the pages added since the last pack
+
+An agent readiness audit scored the site 79 out of 100 and a second report said
+why: an agent asked what lukotta.com is for could not answer from the site. Two
+of the gaps it named were a 404 that told an agent nothing about where to go
+next, and the absence of an About and a Contact page, which is what an agent
+looks for when deciding whether software from an unknown name can be
+recommended.
+
+This pack is those three pages, in every language. 51 strings each. The landing
+page and the four guides are not here: they went out in the previous pack and
+have not changed.
+
+| Code | Language | Native | Direction | Strings |
+| --- | --- | --- | --- | --- |
+${summary.join("\n")}
+
+Read \`PROMPT.md\` first, then \`GLOSSARY.md\`.
+`, "utf8");
+
+  console.log(`  export-delta/: ${summary.length} languages`);
   process.exit(0);
 }
 
