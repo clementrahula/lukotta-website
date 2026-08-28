@@ -183,7 +183,7 @@
             "Windows merkt een schijf als onafgesloten aan wanneer het schrijven is onderbroken, meestal doordat de schijf eruit werd getrokken of de machine halverwege de stroom verloor. Die markering waarschuwt de volgende computer die hem opent dat de schijf half beschreven kan zijn en nagekeken moet worden.",
             "Snel opstarten laat dezelfde markering achter, ook als er niets is misgegaan. Het staat in Windows 10 en 11 standaard aan. In plaats van de machine af te sluiten zet het hem in de sluimerstand, waardoor de schijf eruitziet alsof hij nog in gebruik is.",
             "macOS weigert een schijf in beide toestanden en geeft geen reden. Lukotta opent hem.",
-            "Heb je de Windows-machine nog, dan is de nettere oplossing de schijf er weer in te doen en die machine goed af te sluiten: houd Shift ingedrukt terwijl je op ‘Afsluiten’ klikt, dat slaat Snel opstarten over."
+            "Heb je de Windows-machine nog, dan is de nettere oplossing de schijf er weer in te doen en die machine goed af te sluiten: houd Shift ingedrukt terwijl je op ‘Uitschakelen’ klikt, dat slaat Snel opstarten over."
           ]
         }
       ]

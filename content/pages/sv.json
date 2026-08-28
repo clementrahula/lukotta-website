@@ -183,7 +183,7 @@
             "Windows märker en disk som felaktigt stängd när en skrivning avbröts, oftast för att disken drogs ur eller maskinen förlorade strömmen mitt i. Märkningen varnar nästa dator som öppnar den för att disken kan vara till hälften skriven och bör kontrolleras.",
             "Snabbstart lämnar samma märkning även när ingenting har gått fel. Den är påslagen från början i Windows 10 och 11. I stället för att stänga av maskinen försätter den den i viloläge, vilket får disken att se ut som om den fortfarande används.",
             "macOS vägrar att öppna en disk i båda tillstånden och anger inget skäl. Lukotta öppnar den.",
-            "Har du kvar Windows-maskinen är den snyggare lösningen att ansluta disken igen och stänga av den maskinen ordentligt: håll ned Skift medan du klickar på ”Avsluta”, det hoppar över Snabbstart."
+            "Har du kvar Windows-maskinen är den snyggare lösningen att ansluta disken igen och stänga av den maskinen ordentligt: håll ned Skift medan du klickar på ”Stäng av”, vilket hoppar över Snabbstart."
           ]
         }
       ]
