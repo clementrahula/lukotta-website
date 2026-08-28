@@ -220,7 +220,12 @@ jobs:
           have=$(echo "$routes" | jq -r '.result[] | select(.script == null or .script == "") | .pattern' | sort)
           for pattern in $(comm -23 <(echo "$want") <(echo "$have")); do
             echo "  excluding $pattern"
-            curl -sS -X POST "$api" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$(jq -nc --arg p "$pattern" '{pattern: $p, script: ""}')" | jq -c '{success, errors}'
+            # script is optional, and omitting it is what makes the route an
+            # exclusion. Sending "" asks for a worker named empty string, which
+            # the API rejects with 10019.
+            result=$(curl -sS -X POST "$api" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$(jq -nc --arg p "$pattern" '{pattern: $p}')")
+            echo "$result" | jq -e '.success' >/dev/null || result=$(curl -sS -X POST "$api" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$(jq -nc --arg p "$pattern" '{pattern: $p, script: null}')")
+            echo "$result" | jq -c '{success, errors}'
           done
           # A digest that is no longer the current one leaves a route pointing at
           # a file that does not exist. Only ever an exclusion, only ever one of
