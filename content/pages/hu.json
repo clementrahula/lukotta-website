@@ -146,7 +146,7 @@
           "heading": "Mi az NTFS",
           "paragraphs": [
             "Az NTFS az a fájlrendszer, amelyet a Windows használ, a saját meghajtóján és a Windows-gépen formázott külső meghajtókon is. A Windows-gépen formázott USB-meghajtó többnyire NTFS.",
-            "A másik elterjedt az exFAT, amelyet a legtöbb memóriakártya és sok USB-kulcs használ, mert a Windows és a macOS is tud rá írni. Ha a meghajtód exFAT, a macOS már elbánik vele, és ebből semmi nem vonatkozik rád. Az ellenőrzéshez kattints a meghajtóra a Finderben, és válaszd a Fájl, majd az Adatok menüpontot. A Formátum sor megmondja."
+            "A másik elterjedt az exFAT, amelyet a legtöbb memóriakártya és sok USB-kulcs használ, mert a Windows és a macOS is tud rá írni. Ha a meghajtód exFAT, a macOS már elbánik vele, és ebből semmi nem vonatkozik rád. Az ellenőrzéshez kattints a meghajtóra a Finderben, és válaszd a Fájl, majd az Infó megjelenítése menüpontot. A Formátum sor megmondja."
           ]
         },
         {

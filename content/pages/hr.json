@@ -146,7 +146,7 @@
           "heading": "Što je NTFS",
           "paragraphs": [
             "NTFS je datotečni sustav kojim se služi Windows, i na vlastitom disku i na vanjskim diskovima formatiranim na Windows računalu. USB disk formatiran na Windows računalu obično je NTFS.",
-            "Drugi rašireni je exFAT, kojim se služi većina memorijskih kartica i mnogi USB stikovi, jer i Windows i macOS na njega znaju pisati. Ako je vaš disk exFAT, macOS s njim već izlazi na kraj i ništa se od ovoga na vas ne odnosi. Za provjeru kliknite disk u Finderu i odaberite Datoteka pa Dobij informacije. Redak Format to kaže."
+            "Drugi rašireni je exFAT, kojim se služi većina memorijskih kartica i mnogi USB stikovi, jer i Windows i macOS na njega znaju pisati. Ako je vaš disk exFAT, macOS s njim već izlazi na kraj i ništa se od ovoga na vas ne odnosi. Za provjeru kliknite disk u Finderu i odaberite Datoteka pa Učitaj informacije. Redak Format to kaže."
           ]
         },
         {
