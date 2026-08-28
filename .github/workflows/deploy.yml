@@ -146,18 +146,51 @@ jobs:
       # setting, so it is invisible from this repository: the deploy above
       # rewrites the routes on every push and nothing here has ever looked at
       # what mode they came back in. This reports it. It changes nothing.
-      - name: Report the routes' request-limit failure mode
+      # The worker is routed at lukotta.com/*, so it is in front of every
+      # request the site serves. The account is on the Workers free plan, which
+      # allows 100,000 invocations a day, and what happens after that is a
+      # per-route setting:
+      #
+      #   fail closed  every request gets a Cloudflare error page until
+      #                midnight UTC. The site is down.
+      #   fail open    the worker is bypassed and the origin serves. Agents
+      #                asking for markdown get HTML and a 404 under /de/ comes
+      #                back in English, and nothing else changes.
+      #
+      # Nothing this worker does is a security check, so there is no version of
+      # this where an error page is the better answer. Cloudflare creates routes
+      # fail closed, wrangler has no way to say otherwise (workers-sdk#2078),
+      # and the deploy above rewrites the routes on every push -- so this cannot
+      # be a thing somebody once clicked in the dashboard. It is set here, after
+      # every deploy, and the job fails if it did not take.
+      - name: Keep the routes failing open
         env:
           CF_ZONE: ${{ secrets.CF_ZONE_ID }}
           CF_TOKEN: ${{ secrets.CF_WORKERS_TOKEN }}
         run: |
           if [ -z "$CF_ZONE" ] || [ -z "$CF_TOKEN" ]; then
-            echo "No zone or token; cannot report the failure mode."
-            exit 0
+            echo "::error::CF_ZONE_ID or CF_WORKERS_TOKEN is not set."
+            echo "The routes cannot be checked, so the site's behaviour at the"
+            echo "invocation ceiling is unknown. That is not something to guess at."
+            exit 1
           fi
-          routes=$(curl -sS "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes" -H "Authorization: Bearer $CF_TOKEN")
-          echo "$routes" | jq -e '.success' >/dev/null || { echo "$routes" | jq -c '.errors'; exit 0; }
-          echo "$routes" | jq -c '.result[]'
+          api="https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes"
+          routes=$(curl -sS "$api" -H "Authorization: Bearer $CF_TOKEN")
+          echo "$routes" | jq -e '.success' >/dev/null || { echo "$routes" | jq -c '.errors'; exit 1; }
+          for id in $(echo "$routes" | jq -r '.result[] | select(.script == "lukotta-markdown" and .request_limit_fail_open != true) | .id'); do
+            pattern=$(echo "$routes" | jq -r --arg id "$id" '.result[] | select(.id == $id) | .pattern')
+            echo "  setting $pattern to fail open"
+            body=$(jq -nc --arg p "$pattern" '{pattern: $p, script: "lukotta-markdown", request_limit_fail_open: true}')
+            curl -sS -X PUT "$api/$id" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$body" | jq -c '{success, errors}'
+          done
+          after=$(curl -sS "$api" -H "Authorization: Bearer $CF_TOKEN")
+          echo "$after" | jq -c '.result[] | {pattern, script, request_limit_fail_open}'
+          echo "$after" | jq -e '[.result[] | select(.script == "lukotta-markdown") | .request_limit_fail_open] | length > 0 and all' >/dev/null || {
+            echo "::error::A route is still failing closed. If the daily invocation"
+            echo "allowance runs out, the site returns error pages instead of falling"
+            echo "back to the origin."
+            exit 1
+          }
 
       # The deploy said it succeeded. This asks the live site whether it did.
       #
