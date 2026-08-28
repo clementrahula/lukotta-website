@@ -57,7 +57,14 @@ the screen and the name in the sentence differ, the sentence fails.
 - **Removable Volumes**
 
 Where macOS is not offered in the language, leave these in English. That applies
-to Bulgarian, Estonian, Latvian, Lithuanian and Albanian.
+to Bulgarian, Estonian, Latvian, Lithuanian, Albanian and Filipino. Checked
+against Apple's own help, which gives the menu path in the language where the
+system is translated and leaves it in English where it is not: the Bulgarian
+page says *File > Get Info* inside Bulgarian prose, while the Slovenian page
+says *Datoteka > Pridobi informacije*.
+
+Slovenian, Croatian and Ukrainian **are** offered, so their labels are
+translated. Do not assume from the alphabet.
 
 ## Translate
 

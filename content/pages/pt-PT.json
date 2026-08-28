@@ -146,7 +146,7 @@
           "heading": "O que é o NTFS",
           "paragraphs": [
             "O NTFS é o sistema de ficheiros que o Windows usa, tanto no seu próprio disco como nos discos externos formatados num PC. Um disco USB formatado numa máquina com Windows é normalmente NTFS.",
-            "O outro corrente é o exFAT, que a maioria dos cartões de memória e muitas pens USB usam porque tanto o Windows como o macOS lhe sabem escrever. Se o seu disco for exFAT, o macOS já se desenrasca com ele e nada disto se aplica. Para verificar, clique no disco no Finder e escolha «Ficheiro» e depois «Obter informações». A linha «Formato» di-lo."
+            "O outro corrente é o exFAT, que a maioria dos cartões de memória e muitas pens USB usam porque tanto o Windows como o macOS lhe sabem escrever. Se o seu disco for exFAT, o macOS já se desenrasca com ele e nada disto se aplica. Para verificar, clique no disco no Finder e escolha «Ficheiro» e depois «Informações». A linha «Formato» di-lo."
           ]
         },
         {

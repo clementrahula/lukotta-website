@@ -39,7 +39,7 @@
         {
           "heading": "Kako ga Lukotta odpre",
           "paragraphs": [
-            "Linux zna brati BitLocker že vrsto let, in prav to Lukotta uporablja. V ozadju zažene majhen sistem Linux, mu izroči disk in ga tam odklene z geslom, ki ga vpišete. Odklenjen disk se vrne Finderju, kjer se pojavi pod Locations, poleg vaših drugih diskov.",
+            "Linux zna brati BitLocker že vrsto let, in prav to Lukotta uporablja. V ozadju zažene majhen sistem Linux, mu izroči disk in ga tam odklene z geslom, ki ga vpišete. Odklenjen disk se vrne Finderju, kjer se pojavi pod Lokacije, poleg vaših drugih diskov.",
             "Disk se niti ne pretvori niti ne kopira. Ostane disk BitLocker, ostane šifriran, in Windows ga še naprej bere."
           ]
         },
@@ -48,7 +48,7 @@
           "list": [
             "Priključite disk. Lukotta ga navede in pokaže kot zaklenjenega.",
             "Kliknite ga in vpišite geslo, ki ga uporabljate v sistemu Windows.",
-            "Disk se pojavi v Finderju, pod Locations."
+            "Disk se pojavi v Finderju, pod Lokacije."
           ],
           "listKind": "steps"
         },
@@ -116,7 +116,7 @@
           "list": [
             "Priključite disk. Lukotta navede, kaj je na njem.",
             "Če je šifriran, vpišite geselno frazo.",
-            "Disk se pojavi v Finderju, pod Locations."
+            "Disk se pojavi v Finderju, pod Lokacije."
           ],
           "listKind": "steps"
         },
@@ -168,7 +168,7 @@
           "list": [
             "Priključite disk. Lukotta ga navede.",
             "Kliknite ga.",
-            "Pojavi se v Finderju, pod Locations, in datoteke se kopirajo v obe smeri."
+            "Pojavi se v Finderju, pod Lokacije, in datoteke se kopirajo v obe smeri."
           ],
           "listKind": "steps"
         },
@@ -231,7 +231,7 @@
           "list": [
             "Izberite File in nato Odpri sliko diska ter poiščite datoteko.",
             "Če je disk znotraj šifriran, vpišite geslo ali geselno frazo.",
-            "Vsebina se pojavi v Finderju, pod Locations."
+            "Vsebina se pojavi v Finderju, pod Lokacije."
           ],
           "listKind": "steps"
         },
