@@ -155,15 +155,9 @@ jobs:
             echo "No zone or token; cannot report the failure mode."
             exit 0
           fi
-          curl -sS "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes" \
-            -H "Authorization: Bearer $CF_TOKEN" \
-            | python3 -c 'import json,sys
-d=json.load(sys.stdin)
-if not d.get("success"):
-    print("  the API refused:", json.dumps(d.get("errors"))); raise SystemExit(0)
-for r in d.get("result", []):
-    keys = {k: v for k, v in r.items() if k not in ("id",)}
-    print("  route:", json.dumps(keys, ensure_ascii=False))'
+          routes=$(curl -sS "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes" -H "Authorization: Bearer $CF_TOKEN")
+          echo "$routes" | jq -e '.success' >/dev/null || { echo "$routes" | jq -c '.errors'; exit 0; }
+          echo "$routes" | jq -c '.result[]'
 
       # The deploy said it succeeded. This asks the live site whether it did.
       #
