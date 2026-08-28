@@ -8,7 +8,7 @@ Three policies, exactly as in the application's `translations/context/terms.json
 
 | Policy | What to do |
 | --- | --- |
-| **keep verbatim** | Write it exactly as in the English, in Latin script, whatever the surrounding language. Do not transliterate. |
+| **keep verbatim** | Keep the letters of the name exactly as in the English, in Latin script, whatever the surrounding language. Do not transliterate and do not respell. A grammatical ending your language needs is fine as long as the name itself survives inside it — see below. |
 | **Apple's term** | Use the words Apple itself uses in this language on macOS. Where macOS is not offered in this language, keep the English, because the reader's own Mac shows the English. |
 | **translate** | An ordinary word. Translate it. |
 
@@ -23,6 +23,23 @@ way in every language.
 LUKS2, LVM, ext4, btrfs, XFS, exFAT, qcow2, VMDK, VDI, VHD, VHDX, IMG, DMG, OVA,
 VMware, VirtualBox, Hyper-V, QEMU, UTM, Ubuntu, Debian, Mint, Fedora, Windows,
 Linux, GitHub, `qemu-img`, GPL, GNU General Public License.
+
+### Endings are allowed; respelling is not
+
+A language that inflects will attach an ending to a foreign name, and that is
+not a breach of this rule. `Macilla`, `BitLockeria`, `Finderu`, `Windowsiin`,
+`Mac'te`, `NTFS:ää` and `Mac-uri` all keep every letter of the name and let the
+grammar ride on the end of it. That is how this corpus already reads, in every
+language that works that way, and it is what `scripts/verbatim.mjs` checks: the
+test anchors the start of the name and nothing else.
+
+What the rule forbids is the name coming out as different letters —
+transliteration into another script, or a local respelling. `фaйндер` for
+Finder, `Bitlocker` for BitLocker, `эн-ти-эф-эс` for NTFS.
+
+So do not report a finding that only moves an ending onto a compound noun.
+`Macissa` does not need to become `Mac-tietokoneessa`. If the sentence reads
+badly for some other reason, report that reason instead.
 
 ## Apple's term
 
