@@ -15,6 +15,7 @@ src/styles.css       the visual system, light and dark
 src/script.js        appearance, language menu, platform notice, copy button
 scripts/build.mjs    builds public/
 scripts/check.mjs    checks what was built
+content/slugs.json   every published address, so none moves unnoticed
 ```
 
 ## Commands
@@ -45,6 +46,17 @@ an `llms.txt` that no longer states what the pages state.
 `--strict` also refuses while any language carries English text, and when a
 configured language built no page. Both `build.mjs --strict` and
 `check.mjs --strict` run in the deploy workflow.
+
+`check-slugs.mjs` refuses a published address that moved. Every slug becomes a
+URL, GitHub Pages cannot redirect, and `pages-translate.mjs apply` rewrites a
+language's file wholesale — so a second pass over one language could retire
+four indexed addresses without anybody typing a URL. `content/slugs.json` is a
+lockfile of all 222 addresses; moving one means regenerating it in the same
+commit, where the diff says which moved.
+
+```bash
+npm run slugs        # after a deliberate address change
+```
 
 ## Translations
 

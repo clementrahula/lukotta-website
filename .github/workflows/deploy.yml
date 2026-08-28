@@ -47,6 +47,8 @@ jobs:
       # or has no page at all. 37 copies of one page is duplicate content.
       - name: Check
         run: node scripts/check.mjs --strict
+      - name: Check that no published address moved
+        run: node scripts/check-slugs.mjs
 
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
         with:
