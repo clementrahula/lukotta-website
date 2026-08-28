@@ -192,6 +192,48 @@ jobs:
             exit 1
           }
 
+      # Every request to the zone is an invocation, cached or not, so a single
+      # page view costs about fourteen: the page, the stylesheet, the script,
+      # five icons, two screenshots and the font subsets. Thirteen of those are
+      # files the worker looks at once and hands straight back.
+      #
+      # A route with no worker on it negates a less specific one, so /assets/*
+      # takes the fonts, icons, brand marks and screenshots off the worker
+      # entirely. The stylesheet and the script sit at the root and carry a
+      # digest of their contents, and Cloudflare does not allow a wildcard in
+      # the middle of a pattern -- lukotta.com/*.css is not a legal route -- so
+      # they need their exact names, which change whenever they do. The names
+      # are read out of the build rather than typed here, and a route left
+      # behind by an older digest is removed.
+      - name: Keep the assets out of the worker
+        env:
+          CF_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CF_WORKERS_TOKEN }}
+        run: |
+          api="https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes"
+          css=$(cd public && ls styles.*.css 2>/dev/null) || { echo "::error::no built stylesheet in public/; the build must run before this."; exit 1; }
+          js=$(cd public && ls script.*.js 2>/dev/null) || { echo "::error::no built script in public/."; exit 1; }
+          echo "  fingerprinted this build: $css $js"
+          want=$(for h in lukotta.com www.lukotta.com; do echo "$h/assets/*"; echo "$h/$css"; echo "$h/$js"; done | sort)
+          routes=$(curl -sS "$api" -H "Authorization: Bearer $CF_TOKEN")
+          echo "$routes" | jq -e '.success' >/dev/null || { echo "$routes" | jq -c '.errors'; exit 1; }
+          have=$(echo "$routes" | jq -r '.result[] | select(.script == null or .script == "") | .pattern' | sort)
+          for pattern in $(comm -23 <(echo "$want") <(echo "$have")); do
+            echo "  excluding $pattern"
+            curl -sS -X POST "$api" -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" --data "$(jq -nc --arg p "$pattern" '{pattern: $p, script: ""}')" | jq -c '{success, errors}'
+          done
+          # A digest that is no longer the current one leaves a route pointing at
+          # a file that does not exist. Only ever an exclusion, only ever one of
+          # these two names: a route with a worker on it is never touched here.
+          for id in $(echo "$routes" | jq -r --arg want "$want" '($want | split("\n")) as $w | .result[] | select((.script == null or .script == "") and (.pattern | test("^(www\\.)?lukotta\\.com/(styles|script)\\.[a-z0-9]+\\.(css|js)$")) and (.pattern | IN($w[]) | not)) | .id'); do
+            echo "  removing a route left by an older digest"
+            curl -sS -X DELETE "$api/$id" -H "Authorization: Bearer $CF_TOKEN" | jq -c '{success, errors}'
+          done
+          after=$(curl -sS "$api" -H "Authorization: Bearer $CF_TOKEN")
+          echo "$after" | jq -c '.result[] | {pattern, script}'
+          missing=$(comm -23 <(echo "$want") <(echo "$after" | jq -r '.result[] | select(.script == null or .script == "") | .pattern' | sort))
+          [ -z "$missing" ] || { echo "::error::still routed through the worker:"; echo "$missing"; exit 1; }
+
       # The deploy said it succeeded. This asks the live site whether it did.
       #
       # Everything up to here can pass while the one thing the worker exists
