@@ -139,17 +139,53 @@ allowed.
 ## Deployment
 
 A push to `main` builds and publishes to GitHub Pages. The workflow runs
-`build.mjs --strict`, `lint-translations.mjs` and `check.mjs --strict` before
-publishing, so a failure of any of them stops the deploy.
+`build.mjs --strict`, `lint-translations.mjs`, `check.mjs --strict` and
+`check-slugs.mjs` before publishing, so a failure of any of them stops the
+deploy.
 
 Cloudflare proxies the domain, SSL/TLS mode Full. HTML is not cached at the
 edge; the stylesheet and script carry a digest of their contents, so a change
 gives them a new name and no cache can serve the old one. Replacing an image
 under its own name is the one case that needs a manual purge.
 
-`CF_ZONE_ID` and `CF_API_TOKEN` are optional repository secrets. When set, the
-deploy purges the Cloudflare cache; when not, it says so and the deploy still
-counts as done.
+### The markdown negotiator
+
+`worker/` is a Cloudflare Worker that serves a page's markdown twin to a caller
+that asked for `text/markdown`, and passes everything else through. It is
+routed at `lukotta.com/*` and `www.lukotta.com/*`, so it sees every request the
+zone serves, and the deploy sets three things about those routes that wrangler
+cannot express and nobody should have to remember:
+
+- **The routes fail open.** Cloudflare creates them fail *closed*, which means
+  that once the account's daily invocation allowance runs out every request
+  gets an error page until midnight UTC. Failing open bypasses the worker and
+  lets the origin serve: an agent gets HTML instead of markdown and a 404 under
+  `/de/` comes back in English, and that is all. Nothing the worker does is a
+  security check, so there is no reading where an error page is better.
+- **The assets are not routed through it.** Every request is an invocation,
+  cached or not, and a page view pulls about fourteen files. Routes with no
+  worker on them — `/assets/*`, and the two fingerprinted root files by exact
+  name — take thirteen of those off it. The digests change, so the workflow
+  reads the names out of `public/` and removes routes left by an older one.
+- **It verifies both by reading the routes back**, and fails the job if a route
+  is still closed.
+
+`worker/negotiation.test.mjs` covers the pure decisions — what the caller
+asked for, which file is the twin, whether a path is a twin at its own address,
+and which address a twin calls canonical.
+
+### Secrets
+
+| secret | what stops without it |
+| --- | --- |
+| `CF_WORKERS_TOKEN` | the negotiator. The step fails the deploy rather than skipping. |
+| `CF_ACCOUNT_ID` | the same. |
+| `CF_ZONE_ID` | the cache purge, and the route settings above. |
+| `CF_API_TOKEN` | the cache purge. |
+
+`CF_WORKERS_TOKEN` needs Workers Scripts: Edit and Workers Routes: Edit;
+`CF_API_TOKEN` needs Zone → Cache Purge. Deliberately two tokens: different
+job, different rotation.
 
 To roll back, re-run an earlier successful Deploy from the Actions tab. The site
 is rebuilt from that commit and there is no state to restore.

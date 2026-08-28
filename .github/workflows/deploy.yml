@@ -113,7 +113,10 @@ jobs:
             echo "HTML to callers asking for markdown with nobody noticing."
             exit 1
           fi
-          npx --yes wrangler@4 deploy --config worker/wrangler.toml
+          # Pinned exactly, like every action in this file. wrangler@4 floats
+          # on a major: any 4.x release publishes with whatever behaviour that
+          # day's version has, into a worker that fronts the whole zone.
+          npx --yes wrangler@4.127.0 deploy --config worker/wrangler.toml
 
       # Cloudflare holds the pages at its edge, so a deploy that does not tell
       # it otherwise is invisible until the cache expires. The stylesheet and
