@@ -72,7 +72,7 @@
           "heading": "Kopiér filer til drevet",
           "paragraphs": [
             "BitLocker-drev åbnes til både læsning og skrivning, så en Mac kan lægge filer til en Windows-sikkerhedskopi frem for kun at hente filer fra den.",
-            "Lukotta kan også åbne drevet skrivebeskyttet, hvilket er værd at gøre, når du redder filer fra et drev, der har drillet. Så kan der ikke skrives noget til det."
+            "Lukotta kan også åbne drevet kun til læsning, hvilket er værd at gøre, når du redder filer fra et drev, der har drillet. Så kan der ikke skrives noget til det."
           ]
         }
       ]
@@ -139,7 +139,7 @@
     "ntfs": {
       "slug": "skriv-til-ntfs-drev-paa-mac",
       "title": "Skriv til et NTFS-drev på en Mac",
-      "description": "macOS åbner NTFS-drev skrivebeskyttet, så filer kan kopieres fra dem, men ikke til dem. Her er hvorfor, og hvordan du skriver til et NTFS-drev på en Mac.",
+      "description": "macOS åbner NTFS-drev kun til læsning, så filer kan kopieres fra dem, men ikke til dem. Her er hvorfor, og hvordan du skriver til et NTFS-drev på en Mac.",
       "lead": "Med macOS kan du kopiere filer fra et NTFS-drev, men ikke til det. Her er hvorfor, og hvad du kan gøre ved det.",
       "sections": [
         {
@@ -153,7 +153,7 @@
           "heading": "Hvad der sker, når du sætter et til en Mac",
           "paragraphs": [
             "Drevet dukker op i Finder, og du kan se filerne. At kopiere filer fra det virker som normalt. At kopiere noget til det gør ikke: Finder nægter, og drevet opfører sig, som var det låst.",
-            "macOS åbner NTFS-drev skrivebeskyttet. Systemet har kunnet skrive NTFS i årevis, men det er slået fra, og der er ingen understøttet måde at slå det til på. Det er sværere at skrive NTFS end at læse det, og en fejl kan efterlade et drev, som Windows bagefter nægter at åbne."
+            "macOS åbner NTFS-drev kun til læsning. Systemet har kunnet skrive NTFS i årevis, men det er slået fra, og der er ingen understøttet måde at slå det til på. Det er sværere at skrive NTFS end at læse det, og en fejl kan efterlade et drev, som Windows bagefter nægter at åbne."
           ]
         },
         {
@@ -245,8 +245,8 @@
           "heading": "Kopiér filer ind i et diskbillede",
           "paragraphs": [
             "qcow2 bliver skrevet på den almindelige måde og er sikkert at skrive til.",
-            "Der kan skrives til VMDK, VDI og VHD, men skriveunderstøttelsen er ny og har ikke været i brug længe nok til, at du bør betro den noget, du ikke har råd til at miste. Kopiér filen og arbejd på kopien, eller åbn den skrivebeskyttet og tag filer ud i stedet.",
-            "VHDX åbnes skrivebeskyttet, og det samme gør den slags VMDK, der ligger inde i en OVA-fil. Den slags bliver skrevet igennem i ét stræk og kan ikke ændres på stedet bagefter."
+            "Der kan skrives til VMDK, VDI og VHD, men skriveunderstøttelsen er ny og har ikke været i brug længe nok til, at du bør betro den noget, du ikke har råd til at miste. Kopiér filen og arbejd på kopien, eller åbn den kun til læsning og tag filer ud i stedet.",
+            "VHDX åbnes kun til læsning, og det samme gør den slags VMDK, der ligger inde i en OVA-fil. Den slags bliver skrevet igennem i ét stræk og kan ikke ændres på stedet bagefter."
           ]
         },
         {

@@ -188,7 +188,7 @@
     },
     "features.body2": {
       "en": "Any drive or image can be opened read-only instead, and Lukotta can reopen whatever was open the last time you were logged in.",
-      "da": "Ethvert drev og ethvert diskbillede kan også åbnes skrivebeskyttet, og Lukotta kan åbne igen, hvad der var åbent ved sidste log ind."
+      "da": "Ethvert drev og ethvert diskbillede kan også åbnes kun til læsning, og Lukotta kan åbne igen, hvad der var åbent ved sidste log ind."
     },
     "formats.title": {
       "en": "Supported formats",
@@ -280,7 +280,7 @@
     },
     "formats.vhdx.note": {
       "en": "Hyper-V. Opens read-only",
-      "da": "Hyper-V. Åbnes skrivebeskyttet"
+      "da": "Hyper-V. Åbnes kun til læsning"
     },
     "formats.specs": {
       "en": "Every format in full detail, including how each one is read and written",
@@ -352,7 +352,7 @@
     },
     "faq.3.a": {
       "en": "Not on its own. macOS mounts NTFS read-only. Lukotta mounts it read and write, so files copy onto an NTFS drive as well as off it.",
-      "da": "Ikke af sig selv. macOS monterer NTFS skrivebeskyttet. Lukotta monterer det til læsning og skrivning, så filer kopieres til et NTFS-drev lige så vel som fra det."
+      "da": "Ikke af sig selv. macOS monterer NTFS kun til læsning. Lukotta monterer det til læsning og skrivning, så filer kopieres til et NTFS-drev lige så vel som fra det."
     },
     "faq.4.q": {
       "en": "How do you read an ext4 or btrfs drive on a Mac?",
@@ -368,7 +368,7 @@
     },
     "faq.5.a": {
       "en": "Yes. Lukotta opens a qcow2, VMDK, VDI, VHD or VHDX image directly and copies files out of it, or into it. Writing is experimental for VMDK, VDI and VHD; VHDX and stream-optimized VMDK open read-only.",
-      "da": "Ja. Lukotta åbner et qcow2-, VMDK-, VDI-, VHD- eller VHDX-diskbillede direkte og kopierer filer ud af det eller ind i det. Skrivning er eksperimentel for VMDK, VDI og VHD; VHDX og VMDK stream-optimized åbnes skrivebeskyttet."
+      "da": "Ja. Lukotta åbner et qcow2-, VMDK-, VDI-, VHD- eller VHDX-diskbillede direkte og kopierer filer ud af det eller ind i det. Skrivning er eksperimentel for VMDK, VDI og VHD; VHDX og VMDK stream-optimized åbnes kun til læsning."
     },
     "faq.6.q": {
       "en": "Does Lukotta run on an Intel Mac?",

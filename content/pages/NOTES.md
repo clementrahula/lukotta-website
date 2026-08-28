@@ -15,6 +15,33 @@ says **gendannelsesnøgle**. The application says genoprettelsesnøgle. The task
 pages follow the majority, but one of the two landing strings should change so
 the site says one thing.
 
+## da — the site called a drive a drev where the application says enhed
+
+The audit raised this and proposed nothing, because both are real Danish words
+for the same object. The counts: the application says **enhed** 69 times and
+**drev** twice; the site says **drev** 126 times and **enhed** 15.
+
+The site keeps **drev**, deliberately, and this is the one place the rule that
+the application wins has been set aside. Three reasons. It is the more specific
+ordinary word for what these pages are about — an external disk somebody has
+plugged in — and the reviewer, reading as a Dane, said so and recommended the
+application move rather than the pages. The application's *enhed* comes from its
+own screens, where it names rows in a device list. And 126 occurrences of
+inflected Danish prose is not a substitution: *drev*, *drevet*, *drevene*,
+*USB-drev* do not map onto *enhed* one for one without a Danish speaker reading
+every sentence afterwards.
+
+So the divergence is deliberate and recorded rather than accidental. If it is
+ever settled the other way, it is the application that should move.
+
+## da — read-only: the site now says what the application says
+
+Separately, the site said **skrivebeskyttet** in all nine places it named the
+mode, while the application says **kun til læsning** (7 uses against 3). Those
+nine now say *kun til læsning*. Both are fifteen characters, so nothing that is
+measured for length moved. The same choice was made for German, where the
+application's button says *Nur lesend öffnen*.
+
 ## nb — the existing landing page alternates between "stasjon" and "disk"
 
 `how.lead` and `features.body2` say **stasjon**; `faq.2.a` and `faq.3.a` say
