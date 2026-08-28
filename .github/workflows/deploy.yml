@@ -140,6 +140,31 @@ jobs:
             exit 1
           }
 
+      # A worker in front of the whole zone is a single point of failure the
+      # moment the account's daily invocation allowance runs out. Cloudflare
+      # decides what happens then per route, and wrangler cannot express the
+      # setting, so it is invisible from this repository: the deploy above
+      # rewrites the routes on every push and nothing here has ever looked at
+      # what mode they came back in. This reports it. It changes nothing.
+      - name: Report the routes' request-limit failure mode
+        env:
+          CF_ZONE: ${{ secrets.CF_ZONE_ID }}
+          CF_TOKEN: ${{ secrets.CF_WORKERS_TOKEN }}
+        run: |
+          if [ -z "$CF_ZONE" ] || [ -z "$CF_TOKEN" ]; then
+            echo "No zone or token; cannot report the failure mode."
+            exit 0
+          fi
+          curl -sS "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/workers/routes" \
+            -H "Authorization: Bearer $CF_TOKEN" \
+            | python3 -c 'import json,sys
+d=json.load(sys.stdin)
+if not d.get("success"):
+    print("  the API refused:", json.dumps(d.get("errors"))); raise SystemExit(0)
+for r in d.get("result", []):
+    keys = {k: v for k, v in r.items() if k not in ("id",)}
+    print("  route:", json.dumps(keys, ensure_ascii=False))'
+
       # The deploy said it succeeded. This asks the live site whether it did.
       #
       # Everything up to here can pass while the one thing the worker exists
