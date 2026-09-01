@@ -738,9 +738,12 @@ ${taskPagesBuilt.filter((x) => x.code === cfg.defaultLang).map(({ slug, title, d
    something to remember. */
 const securityTxtExpiry = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
   .toISOString().replace(/\.\d{3}Z$/, "Z");
-mkdirSync(join(OUT, ".well-known"), { recursive: true });
+/* Written at the root, not under .well-known, because GitHub Pages does not
+   serve a path beginning with a dot -- /.nojekyll answers 404 on this site, so
+   /.well-known/ never had a chance. The worker maps the canonical address onto
+   this file, which is the only place in the stack that can. */
 writeFileSync(
-  join(OUT, ".well-known", "security.txt"),
+  join(OUT, "security.txt"),
   `# The application and this site share one security policy.
 Contact: ${cfg.githubRepo}/security/advisories/new
 Contact: mailto:${cfg.supportEmail}

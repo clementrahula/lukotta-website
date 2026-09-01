@@ -109,6 +109,14 @@ async function localisedNotFound(request, url) {
   });
 }
 
+/* RFC 9116 puts security.txt at /.well-known/security.txt, and GitHub Pages does
+   not serve a path beginning with a dot -- /.nojekyll answers 404 on this site,
+   so the whole directory is unreachable. The build writes /security.txt instead
+   and this maps the canonical address onto it. A redirect would satisfy the RFC
+   too, but serving it at the address it claims as canonical is the honest
+   version and costs one fetch either way. */
+const SECURITY_TXT = "/.well-known/security.txt";
+
 export default {
   async fetch(request, env, ctx) {
     /* A worker in front of a whole zone that throws returns a Cloudflare error
@@ -128,6 +136,22 @@ async function negotiate(request) {
     const url = new URL(request.url);
     const method = request.method.toUpperCase();
     const asked = wantsMarkdown(request.headers.get("Accept"));
+
+    if (url.pathname === SECURITY_TXT && (method === "GET" || method === "HEAD")) {
+      const file = await fetch(new URL("/security.txt", url).toString(), {
+        cf: { cacheEverything: true },
+      });
+      if (file.ok) {
+        return withVary(new Response(method === "HEAD" ? null : file.body, {
+          status: 200,
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8",
+            "Cache-Control": file.headers.get("Cache-Control") || "public, max-age=3600",
+          },
+        }));
+      }
+      /* Fall through to the origin, which will 404 honestly. */
+    }
 
     if ((method !== "GET" && method !== "HEAD") || !asked) {
       const passed = await fetch(request);

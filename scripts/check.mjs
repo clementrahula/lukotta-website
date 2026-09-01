@@ -316,9 +316,9 @@ for (const lang of cfg.languages) {
    it names a reporting channel while declaring itself out of date. The build
    sets it a year ahead, so this only fires if nothing has been deployed for
    eleven months -- at which point the fix is a deploy. */
-const securityTxtPath = join(OUT, ".well-known", "security.txt");
+const securityTxtPath = join(OUT, "security.txt");
 if (!existsSync(securityTxtPath)) {
-  err("no .well-known/security.txt was written.");
+  err("no security.txt was written.");
 } else {
   const txt = readFileSync(securityTxtPath, "utf8");
   const expires = txt.match(/^Expires:\s*(\S+)/m);
