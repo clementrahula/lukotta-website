@@ -257,47 +257,12 @@ is rebuilt from that commit and there is no state to restore.
 
 `indexnow.mjs` submits every `<loc>` in the sitemap -- all of them, not the ones
 that changed -- on every deploy, so Bing, Yandex, Seznam and Naver are told
-about every page each time the site ships. Google does not take part; it has
-the sitemap from `robots.txt` and Search Console.
+about every page each time the site ships. Google does not take part; it has the
+sitemap from `robots.txt` and Search Console.
 
-Bing Webmaster has an API worth reading before concluding anything about how
-the site is doing. The key is not in this repository and is not a deploy
-secret: it is held locally by the maintainer, so a contributor cannot run these
-checks and nothing in the build depends on them. Bing accepts the key only as a
-query parameter, so pass it through `curl -K -` rather than putting it in a
-command line.
-
-**The API throttles hard, and it fails in a shape that looks like data.** Rapid
-sequential calls start returning
-
-```
-{"ErrorCode":5,"Message":"ERROR!!! ThrottleHost"}
-```
-
-with HTTP 400. A reader that goes straight for the success shape sees a missing
-field rather than an error, and `GetUrlInfo` then reports every page as absent
-from the index -- including pages that answered correctly a minute earlier. So:
-check `ErrorCode` before anything else, space calls about twelve seconds apart,
-and include a URL known not to exist as a control. If the control does not come
-back negative, the run is not evidence of anything.
-
-### What was indexed on 2026-09-01
-
-Bing had `/` and the language home pages from 26 August, and `/about/` from the
-28th. `/contact/` and all four task pages were absent.
-
-**That is crawl lag and it needs no action.** Every one of them is in the
-sitemap, answers 200, is self-canonical and carries no `robots` meta, and
-IndexNow has submitted them on every deploy since. `/about/` being indexed
-while `/contact/` is not, when they are the same kind of page built by the same
-code, is the tell: this is the order Bing got to them in, not a property of the
-pages.
-
-The temptation on reading "the task pages are not indexed" is to spend the
-submission quota -- a hundred URLs a day -- on them. That sends the same signal
-through a second endpoint and buys nothing. Recheck against the dates above
-before deciding anything. Pages still missing after several weeks of crawling
-would be a real finding; pages missing after one week are a clock.
+What the engines currently hold, and the tooling that asks them, live outside
+this repository: they cover every property rather than this one, and they name
+things that do not belong in a public repository.
 
 ## Licences
 
