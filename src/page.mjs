@@ -173,6 +173,21 @@ export function siteFooter({ t, cfg, away, copyright, authorLink, contactHref, a
   </footer>`;
 }
 
+/* Plex Sans is the running text and the largest file a page loads that is not
+   a screenshot. It is named only inside the stylesheet, so without this the
+   browser cannot discover it until the stylesheet has arrived and been parsed,
+   and the text spends that time in the fallback face before swapping.
+
+   Every language wants this one file. The subsets are split by unicode-range
+   and there is no CJK subset, so a page in Japanese sets its own script in the
+   system font and still pulls the Latin subset for BitLocker, NTFS and macOS.
+
+   crossorigin is not optional, and not because the file is remote: a font is
+   always fetched in CORS mode, so a preload without it does not match the
+   request the stylesheet later makes and the browser fetches the file twice. */
+const fontPreload = (prefix) =>
+  `<link rel="preload" href="${prefix}assets/fonts/plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>`;
+
 export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, shotSize, buildable, indexable, assets, taskPages, contactHref, aboutHref }) {
   const { dir, code, native } = lang;
 
@@ -397,6 +412,11 @@ ${hreflang}
   <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
   <link rel="manifest" href="${assetPrefix}site.webmanifest">
 
+  ${fontPreload(assetPrefix)}
+  <!-- media picks the appearance that will be painted, so only that one is
+       fetched early. The other still cross-fades. AGENTS.md says why. -->
+  <link rel="preload" as="image" href="${shot("light")}" media="(prefers-color-scheme: light)">
+  <link rel="preload" as="image" href="${shot("dark")}" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="${assetPrefix}${assets.css}">
 
   <!-- data-cfasync="false" keeps Cloudflare's Rocket Loader from deferring
@@ -459,15 +479,17 @@ ${siteHeader({ t, A, home: "#top", icons: { sunIcon, moonIcon, globeIcon }, nati
           </div>
           <!-- Both appearances are present and cross-fade between them. Only
                the light one carries the description; they show the same thing,
-               so the dark one is hidden rather than described twice. -->
+               so the dark one is hidden rather than described twice.
+               Neither carries fetchpriority; the head preloads carry the
+               media query instead. AGENTS.md says why. -->
           <div class="shot-frame">
             <img class="shot-img shot-light" src="${shot("light")}"
                  alt="${esc(t("hero.screenshotAlt"))}"
                  width="${shotSize.width}" height="${shotSize.height}"
-                 fetchpriority="high" decoding="async">
+                 decoding="async">
             <img class="shot-img shot-dark" src="${shot("dark")}" alt="" aria-hidden="true"
                  width="${shotSize.width}" height="${shotSize.height}"
-                 fetchpriority="high" decoding="async">
+                 decoding="async">
           </div>
         </figure>
       </div>
@@ -736,6 +758,7 @@ ${taskHreflang}
   <link rel="icon" href="${A("favicon-16.png")}" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
   <link rel="manifest" href="${assetPrefix}site.webmanifest">
+  ${fontPreload(assetPrefix)}
   <link rel="stylesheet" href="${assetPrefix}${assets.css}">
 
   <script data-cfasync="false">
@@ -865,6 +888,7 @@ ${items.map(([href, name, what]) =>
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="/${A("favicon-32.png")}" sizes="32x32" type="image/png">
   <link rel="icon" href="/${A("favicon-16.png")}" sizes="16x16" type="image/png">
+  ${fontPreload("/")}
   <link rel="stylesheet" href="/${assets.css}">
 
   <script data-cfasync="false">

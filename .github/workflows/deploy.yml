@@ -210,6 +210,14 @@ jobs:
       # they need their exact names, which change whenever they do. The names
       # are read out of the build rather than typed here, and a route left
       # behind by an older digest is removed.
+      #
+      # The five files in $stable come off it for the same reason and are named
+      # here because their names never change. Four of them are what a crawler
+      # asks for before it asks for anything else, and robots.txt and
+      # sitemap.xml are fetched far more often than any page: an agent reading
+      # the site should not spend the invocation allowance on them. None needs
+      # the worker. It negotiates markdown for pages and marks the twins
+      # noindex, and none of these is a page or a twin.
       - name: Keep the assets out of the worker
         env:
           CF_ZONE: ${{ secrets.CF_ZONE_ID }}
@@ -219,7 +227,11 @@ jobs:
           css=$(cd public && ls styles.*.css 2>/dev/null) || { echo "::error::no built stylesheet in public/; the build must run before this."; exit 1; }
           js=$(cd public && ls script.*.js 2>/dev/null) || { echo "::error::no built script in public/."; exit 1; }
           echo "  fingerprinted this build: $css $js"
-          want=$(for h in lukotta.com www.lukotta.com; do echo "$h/assets/*"; echo "$h/$css"; echo "$h/$js"; done | sort)
+          stable="robots.txt sitemap.xml llms.txt favicon.ico site.webmanifest"
+          want=$(for h in lukotta.com www.lukotta.com; do
+                   echo "$h/assets/*"; echo "$h/$css"; echo "$h/$js"
+                   for f in $stable; do echo "$h/$f"; done
+                 done | sort)
           routes=$(curl -sS "$api" -H "Authorization: Bearer $CF_TOKEN")
           echo "$routes" | jq -e '.success' >/dev/null || { echo "$routes" | jq -c '.errors'; exit 1; }
           have=$(echo "$routes" | jq -r '.result[] | select(.script == null or .script == "") | .pattern' | sort)
