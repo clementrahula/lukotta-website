@@ -255,6 +255,16 @@ is rebuilt from that commit and there is no state to restore.
 
 ## Search visibility
 
+**Before changing anything about Cloudflare, search visibility or page weight,
+read `CHECKLIST.md` in the seo-tools repository.** It is the list of things
+that are invisible until looked for -- edge settings that silently block AI
+crawlers, Security Center advisories that would put that blocking back, what
+GitHub Pages refuses to serve, and how PageSpeed and the Bing API mislead. It
+also holds the readings each property was last measured at. That repository is
+private and holds the credentials and the site list, which is why the detail is
+there and not here.
+
+
 `indexnow.mjs` submits every `<loc>` in the sitemap -- all of them, not the ones
 that changed -- on every deploy, so Bing, Yandex, Seznam and Naver are told
 about every page each time the site ships. Google does not take part; it has the
