@@ -407,6 +407,10 @@ ${hreflang}
   <meta name="twitter:image" content="${cfg.domain}/assets/og.png">
   <meta name="twitter:image:alt" content="${esc(t("meta.imageAlt"))}">
 
+  <!-- 192 first: Google will not use a search-result favicon below 48x48, and
+       this site declared only 16 and 32, which is why results showed a blank
+       circle. The file was already built and deployed, just never named. -->
+  <link rel="icon" href="${A("icon-192.png")}" sizes="192x192" type="image/png">
   <link rel="icon" href="${A("favicon-32.png")}" sizes="32x32" type="image/png">
   <link rel="icon" href="${A("favicon-16.png")}" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
@@ -754,6 +758,10 @@ ${taskHreflang}
   <meta name="twitter:image" content="${cfg.domain}/assets/og.png">
   <meta name="twitter:image:alt" content="${esc(t("meta.imageAlt"))}">
 
+  <!-- 192 first: Google will not use a search-result favicon below 48x48, and
+       this site declared only 16 and 32, which is why results showed a blank
+       circle. The file was already built and deployed, just never named. -->
+  <link rel="icon" href="${A("icon-192.png")}" sizes="192x192" type="image/png">
   <link rel="icon" href="${A("favicon-32.png")}" sizes="32x32" type="image/png">
   <link rel="icon" href="${A("favicon-16.png")}" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="${A("apple-touch-icon.png")}">
@@ -886,6 +894,10 @@ ${items.map(([href, name, what]) =>
   <meta name="theme-color" content="#FBF8F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15161A" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
+  <!-- 192 first: Google will not use a search-result favicon below 48x48, and
+       this site declared only 16 and 32, which is why results showed a blank
+       circle. The file was already built and deployed, just never named. -->
+  <link rel="icon" href="/${A("icon-192.png")}" sizes="192x192" type="image/png">
   <link rel="icon" href="/${A("favicon-32.png")}" sizes="32x32" type="image/png">
   <link rel="icon" href="/${A("favicon-16.png")}" sizes="16x16" type="image/png">
   ${fontPreload("/")}
