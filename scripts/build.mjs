@@ -727,6 +727,31 @@ ${taskPagesBuilt.filter((x) => x.code === cfg.defaultLang).map(({ slug, title, d
   "utf8"
 );
 
+/* security.txt, RFC 9116. The policy and the private reporting channel both
+   live with the application; this is the address a researcher looks at first,
+   so it points at them rather than restating them.
+
+   Expires is mandatory in the RFC and an expired file is worse than none: it
+   advertises a channel while saying it is stale. It is a year out, computed
+   from the build rather than typed, and check.mjs refuses a build once fewer
+   than thirty days remain, so the renewal is a failing check rather than
+   something to remember. */
+const securityTxtExpiry = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+  .toISOString().replace(/\.\d{3}Z$/, "Z");
+mkdirSync(join(OUT, ".well-known"), { recursive: true });
+writeFileSync(
+  join(OUT, ".well-known", "security.txt"),
+  `# The application and this site share one security policy.
+Contact: ${cfg.githubRepo}/security/advisories/new
+Contact: mailto:${cfg.supportEmail}
+Expires: ${securityTxtExpiry}
+Policy: ${cfg.githubRepo}/blob/main/SECURITY.md
+Preferred-Languages: en
+Canonical: ${cfg.domain}/.well-known/security.txt
+`,
+  "utf8"
+);
+
 writeFileSync(
   join(OUT, "robots.txt"),
   /* The wildcard already allows everything. These are named anyway: a crawler

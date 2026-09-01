@@ -311,6 +311,28 @@ for (const lang of cfg.languages) {
   }
 }
 
+/* --- security.txt must not be advertising a stale channel --- */
+/* RFC 9116 makes Expires mandatory, and a file past it is worse than no file:
+   it names a reporting channel while declaring itself out of date. The build
+   sets it a year ahead, so this only fires if nothing has been deployed for
+   eleven months -- at which point the fix is a deploy. */
+const securityTxtPath = join(OUT, ".well-known", "security.txt");
+if (!existsSync(securityTxtPath)) {
+  err("no .well-known/security.txt was written.");
+} else {
+  const txt = readFileSync(securityTxtPath, "utf8");
+  const expires = txt.match(/^Expires:\s*(\S+)/m);
+  if (!expires) {
+    err("security.txt has no Expires field, which RFC 9116 requires.");
+  } else {
+    const days = (Date.parse(expires[1]) - Date.now()) / 86400000;
+    if (Number.isNaN(days)) err(`security.txt Expires is not a date: ${expires[1]}`);
+    else if (days < 0) err(`security.txt expired ${Math.abs(days).toFixed(0)} day(s) ago.`);
+    else if (days < 30) err(`security.txt expires in ${days.toFixed(0)} day(s). Rebuild to renew it.`);
+  }
+  if (!/^Contact:/m.test(txt)) err("security.txt has no Contact field.");
+}
+
 /* --- robots.txt must not shut out what the site is trying to reach --- */
 const robotsPath = join(OUT, "robots.txt");
 if (existsSync(robotsPath)) {
