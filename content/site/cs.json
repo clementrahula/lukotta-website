@@ -51,7 +51,7 @@
             "Použij sledování chyb na github.com/clementrahula/lukotta/issues. Pokud jsi GitHub ještě nepoužil: je to web, kde leží zdrojový kód aplikace Lukotta, a issue je veřejná zpráva o projektu. K jejímu napsání stačí bezplatný účet. Issues čtu jako první a zůstávají veřejné pro dalšího člověka se stejným dotazem.",
             "U chyby popiš, o jaký disk jde, co Lukotta ukázala a co jsi čekal, a cituj každou chybovou hlášku přesně. Neuváděj heslo ani obnovovací klíč.",
             "Opravy překladů jsou stejně užitečné. Většinou jazyků, ve kterých aplikace vychází, nemluvím, takže cituj řádek a napiš, co tam má být.",
-            "Můžeš také napsat na contact_web@lukotta.com, pokud GitHub raději nepoužiješ, na e-maily ale odpovídám pomaleji."
+            "Můžeš také napsat na bugreport@lukotta.com, pokud GitHub raději nepoužiješ, na e-maily ale odpovídám pomaleji."
           ]
         },
         {

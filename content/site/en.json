@@ -45,7 +45,7 @@
             "Please use the issue tracker at github.com/clementrahula/lukotta/issues. If you have not used GitHub before, it is the site that hosts Lukotta's source code, and an issue is a public message about the project. Writing one requires a free account. Issues are the first thing I read, and they stay public for the next person with the same question.",
             "For a bug, describe the drive, what Lukotta showed you and what you expected, and quote any error message exactly. Do not include a password or a recovery key.",
             "Corrections to the translations are just as useful. I do not speak most of the languages the app is published in, so please quote the line and say what it should be instead.",
-            "You can also email contact_web@lukotta.com if you would rather not use GitHub, though I reply to email more slowly."
+            "You can also email bugreport@lukotta.com if you would rather not use GitHub, though I reply to email more slowly."
           ]
         },
         {

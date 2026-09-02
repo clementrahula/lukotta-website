@@ -51,7 +51,7 @@
             "Kasuta veajälgijat aadressil github.com/clementrahula/lukotta/issues. Kui sa pole GitHubi varem kasutanud: see on sait, kus asub Lukotta lähtekood, ja issue on avalik sõnum projekti kohta. Selle kirjutamiseks on vaja tasuta kontot. Issue'd on esimene asi, mida ma loen, ja need jäävad avalikuks järgmisele, kellel on sama küsimus.",
             "Vea puhul kirjelda ketast, mida Lukotta näitas ja mida sa ootasid, ning tsiteeri iga veateadet täpselt. Ära lisa parooli ega taastevõtit.",
             "Tõlkeparandused on sama kasulikud. Ma ei räägi enamikku keeli, milles rakendus ilmub, seega tsiteeri rida ja kirjuta, mis seal peaks olema.",
-            "Võid ka kirjutada aadressile contact_web@lukotta.com, kui sa ei taha GitHubi kasutada, kuigi e-kirjadele vastan aeglasemalt."
+            "Võid ka kirjutada aadressile bugreport@lukotta.com, kui sa ei taha GitHubi kasutada, kuigi e-kirjadele vastan aeglasemalt."
           ]
         },
         {

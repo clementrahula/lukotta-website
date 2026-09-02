@@ -51,7 +51,7 @@
             "Käytä ongelmaseurantaa osoitteessa github.com/clementrahula/lukotta/issues. Jos GitHub ei ole tuttu: se on sivusto, jolla sovelluksen Lukotta lähdekoodi sijaitsee, ja issue on julkinen viesti projektista. Sen kirjoittamiseen tarvitaan ilmainen tili. Luen issuet ensimmäisenä, ja ne jäävät julkisiksi seuraavalle, jolla on sama kysymys.",
             "Kerro virheestä, mikä levy on kyseessä, mitä Lukotta näytti ja mitä odotit, ja lainaa virheilmoitus tarkalleen. Älä liitä mukaan salasanaa äläkä palautusavainta.",
             "Käännöskorjaukset ovat yhtä hyödyllisiä. En puhu useimpia kieliä, joilla sovellus julkaistaan, joten lainaa rivi ja kirjoita, mitä siinä pitäisi lukea.",
-            "Voit myös kirjoittaa osoitteeseen contact_web@lukotta.com, jos et halua käyttää GitHubia, mutta vastaan sähköposteihin hitaammin."
+            "Voit myös kirjoittaa osoitteeseen bugreport@lukotta.com, jos et halua käyttää GitHubia, mutta vastaan sähköposteihin hitaammin."
           ]
         },
         {

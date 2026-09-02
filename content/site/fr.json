@@ -51,7 +51,7 @@
             "Utilisez le suivi des tickets sur github.com/clementrahula/lukotta/issues. Si vous ne connaissez pas GitHub : c’est le site qui héberge le code source de Lukotta, et un ticket est un message public à propos du projet. En écrire un demande un compte gratuit. Les tickets sont ce que je lis en premier, et ils restent publics pour la personne suivante qui aura la même question.",
             "Pour un bug, décrivez le disque, ce que Lukotta a affiché et ce que vous attendiez, et citez chaque message d’erreur exactement. N’indiquez ni mot de passe ni clé de récupération.",
             "Les corrections de traduction sont tout aussi utiles. Je ne parle pas la plupart des langues dans lesquelles l’app est publiée, alors citez la ligne et dites ce qu’elle devrait dire.",
-            "Vous pouvez aussi écrire à contact_web@lukotta.com si vous préférez ne pas utiliser GitHub, mais je réponds plus lentement aux courriels."
+            "Vous pouvez aussi écrire à bugreport@lukotta.com si vous préférez ne pas utiliser GitHub, mais je réponds plus lentement aux courriels."
           ]
         },
         {

@@ -51,7 +51,7 @@
             "Usa il tracker delle issue su github.com/clementrahula/lukotta/issues. Se non hai mai usato GitHub: è il sito che ospita il codice sorgente di Lukotta, e una issue è un messaggio pubblico sul progetto. Per scriverne una serve un account gratuito. Le issue sono la prima cosa che leggo, e restano pubbliche per la prossima persona con la stessa domanda.",
             "Per un errore, descrivi il disco, che cosa ti ha mostrato Lukotta e che cosa ti aspettavi, e cita ogni messaggio di errore esattamente. Non includere una password né una chiave di ripristino.",
             "Le correzioni alle traduzioni sono altrettanto utili. Non parlo la maggior parte delle lingue in cui l’app è pubblicata, quindi cita la riga e scrivi che cosa dovrebbe dire.",
-            "Puoi anche scrivere a contact_web@lukotta.com se preferisci non usare GitHub, anche se alle email rispondo più lentamente."
+            "Puoi anche scrivere a bugreport@lukotta.com se preferisci non usare GitHub, anche se alle email rispondo più lentamente."
           ]
         },
         {

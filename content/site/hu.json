@@ -51,7 +51,7 @@
             "Használd a problémakövetőt a github.com/clementrahula/lukotta/issues címen. Ha még nem használtad a GitHubot: ez az az oldal, ahol a Lukotta forráskódja van, egy bejegyzés pedig nyilvános üzenet a projektről. A megírásához ingyenes fiók kell. A bejegyzéseket olvasom először, és nyilvánosak maradnak a következő embernek, akinek ugyanez a kérdése.",
             "Hiba esetén írd le, milyen lemezről van szó, mit mutatott a Lukotta és mire számítottál, és idézz minden hibaüzenetet pontosan. Ne adj meg jelszót és helyreállítási kulcsot.",
             "A fordítási javítások ugyanolyan hasznosak. A legtöbb nyelvet, amelyen az alkalmazás megjelenik, nem beszélem, ezért idézd a sort, és írd meg, minek kellene ott állnia.",
-            "Írhatsz a contact_web@lukotta.com címre is, ha inkább nem használnád a GitHubot, bár e-mailre lassabban válaszolok."
+            "Írhatsz a bugreport@lukotta.com címre is, ha inkább nem használnád a GitHubot, bár e-mailre lassabban válaszolok."
           ]
         },
         {

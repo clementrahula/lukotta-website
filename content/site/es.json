@@ -51,7 +51,7 @@
             "Usa el gestor de incidencias en github.com/clementrahula/lukotta/issues. Si no has usado GitHub antes: es el sitio donde está el código fuente de Lukotta, y una incidencia es un mensaje público sobre el proyecto. Escribir una requiere una cuenta gratuita. Las incidencias son lo primero que leo, y quedan públicas para la siguiente persona con la misma duda.",
             "Para un fallo, describe el disco, qué te mostró Lukotta y qué esperabas, y cita cualquier mensaje de error tal cual. No incluyas una contraseña ni una clave de recuperación.",
             "Las correcciones de las traducciones son igual de útiles. No hablo la mayoría de los idiomas en los que se publica la app, así que cita la línea y di lo que debería poner.",
-            "También puedes escribir a contact_web@lukotta.com si prefieres no usar GitHub, aunque el correo lo respondo más despacio."
+            "También puedes escribir a bugreport@lukotta.com si prefieres no usar GitHub, aunque el correo lo respondo más despacio."
           ]
         },
         {
