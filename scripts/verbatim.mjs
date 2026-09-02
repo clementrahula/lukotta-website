@@ -13,6 +13,7 @@ export const VERBATIM = [
   "qcow2", "VMDK", "VDI", "VHDX", "VHD", "IMG", "DMG", "OVA", "TPM",
   "VMware", "VirtualBox", "Hyper-V", "QEMU", "UTM", "Windows", "Linux",
   "Apple Silicon", "Sequoia", "GitHub", "SECURITY.md", "llms.txt",
+  "anylinuxfs",
   "github.com", "rahula.dev", "GNU General Public License",
   "Creative Commons Attribution-ShareAlike 4.0",
 ];

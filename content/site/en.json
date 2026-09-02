@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "order": [
     "about",
     "contact"
@@ -8,48 +8,22 @@
     "about": {
       "slug": "about",
       "title": "About Lukotta",
-      "description": "Lukotta is a free, open-source macOS app that opens BitLocker, NTFS and Linux drives. Maintained by one developer under the GNU General Public License.",
-      "lead": "Lukotta opens drives and disk images that macOS cannot read. It is free, open source, and maintained by one person.",
+      "description": "Why Lukotta exists, what it is built on, and who created and maintains it. A Mac app for BitLocker and Linux drives, still in early development.",
       "sections": [
-        {
-          "heading": "What it is",
-          "paragraphs": [
-            "Lukotta is a macOS application. It opens BitLocker, NTFS, LUKS, ext4, btrfs and XFS drives, and virtual machine disk images in the qcow2, VMDK, VDI, VHD and VHDX formats. macOS cannot read any of those on its own. It can read NTFS but not write to it.",
-            "It starts a small Linux virtual machine in the background, opens the drive there, and hands it back to Finder. Linux has read these formats for years. The drive is not converted or copied. It stays as it was, and the machine it came from still reads it."
-          ]
-        },
-        {
-          "heading": "Who maintains it",
-          "paragraphs": [
-            "[A single developer](https://rahula.dev). There is no company, no investors and no team."
-          ]
-        },
         {
           "heading": "Why it exists",
           "paragraphs": [
-            "Plug a BitLocker drive into a Mac and Finder offers to erase it. It does not ask for a password, and nothing on screen shows that the drive is locked rather than broken.",
-            "It seemed silly that in this day and age there is no practical way to share an encrypted USB drive between multiple operating systems, so a solution had to be developed.",
-            "The Linux ecosystem already had tools that could read those drives. Lukotta puts that together with a Mac interface."
+            "I wanted backups from a Windows PC and a Mac on the same external disk. The Mac could not open the BitLocker volume, and the existing ways of doing it were more complicated than they needed to be.",
+            "Lukotta is built on [anylinuxfs](https://github.com/nohajc/anylinuxfs), which opens the drive inside a small Linux virtual machine and hands it back to macOS.",
+            "anylinuxfs is a command-line tool, which rules it out for most people. There are graphical wrappers for tools like it, but they look and feel like an aeroplane cockpit.",
+            "Lukotta's main goal is perfect user experience: plug in the drive, type the password, open it in Finder. A drive should be fully usable on any computer."
           ]
         },
         {
-          "heading": "What it costs",
+          "heading": "Who created and maintains it",
           "paragraphs": [
-            "Nothing. There is no paid version, no subscription, no trial and no account.",
-            "Lukotta is free software under the GNU General Public License, version 3 or later. The source is published. Anyone may read it, change it and pass it on under the same licence."
-          ]
-        },
-        {
-          "heading": "Nothing leaves your Mac",
-          "paragraphs": [
-            "Lukotta has no analytics, no telemetry and no crash reporting.",
-            "It makes one kind of network request: it checks for updates and downloads one if you ask. Passwords and recovery keys are used to unlock the drive and are not stored, sent or logged."
-          ]
-        },
-        {
-          "heading": "Source code",
-          "paragraphs": [
-            "The application source code is at github.com/clementrahula/lukotta."
+            "Lukotta is being developed by [one person](https://rahula.dev). I have spent years in software engineering and UX design, so the interface gets as much attention as the code underneath. Working alone is also more practical than it used to be, because AI-assisted development handles the repetitive work.",
+            "Lukotta is not finished. There is interface work still to do and bugs to fix, some of them in the tools it depends on. Reading drives is reliable; writing to them is still experimental."
           ]
         }
       ]
@@ -57,33 +31,27 @@
     "contact": {
       "slug": "contact",
       "title": "Contact",
-      "description": "How to report a bug in Lukotta, ask a question, or report a security problem. Issues on GitHub are read first and usually answered fastest.",
-      "lead": "Bugs go to GitHub. Security problems go to the address in SECURITY.md. Everything else goes to email.",
+      "description": "How to report a bug in Lukotta, suggest a change or correct a translation, and where security problems go. The issue tracker on GitHub is fastest.",
       "sections": [
         {
-          "heading": "A bug, or a drive that will not open",
           "paragraphs": [
-            "Open an issue at github.com/clementrahula/lukotta/issues. Issues are read first, and they are public, so the next person with the same drive can find the answer.",
-            "Say what the drive is, what Lukotta showed you, and what you expected. Quote any error exactly. Do not paste a password or a recovery key into an issue."
+            "Please tell me about anything that is broken, confusing or missing.",
+            "Lukotta is a one-person project, so there is no guaranteed response time. I read everything and answer within a few days."
           ]
         },
         {
-          "heading": "A security problem",
+          "heading": "Bugs, suggestions and translations",
           "paragraphs": [
-            "Do not open a public issue. SECURITY.md in the repository says where to send it and what to expect."
+            "Please use the issue tracker at github.com/clementrahula/lukotta/issues. If you have not used GitHub before, it is the site that hosts Lukotta's source code, and an issue is a public message about the project. Writing one requires a free account. Issues are the first thing I read, and they stay public for the next person with the same question.",
+            "For a bug, describe the drive, what Lukotta showed you and what you expected, and quote any error message exactly. Do not include a password or a recovery key.",
+            "Corrections to the translations are just as useful. I do not speak most of the languages the app is published in, so please quote the line and say what it should be instead.",
+            "You can also email contact_web@lukotta.com if you would rather not use GitHub, though I reply to email more slowly."
           ]
         },
         {
-          "heading": "Anything else",
+          "heading": "Security problems",
           "paragraphs": [
-            "Email contact_web@lukotta.com with questions about the app."
-          ]
-        },
-        {
-          "heading": "How long a reply takes",
-          "paragraphs": [
-            "Lukotta is maintained by one person. There is no support desk and no promised response time. Some messages take a while, and some go unanswered.",
-            "A GitHub issue is usually faster, because someone else may answer first."
+            "Please do not report a security problem in a public issue. Use the advisory form at github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

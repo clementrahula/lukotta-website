@@ -24,6 +24,10 @@ LUKS2, LVM, ext4, btrfs, XFS, exFAT, qcow2, VMDK, VDI, VHD, VHDX, IMG, DMG, OVA,
 VMware, VirtualBox, Hyper-V, QEMU, UTM, Ubuntu, Debian, Mint, Fedora, Windows,
 Linux, GitHub, `qemu-img`, GPL, GNU General Public License.
 
+**anylinuxfs** — the Linux tool Lukotta is built on, credited by name on the
+About page. It is lowercase in its own project and stays lowercase here, at the
+start of a sentence included.
+
 ### Endings are allowed; respelling is not
 
 A language that inflects will attach an ending to a foreign name, and that is

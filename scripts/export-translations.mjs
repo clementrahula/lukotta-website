@@ -33,8 +33,9 @@ function pageUnits(page, key) {
     { id: `${key}.title`, is: "The page heading, its browser tab, and the first line of its search result.", en: page.title },
     { id: `${key}.description`, is: "The second line of the search result. Never appears on the page. Written for somebody typing their problem into a search engine, so judge it by whether those are the words they would type.", en: page.description },
     { id: `${key}.slug`, is: "The address. Lowercase a-z, 0-9 and single hyphens, in every language: it becomes a directory name on the build machine as well as a URL, and macOS normalises directory names differently from the way the sitemap carries them.", en: page.slug },
-    { id: `${key}.lead`, is: "The opening paragraph, in larger type under the heading.", en: page.lead },
   ];
+  if (page.lead)
+    out.push({ id: `${key}.lead`, is: "The opening paragraph, in larger type under the heading.", en: page.lead });
   page.sections.forEach((sec, i) => {
     if (sec.heading) out.push({ id: `${key}.s${i}.heading`, is: "A section heading.", en: sec.heading });
     (sec.paragraphs || []).forEach((t, j) =>

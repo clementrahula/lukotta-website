@@ -20,3 +20,7 @@ audit.md
 
 # Working files for the translation harnesses. Regenerated on demand.
 dist/
+
+# Launch configuration for the agent's preview pane. Local scaffolding for
+# `npm start`, not part of the site.
+.claude/

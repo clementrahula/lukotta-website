@@ -34,8 +34,11 @@ function siteUnits() {
     const p = enSite.pages[key];
     out.push({ id: `${key}.slug`, en: p.slug, slug: true },
              { id: `${key}.title`, en: p.title },
-             { id: `${key}.description`, en: p.description },
-             { id: `${key}.lead`, en: p.lead });
+             { id: `${key}.description`, en: p.description });
+    /* About and Contact carry no lead: their first sentence is the first
+       paragraph. A unit with nothing in it would come back translated into
+       nothing and be written to the page as an empty one. */
+    if (p.lead) out.push({ id: `${key}.lead`, en: p.lead });
     p.sections.forEach((s, i) => {
       if (s.heading) out.push({ id: `${key}.s${i}.heading`, en: s.heading });
       (s.paragraphs || []).forEach((t, j) => out.push({ id: `${key}.s${i}.p${j}`, en: t }));
@@ -43,6 +46,11 @@ function siteUnits() {
   }
   return out;
 }
+
+/* How many strings a pack holds. Typed as a number once, and wrong the first
+   time the pages were edited: About and Contact lost their leads and their
+   section headings, and the pack went on announcing the old count. */
+const PACK_SIZE = () => NOT_FOUND.length + siteUnits().length;
 
 /* The review rows carry the translation under the language's own code. A field
    sharing a name with a code loses to it: `id` did, so the Indonesian pack went
@@ -117,7 +125,7 @@ if (cmd === "export") {
       language: { code: l.code, name: l.name, native: l.native, direction: l.dir },
       whatThisIs:
         "Everything added to the site after the last review pack: the 404 page and two new pages, " +
-        "About and Contact. 51 strings. The landing page and the four guides are not here; they " +
+        `About and Contact. ${PACK_SIZE()} strings. The landing page and the four guides are not here; they ` +
         "went out already and are unchanged.",
       strings: rows,
     }, null, 2) + "\n", "utf8");
@@ -138,7 +146,7 @@ next, and the absence of an About and a Contact page, which is what an agent
 looks for when deciding whether software from an unknown name can be
 recommended.
 
-This pack is those three pages, in every language. 51 strings each. The landing
+This pack is those three pages, in every language. ${PACK_SIZE()} strings each. The landing
 page and the four guides are not here: they went out in the previous pack and
 have not changed.
 
@@ -199,7 +207,8 @@ for (const key of enSite.order) {
     note(`${key}.slug: "${slug}" is not a usable address`);
   site.pages[key] = {
     slug, title: take(`${key}.title`),
-    description: take(`${key}.description`), lead: take(`${key}.lead`),
+    description: take(`${key}.description`),
+    ...(p.lead ? { lead: take(`${key}.lead`) } : {}),
     sections: p.sections.map((s, i) => {
       const out = {};
       if (s.heading) out.heading = take(`${key}.s${i}.heading`);

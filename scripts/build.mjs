@@ -317,7 +317,7 @@ function landingMarkdown({ lang, t, canonical, taskPages }) {
 
   line.push(`## ${t("how.title")}`, "", t("how.lead"), "");
   for (const n of [1, 2, 3]) line.push(`${n}. **${t(`how.${n}.title`)}** — ${t(`how.${n}.body`)}`);
-  line.push("");
+  line.push("", `**${t("how.warning.title")}.** ${t("how.warning.body")}`, "");
 
   line.push(`## ${t("features.title")}`, "", t("features.lead"), "",
             t("features.body"), "", t("features.body2"), "");
@@ -372,7 +372,7 @@ function taskMarkdown({ page, canonical, home }) {
   line.push(`# ${page.title}`, "");
   line.push(`Lukotta — ${home}`, "");
   line.push(`> ${page.description}`, "");
-  line.push(page.lead, "");
+  if (page.lead) line.push(page.lead, "");
   line.push(`Canonical: ${canonical}`, "");
   for (const sec of page.sections) {
     if (sec.heading) line.push(`## ${sec.heading}`, "");
@@ -644,7 +644,7 @@ Lukotta is a macOS application, version ${cfg.appVersion}. It needs ${REQUIREMEN
 
 ## About and contact
 
-- [About Lukotta](${cfg.domain}/about/): who maintains Lukotta
+- [About Lukotta](${cfg.domain}/about/): why Lukotta exists and who maintains it
 - [Contact](${cfg.domain}/contact/): how to report a bug or a security problem
 
 ## When to use this
@@ -688,6 +688,8 @@ either, no program can open that drive.
 ## How it works
 
 ${english["how.lead"]}
+
+**${english["how.warning.title"]}.** ${english["how.warning.body"]}
 
 ## ${english["features.title"]}
 
@@ -746,7 +748,7 @@ writeFileSync(
   join(OUT, "security.txt"),
   `# The application and this site share one security policy.
 Contact: ${cfg.githubRepo}/security/advisories/new
-Contact: mailto:${cfg.supportEmail}
+Contact: mailto:${cfg.securityEmail}
 Expires: ${securityTxtExpiry}
 Policy: ${cfg.githubRepo}/blob/main/SECURITY.md
 Preferred-Languages: en

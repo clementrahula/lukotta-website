@@ -509,6 +509,15 @@ ${steps}
         </ol>
 
         <p class="prose after-steps"><span class="lead-in">${esc(t("how.lead"))}</span></p>
+
+        <!-- The last thing in How It Works, where somebody who has just read
+             what the application does meets what state it is in. Further down,
+             beside the formats table, it read as a caveat about the formats
+             rather than about the application. -->
+        <div class="aside caution">
+          <h3>${esc(t("how.warning.title"))}</h3>
+          <p>${esc(t("how.warning.body"))}</p>
+        </div>
       </div>
     </section>
 
@@ -795,8 +804,7 @@ ${siteHeader({ t, A, home, icons, native, langLinks })}
       <section class="hero">
         <div class="wrap">
           <h1>${esc(page.title)}</h1>
-          <p class="lead">${esc(page.lead)}</p>
-${page.sections.map(section).join("\n")}
+${page.lead ? `          <p class="lead">${esc(page.lead)}</p>\n` : ""}${page.sections.map(section).join("\n")}
         </div>
       </section>
 

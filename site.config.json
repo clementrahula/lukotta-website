@@ -9,6 +9,7 @@
   "indexNowKey": "8aae1e25352a4a22b2513a4aadb50cd5",
   "brewCommand": "brew install --cask clementrahula/tap/lukotta",
   "supportEmail": "contact_web@lukotta.com",
+  "securityEmail": "security@lukotta.com",
   "authorName": "Clement Rahula",
   "authorUrl": "https://rahula.dev",
   "defaultLang": "en",

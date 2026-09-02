@@ -81,6 +81,34 @@ translates it in some languages, and Chinese macOS calls it 访达.
 Where the application's own translations disagree with the site, they win.
 `export-translations.mjs` pulls a terminology reference out of them.
 
+## About and Contact
+
+The two pages in `content/site/` are rendered by the guide machinery, but they
+are not guides and must not read like them. Neither carries a `lead`, and both
+keep their headings down to what a reader would actually look for: About is
+*Why it exists* and *Who created and maintains it*, Contact is *Bugs, suggestions and
+translations* and *Security problems*, with the response-time caveat above
+both. What they had before was a one-paragraph subsection per idea, which read
+as a brochure rather than as one person writing.
+
+So `lead` is optional wherever a page is rendered or translated -- `page.mjs`,
+`taskMarkdown` in `build.mjs`, `delta-translate.mjs` and
+`export-translations.mjs` all skip it when it is absent. The four guides still
+have one. A page with no `lead` is a valid shape, not a page that lost
+something.
+
+The About page credits `anylinuxfs`, which Lukotta is built on. It is in
+`verbatim.mjs` and in `GLOSSARY.md`, lowercase, and a translation that respells
+it is a finding.
+
+## The early-development notice
+
+`how.warning.*` closes the How It Works section on the landing page, in the
+same `.aside` box the formats section ends with. It sat above the formats table
+first, and read there as a caveat about the formats rather than about the
+application, which is the opposite of what it is for. It also goes into
+`llms.txt` and every `index.md`, under How it works in both.
+
 ## Assets
 
 Two screenshots per language at

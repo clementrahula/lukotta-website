@@ -645,6 +645,11 @@ tbody tr:not(.group) th code { color: var(--ink); }
   background: var(--amber);
 }
 
+/* The same box, closing How It Works. It follows a paragraph rather than a
+   table, so it wants less room above it than the one under the table does,
+   and none below: the section's own padding ends the page there. */
+.aside.caution { margin-top: clamp(26px, 3vw, 36px); }
+
 /* ---------------------------------------------------------------- steps -- */
 
 .steps { counter-reset: step; margin-top: 34px; display: grid; gap: 0; }
