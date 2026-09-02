@@ -656,7 +656,8 @@ ${siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref })}
    A reader arriving here from a search should not be able to tell they have
    landed on something built differently. */
 export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
-                                 alternates = [], assetPrefix, assets, home, contactHref, aboutHref }) {
+                                 alternates = [], langHrefs, assetPrefix, assets, home,
+                                 contactHref, aboutHref }) {
   const A = (name) => `${assetPrefix}assets/${name}`;
   const code = lang.code;
   const dir = lang.dir || "ltr";
@@ -677,11 +678,13 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
     .map((l) => `  <meta property="og:locale:alternate" content="${l.ogLocale}">`)
     .join("\n");
 
-  /* Root-relative, exactly as on the landing page, so the menu works at any
-     depth without a second copy of the logic. */
+  /* This page in each language, not each language's front page. Switching
+     language used to send a reader from /about/ to /de/ rather than to
+     /de/ueber/, losing their place on every page but the landing one.
+     Root-relative, so the menu works at any depth and on any host. */
   const langLinks = buildable
     .map((l) => {
-      const href = l.path ? `/${l.path}/` : "/";
+      const href = langHrefs?.[l.code] ?? (l.path ? `/${l.path}/` : "/");
       const current = l.code === code ? ` aria-current="true"` : "";
       return `            <li><a href="${href}" hreflang="${l.code}" lang="${l.code}"${current}>${esc(l.native)}</a></li>`;
     })

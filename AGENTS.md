@@ -101,6 +101,24 @@ The About page credits `anylinuxfs`, which Lukotta is built on. It is in
 `verbatim.mjs` and in `GLOSSARY.md`, lowercase, and a translation that respells
 it is a finding.
 
+## The language menu keeps the reader's place
+
+The menu on a guide, on About and on Contact links to *that page* in each
+language, not to each language's front page. It used to link to the front
+pages -- the same root-relative list the landing page uses -- so switching
+language anywhere but the landing page silently threw away what the reader was
+reading.
+
+`menuHrefs()` in `build.mjs` builds the list from the language's own slug for
+the page being rendered, and `renderTaskPage` takes it as `langHrefs`. It is
+deliberately not the `hreflang` list: that one carries absolute URLs and the
+`alsoServes` region aliases, and is read by search engines rather than clicked.
+A language with no version of the page falls back to its landing page, because
+the alternative is a menu entry that 404s.
+
+The landing pages and the 404 still list front pages, which is correct: there
+is nothing else for them to point at.
+
 ## The early-development notice
 
 `how.warning.*` closes the How It Works section on the landing page, in the

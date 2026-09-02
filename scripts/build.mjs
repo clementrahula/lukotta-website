@@ -253,6 +253,25 @@ const taskPagesByLang = new Map(
 
 /* The alternates for one task page: every language that has this page, under
    that language's own slug. x-default is the English, as on the landing page. */
+/* Where a page lives in each language, root-relative, for the language menu.
+   Not the hreflang list: that carries absolute URLs and the region aliases,
+   and is read by search engines rather than clicked. This is what a reader
+   follows, so switching language on a guide has to land on that guide rather
+   than on the language's front page -- which is what it did, and which loses
+   the reader's place on every page but the landing one.
+
+   A language with no version of this page falls back to its landing page. That
+   is the closest thing that exists; the alternative is a link that 404s. */
+function menuHrefs(slugFor) {
+  const out = {};
+  for (const l of buildable) {
+    const base = l.path ? `/${l.path}/` : "/";
+    const slug = slugFor(l.code);
+    out[l.code] = slug ? `${base}${slug}/` : base;
+  }
+  return out;
+}
+
 function taskAlternates(key) {
   const out = [];
   for (const l of buildable) {
@@ -438,6 +457,7 @@ for (const lang of buildable) {
       const taskHtml = withPolicy(renderTaskPage({
         page, slug, lang, cfg, t, buildable, canonical: taskCanonical,
         alternates: taskAlternates(key),
+        langHrefs: menuHrefs((c) => taskPagesByLang.get(c)?.pages?.[key]?.slug),
         assetPrefix: taskPrefix, assets: { css: CSS, js: JS }, contactHref, aboutHref,
         home: lang.path ? `../../${lang.path}/` : "../",
       }));
@@ -509,6 +529,7 @@ for (const lang of buildable) {
 
     const html = withPolicy(renderTaskPage({
       page, slug, lang, cfg, t, buildable, canonical, alternates,
+      langHrefs: menuHrefs((c) => sitePagesByLang.get(c)?.pages?.[key]?.slug),
       assetPrefix: lang.path ? "../../" : "../",
       assets: { css: CSS, js: JS },
       contactHref: `${cfg.domain}/${base}${site.pages.contact.slug}/`,
