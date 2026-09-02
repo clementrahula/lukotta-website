@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "ko": "볼륨이 위치 아래에 나타나고, 다른 드라이브처럼 읽고 쓰고 추출할 수 있습니다."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "ko": "초기 개발 단계"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "ko": "Lukotta는 아직 새 소프트웨어입니다. 바탕이 되는 Linux 도구와 드라이버는 여러 해 전부터 있었고 충분히 검증되었습니다. Lukotta는 그 위에 올려져 있지만 그 자체는 아직 개발 중이라, 아직 드러나지 않은 문제가 있을 수밖에 없습니다. 당분간은 드라이브와 디스크 이미지를 읽기 전용으로 여는 것이 가장 안전합니다. 쓰기도 동작하지만 실험적인 것으로 여기시고, 잃고 싶지 않은 것은 사본을 남겨 두세요."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "ko": "Lukotta가 여는 것"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ko": "Lukotta는 macOS가 읽기를 거부하는 드라이브와 디스크 이미지를 열어, 평범한 볼륨으로 Finder에 넘깁니다."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "ko": "Lukotta는 macOS가 읽기를 거부하는 드라이브와 디스크 이미지를 열어 Finder에 보여 줍니다."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "ko": "소개"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "ko": "Lukotta를 누가 관리하는지"
+      "en": "why Lukotta exists and who maintains it",
+      "ko": "Lukotta가 있는 이유와 누가 관리하는지"
     },
     "notFound.contact.name": {
       "en": "Contact",

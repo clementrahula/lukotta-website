@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "uk": "Том з’являється в розділі «Розташування» і читається, записується та виймається, як будь-який інший диск."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "uk": "Ранній етап розробки"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "uk": "Lukotta ще нова. Інструменти й драйвери Linux, на які вона спирається, існують не перший рік і добре перевірені. Lukotta побудована на них, але сама ще в розробці, тож у ній неминуче є ще не знайдені проблеми. Наразі найбезпечніше відкривати диски й образи лише для читання. Запис працює, але ставтеся до нього як до експериментального і тримайте копію всього, що не хотіли б втратити."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "uk": "Що відкриває Lukotta"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "uk": "Lukotta відкриває диски й образи, які macOS відмовляється читати, і передає їх до Finder як звичайні томи."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "uk": "Lukotta відкриває диски й образи, які macOS відмовляється читати, і показує їх у Finder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "uk": "Про програму"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "uk": "хто супроводжує Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "uk": "навіщо потрібна Lukotta і хто її підтримує"
     },
     "notFound.contact.name": {
       "en": "Contact",

@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "sq",
     "name": "Albanian",
@@ -13,49 +13,23 @@
   "pages": {
     "about": {
       "slug": "rreth",
-      "title": "Rreth Lukotta",
-      "description": "Lukotta është një aplikacion macOS falas me burim të hapur për disqe BitLocker, NTFS dhe Linux. Mirëmbahet nga një zhvillues, nën GNU General Public License.",
-      "lead": "Lukotta hap disqe dhe imazhe disku që macOS nuk i lexon dot. Është falas, me burim të hapur, dhe mirëmbahet nga një person i vetëm.",
+      "title": "Rreth aplikacionit Lukotta",
+      "description": "Pse ekziston Lukotta, mbi çfarë është ndërtuar dhe kush e krijoi dhe e mirëmban. Një aplikacion Mac për disqe BitLocker dhe Linux, ende në zhvillim të hershëm.",
       "sections": [
-        {
-          "heading": "Çfarë është",
-          "paragraphs": [
-            "Lukotta është një aplikacion për macOS. Hap disqe BitLocker, NTFS, LUKS, ext4, btrfs dhe XFS, si dhe imazhe disku të makinave virtuale në formatet qcow2, VMDK, VDI, VHD dhe VHDX. macOS nuk lexon asnjë prej tyre vetë. Mund të lexojë NTFS, por nuk mund të shkruajë në të.",
-            "Nis një makinë virtuale të vogël Linux në sfond, hap diskun atje dhe ia dorëzon aplikacionit Finder. Linux i lexon këto formate prej vitesh. Disku as nuk shndërrohet, as nuk kopjohet. Mbetet siç ishte, dhe makina nga vjen e lexon si më parë."
-          ]
-        },
-        {
-          "heading": "Kush e mirëmban",
-          "paragraphs": [
-            "[Një zhvillues i vetëm](https://rahula.dev). Nuk ka kompani, nuk ka investitorë dhe nuk ka ekip."
-          ]
-        },
         {
           "heading": "Pse ekziston",
           "paragraphs": [
-            "Lidhni një disk BitLocker me një Mac dhe Finder ofron ta fshijë. Nuk kërkon fjalëkalim, dhe asgjë në ekran nuk tregon se disku është i kyçur e jo i prishur.",
-            "Dukej pa kuptim që në ditët e sotme të mos ketë një mënyrë praktike për të ndarë një disk USB të fshehtëzuar mes disa sistemeve operative, kështu që duhej ndërtuar një zgjidhje.",
-            "Në ekosistemin e Linux kishte tashmë vegla që i lexonin ata disqe. Lukotta i bashkon me një ndërfaqe për Mac."
+            "Doja t'i mbaja kopjet rezervë nga një kompjuter me Windows dhe nga një Mac në të njëjtin disk të jashtëm. Mac-u nuk e hapte dot volumin BitLocker, dhe mënyrat që ekzistonin për ta bërë ishin më të ndërlikuara nga ç'duhej.",
+            "Lukotta është ndërtuar mbi [anylinuxfs](https://github.com/nohajc/anylinuxfs), i cili e hap diskun brenda një makine virtuale të vogël me Linux dhe ia kthen macOS.",
+            "anylinuxfs është një mjet i rreshtit të komandave, prandaj nuk është një zgjedhje për shumicën e njerëzve. Ka ndërfaqe grafike për mjete të tilla, por në pamje dhe përdorim ngjajnë me kabinën e një avioni.",
+            "Qëllimi kryesor i aplikacionit Lukotta është një përvojë e përsosur: lidhni diskun, shkruani fjalëkalimin, hapeni në Finder. Një disk duhet të jetë plotësisht i përdorshëm në çdo kompjuter."
           ]
         },
         {
-          "heading": "Sa kushton",
+          "heading": "Kush e krijoi dhe e mirëmban",
           "paragraphs": [
-            "Asgjë. Nuk ka version me pagesë, nuk ka pajtim, nuk ka provë dhe nuk ka llogari.",
-            "Lukotta është software i lirë nën GNU General Public License, versioni 3 ose më i ri. Burimi është i botuar. Kushdo mund ta lexojë, ta ndryshojë dhe ta japë më tej nën të njëjtën licencë."
-          ]
-        },
-        {
-          "heading": "Asgjë nuk largohet nga Mac-u juaj",
-          "paragraphs": [
-            "Lukotta nuk ka analitikë, nuk ka telemetri dhe nuk ka raportime rrëzimesh.",
-            "Bën një lloj të vetëm kërkese rrjeti: shikon për një version të ri dhe e shkarkon nëse ia kërkoni. Fjalëkalimet dhe çelësat e rikuperimit shërbejnë për të shkyçur diskun dhe nuk ruhen, nuk dërgohen dhe nuk regjistrohen."
-          ]
-        },
-        {
-          "heading": "Kodi burim",
-          "paragraphs": [
-            "Kodi burim i aplikacionit është në github.com/clementrahula/lukotta."
+            "Lukotta zhvillohet nga [një person i vetëm](https://rahula.dev). Kam vite që punoj në inxhinieri softuerike dhe në dizajn UX, prandaj ndërfaqja këtu merr po aq vëmendje sa kodi poshtë saj. Të punosh vetëm është gjithashtu më e realizueshme se dikur, sepse zhvillimi i ndihmuar nga IA merr përsipër punën e përsëritur.",
+            "Lukotta nuk ka përfunduar. Në ndërfaqe ka ende punë dhe ka gabime për t'u rregulluar, disa prej tyre në mjetet nga të cilat varet. Leximi i disqeve është i besueshëm; shkrimi në to është ende eksperimental."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Si të njoftoni një gabim në Lukotta, të bëni një pyetje ose të njoftoni një problem sigurie. Issues në GitHub lexohen dhe marrin përgjigje të parat.",
-      "lead": "Gabimet shkojnë në GitHub. Problemet e sigurisë shkojnë te adresa në SECURITY.md. Gjithçka tjetër shkon me email.",
+      "description": "Si të raportoni një gabim në Lukotta, sugjeroni një ndryshim ose korrigjoni një përkthim dhe ku të dërgoni problemet e sigurisë. GitHub është më i shpejti.",
       "sections": [
         {
-          "heading": "Një gabim, ose një disk që nuk hapet",
           "paragraphs": [
-            "Hapni një issue në github.com/clementrahula/lukotta/issues. Issues lexohen të parat dhe janë publike, kështu që personi tjetër me të njëjtin disk mund ta gjejë përgjigjen.",
-            "Thoni cili disk është, çfarë tregoi Lukotta dhe çfarë prisnit. Citoni gabimin saktësisht. Mos ngjitni kurrë një fjalëkalim ose një çelës rikuperimi në një issue."
+            "Ju lutem më thoni nëse diçka është e prishur, ngatërruese ose mungon.",
+            "Lukotta është projekt i një personi të vetëm, prandaj nuk ka kohë përgjigjeje të garantuar. I lexoj të gjitha dhe përgjigjem brenda pak ditësh."
           ]
         },
         {
-          "heading": "Një problem sigurie",
+          "heading": "Gabime, sugjerime dhe përkthime",
           "paragraphs": [
-            "Mos hapni një issue publike. SECURITY.md në depo thotë ku ta dërgoni dhe çfarë të prisni."
+            "Përdorni gjurmuesin e çështjeve në github.com/clementrahula/lukotta/issues. Nëse nuk e keni përdorur GitHub më parë: është faqja ku ndodhet kodi burim i aplikacionit Lukotta, dhe një çështje është një mesazh publik për projektin. Për të shkruar një të tillë duhet një llogari falas. Çështjet i lexoj të parat, dhe mbeten publike për personin tjetër me të njëjtën pyetje.",
+            "Për një gabim, përshkruani diskun, çfarë ju tregoi Lukotta dhe çfarë prisnit, dhe citoni saktësisht çdo mesazh gabimi. Mos përfshini fjalëkalim ose çelës rikuperimi.",
+            "Korrigjimet e përkthimeve janë po aq të dobishme. Nuk i flas shumicën e gjuhëve në të cilat botohet aplikacioni, prandaj citoni rreshtin dhe thoni çfarë duhet të thotë.",
+            "Mund të shkruani edhe në contact_web@lukotta.com nëse preferoni të mos përdorni GitHub, megjithëse e-mailit i përgjigjem më ngadalë."
           ]
         },
         {
-          "heading": "Gjithçka tjetër",
+          "heading": "Probleme sigurie",
           "paragraphs": [
-            "Shkruani te contact_web@lukotta.com me pyetje rreth aplikacionit."
-          ]
-        },
-        {
-          "heading": "Sa zgjat një përgjigje",
-          "paragraphs": [
-            "Lukotta mirëmbahet nga një person i vetëm. Nuk ka zyrë mbështetjeje dhe nuk ka afat të premtuar përgjigjeje. Për disa mesazhe duhet kohë për të marrë përgjigje, dhe disa mbeten pa përgjigje.",
-            "Një issue në GitHub zakonisht shkon më shpejt, sepse dikush tjetër mund të përgjigjet i pari."
+            "Mos raportoni një problem sigurie në një çështje publike. Përdorni formularin e raportimit në github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

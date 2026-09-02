@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "it",
     "name": "Italian",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "informazioni",
       "title": "Informazioni su Lukotta",
-      "description": "Lukotta è un'app macOS gratuita e open source che apre dischi BitLocker, NTFS e Linux. Mantenuta da un solo sviluppatore, sotto GNU General Public License.",
-      "lead": "Lukotta apre dischi e immagini disco che macOS non riesce a leggere. È gratuito, open source, e lo mantiene una sola persona.",
+      "description": "Perché Lukotta esiste, su cosa è costruito e chi lo ha creato e lo mantiene. Un’app per Mac per dischi BitLocker e Linux, ancora in fase iniziale.",
       "sections": [
-        {
-          "heading": "Che cos'è",
-          "paragraphs": [
-            "Lukotta è un'applicazione macOS. Apre dischi BitLocker, NTFS, LUKS, ext4, btrfs e XFS, e immagini disco di macchine virtuali nei formati qcow2, VMDK, VDI, VHD e VHDX. macOS non ne legge nessuno da solo. NTFS lo legge, ma non ci scrive.",
-            "Avvia una piccola macchina virtuale Linux in secondo piano, apre lì il disco e lo consegna al Finder. Linux legge questi formati da anni. Il disco non viene convertito né copiato. Resta com'era, e la macchina da cui viene continua a leggerlo."
-          ]
-        },
-        {
-          "heading": "Chi lo mantiene",
-          "paragraphs": [
-            "[Un solo sviluppatore](https://rahula.dev). Non c'è nessuna azienda, nessun investitore e nessun gruppo."
-          ]
-        },
         {
           "heading": "Perché esiste",
           "paragraphs": [
-            "Collega un disco BitLocker a un Mac e il Finder propone di inizializzarlo. Non chiede una password, e niente sullo schermo mostra che il disco è bloccato e non rotto.",
-            "Sembrava assurdo che di questi tempi non ci sia un modo pratico di condividere un disco USB cifrato fra più sistemi operativi, così una soluzione andava costruita.",
-            "Nell'ecosistema Linux esistevano già strumenti in grado di leggere quei dischi. Lukotta li mette insieme dietro un'interfaccia per Mac."
+            "Volevo tenere i backup di un PC Windows e quelli di un Mac sullo stesso disco esterno. Il Mac non riusciva ad aprire il volume BitLocker, e i modi che c’erano per farlo erano più complicati del necessario.",
+            "Lukotta è costruito su [anylinuxfs](https://github.com/nohajc/anylinuxfs), che apre il disco dentro una piccola macchina virtuale Linux e lo restituisce a macOS.",
+            "anylinuxfs è uno strumento a riga di comando, quindi non è adatto alla maggior parte delle persone. Ci sono interfacce grafiche per strumenti del genere, ma sembrano la cabina di pilotaggio di un aereo.",
+            "L’obiettivo principale di Lukotta è un’esperienza d’uso perfetta: collega il disco, digita la password, aprilo nel Finder. Un disco dovrebbe essere pienamente utilizzabile su qualsiasi computer."
           ]
         },
         {
-          "heading": "Quanto costa",
+          "heading": "Chi lo ha creato e lo mantiene",
           "paragraphs": [
-            "Niente. Non c'è una versione a pagamento, né un abbonamento, né una prova, né un account.",
-            "Lukotta è software libero sotto GNU General Public License, versione 3 o successiva. Il codice è pubblicato. Chiunque può leggerlo, modificarlo e ridistribuirlo con la stessa licenza."
-          ]
-        },
-        {
-          "heading": "Niente esce dal tuo Mac",
-          "paragraphs": [
-            "Lukotta non ha analisi, né telemetria, né segnalazioni di arresto anomalo.",
-            "Fa un solo tipo di richiesta di rete: cerca una nuova versione e la scarica se glielo chiedi. Le password e le chiavi di ripristino servono a sbloccare il disco e non vengono conservate, inviate o registrate."
-          ]
-        },
-        {
-          "heading": "Codice sorgente",
-          "paragraphs": [
-            "Il codice sorgente dell'applicazione è su github.com/clementrahula/lukotta."
+            "Lukotta è sviluppato da [una sola persona](https://rahula.dev). Lavoro da anni nell’ingegneria del software e nella progettazione UX, così l’interfaccia riceve qui la stessa attenzione del codice sottostante. Lavorare da soli è anche più praticabile di un tempo, perché lo sviluppo assistito dall’IA si occupa del lavoro ripetitivo.",
+            "Lukotta non è finito. C’è ancora lavoro da fare sull’interfaccia e ci sono errori da correggere, alcuni negli strumenti da cui dipende. Leggere i dischi è affidabile; scriverci sopra è ancora sperimentale."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "contatti",
       "title": "Contatti",
-      "description": "Come segnalare un problema in Lukotta, fare una domanda o segnalare una falla di sicurezza. Le issue su GitHub si leggono per prime e ricevono risposta prima.",
-      "lead": "I problemi vanno su GitHub. Le falle di sicurezza vanno all'indirizzo indicato in SECURITY.md. Tutto il resto va per email.",
+      "description": "Come segnalare un errore in Lukotta, suggerire una modifica o correggere una traduzione, e dove segnalare i problemi di sicurezza. GitHub è la via più rapida.",
       "sections": [
         {
-          "heading": "Un problema, o un disco che non si apre",
           "paragraphs": [
-            "Apri una issue su github.com/clementrahula/lukotta/issues. Le issue si leggono per prime, e sono pubbliche, così la prossima persona con lo stesso disco trova la risposta.",
-            "Di' che disco è, cosa ha mostrato Lukotta e cosa ti aspettavi. Cita l'errore esattamente. Non incollare mai una password o una chiave di ripristino in una issue."
+            "Dimmi pure se qualcosa è rotto, poco chiaro o manca del tutto.",
+            "Lukotta è il progetto di una sola persona, quindi non c’è un tempo di risposta garantito. Leggo tutto e rispondo nel giro di pochi giorni."
           ]
         },
         {
-          "heading": "Una falla di sicurezza",
+          "heading": "Errori, suggerimenti e traduzioni",
           "paragraphs": [
-            "Non aprire una issue pubblica. SECURITY.md nel repository dice dove mandarla e cosa aspettarsi."
+            "Usa il tracker delle issue su github.com/clementrahula/lukotta/issues. Se non hai mai usato GitHub: è il sito che ospita il codice sorgente di Lukotta, e una issue è un messaggio pubblico sul progetto. Per scriverne una serve un account gratuito. Le issue sono la prima cosa che leggo, e restano pubbliche per la prossima persona con la stessa domanda.",
+            "Per un errore, descrivi il disco, che cosa ti ha mostrato Lukotta e che cosa ti aspettavi, e cita ogni messaggio di errore esattamente. Non includere una password né una chiave di ripristino.",
+            "Le correzioni alle traduzioni sono altrettanto utili. Non parlo la maggior parte delle lingue in cui l’app è pubblicata, quindi cita la riga e scrivi che cosa dovrebbe dire.",
+            "Puoi anche scrivere a contact_web@lukotta.com se preferisci non usare GitHub, anche se alle email rispondo più lentamente."
           ]
         },
         {
-          "heading": "Tutto il resto",
+          "heading": "Problemi di sicurezza",
           "paragraphs": [
-            "Scrivi a contact_web@lukotta.com per domande sull'app."
-          ]
-        },
-        {
-          "heading": "Quanto ci vuole per una risposta",
-          "paragraphs": [
-            "Lukotta è mantenuto da una sola persona. Non c'è un servizio di assistenza né un tempo di risposta promesso. Certi messaggi richiedono tempo, e certi restano senza risposta.",
-            "Una issue su GitHub di solito è più veloce, perché qualcun altro può rispondere prima."
+            "Non segnalare un problema di sicurezza in una issue pubblica. Usa il modulo per le segnalazioni su github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

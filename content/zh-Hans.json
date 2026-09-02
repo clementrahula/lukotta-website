@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "zh-Hans": "卷出现在“位置”下面，像别的驱动器一样可以读、写和推出。"
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "zh-Hans": "开发早期"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "zh-Hans": "Lukotta 还很新。它所依赖的 Linux 工具和驱动已经存在多年，久经检验。Lukotta 建立在它们之上，但自身仍在开发中，所以难免还有尚未发现的问题。目前最稳妥的做法是以只读方式打开驱动器和磁盘映像。写入确实可用，但请把它当作试验性的，并为任何你不愿丢失的东西留一份副本。"
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "zh-Hans": "Lukotta 能打开什么"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "zh-Hans": "Lukotta 打开那些 macOS 拒绝读取的驱动器和磁盘映像，把它们当作普通的卷交给访达。"
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "zh-Hans": "Lukotta 打开那些 macOS 拒绝读取的驱动器和磁盘映像，并在访达中显示。"
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "zh-Hans": "关于"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "zh-Hans": "谁在维护 Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "zh-Hans": "Lukotta 因何而生，由谁维护"
     },
     "notFound.contact.name": {
       "en": "Contact",

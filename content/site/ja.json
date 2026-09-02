@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "ja",
     "name": "Japanese",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "gaiyou",
       "title": "Lukotta について",
-      "description": "Lukotta は BitLocker、NTFS、Linux のドライブを開く無料でオープンソースの macOS アプリです。ひとりの開発者が保守し、GNU General Public License のもとで配布されています。",
-      "lead": "Lukotta は macOS が読めないドライブやディスクイメージを開きます。無料で、オープンソースで、ひとりで保守しています。",
+      "description": "Lukottaがある理由、何の上に築かれているか、誰が作り保守しているか。BitLockerやLinuxのドライブのためのMacアプリで、まだ開発初期です。",
       "sections": [
-        {
-          "heading": "これは何か",
-          "paragraphs": [
-            "Lukotta は macOS のアプリケーションです。BitLocker、NTFS、LUKS、ext4、btrfs、XFS のドライブを開き、仮想マシンのディスクイメージを qcow2、VMDK、VDI、VHD、VHDX の形式で開きます。macOS はそのどれも自分では読めません。NTFS は読めますが書けません。",
-            "背後で小さな Linux 仮想マシンを起動し、そこでドライブを開いて、Finder に渡します。Linux はこれらの形式を何年も前から読んでいます。ドライブは変換もコピーもされません。そのまま残り、元の機械も読み続けます。"
-          ]
-        },
-        {
-          "heading": "誰が保守しているか",
-          "paragraphs": [
-            "[ひとりの開発者](https://rahula.dev)。会社もなく、出資者もなく、チームもありません。"
-          ]
-        },
         {
           "heading": "なぜあるのか",
           "paragraphs": [
-            "BitLocker のドライブを Mac に挿すと、Finder は消去を提案してきます。パスワードは尋ねず、ドライブが壊れているのではなくロックされているという手がかりも画面にありません。",
-            "この時代に、暗号化した USB ドライブを複数のオペレーティングシステムのあいだで使い回す実用的な方法がないのは馬鹿げていると思えたので、解決策を作る必要がありました。",
-            "Linux の生態系には、そうしたドライブを読める道具がすでにありました。Lukotta はそれらを Mac 向けのインターフェースと結びつけています。"
+            "Windowsパソコンのバックアップと Mac のバックアップを、同じ外付けディスクにまとめて置きたいと思いました。ところがMacはBitLockerのボリュームを開けず、それを行うための既存の手段はどれも必要以上に込み入っていました。",
+            "Lukottaは[anylinuxfs](https://github.com/nohajc/anylinuxfs)の上に築かれています。小さなLinuxの仮想マシンの中でドライブを開き、それをmacOSに引き渡すツールです。",
+            "anylinuxfsはコマンドラインのツールで、そのためほとんどの人には選択肢になりません。この種のツールにはグラフィカルな画面を付けたものもありますが、どれも飛行機のコックピットのような見た目と使い心地です。",
+            "Lukottaのいちばんの目標は、申し分のない使い心地です。ドライブをつなぎ、パスワードを入力し、Finderで開く。ドライブはどのコンピュータでも制限なく使えるべきものです。"
           ]
         },
         {
-          "heading": "いくらか",
+          "heading": "誰が作り、保守しているか",
           "paragraphs": [
-            "無料です。有料版も、定期購読も、試用期間も、アカウントもありません。",
-            "Lukotta は GNU General Public License バージョン 3 以降のもとにある自由ソフトウェアです。ソースは公開されています。誰でも読み、変え、同じライセンスで渡せます。"
-          ]
-        },
-        {
-          "heading": "あなたの Mac から何も出ていきません",
-          "paragraphs": [
-            "Lukotta には分析も、テレメトリも、クラッシュ報告もありません。",
-            "ネットワークへの要求は一種類だけです。新しい版があるかを見て、頼まれれば取ってきます。パスワードと回復キーはドライブを開くために使われ、保存も送信も記録もされません。"
-          ]
-        },
-        {
-          "heading": "ソースコード",
-          "paragraphs": [
-            "アプリケーションのソースコードは github.com/clementrahula/lukotta にあります。"
+            "Lukottaは[一人](https://rahula.dev)で開発しています。長年ソフトウェアエンジニアリングとUXデザインに携わってきたので、ここではインターフェイスにも内部のコードと同じだけの手をかけています。一人で進めることが以前より現実的になったのは、AIに支えられた開発が繰り返しの作業を引き受けてくれるからです。",
+            "Lukottaはまだ完成していません。インターフェイスにはやるべきことが残り、直すべき不具合もあります。その一部は土台にしているツールの中にあります。ドライブの読み出しは安定していますが、書き込みはまだ実験的です。"
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "otoiawase",
       "title": "連絡先",
-      "description": "Lukotta の不具合を知らせる方法、質問の仕方、セキュリティ上の問題の報告先です。GitHub の issue が最初に読まれ、たいていいちばん早く返事が返ります。",
-      "lead": "不具合は GitHub へ。セキュリティ上の問題は SECURITY.md にある宛先へ。それ以外はメールで。",
+      "description": "Lukottaの不具合を報告する方法、変更を提案する方法、翻訳の誤りを直す方法、そしてセキュリティ上の問題を送る先について。いちばん早いのはGitHubのイシュートラッカーです。",
       "sections": [
         {
-          "heading": "不具合、または開かないドライブ",
           "paragraphs": [
-            "github.com/clementrahula/lukotta/issues に issue を立ててください。issue は最初に読まれ、公開されているので、同じドライブを持つ次の人が答えを見つけられます。",
-            "どのドライブか、Lukotta が何を出したか、何を期待していたかを書いてください。エラーはそのまま引いてください。issue にパスワードや回復キーを貼らないでください。"
+            "壊れているもの、分かりにくいもの、足りないものがあれば、ぜひ知らせてください。",
+            "Lukottaは一人のプロジェクトなので、返信の時間は保証できません。届いたものはすべて読み、数日のうちに返信します。"
+          ]
+        },
+        {
+          "heading": "不具合、提案、翻訳",
+          "paragraphs": [
+            "github.com/clementrahula/lukotta/issues のイシュートラッカーをお使いください。GitHubが初めてなら、そこはLukottaのソースコードが置かれているサイトで、イシューはこのプロジェクトについての公開の書き込みです。書くには無料のアカウントが要ります。イシューは最初に読みますし、同じ疑問を持つ次の人のために公開のまま残ります。",
+            "不具合の場合は、どのドライブか、Lukottaが何を表示したか、何を期待していたかを書き、エラーメッセージはそのまま引用してください。パスワードや回復キーは書かないでください。",
+            "翻訳の修正も同じくらい役立ちます。このアプリが出ている言語のほとんどを私は話せないので、その行を引用して、どうあるべきかを教えてください。",
+            "GitHubを使いたくない場合は contact_web@lukotta.com へのメールでもかまいません。ただしメールの返事は遅くなります。"
           ]
         },
         {
           "heading": "セキュリティ上の問題",
           "paragraphs": [
-            "公開の issue は立てないでください。リポジトリの SECURITY.md にどこへ送るか、何を見込めるかが書いてあります。"
-          ]
-        },
-        {
-          "heading": "それ以外",
-          "paragraphs": [
-            "アプリについての質問は contact_web@lukotta.com へ。"
-          ]
-        },
-        {
-          "heading": "返事までの時間",
-          "paragraphs": [
-            "Lukotta はひとりで保守しています。サポート窓口はなく、約束した返信期限もありません。返事に時間のかかるものもあり、返事のないものもあります。",
-            "GitHub の issue のほうがたいてい早いです。ほかの誰かが先に答えることがあるからです。"
+            "セキュリティ上の問題は公開のイシューに書かないでください。github.com/clementrahula/lukotta/security/advisories/new の報告フォームをお使いください。"
           ]
         }
       ]

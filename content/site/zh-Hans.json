@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "zh-Hans",
     "name": "Chinese (Simplified)",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "guanyu",
       "title": "关于 Lukotta",
-      "description": "Lukotta 是一个免费开源的 macOS 应用，能打开 BitLocker、NTFS 和 Linux 驱动器。由一个开发者维护，遵循 GNU General Public License。",
-      "lead": "Lukotta 打开 macOS 读不了的驱动器和磁盘映像。它免费、开源，由一个人维护。",
+      "description": "Lukotta 因何而生、建立在什么之上、由谁创建和维护。一个用于 BitLocker 和 Linux 驱动器的 Mac 应用，仍处在开发早期。",
       "sections": [
         {
-          "heading": "这是什么",
+          "heading": "因何而生",
           "paragraphs": [
-            "Lukotta 是一个 macOS 应用。它打开 BitLocker、NTFS、LUKS、ext4、btrfs 和 XFS 驱动器，也打开虚拟机的磁盘映像，格式包括 qcow2、VMDK、VDI、VHD 和 VHDX。这些 macOS 自己一个都读不了。NTFS 它读得了，但写不进去。",
-            "它在后台启动一台小型 Linux 虚拟机，在那里打开驱动器，再交还给访达。Linux 读这些格式已经很多年了。驱动器既不会被转换，也不会被拷贝。它还是原样，原来那台机器照样读得了。"
+            "我想把一台 Windows 电脑和一台 Mac 的备份放在同一块外置硬盘上。可是 Mac 打不开那个 BitLocker 卷，而已有的那些办法都比这件事本身复杂得多。",
+            "Lukotta 建立在 [anylinuxfs](https://github.com/nohajc/anylinuxfs) 之上，它在一台小小的 Linux 虚拟机里打开驱动器，再交回给 macOS。",
+            "anylinuxfs 是命令行工具，这就把大多数人挡在了门外。这类工具也有图形前端，但看上去、用起来都像飞机驾驶舱。",
+            "Lukotta 最主要的目标是完美的使用体验：插上驱动器，输入密码，在访达里打开。一块盘本该在任何一台电脑上都能完整地使用。"
           ]
         },
         {
-          "heading": "谁在维护",
+          "heading": "由谁创建和维护",
           "paragraphs": [
-            "[一个开发者](https://rahula.dev)。没有公司，没有投资人，也没有团队。"
-          ]
-        },
-        {
-          "heading": "为什么会有它",
-          "paragraphs": [
-            "把一个 BitLocker 驱动器插到 Mac 上，访达会提出把它抹掉。它不问密码，屏幕上也没有任何迹象说明驱动器是锁着的而不是坏了。",
-            "这个年头竟然没有一个实用的办法，让一个加密的 U 盘在几个操作系统之间通用，这看着实在荒唐，所以得做一个出来。",
-            "Linux 生态里本来就有能读这些驱动器的工具。Lukotta 把它们和一个 Mac 界面接在了一起。"
-          ]
-        },
-        {
-          "heading": "多少钱",
-          "paragraphs": [
-            "不要钱。没有付费版，没有订阅，没有试用期，也没有账户。",
-            "Lukotta 是自由软件，遵循 GNU General Public License 第 3 版或更新版本。源代码是公开的。谁都可以读它、改它，并在同一许可下继续分发。"
-          ]
-        },
-        {
-          "heading": "没有东西离开你的 Mac",
-          "paragraphs": [
-            "Lukotta 没有分析统计，没有遥测，也没有崩溃报告。",
-            "它只发一种网络请求：看看有没有新版本，你要的话就下载。密码和恢复密钥用来解锁驱动器，不会被保存、发送或记录。"
-          ]
-        },
-        {
-          "heading": "源代码",
-          "paragraphs": [
-            "应用的源代码在 github.com/clementrahula/lukotta。"
+            "Lukotta 由[一个人](https://rahula.dev)开发。我做软件工程和 UX 设计已有多年，所以这里的界面和底层代码一样受重视。一个人做这件事如今也比过去更可行，因为 AI 辅助开发会处理那些重复的工作。",
+            "Lukotta 还没有完成。界面还有工作要做，也还有错误要修，其中一些在它所依赖的工具里。读取驱动器是可靠的；写入则仍是试验性的。"
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "lianxi",
       "title": "联系",
-      "description": "怎么报告 Lukotta 的程序错误，怎么提问，或者怎么报告安全方面的问题。GitHub 上的 issue 会先看，通常也是回复最快的途径。",
-      "lead": "程序错误去 GitHub。安全问题去 SECURITY.md 里的地址。其他的走邮件。",
+      "description": "这里说明如何报告 Lukotta 的错误、提出改动建议或订正翻译，以及应该在哪里报告安全问题。GitHub 上的问题追踪器是最快的联系方式。",
       "sections": [
         {
-          "heading": "程序错误，或者打不开的驱动器",
           "paragraphs": [
-            "在 github.com/clementrahula/lukotta/issues 开一个 issue。issue 会先看，而且是公开的，下一个碰到同样驱动器的人就能找到答案。",
-            "说清楚是什么驱动器，Lukotta 显示了什么，你以为会怎样。报错原样抄下来。千万别把密码或恢复密钥贴进 issue 里。"
+            "如果有什么坏了、让人困惑或者缺失，请告诉我。",
+            "Lukotta 是一个人的项目，所以没有保证的回复时限。收到的内容我都会看，几天之内回复。"
+          ]
+        },
+        {
+          "heading": "错误、建议和翻译",
+          "paragraphs": [
+            "请使用 github.com/clementrahula/lukotta/issues 上的问题追踪。如果你没用过 GitHub：那是存放 Lukotta 源代码的网站，一个 issue 就是一条关于这个项目的公开留言。写一条需要一个免费账号。issue 是我最先看的，而且会一直公开，留给下一个有同样疑问的人。",
+            "报告错误时，请说明是什么盘、Lukotta 显示了什么、你期待的是什么，并把任何报错原样抄下来。不要写上密码或恢复密钥。",
+            "订正翻译同样有用。这个应用发布的语言我大多不会说，所以请引用那一行，并说明应该是什么。",
+            "如果你不想用 GitHub，也可以发邮件到 contact_web@lukotta.com，只是邮件我回得慢一些。"
           ]
         },
         {
           "heading": "安全问题",
           "paragraphs": [
-            "别开公开的 issue。仓库里的 SECURITY.md 写了往哪儿发，以及可以指望什么。"
-          ]
-        },
-        {
-          "heading": "其他的事",
-          "paragraphs": [
-            "关于这个应用的问题，写信到 contact_web@lukotta.com。"
-          ]
-        },
-        {
-          "heading": "多久能收到回复",
-          "paragraphs": [
-            "Lukotta 由一个人维护。没有专门的支持人员，也没有承诺的回复时间。有些消息要过一阵才会收到回复，有些则没有回音。",
-            "GitHub 上的 issue 通常快一些，因为可能有别人先回。"
+            "请不要在公开的 issue 里报告安全问题。请使用 github.com/clementrahula/lukotta/security/advisories/new 上的报告表单。"
           ]
         }
       ]

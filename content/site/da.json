@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "da",
     "name": "Danish",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "om",
       "title": "Om Lukotta",
-      "description": "Lukotta er en gratis macOS-app med åben kildekode, der åbner BitLocker-, NTFS- og Linux-drev. Vedligeholdt af én udvikler under GNU General Public License.",
-      "lead": "Lukotta åbner drev og diskbilleder, som macOS ikke kan læse. Det er gratis, har åben kildekode og vedligeholdes af én person.",
+      "description": "Hvorfor Lukotta findes, hvad det bygger på, og hvem der har lavet og vedligeholder det. En Mac-app til BitLocker- og Linux-drev, stadig tidligt i udviklingen.",
       "sections": [
-        {
-          "heading": "Hvad det er",
-          "paragraphs": [
-            "Lukotta er et macOS-program. Det åbner BitLocker-, NTFS-, LUKS-, ext4-, btrfs- og XFS-drev samt diskbilleder fra virtuelle maskiner i formaterne qcow2, VMDK, VDI, VHD og VHDX. macOS læser ingen af dem af sig selv. NTFS kan det læse, men ikke skrive til.",
-            "Det starter en lille virtuel Linux-maskine i baggrunden, åbner drevet der og giver det tilbage til Finder. Linux har læst disse formater i årevis. Drevet bliver hverken lavet om eller kopieret. Det bliver, som det var, og maskinen det kom fra læser det stadig."
-          ]
-        },
-        {
-          "heading": "Hvem der vedligeholder det",
-          "paragraphs": [
-            "[En enkelt udvikler](https://rahula.dev). Der er ingen virksomhed, ingen investorer og intet hold."
-          ]
-        },
         {
           "heading": "Hvorfor det findes",
           "paragraphs": [
-            "Sæt et BitLocker-drev til en Mac, og Finder tilbyder at slette det. Den spørger ikke om en adgangskode, og intet på skærmen viser, at drevet er låst og ikke i stykker.",
-            "Det virkede tåbeligt, at der i dag ikke findes en praktisk måde at dele et krypteret USB-drev mellem flere styresystemer, så en løsning måtte laves.",
-            "I Linux-økosystemet fandtes der allerede værktøjer, der kunne læse de drev. Lukotta samler dem med en Mac-brugerflade."
+            "Jeg ville have sikkerhedskopier fra en Windows-pc og fra en Mac på den samme eksterne disk. Mac'en kunne ikke åbne BitLocker-enheden, og de måder, der fandtes til det, var mere indviklede, end de behøvede at være.",
+            "Lukotta er bygget på [anylinuxfs](https://github.com/nohajc/anylinuxfs), som åbner drevet inde i en lille virtuel Linux-maskine og giver det tilbage til macOS.",
+            "anylinuxfs er et kommandolinjeværktøj, hvilket udelukker det for de fleste. Der findes grafiske skaller til den slags værktøjer, men de føles som et flycockpit.",
+            "Lukottas vigtigste mål er en perfekt brugeroplevelse: sæt drevet til, skriv adgangskoden, åbn det i Finder. Et drev bør kunne bruges fuldt ud på enhver computer."
           ]
         },
         {
-          "heading": "Hvad det koster",
+          "heading": "Hvem der har lavet og vedligeholder det",
           "paragraphs": [
-            "Ingenting. Der er ingen betalt udgave, intet abonnement, ingen prøveperiode og ingen konto.",
-            "Lukotta er fri software under GNU General Public License, version 3 eller senere. Kildekoden er offentlig. Enhver må læse den, ændre den og give den videre under samme licens."
-          ]
-        },
-        {
-          "heading": "Intet forlader din Mac",
-          "paragraphs": [
-            "Lukotta har ingen analyse, ingen telemetri og ingen rapportering af programnedbrud.",
-            "Det laver én slags netværkskald: det ser efter en ny udgave og henter den, hvis du beder om det. Adgangskoder og genoprettelsesnøgler bruges til at låse drevet op og bliver ikke gemt, sendt eller logget."
-          ]
-        },
-        {
-          "heading": "Kildekode",
-          "paragraphs": [
-            "Programmets kildekode ligger på github.com/clementrahula/lukotta."
+            "Lukotta udvikles af [én person](https://rahula.dev). Jeg har arbejdet i årevis med softwareudvikling og UX-design, så grænsefladen får lige så meget opmærksomhed som koden nedenunder. At arbejde alene er også mere realistisk end før, fordi AI-understøttet udvikling tager sig af det gentagne arbejde.",
+            "Lukotta er ikke færdigt. Der er stadig arbejde med grænsefladen og fejl at rette, nogle af dem i de værktøjer, det afhænger af. At læse drev er pålideligt; at skrive til dem er stadig eksperimentelt."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Hvordan man melder en fejl i Lukotta, stiller et spørgsmål eller melder et sikkerhedsproblem. Issues på GitHub læses først og besvares som regel hurtigst.",
-      "lead": "Fejl går til GitHub. Sikkerhedsproblemer går til adressen i SECURITY.md. Alt andet går på e-mail.",
+      "description": "Sådan melder du en fejl i Lukotta, foreslår en ændring eller retter en oversættelse, og hvor sikkerhedsproblemer skal hen. Hurtigst går det via GitHub.",
       "sections": [
         {
-          "heading": "En fejl, eller et drev der ikke vil åbne",
           "paragraphs": [
-            "Opret et issue på github.com/clementrahula/lukotta/issues. Issues bliver læst først, og de er offentlige, så den næste med samme drev kan finde svaret.",
-            "Skriv hvilket drev det er, hvad Lukotta viste, og hvad du forventede. Citer en fejlmeddelelse ordret. Sæt aldrig en adgangskode eller en genoprettelsesnøgle ind i et issue."
+            "Sig endelig til, hvis noget er i stykker, forvirrende eller mangler.",
+            "Lukotta er et enmandsprojekt, så der er ingen garanteret svartid. Jeg læser alt og svarer inden for et par dage."
           ]
         },
         {
-          "heading": "Et sikkerhedsproblem",
+          "heading": "Fejl, forslag og oversættelser",
           "paragraphs": [
-            "Opret ikke et offentligt issue. SECURITY.md i arkivet siger, hvor det skal sendes hen, og hvad du kan forvente."
+            "Brug issue-sporingen på github.com/clementrahula/lukotta/issues. Hvis du ikke har brugt GitHub før: det er det sted, hvor Lukottas kildekode ligger, og et issue er en offentlig besked om projektet. At skrive et kræver en gratis konto. Issues er det første, jeg læser, og de bliver stående offentligt til den næste med det samme spørgsmål.",
+            "Ved en fejl: beskriv drevet, hvad Lukotta viste dig, og hvad du forventede, og citer enhver fejlmeddelelse ordret. Undlad at oplyse adgangskode eller gendannelsesnøgle.",
+            "Rettelser til oversættelserne er lige så nyttige. Jeg taler ikke de fleste af de sprog, appen udkommer på, så citer linjen og skriv, hvad der burde stå.",
+            "Du kan også skrive til contact_web@lukotta.com, hvis du helst vil undgå GitHub, men jeg svarer langsommere på e-mail."
           ]
         },
         {
-          "heading": "Alt andet",
+          "heading": "Sikkerhedsproblemer",
           "paragraphs": [
-            "Skriv til contact_web@lukotta.com med spørgsmål om appen."
-          ]
-        },
-        {
-          "heading": "Hvor lang tid et svar tager",
-          "paragraphs": [
-            "Lukotta vedligeholdes af én person. Der er ingen supporttjeneste og ingen lovet svartid. Nogle beskeder tager tid, og nogle bliver ikke besvaret.",
-            "Et issue på GitHub går som regel hurtigere, fordi en anden kan nå at svare først."
+            "Meld ikke et sikkerhedsproblem i et offentligt issue. Brug formularen til sikkerhedsrapporter på github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

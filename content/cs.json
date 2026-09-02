@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "cs": "Svazek se objeví v oddílu Místa a dá se číst, zapisovat i vysunout jako každý jiný disk."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "cs": "Raná fáze vývoje"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "cs": "Lukotta je zatím nová. Linuxové nástroje a ovladače, o které se opírá, existují léta a jsou dobře prověřené. Lukotta je postavená na nich, ale sama je stále ve vývoji, takže se v ní nevyhnutelně skrývají dosud neodhalené problémy. Zatím je nejbezpečnější otevírat disky a obrazy jen pro čtení. Zápis funguje, ale ber ho jako experimentální a nech si kopii všeho, o co bys nerad přišel."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "cs": "Co Lukotta otevře"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "cs": "Lukotta otevírá disky a obrazy disků, které macOS odmítá číst, a předává je Finderu jako běžné svazky."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "cs": "Lukotta otevírá disky a obrazy disků, které macOS odmítá číst, a ukazuje je ve Finderu."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "cs": "O aplikaci"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "cs": "kdo udržuje aplikaci Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "cs": "proč Lukotta vznikla a kdo ji udržuje"
     },
     "notFound.contact.name": {
       "en": "Contact",

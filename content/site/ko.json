@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "ko",
     "name": "Korean",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "sogae",
       "title": "Lukotta 소개",
-      "description": "Lukotta는 BitLocker, NTFS, Linux 드라이브를 여는 무료 오픈 소스 macOS 앱입니다. 한 명의 개발자가 관리하며 GNU General Public License를 따릅니다.",
-      "lead": "Lukotta는 macOS가 읽지 못하는 드라이브와 디스크 이미지를 엽니다. 무료이고, 오픈 소스이며, 한 사람이 관리합니다.",
+      "description": "Lukotta가 있는 이유, 무엇 위에 만들어졌는지, 누가 만들고 관리하는지. BitLocker와 Linux 드라이브를 위한 Mac 앱이며 아직 개발 초기입니다.",
       "sections": [
-        {
-          "heading": "무엇인가",
-          "paragraphs": [
-            "Lukotta는 macOS 응용 프로그램입니다. BitLocker, NTFS, LUKS, ext4, btrfs, XFS 드라이브를 열고, 가상 머신의 디스크 이미지를 qcow2, VMDK, VDI, VHD, VHDX 형식으로 엽니다. macOS는 그중 어느 것도 스스로 읽지 못합니다. NTFS는 읽지만 쓰지는 못합니다.",
-            "배경에서 작은 Linux 가상 머신을 띄우고 거기서 드라이브를 연 다음 Finder에 넘깁니다. Linux는 이 형식들을 여러 해 전부터 읽어 왔습니다. 드라이브는 변환되지도 복사되지도 않습니다. 그대로 남고, 원래 있던 기기도 계속 읽습니다."
-          ]
-        },
-        {
-          "heading": "누가 관리하는가",
-          "paragraphs": [
-            "[개발자 한 사람](https://rahula.dev). 회사도 없고, 투자자도 없고, 팀도 없습니다."
-          ]
-        },
         {
           "heading": "왜 있는가",
           "paragraphs": [
-            "BitLocker 드라이브를 Mac에 꽂으면 Finder가 지우겠다고 제안합니다. 암호는 묻지 않고, 드라이브가 고장 난 것이 아니라 잠겨 있다는 표시도 화면에 없습니다.",
-            "요즘 세상에 암호화된 USB 드라이브를 여러 운영체제 사이에서 함께 쓸 실용적인 방법이 없다는 것이 어이없어 보였고, 그래서 해결책을 만들어야 했습니다.",
-            "Linux 생태계에는 그런 드라이브를 읽을 수 있는 도구가 이미 있었습니다. Lukotta는 그것들을 Mac 인터페이스와 결합합니다."
+            "Windows PC의 백업과 Mac의 백업을 같은 외장 디스크에 함께 두고 싶었습니다. 그런데 Mac은 BitLocker 볼륨을 열지 못했고, 그렇게 하기 위해 이미 있던 방법들은 필요 이상으로 복잡했습니다.",
+            "Lukotta는 [anylinuxfs](https://github.com/nohajc/anylinuxfs) 위에 만들어졌습니다. 작은 Linux 가상 머신 안에서 드라이브를 열어 macOS에 되돌려 주는 도구입니다.",
+            "anylinuxfs는 명령줄 도구라서 대부분의 사람에게는 선택지가 되지 못합니다. 이런 도구에 그래픽 인터페이스를 씌운 프로그램도 있지만, 하나같이 비행기 조종석 같은 모습과 느낌입니다.",
+            "Lukotta의 가장 큰 목표는 완벽한 사용 경험입니다. 드라이브를 연결하고, 암호를 입력하고, Finder에서 엽니다. 드라이브는 어느 컴퓨터에서든 온전히 쓸 수 있어야 합니다."
           ]
         },
         {
-          "heading": "얼마인가",
+          "heading": "누가 만들고 관리하는가",
           "paragraphs": [
-            "무료입니다. 유료 버전도, 구독도, 체험 기간도, 계정도 없습니다.",
-            "Lukotta는 GNU General Public License 버전 3 이상을 따르는 자유 소프트웨어입니다. 소스가 공개되어 있습니다. 누구나 읽고, 고치고, 같은 라이선스로 넘겨줄 수 있습니다."
-          ]
-        },
-        {
-          "heading": "당신의 Mac에서 아무것도 나가지 않습니다",
-          "paragraphs": [
-            "Lukotta에는 분석도, 원격 측정도, 충돌 보고도 없습니다.",
-            "네트워크 요청은 한 종류뿐입니다. 새 버전이 있는지 확인하고, 요청하면 내려받습니다. 암호와 복구 키는 드라이브를 여는 데 쓰이며 저장되거나 전송되거나 기록되지 않습니다."
-          ]
-        },
-        {
-          "heading": "소스 코드",
-          "paragraphs": [
-            "응용 프로그램의 소스 코드는 github.com/clementrahula/lukotta에 있습니다."
+            "Lukotta는 [한 사람](https://rahula.dev)이 개발하고 있습니다. 오랫동안 소프트웨어 엔지니어링과 UX 디자인 일을 해 왔기에, 여기서는 인터페이스에도 그 아래의 코드만큼 공을 들입니다. 혼자 해 나가는 일이 예전보다 현실적이 된 것은 AI의 도움을 받는 개발이 반복적인 작업을 맡아 주기 때문입니다.",
+            "Lukotta는 아직 완성되지 않았습니다. 인터페이스에는 할 일이 남아 있고 고쳐야 할 버그도 있으며, 그중 일부는 바탕이 되는 도구 안에 있습니다. 드라이브 읽기는 안정적이지만, 쓰기는 아직 실험적입니다."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "munui",
       "title": "연락",
-      "description": "Lukotta의 버그를 알리거나, 질문을 하거나, 보안 문제를 알리는 방법입니다. GitHub의 이슈를 가장 먼저 읽고 대개 가장 빨리 답합니다.",
-      "lead": "버그는 GitHub으로. 보안 문제는 SECURITY.md에 적힌 주소로. 나머지는 이메일로.",
+      "description": "Lukotta의 버그를 알리는 방법, 변경을 제안하는 방법, 번역을 바로잡는 방법, 그리고 보안 문제를 보낼 곳을 안내합니다. 가장 빠른 길은 GitHub 이슈 트래커입니다.",
       "sections": [
         {
-          "heading": "버그, 또는 열리지 않는 드라이브",
           "paragraphs": [
-            "github.com/clementrahula/lukotta/issues에 이슈를 남겨 주십시오. 이슈를 먼저 읽고, 공개되어 있으므로 같은 드라이브를 가진 다음 사람이 답을 찾을 수 있습니다.",
-            "어떤 드라이브인지, Lukotta가 무엇을 보여 주었는지, 무엇을 기대했는지 적어 주십시오. 오류는 그대로 인용해 주십시오. 이슈에 암호나 복구 키를 붙여 넣지 마십시오."
+            "고장 났거나 헷갈리거나 빠진 것이 있으면 알려 주세요.",
+            "Lukotta는 한 사람의 프로젝트라 보장된 응답 시간은 없습니다. 보내 주신 내용은 모두 읽고 며칠 안에 답합니다."
+          ]
+        },
+        {
+          "heading": "버그, 제안, 번역",
+          "paragraphs": [
+            "github.com/clementrahula/lukotta/issues 의 이슈 트래커를 이용해 주세요. GitHub이 처음이라면, 그곳은 Lukotta의 소스 코드가 있는 사이트이고 이슈는 이 프로젝트에 대한 공개 메시지입니다. 쓰려면 무료 계정이 필요합니다. 이슈는 제가 가장 먼저 읽고, 같은 궁금증을 가진 다음 사람을 위해 공개된 채로 남습니다.",
+            "버그라면 어떤 드라이브인지, Lukotta가 무엇을 보여 주었는지, 무엇을 기대했는지 적고, 오류 메시지는 그대로 옮겨 주세요. 암호나 복구 키는 넣지 마세요.",
+            "번역을 바로잡아 주는 것도 그만큼 도움이 됩니다. 이 앱이 나오는 언어의 대부분을 저는 하지 못하니, 그 줄을 인용하고 어떻게 되어야 하는지 알려 주세요.",
+            "GitHub을 쓰고 싶지 않으시면 contact_web@lukotta.com으로 메일을 보내셔도 됩니다. 다만 메일 답장은 더 늦습니다."
           ]
         },
         {
           "heading": "보안 문제",
           "paragraphs": [
-            "공개 이슈를 열지 마십시오. 저장소의 SECURITY.md에 어디로 보낼지와 무엇을 기대할 수 있는지 적혀 있습니다."
-          ]
-        },
-        {
-          "heading": "그 밖의 모든 것",
-          "paragraphs": [
-            "앱에 대한 질문은 contact_web@lukotta.com으로 보내 주십시오."
-          ]
-        },
-        {
-          "heading": "답장까지 걸리는 시간",
-          "paragraphs": [
-            "Lukotta는 한 사람이 관리합니다. 지원 창구도 없고 약속된 응답 시간도 없습니다. 어떤 메시지는 답변까지 시간이 걸리고, 어떤 메시지는 답을 받지 못합니다.",
-            "GitHub 이슈가 대개 더 빠릅니다. 다른 사람이 먼저 답할 수 있기 때문입니다."
+            "보안 문제는 공개 이슈에 올리지 말아 주세요. github.com/clementrahula/lukotta/security/advisories/new 의 신고 양식을 이용해 주세요."
           ]
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "cs",
     "name": "Czech",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "o-aplikaci",
       "title": "O aplikaci Lukotta",
-      "description": "Lukotta je bezplatná macOS aplikace s otevřeným zdrojovým kódem pro disky BitLocker, NTFS a Linux. Udržuje ji jeden vývojář, pod GNU General Public License.",
-      "lead": "Lukotta otevírá disky a obrazy disku, které macOS neumí přečíst. Je zdarma, má otevřený zdrojový kód a udržuje ji jeden člověk.",
+      "description": "Proč Lukotta vznikla, na čem stojí a kdo ji vytvořil a udržuje. Aplikace pro Mac na disky BitLocker a Linux, stále v rané fázi vývoje.",
       "sections": [
-        {
-          "heading": "Co to je",
-          "paragraphs": [
-            "Lukotta je aplikace pro macOS. Otevírá disky BitLocker, NTFS, LUKS, ext4, btrfs a XFS a obrazy disku virtuálních strojů ve formátech qcow2, VMDK, VDI, VHD a VHDX. macOS nečte ani jeden z nich sám. NTFS umí číst, ale ne na něj zapisovat.",
-            "Na pozadí spustí malý virtuální stroj se systémem Linux, otevře tam disk a předá jej Finderu. Linux tyto formáty čte už léta. Disk se nepřevádí ani nekopíruje. Zůstane, jaký byl, a stroj, ze kterého pochází, jej čte dál."
-          ]
-        },
-        {
-          "heading": "Kdo ji udržuje",
-          "paragraphs": [
-            "[Jediný vývojář](https://rahula.dev). Není za tím žádná firma, žádní investoři a žádný tým."
-          ]
-        },
         {
           "heading": "Proč vznikla",
           "paragraphs": [
-            "Připojte disk s BitLockerem k Macu a Finder nabídne, že jej smaže. Neptá se na heslo a nic na obrazovce neukazuje, že je disk zamčený, a ne rozbitý.",
-            "Přišlo mi nesmyslné, že v dnešní době není praktická cesta, jak sdílet šifrovaný USB disk mezi několika operačními systémy, a tak bylo třeba řešení postavit.",
-            "V linuxovém ekosystému už existovaly nástroje, které ty disky uměly číst. Lukotta je spojuje s rozhraním pro Mac."
+            "Chtěl jsem mít zálohy z počítače s Windows a z Macu na jednom externím disku. Mac neuměl otevřít svazek BitLocker a způsoby, které k tomu existovaly, byly složitější, než bylo potřeba.",
+            "Lukotta stojí na nástroji [anylinuxfs](https://github.com/nohajc/anylinuxfs), který disk otevře uvnitř malého virtuálního stroje s Linuxem a předá ho zpět macOS.",
+            "anylinuxfs je nástroj pro příkazovou řádku, což ho pro většinu lidí vylučuje. Grafické nadstavby pro takové nástroje existují, ale působí jako kokpit letadla.",
+            "Hlavním cílem aplikace Lukotta je dokonalá uživatelská zkušenost: připoj disk, napiš heslo, otevři ho ve Finderu. Disk by měl být plně použitelný na jakémkoli počítači."
           ]
         },
         {
-          "heading": "Kolik stojí",
+          "heading": "Kdo ji vytvořil a udržuje",
           "paragraphs": [
-            "Nic. Není žádná placená verze, žádné předplatné, žádná zkušební doba a žádný účet.",
-            "Lukotta je svobodný software pod GNU General Public License, verze 3 nebo novější. Zdrojový kód je zveřejněný. Kdokoli jej může číst, měnit a předávat dál pod stejnou licencí."
-          ]
-        },
-        {
-          "heading": "Z vašeho Macu nic neodchází",
-          "paragraphs": [
-            "Lukotta nemá analytiku, telemetrii ani hlášení pádů.",
-            "Dělá jediný druh síťového požadavku: hledá novou verzi a stáhne ji, když o to požádáte. Hesla a obnovovací klíče slouží k odemknutí disku a neukládají se, neodesílají ani nezaznamenávají."
-          ]
-        },
-        {
-          "heading": "Zdrojový kód",
-          "paragraphs": [
-            "Zdrojový kód aplikace je na github.com/clementrahula/lukotta."
+            "Aplikaci Lukotta vyvíjí [jeden člověk](https://rahula.dev). Léta pracuji v softwarovém inženýrství a UX designu, takže rozhraní tu dostává stejnou péči jako kód pod ním. Pracovat sám je také reálnější než dřív, protože vývoj s podporou AI odbaví opakovanou práci.",
+            "Lukotta není hotová. Na rozhraní zbývá práce a jsou chyby k opravení, některé z nich v nástrojích, na kterých stojí. Čtení disků je spolehlivé; zápis na ně je zatím experimentální."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kontakt",
       "title": "Kontakt",
-      "description": "Jak nahlásit chybu v aplikaci Lukotta, položit dotaz nebo nahlásit bezpečnostní problém. Issues na GitHubu se čtou jako první a odpovídá se na ně nejrychleji.",
-      "lead": "Chyby patří na GitHub. Bezpečnostní problémy na adresu v SECURITY.md. Všechno ostatní e-mailem.",
+      "description": "Jak nahlásit chybu v aplikaci Lukotta, navrhnout změnu nebo opravit překlad a kam patří bezpečnostní problémy. Nejrychlejší cesta vede přes GitHub.",
       "sections": [
         {
-          "heading": "Chyba nebo disk, který se neotevře",
           "paragraphs": [
-            "Založte issue na github.com/clementrahula/lukotta/issues. Issues se čtou jako první a jsou veřejné, takže další člověk se stejným diskem najde odpověď.",
-            "Napište, jaký disk to je, co Lukotta ukázala a co jste čekali. Chybovou hlášku citujte přesně. Nikdy nevkládejte do issue heslo ani obnovovací klíč."
+            "Dej mi prosím vědět, když je něco rozbité, matoucí nebo chybí.",
+            "Lukotta je projekt jednoho člověka, takže zaručená doba odpovědi neexistuje. Čtu všechno a odpovídám během několika dní."
           ]
         },
         {
-          "heading": "Bezpečnostní problém",
+          "heading": "Chyby, návrhy a překlady",
           "paragraphs": [
-            "Nezakládejte veřejné issue. SECURITY.md v repozitáři říká, kam to poslat a co čekat."
+            "Použij sledování chyb na github.com/clementrahula/lukotta/issues. Pokud jsi GitHub ještě nepoužil: je to web, kde leží zdrojový kód aplikace Lukotta, a issue je veřejná zpráva o projektu. K jejímu napsání stačí bezplatný účet. Issues čtu jako první a zůstávají veřejné pro dalšího člověka se stejným dotazem.",
+            "U chyby popiš, o jaký disk jde, co Lukotta ukázala a co jsi čekal, a cituj každou chybovou hlášku přesně. Neuváděj heslo ani obnovovací klíč.",
+            "Opravy překladů jsou stejně užitečné. Většinou jazyků, ve kterých aplikace vychází, nemluvím, takže cituj řádek a napiš, co tam má být.",
+            "Můžeš také napsat na contact_web@lukotta.com, pokud GitHub raději nepoužiješ, na e-maily ale odpovídám pomaleji."
           ]
         },
         {
-          "heading": "Cokoli dalšího",
+          "heading": "Bezpečnostní problémy",
           "paragraphs": [
-            "Pište na contact_web@lukotta.com s dotazy k aplikaci."
-          ]
-        },
-        {
-          "heading": "Jak dlouho trvá odpověď",
-          "paragraphs": [
-            "Aplikaci Lukotta udržuje jeden člověk. Není tu žádný helpdesk ani slíbená doba odpovědi. Některé zprávy chvíli trvají a některé zůstanou bez odpovědi.",
-            "Issue na GitHubu bývá rychlejší, protože může odpovědět někdo jiný dřív."
+            "Bezpečnostní problém prosím nehlaš ve veřejném issue. Použij formulář pro hlášení na github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

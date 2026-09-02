@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "ru": "Том появляется в разделе «Размещения» и читается, записывается и извлекается, как любой другой диск."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "ru": "Ранний этап разработки"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "ru": "Lukotta пока новая. Инструменты и драйверы Linux, на которые она опирается, существуют не первый год и хорошо проверены. Lukotta построена на них, но сама ещё в разработке, поэтому в ней неизбежно есть пока не найденные проблемы. Сейчас безопаснее всего открывать диски и образы только для чтения. Запись работает, но относитесь к ней как к экспериментальной и держите копию всего, что не хотели бы потерять."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "ru": "Что открывает Lukotta"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "ru": "Lukotta открывает диски и образы, которые macOS отказывается читать, и передаёт их в Finder как обычные тома."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "ru": "Lukotta открывает диски и образы, которые macOS отказывается читать, и показывает их в Finder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "ru": "О программе"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "ru": "кто сопровождает Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "ru": "зачем нужна Lukotta и кто её поддерживает"
     },
     "notFound.contact.name": {
       "en": "Contact",

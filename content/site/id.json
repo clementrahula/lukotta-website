@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "id",
     "name": "Indonesian",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "tentang",
       "title": "Tentang Lukotta",
-      "description": "Lukotta adalah aplikasi macOS gratis, sumber terbuka, untuk drive BitLocker, NTFS dan Linux. Dipelihara satu pengembang, di bawah GNU General Public License.",
-      "lead": "Lukotta membuka drive dan image disk yang tidak bisa dibaca macOS. Gratis, sumber terbuka, dan dirawat oleh satu orang.",
+      "description": "Mengapa Lukotta ada, dibangun di atas apa, dan siapa yang membuatnya serta merawatnya. Aplikasi Mac untuk drive BitLocker dan Linux, masih tahap awal.",
       "sections": [
         {
-          "heading": "Apa ini",
+          "heading": "Mengapa ada",
           "paragraphs": [
-            "Lukotta adalah aplikasi macOS. Ia membuka drive BitLocker, NTFS, LUKS, ext4, btrfs dan XFS, serta image disk mesin virtual dalam format qcow2, VMDK, VDI, VHD dan VHDX. macOS tidak membaca satu pun dari itu sendiri. NTFS bisa dibacanya, tapi tidak ditulisi.",
-            "Ia menjalankan mesin virtual Linux kecil di latar belakang, membuka drive di sana, dan menyerahkannya kembali ke Finder. Linux sudah bertahun-tahun membaca format ini. Drive tidak diubah dan tidak disalin. Ia tetap seperti semula, dan mesin asalnya tetap membacanya."
+            "Saya ingin menyimpan cadangan dari PC Windows dan dari Mac di disk eksternal yang sama. Mac tidak bisa membuka volume BitLocker, dan cara-cara yang ada untuk melakukannya lebih rumit daripada seharusnya.",
+            "Lukotta dibangun di atas [anylinuxfs](https://github.com/nohajc/anylinuxfs), yang membuka drive di dalam mesin virtual Linux kecil lalu menyerahkannya kembali ke macOS.",
+            "anylinuxfs adalah perkakas baris perintah, sehingga bukan pilihan bagi kebanyakan orang. Ada pembungkus grafis untuk perkakas semacam itu, tetapi terlihat dan terasa seperti kokpit pesawat.",
+            "Tujuan utama Lukotta adalah pengalaman pakai yang sempurna: colokkan drive, ketik kata sandi, buka di Finder. Sebuah drive semestinya bisa dipakai sepenuhnya di komputer mana pun."
           ]
         },
         {
-          "heading": "Siapa yang merawatnya",
+          "heading": "Siapa yang membuat dan merawatnya",
           "paragraphs": [
-            "[Satu pengembang](https://rahula.dev). Tidak ada perusahaan, tidak ada investor dan tidak ada tim."
-          ]
-        },
-        {
-          "heading": "Kenapa ada",
-          "paragraphs": [
-            "Colokkan drive BitLocker ke Mac dan Finder menawarkan untuk menghapusnya. Ia tidak meminta kata sandi, dan tidak ada apa pun di layar yang menunjukkan drive itu terkunci, bukan rusak.",
-            "Rasanya konyol bahwa di zaman sekarang tidak ada cara praktis untuk berbagi drive USB terenkripsi antara beberapa sistem operasi, jadi sebuah solusi harus dibuat.",
-            "Di ekosistem Linux sudah ada perkakas yang bisa membaca drive semacam itu. Lukotta menyatukannya dengan antarmuka Mac."
-          ]
-        },
-        {
-          "heading": "Berapa biayanya",
-          "paragraphs": [
-            "Tidak ada. Tidak ada versi berbayar, tidak ada langganan, tidak ada masa coba dan tidak ada akun.",
-            "Lukotta adalah perangkat lunak bebas di bawah GNU General Public License, versi 3 atau setelahnya. Sumbernya diterbitkan. Siapa pun boleh membacanya, mengubahnya dan meneruskannya dengan lisensi yang sama."
-          ]
-        },
-        {
-          "heading": "Tidak ada yang keluar dari Mac Anda",
-          "paragraphs": [
-            "Lukotta tidak punya analitik, tidak punya telemetri dan tidak punya pelaporan crash.",
-            "Ia membuat satu jenis permintaan jaringan: memeriksa apakah ada versi baru dan mengunduhnya jika Anda minta. Kata sandi dan kunci pemulihan dipakai untuk membuka drive dan tidak disimpan, dikirim atau dicatat."
-          ]
-        },
-        {
-          "heading": "Kode sumber",
-          "paragraphs": [
-            "Kode sumber aplikasi ada di github.com/clementrahula/lukotta."
+            "Lukotta dikembangkan oleh [satu orang](https://rahula.dev). Saya bertahun-tahun bekerja di rekayasa perangkat lunak dan desain UX, jadi antarmukanya di sini mendapat perhatian sebesar kode di bawahnya. Bekerja sendirian juga lebih masuk akal daripada dulu, karena pengembangan berbantuan AI menangani pekerjaan yang berulang.",
+            "Lukotta belum selesai. Masih ada pekerjaan pada antarmuka dan ada kutu yang harus diperbaiki, sebagian di dalam perkakas yang menjadi sandarannya. Membaca drive sudah andal; menulis ke drive masih eksperimental."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kontak",
       "title": "Kontak",
-      "description": "Cara melaporkan kesalahan di Lukotta, mengajukan pertanyaan, atau melaporkan masalah keamanan. Issue di GitHub dibaca lebih dulu dan paling cepat dijawab.",
-      "lead": "Kesalahan pergi ke GitHub. Masalah keamanan pergi ke alamat di SECURITY.md. Selebihnya lewat surel.",
+      "description": "Cara melaporkan kutu di Lukotta, menyarankan perubahan atau memperbaiki terjemahan, dan ke mana masalah keamanan dikirim. Paling cepat lewat GitHub.",
       "sections": [
         {
-          "heading": "Kesalahan, atau drive yang tidak mau terbuka",
           "paragraphs": [
-            "Buka issue di github.com/clementrahula/lukotta/issues. Issue dibaca lebih dulu dan bersifat terbuka, jadi orang berikutnya dengan drive yang sama menemukan jawabannya.",
-            "Sebutkan drive apa itu, apa yang ditampilkan Lukotta, dan apa yang Anda harapkan. Kutip pesan kesalahan persis. Jangan pernah menempel kata sandi atau kunci pemulihan ke dalam issue."
+            "Tolong beri tahu saya kalau ada yang rusak, membingungkan, atau tidak ada.",
+            "Lukotta adalah proyek satu orang, jadi tidak ada jaminan waktu balasan. Saya membaca semuanya dan membalas dalam beberapa hari."
+          ]
+        },
+        {
+          "heading": "Kutu, saran, dan terjemahan",
+          "paragraphs": [
+            "Silakan pakai pelacak isu di github.com/clementrahula/lukotta/issues. Kalau Anda belum pernah memakai GitHub: itu situs tempat kode sumber Lukotta berada, dan sebuah isu adalah pesan publik tentang proyek ini. Menulisnya perlu akun gratis. Isu adalah yang pertama saya baca, dan tetap bersifat publik untuk orang berikutnya dengan pertanyaan yang sama.",
+            "Untuk kutu, jelaskan drive-nya, apa yang ditampilkan Lukotta dan apa yang Anda harapkan, dan kutip setiap pesan galat persis apa adanya. Jangan sertakan kata sandi atau kunci pemulihan.",
+            "Perbaikan terjemahan sama bergunanya. Saya tidak menguasai sebagian besar bahasa tempat aplikasi ini terbit, jadi kutip barisnya dan sebutkan seharusnya berbunyi apa.",
+            "Anda juga bisa mengirim surel ke contact_web@lukotta.com kalau lebih suka tidak memakai GitHub, meski surel saya balas lebih lambat."
           ]
         },
         {
           "heading": "Masalah keamanan",
           "paragraphs": [
-            "Jangan buka issue publik. SECURITY.md di repositori menyebutkan ke mana harus dikirim dan apa yang bisa diharapkan."
-          ]
-        },
-        {
-          "heading": "Selebihnya",
-          "paragraphs": [
-            "Kirim surel ke contact_web@lukotta.com dengan pertanyaan tentang aplikasi."
-          ]
-        },
-        {
-          "heading": "Berapa lama balasannya",
-          "paragraphs": [
-            "Lukotta dirawat oleh satu orang. Tidak ada meja bantuan dan tidak ada janji waktu balasan. Sebagian pesan butuh waktu, dan sebagian tidak terbalas.",
-            "Issue di GitHub biasanya lebih cepat, karena orang lain bisa menjawab lebih dulu."
+            "Jangan melaporkan masalah keamanan di isu publik. Pakai formulir laporan di github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

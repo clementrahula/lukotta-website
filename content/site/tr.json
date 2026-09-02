@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "tr",
     "name": "Turkish",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "hakkinda",
       "title": "Lukotta hakkında",
-      "description": "Lukotta, BitLocker, NTFS ve Linux disklerini açan ücretsiz, açık kaynaklı bir macOS uygulamasıdır. Tek bir geliştirici sürdürür, GNU General Public License ile.",
-      "lead": "Lukotta, macOS'un okuyamadığı diskleri ve disk imajlarını açar. Ücretsizdir, açık kaynaklıdır ve tek bir kişi tarafından sürdürülür.",
+      "description": "Lukotta neden var, neyin üzerine kurulu ve onu kim yaptı ve sürdürüyor. BitLocker ve Linux diskleri için bir Mac uygulaması, hâlâ erken aşamada.",
       "sections": [
-        {
-          "heading": "Nedir",
-          "paragraphs": [
-            "Lukotta bir macOS uygulamasıdır. BitLocker, NTFS, LUKS, ext4, btrfs ve XFS disklerini, ayrıca sanal makinelerin qcow2, VMDK, VDI, VHD ve VHDX biçimlerindeki disk imajlarını açar. macOS bunların hiçbirini kendiliğinden okumaz. NTFS'i okur ama ona yazmaz.",
-            "Arka planda küçük bir Linux sanal makinesi başlatır, diski orada açar ve Finder'a geri verir. Linux bu biçimleri yıllardır okuyor. Disk ne dönüştürülür ne kopyalanır. Olduğu gibi kalır ve geldiği makine onu okumayı sürdürür."
-          ]
-        },
-        {
-          "heading": "Kim sürdürüyor",
-          "paragraphs": [
-            "[Tek bir geliştirici](https://rahula.dev). Şirket yok, yatırımcı yok, ekip yok."
-          ]
-        },
         {
           "heading": "Neden var",
           "paragraphs": [
-            "Bir BitLocker diskini Mac'e takın, Finder onu silmeyi önerir. Parola sormaz ve ekranda diskin bozuk değil kilitli olduğunu gösteren hiçbir şey yoktur.",
-            "Bu çağda şifreli bir USB diski birden çok işletim sistemi arasında paylaşmanın pratik bir yolu olmaması saçma göründü, bu yüzden bir çözüm geliştirilmesi gerekti.",
-            "Linux ekosisteminde o diskleri okuyabilen araçlar zaten vardı. Lukotta onları bir Mac arayüzüyle bir araya getiriyor."
+            "Bir Windows bilgisayardaki ve bir Mac'teki yedekleri aynı harici diskte tutmak istiyordum. Mac, BitLocker birimini açamıyordu ve bunu yapmanın var olan yolları gerekenden karmaşıktı.",
+            "Lukotta, diski küçük bir Linux sanal makinesi içinde açıp macOS sistemine geri veren [anylinuxfs](https://github.com/nohajc/anylinuxfs) üzerine kurulu.",
+            "anylinuxfs bir komut satırı aracı; bu yüzden çoğu kişi için uygun değil. Bu tür araçlar için grafik arayüzler var, ama bir uçak kokpiti gibi görünüyor ve öyle hissettiriyor.",
+            "Lukotta uygulamasının başlıca amacı kusursuz bir kullanıcı deneyimi: diski takın, parolayı yazın, Finder uygulamasında açın. Bir disk her bilgisayarda tümüyle kullanılabilir olmalı."
           ]
         },
         {
-          "heading": "Ne kadar",
+          "heading": "Onu kim yaptı ve kim sürdürüyor",
           "paragraphs": [
-            "Hiç. Ücretli sürüm yok, abonelik yok, deneme süresi yok ve hesap yok.",
-            "Lukotta, GNU General Public License sürüm 3 veya sonrası altında özgür yazılımdır. Kaynak kodu yayımlanmıştır. Herkes okuyabilir, değiştirebilir ve aynı lisansla devredebilir."
-          ]
-        },
-        {
-          "heading": "Mac'inizden hiçbir şey çıkmaz",
-          "paragraphs": [
-            "Lukotta uygulamasında analitik yok, telemetri yok ve çökme raporu yok.",
-            "Tek türde ağ isteği yapar: yeni bir sürüm var mı diye bakar ve isterseniz indirir. Parolalar ve kurtarma anahtarları diski açmak için kullanılır; saklanmaz, gönderilmez ve kaydedilmez."
-          ]
-        },
-        {
-          "heading": "Kaynak kodu",
-          "paragraphs": [
-            "Uygulamanın kaynak kodu github.com/clementrahula/lukotta adresindedir."
+            "Lukotta uygulamasını [tek bir kişi](https://rahula.dev) geliştiriyor. Yıllardır yazılım mühendisliği ve UX tasarımı alanında çalışıyorum, bu yüzden arayüz burada altındaki kod kadar ilgi görüyor. Tek başına çalışmak da eskisinden daha pratik, çünkü yapay zekâ destekli geliştirme tekrarlayan işi üstleniyor.",
+            "Lukotta bitmiş değil. Arayüzde yapılacak iş ve düzeltilecek hatalar var, bazıları bağlı olduğu araçların içinde. Diskleri okumak güvenilir; onlara yazmak hâlâ deneysel."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "iletisim",
       "title": "İletişim",
-      "description": "Lukotta uygulamasında bir hatayı nasıl bildirirsiniz, nasıl soru sorarsınız veya güvenlik sorunu bildirirsiniz. GitHub issue'ları önce ve en hızlı yanıtlanır.",
-      "lead": "Hatalar GitHub'a gider. Güvenlik sorunları SECURITY.md içindeki adrese gider. Diğer her şey e-postayla gider.",
+      "description": "Lukotta'da hata bildirme, değişiklik önerme veya çeviri düzeltme ve güvenlik sorunlarını bildirme yolları. En hızlısı GitHub.",
       "sections": [
         {
-          "heading": "Bir hata ya da açılmayan bir disk",
           "paragraphs": [
-            "github.com/clementrahula/lukotta/issues adresinde bir issue açın. Issue'lar önce okunur ve herkese açıktır, böylece aynı diske sahip bir sonraki kişi yanıtı bulabilir.",
-            "Diskin ne olduğunu, Lukotta'nın ne gösterdiğini ve ne beklediğinizi yazın. Hatayı olduğu gibi aktarın. Bir issue'ya asla parola veya kurtarma anahtarı yapıştırmayın."
+            "Bozuk, kafa karıştırıcı ya da eksik bir şey varsa lütfen bana söyleyin.",
+            "Lukotta tek kişilik bir proje, bu yüzden garanti edilmiş bir yanıt süresi yok. Her şeyi okuyorum ve birkaç gün içinde yanıtlıyorum."
           ]
         },
         {
-          "heading": "Bir güvenlik sorunu",
+          "heading": "Hatalar, öneriler ve çeviriler",
           "paragraphs": [
-            "Herkese açık issue açmayın. Depodaki SECURITY.md nereye gönderileceğini ve ne bekleneceğini söyler."
+            "github.com/clementrahula/lukotta/issues adresindeki issue takip sistemini kullanın. GitHub sizin için yeniyse: Lukotta uygulamasının kaynak kodunun bulunduğu sitedir ve bir issue, proje hakkında herkese açık bir mesajdır. Yazmak için ücretsiz bir hesap gerekir. Issue'ları ilk olarak okurum ve aynı soruyu soracak bir sonraki kişi için herkese açık kalırlar.",
+            "Bir hata için diski, Lukotta uygulamasının size ne gösterdiğini ve ne beklediğinizi anlatın, her hata iletisini olduğu gibi aktarın. Parola veya kurtarma anahtarı eklemeyin.",
+            "Çeviri düzeltmeleri de aynı ölçüde yararlı. Uygulamanın yayımlandığı dillerin çoğunu bilmiyorum, bu yüzden satırı aktarın ve ne yazması gerektiğini söyleyin.",
+            "GitHub kullanmayı tercih etmiyorsanız contact_web@lukotta.com adresine de yazabilirsiniz, ama e-postaya daha yavaş yanıt veriyorum."
           ]
         },
         {
-          "heading": "Diğer her şey",
+          "heading": "Güvenlik sorunları",
           "paragraphs": [
-            "Uygulamayla ilgili sorularınız için contact_web@lukotta.com adresine yazın."
-          ]
-        },
-        {
-          "heading": "Yanıt ne kadar sürer",
-          "paragraphs": [
-            "Lukotta uygulamasını tek bir kişi sürdürüyor. Destek masası yok ve söz verilmiş bir yanıt süresi yok. Bazı iletiler zaman alır, bazıları yanıtsız kalır.",
-            "GitHub'da bir issue genelde daha hızlıdır, çünkü başka biri önce yanıtlayabilir."
+            "Bir güvenlik sorununu herkese açık bir issue'da bildirmeyin. github.com/clementrahula/lukotta/security/advisories/new adresindeki bildirim formunu kullanın."
           ]
         }
       ]

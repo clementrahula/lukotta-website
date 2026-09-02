@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "sl",
     "name": "Slovenian",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "o-aplikaciji",
       "title": "O aplikaciji Lukotta",
-      "description": "Lukotta je brezplačna macOS aplikacija z odprto kodo za diske BitLocker, NTFS in Linux. Vzdržuje jo en razvijalec, pod GNU General Public License.",
-      "lead": "Lukotta odpira diske in slike diska, ki jih macOS ne zna prebrati. Je brezplačna, odprtokodna in vzdržuje jo en sam človek.",
+      "description": "Zakaj Lukotta obstaja, na čem temelji in kdo jo je ustvaril ter jo vzdržuje. Aplikacija za Mac za diske BitLocker in Linux, še v zgodnjem razvoju.",
       "sections": [
-        {
-          "heading": "Kaj je",
-          "paragraphs": [
-            "Lukotta je aplikacija za macOS. Odpira diske BitLocker, NTFS, LUKS, ext4, btrfs in XFS ter slike diska navideznih strojev v zapisih qcow2, VMDK, VDI, VHD in VHDX. macOS ne bere nobenega od njih sam. NTFS zna brati, ne pa pisati nanj.",
-            "V ozadju zažene majhen navidezni stroj Linux, tam odpre disk in ga izroči Finderju. Linux te zapise bere že leta. Disk se niti ne pretvori niti ne kopira. Ostane tak, kot je bil, in stroj, iz katerega je prišel, ga še naprej bere."
-          ]
-        },
-        {
-          "heading": "Kdo jo vzdržuje",
-          "paragraphs": [
-            "[En sam razvijalec](https://rahula.dev). Ni podjetja, ni vlagateljev in ni ekipe."
-          ]
-        },
         {
           "heading": "Zakaj obstaja",
           "paragraphs": [
-            "Priključite disk BitLocker na Mac in Finder ponudi, da ga izbriše. Ne vpraša za geslo, in nič na zaslonu ne pokaže, da je disk zaklenjen in ne pokvarjen.",
-            "Zdelo se je nesmiselno, da dandanes ni praktičnega načina, da bi šifriran disk USB delili med več operacijskimi sistemi, zato je bilo treba zgraditi rešitev.",
-            "V ekosistemu Linux so že obstajala orodja, ki so znala brati te diske. Lukotta jih poveže z vmesnikom za Mac."
+            "Varnostne kopije z računalnika z Windows in z Maca sem hotel imeti na istem zunanjem disku. Mac ni znal odpreti nosilca BitLocker, obstoječi načini za to pa so bili bolj zapleteni, kot bi morali biti.",
+            "Lukotta je zgrajena na orodju [anylinuxfs](https://github.com/nohajc/anylinuxfs), ki disk odpre znotraj majhnega navideznega stroja z Linuxom in ga vrne macOS.",
+            "anylinuxfs je orodje ukazne vrstice, zato za večino ljudi ne pride v poštev. Za taka orodja obstajajo grafične lupine, a delujejo kot pilotska kabina letala.",
+            "Glavni cilj aplikacije Lukotta je popolna uporabniška izkušnja: priključite disk, vpišite geslo, odprite ga v aplikaciji Finder. Disk bi moral biti povsem uporaben na katerem koli računalniku."
           ]
         },
         {
-          "heading": "Koliko stane",
+          "heading": "Kdo jo je ustvaril in jo vzdržuje",
           "paragraphs": [
-            "Nič. Ni plačljive različice, ni naročnine, ni preizkusnega obdobja in ni računa.",
-            "Lukotta je prosta programska oprema pod GNU General Public License, različica 3 ali novejša. Izvorna koda je objavljena. Vsakdo jo sme brati, spreminjati in predati naprej pod isto licenco."
-          ]
-        },
-        {
-          "heading": "Nič ne zapusti vašega Maca",
-          "paragraphs": [
-            "Lukotta nima analitike, nima telemetrije in nima poročil o sesutju.",
-            "Naredi eno vrsto omrežne zahteve: pogleda, ali je nova različica, in jo prenese, če to želite. Gesla in obnovitveni ključi služijo odklepanju diska in se ne shranjujejo, ne pošiljajo in ne beležijo."
-          ]
-        },
-        {
-          "heading": "Izvorna koda",
-          "paragraphs": [
-            "Izvorna koda aplikacije je na github.com/clementrahula/lukotta."
+            "Aplikacijo Lukotta razvija [ena oseba](https://rahula.dev). Leta delam v programskem inženirstvu in oblikovanju UX, zato vmesnik tu dobi enako pozornost kot koda pod njim. Delo samostojno je tudi bolj izvedljivo kot nekoč, ker razvoj s pomočjo umetne inteligence prevzame ponavljajoče se delo.",
+            "Lukotta ni dokončana. Pri vmesniku je še delo in so napake za popraviti, nekatere med njimi v orodjih, na katera se opira. Branje diskov je zanesljivo; pisanje nanje je še poskusno."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "stik",
       "title": "Stik",
-      "description": "Kako prijaviti napako v aplikaciji Lukotta, postaviti vprašanje ali prijaviti varnostno težavo. Prijave na GitHubu se preberejo in odgovorijo prve.",
-      "lead": "Napake gredo na GitHub. Varnostne težave gredo na naslov iz SECURITY.md. Vse drugo gre po e-pošti.",
+      "description": "Kako prijaviti napako v aplikaciji Lukotta, predlagati spremembo ali popraviti prevod in kam prijaviti varnostne težave. Najhitreje gre prek GitHuba.",
       "sections": [
         {
-          "heading": "Napaka ali disk, ki se ne odpre",
           "paragraphs": [
-            "Odprite prijavo na github.com/clementrahula/lukotta/issues. Prijave se preberejo prve in so javne, tako da lahko naslednji človek z istim diskom najde odgovor.",
-            "Povejte, kateri disk je, kaj je Lukotta pokazala in kaj ste pričakovali. Napako navedite natanko. Nikoli ne prilepite gesla ali obnovitvenega ključa v prijavo."
+            "Povejte mi, prosim, če je kaj pokvarjeno, zmedeno ali manjka.",
+            "Lukotta je projekt ene osebe, zato zajamčenega časa odziva ni. Preberem vse in odgovorim v nekaj dneh."
           ]
         },
         {
-          "heading": "Varnostna težava",
+          "heading": "Napake, predlogi in prevodi",
           "paragraphs": [
-            "Ne odpirajte javne prijave. SECURITY.md v repozitoriju pove, kam jo poslati in kaj pričakovati."
+            "Uporabite sledilnik prijav na github.com/clementrahula/lukotta/issues. Če GitHuba še niste uporabljali: to je spletišče, kjer je izvorna koda aplikacije Lukotta, prijava pa je javno sporočilo o projektu. Za pisanje potrebujete brezplačen račun. Prijave preberem najprej in ostanejo javne za naslednjega z istim vprašanjem.",
+            "Pri napaki opišite disk, kaj vam je Lukotta pokazala in kaj ste pričakovali, ter natančno navedite vsako sporočilo o napaki. Ne navajajte gesla ali obnovitvenega ključa.",
+            "Popravki prevodov so prav tako koristni. Večine jezikov, v katerih izhaja aplikacija, ne govorim, zato navedite vrstico in napišite, kaj bi moralo pisati.",
+            "Lahko tudi pišete na contact_web@lukotta.com, če GitHuba raje ne bi uporabljali, čeprav na e-pošto odgovarjam počasneje."
           ]
         },
         {
-          "heading": "Vse drugo",
+          "heading": "Varnostne težave",
           "paragraphs": [
-            "Pišite na contact_web@lukotta.com z vprašanji o aplikaciji."
-          ]
-        },
-        {
-          "heading": "Kako dolgo traja odgovor",
-          "paragraphs": [
-            "Aplikacijo Lukotta vzdržuje en sam človek. Ni službe za podporo in ni obljubljenega časa odgovora. Na nekatera sporočila odgovor traja dlje, nekatera pa ostanejo brez odgovora.",
-            "Prijava na GitHubu je običajno hitrejša, ker lahko kdo drug odgovori prej."
+            "Varnostne težave ne prijavljajte v javni prijavi. Uporabite obrazec za prijavo na github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

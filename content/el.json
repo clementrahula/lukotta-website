@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "el": "Ο τόμος εμφανίζεται στις Τοποθεσίες και διαβάζεται, γράφεται και εξάγεται όπως κάθε άλλος δίσκος."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "el": "Πρώιμο στάδιο ανάπτυξης"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "el": "Το Lukotta είναι ακόμη καινούριο. Τα εργαλεία και οι οδηγοί του Linux στα οποία στηρίζεται υπάρχουν εδώ και χρόνια και είναι καλά δοκιμασμένα. Το Lukotta είναι χτισμένο πάνω τους, αλλά το ίδιο είναι ακόμη υπό ανάπτυξη, οπότε αναπόφευκτα υπάρχουν προβλήματα που δεν έχουν ακόμη εντοπιστεί. Προς το παρόν, το ασφαλέστερο είναι να ανοίγετε δίσκους και είδωλα μόνο για ανάγνωση. Η εγγραφή λειτουργεί, αλλά αντιμετωπίστε την ως πειραματική και κρατήστε αντίγραφο για ό,τι δεν θα θέλατε να χάσετε."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "el": "Τι ανοίγει το Lukotta"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "el": "Το Lukotta ανοίγει τους δίσκους και τα είδωλα δίσκων που το macOS αρνείται να διαβάσει, και τα παραδίδει στο Finder ως συνηθισμένους τόμους."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "el": "Το Lukotta ανοίγει τους δίσκους και τα είδωλα δίσκων που το macOS αρνείται να διαβάσει, και τα δείχνει στο Finder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "el": "Σχετικά"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "el": "ποιος συντηρεί το Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "el": "γιατί υπάρχει το Lukotta και ποιος το συντηρεί"
     },
     "notFound.contact.name": {
       "en": "Contact",

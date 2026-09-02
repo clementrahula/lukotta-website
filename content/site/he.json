@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "he",
     "name": "Hebrew",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "odot",
       "title": "אודות Lukotta",
-      "description": "‏Lukotta היא אפליקציית macOS חינמית בקוד פתוח שפותחת כונני BitLocker, ‏NTFS ו‑Linux. היא מתוחזקת בידי מפתח אחד תחת GNU General Public License.",
-      "lead": "‏Lukotta פותחת כוננים ותמונות דיסק ש‑macOS לא מצליחה לקרוא. היא חינמית, בקוד פתוח, ומתוחזקת בידי אדם אחד.",
+      "description": "מדוע Lukotta קיימת, על מה היא בנויה, ומי יצר ומתחזק אותה. אפליקציית Mac לכונני BitLocker ו‑Linux, עדיין בשלב פיתוח מוקדם.",
       "sections": [
         {
-          "heading": "מה זה",
+          "heading": "מדוע היא קיימת",
           "paragraphs": [
-            "‏Lukotta היא אפליקציה ל‑macOS. היא פותחת כונני BitLocker, ‏NTFS, ‏LUKS, ‏ext4, ‏btrfs ו‑XFS, וכן תמונות דיסק של מכונות וירטואליות בתבניות qcow2, ‏VMDK, ‏VDI, ‏VHD ו‑VHDX. ‏macOS לא קוראת אף אחת מהן בעצמה. את NTFS היא קוראת, אבל לא כותבת אליו.",
-            "היא מפעילה ברקע מכונה וירטואלית קטנה עם Linux, פותחת שם את הכונן ומוסרת אותו ל‑Finder. ‏Linux קוראת את התבניות האלה כבר שנים. הכונן אינו מומר ואינו מועתק. הוא נשאר כפי שהיה, והמכונה שממנה הגיע ממשיכה לקרוא אותו."
+            "רציתי לשמור גיבויים ממחשב Windows וממחשב Mac על אותו כונן חיצוני. ה‑Mac לא הצליח לפתוח את אמצעי האחסון של BitLocker, והדרכים שהיו קיימות לעשות זאת היו מסובכות יותר משהיה צריך.",
+            "‏Lukotta בנויה על [anylinuxfs](https://github.com/nohajc/anylinuxfs), שפותח את הכונן בתוך מכונה וירטואלית קטנה עם Linux ומחזיר אותו ל‑macOS.",
+            "‏anylinuxfs הוא כלי שורת פקודה, ולכן הוא לא מתאים לרוב האנשים. יש מעטפות גרפיות לכלים כאלה, אבל הן נראות ומרגישות כמו תא טייס של מטוס.",
+            "המטרה העיקרית של Lukotta היא חוויית שימוש מושלמת: חברו את הכונן, הקלידו את הסיסמה, פתחו אותו ב‑Finder. כונן אמור להיות שמיש במלואו בכל מחשב."
           ]
         },
         {
-          "heading": "מי מתחזק אותה",
+          "heading": "מי יצר אותה ומי מתחזק אותה",
           "paragraphs": [
-            "[מפתח יחיד](https://rahula.dev). אין חברה, אין משקיעים ואין צוות."
-          ]
-        },
-        {
-          "heading": "למה היא קיימת",
-          "paragraphs": [
-            "חברו כונן BitLocker ל‑Mac ו‑Finder יציע למחוק אותו. הוא לא מבקש סיסמה, ושום דבר על המסך לא מראה שהכונן נעול ולא מקולקל.",
-            "נראה מגוחך שבימינו אין דרך מעשית לשתף כונן USB מוצפן בין כמה מערכות הפעלה, ולכן היה צריך לבנות פתרון.",
-            "במערכת האקולוגית של Linux כבר היו כלים שידעו לקרוא את הכוננים האלה. ‏Lukotta מחברת אותם לממשק ל‑Mac."
-          ]
-        },
-        {
-          "heading": "כמה זה עולה",
-          "paragraphs": [
-            "כלום. אין גרסה בתשלום, אין מנוי, אין תקופת ניסיון ואין חשבון.",
-            "‏Lukotta היא תוכנה חופשית תחת GNU General Public License, גרסה 3 או מאוחרת יותר. הקוד מפורסם. כל אחד רשאי לקרוא אותו, לשנות אותו ולהעביר אותו הלאה באותו רישיון."
-          ]
-        },
-        {
-          "heading": "שום דבר לא עוזב את ה‑Mac שלכם",
-          "paragraphs": [
-            "ל‑Lukotta אין אנליטיקה, אין טלמטריה ואין דיווחי קריסה.",
-            "היא מבצעת סוג אחד של בקשת רשת: בודקת אם יש גרסה חדשה ומורידה אותה אם תבקשו. סיסמאות ומפתחות שחזור משמשים לפתיחת הכונן ואינם נשמרים, נשלחים או נרשמים."
-          ]
-        },
-        {
-          "heading": "קוד המקור",
-          "paragraphs": [
-            "קוד המקור של האפליקציה נמצא ב‑github.com/clementrahula/lukotta."
+            "‏Lukotta מפותחת בידי [אדם אחד](https://rahula.dev). אני עובד שנים בהנדסת תוכנה ובעיצוב UX, ולכן הממשק כאן מקבל תשומת לב כמו הקוד שמתחתיו. גם עבודה לבד מעשית יותר מבעבר, כי פיתוח בעזרת בינה מלאכותית לוקח על עצמו את העבודה החוזרת.",
+            "‏Lukotta אינה גמורה. בממשק נותרה עבודה ויש באגים לתקן, חלקם בכלים שעליהם היא נשענת. קריאת כוננים אמינה; הכתיבה אליהם עדיין ניסיונית."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kesher",
       "title": "צור קשר",
-      "description": "איך לדווח על תקלה ב‑Lukotta, לשאול שאלה או לדווח על בעיית אבטחה. ה‑issues ב‑GitHub נקראים ראשונים ומקבלים תשובה הכי מהר.",
-      "lead": "תקלות הולכות ל‑GitHub. בעיות אבטחה הולכות לכתובת שב‑SECURITY.md. כל השאר הולך במייל.",
+      "description": "איך לדווח על באג ב‑Lukotta, להציע שינוי או לתקן תרגום, ולאן שולחים בעיות אבטחה. הדרך המהירה ביותר היא דרך GitHub.",
       "sections": [
         {
-          "heading": "תקלה, או כונן שלא נפתח",
           "paragraphs": [
-            "פתחו issue ב‑github.com/clementrahula/lukotta/issues. ה‑issues נקראים ראשונים והם פומביים, כך שהאדם הבא עם אותו כונן יוכל למצוא את התשובה.",
-            "כתבו איזה כונן זה, מה Lukotta הראתה ומה ציפיתם. צטטו את השגיאה במדויק. לעולם אל תדביקו סיסמה או מפתח שחזור לתוך issue."
+            "אנא ספרו לי אם משהו שבור, מבלבל או חסר.",
+            "‏Lukotta היא מיזם של אדם אחד, ולכן אין זמן תגובה מובטח. אני קורא הכול ומשיב בתוך כמה ימים."
           ]
         },
         {
-          "heading": "בעיית אבטחה",
+          "heading": "באגים, הצעות ותרגומים",
           "paragraphs": [
-            "אל תפתחו issue פומבי. ה‑SECURITY.md במאגר אומר לאן לשלוח ולמה לצפות."
+            "אנא השתמשו במערכת המעקב אחר פניות בכתובת github.com/clementrahula/lukotta/issues. אם לא השתמשתם ב‑GitHub קודם: זה האתר שבו נמצא קוד המקור של Lukotta, ופנייה היא הודעה פומבית על המיזם. כדי לכתוב אחת דרוש חשבון חינמי. את הפניות אני קורא קודם, והן נשארות פומביות לאדם הבא עם אותה שאלה.",
+            "עבור באג, תארו את הכונן, מה Lukotta הציגה לכם ומה ציפיתם, וצטטו כל הודעת שגיאה במדויק. אל תכללו סיסמה או מפתח שחזור.",
+            "תיקוני תרגום מועילים בדיוק באותה מידה. את רוב השפות שבהן האפליקציה יוצאת אינני דובר, אז צטטו את השורה וכתבו מה צריך להיות כתוב בה.",
+            "אפשר גם לכתוב אל contact_web@lukotta.com אם אינכם רוצים להשתמש ב‑GitHub, אם כי לדוא\"ל אני משיב לאט יותר."
           ]
         },
         {
-          "heading": "כל השאר",
+          "heading": "בעיות אבטחה",
           "paragraphs": [
-            "כתבו ל‑contact_web@lukotta.com בשאלות על האפליקציה."
-          ]
-        },
-        {
-          "heading": "כמה זמן לוקחת תשובה",
-          "paragraphs": [
-            "‏Lukotta מתוחזקת בידי אדם אחד. אין מוקד תמיכה ואין זמן תגובה מובטח. לחלק מההודעות לוקח זמן לקבל מענה, וחלק נשארות ללא מענה.",
-            "‏issue ב‑GitHub בדרך כלל מהיר יותר, כי מישהו אחר עשוי לענות קודם."
+            "אנא אל תדווחו על בעיית אבטחה בפנייה פומבית. השתמשו בטופס הדיווח בכתובת github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

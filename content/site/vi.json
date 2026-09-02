@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "vi",
     "name": "Vietnamese",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "gioi-thieu",
       "title": "Giới thiệu Lukotta",
-      "description": "Lukotta là ứng dụng macOS miễn phí, mã nguồn mở, mở được ổ đĩa BitLocker, NTFS và Linux. Ứng dụng do một lập trình viên duy trì theo GNU General Public License.",
-      "lead": "Lukotta mở những ổ đĩa và ảnh đĩa mà macOS không đọc được. Nó miễn phí, mã nguồn mở, và do một người duy trì.",
+      "description": "Vì sao có Lukotta, nó dựa trên cái gì, và ai đã tạo ra và duy trì nó. Ứng dụng Mac cho ổ đĩa BitLocker và Linux, vẫn đang ở giai đoạn đầu.",
       "sections": [
-        {
-          "heading": "Nó là gì",
-          "paragraphs": [
-            "Lukotta là một ứng dụng macOS. Nó mở ổ đĩa BitLocker, NTFS, LUKS, ext4, btrfs và XFS, cùng ảnh đĩa của máy ảo ở các định dạng qcow2, VMDK, VDI, VHD và VHDX. macOS tự mình không đọc được cái nào. NTFS thì đọc được, nhưng không ghi được.",
-            "Nó chạy một máy ảo Linux nhỏ ở nền, mở ổ đĩa ở đó, rồi giao lại cho Finder. Linux đã đọc các định dạng này từ nhiều năm nay. Ổ đĩa không bị chuyển đổi cũng không bị sao chép. Nó vẫn như cũ, và máy mà ổ đĩa được lấy ra từ đó vẫn đọc được nó."
-          ]
-        },
-        {
-          "heading": "Ai duy trì nó",
-          "paragraphs": [
-            "[Một lập trình viên duy nhất](https://rahula.dev). Không có công ty, không có nhà đầu tư và không có đội ngũ."
-          ]
-        },
         {
           "heading": "Vì sao nó tồn tại",
           "paragraphs": [
-            "Cắm một ổ đĩa BitLocker vào Mac và Finder đề nghị xoá nó. Nó không hỏi mật khẩu, và không có gì trên màn hình cho thấy ổ đĩa đang bị khoá chứ không phải hỏng.",
-            "Thật vô lý khi thời buổi này vẫn chưa có cách thiết thực nào để dùng chung một ổ USB đã mã hoá giữa nhiều hệ điều hành, nên phải dựng ra một giải pháp.",
-            "Trong hệ sinh thái Linux đã có sẵn công cụ đọc được những ổ đĩa đó. Lukotta ghép chúng lại với một giao diện cho Mac."
+            "Tôi muốn giữ bản sao lưu từ một máy tính Windows và từ một máy Mac trên cùng một ổ đĩa ngoài. Máy Mac không mở được ổ đĩa BitLocker, còn những cách hiện có để làm việc đó thì phức tạp hơn mức cần thiết.",
+            "Lukotta được xây trên [anylinuxfs](https://github.com/nohajc/anylinuxfs), công cụ mở ổ đĩa bên trong một máy ảo Linux nhỏ rồi giao lại cho macOS.",
+            "anylinuxfs là công cụ dòng lệnh, điều đó loại nó khỏi lựa chọn của phần lớn mọi người. Có những lớp vỏ đồ họa cho các công cụ như vậy, nhưng chúng trông và dùng như buồng lái máy bay.",
+            "Mục tiêu chính của Lukotta là trải nghiệm người dùng hoàn hảo: cắm ổ đĩa, gõ mật khẩu, mở nó trong Finder. Một ổ đĩa lẽ ra phải dùng được trọn vẹn trên mọi máy tính."
           ]
         },
         {
-          "heading": "Nó tốn bao nhiêu",
+          "heading": "Ai đã tạo ra và duy trì nó",
           "paragraphs": [
-            "Không gì cả. Không có bản trả tiền, không có thuê bao, không có bản dùng thử và không có tài khoản.",
-            "Lukotta là phần mềm tự do theo GNU General Public License, phiên bản 3 hoặc mới hơn. Mã nguồn được công bố. Ai cũng có thể đọc, sửa và truyền lại theo cùng giấy phép."
-          ]
-        },
-        {
-          "heading": "Không gì rời khỏi máy Mac của bạn",
-          "paragraphs": [
-            "Lukotta không có phân tích, không có đo đạc từ xa và không có báo cáo sự cố.",
-            "Nó chỉ thực hiện một loại yêu cầu mạng: xem có phiên bản mới không và tải về nếu bạn yêu cầu. Mật khẩu và khoá khôi phục dùng để mở ổ đĩa, không được lưu, gửi hay ghi lại."
-          ]
-        },
-        {
-          "heading": "Mã nguồn",
-          "paragraphs": [
-            "Mã nguồn của ứng dụng nằm ở github.com/clementrahula/lukotta."
+            "Lukotta do [một người](https://rahula.dev) phát triển. Tôi đã có nhiều năm làm kỹ thuật phần mềm và thiết kế UX, nên giao diện ở đây được chăm chút ngang với phần mã bên dưới. Làm việc một mình cũng khả thi hơn trước, vì việc phát triển có AI hỗ trợ đảm nhận phần việc lặp đi lặp lại.",
+            "Lukotta chưa hoàn thiện. Giao diện vẫn còn việc phải làm và còn lỗi cần sửa, một số nằm trong chính các công cụ mà nó phụ thuộc. Đọc ổ đĩa thì đáng tin cậy; ghi vào ổ đĩa vẫn còn là thử nghiệm."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "lien-he",
       "title": "Liên hệ",
-      "description": "Cách báo lỗi trong Lukotta, đặt câu hỏi hoặc báo vấn đề bảo mật. Các issue trên GitHub được đọc trước và thường được trả lời nhanh nhất.",
-      "lead": "Lỗi thì gửi lên GitHub. Vấn đề bảo mật gửi tới địa chỉ trong SECURITY.md. Mọi thứ khác gửi qua email.",
+      "description": "Cách báo lỗi trong Lukotta, đề xuất thay đổi hoặc sửa bản dịch, và nơi gửi vấn đề bảo mật. Trình theo dõi issue trên GitHub là nhanh nhất.",
       "sections": [
         {
-          "heading": "Một lỗi, hoặc một ổ đĩa không mở được",
           "paragraphs": [
-            "Mở một issue tại github.com/clementrahula/lukotta/issues. Issue được đọc trước và ai cũng xem được, nên người tiếp theo với cùng ổ đĩa có thể tìm thấy câu trả lời.",
-            "Hãy nói rõ đó là ổ đĩa nào, Lukotta hiện gì, và bạn mong đợi gì. Trích lỗi thật chính xác. Đừng bao giờ dán mật khẩu hay khoá khôi phục vào một issue."
+            "Xin hãy cho tôi biết nếu có gì hỏng, khó hiểu hoặc còn thiếu.",
+            "Lukotta là dự án của một người, nên không có thời gian phản hồi được bảo đảm. Tôi đọc mọi thứ và trả lời trong vài ngày."
           ]
         },
         {
-          "heading": "Một vấn đề bảo mật",
+          "heading": "Lỗi, góp ý và bản dịch",
           "paragraphs": [
-            "Đừng mở issue công khai. SECURITY.md trong kho mã nói gửi đi đâu và nên mong đợi gì."
+            "Xin dùng trình theo dõi vấn đề tại github.com/clementrahula/lukotta/issues. Nếu bạn chưa dùng GitHub: đó là trang chứa mã nguồn của Lukotta, và một issue là một tin nhắn công khai về dự án. Để viết một issue, bạn cần một tài khoản miễn phí. Tôi đọc các issue trước tiên, và chúng vẫn công khai cho người tiếp theo có cùng câu hỏi.",
+            "Với một lỗi, hãy mô tả ổ đĩa, những gì Lukotta hiển thị và những gì bạn mong đợi, và trích nguyên văn mọi thông báo lỗi. Đừng đưa vào mật khẩu hay khóa khôi phục.",
+            "Việc sửa bản dịch cũng hữu ích không kém. Tôi không nói được phần lớn các ngôn ngữ mà ứng dụng phát hành, nên hãy trích dòng đó và nói nên sửa thành gì.",
+            "Bạn cũng có thể gửi thư tới contact_web@lukotta.com nếu không muốn dùng GitHub, dù tôi trả lời thư chậm hơn."
           ]
         },
         {
-          "heading": "Mọi thứ khác",
+          "heading": "Vấn đề bảo mật",
           "paragraphs": [
-            "Gửi email tới contact_web@lukotta.com nếu có câu hỏi về ứng dụng."
-          ]
-        },
-        {
-          "heading": "Bao lâu thì có hồi âm",
-          "paragraphs": [
-            "Lukotta do một người duy trì. Không có bộ phận hỗ trợ và không có thời hạn hồi âm nào được hứa. Có thư phải chờ một thời gian mới được trả lời, và có thư không được trả lời.",
-            "Một issue trên GitHub thường nhanh hơn, vì người khác có thể trả lời trước."
+            "Xin đừng báo vấn đề bảo mật trong một issue công khai. Hãy dùng biểu mẫu báo cáo tại github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]

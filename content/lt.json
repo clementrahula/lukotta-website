@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "lt": "Tomas atsiranda skiltyje Locations ir yra skaitomas, rašomas bei išstumiamas kaip bet kuris kitas diskas."
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "lt": "Ankstyva kūrimo stadija"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "lt": "Lukotta dar nauja. Linux įrankiai ir tvarkyklės, kuriomis ji remiasi, gyvuoja jau metų metus ir yra gerai išbandyti. Lukotta sukurta jų pagrindu, bet pati dar kuriama, tad joje neišvengiamai yra dar neaptiktų problemų. Kol kas saugiausia atverti diskus ir atvaizdžius tik skaitymui. Rašymas veikia, bet laikykite jį eksperimentiniu ir turėkite kopiją visko, ko nenorėtumėte prarasti."
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "lt": "Ką Lukotta atveria"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "lt": "Lukotta atveria diskus ir diskų atvaizdžius, kurių macOS atsisako skaityti, ir perduoda juos Finder kaip įprastus tomus."
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "lt": "Lukotta atveria diskus ir diskų atvaizdžius, kurių macOS atsisako skaityti, ir parodo juos Finder."
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "lt": "Apie programą"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "lt": "kas prižiūri programą Lukotta"
+      "en": "why Lukotta exists and who maintains it",
+      "lt": "kodėl Lukotta egzistuoja ir kas ją prižiūri"
     },
     "notFound.contact.name": {
       "en": "Contact",

@@ -174,13 +174,21 @@
       "en": "The volume appears under Locations, and reads, writes and ejects like any other drive.",
       "hi": "वॉल्यूम स्थान के नीचे दिखता है, और किसी भी दूसरी ड्राइव की तरह पढ़ा, लिखा और निकाला जाता है।"
     },
+    "how.warning.title": {
+      "en": "Early development",
+      "hi": "शुरुआती विकास"
+    },
+    "how.warning.body": {
+      "en": "Lukotta is still new. The Linux tools and drivers it relies on have been around for years and are well tested. Lukotta is built on top of them, but it is still in development, so there are inevitably issues yet to be uncovered. For now, using it for opening drives and images in read-only mode is the safest thing to do. Writing does work, but please treat it as experimental, and keep a copy of anything you would be upset to lose.",
+      "hi": "Lukotta अभी नया है। जिन Linux औज़ारों और ड्राइवरों पर यह टिका है, वे बरसों से मौजूद हैं और अच्छी तरह परखे हुए हैं। Lukotta उन्हीं पर बना है, पर खुद अभी विकास में है, इसलिए इसमें कुछ समस्याएँ अनिवार्य रूप से बाक़ी हैं जो अब तक सामने नहीं आईं। फ़िलहाल सबसे सुरक्षित यही है कि ड्राइव और डिस्क इमेज केवल पढ़ने के लिए खोली जाएँ। लिखना काम तो करता है, पर उसे प्रयोगात्मक ही मानिए, और जो कुछ आप खोना नहीं चाहते उसकी एक प्रति रखिए।"
+    },
     "features.title": {
       "en": "What Lukotta Opens",
       "hi": "Lukotta क्या खोलता है"
     },
     "features.lead": {
-      "en": "Lukotta opens drives and disk images that macOS refuses to read, and gives them to Finder as ordinary volumes.",
-      "hi": "Lukotta उन ड्राइव और डिस्क इमेज को खोलता है जिन्हें macOS पढ़ने से मना कर देता है, और उन्हें साधारण वॉल्यूम की तरह Finder को सौंप देता है।"
+      "en": "Lukotta opens drives and disk images that macOS refuses to read, and shows them in Finder.",
+      "hi": "Lukotta उन ड्राइव और डिस्क इमेज को खोलता है जिन्हें macOS पढ़ने से मना कर देता है, और उन्हें Finder में दिखाता है।"
     },
     "features.body": {
       "en": "It takes physical drives and image files alike. A BitLocker volume opens with its password or with a 48-digit recovery key, and BitLocker and NTFS volumes are both read and written, so files can be copied onto a drive as well as off it.",
@@ -443,8 +451,8 @@
       "hi": "परिचय"
     },
     "notFound.about.what": {
-      "en": "who maintains Lukotta",
-      "hi": "Lukotta को कौन संभालता है"
+      "en": "why Lukotta exists and who maintains it",
+      "hi": "Lukotta क्यों है और इसे कौन सँभालता है"
     },
     "notFound.contact.name": {
       "en": "Contact",

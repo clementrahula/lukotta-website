@@ -1,5 +1,5 @@
 {
-  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it.",
+  "$comment": "About and Contact. One file per language, the same shape as content/pages. A language without a file falls back to nothing: the build skips it and the sitemap does not claim it. Unlike the guides, these two carry no lead. They keep headings, but few: About is why it exists and who created and maintains it, Contact is bugs and security, and the meta about response times comes before either. A page of one-paragraph subsections read as a brochure rather than as a person.",
   "language": {
     "code": "lt",
     "name": "Lithuanian",
@@ -14,48 +14,22 @@
     "about": {
       "slug": "apie-programa",
       "title": "Apie programą Lukotta",
-      "description": "Lukotta yra nemokama atvirojo kodo macOS programa BitLocker, NTFS ir Linux diskams. Ją prižiūri vienas kūrėjas, pagal GNU General Public License.",
-      "lead": "Lukotta atveria diskus ir disko atvaizdžius, kurių macOS perskaityti negali. Ji nemokama, atvirojo kodo, ir ją prižiūri vienas žmogus.",
+      "description": "Kodėl Lukotta egzistuoja, kuo ji remiasi ir kas ją sukūrė bei prižiūri. Mac programa BitLocker ir Linux diskams, dar ankstyvos kūrimo stadijos.",
       "sections": [
         {
-          "heading": "Kas tai",
+          "heading": "Kodėl ji egzistuoja",
           "paragraphs": [
-            "Lukotta yra macOS programa. Ji atveria BitLocker, NTFS, LUKS, ext4, btrfs ir XFS diskus bei virtualiųjų mašinų disko atvaizdžius qcow2, VMDK, VDI, VHD ir VHDX formatais. macOS nė vieno iš jų pati neskaito. NTFS ji skaito, bet į jį nerašo.",
-            "Ji fone paleidžia nedidelę Linux virtualiąją mašiną, ten atveria diską ir perduoda jį Finder. Linux šiuos formatus skaito jau daug metų. Diskas nei pertvarkomas, nei kopijuojamas. Jis lieka toks, koks buvo, o kompiuteris, iš kurio paimtas, jį skaito kaip anksčiau."
+            "Norėjau laikyti atsargines kopijas iš Windows kompiuterio ir iš Mac tame pačiame išoriniame diske. Mac negalėjo atverti BitLocker tomo, o esami būdai tai padaryti buvo sudėtingesni, nei reikėjo.",
+            "Lukotta remiasi [anylinuxfs](https://github.com/nohajc/anylinuxfs), kuris atveria diską mažoje Linux virtualioje mašinoje ir grąžina jį macOS.",
+            "anylinuxfs yra komandų eilutės įrankis, todėl daugumai žmonių jis netinka. Tokiems įrankiams yra grafinių sąsajų, bet jos primena lėktuvo kabiną.",
+            "Pagrindinis programos Lukotta tikslas – nepriekaištinga naudotojo patirtis: prijunkite diską, įveskite slaptažodį, atverkite jį Finder. Diskas turėtų būti visiškai tinkamas naudoti bet kuriame kompiuteryje."
           ]
         },
         {
-          "heading": "Kas ją prižiūri",
+          "heading": "Kas ją sukūrė ir prižiūri",
           "paragraphs": [
-            "[Vienas kūrėjas](https://rahula.dev). Nėra įmonės, nėra investuotojų ir nėra komandos."
-          ]
-        },
-        {
-          "heading": "Kodėl ji atsirado",
-          "paragraphs": [
-            "Prijunkite BitLocker diską prie Mac, ir Finder siūlo jį ištrinti. Slaptažodžio jis neklausia, ir niekas ekrane nerodo, kad diskas užrakintas, o ne sugedęs.",
-            "Atrodė beprasmiška, kad šiais laikais nėra praktiško būdo šifruotą USB diską naudoti keliose operacinėse sistemose, tad sprendimą teko sukurti.",
-            "Linux ekosistemoje jau buvo įrankių, gebančių skaityti tuos diskus. Lukotta sujungia juos su Mac sąsaja."
-          ]
-        },
-        {
-          "heading": "Kiek kainuoja",
-          "paragraphs": [
-            "Nieko. Nėra mokamos versijos, nėra prenumeratos, nėra bandomojo laikotarpio ir nėra paskyros.",
-            "Lukotta yra laisva programinė įranga pagal GNU General Public License, 3 arba naujesnę versiją. Pirminis kodas paskelbtas. Kiekvienas gali jį skaityti, keisti ir perduoti toliau su ta pačia licencija."
-          ]
-        },
-        {
-          "heading": "Iš jūsų Mac niekas neišeina",
-          "paragraphs": [
-            "Programoje Lukotta nėra analitikos, nėra telemetrijos ir nėra strigčių ataskaitų.",
-            "Ji atlieka vienos rūšies tinklo užklausą: pasižiūri, ar yra nauja versija, ir ją atsisiunčia, jei paprašote. Slaptažodžiai ir atkūrimo raktai naudojami diskui atrakinti ir nėra saugomi, siunčiami ar registruojami."
-          ]
-        },
-        {
-          "heading": "Pirminis kodas",
-          "paragraphs": [
-            "Programos pirminis kodas yra adresu github.com/clementrahula/lukotta."
+            "Programą Lukotta kuria [vienas žmogus](https://rahula.dev). Metų metus dirbu programinės įrangos inžinerijoje ir UX dizaine, tad sąsajai čia skiriama tiek pat dėmesio, kiek ir ją palaikančiam kodui. Dirbti vienam šiandien taip pat praktiškiau nei anksčiau, nes DI padedamas kūrimas atlieka pasikartojantį darbą.",
+            "Lukotta nebaigta. Prie sąsajos dar yra darbo ir yra klaidų, kurias reikia taisyti, kai kurios jų – įrankiuose, nuo kurių ji priklauso. Diskų skaitymas patikimas; rašymas į juos dar eksperimentinis."
           ]
         }
       ]
@@ -63,33 +37,27 @@
     "contact": {
       "slug": "kontaktai",
       "title": "Kontaktai",
-      "description": "Kaip pranešti apie klaidą programoje Lukotta, užduoti klausimą ar pranešti apie saugumo problemą. GitHub issue skaitomi ir atsakomi pirmiausia.",
-      "lead": "Klaidos keliauja į GitHub. Saugumo problemos į adresą, nurodytą SECURITY.md. Visa kita el. paštu.",
+      "description": "Kaip pranešti apie klaidą programoje Lukotta, pasiūlyti pakeitimą ar pataisyti vertimą ir kur pranešti apie saugumo problemas. Greičiausias būdas – GitHub.",
       "sections": [
         {
-          "heading": "Klaida arba diskas, kuris neatsiveria",
           "paragraphs": [
-            "Sukurkite issue adresu github.com/clementrahula/lukotta/issues. Issue skaitomi pirmiausia ir yra vieši, tad kitas žmogus su tuo pačiu disku gali rasti atsakymą.",
-            "Parašykite, koks tai diskas, ką Lukotta parodė ir ko tikėjotės. Klaidą pacituokite tiksliai. Niekada neįklijuokite į issue slaptažodžio ar atkūrimo rakto."
+            "Prašau parašykite, jei kas nors sugedę, painu ar trūksta.",
+            "Lukotta yra vieno žmogaus projektas, tad garantuoto atsakymo laiko nėra. Perskaitau viską ir atsakau per kelias dienas."
           ]
         },
         {
-          "heading": "Saugumo problema",
+          "heading": "Klaidos, pasiūlymai ir vertimai",
           "paragraphs": [
-            "Nekurkite viešo issue. SECURITY.md saugykloje nurodo, kur tai siųsti ir ko tikėtis."
+            "Naudokitės problemų sekimo sistema adresu github.com/clementrahula/lukotta/issues. Jei GitHub jums naujiena: tai svetainė, kurioje yra programos Lukotta pirminis kodas, o įrašas yra viešas pranešimas apie projektą. Kad jį parašytumėte, reikia nemokamos paskyros. Įrašus perskaitau pirmiausia, ir jie lieka vieši kitam žmogui su tuo pačiu klausimu.",
+            "Dėl klaidos aprašykite diską, ką Lukotta jums parodė ir ko tikėjotės, ir pacituokite kiekvieną klaidos pranešimą tiksliai. Neįtraukite slaptažodžio ar atkūrimo rakto.",
+            "Vertimų pataisymai lygiai tokie pat naudingi. Nekalbu daugumos kalbų, kuriomis programa leidžiama, tad pacituokite eilutę ir parašykite, kas ten turėtų būti.",
+            "Taip pat galite rašyti adresu contact_web@lukotta.com, jei nenorėtumėte naudotis GitHub, nors į laiškus atsakau lėčiau."
           ]
         },
         {
-          "heading": "Visa kita",
+          "heading": "Saugumo problemos",
           "paragraphs": [
-            "Rašykite adresu contact_web@lukotta.com su klausimais apie programą."
-          ]
-        },
-        {
-          "heading": "Kiek trunka atsakymas",
-          "paragraphs": [
-            "Programą Lukotta prižiūri vienas žmogus. Nėra pagalbos tarnybos ir nėra žadėto atsakymo termino. Kai kurie laiškai užtrunka, o kai kurie lieka be atsakymo.",
-            "Į GitHub issue paprastai atsakoma greičiau, nes kas nors kitas gali atsakyti pirmas."
+            "Nepraneškite apie saugumo problemą viešame įraše. Naudokitės pranešimo forma adresu github.com/clementrahula/lukotta/security/advisories/new."
           ]
         }
       ]
