@@ -109,6 +109,28 @@ async function localisedNotFound(request, url) {
   });
 }
 
+/* The 404 as markdown, for a caller that asked for markdown and mistyped an
+   address. Without it the fallback was the origin's HTML 404: a full document,
+   in English whatever the language directory, handed to something that had
+   just said it wanted markdown. The build writes 404.md beside every 404.html
+   from the same links, so the two cannot drift. */
+async function markdownNotFound(request, url, method) {
+  const prefix = url.pathname.split("/")[1];
+  const where = LANGUAGE_PATHS.includes(prefix) ? `/${prefix}/404.md` : "/404.md";
+  const page = await fetch(new URL(where, url).toString(), { cf: { cacheEverything: true } });
+  if (!page.ok) return null;
+  return new Response(method === "HEAD" ? null : page.body, {
+    status: 404,
+    headers: {
+      "Content-Type": "text/markdown; charset=utf-8",
+      "Cache-Control": "no-cache",
+      "Vary": "Accept, Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Robots-Tag": "noindex",
+    },
+  });
+}
+
 /* RFC 9116 puts security.txt at /.well-known/security.txt, and GitHub Pages does
    not serve a path beginning with a dot -- /.nojekyll answers 404 on this site,
    so the whole directory is unreachable. The build writes /security.txt instead
@@ -171,8 +193,17 @@ async function negotiate(request) {
     });
 
     /* No twin, or the origin had something to say about it: answer the original
-       request rather than handing back a 404 for a page that exists in HTML. */
-    if (!md.ok) return withVary(await fetch(request), url);
+       request rather than handing back a 404 for a page that exists in HTML.
+       Unless the address does not exist at all, in which case the caller gets
+       the markdown 404 rather than an HTML document it did not ask for. */
+    if (!md.ok) {
+      const passed = await fetch(request);
+      if (passed.status === 404) {
+        const answer = await markdownNotFound(request, url, method);
+        if (answer) return answer;
+      }
+      return withVary(passed, url);
+    }
 
     const body = method === "HEAD" ? null : md.body;
     return new Response(body, {

@@ -865,6 +865,23 @@ function notFoundFor(lang, t, sitePages) {
   return { links, homeHref: base };
 }
 
+/* The 404 as markdown, from the same links the HTML page is built from.
+   An agent that asked for text/markdown and mistyped an address was getting a
+   full HTML document -- the one thing the worker exists to prevent -- and with
+   it no usable way to recover. This is what the worker hands back instead. */
+function notFoundMarkdown({ t, links, tasks }) {
+  const line = [`# ${t("notFound.title")}`, "", t("notFound.lead"), ""];
+  line.push(`## ${t("notFound.where")}`, "");
+  for (const [href, name, what] of links) line.push(`- [${name}](${cfg.domain}${href}): ${what}`);
+  line.push("");
+  if (tasks.length) {
+    line.push(`## ${t("notFound.guides")}`, "");
+    for (const [href, title] of tasks) line.push(`- [${title}](${cfg.domain}${href})`);
+    line.push("");
+  }
+  return line.join("\n");
+}
+
 for (const lang of buildable) {
   const t = translator(lang.code, loadStrings(lang.code) || english, loadLocalOnly(lang.code));
   const pages = taskPagesByLang.get(lang.code);
@@ -884,6 +901,7 @@ for (const lang of buildable) {
   }));
   const dir = lang.path ? join(OUT, lang.path) : OUT;
   writeFileSync(join(dir, "404.html"), html, "utf8");
+  writeFileSync(join(dir, "404.md"), notFoundMarkdown({ t, links, tasks }), "utf8");
 }
 
 /* A key no page renders is still sent to every translator. Report it. */

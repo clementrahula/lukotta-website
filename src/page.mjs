@@ -67,6 +67,18 @@ const moonIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path 
 const globeIcon = `<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.2" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.8c1.7 1.8 2.6 3.9 2.6 6.2S9.7 12.4 8 14.2C6.3 12.4 5.4 10.3 5.4 8s.9-4.4 2.6-6.2Z" stroke="currentColor" stroke-width="1.4"/></svg>`;
 const arrow = `<svg class="arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
+/* The developer, said once. sameAs is for profiles that exist and can be
+   checked: the GitHub account the source is published under, and the personal
+   site already given as url. An audit asked for Wikipedia and Wikidata entries
+   as well; there are none, and inventing the URLs would put two 404s in the
+   structured data of every page on the site. */
+export const person = (cfg) => ({
+  "@type": "Person",
+  name: cfg.authorName,
+  url: cfg.authorUrl,
+  sameAs: [cfg.authorUrl, "https://github.com/clementrahula"],
+});
+
 export const REQUIREMENTS = "macOS 15 Sequoia or later on an Apple Silicon Mac";
 
 export const FORMATS = [
@@ -236,7 +248,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
        thing rather than two that happen to share a name. */
     sameAs: [cfg.githubRepo],
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-    author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
+    author: person(cfg),
   };
 
   /* [question number, paragraphs in the answer] */
@@ -261,7 +273,7 @@ export function renderPage({ lang, cfg, t, alternates, canonical, assetPrefix, s
     name: "Lukotta",
     url: `${cfg.domain}/`,
     inLanguage: code,
-    publisher: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
+    publisher: person(cfg),
   };
 
   /* ------------------------------------------------------------- parts -- */
@@ -723,12 +735,36 @@ export function renderTaskPage({ page, slug, lang, cfg, t, buildable, canonical,
     inLanguage: code,
     url: canonical,
     mainEntityOfPage: canonical,
-    author: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
-    publisher: { "@type": "Person", name: cfg.authorName, url: cfg.authorUrl },
+    author: person(cfg),
+    publisher: person(cfg),
     about: { "@type": "SoftwareApplication", name: "Lukotta",
              applicationCategory: "UtilitiesApplication",
              operatingSystem: REQUIREMENTS },
     isPartOf: { "@type": "WebSite", name: "Lukotta", url: `${cfg.domain}/` },
+  };
+
+  /* One block, not two. Three blocks of JSON-LD in front of the content pushed
+     the first heading past the point where some agents stop reading, which an
+     audit of this site found; a second one here would walk that back. @graph
+     carries the breadcrumb in the block that was already being emitted.
+
+     A breadcrumb is the one extra type this page can honestly claim. An audit
+     also asked for AggregateRating and Review: there are no ratings and no
+     reviews, and structured data describing some is a fabrication whatever it
+     does for a score. */
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      article,
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Lukotta",
+            item: `${cfg.domain}/${lang.path ? lang.path + "/" : ""}` },
+          { "@type": "ListItem", position: 2, name: page.title, item: canonical },
+        ],
+      },
+    ],
   };
 
   return `<!doctype html>
@@ -843,7 +879,7 @@ ${siteFooter({ t, cfg, away, copyright, authorLink, contactHref, aboutHref })}
        that truncates a response actually gets: three blocks of JSON-LD in front
        of the content push the first heading past the point where some agents
        stop reading. An audit of this site found exactly that. -->
-  <script type="application/ld+json">${jsonld(article)}</script>
+  <script type="application/ld+json">${jsonld(graph)}</script>
 
   <script src="${assetPrefix}${assets.js}" defer></script>
 </body>
