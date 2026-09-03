@@ -1,7 +1,7 @@
 {
   "domain": "https://lukotta.com",
   "siteName": "Lukotta",
-  "appVersion": "1.22.5",
+  "appVersion": "1.22.6",
   "githubRepo": "https://github.com/clementrahula/lukotta",
   "downloadUrl": "https://github.com/clementrahula/lukotta/releases/latest/download/Lukotta.dmg",
   "releasesUrl": "https://github.com/clementrahula/lukotta/releases/latest",
