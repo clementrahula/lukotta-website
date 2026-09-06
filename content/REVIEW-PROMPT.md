@@ -5,9 +5,13 @@
 You are reviewing the translations of a website into thirty-six languages. The
 site describes Lukotta, a free and open-source macOS application that opens
 BitLocker, NTFS, LUKS, Linux and virtual-machine disks which macOS itself cannot
-read. It is a landing page, four pages about one task each - BitLocker, Linux,
-NTFS, disk images - and About, Contact and 404. `REVIEW-PROMPT-TASK-PAGES.md`,
-shipped beside this file, says what is different about judging the task pages.
+read. It is a landing page, four pages about one task each - BitLocker, Linux, NTFS,
+disk images - and About, Contact and 404.
+
+This file is about the landing page. `REVIEW-PROMPT-TASK-PAGES.md`, generated
+into the pack beside it, says what is different about judging the task pages,
+and `PROMPT.md` is the self-contained one handed to a reviewer covering both
+halves of a language file.
 
 Your review is advice, not a verdict. Every suggestion you make will be weighed
 against the English source, against the application's own shipped translations,

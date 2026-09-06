@@ -1,13 +1,6 @@
 # Reviewing the Lukotta website translations
 
-> **Superseded, and kept only until somebody confirms it can go.** The prompt the
-> tooling actually uses is `content/REVIEW-PROMPT.md`, which
-> `scripts/export-translations.mjs` reads and ships alongside a generated
-> `REVIEW-PROMPT-TASK-PAGES.md` for the four task pages. Nothing reads this file.
-> It was written two days after that one as a combined version, and the split
-> approach is what shipped.
-
-<!-- covers: none -->
+<!-- covers: content/pages/en.json, content/en.json checked: 2026-09-06 -->
 
 You are reviewing the translations of a website into thirty-six languages.
 
