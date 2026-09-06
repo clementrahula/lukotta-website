@@ -1,5 +1,7 @@
 # Working on the Lukotta website
 
+<!-- covers: src/**, content/**, worker/** -->
+
 ## Layout
 
 One page, built into `public/` for every language in `site.config.json`. No

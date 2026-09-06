@@ -1,5 +1,7 @@
 # Reviewing the Lukotta website translations
 
+<!-- covers: content/pages/** -->
+
 You are reviewing the translations of a website into thirty-six languages.
 
 The site describes Lukotta, a free and open-source macOS application that opens

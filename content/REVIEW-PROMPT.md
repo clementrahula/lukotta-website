@@ -1,5 +1,7 @@
 # Reviewing the Lukotta website translations
 
+<!-- covers: content/** -->
+
 You are reviewing the translations of a website into thirty-six languages. The
 site is one page describing Lukotta, a free and open-source macOS application
 that opens BitLocker, NTFS, LUKS, Linux and virtual-machine disks which macOS

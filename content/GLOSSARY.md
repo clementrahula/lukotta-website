@@ -1,5 +1,7 @@
 # Words that are not free to translate
 
+<!-- covers: content/**, scripts/**, src/** -->
+
 The same rules the application's own translations follow. Lukotta's interface
 and this website are read by the same person, often on the same afternoon, and
 they must not disagree about what anything is called.

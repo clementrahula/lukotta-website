@@ -1,5 +1,7 @@
 # What turned up in the existing translations while the task pages were written
 
+<!-- covers: content/**, content/pages/**, scripts/** -->
+
 None of this was changed. Each one is a disagreement inside work that has
 already been reviewed once, found by writing four new pages against it and
 needing to pick a side. Where the task pages had to choose, they say which way
