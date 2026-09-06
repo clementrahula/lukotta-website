@@ -1,6 +1,6 @@
 # Working on the Lukotta website
 
-<!-- covers: src/**, content/**, worker/** -->
+<!-- covers: src/**, content/**, worker/** checked: 2026-09-06 -->
 
 ## Layout
 

@@ -1,6 +1,6 @@
 # What turned up in the existing translations while the task pages were written
 
-<!-- covers: content/**, content/pages/**, scripts/** -->
+<!-- covers: content/**, content/pages/**, scripts/** checked: 2026-08-28 -->
 
 None of this was changed. Each one is a disagreement inside work that has
 already been reviewed once, found by writing four new pages against it and

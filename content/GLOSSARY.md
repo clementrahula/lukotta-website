@@ -1,6 +1,6 @@
 # Words that are not free to translate
 
-<!-- covers: content/**, scripts/**, src/** -->
+<!-- covers: content/pages/en.json, content/en.json checked: 2026-09-06 -->
 
 The same rules the application's own translations follow. Lukotta's interface
 and this website are read by the same person, often on the same afternoon, and

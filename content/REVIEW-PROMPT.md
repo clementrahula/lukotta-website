@@ -1,11 +1,13 @@
 # Reviewing the Lukotta website translations
 
-<!-- covers: content/** -->
+<!-- covers: content/en.json, content/pages/en.json checked: 2026-09-06 -->
 
 You are reviewing the translations of a website into thirty-six languages. The
-site is one page describing Lukotta, a free and open-source macOS application
-that opens BitLocker, NTFS, LUKS, Linux and virtual-machine disks which macOS
-itself cannot read.
+site describes Lukotta, a free and open-source macOS application that opens
+BitLocker, NTFS, LUKS, Linux and virtual-machine disks which macOS itself cannot
+read. It is a landing page, four pages about one task each - BitLocker, Linux,
+NTFS, disk images - and About, Contact and 404. `REVIEW-PROMPT-TASK-PAGES.md`,
+shipped beside this file, says what is different about judging the task pages.
 
 Your review is advice, not a verdict. Every suggestion you make will be weighed
 against the English source, against the application's own shipped translations,
