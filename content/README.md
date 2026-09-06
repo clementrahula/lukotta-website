@@ -1,6 +1,6 @@
 # The website's translations
 
-<!-- covers: scripts/**, content/**, src/** checked: 2026-08-25 -->
+<!-- covers: content/** checked: 2026-09-06 -->
 
 This folder is everything the website says, in every language it says it in.
 It is self-contained on purpose: zip this folder and it can be reviewed with no
