@@ -12,8 +12,7 @@ The site is a Cloudflare Worker in `worker/`. A change there changes what is ser
 Errors surface in the build output and the browser console. There are no release notes: the site is deployed, not released.
 
 **Skills:** `cloudflare:workers-best-practices` before changing anything under `worker/`,
-and `cloudflare:wrangler` before running a deploy. There is no `wrangler.toml` here and
-wrangler is still what deploys - the absence of a config file is not the absence of the
-tool, and `scripts/deploy-worker.sh` records why: `wrangler deploy` rewrites the worker's
-routes and Cloudflare recreates them failing CLOSED, so a deploy that looks routine can
-take the whole zone down until midnight UTC.
+and `cloudflare:wrangler` before deploying it. The worker's config is `worker/wrangler.toml`,
+not at the repository root, and it is a separate deployment from the site: the site goes to
+GitHub Pages through the deploy workflow, the worker goes to Cloudflare through wrangler.
+One command does not do both.

@@ -50,5 +50,6 @@ there when they arrive. It is allowed to fail without failing the deploy -
 nothing about the site is wrong because a search engine was busy.
 
 **Skills:** `cloudflare:wrangler` before publishing anything that touches the worker.
-The route-rewrite behaviour documented in `scripts/deploy-worker.sh` makes a worker deploy
-a different act from publishing the static site, even when one command does both.
+Publishing the site and publishing the worker are two acts: the site goes to GitHub Pages
+through the deploy workflow, the worker to Cloudflare through wrangler against
+`worker/wrangler.toml`. Shipping one does not ship the other.

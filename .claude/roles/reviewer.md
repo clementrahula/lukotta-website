@@ -5,13 +5,17 @@
 The role itself is shared: `~/.claude/agents/reviewer.md`, from the workflow repository.
 This file is the part that is only true here, and it wins where the two disagree.
 
-The gate is `npm run check` - `scripts/build.mjs`, then `scripts/check.mjs`, then
-`scripts/check-slugs.mjs`. There are two workflows, not one: `check.yml` runs on a change
-and also runs `node worker/negotiation.test.mjs`, which `npm run check` does not;
-`deploy.yml` runs the three scripts with `--strict` plus `scripts/lint-translations.mjs`.
+The gate is `npm run check` locally - `scripts/build.mjs`, `scripts/check.mjs`,
+`scripts/check-slugs.mjs`, all bare.
 
-So the local gate is a subset twice over. Run the strict form and the worker test before
-judging a change, or say which of them did not run.
+Both workflows run more than that, and the same four as each other: `build.mjs --strict`,
+`lint-translations.mjs`, `check.mjs --strict`, and `check-slugs.mjs` **bare** - that last
+script takes no `--strict` and never has. `check.yml` then adds
+`worker/negotiation.test.mjs`; `deploy.yml` instead adds a plain `build.mjs` and
+`indexnow.mjs`, which notifies an external search service.
+
+So the local gate is a subset: it misses both `--strict` forms, the translations lint and
+the worker test. Run those or say which did not run.
 
 The request host is **github**. There are no release notes: the site is deployed, not
 released.
