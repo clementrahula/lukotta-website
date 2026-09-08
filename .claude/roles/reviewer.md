@@ -20,5 +20,4 @@ the worker test. Run those or say which did not run.
 The request host is **github**. There are no release notes: the site is deployed, not
 released.
 
-The site is a Cloudflare Worker in `worker/`. A change there is a change to what is
-served, not to what is built.
+The site is static output on GitHub Pages. The Cloudflare Worker in `worker/` serves the markdown twins and is a separate deployment; a change there is invisible to the build, and only `check.yml` runs its test.

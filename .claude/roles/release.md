@@ -16,9 +16,10 @@ verify from outside:  curl -sS -o /dev/null -w '%{http_code}\n' https://lukotta.
                       curl -sS -H 'Accept: text/markdown' https://lukotta.com/ | head -3
                       The second is what proves the Worker is still bound: it
                       must come back as markdown, not HTML.
-gate:                 npm run check   (build, check.mjs, check-slugs.mjs)
-                      CI additionally runs these with --strict, plus
-                      lint-translations.mjs and worker/negotiation.test.mjs
+gate:                 npm run check   (build, check.mjs, check-slugs.mjs; all bare)
+                      Both workflows add --strict to build.mjs and check.mjs only -
+                      check-slugs.mjs takes no --strict - plus lint-translations.mjs.
+                      worker/negotiation.test.mjs runs in check.yml, not deploy.yml.
 ```
 
 ## Publishing is a push, and that is the whole of it
