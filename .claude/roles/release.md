@@ -1,7 +1,8 @@
 # release, in this project
 
-This project's half of the `release` brief. The role is in the workflow
-repository; this file is what it means here.
+This project's half of the `release` brief. The role itself lives outside this
+repository; if you have cloned this project it will not be here, and nothing below
+depends on it - what follows describes THIS repository and stands on its own.
 
 ```
 artefacts:            the contents of public/, built by scripts/build.mjs, and
