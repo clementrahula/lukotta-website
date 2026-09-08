@@ -11,8 +11,13 @@ The site is **static output on GitHub Pages** - `deploy.yml` uploads `public/` a
 
 Errors surface in the build output and the browser console. There are no release notes: the site is deployed, not released.
 
-**Skills:** `cloudflare:workers-best-practices` before changing anything under `worker/`,
-and `cloudflare:wrangler` before deploying it. The worker's config is `worker/wrangler.toml`,
-not at the repository root, and it is a separate deployment from the site: the site goes to
-GitHub Pages through the deploy workflow, the worker goes to Cloudflare through wrangler.
-One command does not do both.
+**Skills:** `cloudflare:workers-best-practices` before changing anything under `worker/`.
+The worker's config is `worker/wrangler.toml`, not at the repository root.
+
+**Do not deploy the worker by hand.** The Deploy workflow already does it -
+`npx wrangler@4.127.0 deploy --config worker/wrangler.toml` - and the step immediately
+after it, `Keep the routes failing open`, repairs what that deploy breaks: Cloudflare
+recreates the routes failing CLOSED, and wrangler has no way to say otherwise
+(workers-sdk#2078). A bare `wrangler deploy` run locally does the first half and not the
+second, which leaves `lukotta.com/*` serving error pages once the daily invocation
+allowance runs out. Push to `main` and let the workflow ship both.

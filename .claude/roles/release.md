@@ -50,7 +50,8 @@ site to verify it, and tells the engines to come and read pages that have to be
 there when they arrive. It is allowed to fail without failing the deploy -
 nothing about the site is wrong because a search engine was busy.
 
-**Skills:** `cloudflare:wrangler` before publishing anything that touches the worker.
-Publishing the site and publishing the worker are two acts: the site goes to GitHub Pages
-through the deploy workflow, the worker to Cloudflare through wrangler against
-`worker/wrangler.toml`. Shipping one does not ship the other.
+**Skills:** `cloudflare:wrangler` only to read what the Deploy workflow is doing, never to
+run a deploy from here. The `publish:` block above is right: one push ships both, and there
+is no separate manual step. A hand-run `wrangler deploy` skips the `Keep the routes failing
+open` step that follows it in CI, and Cloudflare recreates the routes failing closed - so
+the manual shortcut is the one action that can take the whole zone down.
