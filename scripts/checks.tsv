@@ -1,0 +1,9 @@
+# Every claim this project makes that something can check, and the check.
+#
+# ONE ROW PER CLAIM. Tab-separated: id, tags, speed, claim, command.
+# speed is fast or slow; slow rows run only under FULL=1.
+#
+# A task that proves something adds a row here, and it is checked from then on.
+
+check	gate	fast	the site builds and its checks pass	npm run check
+worker	gate	fast	the worker negotiates as intended	node worker/negotiation.test.mjs
