@@ -1,6 +1,6 @@
 # Reviewing the rewritten About and Contact pages on the Lukotta website
 
-<!-- covers: scripts/** checked: 2026-09-02 -->
+<!-- covers: none -->
 
 You are reviewing translations into thirty-six languages of material that was
 rewritten on the Lukotta website, not material that is new to it.
