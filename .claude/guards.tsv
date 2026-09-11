@@ -1,0 +1,3 @@
+# severity	kind	match	need	message
+deny	new-file	^(content/(pages|site)/|src/pages/)	-	Pages and copy are the owner's words. Do every part that is not copy, then say which part needs words and stop.
+deny	read-first	(^|/)worker/|(^|/)_headers$|(^|/)robots\.txt$|\bwrangler\b	seo-tools/CHECKLIST	Read ~/Repos/seo-tools/CHECKLIST.md first: edge settings, crawler blocks and deploy traps are recorded there, not in this repository.
