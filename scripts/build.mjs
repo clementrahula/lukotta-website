@@ -213,7 +213,7 @@ const alternates = [
 
 /* Every inline script is hashed, so the policy names exactly the ones this
    build wrote and nothing else may run. A static host cannot send headers;
-   frame-ancestors and HSTS are Cloudflare's, and AGENTS.md states them. */
+   frame-ancestors and HSTS are Cloudflare's. */
 function withPolicy(html) {
   const hashes = [];
   for (const m of html.matchAll(/<script(?![^>]*\ssrc=)[^>]*>([\s\S]*?)<\/script>/g)) {

@@ -1,7 +1,7 @@
 # Builds public/ and publishes it to GitHub Pages.
 #
-# Runs on every push to main. AGENTS.md has the Cloudflare records and the SSL
-# mode required; Flexible produces a redirect loop.
+# Runs on every push to main. Cloudflare SSL/TLS mode must be Full; Flexible
+# produces a redirect loop.
 
 name: Deploy
 

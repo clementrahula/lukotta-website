@@ -58,6 +58,17 @@ strings translated, and running `new-language.mjs` again leaves them untouched.
 
 Finnish carries one, in the section about the name.
 
+- A `localOnly` string replaces the translation of the key it names, on that language's page alone.
+- `localOnly` is read before `strings`.
+
+## When the English changes
+
+- The `en` beside a translation is the sentence that was translated, kept as written, not a copy of the current English.
+- A change to `en.json` reports every language still holding the old sentence: the build warns, `--strict` refuses, `lint-translations.mjs` prints old and new.
+- A reported pair is edited as a unit, translation and `en` together. `en` is never brought forward alone.
+- `node scripts/new-language.mjs --all` runs after every change to `en.json`: it appends new keys to all 36 languages, drops removed ones, and leaves existing translations and `localOnly` alone. Nothing else keeps them in step.
+- A change to a translated string is complete when `lint-translations.mjs` passes.
+
 ## The rules a translation is judged by
 
 1. **English is canonical.** Where a translation and the English disagree about
@@ -69,6 +80,12 @@ Finnish carries one, in the section about the name.
    Access and the rest belong to macOS, and the reader is looking at their own
    Mac. See `GLOSSARY.md`.
 4. **Format names are never translated**, in any script. See `GLOSSARY.md`.
+   Product and format names stay in Latin script in every language: BitLocker,
+   NTFS, LUKS, ext4, qcow2, VMDK, macOS, Apple Silicon and the rest. A local
+   case ending is acceptable where the letters of the name survive it
+   (`Finderu`, `Macilla`, `BitLockeria`). Finder is not on the list: Apple
+   translates it in some languages, and Chinese macOS calls it 访达.
+   `anylinuxfs`, credited on About, stays lowercase and is never respelled.
 5. **The tone is plain.** The English makes no promises it cannot keep, uses no
    marketing superlatives, and says what the application does and does not do.
    A translation that sells harder than the English is wrong.
@@ -83,6 +100,8 @@ Finnish carries one, in the section about the name.
 7. **Arabic and Hebrew read right to left.** `language.dir` is `"rtl"` for those
    two. The page turns round on its own; nothing in the text needs to change for
    it.
+8. **The application's own translations win** where they disagree with the
+   site. `export-translations.mjs` pulls a terminology reference out of them.
 
 ## Reporting a problem
 

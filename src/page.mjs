@@ -380,11 +380,11 @@ ${faqMore(n)}          </div>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <!-- Replaced by build.mjs with the policy and the hashes of the inline
-       scripts below. GitHub Pages cannot set headers; AGENTS.md carries the
-       Cloudflare rules for the ones a <meta> cannot express. -->
+       scripts below. GitHub Pages cannot set headers; the ones a <meta> cannot
+       express come from Cloudflare. -->
   <meta http-equiv="Content-Security-Policy" content="__CSP__">
   <!-- The one security header a page can set for itself. The other three have
-       to come from Cloudflare; AGENTS.md carries them. -->
+       to come from Cloudflare. -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>${esc(t("meta.title"))}</title>
@@ -430,7 +430,7 @@ ${hreflang}
 
   ${fontPreload(assetPrefix)}
   <!-- media picks the appearance that will be painted, so only that one is
-       fetched early. The other still cross-fades. AGENTS.md says why. -->
+       fetched early. The other still cross-fades. -->
   <link rel="preload" as="image" href="${shot("light")}" media="(prefers-color-scheme: light)">
   <link rel="preload" as="image" href="${shot("dark")}" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="${assetPrefix}${assets.css}">
@@ -497,7 +497,7 @@ ${siteHeader({ t, A, home: "#top", icons: { sunIcon, moonIcon, globeIcon }, nati
                the light one carries the description; they show the same thing,
                so the dark one is hidden rather than described twice.
                Neither carries fetchpriority; the head preloads carry the
-               media query instead. AGENTS.md says why. -->
+               media query instead. -->
           <div class="shot-frame">
             <img class="shot-img shot-light" src="${shot("light")}"
                  alt="${esc(t("hero.screenshotAlt"))}"
